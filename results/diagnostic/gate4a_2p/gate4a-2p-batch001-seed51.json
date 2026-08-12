@@ -1,0 +1,234 @@
+{
+  "game_id": "gate4a-2p-batch001-seed51",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 51,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 5064,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 53,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Lotus Petal [000] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Lotus Petal [000] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mana Confluence [2df] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [2df]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Training Grounds [cc7] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Training Grounds [cc7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [2df]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Elves of Deep Shadow [ffa] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Elves of Deep Shadow [ffa] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA sacrificed Lotus Petal [000] (source: Lotus Petal [000])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Sol Ring [b63] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Sol Ring [b63] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Demonic Tutor)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Elves of Deep Shadow [ffa]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [2df]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Demonic Tutor [822] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Demonic Tutor)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB searches their library (source: Demonic Tutor [822])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts a card from library into their hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB's library is shuffled (source: Demonic Tutor [822])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Demonic Tutor [822] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Verdant Catacombs [99e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Verdant Catacombs [99e]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB sacrificed Verdant Catacombs [99e] (source: Verdant Catacombs [99e])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [99e]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB searches their library (source: Verdant Catacombs [99e])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Underground Sea [4a2] from library onto the Battlefield (source: Verdant Catacombs [99e])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB's library is shuffled (source: Verdant Catacombs [99e])"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.342831+00:00"
+}

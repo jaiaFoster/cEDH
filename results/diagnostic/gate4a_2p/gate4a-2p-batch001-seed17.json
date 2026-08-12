@@ -1,0 +1,186 @@
+{
+  "game_id": "gate4a-2p-batch001-seed17",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 17,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1815,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 41,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts City of Traitors [f8f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [da0] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Talon Gates of Madara [def] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: City of Traitors [f8f] - When you play another land, sacrifice City of Traitors [f8f]."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Talon Gates of Madara [def] - When Talon Gates of Madara [def] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed City of Traitors [f8f] (source: City of Traitors [f8f])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Otawara, Soaring City [91f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Exotic Orchard [b23] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [100] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [100] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Thrasios, Triton Hero [100] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [100]"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "Thrasios, Triton Hero [100] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Mana Vault [539] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Mana Vault [539] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [100] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [100]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [100] did 2 combat damage to PlayerA during the game."
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.189685+00:00"
+}

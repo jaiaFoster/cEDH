@@ -1,0 +1,186 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed9",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 9,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 11171,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 41,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Tropical Island [e40] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Windswept Heath [108] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [108]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Windswept Heath [108] (source: Windswept Heath [108])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [108]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [108])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tundra [e0c] from library onto the Battlefield (source: Windswept Heath [108])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [108])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Marsh Flats [99a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD loses 1 life from Marsh Flats [99a]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD sacrificed Marsh Flats [99a] (source: Marsh Flats [99a])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [99a]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD searches their library (source: Marsh Flats [99a])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Underground Sea [62b] from library onto the Battlefield (source: Marsh Flats [99a])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD's library is shuffled (source: Marsh Flats [99a])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [cf9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC casts Birds of Paradise [c33] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC puts Birds of Paradise [c33] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.765181+00:00"
+}

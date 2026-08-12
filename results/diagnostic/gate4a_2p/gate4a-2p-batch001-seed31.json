@@ -1,0 +1,142 @@
+{
+  "game_id": "gate4a-2p-batch001-seed31",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 31,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 3745,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 30,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Gaea's Cradle [a57] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Ancient Tomb [d44] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Wooded Foothills [afa] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from Wooded Foothills [afa]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA sacrificed Wooded Foothills [afa] (source: Wooded Foothills [afa])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [afa]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA searches their library (source: Wooded Foothills [afa])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Tropical Island [6d3] from library onto the Battlefield (source: Wooded Foothills [afa])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [afa])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Delighted Halfling [253] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Delighted Halfling [253] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.249881+00:00"
+}

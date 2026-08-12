@@ -1,0 +1,310 @@
+{
+  "game_id": "gate4a-2p-batch001-seed6",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 6,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2969,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 72,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Verdant Catacombs [922] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [922]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [922] (source: Verdant Catacombs [922])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [922]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [922])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [20e] from library onto the Battlefield (source: Verdant Catacombs [922])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [922])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Exotic Orchard [2b4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Boseiju, Who Endures [f77] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [fe2] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [fe2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [fe2] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [fe2]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [fe2] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Exotic Orchard [2b4] (source: Crop Rotation [210])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Crop Rotation [210] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Crop Rotation [210])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Wooded Foothills [def] from library onto the Battlefield (source: Crop Rotation [210])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Crop Rotation [210])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Crop Rotation [210] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Wooded Foothills [def]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Wooded Foothills [def] (source: Wooded Foothills [def])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [def]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Wooded Foothills [def])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tropical Island [596] from library onto the Battlefield (source: Wooded Foothills [def])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Wooded Foothills [def])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [fe2] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [fe2]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [fe2] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Talon Gates of Madara [50d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Talon Gates of Madara [50d] - When Talon Gates of Madara [50d] enters, up to one target creature phases out. - targeting Thrasios, Triton Hero [fe2]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Thrasios, Triton Hero [fe2] phased out"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.UN",
+      "text": "Thrasios, Triton Hero [fe2] phased in"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Gilded Drake [fe5] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Gilded Drake [fe5] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB - Ability triggers: Gilded Drake [fe5] - When Gilded Drake [fe5] enters, exchange control of Gilded Drake [fe5] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [fe5]. This ability still resolves if its target becomes illegal."
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB sacrificed Gilded Drake [fe5] (source: Gilded Drake [fe5])"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Thrasios, Triton Hero [fe2] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [fe2]"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "Thrasios, Triton Hero [fe2] did 3 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [fe2] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [fe2]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [fe2] did 4 combat damage to PlayerA during the game."
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.135781+00:00"
+}

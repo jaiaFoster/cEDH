@@ -1,0 +1,122 @@
+{
+  "game_id": "gate4a-2p-batch001-seed37",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 37,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1426,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 25,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Bayou [98f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Tundra [4ce] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Savannah [412] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [3c4] from command"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [3c4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Thrasios, Triton Hero [3c4] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [3c4]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Thrasios, Triton Hero [3c4] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.274489+00:00"
+}

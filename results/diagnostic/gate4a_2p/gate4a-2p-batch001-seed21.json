@@ -1,0 +1,306 @@
+{
+  "game_id": "gate4a-2p-batch001-seed21",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 21,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 4566,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": "PlayerA has lost the game.",
+  "event_count": 71,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Windswept Heath [123] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [123]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Windswept Heath [123] (source: Windswept Heath [123])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [123]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [123])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tundra [22b] from library onto the Battlefield (source: Windswept Heath [123])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [123])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Tundra [8e5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [e3c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Polluted Delta [1f9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Polluted Delta [1f9]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Polluted Delta [1f9] (source: Polluted Delta [1f9])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [1f9]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Polluted Delta [1f9])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [2bb] from library onto the Battlefield (source: Polluted Delta [1f9])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Polluted Delta [1f9])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Tymna the Weaver [71e] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tymna the Weaver [71e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [71e] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Exotic Orchard [4c1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Rhystic Study [0f4] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Rhystic Study [0f4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Shifting Woodland [5ef] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Tymna the Weaver [71e] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [71e]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Tymna the Weaver [71e] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [71e] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [71e]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [861] from command"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA - Ability triggers: Rhystic Study [0f4] - Whenever an opponent casts a spell, you may draw a card unless that player pays {1}."
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA casts Pact of Negation [fe4] targeting Thrasios, Triton Hero [861] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [861] from stack into their graveyard (source: Pact of Negation [fe4])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Thrasios, Triton Hero [861] is countered by Pact of Negation [fe4]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA puts Pact of Negation [fe4] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [861] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack push: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA - Ability triggers: Pact of Negation [fe4] - At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose the game."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack resolve: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA has lost the game."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerB has won the game"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.210785+00:00"
+}

@@ -1,0 +1,398 @@
+{
+  "game_id": "gate4a-2p-batch001-seed80",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 80,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 3231,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 94,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Starting Town [938] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Wooded Foothills [247] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Wooded Foothills [247]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Wooded Foothills [247] (source: Wooded Foothills [247])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [247]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Wooded Foothills [247])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tropical Island [1e2] from library onto the Battlefield (source: Wooded Foothills [247])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Wooded Foothills [247])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Starting Town [938]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [8a9] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [8a9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Wooded Foothills [4c3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Wooded Foothills [4c3]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Wooded Foothills [4c3] (source: Wooded Foothills [4c3])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [4c3]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Wooded Foothills [4c3])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tropical Island [831] from library onto the Battlefield (source: Wooded Foothills [4c3])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [4c3])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Avacyn's Pilgrim [2ff] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Avacyn's Pilgrim [2ff] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Windswept Heath [ca4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [ca4]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Windswept Heath [ca4] (source: Windswept Heath [ca4])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [ca4]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [ca4])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tundra [951] from library onto the Battlefield (source: Windswept Heath [ca4])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [ca4])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Spellseeker)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Spellseeker [8c4] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Spellseeker)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Spellseeker [8c4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, you may search your library for an instant or sorcery card wit...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Spellseeker [8c4] - When Spellseeker [8c4] enters, you may search your library for an instant or sorcery card with mana value 2 or less, reveal it, put it into your hand, then shuffle."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, you may search your library for an instant or sorcery card wit...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Spellseeker [8c4])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts a card from library into their hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB reveals Nature's Rhythm"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Spellseeker [8c4])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [8a9] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [8a9]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [8a9] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Nature's Rhythm)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB loses 1 life from Starting Town [938]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB announces a value of 1 for {X} (source: Nature's Rhythm [932])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Nature's Rhythm [932] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Nature's Rhythm)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB searches their library (source: Nature's Rhythm [932])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Delighted Halfling [88b] from library onto the Battlefield (source: Nature's Rhythm [932])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB's library is shuffled (source: Nature's Rhythm [932])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Nature's Rhythm [932] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Thrasios, Triton Hero [8a9] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [8a9]"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "Thrasios, Triton Hero [8a9] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Starting Town [938]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Tymna the Weaver [179] from command"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Tymna the Weaver [179] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [8a9] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [8a9]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [8a9] did 3 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [179] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [179]"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB casts Mana Vault [7cb] from hand"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB puts Mana Vault [7cb] from stack onto the Battlefield"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.506174+00:00"
+}

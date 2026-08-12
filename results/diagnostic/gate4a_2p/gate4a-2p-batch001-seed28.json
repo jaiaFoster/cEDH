@@ -1,0 +1,226 @@
+{
+  "game_id": "gate4a-2p-batch001-seed28",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 28,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1558,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 51,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts City of Traitors [3d5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Mana Vault [095] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast Force of Negation)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Mana Vault [095] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Starting Town [353] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [095] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [095]."
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerA paid for Mana Vault [095] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB loses 1 life from Starting Town [353]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Birds of Paradise [77e] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Birds of Paradise [77e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [095] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [095]."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA paid for Mana Vault [095] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Mana Confluence [f93] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: City of Traitors [3d5] - When you play another land, sacrifice City of Traitors [3d5]."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA sacrificed City of Traitors [3d5] (source: City of Traitors [3d5])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Voice of Victory)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [f93]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Voice of Victory [049] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Voice of Victory)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Voice of Victory [049] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Tundra [d29] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Starting Town [353]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [786] from command"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [786] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.240003+00:00"
+}

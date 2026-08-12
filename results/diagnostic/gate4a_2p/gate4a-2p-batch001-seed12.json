@@ -1,0 +1,242 @@
+{
+  "game_id": "gate4a-2p-batch001-seed12",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 12,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 3185,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 55,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Flooded Strand [5dd] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [5dd]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Flooded Strand [5dd] (source: Flooded Strand [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [5dd]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Underground Sea [7be] from library onto the Battlefield (source: Flooded Strand [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [5dd])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Scrubland [43f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tundra [6df] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Minamo, School at Water's Edge [648] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Verdant Catacombs [c4e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [c4e]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [c4e] (source: Verdant Catacombs [c4e])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [c4e]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [c4e])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tropical Island [17a] from library onto the Battlefield (source: Verdant Catacombs [c4e])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [c4e])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Tymna the Weaver [d74] from command"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tymna the Weaver [d74] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [d74] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [faa] from command"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [faa] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [d74] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [d74]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [d74] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [d74] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [d74]"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.166615+00:00"
+}

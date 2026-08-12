@@ -1,0 +1,318 @@
+{
+  "game_id": "gate4a-2p-batch001-seed54",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 54,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2328,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": "PlayerA has lost the game.",
+  "event_count": 74,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tropical Island [092] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Windswept Heath [719] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [719]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Windswept Heath [719] (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [719]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Tundra [604] from library onto the Battlefield (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [c1c] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [c1c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Otawara, Soaring City [291] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [c1c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [c1c]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [c1c] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {2}{G}, Discard this card: Return target card from your gra...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB discards Colossal Skyturtle [e04] (source: Colossal Skyturtle [e04])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: return target card from your graveyard to your hand. from Colossal Skyturtle [e04] targeting Windswept Heath [719]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {2}{G}, Discard this card: Return target card from your gra...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Windswept Heath [719] from graveyard into their hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Windswept Heath [719] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [719]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Windswept Heath [719] (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [719]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Scrubland [781] from library onto the Battlefield (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [719])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [c1c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [c1c]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [c1c] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Polluted Delta [17d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Polluted Delta [17d]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Polluted Delta [17d] (source: Polluted Delta [17d])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [17d]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Polluted Delta [17d])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Underground Sea [934] from library onto the Battlefield (source: Polluted Delta [17d])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Polluted Delta [17d])"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Tymna the Weaver [8d5] from command"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA casts Pact of Negation [57a] targeting Tymna the Weaver [8d5] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Tymna the Weaver [8d5] from stack into their graveyard (source: Pact of Negation [57a])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Tymna the Weaver [8d5] is countered by Pact of Negation [57a]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA puts Pact of Negation [57a] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Tymna the Weaver [8d5] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Thrasios, Triton Hero [c1c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [c1c]"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "Thrasios, Triton Hero [c1c] did 3 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack push: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA - Ability triggers: Pact of Negation [57a] - At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose the game."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack resolve: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA has lost the game."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerB has won the game"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.368812+00:00"
+}

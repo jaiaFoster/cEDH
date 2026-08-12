@@ -1,0 +1,170 @@
+{
+  "game_id": "gate4a-2p-batch001-seed24",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 24,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1652,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 37,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Lotus Petal [0fb] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Lotus Petal [0fb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Lotus Petal [0fb] (source: Lotus Petal [0fb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Sol Ring [2fe] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Sol Ring [2fe] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB moves Flusterstorm [db5] from hand to the exile zone (source: Subtlety [fa4])"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB casts Subtlety [fa4] with Evoke from hand"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB puts Subtlety [fa4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB - Ability triggers: Subtlety [fa4] - When Subtlety [fa4] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB - Ability triggers: Subtlety [fa4] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB sacrificed Subtlety [fa4] (source: Subtlety [fa4])"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.219557+00:00"
+}

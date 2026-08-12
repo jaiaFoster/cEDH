@@ -1,0 +1,230 @@
+{
+  "game_id": "gate4a-2p-batch001-seed71",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 71,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 4248,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 52,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Chrome Mox [858] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Chrome Mox [858] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA - Ability triggers: Chrome Mox [858] - Imprint — When Chrome Mox [858] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Mox Amber [e65] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Mox Amber [e65] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Otawara, Soaring City [a5b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Underground Sea [2bb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Verdant Catacombs [cc1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [cc1]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [cc1] (source: Verdant Catacombs [cc1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [cc1]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [cc1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [bda] from library onto the Battlefield (source: Verdant Catacombs [cc1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [cc1])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Orcish Bowmasters [6d3] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Orcish Bowmasters [6d3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [6d3] - When Orcish Bowmasters [6d3] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [6d3] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [6d3]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA creates a Orc Army Token [3e8] token"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Exotic Orchard [764] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Orcish Bowmasters [6d3] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Orc Army Token [3e8] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Orcish Bowmasters [6d3]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Orc Army Token [3e8]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Starting Town [b68] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.472215+00:00"
+}

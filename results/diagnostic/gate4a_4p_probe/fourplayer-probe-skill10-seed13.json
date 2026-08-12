@@ -1,0 +1,130 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed13",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 13,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 5013,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 27,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Tropical Island [26c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Otawara, Soaring City [84e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [3d2] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [3d2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerC with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacked player: PlayerC"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [3d2] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerC loses 1 life at combat from Thrasios, Triton Hero [3d2]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [3d2] did 1 combat damage to PlayerC during the game."
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.767157+00:00"
+}

@@ -1,3 +1,8 @@
+See also: `gate4a_2p/README.md` (the 100-game `GATE_4A_2P_DIAGNOSTIC` batch)
+and `gate4a_4p_probe/README.md` (the `INFRA-0006` four-player investigation)
+for the larger, later diagnostic phases. This top-level file covers the
+original hand-run 7-game batch that first proved the adapter out.
+
 Real, deck-backed diagnostic gameplay records (2026-08-12), produced by
 `sim/rules_engine/xmage_adapter/run_diagnostic_game.py` driving
 `SubjectDeckDiagnosticGameTest.java` against a prepared XMage checkout, with

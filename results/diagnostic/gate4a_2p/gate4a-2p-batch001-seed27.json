@@ -1,0 +1,310 @@
+{
+  "game_id": "gate4a-2p-batch001-seed27",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 27,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1932,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 72,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Lotus Petal [67d] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Lotus Petal [67d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB casts Mox Diamond [c06] from hand"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB puts Mox Diamond [c06] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Flooded Strand [8d7] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [8d7]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Flooded Strand [8d7] (source: Flooded Strand [8d7])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [8d7]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [8d7])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [3e1] from library onto the Battlefield (source: Flooded Strand [8d7])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [8d7])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Mox Diamond [e6f] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Mox Diamond [e6f] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Chrome Mox [e46] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Chrome Mox [e46] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [e46] - Imprint — When Chrome Mox [e46] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Volatile Stormdrake [add] from hand to the exile zone (source: Chrome Mox [e46])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Lotus Petal [67d] (source: Lotus Petal [67d])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [af7] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [af7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Chrome Mox [71c] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Chrome Mox [71c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Chrome Mox [71c] - Imprint — When Chrome Mox [71c] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA moves Mindbreak Trap [ccb] from hand to the exile zone (source: Chrome Mox [71c])"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Thrasios, Triton Hero [af7] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [af7]"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "Thrasios, Triton Hero [af7] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Orcish Bowmasters [863] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Orcish Bowmasters [863] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [863] - When Orcish Bowmasters [863] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [863] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [863]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA creates a Orc Army Token [c97] token"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [af7] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [af7]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [af7] did 2 combat damage to PlayerA during the game."
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.237447+00:00"
+}

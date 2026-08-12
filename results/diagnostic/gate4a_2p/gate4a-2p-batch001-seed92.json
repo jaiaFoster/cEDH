@@ -1,0 +1,134 @@
+{
+  "game_id": "gate4a-2p-batch001-seed92",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 92,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2036,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 28,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Mana Confluence [3d5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [3d5]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Elves of Deep Shadow [308] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Elves of Deep Shadow [308] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Shifting Woodland [9e3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Elves of Deep Shadow [308] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Elves of Deep Shadow [308]"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Elves of Deep Shadow [308] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Elves of Deep Shadow [308]"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Elves of Deep Shadow [308] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 1 life at combat from Elves of Deep Shadow [308]"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.528402+00:00"
+}

@@ -29,6 +29,33 @@ convenience default of 20). Output is one JSON record per game; see
 `results/diagnostic/README.md` for the schema and the first batch's
 findings.
 
+## Running a batch (GATE_4A_2P_DIAGNOSTIC and later)
+
+`run_diagnostic_batch.py` runs many games per Maven/JVM invocation
+(`SubjectDeckDiagnosticGameTest.runDiagnosticBatch` loops over
+`-Ddiag.seeds` internally, calling `reset()` between games) instead of
+paying JVM startup cost per game - this is what made a 100-game batch
+practical:
+
+```
+python3 sim/rules_engine/xmage_adapter/run_diagnostic_batch.py \
+  --mage-dir /path/to/mage --seed-start 1 --count 100 --chunk-size 10 \
+  --max-turn 12 --seats 2 --skill 6 \
+  --out-dir results/diagnostic/gate4a_2p
+```
+
+`--skill` controls `ComputerPlayer7`'s search depth/think-time
+(`maxDepth`/`maxThinkTimeSecs` both scale with it). **Use `--skill 6` for
+2-player, `--skill 10` for 4-player** - see
+`results/diagnostic/gate4a_4p_probe/README.md` for why. `--chunk-size`
+bounds how many games share one JVM/Maven process (smaller chunks mean a
+hung/crashed chunk loses fewer games - each chunk has its own
+`--chunk-timeout`, default 280s). Writes one JSON per game plus a
+`<batch-id>-SUMMARY.json` with operational statistics only (games
+completed, exceptions, engine errors, event counts, timing) - see
+`results/diagnostic/gate4a_2p/README.md` for why those numbers, including
+any win count, must not be read as strategic/matchup evidence.
+
 ## Adapter responsibility checklist (INFRA-0004)
 
 - [x] load exact versioned decklists - `deck_to_dck.py`

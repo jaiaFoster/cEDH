@@ -1,0 +1,178 @@
+{
+  "game_id": "gate4a-2p-batch001-seed56",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 56,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 8330,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 39,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Verdant Catacombs [a07] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [a07]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [a07] (source: Verdant Catacombs [a07])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [a07]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [a07])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [333] from library onto the Battlefield (source: Verdant Catacombs [a07])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [a07])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Derevi, Empyrial Tactician [745] from hand to the exile zone (source: Subtlety [f99])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Subtlety [f99] with Evoke from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Subtlety [f99] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Subtlety [f99] - When Subtlety [f99] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Subtlety [f99] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Subtlety [f99] (source: Subtlety [f99])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.386669+00:00"
+}

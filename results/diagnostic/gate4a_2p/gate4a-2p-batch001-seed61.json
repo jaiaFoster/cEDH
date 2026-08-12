@@ -1,0 +1,118 @@
+{
+  "game_id": "gate4a-2p-batch001-seed61",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 61,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2523,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": "PlayerA has lost the game.",
+  "event_count": 24,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Mox Diamond [65b] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA casts Pact of Negation [d7a] targeting Mox Diamond [65b] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Mox Diamond [65b] from stack into their graveyard (source: Pact of Negation [d7a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Mox Diamond [65b] is countered by Pact of Negation [d7a]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA puts Pact of Negation [d7a] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "Stack push: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerA - Ability triggers: Pact of Negation [d7a] - At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose the game."
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "Stack resolve: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerA has lost the game."
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerB has won the game"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.426612+00:00"
+}

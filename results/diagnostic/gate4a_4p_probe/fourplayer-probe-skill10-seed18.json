@@ -1,0 +1,174 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed18",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 18,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 5630,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 38,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Savannah [cbb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC puts Tundra [df9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Misty Rainforest [a6f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [a6f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [a6f] (source: Misty Rainforest [a6f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [a6f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [a6f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Underground Sea [70a] from library onto the Battlefield (source: Misty Rainforest [a6f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [a6f])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Mana Vault [87e] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Mana Vault [87e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC puts Mana Confluence [713] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC loses 1 life from Mana Confluence [713]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC casts Thrasios, Triton Hero [070] from command"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC puts Thrasios, Triton Hero [070] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.769141+00:00"
+}

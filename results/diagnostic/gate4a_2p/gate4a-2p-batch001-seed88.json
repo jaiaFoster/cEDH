@@ -1,0 +1,222 @@
+{
+  "game_id": "gate4a-2p-batch001-seed88",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 88,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 5276,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 50,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts City of Traitors [60c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Gaea's Cradle [4ac] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA moves Oboro Breezecaller [08e] from hand to the exile zone (source: Subtlety [2b3])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Subtlety [2b3] with Evoke from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Subtlety [2b3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [2b3] - When Subtlety [2b3] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [2b3] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Subtlety [2b3] (source: Subtlety [2b3])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Mox Amber [513] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Mox Amber [513] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Marsh Flats [f53] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB - Ability triggers: City of Traitors [60c] - When you play another land, sacrifice City of Traitors [60c]."
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Marsh Flats [f53]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB sacrificed Marsh Flats [f53] (source: Marsh Flats [f53])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [f53]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB searches their library (source: Marsh Flats [f53])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Underground Sea [42e] from library onto the Battlefield (source: Marsh Flats [f53])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB's library is shuffled (source: Marsh Flats [f53])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB sacrificed City of Traitors [60c] (source: City of Traitors [60c])"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.520809+00:00"
+}

@@ -1,0 +1,326 @@
+{
+  "game_id": "gate4a-2p-batch001-seed30",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 30,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2194,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 76,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [44c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Scrubland [614] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Mana Confluence [23e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [23e]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Orcish Bowmasters [590] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Orcish Bowmasters [590] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [590] - When Orcish Bowmasters [590] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [590] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [590]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA creates a Orc Army Token [d54] token"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [0e0] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [23e]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Tymna the Weaver [009] from command"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tymna the Weaver [009] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Orcish Bowmasters [590] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Orc Army Token [d54] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Orcish Bowmasters [590]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Orc Army Token [d54]"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [009] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [009]"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [23e]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts King T'Challa [464] as mdf side of King T'Challa [666] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts King T'Challa [464] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 3 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Orcish Bowmasters [590] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Orc Army Token [d54] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [009] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Orcish Bowmasters [590]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Orc Army Token [d54]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [009]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [009] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [009] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [009]"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (Whenever a player draws their second card each turn, you draw a card.))"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: King T'Challa [464] - Whenever a player draws their second card each turn, you draw a card."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever a player draws their second card each turn, you draw a card.))"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA moves Nature's Rhythm [f9b] from hand to the exile zone (source: Endurance [532])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA casts Endurance [532] with Evoke from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA puts Endurance [532] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA - Ability triggers: Endurance [532] - When Endurance [532] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA - Ability triggers: Endurance [532] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA sacrificed Endurance [532] (source: Endurance [532])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.247639+00:00"
+}

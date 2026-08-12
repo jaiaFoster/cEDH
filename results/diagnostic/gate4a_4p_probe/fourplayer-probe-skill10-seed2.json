@@ -1,0 +1,190 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed2",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 2,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 9350,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 42,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD casts Mox Diamond [fa9] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Mox Diamond [fa9] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Mox Amber [841] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Mox Amber [841] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Command Tower [b6f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Boseiju, Who Endures [c70] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Sol Ring [aaf] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Sol Ring [aaf] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD puts Gaea's Cradle [b72] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Polluted Delta [47a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [47a]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB sacrificed Polluted Delta [47a] (source: Polluted Delta [47a])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [47a]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [47a])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Underground Sea [f66] from library onto the Battlefield (source: Polluted Delta [47a])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [47a])"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.762444+00:00"
+}

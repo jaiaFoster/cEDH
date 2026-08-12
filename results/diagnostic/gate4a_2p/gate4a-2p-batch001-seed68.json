@@ -1,0 +1,266 @@
+{
+  "game_id": "gate4a-2p-batch001-seed68",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 68,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2995,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 61,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Bayou [c36] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tundra [037] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Starting Town [f43] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Noble Hierarch [504] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Noble Hierarch [504] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Archivist of Oghma [322] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Archivist of Oghma [322] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Vampiric Tutor)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Vampiric Tutor [b0d] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Vampiric Tutor)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA searches their library (source: Vampiric Tutor [b0d])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA's library is shuffled (source: Vampiric Tutor [b0d])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts a card from library to the top of their library (source: Vampiric Tutor [b0d])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 2 life from Vampiric Tutor [b0d]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Vampiric Tutor [b0d] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerB - Ability triggers: Archivist of Oghma [322] - Whenever an opponent searches their library, you gain 1 life and draw a card."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerB gains 1 life (source: Archivist of Oghma [322])"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA moves Birthing Pod [cea] from hand to the exile zone (source: Endurance [561])"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA casts Endurance [561] with Evoke from hand"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA puts Endurance [561] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Endurance [561] - When Endurance [561] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Endurance [561] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA sacrificed Endurance [561] (source: Endurance [561])"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Bayou [712] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Tymna the Weaver [91b] from command"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Tymna the Weaver [91b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Archivist of Oghma [322] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 2 life at combat from Archivist of Oghma [322]"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [91b] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [91b]"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.456553+00:00"
+}

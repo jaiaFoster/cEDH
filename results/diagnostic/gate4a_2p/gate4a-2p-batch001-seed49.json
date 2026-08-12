@@ -1,0 +1,270 @@
+{
+  "game_id": "gate4a-2p-batch001-seed49",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 49,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2069,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 62,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Gemstone Caverns [b04] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Shifting Woodland [f97] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Command Tower [4b4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Mana Confluence [1a3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [1a3]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Kinnan, Bonder Prodigy [292] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Kinnan, Bonder Prodigy [292] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Starting Town [21b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [1a3]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Tymna the Weaver [689] from command"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tymna the Weaver [689] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Kinnan, Bonder Prodigy [292] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Kinnan, Bonder Prodigy [292]"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [689] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [689]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Mox Amber [fde] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Mox Amber [fde] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [1a3]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Endurance [288] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Endurance [288] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: Endurance [288] - When Endurance [288] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Kinnan, Bonder Prodigy [292] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [689] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Kinnan, Bonder Prodigy [292]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [689]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [689] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [689] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [689]"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA casts Mana Vault [7e1] from hand"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA puts Mana Vault [7e1] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.333982+00:00"
+}

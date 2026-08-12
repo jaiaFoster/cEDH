@@ -1,0 +1,206 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed12",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 12,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 6886,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 46,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Windswept Heath [836] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [836]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Windswept Heath [836] (source: Windswept Heath [836])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [836]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [836])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tundra [643] from library onto the Battlefield (source: Windswept Heath [836])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [836])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Shifting Woodland [428] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Gemstone Caverns [392] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts City of Brass [7c2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [1dc] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [7c2] - Whenever City of Brass [7c2] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from City of Brass [7c2]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [1dc] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacked player: PlayerB"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Thrasios, Triton Hero [1dc] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [1dc]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Thrasios, Triton Hero [1dc] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD puts Talon Gates of Madara [fbe] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD - Ability triggers: Talon Gates of Madara [fbe] - When Talon Gates of Madara [fbe] enters, up to one target creature phases out. - targeting Thrasios, Triton Hero [1dc]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Thrasios, Triton Hero [1dc] phased out"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.766751+00:00"
+}

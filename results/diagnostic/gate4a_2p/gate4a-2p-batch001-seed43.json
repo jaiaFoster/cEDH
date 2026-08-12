@@ -1,0 +1,370 @@
+{
+  "game_id": "gate4a-2p-batch001-seed43",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 43,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2603,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 87,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Lotus Petal [4b8] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Lotus Petal [4b8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts City of Traitors [ba6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Starting Town [cc6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Lotus Petal [4b8] (source: Lotus Petal [4b8])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Starting Town [cc6]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [4a8] from command"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [4a8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Command Tower [c36] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Thrasios, Triton Hero [4a8] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [4a8]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "Thrasios, Triton Hero [4a8] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Chrome Mox [fb6] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Chrome Mox [fb6] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [fb6] - Imprint — When Chrome Mox [fb6] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB moves Subtlety [815] from hand to the exile zone (source: Chrome Mox [fb6])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA sacrificed Starting Town [cc6] (source: Crop Rotation [bf3])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA casts Crop Rotation [bf3] from hand"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA searches their library (source: Crop Rotation [bf3])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA puts Wooded Foothills [d5a] from library onto the Battlefield (source: Crop Rotation [bf3])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA's library is shuffled (source: Crop Rotation [bf3])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA puts Crop Rotation [bf3] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA loses 1 life from Wooded Foothills [d5a]"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA sacrificed Wooded Foothills [d5a] (source: Wooded Foothills [d5a])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [d5a]"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA searches their library (source: Wooded Foothills [d5a])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA puts Tropical Island [8b0] from library onto the Battlefield (source: Wooded Foothills [d5a])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [d5a])"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [4a8] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [4a8]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [4a8] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Archivist of Oghma [5bd] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Archivist of Oghma [5bd] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Thrasios, Triton Hero [4a8] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [4a8]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Thrasios, Triton Hero [4a8] did 3 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts City of Brass [9b8] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Tymna the Weaver [2f0] from command"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [9b8] - Whenever City of Brass [9b8] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from City of Brass [9b8]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Tymna the Weaver [2f0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Thrasios, Triton Hero [4a8] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Archivist of Oghma [5bd] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [4a8]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Thrasios, Triton Hero [4a8] did 4 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Archivist of Oghma [5bd]"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [2f0] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [2f0]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Mana Vault [8ad] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Mana Vault [8ad] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.305274+00:00"
+}

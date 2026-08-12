@@ -1,0 +1,214 @@
+{
+  "game_id": "gate4a-2p-batch001-seed57",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 57,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 5171,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 48,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Command Tower [b14] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Verdant Catacombs [ea3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Verdant Catacombs [ea3]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Verdant Catacombs [ea3] (source: Verdant Catacombs [ea3])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [ea3]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Verdant Catacombs [ea3])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [645] from library onto the Battlefield (source: Verdant Catacombs [ea3])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Verdant Catacombs [ea3])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Lotus Petal [e85] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Lotus Petal [e85] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Lotus Petal [e85] (source: Lotus Petal [e85])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [877] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [877] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Swift Reconfiguration [4c9] targeting Thrasios, Triton Hero [877] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Swift Reconfiguration [4c9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Training Grounds [903] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Training Grounds [903] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Mana Confluence [1b2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [1b2]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Kinnan, Bonder Prodigy [cea] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Kinnan, Bonder Prodigy [cea] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.394807+00:00"
+}

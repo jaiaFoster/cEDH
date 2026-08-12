@@ -1,0 +1,426 @@
+{
+  "game_id": "gate4a-2p-batch001-seed29",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 29,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 3633,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 101,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Command Tower [54f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Misty Rainforest [309] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [309]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [309] (source: Misty Rainforest [309])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [309]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [309])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [f6c] from library onto the Battlefield (source: Misty Rainforest [309])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [309])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Delighted Halfling [458] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Delighted Halfling [458] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [942] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [942] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [a28] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Tymna the Weaver [8e3] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tymna the Weaver [8e3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [942] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [942]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [942] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [8e3] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [8e3]"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Shifting Woodland [7f4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 3 creatures"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Delighted Halfling [458] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Thrasios, Triton Hero [942] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Tymna the Weaver [8e3] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Delighted Halfling [458]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [942]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Thrasios, Triton Hero [942] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [8e3]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Tymna the Weaver [8e3] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [8e3] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [8e3]"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA casts Elves of Deep Shadow [9e5] from hand"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA puts Elves of Deep Shadow [9e5] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T10.M2",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T10.M2",
+      "text": "PlayerB casts Mox Diamond [efa] from hand"
+    },
+    {
+      "turnstep": "T10.M2",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T10.M2",
+      "text": "PlayerB puts Mox Diamond [efa] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T10.M2",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA moves Runic Armasaur [7c0] from hand to the exile zone (source: Endurance [310])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Endurance [310] with Evoke from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Endurance [310] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: Endurance [310] - When Endurance [310] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: Endurance [310] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA sacrificed Endurance [310] (source: Endurance [310])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerB puts a card from graveyard to the bottom of their library (source: Endurance [310])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerB puts a card from graveyard to the bottom of their library (source: Endurance [310])"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 4 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Delighted Halfling [458] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Thrasios, Triton Hero [942] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [8e3] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Elves of Deep Shadow [9e5] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Delighted Halfling [458]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [942]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Thrasios, Triton Hero [942] did 3 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [8e3]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [8e3] did 4 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Elves of Deep Shadow [9e5]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [8e3] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [8e3]"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.244177+00:00"
+}

@@ -1,0 +1,222 @@
+{
+  "game_id": "gate4a-2p-batch001-seed10",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 10,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2448,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 50,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Verdant Catacombs [f6d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [f6d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [f6d] (source: Verdant Catacombs [f6d])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [f6d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [f6d])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [6ee] from library onto the Battlefield (source: Verdant Catacombs [f6d])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [f6d])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Bayou [51d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Windswept Heath [0b6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [0b6]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Windswept Heath [0b6] (source: Windswept Heath [0b6])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [0b6]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [0b6])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tundra [c46] from library onto the Battlefield (source: Windswept Heath [0b6])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [0b6])"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Lotus Petal [73d] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA loses 1 life from Force of Will [926]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA moves Kinnan, Bonder Prodigy [f9b] from hand to the exile zone (source: Force of Will [926])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA casts Force of Will [926] using alternative casting costs targeting Lotus Petal [73d] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 3 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Veil of Summer [053] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 3 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Veil of Summer [053] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Veil of Summer [053]: Draw a card if an opponent has cast a blue or black spell this turn. Spells you control can't be countered this turn. You and permanents you control gain hexproof from blue and from black until end of turn."
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Lotus Petal [73d] could not be countered by Force of Will [926]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA puts Force of Will [926] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Lotus Petal [73d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.154329+00:00"
+}

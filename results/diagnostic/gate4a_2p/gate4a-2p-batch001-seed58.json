@@ -1,0 +1,482 @@
+{
+  "game_id": "gate4a-2p-batch001-seed58",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 58,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 3838,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 115,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [ca5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Bayou [ea2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [082] from command"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [082] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Scrubland [9f3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Tymna the Weaver [ad2] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tymna the Weaver [ad2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Thrasios, Triton Hero [082] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [082]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "Thrasios, Triton Hero [082] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [ad2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA casts Chrome Mox [423] from hand"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA puts Chrome Mox [423] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA - Ability triggers: Chrome Mox [423] - Imprint — When Chrome Mox [423] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Esper Sentinel [bd0] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Esper Sentinel [bd0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [082] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Tymna the Weaver [ad2] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [082]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [082] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Tymna the Weaver [ad2] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [ad2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Derevi, Empyrial Tactician [62a] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Derevi, Empyrial Tactician [62a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 3 creatures"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Thrasios, Triton Hero [082] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Tymna the Weaver [ad2] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Esper Sentinel [bd0] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [082]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Thrasios, Triton Hero [082] did 3 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Tymna the Weaver [ad2] did 4 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Esper Sentinel [bd0]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Stack push: 3 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Stack resolve: 3 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [ad2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 4 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Thrasios, Triton Hero [082] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [ad2] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Esper Sentinel [bd0] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Derevi, Empyrial Tactician [62a] (2/3) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [082]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Thrasios, Triton Hero [082] did 4 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [ad2] did 6 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Esper Sentinel [bd0]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Derevi, Empyrial Tactician [62a]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack push: 3 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack push: 4 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [62a] - Whenever Derevi, Empyrial Tactician [62a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Bayou [ea2]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack resolve: 4 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack resolve: 3 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [ad2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [ad2]"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: Cast Survival of the Fittest)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA casts Survival of the Fittest [969] from hand"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: Cast Survival of the Fittest)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA puts Survival of the Fittest [969] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.407432+00:00"
+}

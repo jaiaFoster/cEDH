@@ -1,0 +1,238 @@
+{
+  "game_id": "gate4a-2p-batch001-seed20",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 20,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1972,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 54,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [91b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Mox Diamond [98f] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Mox Diamond [98f] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Windswept Heath [17b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [17b]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Windswept Heath [17b] (source: Windswept Heath [17b])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [17b]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [17b])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tundra [b5f] from library onto the Battlefield (source: Windswept Heath [17b])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [17b])"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Lotus Petal [cc8] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Lotus Petal [cc8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB sacrificed Lotus Petal [cc8] (source: Lotus Petal [cc8])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Volatile Stormdrake [f7a] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Volatile Stormdrake [f7a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Volatile Stormdrake [f7a] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerB moves Finale of Devastation [be2] from hand to the exile zone (source: Endurance [2cd])"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerB casts Endurance [2cd] with Evoke from hand"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerB puts Endurance [2cd] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerB - Ability triggers: Endurance [2cd] - When Endurance [2cd] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerB - Ability triggers: Endurance [2cd] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerB sacrificed Endurance [2cd] (source: Endurance [2cd])"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [2cd])"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [2cd])"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 3 life at combat from Volatile Stormdrake [f7a]"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.204848+00:00"
+}

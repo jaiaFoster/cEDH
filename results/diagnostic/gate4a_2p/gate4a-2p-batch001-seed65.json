@@ -1,0 +1,202 @@
+{
+  "game_id": "gate4a-2p-batch001-seed65",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 65,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1965,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 45,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Chrome Mox [a5d] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Chrome Mox [a5d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [a5d] - Imprint — When Chrome Mox [a5d] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Otawara, Soaring City [ba6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Polluted Delta [18b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [18b]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Polluted Delta [18b] (source: Polluted Delta [18b])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [18b]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [18b])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [4b5] from library onto the Battlefield (source: Polluted Delta [18b])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [18b])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB moves Elvish Spirit Guide [cc2] from hand to the exile zone (source: Endurance [342])"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB casts Endurance [342] with Evoke from hand"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB puts Endurance [342] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB - Ability triggers: Endurance [342] - When Endurance [342] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB - Ability triggers: Endurance [342] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB sacrificed Endurance [342] (source: Endurance [342])"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.445244+00:00"
+}

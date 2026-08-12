@@ -1,0 +1,230 @@
+{
+  "game_id": "gate4a-2p-batch001-seed60",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 60,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1883,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 52,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Diamond [071] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Diamond [071] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Lotus Petal [402] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Lotus Petal [402] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Lotus Petal [402] (source: Lotus Petal [402])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Mana Vault [c0b] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Mana Vault [c0b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [c0b] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [c0b]."
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T9.UP",
+      "text": "PlayerA did not pay for Mana Vault [c0b] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Polluted Delta [117] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [117]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB sacrificed Polluted Delta [117] (source: Polluted Delta [117])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [117]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [117])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Underground Sea [4e9] from library onto the Battlefield (source: Polluted Delta [117])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [117])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Mystic Remora [920] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Mystic Remora [920] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [c0b] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [c0b]."
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T11.UP",
+      "text": "PlayerA did not pay for Mana Vault [c0b] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T12.UP",
+      "text": "PlayerB - Ability triggers: Mystic Remora [920] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T12.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.424748+00:00"
+}

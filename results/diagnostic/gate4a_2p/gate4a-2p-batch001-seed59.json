@@ -1,0 +1,362 @@
+{
+  "game_id": "gate4a-2p-batch001-seed59",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 59,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 3702,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 85,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Misty Rainforest [94f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [94f]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [94f] (source: Misty Rainforest [94f])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [94f]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [94f])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [67a] from library onto the Battlefield (source: Misty Rainforest [94f])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [94f])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mana Confluence [691] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Starting Town [0e6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Starting Town [0e6]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [842] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [842] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [691]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB casts Swift Reconfiguration [97f] targeting Thrasios, Triton Hero [842] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB puts Swift Reconfiguration [97f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Starting Town [0e6]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Badgermole Cub [82a] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Badgermole Cub [82a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Badgermole Cub [82a] - When Badgermole Cub [82a] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Underground Sea [67a]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Starting Town [0e6]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Tymna the Weaver [06b] from command"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Tymna the Weaver [06b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Scrubland [d4d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Badgermole Cub [82a] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [82a]"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [06b] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [06b]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Mox Amber [689] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Mox Amber [689] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Gaea's Cradle [861] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Endurance [230] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Endurance [230] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: Endurance [230] - When Endurance [230] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 3 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Underground Sea [67a] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Badgermole Cub [82a] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [06b] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Underground Sea [67a]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [82a]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [06b]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [06b] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [06b] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [06b]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [691]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Esper Sentinel [7e0] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Esper Sentinel [7e0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.414295+00:00"
+}

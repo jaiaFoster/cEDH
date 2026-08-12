@@ -1,0 +1,178 @@
+{
+  "game_id": "gate4a-2p-batch001-seed19",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 19,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1703,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 39,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts City of Traitors [b67] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Gemstone Caverns [3c9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA puts Tropical Island [b52] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: City of Traitors [b67] - When you play another land, sacrifice City of Traitors [b67]."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA sacrificed City of Traitors [b67] (source: City of Traitors [b67])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Flooded Strand [952] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [952]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Flooded Strand [952] (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [952]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Underground Sea [422] from library onto the Battlefield (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [1f9] from command"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [1f9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Ancient Tomb [c1b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Thrasios, Triton Hero [1f9] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [1f9]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Thrasios, Triton Hero [1f9] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.201731+00:00"
+}

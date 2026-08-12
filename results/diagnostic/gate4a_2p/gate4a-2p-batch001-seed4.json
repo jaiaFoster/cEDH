@@ -1,0 +1,654 @@
+{
+  "game_id": "gate4a-2p-batch001-seed4",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 4,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 13868,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 158,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mana Confluence [63b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Flooded Strand [952] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Flooded Strand [952]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Flooded Strand [952] (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [952]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [72b] from library onto the Battlefield (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Flooded Strand [952])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts City of Brass [96a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [63b]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [31c] from command"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [96a] - Whenever City of Brass [96a] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from City of Brass [96a]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [31c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Marsh Flats [1d6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Marsh Flats [1d6]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Marsh Flats [1d6] (source: Marsh Flats [1d6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [1d6]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Marsh Flats [1d6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [96a] from library onto the Battlefield (source: Marsh Flats [1d6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Marsh Flats [1d6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [63b]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Tymna the Weaver [eb2] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [96a] - Whenever City of Brass [96a] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from City of Brass [96a]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tymna the Weaver [eb2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Thrasios, Triton Hero [31c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [31c]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "Thrasios, Triton Hero [31c] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [eb2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [63b]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Badgermole Cub [c38] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [96a] - Whenever City of Brass [96a] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from City of Brass [96a]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Badgermole Cub [c38] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Badgermole Cub [c38] - When Badgermole Cub [c38] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Underground Sea [96a]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 3 creatures"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [31c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Underground Sea [96a] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Tymna the Weaver [eb2] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [31c]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [31c] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Underground Sea [96a]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Tymna the Weaver [eb2] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [eb2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Ranger-Captain of Eos)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [63b]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Ranger-Captain of Eos [a7b] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [96a] - Whenever City of Brass [96a] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from City of Brass [96a]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Ranger-Captain of Eos)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Ranger-Captain of Eos [a7b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, you may search your library for a creature card with mana valu...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: Ranger-Captain of Eos [a7b] - When Ranger-Captain of Eos [a7b] enters, you may search your library for a creature card with mana value 1 or less, reveal it, put it into your hand, then shuffle."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, you may search your library for a creature card with mana valu...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Ranger-Captain of Eos [a7b])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts a card from library into their hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA reveals Delighted Halfling"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Ranger-Captain of Eos [a7b])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Delighted Halfling [8f5] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Delighted Halfling [8f5] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 3 creatures"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Thrasios, Triton Hero [31c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Tymna the Weaver [eb2] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Badgermole Cub [c38] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [31c]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Thrasios, Triton Hero [31c] did 3 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Tymna the Weaver [eb2] did 4 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [c38]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [eb2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T9.M2",
+      "text": "PlayerA puts Shifting Woodland [89c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Esper Sentinel [bae] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [96a] - Whenever City of Brass [96a] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from City of Brass [96a]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Esper Sentinel [bae] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Eldritch Evolution)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from Mana Confluence [63b]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA sacrificed Esper Sentinel [bae] (source: Eldritch Evolution [4f0])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Eldritch Evolution [4f0] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Eldritch Evolution)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA searches their library (source: Eldritch Evolution [4f0])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Runic Armasaur [be1] from library onto the Battlefield (source: Eldritch Evolution [4f0])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA's library is shuffled (source: Eldritch Evolution [4f0])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA moves Eldritch Evolution [4f0] from stack to the exile zone"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 5 creatures"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Thrasios, Triton Hero [31c] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Tymna the Weaver [eb2] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Badgermole Cub [c38] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Ranger-Captain of Eos [a7b] (3/3) unblocked"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Delighted Halfling [8f5] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [31c]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Thrasios, Triton Hero [31c] did 4 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "Tymna the Weaver [eb2] did 6 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [c38]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 3 life at combat from Ranger-Captain of Eos [a7b]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 1 life at combat from Delighted Halfling [8f5]"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [eb2] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [eb2]"
+    },
+    {
+      "turnstep": "T11.M2",
+      "text": "PlayerA puts Boseiju, Who Endures [4e4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Mox Diamond [7a4] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Mox Diamond [7a4] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.112193+00:00"
+}

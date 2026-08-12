@@ -1,0 +1,154 @@
+{
+  "game_id": "gate4a-2p-batch001-seed14",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 14,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1685,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 33,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [26a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Starting Town [ea2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Scrubland [670] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from Starting Town [ea2]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Birds of Paradise [1bf] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Birds of Paradise [1bf] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Scrubland [327] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Orcish Bowmasters [133] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Orcish Bowmasters [133] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB - Ability triggers: Orcish Bowmasters [133] - When Orcish Bowmasters [133] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [133] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerA loses 1 life from Orcish Bowmasters [133]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB creates a Orc Army Token [92a] token"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.177258+00:00"
+}

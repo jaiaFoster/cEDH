@@ -1,0 +1,270 @@
+{
+  "game_id": "gate4a-2p-batch001-seed99",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 99,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2509,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 62,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [ef0] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Chrome Mox [91a] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Chrome Mox [91a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Chrome Mox [91a] - Imprint — When Chrome Mox [91a] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA moves Archivist of Oghma [615] from hand to the exile zone (source: Chrome Mox [91a])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Exotic Orchard [686] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [11e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 2 life from Birthing Pod [8d3]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Birthing Pod [8d3] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Birthing Pod [8d3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Command Tower [deb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [d25] from command"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [d25] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Talon Gates of Madara [abe] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: Talon Gates of Madara [abe] - When Talon Gates of Madara [abe] enters, up to one target creature phases out. - targeting Thrasios, Triton Hero [d25]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Thrasios, Triton Hero [d25] phased out"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [5dc] from command"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [5dc] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA sacrificed Thrasios, Triton Hero [5dc] (source: Birthing Pod [8d3])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 2 life from Birthing Pod [8d3]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA activates: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. from Birthing Pod [8d3]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [5dc] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA searches their library (source: Birthing Pod [8d3])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Runic Armasaur [942] from library onto the Battlefield (source: Birthing Pod [8d3])"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA's library is shuffled (source: Birthing Pod [8d3])"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.UN",
+      "text": "Thrasios, Triton Hero [d25] phased in"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Archivist of Oghma [e6d] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Archivist of Oghma [e6d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [d25] (1/3) blocked by Runic Armasaur [942] (2/5)"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Runic Armasaur [942] deals 2 damage to Thrasios, Triton Hero [d25]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [d25] deals 1 damage to Runic Armasaur [942]"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.552537+00:00"
+}

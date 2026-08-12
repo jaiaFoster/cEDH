@@ -1,0 +1,302 @@
+{
+  "game_id": "gate4a-2p-batch001-seed34",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 34,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 2524,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 70,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Mox Diamond [c73] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Mox Diamond [c73] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Marsh Flats [973] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Marsh Flats [973]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Marsh Flats [973] (source: Marsh Flats [973])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [973]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Marsh Flats [973])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [e4f] from library onto the Battlefield (source: Marsh Flats [973])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Marsh Flats [973])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Shifting Woodland [91c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Lotus Petal [8bc] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Lotus Petal [8bc] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Lotus Petal [8bc] (source: Lotus Petal [8bc])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Volatile Stormdrake [58d] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Volatile Stormdrake [58d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Misty Rainforest [cc0] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [cc0]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [cc0] (source: Misty Rainforest [cc0])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [cc0]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [cc0])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Underground Sea [bca] from library onto the Battlefield (source: Misty Rainforest [cc0])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [cc0])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [147] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [147] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Volatile Stormdrake [58d] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 3 life at combat from Volatile Stormdrake [58d]"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T10.DB",
+      "text": "Attacker: Thrasios, Triton Hero [147] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [147]"
+    },
+    {
+      "turnstep": "T10.CD",
+      "text": "Thrasios, Triton Hero [147] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Mox Diamond [303] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Mox Diamond [303] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Volatile Stormdrake [58d] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 3 life at combat from Volatile Stormdrake [58d]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Exotic Orchard [fe5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Rhystic Study [a7b] from hand"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Rhystic Study [a7b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Thrasios, Triton Hero [147] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [147]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [147] did 2 combat damage to PlayerA during the game."
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.260520+00:00"
+}

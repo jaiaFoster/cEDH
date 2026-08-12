@@ -1,0 +1,214 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed14",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 14,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 6954,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 48,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "PlayerA casts Mox Diamond [e9b] from hand"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "PlayerA puts Mox Diamond [e9b] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Verdant Catacombs [410] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD loses 1 life from Verdant Catacombs [410]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD sacrificed Verdant Catacombs [410] (source: Verdant Catacombs [410])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [410]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD searches their library (source: Verdant Catacombs [410])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Underground Sea [403] from library onto the Battlefield (source: Verdant Catacombs [410])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD's library is shuffled (source: Verdant Catacombs [410])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Otawara, Soaring City [091] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Misty Rainforest [3c2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [3c2]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [3c2] (source: Misty Rainforest [3c2])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [3c2]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [3c2])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Underground Sea [042] from library onto the Battlefield (source: Misty Rainforest [3c2])"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [3c2])"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD casts Chrome Mox [d36] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD puts Chrome Mox [d36] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD - Ability triggers: Chrome Mox [d36] - Imprint — When Chrome Mox [d36] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerD moves Swift Reconfiguration [733] from hand to the exile zone (source: Chrome Mox [d36])"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.767596+00:00"
+}

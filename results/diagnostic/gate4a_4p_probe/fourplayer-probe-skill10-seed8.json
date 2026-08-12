@@ -1,0 +1,246 @@
+{
+  "game_id": "fourplayer-probe-skill10-seed8",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 8,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 6888,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 56,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Windswept Heath [23e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [23e]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Windswept Heath [23e] (source: Windswept Heath [23e])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [23e]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [23e])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tundra [eff] from library onto the Battlefield (source: Windswept Heath [23e])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [23e])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Command Tower [4d1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [181] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [181] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Windswept Heath [558] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [558]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Windswept Heath [558] (source: Windswept Heath [558])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [558]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [558])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tundra [b46] from library onto the Battlefield (source: Windswept Heath [558])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [558])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Noble Hierarch [d5a] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Noble Hierarch [d5a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "Stack push: 1 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA - Ability triggers: Noble Hierarch [d5a] - exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "Stack resolve: 1 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacked player: PlayerB"
+    },
+    {
+      "turnstep": "T9.DB",
+      "text": "Attacker: Thrasios, Triton Hero [181] (2/4) unblocked"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "PlayerB loses 2 life at combat from Thrasios, Triton Hero [181]"
+    },
+    {
+      "turnstep": "T9.CD",
+      "text": "Thrasios, Triton Hero [181] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC puts Scrubland [069] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC casts Mana Vault [974] from hand"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerC puts Mana Vault [974] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:33:21.764713+00:00"
+}

@@ -1,0 +1,206 @@
+{
+  "game_id": "gate4a-2p-batch001-seed64",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 64,
+  "max_turn_requested": 12,
+  "status": "OK",
+  "elapsed_ms": 1975,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 46,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Flooded Strand [8dc] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [8dc]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Flooded Strand [8dc] (source: Flooded Strand [8dc])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [8dc]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [8dc])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [28d] from library onto the Battlefield (source: Flooded Strand [8dc])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [8dc])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Flooded Strand [c02] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB loses 1 life from Flooded Strand [c02]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB sacrificed Flooded Strand [c02] (source: Flooded Strand [c02])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [c02]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB searches their library (source: Flooded Strand [c02])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Underground Sea [dae] from library onto the Battlefield (source: Flooded Strand [c02])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB's library is shuffled (source: Flooded Strand [c02])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Training Grounds [0ae] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Training Grounds [0ae] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Polluted Delta [299] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [299]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB sacrificed Polluted Delta [299] (source: Polluted Delta [299])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [299]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [299])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Tundra [dda] from library onto the Battlefield (source: Polluted Delta [299])"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [299])"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T20:15:32.442910+00:00"
+}
