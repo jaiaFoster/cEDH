@@ -1,0 +1,53 @@
+{
+  "id": "INT-0005",
+  "status": "candidate",
+  "name": "[Spellbook 184-4682-4893] Infinite card draw for all players, Infinite draw triggers for all players, Near-infinite colored mana, Near-infinite colorless mana, Near-infinite Treasure tokens",
+  "cards": [
+    {
+      "scryfall_id": "bc9a7599-3c7d-4b83-bff3-e3d1f20f1b0f",
+      "name": "Faerie Mastermind",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "861b5889-0183-4bee-afeb-a4b2aa700a8e",
+      "name": "Smothering Tithe",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "991c27ed-f53c-48c6-8c12-282f44b8d441",
+      "name": "Training Grounds",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": "{1}{U}",
+    "timing": "not specified by Spellbook",
+    "targets_required": [],
+    "other": [
+      "Notable prerequisites: You have at least three opponents.\nOpponents are unable to pay for Smothering Tithe's trigger.",
+      "Spellbook description: Activate Faerie Mastermind by paying {1}{U}, causing each player to draw a card.\nSmothering Tithe triggers for each opponent you have, creating at least three Treasure tokens.\nActivate two Treasures by tapping and sacrificing them, adding {1}{U}.\nRepeat.",
+      "Spellbook color identity: WU",
+      "Spellbook popularity score: 7327",
+      "Spellbook-reported Commander legal: True"
+    ]
+  },
+  "result": {
+    "summary": "Infinite card draw for all players, Infinite draw triggers for all players, Near-infinite colored mana, Near-infinite colorless mana, Near-infinite Treasure tokens",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": null
+  },
+  "deterministic": false,
+  "verification": null,
+  "sources": [
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/184-4682-4893"
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": "SIM-0005"
+}

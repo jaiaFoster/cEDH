@@ -9,7 +9,14 @@ from conftest import REPO_ROOT, load_jsonl
 BACKLOG_MD = REPO_ROOT / "coverage_backlog" / "BACKLOG.md"
 BACKLOG_JSONL = REPO_ROOT / "coverage_backlog" / "backlog.jsonl"
 
-ID_PATTERN = re.compile(r"\b([A-Z]+-\d{4,})\b")
+# Matches only the ID *column* of a table row (start of line, first cell),
+# e.g. "| SIM-0007 | INTERACT | ...". Deliberately does NOT match an ID
+# mentioned in prose elsewhere in a row (e.g. a SIM-* row's summary text
+# referencing an unrelated INT-* interaction ID) - see the incident this
+# guarded against: SIM-0007's summary mentions INT-0001/INT-0006, which are
+# interaction registry IDs, not backlog entries, and must not be required to
+# exist in backlog.jsonl.
+ID_PATTERN = re.compile(r"^\|\s*([A-Z]+-\d{4,})\s*\|", re.MULTILINE)
 
 
 def _ids_in_markdown() -> set[str]:

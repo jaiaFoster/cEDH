@@ -1,0 +1,53 @@
+{
+  "id": "INT-0006",
+  "status": "candidate",
+  "name": "[Spellbook 1174-2404-6678] Infinite mana lands you control can produce, Infinite green mana, Infinite landfall triggers, Phase out any number of creatures any number of times",
+  "cards": [
+    {
+      "scryfall_id": "a382a9b8-0b19-46c2-a547-a22d6e23d0ac",
+      "name": "Oboro Breezecaller",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "de92facf-762b-4a23-8d5e-bb673b0500c0",
+      "name": "Talon Gates of Madara",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "25b0b816-0583-44aa-9dc5-f3ff48993a51",
+      "name": "Gaea's Cradle",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "not specified by Spellbook",
+    "targets_required": [],
+    "other": [
+      "Notable prerequisites: You control at least five creatures.",
+      "Spellbook description: Activate Gaea's Cradle by tapping it, adding at least {G}{G}{G}{G}{G}.\nActivate Talon Gates of Madara's first ability by tapping it, adding {C}.\nActivate Oboro Breezecaller by paying {2} and returning Talon Gates of Madara from the battlefield to your hand, untapping Gaea's Cradle.\nActivate Talon Gates of Madara's third ability by paying {4}, putting it from your hand onto the battlefield.\nWhen Talon Gates of Madara enters the battlefield, it triggers, phasing out up to one target creature.\nRepeat any number of times.",
+      "Spellbook color identity: GU",
+      "Spellbook popularity score: 15624",
+      "Spellbook-reported Commander legal: True"
+    ]
+  },
+  "result": {
+    "summary": "Infinite mana lands you control can produce, Infinite green mana, Infinite landfall triggers, Phase out any number of creatures any number of times",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": null
+  },
+  "deterministic": false,
+  "verification": null,
+  "sources": [
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/1174-2404-6678"
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": "SIM-0005"
+}

@@ -14,7 +14,7 @@ passed for the specific model version and deck version in question.**
 
 | Gate | Description | Status | Evidence | Date |
 |---|---|---|---|---|
-| 1 | Card & rule coverage | **In progress** | Network unblocked 2026-08-12; all 100 cards (98 + 2 commanders) bulk-ingested from Scryfall with full Oracle text, mana cost, color identity, and rulings (`data/cards_cache/oracle-2026-08-12/`, `data/decklists/tymna-thrasios-treefarm-v1.json`). Ability classification is heuristic, not manually reviewed. Still open: interaction discovery pass (`SIM-0005`), Forge/XMage evaluation (`INFRA-0002`), MTGJSON cross-validation. Gate not yet closable until those complete per its exit criteria below. | 2026-08-12 |
+| 1 | Card & rule coverage | **In progress** | Network unblocked 2026-08-12; all 100 cards (98 + 2 commanders) bulk-ingested from Scryfall with full Oracle text, mana cost, color identity, and rulings (`data/cards_cache/oracle-2026-08-12/`, `data/decklists/tymna-thrasios-treefarm-v1.json`). Ability classification is heuristic, not manually reviewed. Interaction discovery pass done via Commander Spellbook (6 candidates, `SIM-0005` resolved) — but none are Level 4 validated yet (`SIM-0007`). Forge and XMage both confirmed 100/100 card coverage (`INFRA-0002` resolved); adapter build still pending (`INFRA-0003`). Still open before this gate can close: Phase 3 exact-line validation, independent (non-Spellbook) interaction discovery scan, MTGJSON cross-validation. | 2026-08-12 |
 | 2 | Gold board states | Not started | depends on Gate 1 | — |
 | 3 | Gold games | Not started | depends on Gate 2 | — |
 | 4 | ~100 manually inspected games | Not started | depends on Gate 3 | — |
