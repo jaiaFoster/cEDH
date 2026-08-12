@@ -1,0 +1,73 @@
+{
+  "id": "GBS-0004",
+  "description": "Delney, Streetwise Lookout + Orcish Bowmasters: Orcish Bowmasters' compound ETB/opponent-draw trigger (1 damage to any target, then amass Orcs 1) is a power-1 creature's triggered ability, so Delney causes it to trigger an additional time. Casting Orcish Bowmasters (Flash) genuinely triggers its ETB, producing two independent trigger instances that each require their own target and combine into 2 damage + Amass Orcs 2 (one Army token, 2 counters, per CR 701.47a). Validates INT-0007.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "2 Swamp were added purely as scaffolding to cast Orcish Bowmasters ({1}{B}); the mana source's identity is not material to the rule under test (Delney doubling Orcish Bowmasters' trigger).",
+    "No other permanents, hand cards, lands beyond the two Swamp, or players' boards were modeled — this is a two-card isolation test (plus an opposing life total), not a representative game state.",
+    "Both damage instances were targeted at playerB's face by test-authoring choice; either instance could legally target any object/player instead without changing the rule being validated."
+  ],
+  "interaction_under_test": "INT-0007",
+  "material_characteristics": [
+    "Orcish Bowmasters' power is exactly 1, so its own triggered ability qualifies for Delney's power-2-or-less doubling clause",
+    "Orcish Bowmasters' trigger is a single compound triggered ability covering both 'enters the battlefield' and 'opponent draws a non-first card' conditions, with a targeted damage effect followed by an Amass effect",
+    "Delney's static ability causes any triggered ability of a creature it controls with power 2 or less to trigger an additional time (CR 603.2d), producing two independently-targeted instances of the same compound trigger",
+    "Amass (CR 701.47a) only creates a new Army token if the controller doesn't already control one — so the second doubled instance adds its +1/+1 counters to the same Army token the first instance created, rather than producing two separate tokens"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the specific mana source used to cast Orcish Bowmasters",
+    "All board state not directly involved in the two-card interaction",
+    "Choice of target for each damage instance (both targeted the same player here; any legal target works identically)"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Delney, Streetwise Lookout", "quantity": 1},
+          {"card": "Swamp", "quantity": 2}
+        ],
+        "hand": ["Orcish Bowmasters"],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Orcish Bowmasters (Flash)"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that Orcish Bowmasters' ETB only deals 1 damage and amasses 1 (Delney alone) rather than 2 and 2",
+      "Assuming the doubled Amass instances create two separate Army tokens rather than growing the same one (CR 701.47a)"
+    ],
+    "outcome_if_resolved": "After casting Orcish Bowmasters and resolving both doubled trigger instances (both damage targeted at seat 2): seat 2's life drops from 20 to 18, and seat 1 controls exactly one Orc Army Token carrying 2 +1/+1 counters."
+  },
+  "rules_citations": [
+    "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",
+    "CR 603.3b (a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose)",
+    "CR 701.47a (amass: create an Army token only if you don't already control one, then put N +1/+1 counters on an Army you control)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DelneyOrcishBowmastersDoubleTest#test_DelneyDoublesOrcishBowmastersETB, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001/0002/0003. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

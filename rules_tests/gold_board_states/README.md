@@ -16,3 +16,8 @@ looks.
   to rule out a "triples all sources" misreading of `GBS-0002`'s result —
   the correct model is `+2` flat, not a multiplier. Cross-checked against
   the same from-source XMage build, 1/1 passing.
+- **`GBS-0004`** — Delney, Streetwise Lookout + Orcish Bowmasters (backs
+  `INT-0007`, now `interactions/verified/`). Casting Orcish Bowmasters
+  (Flash) so its ETB genuinely fires, doubled by Delney: 2 damage + Amass
+  Orcs 2 (a single Army token with 2 +1/+1 counters, per CR 701.47a).
+  Cross-checked against the same from-source XMage build, 1/1 passing.

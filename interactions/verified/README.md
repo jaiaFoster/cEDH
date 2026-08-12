@@ -29,6 +29,16 @@ See `../README.md`. Only interactions validated per Level 4 (rules citations
   (3 mana) yields 5, not 9. `GBS-0003.json` exists specifically to
   engine-verify this and prevent the "triples everything" abstraction
   from recurring.
+- **`INT-0007`** — Delney, Streetwise Lookout doubles Orcish Bowmasters'
+  compound ETB/opponent-draw trigger → 2 damage + Amass Orcs 2 (a single
+  Army token with 2 +1/+1 counters, per CR 701.47a) instead of 1 and 1.
+  Verified 2026-08-12: Comprehensive Rules citations (CR 603.2d
+  triggers-additional-time mechanic, CR 603.3b ordering simultaneously-
+  pending triggered abilities, CR 701.47a amass) plus independent
+  reproduction in the same from-source XMage build
+  (`org.mage.test.cards.interactions.cedh.DelneyOrcishBowmastersDoubleTest`,
+  1/1 passing). Backing gold board state:
+  `rules_tests/gold_board_states/GBS-0004.json`.
 
-The other 12 candidates found so far (`interactions/candidate/`) remain
+The other 11 candidates found so far (`interactions/candidate/`) remain
 unverified — see `coverage_backlog/BACKLOG.md` `SIM-0007`.

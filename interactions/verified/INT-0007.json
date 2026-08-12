@@ -1,0 +1,70 @@
+{
+  "id": "INT-0007",
+  "status": "verified",
+  "name": "Delney, Streetwise Lookout doubles Orcish Bowmasters's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "7c024bae-5631-4e20-ac69-df392ac9e109",
+      "name": "Orcish Bowmasters",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Whenever Orcish Bowmasters's compound trigger would fire: on it entering the battlefield, or on an opponent drawing a card except the first one they draw in their draw step.",
+    "targets_required": [
+      "Each independent instance of the doubled trigger needs its own 'any target' choice for the 1 damage - both instances may target the same or different objects/players."
+    ],
+    "other": [
+      "Orcish Bowmasters's power is 1 (printed base power), so it qualifies for Delney's power-2-or-less doubling clause.",
+      "Orcish Bowmasters's oracle text: 'Flash. When this creature enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, this creature deals 1 damage to any target. Then amass Orcs 1.' - a single compound triggered ability (an OrTriggeredAbility covering both trigger conditions) with a targeted damage effect and an Amass effect.",
+      "Amass (CR 701.47a): 'If you don't control an Army creature, create a 0/0 black [subtype] Army creature token. Choose an Army creature you control. Put N +1/+1 counters on that creature.' Because the first triggered instance creates the Army token, the second instance (resolving afterward) finds a controlled Army already exists and simply adds its counters to the same token, rather than creating a second one - this is a rules-driven detail, not an assumption.",
+      "Power can change from other effects elsewhere in the deck (e.g. -1/-1 counters, boosts) which could push Orcish Bowmasters above power 2 and disqualify it from Delney's clause at the moment of a later trigger - not exhaustively checked against every other card's interaction with this power threshold, but not required for the base case verified here."
+    ]
+  },
+  "result": {
+    "summary": "Orcish Bowmasters' ETB/opponent-draw ping-and-amass trigger fires twice per qualifying event: 2 damage (split or concentrated across the two independently-targeted instances) and Amass Orcs 2 total (as +1/+1 counters on a single Army token) instead of 1 damage and Amass Orcs 1.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d — an ability may state that a triggered ability triggers additional times; determine how many times, then trigger that many times. This is the mechanic Delney's static ability relies on.",
+      "CR 603.3b — when multiple triggered abilities a player controls are waiting to be put on the stack, that player puts them on the stack in any order they choose (APNAP order). This governs the explicit trigger-ordering choice exercised when Delney creates two simultaneously-pending instances of Orcish Bowmasters' trigger.",
+      "CR 701.47a — to amass [subtype] N means to create a 0/0 Army token only if the player doesn't already control one, then put N +1/+1 counters on an Army they control. This is why the second doubled instance adds counters to the same Army token the first instance created, rather than creating a second token."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/INT-0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyOrcishBowmastersDoubleTest#test_DelneyDoublesOrcishBowmastersETB (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0004.json for the fixture record). Test setup: Delney, Streetwise Lookout + 2 Swamp on the battlefield for playerA, Orcish Bowmasters in hand. Cast Orcish Bowmasters (it has Flash) to genuinely trigger 'enters the battlefield' (fixture-placed battlefield cards don't fire ETB triggers in this framework). Two independent trigger instances appeared, requiring one trigger-order choice (the second instance auto-resolves once it's the only one remaining) and one 'any target' choice each, both targeted at playerB. Result: playerB's life dropped from 20 to 18 (2 damage total), and playerA controlled exactly one 'Orc Army Token' carrying 2 +1/+1 counters (not two separate tokens). Passed 1/1 on the second attempt (first attempt failed with a 'Missing CHOICE def' error for the trigger-ordering decision, which strict-choose mode requires explicitly even when both pending triggers are identical; fixed by adding setChoice(playerA, \"Orcish Bowmasters\"))."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyOrcishBowmastersDoubleTest#test_DelneyDoublesOrcishBowmastersETB, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 603.3b, 701.47a"
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": null
+}
