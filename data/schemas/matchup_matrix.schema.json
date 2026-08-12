@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/matchup_matrix.schema.json",
+  "title": "Matchup Matrix",
+  "description": "Per charter 'Multiplayer matchup principle' - never a bare 1v1 number. One record per (target_archetype, pod_context, seat) tuple, not one number per archetype.",
+  "type": "object",
+  "required": ["matrix_id", "subject_deck_version", "run_id", "entries"],
+  "properties": {
+    "matrix_id": {"type": "string"},
+    "subject_deck_version": {"type": "string"},
+    "run_id": {"type": "string", "description": "Points to the results/raw/<run_id>/ this matrix was computed from."},
+    "weighting": {"enum": ["unweighted", "meta_weighted"], "description": "Charter requires both to be produced; store as two matrix records, one per weighting."},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target_archetype_id", "pod_context", "seat", "sample_size", "win_rate"],
+        "properties": {
+          "target_archetype_id": {"type": "string"},
+          "co_archetypes": {"type": "array", "items": {"type": "string"}, "description": "The other seats' archetypes for this entry, since a cEDH matchup is subject+target+pod context, not 1v1."},
+          "pod_context": {"enum": ["turbo", "midrange", "mixed", "stax_heavy", "other"]},
+          "seat": {"type": "integer", "minimum": 1, "maximum": 4},
+          "sample_size": {"type": "integer"},
+          "win_rate": {"type": "number", "minimum": 0, "maximum": 1},
+          "confidence_interval": {"type": ["array", "null"], "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          "draw_rate": {"type": ["number", "null"]}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

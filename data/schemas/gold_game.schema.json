@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/gold_game.schema.json",
+  "title": "Gold Game",
+  "description": "A manually-reviewed full game sequence for Validation Gate 3. Lives in rules_tests/gold_games/<id>.json.",
+  "type": "object",
+  "required": ["id", "description", "deck_versions", "seats", "turns", "expected_winner", "authored_by", "authored_date"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^GG-[0-9]{4,}$"},
+    "description": {"type": "string"},
+    "deck_versions": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 4},
+    "seats": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 4},
+    "turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["turn_number", "active_seat", "actions"],
+        "properties": {
+          "turn_number": {"type": "integer"},
+          "active_seat": {"type": "integer"},
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["seat", "action", "legal"],
+              "properties": {
+                "seat": {"type": "integer"},
+                "action": {"type": "string"},
+                "legal": {"type": "boolean"},
+                "notes": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "expected_winner": {"type": ["integer", "null"], "description": "Seat number, or null for a draw/undetermined test."},
+    "win_recognition_check": {"type": "string", "description": "What specifically confirms the win was recognized correctly (e.g. state-based action, specific card's win condition text)."},
+    "rules_citations": {"type": "array", "items": {"type": "string"}},
+    "authored_by": {"type": "string"},
+    "authored_date": {"type": "string", "format": "date"},
+    "last_pass_result": {
+      "type": ["object", "null"],
+      "properties": {"passed": {"type": "boolean"}, "sim_version": {"type": "string"}, "date": {"type": "string", "format": "date"}, "deviations": {"type": "array", "items": {"type": "string"}}}
+    }
+  },
+  "additionalProperties": false
+}

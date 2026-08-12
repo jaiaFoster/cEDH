@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/interaction.schema.json",
+  "title": "Interaction",
+  "description": "A candidate or verified card interaction/combo/line. Lives in interactions/candidate/<id>.json until validated, then moves to interactions/verified/<id>.json. Only files in interactions/verified/ may be used as deterministic transitions in simulation (charter non-negotiable rule 1).",
+  "type": "object",
+  "required": [
+    "id",
+    "status",
+    "name",
+    "cards",
+    "prerequisites",
+    "result",
+    "deterministic",
+    "sources",
+    "discovered_via"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^INT-[0-9]{4,}$"},
+    "status": {"enum": ["candidate", "verified", "refuted"]},
+    "name": {"type": "string"},
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["scryfall_id", "name", "role"],
+        "properties": {
+          "scryfall_id": {"type": "string"},
+          "name": {"type": "string"},
+          "role": {"type": "string", "description": "e.g. 'engine piece', 'enabler', 'payoff'."}
+        }
+      }
+    },
+    "prerequisites": {
+      "type": "object",
+      "description": "Required for status=verified per charter Level 4 exact-line validation checklist.",
+      "properties": {
+        "zones": {"type": "array", "items": {"type": "string"}},
+        "mana_available": {"type": ["string", "null"]},
+        "timing": {"type": "string", "description": "e.g. 'main phase, sorcery speed', 'any time player has priority'."},
+        "targets_required": {"type": "array", "items": {"type": "string"}},
+        "other": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["summary", "is_win_condition"],
+      "properties": {
+        "summary": {"type": "string"},
+        "is_win_condition": {"type": "boolean"},
+        "is_loop": {"type": "boolean"},
+        "loop_termination": {"type": ["string", "null"], "description": "Required detail if is_loop=true: what stops the loop and how the result is achieved."}
+      }
+    },
+    "deterministic": {
+      "type": "boolean",
+      "description": "True only if the line has no dependency on opponent choices or randomness once prerequisites are met. Must be false for anything not yet Level-4-validated."
+    },
+    "verification": {
+      "type": ["object", "null"],
+      "description": "Required (non-null) when status=verified.",
+      "properties": {
+        "rules_citations": {"type": "array", "items": {"type": "string"}, "description": "Comprehensive Rules section numbers and/or Oracle rulings cited."},
+        "executable_engine_check": {
+          "type": ["object", "null"],
+          "properties": {
+            "engine": {"enum": ["forge", "xmage", "none"]},
+            "reproduced": {"type": "boolean"},
+            "notes": {"type": "string"}
+          }
+        },
+        "verified_by": {"type": "string"},
+        "verified_date": {"type": "string", "format": "date"}
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "reference"],
+        "properties": {
+          "type": {"enum": ["commander_spellbook", "primer", "manual_discovery", "comprehensive_rules", "oracle_ruling", "executable_engine"]},
+          "reference": {"type": "string"}
+        }
+      }
+    },
+    "discovered_via": {
+      "enum": ["commander_spellbook_pull", "pairwise_scan", "triple_scan", "higher_order_scan", "primer_reference", "manual_review"]
+    },
+    "coverage_backlog_ref": {"type": ["string", "null"], "description": "Backlog entry ID if this interaction is blocked on something."}
+  },
+  "additionalProperties": false
+}

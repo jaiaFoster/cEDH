@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/simulation_result.schema.json",
+  "title": "Simulation Result",
+  "description": "Raw provenance-tagged output of one simulation run, per docs/VERSIONING.md. Lives at results/raw/<run_id>/config.json (this schema) plus a sibling games.jsonl or games/ directory of per-game records (schema not yet defined — depends on the state representation chosen once sim/ exists).",
+  "type": "object",
+  "required": [
+    "run_id",
+    "evidence_type",
+    "simulator_version",
+    "rules_awareness_level",
+    "subject_deck_version",
+    "opponent_deck_versions",
+    "policy_versions",
+    "random_seeds",
+    "game_count",
+    "known_coverage_gaps",
+    "gate_status_at_run_time",
+    "created_at"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^run-[0-9]{8}-.+$"},
+    "evidence_type": {"const": "simulation", "description": "Always 'simulation' for this schema; goldfish/static_probability/practice_game/tournament_game results use a different, lighter record — see docs/VERSIONING.md."},
+    "simulator_version": {"type": "string", "description": "git SHA of sim/ at run time."},
+    "rules_awareness_level": {"type": "integer", "minimum": 0, "maximum": 4},
+    "subject_deck_version": {"type": "string"},
+    "opponent_deck_versions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "archetype_registry_version": {"type": ["string", "null"]},
+    "policy_versions": {"type": "array", "items": {"type": "string"}},
+    "pod_sampling": {
+      "type": "object",
+      "properties": {
+        "method": {"enum": ["uniform_unweighted", "meta_weighted", "fixed"]},
+        "tournament_data_window": {"type": ["string", "null"]}
+      }
+    },
+    "random_seeds": {"type": "array", "items": {"type": "integer"}},
+    "game_count": {"type": "integer", "minimum": 1},
+    "known_coverage_gaps": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "coverage_backlog entry IDs open at run time and relevant to this run's scope."
+    },
+    "gate_status_at_run_time": {
+      "type": "object",
+      "description": "Snapshot of docs/VALIDATION_GATES.md gate statuses at run time, so a result carries its own validation context even if the gates file changes later.",
+      "properties": {
+        "gate1": {"type": "string"}, "gate2": {"type": "string"}, "gate3": {"type": "string"},
+        "gate4": {"type": "string"}, "gate5": {"type": "string"}, "gate6": {"type": "string"}, "gate7": {"type": "string"}
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "description": "Per docs/VERSIONING.md confidence dimensions. Populated when the run is used to support a Findings Packet, may be null for exploratory/internal runs.",
+      "properties": {
+        "sampling": {"type": ["string", "null"]},
+        "rules": {"type": ["string", "null"]},
+        "policy": {"type": ["string", "null"]},
+        "list": {"type": ["string", "null"]},
+        "metagame": {"type": ["string", "null"]},
+        "sensitivity": {"type": ["string", "null"]}
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

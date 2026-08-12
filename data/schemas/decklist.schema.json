@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/decklist.schema.json",
+  "title": "Decklist",
+  "description": "One versioned decklist (subject or opponent). Lives at data/decklists/<deck_version>.json. A changed card list is a new file, never an edit to an existing one (docs/VERSIONING.md immutability rule).",
+  "type": "object",
+  "required": ["deck_version", "deck_name", "commanders", "cards", "role", "source", "ingested"],
+  "properties": {
+    "deck_version": {"type": "string", "pattern": "^.+-v[0-9]+$"},
+    "deck_name": {"type": "string"},
+    "commanders": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 2},
+    "archetype_id": {"type": ["string", "null"], "description": "Null for the subject deck until/unless it's also classified against the empirical registry; required for opponent decks used in matchup analysis."},
+    "role": {"enum": ["subject", "opponent"]},
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["scryfall_id", "name", "quantity"],
+        "properties": {
+          "scryfall_id": {"type": "string"},
+          "name": {"type": "string"},
+          "quantity": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "reference", "date"],
+      "properties": {
+        "type": {"enum": ["user_supplied", "tournament_registration", "primer", "decklist_database"]},
+        "reference": {"type": "string"},
+        "date": {"type": "string", "format": "date"}
+      }
+    },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {"from_version": {"type": "string"}, "change": {"type": "string"}, "date": {"type": "string", "format": "date"}}
+      },
+      "description": "What changed from the prior version, if any."
+    },
+    "ingested": {
+      "type": "object",
+      "required": ["oracle_data_version", "ingested_date"],
+      "properties": {
+        "oracle_data_version": {"type": "string"},
+        "ingested_date": {"type": "string", "format": "date"},
+        "cards_cache_path": {"type": "string"}
+      }
+    }
+  },
+  "additionalProperties": false
+}

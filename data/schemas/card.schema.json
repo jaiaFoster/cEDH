@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/card.schema.json",
+  "title": "Card",
+  "description": "A single card's ingested rules-relevant characteristics. One card may back multiple deck entries. Populated by sim/ingestion/scryfall.py (+ mtgjson.py cross-validation), never hand-authored, except for gold-board-state fixtures which may hand-author a minimal subset for a test.",
+  "type": "object",
+  "required": [
+    "scryfall_id",
+    "name",
+    "oracle_text",
+    "type_line",
+    "color_identity",
+    "mana_cost",
+    "mana_value",
+    "characteristics",
+    "abilities",
+    "legalities",
+    "source_pull_date",
+    "source_version"
+  ],
+  "properties": {
+    "scryfall_id": {"type": "string", "description": "Scryfall UUID, primary key."},
+    "mtgjson_uuid": {"type": ["string", "null"], "description": "Cross-reference key for MTGJSON validation."},
+    "name": {"type": "string"},
+    "oracle_text": {"type": "string"},
+    "type_line": {"type": "string"},
+    "color_identity": {"type": "array", "items": {"enum": ["W", "U", "B", "R", "G"]}},
+    "mana_cost": {"type": "string"},
+    "mana_value": {"type": "number"},
+    "characteristics": {
+      "type": "object",
+      "description": "Every simultaneous rules-relevant characteristic the card has. Per charter: 'A Birds of Paradise is not merely +1 mana' — enumerate everything, don't collapse to one label.",
+      "properties": {
+        "card_types": {"type": "array", "items": {"type": "string"}},
+        "subtypes": {"type": "array", "items": {"type": "string"}},
+        "supertypes": {"type": "array", "items": {"type": "string"}},
+        "is_mana_source": {"type": "boolean"},
+        "is_creature": {"type": "boolean"},
+        "is_permanent": {"type": "boolean"},
+        "power": {"type": ["string", "null"]},
+        "toughness": {"type": ["string", "null"]},
+        "produces_convoke_eligible": {"type": "boolean"},
+        "notes": {"type": "array", "items": {"type": "string"}, "description": "Free-text list of other characteristics not yet worth a dedicated field."}
+      },
+      "additionalProperties": true
+    },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "text"],
+        "properties": {
+          "kind": {"enum": ["activated", "triggered", "static", "replacement", "mana"]},
+          "text": {"type": "string"},
+          "cost": {"type": ["string", "null"]},
+          "timing_restriction": {"type": ["string", "null"], "description": "e.g. 'sorcery speed only', 'once per turn'."},
+          "zone_restriction": {"type": ["string", "null"], "description": "Zone the ability requires the card to be in."},
+          "alternative_cost": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "tutor_restrictions": {
+      "type": ["array", "null"],
+      "items": {"type": "string"},
+      "description": "e.g. 'basic land only', 'creature with power <= 2', null if not a tutor effect."
+    },
+    "commander_interactions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Free-text notes on interactions with the subject deck's commanders; upgraded to interactions/ records once discovered and validated."
+    },
+    "rulings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "text"],
+        "properties": {
+          "date": {"type": "string", "format": "date"},
+          "text": {"type": "string"},
+          "source": {"type": "string"}
+        }
+      }
+    },
+    "legalities": {
+      "type": "object",
+      "properties": {"commander": {"enum": ["legal", "not_legal", "banned", "restricted"]}},
+      "additionalProperties": {"type": "string"}
+    },
+    "source_pull_date": {"type": "string", "format": "date"},
+    "source_version": {"type": "string", "description": "e.g. 'scryfall-bulk-2026-08-12', matches docs/VERSIONING.md rules-data version."}
+  },
+  "additionalProperties": false
+}

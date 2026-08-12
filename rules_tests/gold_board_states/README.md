@@ -1,0 +1,1 @@
+Empty. Gate 2 fixtures conforming to `data/schemas/gold_board_state.schema.json`. Blocked on the subject decklist (`coverage_backlog/BACKLOG.md` `DECK-0001`) — a gold board state needs real cards to be built from.

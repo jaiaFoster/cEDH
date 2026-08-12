@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/archetype.schema.json",
+  "title": "Archetype",
+  "description": "An empirically-defined cEDH archetype for the matchup census (charter: 'Matchup census', 'Archetypes' layer). Built from tournament data first, not a hand-picked commander list.",
+  "type": "object",
+  "required": [
+    "archetype_id",
+    "commanders",
+    "strategic_architecture",
+    "prevalence",
+    "representative_lists",
+    "registry_version"
+  ],
+  "properties": {
+    "archetype_id": {"type": "string"},
+    "commanders": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "strategic_architecture": {
+      "type": "string",
+      "description": "Free-text description of the game plan. Two archetypes sharing a commander get separate records only when this materially differs (charter: don't fragment over flex-slot differences)."
+    },
+    "split_from": {
+      "type": ["string", "null"],
+      "description": "If this archetype shares a commander with another archetype_id, name it here and justify the split in strategic_architecture."
+    },
+    "prevalence": {
+      "type": "object",
+      "required": ["tournament_window", "entry_count", "total_entries_in_window", "source"],
+      "properties": {
+        "tournament_window": {"type": "string", "description": "e.g. '2026-02-01..2026-08-01', matches docs/VERSIONING.md tournament-data window."},
+        "entry_count": {"type": "integer"},
+        "total_entries_in_window": {"type": "integer"},
+        "source": {"enum": ["topdeck.gg", "edhtop16", "both"]}
+      }
+    },
+    "representative_lists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "reference", "date"],
+        "properties": {
+          "source": {"type": "string"},
+          "reference": {"type": "string"},
+          "date": {"type": "string", "format": "date"},
+          "notable_variance": {"type": "string", "description": "How this list differs from the archetype's modal build, if at all."}
+        }
+      },
+      "minItems": 1
+    },
+    "policy_ref": {"type": ["string", "null"], "description": "Pointer to data/policies/<archetype_id>/, null until a policy exists."},
+    "confidence_tier": {
+      "enum": ["high_frequency_deep_model", "moderate_frequency", "low_frequency_shallow_model"],
+      "description": "Per charter: stratify modeling depth by frequency; rare decks get fewer sims/lower confidence but are not dropped."
+    },
+    "registry_version": {"type": "string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/gold_board_state.schema.json",
+  "title": "Gold Board State",
+  "description": "A hand-authored test fixture for Validation Gate 2 (docs/VALIDATION_GATES.md). Lives in rules_tests/gold_board_states/<id>.json.",
+  "type": "object",
+  "required": ["id", "description", "covers", "setup", "expected", "authored_by", "authored_date"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^GBS-[0-9]{4,}$"},
+    "description": {"type": "string"},
+    "covers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"enum": ["mana_production", "summoning_sickness", "convoke", "pitch_cost", "tutor", "pod_restriction", "activated_ability", "graveyard_movement", "combo_loop", "protection", "stack_interaction", "other"]}
+    },
+    "setup": {
+      "type": "object",
+      "description": "Full board/zone state to initialize: per-player battlefield, hand, graveyard, exile, command zone, life, mana pool, priority holder, phase/step.",
+      "required": ["players"],
+      "properties": {
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["seat", "battlefield", "hand", "life"],
+            "properties": {
+              "seat": {"type": "integer"},
+              "battlefield": {"type": "array", "items": {"type": "object"}},
+              "hand": {"type": "array", "items": {"type": "string"}},
+              "graveyard": {"type": "array", "items": {"type": "string"}},
+              "command_zone": {"type": "array", "items": {"type": "string"}},
+              "life": {"type": "integer"},
+              "mana_pool": {"type": "object"}
+            }
+          }
+        },
+        "phase": {"type": "string"},
+        "priority_seat": {"type": "integer"},
+        "stack": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "expected": {
+      "type": "object",
+      "required": ["legal_actions"],
+      "properties": {
+        "legal_actions": {"type": "array", "items": {"type": "string"}, "description": "The complete expected legal-action set for the active/priority player."},
+        "illegal_actions_to_reject": {"type": "array", "items": {"type": "string"}, "description": "Actions that must be correctly rejected — as important as what's legal."},
+        "outcome_if_resolved": {"type": ["string", "null"]}
+      }
+    },
+    "rules_citations": {"type": "array", "items": {"type": "string"}},
+    "engine_cross_check": {
+      "type": ["object", "null"],
+      "properties": {"engine": {"enum": ["forge", "xmage"]}, "agrees": {"type": "boolean"}, "notes": {"type": "string"}}
+    },
+    "authored_by": {"type": "string"},
+    "authored_date": {"type": "string", "format": "date"},
+    "last_pass_result": {
+      "type": ["object", "null"],
+      "properties": {"passed": {"type": "boolean"}, "sim_version": {"type": "string"}, "date": {"type": "string", "format": "date"}}
+    }
+  },
+  "additionalProperties": false
+}

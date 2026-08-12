@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/policy.schema.json",
+  "title": "Policy",
+  "description": "An archetype's decision-making definition, per docs/POLICY_FRAMEWORK.md. Separate from the rules layer by design (charter non-negotiable rule 3).",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "archetype_id",
+    "version",
+    "status",
+    "evidence_sources",
+    "decision_points",
+    "assumptions"
+  ],
+  "properties": {
+    "policy_id": {"type": "string"},
+    "archetype_id": {"type": "string"},
+    "version": {"type": "string", "pattern": "^v[0-9]+$"},
+    "status": {"enum": ["provisional", "sourced", "validated"], "description": "provisional = no cited evidence yet; sourced = has evidence_sources; validated = spot-checked via agent-assisted review against real games/footage."},
+    "evidence_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "reference"],
+        "properties": {
+          "type": {"enum": ["primer", "tournament_report", "gameplay_footage", "pilot_writeup", "decision_discussion", "measured_tournament_behavior"]},
+          "reference": {"type": "string"},
+          "date": {"type": ["string", "null"], "format": "date"}
+        }
+      }
+    },
+    "decision_points": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["decision", "mechanism", "rationale"],
+        "properties": {
+          "decision": {"type": "string", "description": "e.g. 'mulligan_keep', 'tutor_target_selection', 'win_attempt_timing', 'threat_assessment', 'counterspell_target'."},
+          "mechanism": {"enum": ["deterministic_heuristic", "probabilistic_heuristic", "bounded_forward_search", "agent_assisted_review"]},
+          "rationale": {"type": "string"},
+          "forward_search_bound": {"type": ["object", "null"], "properties": {"max_depth": {"type": "integer"}, "max_branching": {"type": "integer"}}}
+        }
+      }
+    },
+    "threat_assessment_factors": {
+      "type": ["array", "null"],
+      "items": {"type": "string"},
+      "description": "Required (non-null) if any decision_point is 'threat_assessment'. Per charter, must go beyond 'counter the strongest spell'."
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Explicit unsourced assumptions, used as the perturbation list for sensitivity analysis."
+    }
+  },
+  "additionalProperties": false
+}

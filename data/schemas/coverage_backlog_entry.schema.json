@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/coverage_backlog_entry.schema.json",
+  "title": "Coverage Backlog Entry",
+  "description": "One line of coverage_backlog/backlog.jsonl. Must stay in sync with the human-readable row in coverage_backlog/BACKLOG.md.",
+  "type": "object",
+  "required": ["id", "area", "status", "summary", "impact", "opened"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Z]+-[0-9]{4,}$"},
+    "area": {"enum": ["RULES", "INTERACT", "POLICY", "ENV", "INFRA", "SIM", "ARCHETYPE"]},
+    "status": {"enum": ["open", "researched", "validated", "encoded", "regression_tested", "resolved"]},
+    "summary": {"type": "string"},
+    "impact": {"type": "string"},
+    "frequency": {"type": ["object", "null"], "properties": {"observed_count": {"type": "integer"}, "observed_in_run": {"type": "string"}}},
+    "opened": {"type": "string", "format": "date"},
+    "researched": {"type": ["string", "null"], "format": "date"},
+    "validated": {"type": ["string", "null"], "format": "date"},
+    "encoded": {"type": ["string", "null"], "format": "date"},
+    "regression_test": {"type": ["string", "null"], "description": "Path under rules_tests/regression/ once one exists."},
+    "resolved": {"type": ["string", "null"], "format": "date"},
+    "citations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
