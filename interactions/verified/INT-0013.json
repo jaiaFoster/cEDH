@@ -1,7 +1,7 @@
 {
   "id": "INT-0013",
   "status": "verified",
-  "name": "Delney, Streetwise Lookout doubles Kinnan, Bonder Prodigy's own mana-doubling trigger -> tripled nonland mana",
+  "name": "Delney, Streetwise Lookout doubles Kinnan, Bonder Prodigy's own triggered mana ability -> +2 mana per qualifying nonland mana activation",
   "cards": [
     {
       "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
@@ -24,13 +24,13 @@
     "other": [
       "Kinnan's power is exactly 2, so its own triggered ability ('Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced.') qualifies for Delney's power-2-or-less doubling clause - no third card is required.",
       "Delney's own official ruling (2024-02-02, Scryfall-sourced): 'Delney, Streetwise Lookout's last ability doesn't copy the triggered ability; it just causes the ability to trigger an additional time. Any choices made as you put the ability onto the stack, such as modes and targets, are made separately for each instance of the ability.' This directly confirms the doubling applies generically to any qualifying triggered ability, including Kinnan's own.",
-      "Net effect for a single tap of a nonland mana source: 1 (original mana produced) + 1 (Kinnan's own trigger) + 1 (Delney's additional copy of that trigger) = 3 total mana, i.e. nonland mana sources are effectively tripled rather than merely doubled.",
+      "IMPORTANT correction (2026-08-12, caught by user review of the initial writeup): Kinnan's ability text is 'add ONE mana of any type that permanent produced' - a FLAT one mana per trigger instance, not a copy or multiplier of the tapped permanent's own output. The correct general model is: total mana = (mana the tapped nonland permanent itself produces) + 2 (one from Kinnan's own trigger, one from the Delney-granted additional instance of that same trigger). This is NOT 'triple mana from any nonland source' - that abstraction is only true by coincidence for exactly-1-mana sources. For a 1-mana source (Devoted Druid, Birds of Paradise, Mox Diamond, etc.): 1 + 2 = 3 (happens to triple). For Sol Ring (2 mana): 2 + 2 = 4 (not 6). For Mana Vault (3 mana): 3 + 2 = 5 (not 9). See rules_tests/gold_board_states/GBS-0002.json (1-mana case) and GBS-0003.json (2-mana Sol Ring case, added specifically to engine-verify the +2 model against the erroneous multiplier abstraction) for both engine-reproduced data points.",
       "Does not apply to lands (Kinnan's trigger condition explicitly excludes them), so it does not touch Gaea's Cradle or basic/nonbasic lands directly.",
-      "Not a loop and not infinite by itself - a static per-tap multiplier, bounded by however many nonland mana sources are tapped that turn. Could compose with other mana lines but does not itself produce unbounded mana."
+      "Not a loop and not infinite by itself - a static per-tap bonus of +2 mana, bounded by however many nonland mana sources are tapped that turn. Could compose with other mana lines but does not itself produce unbounded mana."
     ]
   },
   "result": {
-    "summary": "Every tap of a nonland permanent you control for mana produces triple the mana instead of Kinnan's usual double, as long as both Delney and Kinnan are on the battlefield.",
+    "summary": "Every tap of a nonland permanent you control for mana produces 2 additional mana (one from Kinnan's own triggered mana ability, one from the extra instance of that trigger granted by Delney), on top of whatever that permanent already produces, as long as both Delney and Kinnan are on the battlefield. This is a flat +2 bonus per activation, not a multiplier of the source's own output.",
     "is_win_condition": false,
     "is_loop": false,
     "loop_termination": null
@@ -45,7 +45,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
-      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21, Mage/Mage.Sets/Mage.Tests modules) used for INT-0002, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap (not committed to this repo — XMage is separately-licensed engine source, cloned to scratch space; see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0002.json for the fixture record and provenance). Test setup: Delney, Streetwise Lookout + Kinnan, Bonder Prodigy + Devoted Druid (as an arbitrary nonland mana source - its identity is not material to this interaction) on the battlefield for playerA. Activated Devoted Druid's {T}: Add {G} mana ability once. Result: 3 total {G} in the mana pool (matching the CR 605.1b/605.4a analysis that Kinnan's trigger and its Delney-granted extra copy both resolve immediately as triggered mana abilities, no stack interaction needed). Test passed 1/1 on first attempt (no authoring corrections needed this time, unlike INT-0002/SIM-0008)."
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21, Mage/Mage.Sets/Mage.Tests modules) used for INT-0002, via two JUnit tests (neither committed to this repo — XMage is separately-licensed engine source, cloned to scratch space; see docs/RUN_CLASSIFICATION.md, rules_tests/gold_board_states/GBS-0002.json, and rules_tests/gold_board_states/GBS-0003.json for the fixture records and provenance). Test 1 (1-mana source): org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap - Delney + Kinnan + Devoted Druid (an arbitrary nonland 1-mana source; its identity is not material to this interaction), activated Devoted Druid's {T}: Add {G} once, result 3 total {G} in the mana pool (1 + 2). Passed 1/1 on first attempt. Test 2 (2-mana source, added specifically to rule out an over-generalized 'triples everything' misreading of test 1's coincidental result): org.mage.test.cards.interactions.cedh.DelneyKinnanSolRingPlusTwoTest#test_DelneyKinnan_SolRing_IsPlusTwoNotTripled - Delney + Kinnan + Sol Ring, activated Sol Ring's {T}: Add {C}{C} once, result 4 total {C} in the mana pool (2 + 2, NOT 6 which a flat tripling model would incorrectly predict). Passed 1/1 on first attempt. Both engine results match the CR 605.1b/605.4a analysis: each trigger instance adds exactly one mana regardless of the tapped permanent's own output."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
     "verified_date": "2026-08-12"
@@ -65,7 +65,7 @@
     },
     {
       "type": "executable_engine",
-      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap, run 2026-08-12"
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap and org.mage.test.cards.interactions.cedh.DelneyKinnanSolRingPlusTwoTest#test_DelneyKinnan_SolRing_IsPlusTwoNotTripled, run 2026-08-12"
     },
     {
       "type": "comprehensive_rules",

@@ -1,0 +1,67 @@
+{
+  "id": "GBS-0003",
+  "description": "Delney, Streetwise Lookout + Kinnan, Bonder Prodigy + Sol Ring (a 2-mana nonland source): the same doubled-trigger mechanism as GBS-0002, but with a source that produces more than 1 mana, specifically to distinguish the correct '+2 mana' model from an erroneous 'triples all nonland sources' over-generalization of GBS-0002's coincidental 1->3 result. Sol Ring taps for 2, and with Delney+Kinnan the result is 4 (2 + 2), NOT 6 (which a flat-tripling model would incorrectly predict). Validates INT-0013's corrected mana model.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Sol Ring was chosen specifically because it produces 2 mana per activation (not 1), making it the minimal counterexample needed to distinguish 'add flat +2 mana' from 'triple the source's output' - the two models agree only for 1-mana sources.",
+    "No other permanents, hand cards, lands, or players' boards were modeled — this is a three-card isolation test, not a representative game state.",
+    "Only a single mana activation was performed (not a full turn's worth of mana development) since the rule being tested applies identically and independently to each individual tap.",
+    "Sol Ring is also a real card in the subject deck (data/decklists/tymna-thrasios-treefarm-v1.json), so this fixture happens to also be deck-accurate for that one card's identity, though that was not required for the rule under test."
+  ],
+  "interaction_under_test": "INT-0013",
+  "material_characteristics": [
+    "Kinnan, Bonder Prodigy's power is exactly 2, so its own triggered mana ability qualifies for Delney's power-2-or-less doubling clause",
+    "Kinnan's 'Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced' ability adds a FLAT one mana per trigger instance, regardless of how much mana the tapped permanent itself produced — this is the specific characteristic this fixture exists to isolate",
+    "Delney's static ability causes any triggered ability of a creature it controls with power 2 or less to trigger an additional time (CR 603.2d), including Kinnan's own trigger, without requiring a third card",
+    "Sol Ring's own mana ability produces 2 mana ({T}: Add {C}{C}) per activation, distinct from Kinnan's flat +1-per-trigger"
+  ],
+  "abstracted_characteristics": [
+    "All board state not directly involved in the three-card interaction",
+    "Turn/phase beyond what's needed to activate one mana ability in a single main phase"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Delney, Streetwise Lookout", "quantity": 1},
+          {"card": "Kinnan, Bonder Prodigy", "quantity": 1},
+          {"card": "Sol Ring", "quantity": 1}
+        ],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Activate Sol Ring's mana ability ({T}: Add {C}{C})"
+    ],
+    "illegal_actions_to_reject": [
+      "Generalizing GBS-0002's 1-mana-source result into 'this combo triples any nonland mana source' — Sol Ring is the counterexample: 2 (its own output) + 2 (Kinnan's trigger + Delney's copy of it) = 4, not 6"
+    ],
+    "outcome_if_resolved": "After activating Sol Ring's mana ability once: 4 total {C} in the player's mana pool (2 original + 1 from Kinnan's own trigger + 1 from Delney doubling that trigger), and Sol Ring tapped."
+  },
+  "rules_citations": [
+    "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",
+    "CR 605.1b (a triggered ability that doesn't require a target, triggers from activation/resolution of an activated mana ability or from mana being added to a pool, and could add mana to a pool when it resolves, is itself a triggered mana ability)",
+    "CR 605.4 / 605.4a (triggered mana abilities follow all the rules for other triggered abilities including 603.2d, but do not use the stack and resolve immediately after the mana ability that triggered them)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DelneyKinnanSolRingPlusTwoTest#test_DelneyKinnan_SolRing_IsPlusTwoNotTripled, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001/GBS-0002. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md. This test was added specifically in response to a user-caught error: the first writeup of INT-0013 generalized GBS-0002's 1-mana-source result ('1 -> 3') into 'triples all nonland sources', which is false — Kinnan's granted trigger adds a flat one mana per instance, not a multiple of the source's own output."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

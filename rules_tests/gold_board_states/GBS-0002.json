@@ -1,6 +1,6 @@
 {
   "id": "GBS-0002",
-  "description": "Delney, Streetwise Lookout + Kinnan, Bonder Prodigy + a nonland mana source (Devoted Druid): Kinnan's own 'whenever you tap a nonland permanent for mana' trigger is itself a power-2-or-less creature's triggered ability, so Delney causes it to trigger an additional time — one tap of a nonland mana source yields triple mana instead of Kinnan's usual double. Validates INT-0013.",
+  "description": "Delney, Streetwise Lookout + Kinnan, Bonder Prodigy + a 1-mana nonland source (Devoted Druid): Kinnan's own 'whenever you tap a nonland permanent for mana' trigger is itself a power-2-or-less creature's triggered ability, so Delney causes it to trigger an additional time — one tap yields +2 mana on top of the source's own output (here, 1 + 2 = 3, which happens to triple a 1-mana source specifically; see GBS-0003 for a 2-mana source, where it is 2 + 2 = 4, not a triple). Validates INT-0013.",
   "covers": ["activated_ability", "other"],
   "run_class": "SYNTHETIC_GOLD_STATE",
   "representative_of_deck_draws": false,
@@ -43,9 +43,10 @@
       "Activate Devoted Druid's mana ability ({T}: Add {G})"
     ],
     "illegal_actions_to_reject": [
-      "Any implicit assumption that tapping the nonland mana source only nets double mana (Kinnan alone) rather than triple (Kinnan's trigger plus Delney's extra copy of that same trigger)"
+      "Any implicit assumption that tapping the nonland mana source only nets double mana (Kinnan alone) rather than +2 on top of the source's own output (Kinnan's trigger plus Delney's extra copy of that same trigger)",
+      "Generalizing this specific 1-mana-source result ('triple') into 'Delney+Kinnan triples all nonland mana sources' — it does not; see GBS-0003 for the 2-mana counterexample (2 -> 4, not 6)"
     ],
-    "outcome_if_resolved": "After activating Devoted Druid's mana ability once: 3 total {G} in the player's mana pool (1 original + 1 from Kinnan's own trigger + 1 from Delney doubling that trigger), and Devoted Druid tapped."
+    "outcome_if_resolved": "After activating Devoted Druid's mana ability once: 3 total {G} in the player's mana pool (1 original + 1 from Kinnan's own trigger + 1 from Delney doubling that trigger), and Devoted Druid tapped. This is Devoted Druid's own 1 mana plus a flat +2, which for a 1-mana source happens to equal a triple."
   },
   "rules_citations": [
     "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",

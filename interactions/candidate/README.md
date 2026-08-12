@@ -17,9 +17,11 @@
   should still be treated as provisional until re-checked, the same
   discipline the project already applies to Commander Spellbook's own
   index. The Kinnan hit is now `interactions/verified/INT-0013.json` (this
-  doubles Kinnan's own trigger a second time, tripling mana from nonland
-  sources rather than merely doubling it) — the first of these Delney
-  scan hits to clear Level 4 validation.
+  doubles Kinnan's own trigger a second time, adding +2 flat mana on top
+  of whatever the tapped nonland source already produces — only
+  coincidentally a "triple" for exactly-1-mana sources, corrected after an
+  initial writeup wrongly generalized that to all sources) — the first of
+  these Delney scan hits to clear Level 4 validation.
 - `INT-0011`, `INT-0012` — found by independent manual review targeting
   the charter's named "Derevi" and "Birthing Pod chain" priority
   categories (Derevi + Gaea's Cradle bonus activations; Clever Impersonator

@@ -7,6 +7,12 @@ looks.
 - **`GBS-0001`** — Devoted Druid + Swift Reconfiguration (backs `INT-0002`,
   now `interactions/verified/`). Cross-checked against a from-source XMage
   build, 1/1 passing.
-- **`GBS-0002`** — Delney, Streetwise Lookout + Kinnan, Bonder Prodigy
-  (backs `INT-0013`, now `interactions/verified/`). Cross-checked against
+- **`GBS-0002`** — Delney, Streetwise Lookout + Kinnan, Bonder Prodigy +
+  Devoted Druid, a 1-mana nonland source (backs `INT-0013`, now
+  `interactions/verified/`). 1 → 3 mana. Cross-checked against the same
+  from-source XMage build, 1/1 passing.
+- **`GBS-0003`** — Same combo as `GBS-0002` but with Sol Ring, a 2-mana
+  nonland source (also backs `INT-0013`). 2 → 4 mana, deliberately added
+  to rule out a "triples all sources" misreading of `GBS-0002`'s result —
+  the correct model is `+2` flat, not a multiplier. Cross-checked against
   the same from-source XMage build, 1/1 passing.
