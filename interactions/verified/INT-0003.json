@@ -1,0 +1,72 @@
+{
+  "id": "INT-0003",
+  "status": "verified",
+  "verification_level": "RULES_VERIFIED",
+  "conditional": false,
+  "name": "Hazel's Brewmaster exiling Devoted Druid -> infinite green mana on a Food token",
+  "cards": [
+    {
+      "scryfall_id": "52af8b70-a9c8-40d7-99da-fa51dc293688",
+      "name": "Hazel's Brewmaster",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "22589a81-3ea8-4e78-98c9-c015e7539cf9",
+      "name": "Devoted Druid",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B (Hazel's Brewmaster)",
+      "GY (Devoted Druid, any player's graveyard)"
+    ],
+    "mana_available": null,
+    "timing": "Hazel's Brewmaster's 'enters or attacks' trigger must resolve targeting Devoted Druid in a graveyard; Hazel's Brewmaster must remain on the battlefield afterward for the static ability-grant to keep applying.",
+    "targets_required": [
+      "Hazel's Brewmaster's trigger targets 'up to one target card from a graveyard' - target Devoted Druid, wherever it is."
+    ],
+    "other": [
+      "Devoted Druid's oracle text: '{T}: Add {G}.' and 'Put a -1/-1 counter on this creature: Untap this creature.' - both activated abilities.",
+      "Official Scryfall ruling on Hazel's Brewmaster (2024-07-26): 'Hazel's Brewmaster's last ability grants only activated abilities... The granted abilities effectively use \"this permanent\" rather than \"[that card's name]\"... For example, say you exiled the card Argothian Sprite with Hazel's Brewmaster... you'd treat it as though it had the ability \"{7}: Put two +1/+1 counters on Gingerbrute.\"' - confirms the mechanism this interaction depends on.",
+      "Ruling (2024-11-08): 'Food is an artifact type. Even though it appears on some creatures, it's never a creature type.' A plain Food token gaining these abilities is not a creature.",
+      "Consequence: the granted 'Put a -1/-1 counter on this [Food]: Untap this [Food]' ability places -1/-1 counters on a non-creature permanent. CR 704.5f ('a creature with toughness 0 or less is put into its owner's graveyard') applies only to creatures (same mechanism as INT-0002), so a Food accumulating -1/-1 counters never dies from this.",
+      "This gives a Food a mana-cost-free untap: tap for the granted '{T}: Add {G}', pay the granted 'put a -1/-1 counter' cost (no mana) to untap, repeat - unbounded green mana, no natural termination other than voluntary stop.",
+      "Devoted Druid never needs to resolve as a creature on the battlefield - only to end up in a graveyard (self-mill, discard, or dying) and be the card Hazel's Brewmaster's trigger targets.",
+      "Fully deck-controlled: requires only this player's own board state (Hazel's Brewmaster resolved + Devoted Druid in a graveyard), no opponent decision at any step - conditional: false.",
+      "Not yet reproduced in an executable engine this session (effort prioritized toward Gate 2/3 progress); RULES_VERIFIED on Comprehensive Rules + an official ruling directly on point, which is unusually strong non-engine evidence. Engine reproduction is a candidate for later, non-blocking follow-up, not required for Gate 1 sufficiency."
+    ]
+  },
+  "result": {
+    "summary": "Unbounded (infinite, subject to voluntary player choice to stop) green mana production from a single Food token, once Hazel's Brewmaster has exiled Devoted Druid from any graveyard.",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": "Does not terminate on its own; stopped only by voluntary player choice, removal of Hazel's Brewmaster (ends the ability grant), or removal of the Food token."
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 704.5f - state-based action putting a 0-toughness creature into the graveyard applies only to creatures.",
+      "CR 121 - counters may be placed on any permanent, not creature-restricted."
+    ],
+    "executable_engine_check": null,
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent reasoning about Hazel's Brewmaster's ability-granting text applied to Devoted Druid's two activated abilities."
+    },
+    {
+      "type": "oracle_ruling",
+      "reference": "Scryfall-sourced official rulings on Hazel's Brewmaster (2024-07-26 'this permanent' ruling; 2024-11-08 'Food is never a creature type' ruling). See data/cards_cache/oracle-2026-08-12/ (scryfall_id 52af8b70-a9c8-40d7-99da-fa51dc293688)."
+    },
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/4762-5856 (Spellbook-catalogued combo, popularity 17241)."
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": null
+}

@@ -1,0 +1,73 @@
+{
+  "id": "INT-0001",
+  "status": "verified",
+  "verification_level": "RULES_VERIFIED",
+  "conditional": true,
+  "conditions": [
+    "Every targeted opponent must decline (or be unable) to pay Smothering Tithe's {2} tax on every relevant draw, both for the original Smothering Tithe and for Clever Impersonator's copy of it - an opponent choice this deck does not control. If any opponent pays even once, that specific Treasure isn't created and the cycle's income drops by 1 mana for that instance.",
+    "Requires at least 3 opponents for the cycle to be strictly mana-positive (income > cost). At exactly 2 opponents (Commander Spellbook's stated minimum prerequisite), the cycle is merely mana-neutral (income == cost) - see result.summary for the exact arithmetic."
+  ],
+  "name": "Faerie Mastermind + Smothering Tithe + Clever Impersonator (copying Smothering Tithe) -> repeatable draw/mana engine",
+  "cards": [
+    {
+      "scryfall_id": "bc9a7599-3c7d-4b83-bff3-e3d1f20f1b0f",
+      "name": "Faerie Mastermind",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "861b5889-0183-4bee-afeb-a4b2aa700a8e",
+      "name": "Smothering Tithe",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "c0516453-3e6a-4b7f-8df6-72a6e207169a",
+      "name": "Clever Impersonator",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": "{3}{U} per activation of Faerie Mastermind's 'Each player draws a card' ability.",
+    "timing": "Any time the controller has priority and can pay {3}{U}; the loop's core action is repeatedly activating Faerie Mastermind's own activated ability.",
+    "targets_required": [],
+    "other": [
+      "EXACT MECHANISM (re-derived from primary Oracle text 2026-08-12, not Commander Spellbook's paraphrase): Faerie Mastermind: '{3}{U}: Each player draws a card.' Smothering Tithe: 'Whenever an opponent draws a card, that player may pay {2}. If the player doesn't, you create a Treasure token.' Clever Impersonator, having entered as a copy of Smothering Tithe, is a second independent Smothering Tithe-functioning permanent (CR 707.2) - so each opponent's single draw from Faerie Mastermind's ability triggers BOTH Tithe-copies independently (two separate objects, each with its own copy of the triggered ability).",
+      "PER-CYCLE ARITHMETIC: activating Faerie Mastermind costs {3}{U} = 4 mana flat (no cost reduction in this card set, unlike INT-0005). Each opponent who declines both Tithe triggers yields 2 Treasures (1 base Smothering Tithe + 1 Clever Impersonator copy). With O opponents all declining: income = 2*O Treasures = 2*O mana when each Treasure is tapped+sacrificed (CR 605 mana ability). Net per cycle = 2*O - 4.",
+      "At O=2 (Spellbook's stated minimum 'at least two opponents'): net = 4-4 = 0. Mana-NEUTRAL, not infinite/growing mana - the cycle can still be repeated indefinitely for its 'each player draws a card' effect (a real, unbounded value engine: infinite card draw for every player at the table), but it does not bank a growing mana or Treasure surplus at this opponent count. Calling this 'infinite mana'/'near-infinite Treasure tokens' at O=2 would overclaim - see charter guidance against calling a mana-neutral repeatable sequence infinite mana.",
+      "At O=3 (a standard 4-player pod): net = 6-4 = +2 per cycle. Genuinely unbounded/growing mana and Treasure count.",
+      "Faerie Mastermind's OWN passive trigger ('Whenever an opponent draws their second card each turn, you draw a card') is NOT a repeating engine within a single turn - it triggers only once per opponent per turn, specifically on their exact second card drawn that turn, not on every subsequent draw. It contributes at most O extra cards to the controller's hand once per turn, separate from (and much smaller than) the repeated-activation loop above. Do not conflate this bounded once-per-turn trigger with the unbounded 'each player draws a card' activated-ability loop.",
+      "This is a value/resource engine, not a combo-kill by itself (is_win_condition: false)."
+    ]
+  },
+  "result": {
+    "summary": "With exactly 2 opponents (both declining Smothering Tithe + its copy every time): a mana-neutral (net 0) but freely repeatable 'each player draws a card' engine - unbounded card draw for every player at the table, no growing mana/Treasure bank. With 3+ opponents (all declining): net +2 mana and +2 Treasures per cycle, genuinely unbounded accumulating mana in addition to the unbounded draw effect.",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": "Voluntary; requires the stated opponent-decline condition to hold on every iteration, and (for the accumulating-mana case) at least 3 opponents."
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 707.2 - a copy acquires the copiable characteristics (including rules text) of the original, so Clever Impersonator functions as a genuine second Smothering Tithe.",
+      "CR 603.2c - each object's own triggered ability triggers independently on a matching event; two separate Tithe-bearing permanents each trigger once on the same draw.",
+      "CR 605 - Treasure's '{T}, Sacrifice: Add one mana of any color' is a mana ability."
+    ],
+    "executable_engine_check": null,
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/184-4682-4753 (popularity 7133)."
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 707.2, 603.2c, 605"
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": null
+}

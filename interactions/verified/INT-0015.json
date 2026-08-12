@@ -1,0 +1,63 @@
+{
+  "id": "INT-0015",
+  "status": "verified",
+  "verification_level": "RULES_VERIFIED",
+  "conditional": false,
+  "name": "Delney, Streetwise Lookout doubles Badgermole Cub's triggered mana bonus",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "340c5799-4964-44dd-8c48-8f3f3aba5211",
+      "name": "Badgermole Cub",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Whenever any creature you control is tapped for mana.",
+    "targets_required": [],
+    "other": [
+      "Badgermole Cub's oracle text: 'Whenever you tap a creature for mana, add an additional {G}.' Power is 2, so it qualifies for Delney's power-2-or-less doubling clause.",
+      "Same structural pattern as INT-0013 (Delney + Kinnan): Badgermole Cub's trigger meets CR 605.1b's criteria for a triggered mana ability (no target, triggers from a mana ability's activation, adds mana on resolution), so per CR 605.4/605.4a it resolves immediately without the stack, and Delney's extra instance (CR 603.2d) does the same.",
+      "Net effect: tapping ANY creature you control for mana adds {G}{G} (two Badgermole triggers) instead of {G}, on top of whatever mana that creature's own ability produced - a flat +2 green per creature-mana-tap, not a multiplier (same 'flat bonus per instance' shape established and corrected in INT-0013).",
+      "Stacks additively with other mana-doubling effects already in the deck (Kinnan, Enduring Vitality granting creatures a mana ability) without changing their own classification - each independent triggered/granted ability is unaffected by another's presence.",
+      "Not yet engine-reproduced this session; RULES_VERIFIED on exact Oracle text plus the same CR reasoning already engine-confirmed for the structurally identical INT-0013."
+    ]
+  },
+  "result": {
+    "summary": "Every tap of a creature you control for mana produces an additional {G}{G} (two Badgermole Cub triggers) instead of {G}, while both Delney and Badgermole Cub are on the battlefield.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d - an ability may state that a triggered ability triggers additional times.",
+      "CR 605.1b - criteria for a triggered ability to itself be a mana ability.",
+      "CR 605.4 / 605.4a - triggered mana abilities skip the stack and resolve immediately."
+    ],
+    "executable_engine_check": null,
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Final discovery sweep (2026-08-12) targeting 'Delney interactions not already covered' - independent scan of remaining power<=2 creatures with triggered abilities."
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 605.1b, 605.4, 605.4a"
+    }
+  ],
+  "discovered_via": "manual_review",
+  "coverage_backlog_ref": null
+}

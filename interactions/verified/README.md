@@ -153,3 +153,36 @@ decision tree when this is later encoded for policy/simulation.
 
 The other 5 candidates found so far (`interactions/candidate/`) remain
 unverified — see `coverage_backlog/BACKLOG.md` `SIM-0007`.
+
+## Tithe/Oboro group + final discovery sweep (2026-08-12)
+
+- **`INT-0003`** — `RULES_VERIFIED`, `conditional: false`. Hazel's Brewmaster
+  + Devoted Druid → infinite green mana on a Food token. Fully deck-
+  controlled, no opponent dependency.
+- **`INT-0001`** — `RULES_VERIFIED`, `conditional: true` (opponents must
+  decline Smothering Tithe's tax on every draw). Faerie Mastermind +
+  Smothering Tithe + Clever Impersonator (copying Tithe). Re-derived from
+  primary Oracle text: mana-NEUTRAL at Spellbook's stated 2-opponent
+  minimum (net 0 - repeatable "each player draws" engine, no accumulating
+  mana); genuinely net-positive (+2/cycle) only at 3+ opponents.
+- **`INT-0004`** — `RULES_VERIFIED`, `conditional: true`. Faerie Mastermind
+  + Smothering Tithe + Kinnan. Net +2 mana/cycle at the stated 3-opponent
+  threshold (Kinnan doubles each cracked Treasure).
+- **`INT-0005`** — `RULES_VERIFIED`, `conditional: true`. Faerie Mastermind
+  + Smothering Tithe + Training Grounds (reduces activation to {1}{U}). Net
+  +1 mana/cycle at the stated 3-opponent threshold.
+- **`INT-0006`** — `RULES_VERIFIED`, `conditional: false`. Oboro Breezecaller
+  + Talon Gates of Madara + Gaea's Cradle. Corrected: mana-NEUTRAL (net =
+  creatures - 5) at Spellbook's stated 5-creature threshold - infinite
+  landfall/phase-out repetition holds there, but accumulating mana needs
+  6+ creatures. Do not call the 5-creature case "infinite mana."
+- **`INT-0015`** — `RULES_VERIFIED`, `conditional: false`. Delney doubles
+  Badgermole Cub's triggered mana bonus → +2 green flat per creature-mana-
+  tap (same shape as `INT-0013`). Found in the final discovery sweep.
+
+All six of the above were re-derived directly from primary Oracle text
+(not Commander Spellbook's paraphrase) with explicit per-cycle mana
+arithmetic; none have yet been engine-reproduced (non-blocking for Gate 1
+diagnostic-simulation sufficiency - see `docs/VALIDATION_GATES.md`).
+
+**Zero interactions remain in `interactions/candidate/`.**

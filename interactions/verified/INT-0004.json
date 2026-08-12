@@ -1,0 +1,72 @@
+{
+  "id": "INT-0004",
+  "status": "verified",
+  "verification_level": "RULES_VERIFIED",
+  "conditional": true,
+  "conditions": [
+    "Every targeted opponent must decline (or be unable) to pay Smothering Tithe's {2} tax on every relevant draw - an opponent choice this deck does not control.",
+    "Requires at least 3 opponents for the cycle to be strictly mana-positive; at exactly 2 opponents it is mana-neutral (break-even)."
+  ],
+  "name": "Faerie Mastermind + Smothering Tithe + Kinnan, Bonder Prodigy -> repeatable draw/mana engine",
+  "cards": [
+    {
+      "scryfall_id": "bc9a7599-3c7d-4b83-bff3-e3d1f20f1b0f",
+      "name": "Faerie Mastermind",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "861b5889-0183-4bee-afeb-a4b2aa700a8e",
+      "name": "Smothering Tithe",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "63cda4a0-0dff-4edb-ae67-a2b7e2971350",
+      "name": "Kinnan, Bonder Prodigy",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": "{3}{U} per activation of Faerie Mastermind's 'Each player draws a card' ability.",
+    "timing": "Any time the controller has priority and can pay {3}{U}.",
+    "targets_required": [],
+    "other": [
+      "Only ONE Smothering Tithe here (no Clever Impersonator copy), but Kinnan doubles the mana from each Treasure cracked: per INT-0013's already-established mechanism, Kinnan's 'Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced' is itself a triggered mana ability (CR 605.1b) that fires when a Treasure (a nonland permanent) is tapped+sacrificed for mana - each Treasure therefore yields 2 mana (1 base + 1 Kinnan-granted), not 1.",
+      "PER-CYCLE ARITHMETIC: cost = {3}{U} = 4 mana flat. With O opponents declining Smothering Tithe: income = O Treasures x 2 mana each (with Kinnan) = 2*O mana if all are cracked. Net = 2*O - 4.",
+      "At O=2: net = 0 (break-even). At O=3 (Spellbook's stated minimum, also a standard 4-player pod): net = +2 per cycle - genuinely unbounded, matching Spellbook's own stated threshold exactly (no correction needed here, unlike INT-0001).",
+      "Alternative bookkeeping: cracking only enough Treasures to exactly cover {3}{U} (2 Treasures x 2 mana = 4) leaves any additional Treasures from that cycle's O opponents banked uncracked - a growing Treasure count even when mana is spent to exactly zero surplus each cycle.",
+      "Faerie Mastermind's own passive 'second card' trigger is bounded (once per opponent per turn) - see INT-0001's note; the unbounded engine here is entirely the repeated {3}{U} activation."
+    ]
+  },
+  "result": {
+    "summary": "With exactly 2 opponents (declining every Tithe trigger): mana-neutral repeatable 'each player draws a card' engine, no accumulating mana. With 3+ opponents (all declining): net +2 mana per cycle - genuinely unbounded accumulating mana, matching Commander Spellbook's own stated 3-opponent threshold.",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": "Voluntary; requires the stated opponent-decline condition on every iteration, and at least 3 opponents for the accumulating-mana case."
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 605.1b - Kinnan's trigger meets the criteria for a triggered mana ability (see INT-0013).",
+      "CR 605.4 / 605.4a - triggered mana abilities resolve immediately without using the stack.",
+      "CR 603.2c - each Tithe-bearing permanent's own ability triggers independently."
+    ],
+    "executable_engine_check": null,
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/129-184-4682 (popularity 11405)."
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 605.1b, 605.4, 605.4a, 603.2c"
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": null
+}

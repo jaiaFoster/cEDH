@@ -1,0 +1,72 @@
+{
+  "id": "INT-0006",
+  "status": "verified",
+  "verification_level": "RULES_VERIFIED",
+  "conditional": false,
+  "name": "Oboro Breezecaller + Talon Gates of Madara + Gaea's Cradle -> free repeatable landfall/phase-out engine (mana-neutral at 5 creatures, mana-positive at 6+)",
+  "cards": [
+    {
+      "scryfall_id": "a382a9b8-0b19-46c2-a547-a22d6e23d0ac",
+      "name": "Oboro Breezecaller",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "de92facf-762b-4a23-8d5e-bb673b0500c0",
+      "name": "Talon Gates of Madara",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "25b0b816-0583-44aa-9dc5-f3ff48993a51",
+      "name": "Gaea's Cradle",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Any time the controller has priority and Talon Gates of Madara is on the battlefield, untapped, with Gaea's Cradle also untapped or already tapped from an earlier point in the same cycle.",
+    "targets_required": [
+      "Oboro Breezecaller's ability: 'Untap target land' - target Gaea's Cradle.",
+      "Talon Gates of Madara's ETB: 'up to one target creature phases out' - any legal target or none."
+    ],
+    "other": [
+      "EXACT MECHANISM (re-derived from primary Oracle text 2026-08-12, correcting Commander Spellbook's paraphrase which implied Oboro Breezecaller returns Talon Gates specifically - its actual text returns ANY land you control, and the loop requires choosing to return Talon Gates of Madara specifically since it alone can be cheaply replayed from hand via its own printed ability): Oboro Breezecaller: '{2}, Return a land you control to its owner's hand: Untap target land.' Talon Gates of Madara: 'When this land enters, up to one target creature phases out. {T}: Add {C}. {1}, {T}: Add one mana of any color. {4}: Put this card from your hand onto the battlefield.' Gaea's Cradle: '{T}: Add {G} for each creature you control.'",
+      "CYCLE: (1) tap Gaea's Cradle for N green (N = creatures you control - Oboro Breezecaller counts as one such creature, held constant across cycles since it never leaves the battlefield); (2) tap Talon Gates of Madara for {C}; (3) activate Oboro Breezecaller ({2}, return Talon Gates of Madara to hand): untap Gaea's Cradle; (4) activate Talon Gates of Madara's '{4}: put onto the battlefield' ability from hand, retriggering its phase-out ETB; (5) repeat.",
+      "PER-CYCLE ARITHMETIC: income = N (Cradle) + 1 (Talon Gates' {T}: Add {C}) = N+1. expense = {2} (Oboro activation) + {4} (Talon Gates replay) = 6. Net = (N+1) - 6 = N-5.",
+      "At N=5 (Commander Spellbook's stated 'at least five creatures' prerequisite): net = 0. The cycle is MANA-NEUTRAL, not 'infinite green mana'/'infinite mana lands can produce' in the accumulating sense Spellbook's own result tags claim - it sustains itself for free and can be repeated an unbounded number of times, which DOES make 'infinite landfall triggers' (Talon Gates entering repeatedly) and 'phase out any number of creatures any number of times' both genuinely true at N=5, but does NOT bank a growing mana surplus at that exact threshold. Per charter guidance, a mana-neutral repeatable sequence must not be called infinite mana.",
+      "At N>=6 (one more creature than Spellbook's stated threshold): net >= +1 per cycle - genuinely unbounded accumulating green mana, in addition to the unbounded landfall/phase-out effects.",
+      "Fully deck-controlled: N (creature count) is a board-state fact, not an opponent choice - conditional: false. If Talon Gates' phase-out ETB targets one of the controller's own creatures each cycle, N would drop and the loop could go net-negative sooner; targeting an opponent's creature or no creature avoids this.",
+      "Not yet reproduced in an executable engine this session; RULES_VERIFIED on exact primary Oracle text with full per-step CR-citable mana accounting."
+    ]
+  },
+  "result": {
+    "summary": "At exactly 5 creatures you control (Commander Spellbook's stated prerequisite): a free, mana-neutral (net 0), unboundedly repeatable engine producing infinite landfall triggers and infinite phase-out activations - but NOT accumulating mana. At 6+ creatures you control: additionally net-positive, genuinely unbounded accumulating green mana (net = creatures - 5 per cycle).",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": "Voluntary; the mana-accumulating case additionally requires at least 6 creatures you control (one more than Commander Spellbook's stated threshold)."
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 500.5 / 106.4 - mana pool empties between steps/phases (relevant to how the produced mana must be spent within the same priority window to fund the next cycle's costs).",
+      "CR 111 / 305 - land and permanent mechanics governing Talon Gates of Madara's from-hand play and battlefield re-entry as a new object each time, retriggering its ETB."
+    ],
+    "executable_engine_check": null,
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/1174-2404-6678 (popularity 15624)."
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 500.5, 106.4, 111, 305"
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": null
+}

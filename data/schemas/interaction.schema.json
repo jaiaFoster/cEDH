@@ -20,8 +20,17 @@
     "status": {"enum": ["candidate", "verified", "refuted"]},
     "verification_level": {
       "type": ["string", "null"],
-      "enum": ["RULES_VERIFIED", "ENGINE_COMPONENT_VERIFIED", "ENGINE_EXACT_VERIFIED", "CONDITIONAL", null],
-      "description": "Required (non-null) when status=verified; must be null otherwise. See docs/VERIFICATION_LEVELS.md for the full definition of each tier and what each may/may not be used for."
+      "enum": ["RULES_VERIFIED", "ENGINE_COMPONENT_VERIFIED", "ENGINE_EXACT_VERIFIED", null],
+      "description": "Required (non-null) when status=verified; must be null otherwise. Orthogonal to `conditional` - an interaction can be ENGINE_EXACT_VERIFIED and conditional:true simultaneously (e.g. an opponent-payment-dependent line that is exactly engine-reproduced under the stated condition). See docs/VERIFICATION_LEVELS.md."
+    },
+    "conditional": {
+      "type": ["boolean", "null"],
+      "description": "Required (non-null) when status=verified; must be null otherwise. True if the result only holds under a stated condition/assumption this deck doesn't control (most commonly an opponent choice, e.g. declining to pay a tax). If true, `conditions` must be non-empty. False means the result is fully deck-controlled once prerequisites are met."
+    },
+    "conditions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Required non-empty when conditional=true. Each entry states one uncontrolled assumption (e.g. 'all opponents decline to pay Smothering Tithe's {2} tax') and, where relevant, what happens if it doesn't hold."
     },
     "name": {"type": "string"},
     "cards": {
@@ -100,17 +109,28 @@
     "coverage_backlog_ref": {"type": ["string", "null"], "description": "Backlog entry ID if this interaction is blocked on something."}
   },
   "additionalProperties": false,
-  "if": {
-    "properties": {"status": {"const": "verified"}}
-  },
-  "then": {
-    "properties": {
-      "verification_level": {"enum": ["RULES_VERIFIED", "ENGINE_COMPONENT_VERIFIED", "ENGINE_EXACT_VERIFIED", "CONDITIONAL"]}
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "verified"}}},
+      "then": {
+        "properties": {
+          "verification_level": {"enum": ["RULES_VERIFIED", "ENGINE_COMPONENT_VERIFIED", "ENGINE_EXACT_VERIFIED"]},
+          "conditional": {"type": "boolean"}
+        },
+        "required": ["conditional"]
+      },
+      "else": {
+        "properties": {
+          "verification_level": {"const": null},
+          "conditional": {"const": null}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"conditional": {"const": true}}},
+      "then": {
+        "properties": {"conditions": {"type": "array", "minItems": 1}}
+      }
     }
-  },
-  "else": {
-    "properties": {
-      "verification_level": {"const": null}
-    }
-  }
+  ]
 }
