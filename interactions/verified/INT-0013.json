@@ -1,6 +1,7 @@
 {
   "id": "INT-0013",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Delney, Streetwise Lookout doubles Kinnan, Bonder Prodigy's own triggered mana ability -> +2 mana per qualifying nonland mana activation",
   "cards": [
     {
@@ -45,6 +46,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21, Mage/Mage.Sets/Mage.Tests modules) used for INT-0002, via two JUnit tests (neither committed to this repo — XMage is separately-licensed engine source, cloned to scratch space; see docs/RUN_CLASSIFICATION.md, rules_tests/gold_board_states/GBS-0002.json, and rules_tests/gold_board_states/GBS-0003.json for the fixture records and provenance). Test 1 (1-mana source): org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap - Delney + Kinnan + Devoted Druid (an arbitrary nonland 1-mana source; its identity is not material to this interaction), activated Devoted Druid's {T}: Add {G} once, result 3 total {G} in the mana pool (1 + 2). Passed 1/1 on first attempt. Test 2 (2-mana source, added specifically to rule out an over-generalized 'triples everything' misreading of test 1's coincidental result): org.mage.test.cards.interactions.cedh.DelneyKinnanSolRingPlusTwoTest#test_DelneyKinnan_SolRing_IsPlusTwoNotTripled - Delney + Kinnan + Sol Ring, activated Sol Ring's {T}: Add {C}{C} once, result 4 total {C} in the mana pool (2 + 2, NOT 6 which a flat tripling model would incorrectly predict). Passed 1/1 on first attempt. Both engine results match the CR 605.1b/605.4a analysis: each trigger instance adds exactly one mana regardless of the tapped permanent's own output."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

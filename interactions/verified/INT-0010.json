@@ -1,6 +1,7 @@
 {
   "id": "INT-0010",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Delney, Streetwise Lookout doubles Spellseeker's triggered ability",
   "cards": [
     {
@@ -43,6 +44,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0008/0009/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneySpellseekerDoubleTest#test_DelneyDoublesSpellseekerETB (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0007.json for the fixture record). Test setup: Delney on the battlefield, 3 Island + Spellseeker in hand, and two distinct mana-value<3 instants (Opt, Shock) in the library, for playerA. Cast Spellseeker (its ETB genuinely fires since it was cast, not fixture-placed). One trigger-order choice, two independent 'may search' choices (both accepted), and two independent target selections (Opt for the first instance, Shock for the second). Result: playerA's hand contained both Opt and Shock. Passed 1/1 on the first attempt - the strongest available engine demonstration that the two instances are genuinely independent (finding two DIFFERENT cards, not just 'the same card twice')."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

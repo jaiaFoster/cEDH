@@ -1,6 +1,7 @@
 {
   "id": "INT-0014",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Delney, Streetwise Lookout doubles Archivist of Oghma's triggered ability",
   "cards": [
     {
@@ -42,6 +43,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0008/0009/0010/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyArchivistOfOghmaDoubleTest#test_DelneyDoublesArchivistOfOghma (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0008.json for the fixture record). Test setup: Delney + Archivist of Oghma on the battlefield for playerA, Evolving Wilds on the battlefield and a Forest in the library for playerB. playerB activated Evolving Wilds (sacrifice, search library for a basic land) - an opponent library search. One trigger-order choice needed. Result: playerA's life rose from 20 to 22 and hand grew from 0 to 2. Passed 1/1 on the first attempt."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

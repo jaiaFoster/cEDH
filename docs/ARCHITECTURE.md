@@ -48,11 +48,29 @@ reach any of the candidate rules-engine repositories or MTG data APIs (see
 - `interactions/verified/<id>.json` — an interaction that has been checked
   against Comprehensive Rules + Oracle text and, where possible, independently
   reproduced in an executable engine. Only these may be used as deterministic
-  transitions anywhere in simulation.
+  transitions anywhere in simulation - but see the verification-level caveat
+  below, since not every `status: verified` entry carries the same strength
+  of evidence.
 - `interactions/candidate/<id>.json` — sourced from Commander Spellbook,
   primers, or discovery passes, not yet validated. Simulation must never treat
   a candidate interaction as guaranteed.
 - Schema: `data/schemas/interaction.schema.json`.
+
+**Verification-level requirement (established 2026-08-12, from `INT-0012`,
+full taxonomy in `docs/VERIFICATION_LEVELS.md`):** `status: verified` alone
+does not distinguish an interaction whose own exact stated transition was
+reproduced end-to-end in an executable engine (`ENGINE_EXACT_VERIFIED`) from
+one where only a downstream consequence or necessary component was
+engine-reproduced (`ENGINE_COMPONENT_VERIFIED`) or where only Comprehensive
+Rules citations exist (`RULES_VERIFIED`) or where verification only holds
+under a stated condition, most often an opponent choice this deck doesn't
+control (`CONDITIONAL`). Every `interactions/verified/<id>.json` record
+carries an explicit `verification_level` field for this reason. Only
+`ENGINE_EXACT_VERIFIED` entries may be hardcoded as a fixed hop in a native
+(non-engine-driven) Layer 5 tracker; the other three tiers may inform an
+engine-driven simulation (where XMage/Forge itself plays out the real
+cards, so the untested exact transition is handled live by the real engine)
+but must not be hardcoded as if their exact transition were itself proven.
 
 **Status:** empty; populated once the decklist arrives and the interaction
 discovery pass (charter section "Interaction discovery pass") runs.

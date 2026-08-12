@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cedh-research.local/schemas/interaction.schema.json",
   "title": "Interaction",
-  "description": "A candidate or verified card interaction/combo/line. Lives in interactions/candidate/<id>.json until validated, then moves to interactions/verified/<id>.json. Only files in interactions/verified/ may be used as deterministic transitions in simulation (charter non-negotiable rule 1).",
+  "description": "A candidate or verified card interaction/combo/line. Lives in interactions/candidate/<id>.json until validated, then moves to interactions/verified/<id>.json. Only files in interactions/verified/ may be used as deterministic transitions in simulation (charter non-negotiable rule 1) - and per docs/VERIFICATION_LEVELS.md, only verification_level=ENGINE_EXACT_VERIFIED entries may be hardcoded as a fixed hop in a native (non-engine-driven) tracker; other verified tiers (RULES_VERIFIED, ENGINE_COMPONENT_VERIFIED, CONDITIONAL) may inform an engine-driven simulation but must not be hardcoded as if their exact transition were itself proven.",
   "type": "object",
   "required": [
     "id",
@@ -18,6 +18,11 @@
   "properties": {
     "id": {"type": "string", "pattern": "^INT-[0-9]{4,}$"},
     "status": {"enum": ["candidate", "verified", "refuted"]},
+    "verification_level": {
+      "type": ["string", "null"],
+      "enum": ["RULES_VERIFIED", "ENGINE_COMPONENT_VERIFIED", "ENGINE_EXACT_VERIFIED", "CONDITIONAL", null],
+      "description": "Required (non-null) when status=verified; must be null otherwise. See docs/VERIFICATION_LEVELS.md for the full definition of each tier and what each may/may not be used for."
+    },
     "name": {"type": "string"},
     "cards": {
       "type": "array",
@@ -67,6 +72,10 @@
           "properties": {
             "engine": {"enum": ["forge", "xmage", "none"]},
             "reproduced": {"type": "boolean"},
+            "exact_reproduction": {
+              "type": "boolean",
+              "description": "true only if this engine run reproduced the interaction's own full stated transition (prerequisites through result) end-to-end - the ENGINE_EXACT_VERIFIED case. false if it reproduced a component or downstream consequence of the interaction instead - the ENGINE_COMPONENT_VERIFIED case. See docs/VERIFICATION_LEVELS.md."
+            },
             "notes": {"type": "string"}
           }
         },
@@ -90,5 +99,18 @@
     },
     "coverage_backlog_ref": {"type": ["string", "null"], "description": "Backlog entry ID if this interaction is blocked on something."}
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "if": {
+    "properties": {"status": {"const": "verified"}}
+  },
+  "then": {
+    "properties": {
+      "verification_level": {"enum": ["RULES_VERIFIED", "ENGINE_COMPONENT_VERIFIED", "ENGINE_EXACT_VERIFIED", "CONDITIONAL"]}
+    }
+  },
+  "else": {
+    "properties": {
+      "verification_level": {"const": null}
+    }
+  }
 }

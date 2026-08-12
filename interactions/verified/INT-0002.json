@@ -1,6 +1,7 @@
 {
   "id": "INT-0002",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Devoted Druid + Swift Reconfiguration → infinite green mana",
   "cards": [
     {
@@ -15,7 +16,9 @@
     }
   ],
   "prerequisites": {
-    "zones": ["B"],
+    "zones": [
+      "B"
+    ],
     "mana_available": "None required to run the loop itself once both permanents are on the battlefield with Swift Reconfiguration attached to Devoted Druid — both of Devoted Druid's activated abilities have zero additional mana cost per activation ({T} for the mana ability; putting a -1/-1 counter on itself, not a mana payment, for the untap ability). {W} was required earlier to cast Swift Reconfiguration itself.",
     "timing": "Sorcery or instant speed both work for assembly (Swift Reconfiguration has Flash), but the loop itself can be run any time its controller has priority, since neither activated ability has a timing restriction beyond the normal 'activate anytime you could cast an instant' default for activated abilities without 'activate only as a sorcery' text — confirmed absent from both abilities' Oracle text.",
     "targets_required": [
@@ -43,6 +46,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in a from-source Maven build of magefree/mage (JDK 21, Mage/Mage.Sets/Mage.Tests modules) via a new JUnit test, org.mage.test.cards.interactions.cedh.DevotedDruidSwiftReconfigurationTest#test_LoopSurvives_NotACreature (not committed to this repo — XMage is separately-licensed engine source, cloned to scratch space; see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0001.json for the fixture record and provenance). Test setup: Devoted Druid + Swift Reconfiguration (targeting Devoted Druid) on the battlefield for playerA, arbitrary Forest/Plains as synthetic mana scaffolding (mana source is not material to this interaction — only Swift Reconfiguration's {W} casting cost needed covering once). Ran the tap-for-G / put-counter-to-untap sequence 5 times in a single main phase. Result: 5/5 activations succeeded, Devoted Druid survived with 5 -1/-1 counters and remained an Artifact (not a Creature) throughout, 5 {G} produced. Test passed (1/1, 0 failures) after two authoring corrections (documented for the record, not hidden): (1) an initial run gave the test only green mana sources when Swift Reconfiguration costs {W}, corrected; (2) an initial run placed post-execution assertions (assertType, no turn/step args) before execute() had actually run the game, which in this test framework only registers scheduled actions/checks rather than running them immediately — corrected by moving assertType/assertPermanentCount calls to after execute()."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

@@ -1,6 +1,7 @@
 {
   "id": "INT-0009",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Delney, Streetwise Lookout doubles Runic Armasaur's triggered ability",
   "cards": [
     {
@@ -42,6 +43,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0008/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyRunicArmasaurDoubleTest#test_DelneyDoublesRunicArmasaurDraw (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0006.json for the fixture record). Test setup: Delney + Runic Armasaur on the battlefield for playerA, Mishra's Factory + Wastes on the battlefield for playerB. playerB activated Mishra's Factory's '{1}: becomes a 2/2 Assembly-Worker' ability (a non-mana activated ability of a land, no target). One trigger-order choice needed, then two independent 'may draw' choices, both accepted. Result: playerA's hand grew from 0 to 2. Passed 1/1 on the first attempt."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

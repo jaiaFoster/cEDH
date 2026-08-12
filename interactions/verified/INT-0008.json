@@ -1,6 +1,7 @@
 {
   "id": "INT-0008",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Delney, Streetwise Lookout doubles Esper Sentinel's triggered ability",
   "cards": [
     {
@@ -41,6 +42,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyEsperSentinelDoubleTest#test_DelneyDoublesEsperSentinelTax (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0005.json for the fixture record). Test setup: Delney + Esper Sentinel on the battlefield for playerA, 3 Island + Divination in hand for playerB. playerB cast Divination (a noncreature spell, exactly using all 3 mana, none spare to pay Esper Sentinel's {1} tax). Two independent trigger instances appeared (one trigger-order choice needed), each independently asking playerB 'Pay {1}?' (declined both times, matching the 'no spare mana' setup). Result: playerA's hand grew from 0 to 2 (their fixture-setup starting hand is empty; Divination's own draws go to playerB, the caster, not playerA). Passed 1/1 on the second attempt (first attempt failed with 'Missing CHOICE def' for the trigger-order decision, fixed with setChoice(playerA, \"Esper Sentinel\"); the pay/decline choices then also needed setChoice(playerB, false, 2))."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

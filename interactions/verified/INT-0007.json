@@ -1,6 +1,7 @@
 {
   "id": "INT-0007",
   "status": "verified",
+  "verification_level": "ENGINE_EXACT_VERIFIED",
   "name": "Delney, Streetwise Lookout doubles Orcish Bowmasters's triggered ability",
   "cards": [
     {
@@ -47,6 +48,7 @@
     "executable_engine_check": {
       "engine": "xmage",
       "reproduced": true,
+      "exact_reproduction": true,
       "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/INT-0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyOrcishBowmastersDoubleTest#test_DelneyDoublesOrcishBowmastersETB (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0004.json for the fixture record). Test setup: Delney, Streetwise Lookout + 2 Swamp on the battlefield for playerA, Orcish Bowmasters in hand. Cast Orcish Bowmasters (it has Flash) to genuinely trigger 'enters the battlefield' (fixture-placed battlefield cards don't fire ETB triggers in this framework). Two independent trigger instances appeared, requiring one trigger-order choice (the second instance auto-resolves once it's the only one remaining) and one 'any target' choice each, both targeted at playerB. Result: playerB's life dropped from 20 to 18 (2 damage total), and playerA controlled exactly one 'Orc Army Token' carrying 2 +1/+1 counters (not two separate tokens). Passed 1/1 on the second attempt (first attempt failed with a 'Missing CHOICE def' error for the trigger-ordering decision, which strict-choose mode requires explicitly even when both pending triggers are identical; fixed by adding setChoice(playerA, \"Orcish Bowmasters\"))."
     },
     "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",

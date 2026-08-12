@@ -175,7 +175,15 @@ card games. Document what is reused, adapted, rejected, or newly built. See
   priority, zone changes, triggers, SBAs, replacement effects, loop
   continuation, and termination. Once validated, may be encoded as a
   deterministic transition in lower-fidelity simulation only when all
-  validated prerequisites are present.
+  validated prerequisites are present. **Not all Level 4 evidence is the
+  same strength** — see `docs/VERIFICATION_LEVELS.md` for the
+  `RULES_VERIFIED` / `ENGINE_COMPONENT_VERIFIED` / `ENGINE_EXACT_VERIFIED`
+  / `CONDITIONAL` taxonomy (formalized 2026-08-12 after an incident where a
+  test reproducing only a downstream consequence of an interaction was
+  initially conflated with reproducing the interaction's own exact
+  transition). Only `ENGINE_EXACT_VERIFIED` satisfies this Level 4
+  definition in full; the other tiers are legitimate, labeled, lesser
+  evidence and must not be silently treated as equivalent.
 
 ## Card ingestion (per supplied decklist)
 

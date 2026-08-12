@@ -1,6 +1,6 @@
 {
   "id": "GBS-0009",
-  "description": "Two Birthing Pod permanents (standing in for original Pod + Clever Impersonator's copy of it): each carries Birthing Pod's own sacrifice-and-search activated ability (CR 707.2, copying acquires rules text), and both can be independently activated in the same turn since Birthing Pod is not legendary and has no once-per-turn restriction. Validates INT-0012.",
+  "description": "Two Birthing Pod permanents (standing in for original Pod + Clever Impersonator's copy of it): each carries Birthing Pod's own sacrifice-and-search activated ability (CR 707.2, copying acquires rules text), and both can be independently activated in the same turn since Birthing Pod is not legendary and has no once-per-turn restriction. This fixture backs INT-0012 at ENGINE_COMPONENT_VERIFIED, not ENGINE_EXACT_VERIFIED - it reproduces the downstream two-Pod consequence, not Clever Impersonator's own copy transition (see docs/VERIFICATION_LEVELS.md and interactions/verified/INT-0012.json).",
   "covers": ["activated_ability", "other"],
   "run_class": "SYNTHETIC_GOLD_STATE",
   "representative_of_deck_draws": false,
