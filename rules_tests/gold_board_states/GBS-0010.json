@@ -1,0 +1,74 @@
+{
+  "id": "GBS-0010",
+  "description": "Derevi, Empyrial Tactician + Gaea's Cradle, single-attacker base case: Cradle tapped in precombat main (mana pool then empties per CR 500.5, but Cradle stays tapped), Derevi attacks alone and connects, its combat-damage trigger untaps Cradle, which is then tapped again for a second green mana within the same combat damage step. Validates INT-0011 (single-attacker case only - see the scope note in interactions/verified/INT-0011.json regarding the not-yet-engine-verified multi-attacker scaling claim).",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Only Derevi itself is on the battlefield as a creature (no other creatures for playerA), keeping Gaea's Cradle's own 'per creature you control' output at a simple, easy-to-check 1 green per activation.",
+    "playerB has no permanents, so Derevi's attack is trivially unblocked - blocking/combat-assignment mechanics are not material to this interaction.",
+    "No other permanents, hand cards, or players' boards were modeled."
+  ],
+  "interaction_under_test": "INT-0011",
+  "material_characteristics": [
+    "Derevi's triggered ability fires on a creature dealing combat damage to a player, offering a 'may tap or untap target permanent' choice",
+    "Gaea's Cradle's tapped/untapped status is a permanent characteristic that persists across steps and phases, unlike its produced mana (which empties at the end of each step/phase per CR 500.5/106.4)",
+    "Choosing 'untap' on an already-tapped Gaea's Cradle makes it available to tap for mana again within the same turn"
+  ],
+  "abstracted_characteristics": [
+    "Number of creatures controlled (kept at 1 for simplicity of the mana-per-creature math; more creatures would just scale Cradle's own output, not change the interaction's mechanism)",
+    "All board state not directly involved in the two-card interaction",
+    "The multi-attacker scaling case (whether N connecting attackers yield N untap-then-retap cycles) - not covered by this fixture; see INT-0011's scope note"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Derevi, Empyrial Tactician", "quantity": 1},
+          {"card": "Gaea's Cradle", "quantity": 1}
+        ],
+        "hand": [],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Tap Gaea's Cradle for mana in the precombat main phase",
+      "Attack with Derevi",
+      "Choose to untap Gaea's Cradle in response to Derevi's combat-damage trigger",
+      "Tap Gaea's Cradle for mana again in the combat damage step"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that a permanent tapped earlier in the turn is unavailable again without an untap effect, or that mana produced pre-combat somehow persists into the combat damage step (it does not, per CR 500.5)"
+    ],
+    "outcome_if_resolved": "By the combat damage step, after Derevi's trigger untaps Cradle and it is tapped again: exactly 1 green mana in the pool (the precombat green already emptied), and Gaea's Cradle remains on the battlefield, tapped a second time that turn."
+  },
+  "rules_citations": [
+    "CR 500.5 / 106.4 (a player's mana pool empties at the end of each step and phase)",
+    "CR 603.2c (an ability triggers once per occurrence of its trigger event)",
+    "CR 603.3b (ordering of simultaneously-pending triggered abilities)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DereviGaeasCradleTest#test_DereviCombatDamage_UntapsCradle_OneAttacker, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001..0009. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

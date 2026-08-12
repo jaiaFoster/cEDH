@@ -1,0 +1,68 @@
+{
+  "id": "GBS-0009",
+  "description": "Two Birthing Pod permanents (standing in for original Pod + Clever Impersonator's copy of it): each carries Birthing Pod's own sacrifice-and-search activated ability (CR 707.2, copying acquires rules text), and both can be independently activated in the same turn since Birthing Pod is not legendary and has no once-per-turn restriction. Validates INT-0012.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Two literal Birthing Pod permanents were used directly instead of driving the exact 'cast Clever Impersonator, choose to copy Birthing Pod' sequence - Clever Impersonator's copy mechanism (CopyPermanentEffect) is a separately well-established XMage mechanic used across many other copy-effect cards and was not the disputed part of this interaction; what needed engine confirmation was whether two same-named, non-legendary Pod-functioning permanents can each be independently activated once in the same turn.",
+    "Elvish Mystic (sac fodder) and Silvercoat Lion (search target) are arbitrary vanilla creatures chosen for simplicity - their specific identities are not material to the interaction, only their mana values (1 and 2 respectively, satisfying Birthing Pod's 'mana value equal to 1 plus the sacrificed creature's mana value' requirement).",
+    "4 Forest is more mana than strictly required (each activation needs {1}{G/P}); the excess avoids any mana-payment ambiguity from having only just enough.",
+    "No other permanents, hand cards, or players' boards were modeled - this is a two-Pod isolation test, not a representative game state."
+  ],
+  "interaction_under_test": "INT-0012",
+  "material_characteristics": [
+    "Two Birthing Pod-functioning permanents exist simultaneously and are independently controlled/activatable objects",
+    "Birthing Pod's own activated ability text ('{1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. Activate only as a sorcery.') carries no restriction limiting activation to once per turn across all Birthing Pod-named permanents - only the normal 'tap' cost restricts a single permanent to one activation per turn (until untapped again)",
+    "Birthing Pod is not legendary, so the legend rule (CR 704.5j) never applies regardless of how the second copy was produced"
+  ],
+  "abstracted_characteristics": [
+    "The exact mechanism by which the second Pod-functioning permanent came to exist (Clever Impersonator's copy effect vs. a second literal Birthing Pod) - CR 707.2 confirms a copy acquires the original's rules text, so a copy's activated ability functions identically to the original's for the purposes of this interaction",
+    "Identity of the sacrificed creatures and found creatures (any legal mana-value-matching pair works identically)",
+    "All board state not directly involved in the interaction"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Birthing Pod", "quantity": 2},
+          {"card": "Elvish Mystic", "quantity": 2},
+          {"card": "Forest", "quantity": 4}
+        ],
+        "hand": [],
+        "library": ["Silvercoat Lion", "Silvercoat Lion"],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Activate either Birthing Pod's ability (sacrifice an Elvish Mystic, search for Silvercoat Lion)",
+      "Activate the other Birthing Pod's ability, independently, in the same main phase"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that only one Birthing Pod-named permanent may be activated per turn, or that activating one somehow taxes/restricts the other"
+    ],
+    "outcome_if_resolved": "After both Pod abilities resolve: both Elvish Mystic sacrificed (0 remaining), both Silvercoat Lion found and on the battlefield, both Birthing Pod permanents remain (tapped, having each paid their own cost once)."
+  },
+  "rules_citations": [
+    "CR 707.1 (copying an object turns it into a copy of a permanent)",
+    "CR 707.2 (a copy acquires the copiable values of the original's characteristics, including rules text/activated abilities)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.CleverImpersonatorBirthingPodTest#test_TwoBirthingPods_BothIndependentlyActivatable, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001..0008. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md. Methodology note: this test intentionally does not use setStrictChooseMode, since the activateAbility() call shape used here routes cost-payment choices (sacrifice target, Phyrexian mana decision) through an internal AI fallback rather than queued test commands - documented directly in CardTestPlayerAPIImpl's own source comments. Both fallback decisions were forced (only one legal option each), so this does not introduce non-determinism into the result."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

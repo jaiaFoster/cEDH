@@ -44,3 +44,16 @@ modeling requirement in `docs/ARCHITECTURE.md` Layer 2**: each records one
 valid outcome of a doubled trigger's decision tree (a specific choice of
 targets/pay-or-decline/may-or-not), not license to encode the interaction
 as a single atomic aggregate effect when it is later wired into Layer 5.
+
+- **`GBS-0009`** — two literal Birthing Pod permanents (backs `INT-0012`),
+  each independently activated in the same turn - sacrifices and searches
+  both go through cleanly. 1/1 passing. See `INT-0012`'s methodology note
+  on why this uses two literal Pods rather than driving Clever
+  Impersonator's exact cast-and-copy sequence through the test harness.
+- **`GBS-0010`** — Derevi, Empyrial Tactician + Gaea's Cradle, single-
+  attacker base case (backs `INT-0011`). Cradle tapped precombat, Derevi
+  attacks alone and connects, its trigger untaps Cradle, which is tapped
+  again for a second green mana within the same combat damage step. 1/1
+  passing. Covers only the single-attacker case — see `INT-0011`'s scope
+  note and `coverage_backlog` `SIM-0012` for the not-yet-verified
+  multi-attacker scaling claim.

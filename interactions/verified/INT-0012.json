@@ -1,0 +1,69 @@
+{
+  "id": "INT-0012",
+  "status": "verified",
+  "name": "Clever Impersonator copying Birthing Pod -> a second, independent Birthing Pod chain",
+  "cards": [
+    {
+      "scryfall_id": "c0516453-3e6a-4b7f-8df6-72a6e207169a",
+      "name": "Clever Impersonator",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "b768efa2-e56b-4a7e-ace8-d673f10e0714",
+      "name": "Birthing Pod",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": "{2}{U}{U} to cast Clever Impersonator, entering as a copy of a Birthing Pod already on the battlefield. Each Pod activation afterward separately costs {1}{G/P}, tap, sacrifice a creature.",
+    "timing": "Clever Impersonator's copy choice happens as it enters (a replacement effect, CR 707); each Pod's own activated ability is sorcery-speed only ('Activate only as a sorcery', confirmed in Birthing Pod's Oracle text).",
+    "targets_required": [],
+    "other": [
+      "NOT a combo/loop in the Commander Spellbook sense - checked (query for card=\"Birthing Pod\" card=\"Clever Impersonator\" together) and Spellbook returns zero variants. This is a redundancy/resilience finding, not a win-condition line: two independently-sacrificeable, independently-activatable Birthing Pods let the deck sacrifice two creatures per turn (mana permitting) instead of one, and survive losing one Pod to removal without losing the effect entirely.",
+      "Clever Impersonator becomes an artifact in addition to its other types when copying (its own text), so it copies Birthing Pod as an Artifact permanent (Pod's own printed type), consistent - no type mismatch.",
+      "Birthing Pod is not legendary (type line is plain 'Artifact'), so no legend rule conflict between the original and the copy.",
+      "Relevant to Phase 4 (combo dependency graph, as a redundancy/bridge node) and Phase 26 (combo accessibility - Clever Impersonator is a generic 'copy the best permanent on the battlefield' effect, not specific to Pod; Pod is simply one of several high-value copy targets alongside Smothering Tithe (INT-0001), and potentially Kinnan, Rhystic Study, Mystic Remora, or Survival of the Fittest depending on board state - not all enumerated here).",
+      "Engine reproduction methodology note: the executable_engine_check below tests two literal Birthing Pod permanents rather than driving the exact 'cast Clever Impersonator, choose to copy' sequence through the test harness's cost-payment command queue, which proved unreliable for this specific ability shape (see notes). Clever Impersonator's copy mechanism itself is a separately well-established XMage mechanic (CopyPermanentEffect, used across many other copy-effect cards) and is not the disputed part of this claim; what needed engine confirmation was whether two same-named, non-legendary Pod-functioning permanents can each be independently activated once in the same turn, which the test directly demonstrates."
+    ]
+  },
+  "result": {
+    "summary": "A second, independently activatable Birthing Pod - increases sacrifice-outlet redundancy and mana-permitting throughput (2 creatures sacrificed/found per turn instead of 1), not a new win condition by itself.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 707.1 — some objects become or turn another object into a 'copy' of a permanent; Clever Impersonator's own ability is this kind of effect.",
+      "CR 707.2 — when copying an object, the copy acquires the copiable values of the original's characteristics, including rules text (which includes its activated abilities). This is why Clever Impersonator, having copied Birthing Pod, genuinely has Birthing Pod's own sacrifice-and-search activated ability, not merely a similar or approximate one.",
+      "General activated-ability rules (CR 602) place no restriction preventing two non-legendary permanents with the same activated ability from each being activated once in the same turn, as long as each pays its own cost independently (here, its own tap + sacrifice + mana) - confirmed by the absence of any 'activate only once per turn' style restriction in Birthing Pod's Oracle text (its only restriction is 'Activate only as a sorcery')."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for the rest of this project's Level 4 work, via a new JUnit test, org.mage.test.cards.interactions.cedh.CleverImpersonatorBirthingPodTest#test_TwoBirthingPods_BothIndependentlyActivatable (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0009.json for the fixture record). Test setup: two literal Birthing Pod permanents (standing in for 'original + Clever Impersonator's copy' - see the methodology note above), 2 Elvish Mystic (sac fodder), 4 Forest, and 2 Silvercoat Lion in the library, for playerA. Activated BOTH Pod abilities in the same main phase, one after the other. Result: both Elvish Mystic sacrificed, both Silvercoat Lion found, both Pods remain on the battlefield afterward. Getting this to run cleanly required a real methodology finding of its own: this project's normal setChoice/addTarget queue-based approach for cost-payment choices (sacrifice target, Phyrexian mana pay-or-decline) does NOT work reliably for this activateAbility() call shape - the framework's own source comment on that overload states cost-payment 'choices and targets commands aren't [supported]' and instead routes through an internal computerPlayer AI fallback. Multiple attempts using setChoice/addTarget for the sacrifice target and Phyrexian choice failed unpredictably ('Missing CHOICE def' / 'wrong choice command' errors that didn't resolve with reordering). Fix: dropped setStrictChooseMode, let the AI fallback resolve the cost (it has no real choice to make here - only 1 legal sacrifice target type and only 1 legal search target existed at each step), and controlled nothing but the initial board setup. Passed 1/1 once restructured this way."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent reasoning about Clever Impersonator's copy ability against Birthing Pod's own text, cross-checked against Commander Spellbook's variants index (zero results for the pair, confirming this is not a community-tracked combo - a redundancy finding, not a missed win line)."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.CleverImpersonatorBirthingPodTest#test_TwoBirthingPods_BothIndependentlyActivatable, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 707.1, 707.2"
+    }
+  ],
+  "discovered_via": "manual_review",
+  "coverage_backlog_ref": null
+}

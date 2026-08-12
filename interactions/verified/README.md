@@ -72,5 +72,34 @@ The single-outcome gold board states above are valid evidence the
 *results* reproduce correctly; they are not license to collapse the
 decision tree when this is later encoded for policy/simulation.
 
-The other 7 candidates found so far (`interactions/candidate/`) remain
+- **`INT-0011`** — Derevi, Empyrial Tactician + Gaea's Cradle → one bonus
+  Cradle activation from a single connecting attacker (Derevi's
+  combat-damage trigger untaps a previously-tapped Cradle, which is then
+  tapped again for mana within the same combat damage step). Verified
+  2026-08-12, single-attacker base case only (CR 500.5/106.4 mana-pool
+  timing, CR 603.2c/603.3b trigger mechanics; XMage
+  `DereviGaeasCradleTest`, 1/1). Backing gold board state:
+  `GBS-0010.json`. **Scope note:** the original candidate writeup's claim
+  that this "scales with attacker count" (N attackers → N untap cycles) is
+  *not* itself engine-verified — a two-attacker extension attempt did not
+  succeed within the effort budget for this interaction and is tracked as
+  open item `coverage_backlog` `SIM-0012`. Treat the scaling claim as
+  plausible (supported by the same CR 603.2c/603.3b mechanics) but
+  unconfirmed, not as established fact.
+- **`INT-0012`** — Clever Impersonator copying Birthing Pod → a second,
+  independently-activatable Birthing Pod (redundancy/throughput, not a new
+  win condition). Verified 2026-08-12 (CR 707.1, 707.2 copying; XMage
+  `CleverImpersonatorBirthingPodTest`, 1/1). Backing gold board state:
+  `GBS-0009.json`. **Methodology note:** the test drives two literal
+  Birthing Pod permanents rather than the exact "cast Clever Impersonator,
+  choose to copy" sequence — this project's usual setChoice/addTarget
+  approach for cost-payment choices (sacrifice target, Phyrexian mana
+  decision) proved unreliable for this specific `activateAbility()` call
+  shape, which routes cost payment through an internal AI fallback
+  (documented only in a `CardTestPlayerAPIImpl` source comment, not
+  anywhere in XMage's own test-writing docs). Clever Impersonator's copy
+  mechanism itself (CR 707) is a separately well-established mechanic used
+  across many other cards and was not the disputed part of this claim.
+
+The other 5 candidates found so far (`interactions/candidate/`) remain
 unverified — see `coverage_backlog/BACKLOG.md` `SIM-0007`.
