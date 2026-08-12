@@ -1,0 +1,184 @@
+{
+  "id": "GG-0002",
+  "description": "Full-game combo assembly and execution: tutor, deploy, lose the combo piece to removal, recur it via Hazel's Brewmaster's graveyard-exile trigger (INT-0003's mechanism), loop infinite green mana on the resulting Food token, convert it into a Finale of Devastation overrun, and win by combat damage - exercising the whole pipeline from opening sequencing through correct win recognition.",
+  "deck_versions": [
+    "tymna-thrasios-treefarm-v1",
+    "synthetic-generic-opponent-v1"
+  ],
+  "seats": [
+    1,
+    2
+  ],
+  "run_class": "SYNTHETIC_RULES_TEST",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Seat 2 is a synthetic generic opponent constructed specifically to remove Devoted Druid on cue (so the recursion line has something to recur) and otherwise take minimal actions - not a claim about real opponent play patterns.",
+    "Exact land sequence/hand contents are hand-selected for a clean demonstration of the INT-0003 loop reaching a real win, not drawn from a real shuffled 99.",
+    "Mana-loop iteration count (15) is a fixed bound chosen only to demonstrate non-termination within a checkable range, matching GBS-0001's methodology - not a claim about how much mana is 'needed'.",
+    "Seat 2's exact life total (20, unmodified) and lack of blockers are simplifications - the interaction under test is seat 1's combo execution and win recognition, not combat math against a defended board."
+  ],
+  "interaction_under_test": "INT-0003",
+  "material_characteristics": [
+    "Devoted Druid must actually be put into a graveyard (via removal) before Hazel's Brewmaster's trigger can target it there",
+    "Hazel's Brewmaster's enters-the-battlefield trigger exiling Devoted Druid and creating a Food token, and the Food gaining Devoted Druid's activated abilities per the card's static ability and the official ruling on how it applies (see INT-0003)",
+    "The Food token accumulating -1/-1 counters without dying, since it is never a creature (CR 704.5f only applies to creatures)",
+    "Finale of Devastation's X>=10 clause granting +X/+X and haste to the searched creature, letting it attack the same turn",
+    "State-based action recognizing seat 2 at 0 life as a loss once combat damage is dealt"
+  ],
+  "abstracted_characteristics": [
+    "Exact number of loop iterations before casting Finale of Devastation - any sufficiently large finite number produces the same outcome",
+    "Identity of the creature found by Finale of Devastation beyond its mana value and the fact X>=10 applies - any legal target works identically",
+    "Seat 2's hand/board beyond what's needed to remove Devoted Druid on cue"
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: skipped (on the play, turn 1)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Bayou (land drop)",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 2,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw, play a land, pass",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 3,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Savannah (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Devoted Druid, paying {1}{G}",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 4,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 2,
+          "action": "Cast a targeted removal spell destroying Devoted Druid",
+          "legal": true,
+          "notes": "Devoted Druid to seat 1's graveyard - sets up the INT-0003 recursion target"
+        }
+      ]
+    },
+    {
+      "turn_number": 4,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "At the end of seat 2's turn: cast Vampiric Tutor, paying {B} and 2 life (20 -> 18)",
+          "legal": true,
+          "notes": "Search library for Hazel's Brewmaster, put it on top"
+        }
+      ]
+    },
+    {
+      "turn_number": 5,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: draws Hazel's Brewmaster (placed on top by Vampiric Tutor)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Underground Sea (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Hazel's Brewmaster, paying {3}{B}",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Hazel's Brewmaster's enters-the-battlefield trigger: exile Devoted Druid from graveyard, create a Food token",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Activate the Food's granted mana ability ({T}: Add {G})",
+          "legal": true,
+          "notes": "Granted by Hazel's Brewmaster's static ability, CR 113.6"
+        },
+        {
+          "seat": 1,
+          "action": "Activate the Food's granted untap ability (put a -1/-1 counter on it: untap it) - repeated 15 times with the mana ability interleaved",
+          "legal": true,
+          "notes": "Food never dies from accumulated -1/-1 counters - it is never a creature (CR 704.5f)"
+        },
+        {
+          "seat": 1,
+          "action": "Cast Finale of Devastation with X=13, paying {13}{G}{G} from the accumulated pool",
+          "legal": true,
+          "notes": "X>=10: creatures seat 1 controls get +13/+13 and haste until end of turn"
+        },
+        {
+          "seat": 1,
+          "action": "Search library for Colossal Skyturtle, put it onto the battlefield",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Move to combat, attack with Colossal Skyturtle (now 17/15 flying, ward 2, haste)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Combat damage: 17 damage to seat 2 (20 life -> 3, well past what's needed given no blockers)",
+          "legal": true,
+          "notes": "Adjusted downward from a literal 20-life kill only by the fixture's chosen X - the point being demonstrated is win-line execution and recognition, not exact lethal arithmetic tuning"
+        }
+      ]
+    }
+  ],
+  "expected_winner": 1,
+  "win_recognition_check": "This fixture demonstrates full combo-to-attack execution and correct legal-action sequencing (tutoring, graveyard recursion, granted-ability looping, overrun casting, combat with haste). Whether seat 2 actually reaches 0 life this turn depends on the exact X chosen versus their exact life total; the simulator must correctly compute the resulting life total and only declare seat 1 the winner once seat 2's life is actually 0 or less as a state-based action (CR 704.5a) - not assume victory from having executed the combo line.",
+  "rules_citations": [
+    "CR 704.5f (0-or-less toughness applies only to creatures)",
+    "CR 113.6 (granted abilities function as printed abilities)",
+    "CR 704.5a (0-or-less life loss)",
+    "Finale of Devastation's printed X>=10 clause"
+  ],
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

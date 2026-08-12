@@ -1,0 +1,160 @@
+{
+  "id": "GG-0003",
+  "description": "A Birthing Pod chain interrupted by a counterspell on the key combo piece - proves the simulator does not falsely recognize a win when a combo line is legitimately disrupted, and continues correctly modeling legal actions afterward.",
+  "deck_versions": [
+    "tymna-thrasios-treefarm-v1",
+    "synthetic-generic-opponent-v1"
+  ],
+  "seats": [
+    1,
+    2
+  ],
+  "run_class": "SYNTHETIC_RULES_TEST",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Seat 2 is a synthetic generic opponent constructed specifically to hold up and cast a counterspell on cue - not a claim about real opponent play patterns.",
+    "Exact hand/land sequence hand-selected to reach the disruption point cleanly."
+  ],
+  "interaction_under_test": "CR 608.2b, CR 903.9",
+  "material_characteristics": [
+    "A countered spell never resolves - no permanent enters the battlefield and no enters-the-battlefield trigger occurs (CR 608.2b, CR 603.2)",
+    "Birthing Pod's search restriction (mana value exactly sacrificed value + 1) continues to apply correctly across multiple activations in the same game",
+    "The game correctly continues (no winner) after the combo attempt fails - a disrupted line must not be silently treated as a win"
+  ],
+  "abstracted_characteristics": [
+    "Seat 2's hand/board beyond the one held-up counterspell",
+    "Exact identity of creatures found by Birthing Pod beyond their mana values"
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: skipped (on the play, turn 1)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Bayou (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Delighted Halfling, paying {G}",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 2,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw, play a land, pass, holding up mana",
+          "legal": true,
+          "notes": "Constructed to represent an opponent holding a counterspell"
+        }
+      ]
+    },
+    {
+      "turn_number": 3,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Savannah (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Birthing Pod, paying {3}",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 4,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw, play a land, pass, holding up mana",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 5,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Underground Sea (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Activate Birthing Pod (sacrifice Delighted Halfling, mana value 1): search for a mana-value-2 creature (Devoted Druid), put it onto the battlefield",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Hazel's Brewmaster, paying {3}{B}, intending to start the INT-0003 loop",
+          "legal": true,
+          "notes": "No Devoted Druid in graveyard yet this game - this specific cast wouldn't have a target for the exile trigger even if it resolved, but is cast anyway to demonstrate the counter interaction"
+        },
+        {
+          "seat": 2,
+          "action": "In response, cast a counterspell targeting Hazel's Brewmaster",
+          "legal": true,
+          "notes": "Constructed disruption"
+        }
+      ]
+    },
+    {
+      "turn_number": 5,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Hazel's Brewmaster is countered and put into seat 1's graveyard; its enters-the-battlefield trigger never happens because the spell never resolves and no permanent enters (CR 608.2b, CR 603.2)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Activate Birthing Pod again (sacrifice Devoted Druid, mana value 2): search for a mana-value-3 creature, put it onto the battlefield",
+          "legal": true,
+          "notes": "Second Pod activation in a later main phase - independent of the first, no once-per-turn restriction on the ability itself beyond the permanent's own tap"
+        },
+        {
+          "seat": 1,
+          "action": "Pass turn with the combo unassembled and no attack declared",
+          "legal": true
+        }
+      ]
+    }
+  ],
+  "expected_winner": null,
+  "win_recognition_check": "No state-based action for a win/loss condition is ever met in this sequence - Hazel's Brewmaster's countering prevents the INT-0003 loop from ever starting, both players remain above 0 life, and the simulator must correctly report the game as ongoing (not declare a winner) after the disruption.",
+  "rules_citations": [
+    "CR 608.2b (countered spells go to the graveyard, never resolve)",
+    "CR 603.2 (triggered abilities require the triggering event to actually occur)"
+  ],
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

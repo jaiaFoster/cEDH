@@ -1,0 +1,159 @@
+{
+  "id": "GG-0001",
+  "description": "Baseline whole-game sequencing sanity check with the real subject deck against a synthetic opponent: opening hand, turn-1 draw skip, land-drop limit, first commander cast from the command zone (no tax yet), and summoning sickness carried through a live multi-turn sequence (not an isolated fixture like GBS-0011).",
+  "deck_versions": [
+    "tymna-thrasios-treefarm-v1",
+    "synthetic-generic-opponent-v1"
+  ],
+  "seats": [
+    1,
+    2
+  ],
+  "run_class": "SYNTHETIC_RULES_TEST",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Seat 2 is a synthetic generic opponent, not a frozen/ingested decklist - its actions are deliberately constructed to exercise seat 1's sequencing, per docs/VALIDATION_GATES.md Gate 3 exit criteria allowing constructed opponent actions for this purpose.",
+    "Opening hands are hand-selected for a clean, uneventful sequencing demonstration, not drawn from a real shuffled 99.",
+    "No combo lines or removal are involved - this game is intentionally uneventful."
+  ],
+  "interaction_under_test": "CR 103.7a, CR 505.2, CR 302.6, CR 903.8",
+  "material_characteristics": [
+    "Seat 1 is on the play and skips their first draw step (CR 103.7a)",
+    "Only one land drop per turn is legal absent a static ability granting more (CR 505.2)",
+    "Tymna the Weaver's first cast from the command zone costs its printed cost with no commander tax (CR 903.8 - tax only applies to previous casts from the command zone this game)",
+    "Avacyn's Pilgrim cannot tap for mana the turn it enters (CR 302.6), and can starting its controller's next turn"
+  ],
+  "abstracted_characteristics": [
+    "Card draws beyond what's needed for the specific land/spell plays shown - not a claim about a real draw sequence",
+    "Seat 2's hand/board beyond a minimal land-and-pass presence"
+  ],
+  "turns": [
+    {
+      "turn_number": 1,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: skipped (seat 1 is on the play, turn 1)",
+          "legal": true,
+          "notes": "CR 103.7a"
+        },
+        {
+          "seat": 1,
+          "action": "Play Bayou (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Tymna the Weaver from the command zone, paying {W}{B}",
+          "legal": true,
+          "notes": "First cast this game - no commander tax yet"
+        },
+        {
+          "seat": 1,
+          "action": "Attempt a second land drop this turn",
+          "legal": false,
+          "notes": "CR 505.2 - one land per turn"
+        }
+      ]
+    },
+    {
+      "turn_number": 2,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw step: draws a card normally",
+          "legal": true
+        },
+        {
+          "seat": 2,
+          "action": "Play a land",
+          "legal": true
+        },
+        {
+          "seat": 2,
+          "action": "Pass turn with no other action",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 3,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Savannah (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Cast Avacyn's Pilgrim, paying {W}",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Activate Avacyn's Pilgrim's mana ability ({T}: Add {W}) this same turn",
+          "legal": false,
+          "notes": "CR 302.6 - summoning sickness"
+        }
+      ]
+    },
+    {
+      "turn_number": 4,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 2,
+          "action": "Pass turn with no other action",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 5,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Tropical Island (land drop)",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Activate Avacyn's Pilgrim's mana ability ({T}: Add {W})",
+          "legal": true,
+          "notes": "No longer summoning-sick - continuously controlled since seat 1's most recent turn began"
+        }
+      ]
+    }
+  ],
+  "expected_winner": null,
+  "win_recognition_check": "Not applicable - this game is a sequencing proof, not played to a conclusion. No state-based loss/win condition is ever met in the actions shown.",
+  "rules_citations": [
+    "CR 103.7a",
+    "CR 505.2",
+    "CR 302.6",
+    "CR 903.8"
+  ],
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}
