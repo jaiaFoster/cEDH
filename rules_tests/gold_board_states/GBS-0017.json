@@ -1,0 +1,77 @@
+{
+  "id": "GBS-0017",
+  "description": "Veil of Summer's 'hexproof from blue and from black' granted mid-stack causes an already-cast opponent blue spell targeting the protected permanent to become illegal and be countered by the game rules on resolution - the deck's closest analogue to a 'protection' fixture (charter Gate 2 minimum list), since the subject deck's actual protection-adjacent cards are hexproof/ward rather than keyword protection.",
+  "covers": [
+    "protection",
+    "stack_interaction"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Cyclonic Rift (a real blue targeted spell not in the subject decklist) stands in for a generic opponent removal/bounce spell - any blue targeted spell aimed at the protected permanent works identically.",
+    "1 Forest is the minimum mana to cast Veil of Summer ({G}); no other board state modeled."
+  ],
+  "interaction_under_test": "CR 702.11e",
+  "material_characteristics": [
+    "Veil of Summer grants hexproof from blue and from black until end of turn, and can be cast at instant speed in response to a spell already on the stack",
+    "A spell that already has a target that becomes illegal for it loses that target under CR 608.2b, and if all its targets are illegal it doesn't resolve"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the blue spell being fizzled - any targeted blue spell aimed at the now-hexproof permanent behaves identically",
+    "All board state not directly involved in the interaction"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Forest",
+            "quantity": 1
+          },
+          {
+            "card": "Delighted Halfling",
+            "quantity": 1
+          }
+        ],
+        "hand": [
+          "Veil of Summer"
+        ],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1,
+    "stack": [
+      {
+        "card": "Cyclonic Rift",
+        "controller": 2,
+        "target": "seat 1 Delighted Halfling"
+      }
+    ]
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Veil of Summer targeting no one (it targets nothing), granting seat 1 and their permanents hexproof from blue and from black until end of turn"
+    ],
+    "illegal_actions_to_reject": [
+      "Opponent casting a new blue spell targeting any of seat 1's permanents while the hexproof-from-blue effect is active - no legal target exists"
+    ],
+    "outcome_if_resolved": "Veil of Summer resolves; Cyclonic Rift's only target (Delighted Halfling) becomes illegal; Cyclonic Rift is removed from the stack without effect under CR 608.2b and put into seat 2's graveyard."
+  },
+  "rules_citations": [
+    "CR 702.11e (hexproof)",
+    "CR 608.2b (illegal targets at resolution)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

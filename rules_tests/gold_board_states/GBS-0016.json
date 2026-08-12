@@ -1,0 +1,65 @@
+{
+  "id": "GBS-0016",
+  "description": "Colossal Skyturtle's Channel ability is activated from hand (discarding the card as its own cost) and returns a target card from the graveyard to hand - exercising both the Channel activated-ability-from-a-non-battlefield-zone mechanic (CR 702.48) and graveyard-to-hand movement in one fixture.",
+  "covers": [
+    "graveyard_movement",
+    "activated_ability"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Demonic Tutor in the graveyard is an arbitrary stand-in recursion target - any card would do.",
+    "2 Forest is more mana than the {2}{G} channel cost strictly requires, to avoid payment ambiguity."
+  ],
+  "interaction_under_test": "CR 702.48",
+  "material_characteristics": [
+    "Channel is an activated ability that functions from hand, not the battlefield (CR 702.48a), and discarding the card is part of its cost",
+    "Colossal Skyturtle is discarded (not milled or sacrificed) as part of paying the channel cost, so it itself ends up in the graveyard, not returned by its own ability",
+    "The targeted card moves from graveyard to hand, a genuine zone change subject to state-based/triggered effects that key off either zone"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the recursion target - any graveyard card is a legal target for this specific channel ability",
+    "All board state not directly involved in the activation"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Forest",
+            "quantity": 2
+          }
+        ],
+        "hand": [
+          "Colossal Skyturtle"
+        ],
+        "graveyard": [
+          "Demonic Tutor"
+        ],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Activate Colossal Skyturtle's Channel ability ({2}{G}, discard this card): return Demonic Tutor from graveyard to hand"
+    ],
+    "illegal_actions_to_reject": [
+      "Activating the channel ability without discarding Colossal Skyturtle - discarding it is the cost, not a side effect",
+      "Casting Colossal Skyturtle as a creature spell and also activating channel in the same instance - channel can only be activated from hand, and once cast as a spell it's no longer in hand"
+    ],
+    "outcome_if_resolved": "Colossal Skyturtle discarded to the graveyard; Demonic Tutor moves from graveyard to hand."
+  },
+  "rules_citations": [
+    "CR 702.48 (Channel)",
+    "CR 701.8 (discard)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

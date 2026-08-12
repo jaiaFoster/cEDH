@@ -1,0 +1,71 @@
+{
+  "id": "GBS-0013",
+  "description": "Birthing Pod's search restriction ('mana value equal to 1 plus the sacrificed creature's mana value') is a hard boundary, not a maximum - fetching a same- or lower-mana-value creature is illegal, only exactly +1 is legal.",
+  "covers": [
+    "pod_restriction",
+    "tutor"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Devoted Druid (mana value 2) is the sacrificed creature; Kinnan (mana value 3) and Delighted Halfling (mana value 1) are the legal/illegal search-target pair chosen for a clean off-by-one boundary, not a claim about optimal Pod lines.",
+    "4 Forest is more mana than the {1}{G/P} cost strictly requires, to avoid mana-payment ambiguity.",
+    "Library contents beyond the two named creatures are not modeled - out of scope for this legality check."
+  ],
+  "interaction_under_test": "CR 701.19 (search) / Birthing Pod's own printed restriction",
+  "material_characteristics": [
+    "Birthing Pod's search is restricted to mana value == sacrificed creature's mana value + 1, not <= or unrestricted",
+    "Devoted Druid's mana value is 2, so only mana-value-3 creatures are legal search targets"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the sacrificed/found creatures beyond their mana values",
+    "All board state not directly involved in the activation"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Birthing Pod",
+            "quantity": 1
+          },
+          {
+            "card": "Devoted Druid",
+            "quantity": 1
+          },
+          {
+            "card": "Forest",
+            "quantity": 4
+          }
+        ],
+        "hand": [],
+        "library": [
+          "Kinnan, Bonder Prodigy",
+          "Delighted Halfling"
+        ],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Activate Birthing Pod ({1}{G/P}, sacrifice Devoted Druid): search for Kinnan, Bonder Prodigy (mana value 3 = 2 + 1) and put it onto the battlefield"
+    ],
+    "illegal_actions_to_reject": [
+      "Activate Birthing Pod, sacrifice Devoted Druid, and search for Delighted Halfling (mana value 1) - illegal, mana value must be exactly 3",
+      "Activate Birthing Pod, sacrifice Devoted Druid, and search for another mana-value-2 creature - illegal, same mana value is not 'equal to 1 plus'"
+    ],
+    "outcome_if_resolved": "Devoted Druid sacrificed, Kinnan put onto the battlefield, library shuffled."
+  },
+  "rules_citations": [
+    "Birthing Pod's printed activated-ability text (search restriction is an equality, not an inequality)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

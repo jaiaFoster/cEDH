@@ -1,0 +1,74 @@
+{
+  "id": "GBS-0012",
+  "description": "Force of Will's alternative cost (pay 1 life, exile a blue card from hand) used to counter an opponent's spell already on the stack, including rejecting the alternative cost when the exiled card isn't blue.",
+  "covers": [
+    "pitch_cost",
+    "stack_interaction",
+    "other"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Opponent's spell (Demonic Tutor) is an arbitrary stand-in target - any spell on the stack would do; Demonic Tutor is in the subject deck's own list but here represents a generic opponent spell.",
+    "Lotus Petal in hand is a deliberate distractor to test the 'blue card' restriction on the alternative cost, not a claim about a representative hand.",
+    "No lands/mana modeled - Force of Will's alternative cost requires none."
+  ],
+  "interaction_under_test": "CR 118.9",
+  "material_characteristics": [
+    "Force of Will's alternative-cost text ('pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost')",
+    "Only a blue card may be exiled to pay the alternative cost - Lotus Petal (colorless) is not a legal choice",
+    "Force of Will can be cast at instant speed in response to a spell already on the stack and resolves as a counter (CR 608.2b)"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the countered spell - any spell on the stack works identically for this test",
+    "All board state beyond the two players' relevant hands/stack"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [],
+        "hand": [
+          "Force of Will",
+          "Mystic Remora",
+          "Lotus Petal"
+        ],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1,
+    "stack": [
+      {
+        "card": "Demonic Tutor",
+        "controller": 2
+      }
+    ]
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Force of Will by paying 1 life and exiling Mystic Remora (a blue card) from hand, targeting Demonic Tutor on the stack"
+    ],
+    "illegal_actions_to_reject": [
+      "Pay Force of Will's alternative cost by exiling Lotus Petal instead of a blue card - CR 118.9/the card's own text requires the exiled card be blue",
+      "Cast Force of Will for its printed mana cost {3}{U}{U} with no mana available and no assumption that the alternative cost is mandatory - it's optional, but here it's the only payable option"
+    ],
+    "outcome_if_resolved": "Force of Will resolves and counters Demonic Tutor (goes to seat 2's graveyard); Mystic Remora is exiled; seat 1's life total goes from 20 to 19."
+  },
+  "rules_citations": [
+    "CR 118.9 (alternative costs)",
+    "CR 601.2b (alternative/additional costs paid as part of casting)",
+    "CR 608.2b (a spell/ability with an illegal or no-longer-valid outcome is countered by the game rules; here Force of Will's own counter effect sends Demonic Tutor to the graveyard on resolution)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

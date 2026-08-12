@@ -1,0 +1,56 @@
+{
+  "id": "GBS-0011",
+  "description": "Avacyn's Pilgrim, cast this same turn, cannot activate its tap ability ({T}: Add {W}) due to summoning sickness (CR 302.6) - it has not been under its controller's control continuously since their most recent turn began.",
+  "covers": [
+    "summoning_sickness",
+    "mana_production"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Single-player isolation - no opponent, hand, or other permanents modeled beyond what's needed to show the creature just entered this turn.",
+    "Turn number/land count are arbitrary scaffolding."
+  ],
+  "interaction_under_test": "CR 302.6",
+  "material_characteristics": [
+    "Avacyn's Pilgrim's only ability requires {T} in its cost, so CR 302.6 blocks it while summoning-sick.",
+    "The creature entered the battlefield during the player's current turn (not carried over from a previous turn)."
+  ],
+  "abstracted_characteristics": [
+    "Choice of mana dork - any creature whose only ability has a {T} cost and no haste would produce the same result.",
+    "Board state beyond the single creature."
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Avacyn's Pilgrim",
+            "quantity": 1,
+            "summoning_sick": true
+          }
+        ],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [],
+    "illegal_actions_to_reject": [
+      "Activate Avacyn's Pilgrim's mana ability ({T}: Add {W}) - illegal this turn under CR 302.6; it becomes legal starting the player's next turn."
+    ],
+    "outcome_if_resolved": null
+  },
+  "rules_citations": [
+    "CR 302.6 (summoning sickness restricts activated abilities with {T} or {Q} in the cost)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

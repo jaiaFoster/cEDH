@@ -1,0 +1,70 @@
+{
+  "id": "GBS-0020",
+  "description": "Chord of Calling's Convoke lets each tapped creature pay {1} or one mana of that creature's color toward the spell's cost, reducing the mana actually paid from the pool.",
+  "covers": [
+    "convoke",
+    "mana_production"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "X=3 chosen arbitrarily to search for a mana-value-3-or-less creature; any legal X works identically for testing convoke's payment mechanic.",
+    "Two convoking creatures (one green, one off-color) chosen specifically so one pays a colored pip and the other only generic, showing convoke isn't restricted to matching colors for generic costs."
+  ],
+  "interaction_under_test": "CR 702.51",
+  "material_characteristics": [
+    "Convoke lets tapping a creature substitute for paying {1} or one mana of that creature's color, as part of the total cost, not a discount applied before costs are calculated",
+    "An off-color creature (Avacyn's Pilgrim, white) can still convoke Chord of Calling (green) - it just can only pay generic, not a colored pip"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the searched-for creature - any legal mana-value-X-or-less creature is equivalent for this test",
+    "All board state not directly involved in casting Chord of Calling"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Forest",
+            "quantity": 3
+          },
+          {
+            "card": "Devoted Druid",
+            "quantity": 1
+          },
+          {
+            "card": "Avacyn's Pilgrim",
+            "quantity": 1
+          }
+        ],
+        "hand": [
+          "Chord of Calling"
+        ],
+        "library": [
+          "Delighted Halfling"
+        ],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Chord of Calling with X=3 (total cost {3}{G}{G}{G}), tapping Devoted Druid to pay {G} and Avacyn's Pilgrim to pay {1}, paying the remaining {2}{G}{G} from Forests"
+    ],
+    "illegal_actions_to_reject": [
+      "Tapping Avacyn's Pilgrim (white) to pay a {G} pip via convoke - an off-color creature can only pay generic mana through convoke, not colored pips outside its own color"
+    ],
+    "outcome_if_resolved": "Chord of Calling resolves; Delighted Halfling (mana value 1, satisfies X=3 or less) found and put onto the battlefield; library shuffled."
+  },
+  "rules_citations": [
+    "CR 702.51 (Convoke)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

@@ -1,0 +1,60 @@
+{
+  "id": "GBS-0019",
+  "description": "When a commander would go to the graveyard, its owner may choose to move it to the command zone instead (the 'commander replacement effect'), and the commander tax increases by {2} for each time it has been cast from the command zone, applying on its next cast from there.",
+  "covers": [
+    "other"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Lethal combat damage killing Tymna is an arbitrary trigger for the death event - any effect that would put the commander into the graveyard from the battlefield works identically.",
+    "The opposing attacker's identity/power is not material, only that it deals lethal damage."
+  ],
+  "interaction_under_test": "CR 903.9",
+  "material_characteristics": [
+    "The commander replacement effect is optional per-instance, applied by the owner as the permanent would move to the graveyard (CR 903.9a) - it is not automatic",
+    "Commander tax: {2} more to cast for each previous time it was cast from the command zone this game (CR 903.8), tracked cumulatively regardless of zone changes in between"
+  ],
+  "abstracted_characteristics": [
+    "The specific source of lethal damage/destruction - any would-be graveyard-bound death event triggers the same choice",
+    "All board state not directly involved in the death and recast"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Tymna the Weaver",
+            "quantity": 1,
+            "lethal_damage_marked": true
+          }
+        ],
+        "hand": [],
+        "command_zone": [],
+        "life": 20,
+        "mana_pool": {}
+      }
+    ],
+    "phase": "COMBAT_DAMAGE",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "As Tymna the Weaver would be put into the graveyard from the battlefield, its owner may choose to move it to the command zone instead (commander replacement effect)"
+    ],
+    "illegal_actions_to_reject": [
+      "Treating the move to the command zone as mandatory (it is a choice the owner makes each time) or as free of the accumulated commander tax on its next cast"
+    ],
+    "outcome_if_resolved": "Owner chooses the replacement effect: Tymna moves to the command zone instead of the graveyard. On its next cast from the command zone, its cost is {2} more than the previous time it was cast from there (cumulative commander tax, CR 903.8)."
+  },
+  "rules_citations": [
+    "CR 903.9 / 903.9a (commander replacement effect)",
+    "CR 903.8 (commander tax)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

@@ -1,0 +1,56 @@
+{
+  "id": "GBS-0018",
+  "description": "A player at 0 or less life loses the game as a state-based action, and in a two-player game the remaining player wins immediately - basic game-end recognition that no existing gold state exercises.",
+  "covers": [
+    "other"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Combat damage bringing seat 2 to 0 life is an arbitrary trigger for the state-based check - any life-loss-to-0-or-below event works identically.",
+    "Creature power/toughness and board state beyond the life totals are not material."
+  ],
+  "interaction_under_test": "CR 704.5a",
+  "material_characteristics": [
+    "A player with 0 or less life loses the game as a state-based action (CR 704.5a), checked before either player would receive priority again",
+    "In a two-player game, one player losing ends the game with the other as winner (CR 104.2a, CR 104.3a)"
+  ],
+  "abstracted_characteristics": [
+    "The specific source of the life loss - any combat damage, effect, or ability bringing life to 0 or below is equivalent for this check",
+    "All board state not directly involved in the life-total check"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [],
+        "hand": [],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [],
+        "hand": [],
+        "life": 0
+      }
+    ],
+    "phase": "COMBAT_DAMAGE",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [],
+    "illegal_actions_to_reject": [
+      "Continuing to offer seat 2 priority, casting spells, or taking any further game actions after the state-based action check - the game must end before priority is passed again"
+    ],
+    "outcome_if_resolved": "State-based action check: seat 2 has 0 life and loses the game (CR 704.5a); seat 1 is the sole remaining player and wins (CR 104.2a)."
+  },
+  "rules_citations": [
+    "CR 704.5a (0-or-less life loss)",
+    "CR 104.2a / 104.3a (last remaining player wins)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

@@ -1,0 +1,75 @@
+{
+  "id": "GBS-0015",
+  "description": "Smothering Tithe's trigger gives the drawing opponent a real choice: if they pay {2}, no Treasure is created. This is the complementary branch to GBS-0005 (which showed the decline branch) and is the concrete engine-level grounding for the `conditional`/`conditions` fields on INT-0001, INT-0004, and INT-0005 - the 'opponents pay' outcome must be a modeled, reachable branch, not silently excluded.",
+  "covers": [
+    "other"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Single opponent draw event modeled in isolation - no claim about how often a real opponent would choose to pay.",
+    "Opponent's available mana (2 untapped Islands) is arbitrary scaffolding, just enough to demonstrate the pay branch is reachable."
+  ],
+  "interaction_under_test": "INT-0001",
+  "material_characteristics": [
+    "Smothering Tithe's trigger offers the drawing player a choice ('that player may pay {2}. If the player doesn't, you create a Treasure token.') - paying is a real, legal branch, not a formality",
+    "When the opponent pays {2}, no Treasure token is created and Smothering Tithe's controller gains no mana from that draw"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the draw event that triggered Smothering Tithe - any opponent draw works identically",
+    "All board state not directly involved in the trigger and its choice"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Smothering Tithe",
+            "quantity": 1
+          }
+        ],
+        "hand": [],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [
+          {
+            "card": "Island",
+            "quantity": 2
+          }
+        ],
+        "hand": [],
+        "life": 20,
+        "mana_pool": {}
+      }
+    ],
+    "phase": "DRAW",
+    "priority_seat": 2,
+    "stack": [
+      {
+        "card": "Smothering Tithe trigger",
+        "controller": 1,
+        "affects": 2
+      }
+    ]
+  },
+  "expected": {
+    "legal_actions": [
+      "Seat 2 pays {2} (taps both Islands) in response to the trigger's resolution instruction: no Treasure token is created"
+    ],
+    "illegal_actions_to_reject": [
+      "Treating the Treasure-token outcome as mandatory or as the only modeled branch - the pay-{2}-and-decline-the-Treasure branch must be equally reachable in the simulator's decision space"
+    ],
+    "outcome_if_resolved": "Seat 2 pays {2}; seat 1 receives no Treasure token from this draw."
+  },
+  "rules_citations": [
+    "Smothering Tithe's printed trigger text (a may-pay clause, CR 603 triggered ability with a choice)"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}

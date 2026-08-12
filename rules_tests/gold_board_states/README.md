@@ -39,6 +39,37 @@ looks.
   target/mode/choice to preserve here, unlike the other four Delney
   doublings above). 1/1 passing on the first attempt.
 
+- **`GBS-0011`** — Summoning sickness: Avacyn's Pilgrim can't tap for mana
+  the turn it enters (CR 302.6).
+- **`GBS-0012`** — Force of Will's pitch alternative cost (blue-card-only
+  restriction) countering a stacked spell (CR 118.9, 608.2b).
+- **`GBS-0013`** — Birthing Pod's search restriction is an equality
+  (sacrificed value + 1 exactly), not a ceiling — rejects same/lower-value
+  fetches that `GBS-0009` didn't test.
+- **`GBS-0014`** — Enlightened Tutor's artifact-or-enchantment-only search
+  restriction rejects a creature-card target.
+- **`GBS-0015`** — Smothering Tithe's "opponent pays {2}" branch, the
+  complement to `GBS-0005`'s decline case — the concrete engine-level
+  grounding for `conditional`/`conditions` on `INT-0001`/`0004`/`0005`.
+- **`GBS-0016`** — Colossal Skyturtle's Channel ability (CR 702.48):
+  discard from hand as a cost, return a card from graveyard to hand.
+- **`GBS-0017`** — Veil of Summer's hexproof-from-blue/black fizzles an
+  already-stacked blue spell's only target (CR 702.11e, 608.2b) — the
+  deck's protection-adjacent analogue (it runs hexproof/ward, not keyword
+  protection).
+- **`GBS-0018`** — Win recognition: a player at 0 life loses as a
+  state-based action; in 2-player, the other player wins immediately
+  (CR 704.5a, 104.2a).
+- **`GBS-0019`** — Commander-zone replacement effect (optional, not
+  automatic) and cumulative commander tax on recast (CR 903.8, 903.9).
+- **`GBS-0020`** — Chord of Calling's Convoke: an off-color creature can
+  only pay generic through convoke, not a colored pip (CR 702.51).
+
+`GBS-0011`..`GBS-0020` are straightforward, undisputed CR applications (not
+legality-disputed/complex per Gate 2's own exit criteria), so per
+`docs/VALIDATION_GATES.md` they're rules-grounded only — no XMage
+cross-check was required or performed for them.
+
 **`GBS-0005`..`GBS-0008` are all subject to the decision-space-fidelity
 modeling requirement in `docs/ARCHITECTURE.md` Layer 2**: each records one
 valid outcome of a doubled trigger's decision tree (a specific choice of

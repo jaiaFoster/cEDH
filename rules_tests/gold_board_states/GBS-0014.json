@@ -1,0 +1,62 @@
+{
+  "id": "GBS-0014",
+  "description": "Enlightened Tutor's search is restricted to artifact or enchantment cards - a creature card is not a legal search target even though the ability otherwise reads as an unrestricted tutor.",
+  "covers": [
+    "tutor"
+  ],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Sol Ring (artifact, legal target) and Devoted Druid (creature, illegal target) chosen as a clean legal/illegal pair from the subject deck's own list.",
+    "1 Plains is the minimum mana to cast Enlightened Tutor ({W}); no other board state modeled."
+  ],
+  "interaction_under_test": "CR 701.19",
+  "material_characteristics": [
+    "Enlightened Tutor's search is restricted to 'an artifact or enchantment card' - not the unrestricted 'any card' of e.g. Demonic Tutor"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the specific artifact/enchantment found - any legal card works identically",
+    "All board state not directly involved in casting and resolving the tutor"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {
+            "card": "Plains",
+            "quantity": 1
+          }
+        ],
+        "hand": [
+          "Enlightened Tutor"
+        ],
+        "library": [
+          "Sol Ring",
+          "Devoted Druid"
+        ],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Enlightened Tutor, search library for Sol Ring, reveal it, put it on top of library"
+    ],
+    "illegal_actions_to_reject": [
+      "Cast Enlightened Tutor and search library for Devoted Druid - illegal, a creature card is not an artifact or enchantment card"
+    ],
+    "outcome_if_resolved": "Sol Ring revealed and placed on top of the library; library otherwise shuffled per the card's own text (no shuffle - Enlightened Tutor does not shuffle after searching, the card is placed on top)."
+  },
+  "rules_citations": [
+    "CR 701.19 (search)",
+    "Enlightened Tutor's printed card-type restriction"
+  ],
+  "engine_cross_check": null,
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": null
+}
