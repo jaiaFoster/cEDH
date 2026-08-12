@@ -1,0 +1,270 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed8",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 8,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 2529,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 62,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T1.CL",
+      "text": "PlayerA discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T1.CL",
+      "text": "PlayerA discards Smothering Tithe [315]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tropical Island [389] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Training Grounds [9b3] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Training Grounds [9b3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Verdant Catacombs [013] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [013]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [013] (source: Verdant Catacombs [013])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [013]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [013])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Underground Sea [873] from library onto the Battlefield (source: Verdant Catacombs [013])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [013])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Training Grounds [9b3] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Training Grounds [9b3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Scrubland [6f5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Orcish Bowmasters [760] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Orcish Bowmasters [760] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Orcish Bowmasters [760] - When Orcish Bowmasters [760] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [760] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA loses 1 life from Orcish Bowmasters [760]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB creates a Orc Army Token [610] token"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Sol Ring [e8e] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Sol Ring [e8e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Orcish Bowmasters [760] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Orc Army Token [610] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Orcish Bowmasters [760]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Orc Army Token [610]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 2 life from Birthing Pod [949]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Birthing Pod [949] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Birthing Pod [949] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Esper Sentinel [68a] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Esper Sentinel [68a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Orcish Bowmasters [760] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Orc Army Token [610] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Orcish Bowmasters [760]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Orc Army Token [610]"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.752453+00:00"
+}

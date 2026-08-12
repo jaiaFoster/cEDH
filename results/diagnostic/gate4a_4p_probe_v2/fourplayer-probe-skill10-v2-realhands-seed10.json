@@ -1,0 +1,21 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed10",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 10,
+  "max_turn_requested": 8,
+  "status": "CHUNK_LOST",
+  "elapsed_ms": null,
+  "exception": "entire chunk failed/timed out before this game's markers appeared",
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 0,
+  "events": [],
+  "created_at": "2026-08-12T21:44:11.630903+00:00"
+}

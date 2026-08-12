@@ -1,0 +1,334 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed3",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 3,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 21625,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 78,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD puts Gemstone Caverns [18a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD moves Command Tower [ae7] from hand to the exile zone (source: Gemstone Caverns [18a])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Talon Gates of Madara [10f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA - Ability triggers: Talon Gates of Madara [10f] - When Talon Gates of Madara [10f] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [e17] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [e17] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Minamo, School at Water's Edge [b81] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD casts Thrasios, Triton Hero [98f] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Thrasios, Triton Hero [98f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Boseiju, Who Endures [c47] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Chrome Mox [2ab] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Chrome Mox [2ab] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [2ab] - Imprint — When Chrome Mox [2ab] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB moves Elvish Spirit Guide [d7b] from hand to the exile zone (source: Chrome Mox [2ab])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Tropical Island [a20] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [1cb] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [1cb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Misty Rainforest [ac6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [ac6]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [ac6] (source: Misty Rainforest [ac6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [ac6]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [ac6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [3e2] from library onto the Battlefield (source: Misty Rainforest [ac6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [ac6])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD casts Gilded Drake [55b] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Gilded Drake [55b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD - Ability triggers: Gilded Drake [55b] - When Gilded Drake [55b] enters, exchange control of Gilded Drake [55b] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [55b]. This ability still resolves if its target becomes illegal. - targeting Thrasios, Triton Hero [1cb]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Thrasios, Triton Hero [1cb] is put into graveyard from battlefield (SBA: legendary rule to keep only one)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [1cb] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacked player: PlayerA"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [98f] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [98f]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [98f] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T7.CL",
+      "text": "PlayerC discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T7.CL",
+      "text": "PlayerC discards Voice of Victory [13c]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Volatile Stormdrake [59f] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Volatile Stormdrake [59f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Volatile Stormdrake [59f] - When Volatile Stormdrake [59f] enters, exchange control of Volatile Stormdrake [59f] and target creature an opponent controls. If you do, you get {E}{E}{E}{E}, then sacrifice that creature unless you pay an amount of {E} equal to its mana value. - targeting Thrasios, Triton Hero [98f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB paid for Volatile Stormdrake [59f] - Pay {E}{E}?"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts City of Traitors [c8f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerC with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacked player: PlayerC"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Gilded Drake [55b] (3/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerC loses 3 life at combat from Gilded Drake [55b]"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.629932+00:00"
+}

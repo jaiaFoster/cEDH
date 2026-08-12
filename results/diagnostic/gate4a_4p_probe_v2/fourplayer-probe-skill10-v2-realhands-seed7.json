@@ -1,0 +1,338 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed7",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 7,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 87547,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 79,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Savannah [e9a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mana Vault [2a9] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mana Vault [2a9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Talon Gates of Madara [da8] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD - Ability triggers: Talon Gates of Madara [da8] - When Talon Gates of Madara [da8] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD casts Chrome Mox [e0d] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Chrome Mox [e0d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD - Ability triggers: Chrome Mox [e0d] - Imprint — When Chrome Mox [e0d] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD moves Delighted Halfling [41b] from hand to the exile zone (source: Chrome Mox [e0d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD casts Badgermole Cub [066] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Badgermole Cub [066] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD - Ability triggers: Badgermole Cub [066] - When Badgermole Cub [066] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Talon Gates of Madara [da8]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC casts Lotus Petal [679] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Lotus Petal [679] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Underground Sea [221] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC sacrificed Lotus Petal [679] (source: Lotus Petal [679])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC casts Archivist of Oghma [b07] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Archivist of Oghma [b07] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Savannah [c45] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Elves of Deep Shadow [47a] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Elves of Deep Shadow [47a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [2a9] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [2a9]."
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "PlayerA paid for Mana Vault [2a9] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacked player: PlayerA"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Talon Gates of Madara [da8] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Badgermole Cub [066] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Talon Gates of Madara [da8]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 2 life at combat from Badgermole Cub [066]"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerD casts Deathrite Shaman [466] from hand"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerD puts Deathrite Shaman [466] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerD puts Scrubland [59a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC attacks PlayerD with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacked player: PlayerD"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Archivist of Oghma [b07] (2/2) blocked by Deathrite Shaman [466] (1/2)"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Deathrite Shaman [466] deals 1 damage to Archivist of Oghma [b07]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Archivist of Oghma [b07] deals 2 damage to Deathrite Shaman [466]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Deathrite Shaman [466] died"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tundra [46e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [fe3] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [fe3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerC with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacked player: PlayerC"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Elves of Deep Shadow [47a] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerC loses 1 life at combat from Elves of Deep Shadow [47a]"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.632278+00:00"
+}

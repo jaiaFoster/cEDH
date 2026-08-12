@@ -1,0 +1,414 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed2",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 2,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 4101,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 98,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Scrubland [f62] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Lotus Petal [56a] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: Cast Commandeer)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB moves Pact of Negation [2d9] from hand to the exile zone (source: Commandeer [865])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB moves Force of Negation [198] from hand to the exile zone (source: Commandeer [865])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB casts Commandeer [865] using alternative casting costs targeting Lotus Petal [56a] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 2 (top: Cast Commandeer)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB puts Commandeer [865] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB puts Lotus Petal [56a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Sol Ring [ce3] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB sacrificed Lotus Petal [56a] (source: Lotus Petal [56a])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Sol Ring [ce3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB moves Misdirection [25d] from hand to the exile zone (source: Subtlety [dc4])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB casts Subtlety [dc4] with Evoke from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB puts Subtlety [dc4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB - Ability triggers: Subtlety [dc4] - When Subtlety [dc4] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB - Ability triggers: Subtlety [dc4] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB sacrificed Subtlety [dc4] (source: Subtlety [dc4])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Voice of Victory)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Voice of Victory [b9a] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Voice of Victory)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Voice of Victory [b9a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack push: 1 (top: stack ability (Mobilize 2 <i>(Whenever this creature attacks, create two tapped and attacking 1/1...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA - Ability triggers: Voice of Victory [b9a] - Mobilize 2 (Whenever this creature attacks, create two tapped and attacking 1/1 red Warrior creature tokens. Sacrifice them at the beginning of the next end step.)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack resolve: 1 (top: stack ability (Mobilize 2 <i>(Whenever this creature attacks, create two tapped and attacking 1/1...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA creates a Warrior Token [a74] token"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA creates a Warrior Token [126] token"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Voice of Victory [b9a] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Warrior Token [a74] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Warrior Token [126] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Voice of Victory [b9a]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Warrior Token [a74]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Warrior Token [126]"
+    },
+    {
+      "turnstep": "T5.ET",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of the next end step, sacrifice those tokens.))"
+    },
+    {
+      "turnstep": "T5.ET",
+      "text": "PlayerA - Ability triggers: Voice of Victory [b9a] - At the beginning of the next end step, sacrifice those tokens."
+    },
+    {
+      "turnstep": "T5.ET",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of the next end step, sacrifice those tokens.))"
+    },
+    {
+      "turnstep": "T5.ET",
+      "text": "PlayerA sacrificed Warrior Token [a74] (source: Voice of Victory [b9a])"
+    },
+    {
+      "turnstep": "T5.ET",
+      "text": "PlayerA sacrificed Warrior Token [126] (source: Voice of Victory [b9a])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tundra [bf5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Lotus Petal [56a] (source: Lotus Petal [56a])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Badgermole Cub [f99] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Badgermole Cub [f99] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB - Ability triggers: Badgermole Cub [f99] - When Badgermole Cub [f99] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Tundra [bf5]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 1 (top: stack ability (Mobilize 2 <i>(Whenever this creature attacks, create two tapped and attacking 1/1...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA - Ability triggers: Voice of Victory [b9a] - Mobilize 2 (Whenever this creature attacks, create two tapped and attacking 1/1 red Warrior creature tokens. Sacrifice them at the beginning of the next end step.)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack resolve: 1 (top: stack ability (Mobilize 2 <i>(Whenever this creature attacks, create two tapped and attacking 1/1...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA creates a Warrior Token [ebf] token"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA creates a Warrior Token [cff] token"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Voice of Victory [b9a] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Warrior Token [ebf] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Warrior Token [cff] (1/1) blocked by Badgermole Cub [f99] (2/2)"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Voice of Victory [b9a]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Warrior Token [ebf]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Badgermole Cub [f99] deals 2 damage to Warrior Token [cff]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Warrior Token [cff] deals 1 damage to Badgermole Cub [f99]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Warrior Token [cff] died"
+    },
+    {
+      "turnstep": "T7.ET",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of the next end step, sacrifice those tokens.))"
+    },
+    {
+      "turnstep": "T7.ET",
+      "text": "PlayerA - Ability triggers: Voice of Victory [b9a] - At the beginning of the next end step, sacrifice those tokens."
+    },
+    {
+      "turnstep": "T7.ET",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of the next end step, sacrifice those tokens.))"
+    },
+    {
+      "turnstep": "T7.ET",
+      "text": "PlayerA sacrificed Warrior Token [ebf] (source: Voice of Victory [b9a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Scrubland [412] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [844] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [844] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Badgermole Cub [f99] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 2 life at combat from Badgermole Cub [f99]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [844] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [844]"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.742569+00:00"
+}

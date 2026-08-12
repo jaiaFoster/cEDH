@@ -1,0 +1,542 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed13",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 13,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 14069,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 130,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tundra [cab] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Esper Sentinel [ff1] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: Cast Mental Misstep)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB loses 2 life from Mental Misstep [63d]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB casts Mental Misstep [63d] targeting Esper Sentinel [ff1] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 2 (top: Cast Mental Misstep)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Esper Sentinel [ff1] from stack into their graveyard (source: Mental Misstep [63d])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Esper Sentinel [ff1] is countered by Mental Misstep [63d]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerB puts Mental Misstep [63d] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [a61] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Amber [c75] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Amber [c75] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts City of Brass [c3f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [e9f] from command"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [c3f] - Whenever City of Brass [c3f] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from City of Brass [c3f]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [e9f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Bayou [f8f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [987] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [987] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA discards Boseiju, Who Endures [bb6] (source: Boseiju, Who Endures [bb6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: destroy target artifact, enchantment, or nonbasic land an opponent controls. That player may search their library for a land card with a basic land type, put it onto the battlefield, then shuffle. This ability costs {1} less to activate for each legendary creature you control. from Boseiju, Who Endures [bb6] targeting Bayou [f8f]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [c3f] - Whenever City of Brass [c3f] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from City of Brass [c3f]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Bayou [f8f] was destroyed by Boseiju, Who Endures [bb6]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB searches their library (source: Boseiju, Who Endures [bb6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB puts Underground Sea [e9e] from library onto the Battlefield (source: Boseiju, Who Endures [bb6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB's library is shuffled (source: Boseiju, Who Endures [bb6])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [ed2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Orcish Bowmasters [0b8] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Orcish Bowmasters [0b8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [0b8] - When Orcish Bowmasters [0b8] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [0b8] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [0b8]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA creates a Orc Army Token [9f9] token"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Thrasios, Triton Hero [e9f] (1/3) blocked by Thrasios, Triton Hero [987] (1/3)"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "Thrasios, Triton Hero [987] deals 1 damage to Thrasios, Triton Hero [e9f]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "Thrasios, Triton Hero [e9f] deals 1 damage to Thrasios, Triton Hero [987]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Polluted Delta [78f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Tymna the Weaver [1eb] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tymna the Weaver [1eb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [78f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Polluted Delta [78f] (source: Polluted Delta [78f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [78f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [78f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tropical Island [484] from library onto the Battlefield (source: Polluted Delta [78f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [78f])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [987] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [987]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [987] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [1eb] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [1eb]"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [0b8] - When Orcish Bowmasters [0b8] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [0b8] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [0b8]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Swift Reconfiguration [ae2] targeting Orcish Bowmasters [0b8] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Swift Reconfiguration [ae2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Windswept Heath [cd0] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [cd0]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Windswept Heath [cd0] (source: Windswept Heath [cd0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [cd0]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [cd0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tropical Island [6c7] from library onto the Battlefield (source: Windswept Heath [cd0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [cd0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Runic Armasaur)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Runic Armasaur [fd0] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [c3f] - Whenever City of Brass [c3f] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from City of Brass [c3f]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Runic Armasaur)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Runic Armasaur [fd0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [e9f] (1/3) blocked by Tymna the Weaver [1eb] (2/2)"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Tymna the Weaver [1eb] deals 2 damage to Thrasios, Triton Hero [e9f]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [e9f] deals 1 damage to Tymna the Weaver [1eb]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB gains 2 life"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Command Tower [333] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Finale of Devastation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB announces a value of 3 for {X} (source: Finale of Devastation [9b8])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Finale of Devastation [9b8] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Finale of Devastation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Finale of Devastation [9b8])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Finale of Devastation [9b8])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB reveals Runic Armasaur"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Runic Armasaur [9ce] from library onto the Battlefield (source: Finale of Devastation [9b8])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Finale of Devastation [9b8] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [987] (1/3) blocked by Orc Army Token [9f9] (2/2)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Orc Army Token [9f9] deals 2 damage to Thrasios, Triton Hero [987]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [987] deals 1 damage to Orc Army Token [9f9]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [1eb] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.760431+00:00"
+}

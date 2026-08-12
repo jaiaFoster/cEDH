@@ -1,0 +1,282 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed28",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 28,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 3546,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 65,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [2cc] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [85b] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [85b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Minamo, School at Water's Edge [34c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Sol Ring [bbb] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Sol Ring [bbb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Misty Rainforest [9e3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [9e3]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [9e3] (source: Misty Rainforest [9e3])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [9e3]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [9e3])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [1d5] from library onto the Battlefield (source: Misty Rainforest [9e3])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [9e3])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Gilded Drake [1b3] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Gilded Drake [1b3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Gilded Drake [1b3] - When Gilded Drake [1b3] enters, exchange control of Gilded Drake [1b3] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [1b3]. This ability still resolves if its target becomes illegal."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Gilded Drake [1b3] (source: Gilded Drake [1b3])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerB discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerB discards Misdirection [2d6]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Orcish Bowmasters [4ad] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Orcish Bowmasters [4ad] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [4ad] - When Orcish Bowmasters [4ad] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [4ad] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [4ad]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA creates a Orc Army Token [5ce] token"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Windswept Heath [f17] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [f17]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Windswept Heath [f17] (source: Windswept Heath [f17])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [f17]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [f17])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tundra [31a] from library onto the Battlefield (source: Windswept Heath [f17])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [f17])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [975] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [975] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [975] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.161284+00:00"
+}

@@ -1,0 +1,474 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed35",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 35,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 5330,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 113,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Lotus Petal [223] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Lotus Petal [223] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Lotus Petal [223] (source: Lotus Petal [223])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Sol Ring [e4d] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Sol Ring [e4d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA moves Fierce Guardianship [449] from hand to the exile zone (source: Subtlety [61b])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA casts Subtlety [61b] with Evoke from hand"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA puts Subtlety [61b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA - Ability triggers: Subtlety [61b] - When Subtlety [61b] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA - Ability triggers: Subtlety [61b] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA sacrificed Subtlety [61b] (source: Subtlety [61b])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "PlayerA puts Boseiju, Who Endures [cbb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "Stack push: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "PlayerA casts Shang-Chi, Master of Kung Fu [131] from hand"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "Stack resolve: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "PlayerA puts Shang-Chi, Master of Kung Fu [131] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Amber [d29] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Amber [d29] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Starting Town [b64] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mana Vault [edc] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mana Vault [edc] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Starting Town [3c4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Starting Town [3c4]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Mystic Remora [f42] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Mystic Remora [f42] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB - Ability triggers: Mana Vault [edc] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [edc]."
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB paid for Mana Vault [edc] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Shifting Woodland [0b8] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "PlayerA - Ability triggers: Mystic Remora [f42] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Scrubland [adf] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Starting Town [3c4]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Tymna the Weaver [0ce] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tymna the Weaver [0ce] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [0ce] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "PlayerB - Ability triggers: Mana Vault [edc] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [edc]."
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "PlayerB paid for Mana Vault [edc] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Shang-Chi, Master of Kung Fu [a4c] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Shang-Chi, Master of Kung Fu [a4c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Deathrite Shaman [c46] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Deathrite Shaman [c46] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({G}, {T}: Exile target creature card from a graveyard. You gain 2 life.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: exile target creature card from a graveyard. You gain 2 life. from Deathrite Shaman [c46] targeting Subtlety [61b]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({G}, {T}: Exile target creature card from a graveyard. You gain 2 life.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB moves Subtlety [61b] from graveyard to the exile zone (source: Deathrite Shaman [c46])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB gains 2 life (source: Deathrite Shaman [c46])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA - Ability triggers: Mystic Remora [f42] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Tymna the Weaver [0ce] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [0ce]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Tymna the Weaver [0ce] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [0ce] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [0ce]"
+    },
+    {
+      "turnstep": "T8.UN",
+      "text": "Mana Vault [edc]: Mana Vault [edc] doesn't untap during your untap step."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB - Ability triggers: Mana Vault [edc] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [edc]."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB did not pay for Mana Vault [edc] - Pay {4} to untap Mana Vault? (ICON_BADMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "PlayerB - Ability triggers: Mana Vault [edc] - At the beginning of your draw step, if Mana Vault [edc] is tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "PlayerB loses 1 life from Mana Vault [edc]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Runic Armasaur)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Runic Armasaur [f2e] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Runic Armasaur)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Runic Armasaur [f2e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Deathrite Shaman [c46] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Deathrite Shaman [c46]"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.167853+00:00"
+}

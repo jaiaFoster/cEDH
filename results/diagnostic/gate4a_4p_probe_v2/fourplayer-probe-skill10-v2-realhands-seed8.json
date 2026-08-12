@@ -1,0 +1,338 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed8",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 8,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 104234,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": "PlayerB has lost the game.",
+  "event_count": 79,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Starting Town [aee] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD casts Chrome Mox [2c8] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Pact of Negation [5f3] targeting Chrome Mox [2c8] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Chrome Mox [2c8] from stack into their graveyard (source: Pact of Negation [5f3])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Chrome Mox [2c8] is countered by Pact of Negation [5f3]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Pact of Negation [5f3] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC casts Chrome Mox [d17] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Chrome Mox [d17] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC - Ability triggers: Chrome Mox [d17] - Imprint — When Chrome Mox [d17] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC moves Misdirection [101] from hand to the exile zone (source: Chrome Mox [d17])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Underground Sea [2dd] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC casts Gilded Drake [b48] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Gilded Drake [b48] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC - Ability triggers: Gilded Drake [b48] - When Gilded Drake [b48] enters, exchange control of Gilded Drake [b48] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [b48]. This ability still resolves if its target becomes illegal."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC sacrificed Gilded Drake [b48] (source: Gilded Drake [b48])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack push: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB - Ability triggers: Pact of Negation [5f3] - At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose the game."
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack resolve: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB has lost the game."
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [e2d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Starting Town [aee]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Shang-Chi, Master of Kung Fu [45a] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Shang-Chi, Master of Kung Fu [45a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerD discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerD discards Fierce Guardianship [00d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerC casts Training Grounds [7f7] from hand"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerC puts Training Grounds [7f7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerA attacks PlayerC with 1 creature"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerA loses 1 life from Starting Town [aee]"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerA casts Archivist of Oghma [db2] from hand"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack push: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerC moves Veil of Summer [ebf] from hand to the exile zone (source: Endurance [b62])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerC casts Endurance [b62] with Evoke from hand"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack resolve: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerC puts Endurance [b62] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerC - Ability triggers: Endurance [b62] - When Endurance [b62] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerD"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack push: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerC - Ability triggers: Endurance [b62] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack resolve: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerC sacrificed Endurance [b62] (source: Endurance [b62])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerD puts a card from graveyard to the bottom of their library (source: Endurance [b62])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerD puts a card from graveyard to the bottom of their library (source: Endurance [b62])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerA puts Archivist of Oghma [db2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacked player: PlayerC"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Shang-Chi, Master of Kung Fu [45a] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerC loses 2 life at combat from Shang-Chi, Master of Kung Fu [45a]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerA puts Mana Confluence [f2f] from hand onto the Battlefield"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.633002+00:00"
+}

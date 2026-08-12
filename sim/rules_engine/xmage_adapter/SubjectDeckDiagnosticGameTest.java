@@ -44,6 +44,38 @@ public class SubjectDeckDiagnosticGameTest extends CardTestPlayerAPIImpl {
     // file-appender stream by timestamp/order alone.
     private static final Logger DIAG_LOGGER = Logger.getLogger("diag.batch.markers");
 
+    /**
+     * The inherited execute() hardcodes gameOptions.testMode = true, which
+     * makes GameImpl.init() SKIP mulligan.drawHand() entirely (see
+     * GameImpl.java: "if (!gameOptions.testMode) { mulligan.drawHand(...) }")
+     * - test mode expects the test author to stage a hand explicitly via
+     * addCard(Zone.HAND, ...), which none of this project's real
+     * deck-backed drivers do. The result: every diagnostic/goldfish game
+     * run before this fix started with a genuinely EMPTY hand (confirmed by
+     * direct probe: handSize=0 at turn 1 upkeep) and only ever held however
+     * many cards a normal draw step had added since - never a real 7-card
+     * opening hand. This is a real, severe ADAPTER_DEFECT, found while
+     * building the SIM-001 SOLO BASELINE v1 (see
+     * results/solo_baseline/README.md), that silently affected every
+     * earlier batch run through this class (GATE_4A_2P_DIAGNOSTIC,
+     * INFRA-0006's 4-player probes) - all superseded by reruns using this
+     * fixed method. Reimplements execute()'s essential body (it's short)
+     * with testMode=false instead of calling the inherited version.
+     */
+    protected void executeWithRealHands() {
+        mage.util.ThreadUtils.ensureRunInGameThread();
+        mage.collectors.DataCollectorServices.init(true, mage.util.DebugUtil.TESTS_DATA_COLLECTORS_ENABLE_SAVE_GAME_HISTORY);
+        gameOptions.testMode = false;
+        gameOptions.stopOnTurn = stopOnTurn;
+        gameOptions.stopAtStep = stopAtStep;
+        currentGame.setGameOptions(gameOptions);
+        if (currentGame.isPaused()) {
+            currentGame.resume();
+        }
+        currentGame.start(activePlayer.getId());
+        currentGame.setGameStopped(true);
+    }
+
     @Override
     protected TestPlayer createPlayer(String name, RangeOfInfluence rangeOfInfluence) {
         int skill = Integer.parseInt(System.getProperty("diag.skill", "6"));
@@ -89,7 +121,7 @@ public class SubjectDeckDiagnosticGameTest extends CardTestPlayerAPIImpl {
                 RandomUtil.setSeed(seed);
                 reset();
                 setStopAt(maxTurn, PhaseStep.END_TURN);
-                execute();
+                executeWithRealHands();
                 long elapsedMs = (System.nanoTime() - startNanos) / 1_000_000;
                 DIAG_LOGGER.info("===DIAG_GAME_END seed=" + seed + " status=OK elapsedMs=" + elapsedMs + "===");
             } catch (Throwable t) {

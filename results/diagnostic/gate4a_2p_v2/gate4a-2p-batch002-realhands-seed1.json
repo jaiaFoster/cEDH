@@ -1,0 +1,490 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed1",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 1,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 11116,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 117,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Misty Rainforest [38d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [38d]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [38d] (source: Misty Rainforest [38d])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [38d]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [38d])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [a51] from library onto the Battlefield (source: Misty Rainforest [38d])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [38d])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [68c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Esper Sentinel [f8e] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA moves Mental Misstep [a26] from hand to the exile zone (source: Subtlety [f77])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA casts Subtlety [f77] with Evoke from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA puts Subtlety [f77] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [f77] - When Subtlety [f77] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library. - targeting Esper Sentinel [f8e]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [f77] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA sacrificed Subtlety [f77] (source: Subtlety [f77])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts a card from stack to the top of their library (source: Subtlety [f77])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts City of Traitors [1f8] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Orcish Bowmasters [36f] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Orcish Bowmasters)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Orcish Bowmasters [36f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [36f] - When Orcish Bowmasters [36f] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [36f] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [36f]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA creates a Orc Army Token [32f] token"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Esper Sentinel [f8e] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Esper Sentinel [f8e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Wooded Foothills [0e1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Wooded Foothills [0e1]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Wooded Foothills [0e1] (source: Wooded Foothills [0e1])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [0e1]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Wooded Foothills [0e1])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Tropical Island [d62] from library onto the Battlefield (source: Wooded Foothills [0e1])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Wooded Foothills [0e1])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Rhystic Study [096] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts their first noncreature spell each turn, draw a card un...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB - Ability triggers: Esper Sentinel [f8e] - Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is Esper Sentinel [f8e]'s power."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts their first noncreature spell each turn, draw a card un...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Orcish Bowmasters [36f] - When Orcish Bowmasters [36f] enters and whenever an opponent draws a card except the first one they draw in each of their draw steps, Orcish Bowmasters [36f] deals 1 damage to any target. Then amass Orcs 1. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters and whenever an opponent draws a card except the first one they...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB loses 1 life from Orcish Bowmasters [36f]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Rhystic Study [096] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Orc Army Token [32f] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 2 life at combat from Orc Army Token [32f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [58f] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA - Ability triggers: Rhystic Study [096] - Whenever an opponent casts a spell, you may draw a card unless that player pays {1}."
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [58f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts City of Traitors [d48] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Lotus Petal [0c4] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts their first noncreature spell each turn, draw a card un...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB - Ability triggers: Esper Sentinel [f8e] - Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is Esper Sentinel [f8e]'s power."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts their first noncreature spell each turn, draw a card un...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Lotus Petal [0c4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Elvish Spirit Guide)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Lotus Petal [0c4] (source: Lotus Petal [0c4])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Elvish Spirit Guide [aeb] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Elvish Spirit Guide)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Elvish Spirit Guide [aeb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Orc Army Token [32f] (2/2) blocked by Thrasios, Triton Hero [58f] (1/3)"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [58f] deals 1 damage to Orc Army Token [32f]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Orc Army Token [32f] deals 2 damage to Thrasios, Triton Hero [58f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Faerie Mastermind)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Faerie Mastermind [309] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA - Ability triggers: Rhystic Study [096] - Whenever an opponent casts a spell, you may draw a card unless that player pays {1}."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Faerie Mastermind)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Faerie Mastermind [309] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [58f] (1/3) blocked by Elvish Spirit Guide [aeb] (2/2)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Elvish Spirit Guide [aeb] deals 2 damage to Thrasios, Triton Hero [58f]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [58f] deals 1 damage to Elvish Spirit Guide [aeb]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB puts Gemstone Caverns [aec] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: City of Traitors [d48] - When you play another land, sacrifice City of Traitors [d48]."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB sacrificed City of Traitors [d48] (source: City of Traitors [d48])"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: Cast Survival of the Fittest)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB casts Survival of the Fittest [de2] from hand"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerA - Ability triggers: Rhystic Study [096] - Whenever an opponent casts a spell, you may draw a card unless that player pays {1}."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.))"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: Cast Survival of the Fittest)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB puts Survival of the Fittest [de2] from stack onto the Battlefield"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.735324+00:00"
+}

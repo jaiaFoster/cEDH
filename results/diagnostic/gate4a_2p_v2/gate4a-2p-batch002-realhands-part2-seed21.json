@@ -1,0 +1,410 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed21",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 21,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 27639,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 97,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tropical Island [984] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Noble Hierarch [94c] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Noble Hierarch [94c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [54e] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [54e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tropical Island [fa9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Noble Hierarch [0d2] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Noble Hierarch [0d2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Enlightened Tutor)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Enlightened Tutor [2bb] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Enlightened Tutor)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Enlightened Tutor [2bb])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA reveals Colossal Skyturtle"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Enlightened Tutor [2bb])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts a card from library to the top of their library (source: Enlightened Tutor [2bb])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Enlightened Tutor [2bb] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Scrubland [82d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Avacyn's Pilgrim [ad7] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Avacyn's Pilgrim [ad7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Kinnan, Bonder Prodigy [f4e] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Kinnan, Bonder Prodigy [f4e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [94c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Tymna the Weaver [368] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tymna the Weaver [368] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{U}, Discard this card: Return target creature to its ow...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA discards Colossal Skyturtle [f94] (source: Colossal Skyturtle [f94])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: return target creature to its owner's hand. from Colossal Skyturtle [f94] targeting Kinnan, Bonder Prodigy [f4e]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{U}, Discard this card: Return target creature to its ow...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Kinnan, Bonder Prodigy [f4e] from battlefield into its owner's hand (source: Colossal Skyturtle [f94])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [368] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Kinnan, Bonder Prodigy [f4e] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 2 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA sacrificed Minamo, School at Water's Edge [94c] (source: Crop Rotation [eb1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA casts Crop Rotation [eb1] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 2 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA searches their library (source: Crop Rotation [eb1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA puts Wooded Foothills [817] from library onto the Battlefield (source: Crop Rotation [eb1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA's library is shuffled (source: Crop Rotation [eb1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA puts Crop Rotation [eb1] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA loses 1 life from Wooded Foothills [817]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA sacrificed Wooded Foothills [817] (source: Wooded Foothills [817])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [817]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA searches their library (source: Wooded Foothills [817])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA puts Savannah [db1] from library onto the Battlefield (source: Wooded Foothills [817])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [817])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Kinnan, Bonder Prodigy [f4e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [004] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [004] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Heartwood Storyteller)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Heartwood Storyteller [470] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Heartwood Storyteller)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Heartwood Storyteller [470] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [368] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Eldritch Evolution)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Noble Hierarch [0d2] (source: Eldritch Evolution [cf1])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Eldritch Evolution [cf1] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever a player casts a noncreature spell, each of that player's opponents may d...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA - Ability triggers: Heartwood Storyteller [470] - Whenever a player casts a noncreature spell, each of that player's opponents may draw a card."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever a player casts a noncreature spell, each of that player's opponents may d...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Eldritch Evolution)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Eldritch Evolution [cf1])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Runic Armasaur [f02] from library onto the Battlefield (source: Eldritch Evolution [cf1])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Eldritch Evolution [cf1])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Eldritch Evolution [cf1] from stack to the exile zone"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.154747+00:00"
+}

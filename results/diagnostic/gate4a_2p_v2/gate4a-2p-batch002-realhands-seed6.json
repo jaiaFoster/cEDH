@@ -1,0 +1,466 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed6",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 6,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 13560,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 111,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Ancient Tomb [783] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Lotus Petal [5c9] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Lotus Petal [5c9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Windswept Heath [71d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [71d]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Windswept Heath [71d] (source: Windswept Heath [71d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [71d]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [71d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [261] from library onto the Battlefield (source: Windswept Heath [71d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [71d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Lotus Petal [5c9] (source: Lotus Petal [5c9])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [4ab] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [4ab] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Verdant Catacombs [89f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [89f]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [89f] (source: Verdant Catacombs [89f])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [89f]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [89f])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Underground Sea [f81] from library onto the Battlefield (source: Verdant Catacombs [89f])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [89f])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 2 life from Ancient Tomb [783]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Oboro Breezecaller [4fa] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Oboro Breezecaller [4fa] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts City of Traitors [01c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 2 life from Birthing Pod [18f]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Birthing Pod [18f] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Birthing Pod [18f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Thrasios, Triton Hero [4ab] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [4ab]"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "Thrasios, Triton Hero [4ab] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Shifting Woodland [e12] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({2}, Return a land you control to its owner's hand: Untap target land.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 2 life from Ancient Tomb [783]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Ancient Tomb [783] from battlefield into their hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: untap target land. from Oboro Breezecaller [4fa] targeting Shifting Woodland [e12]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({2}, Return a land you control to its owner's hand: Untap target land.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [908] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [908] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Oboro Breezecaller [4fa] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Oboro Breezecaller [4fa]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Thrasios, Triton Hero [4ab] (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 2 life from Birthing Pod [18f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. from Birthing Pod [18f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [4ab] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Runic Armasaur [abc] from library onto the Battlefield (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Ancient Tomb [783] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 2 life from Ancient Tomb [783]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 2 life from Birthing Pod [95d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Birthing Pod [95d] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Birthing Pod)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Birthing Pod [95d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Oboro Breezecaller [4fa] (source: Birthing Pod [95d])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 2 life from Birthing Pod [95d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. from Birthing Pod [95d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Birthing Pod [95d])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Abhorrent Oculus [13b] from library onto the Battlefield (source: Birthing Pod [95d])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Birthing Pod [95d])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [908] (1/3) blocked by Runic Armasaur [abc] (2/5)"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Runic Armasaur [abc] deals 2 damage to Thrasios, Triton Hero [908]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [908] deals 1 damage to Runic Armasaur [abc]"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each opponent's upkeep, manifest dread.))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerA - Ability triggers: Abhorrent Oculus [13b] - At the beginning of each opponent's upkeep, manifest dread."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each opponent's upkeep, manifest dread.))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerA puts face down object [2cb] from library onto the Battlefield (source: Abhorrent Oculus [13b])"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerA puts Vampiric Tutor [15b] from library into their graveyard (source: Abhorrent Oculus [13b])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Runic Armasaur [abc] (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 2 life from Birthing Pod [18f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. from Birthing Pod [18f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Hazel's Brewmaster [549] from library onto the Battlefield (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Birthing Pod [18f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or attacks, exile up to one target card from a graveyard an...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Hazel's Brewmaster [549] - Whenever Hazel's Brewmaster [549] enters or attacks, exile up to one target card from a graveyard and create a Food token. - targeting Runic Armasaur [abc]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or attacks, exile up to one target card from a graveyard an...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Runic Armasaur [abc] from graveyard to the exile zone (source: Hazel's Brewmaster [549])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB creates a Food Token [36b] token"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.749463+00:00"
+}

@@ -1,0 +1,570 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed38",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 38,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 11887,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 137,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [72e] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [72e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Windswept Heath [0b5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [0b5]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Windswept Heath [0b5] (source: Windswept Heath [0b5])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [0b5]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [0b5])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tundra [387] from library onto the Battlefield (source: Windswept Heath [0b5])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [0b5])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mana Vault [de3] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mana Vault [de3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Talon Gates of Madara [72e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB - Ability triggers: Talon Gates of Madara [72e] - When Talon Gates of Madara [72e] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T3.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [de3] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [de3]."
+    },
+    {
+      "turnstep": "T3.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T3.UP",
+      "text": "PlayerA paid for Mana Vault [de3] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Polluted Delta [07b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Polluted Delta [07b]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Polluted Delta [07b] (source: Polluted Delta [07b])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [07b]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Polluted Delta [07b])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Underground Sea [2df] from library onto the Battlefield (source: Polluted Delta [07b])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Polluted Delta [07b])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Starting Town [0fc] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Starting Town [0fc]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB discards Boseiju, Who Endures [692] (source: Boseiju, Who Endures [692])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: destroy target artifact, enchantment, or nonbasic land an opponent controls. That player may search their library for a land card with a basic land type, put it onto the battlefield, then shuffle. This ability costs {1} less to activate for each legendary creature you control. from Boseiju, Who Endures [692] targeting Underground Sea [2df]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Underground Sea [2df] was destroyed by Boseiju, Who Endures [692]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA searches their library (source: Boseiju, Who Endures [692])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA puts Tropical Island [c8a] from library onto the Battlefield (source: Boseiju, Who Endures [692])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA's library is shuffled (source: Boseiju, Who Endures [692])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB moves King T'Challa [ade] from hand to the exile zone (source: Subtlety [7e7])"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB casts Subtlety [7e7] with Evoke from hand"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB puts Subtlety [7e7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB - Ability triggers: Subtlety [7e7] - When Subtlety [7e7] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB - Ability triggers: Subtlety [7e7] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "PlayerB sacrificed Subtlety [7e7] (source: Subtlety [7e7])"
+    },
+    {
+      "turnstep": "T4.M2",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [de3] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [de3]."
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "PlayerA paid for Mana Vault [de3] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {2}{G}, Discard this card: Return target card from your gra...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA discards Colossal Skyturtle [4e8] (source: Colossal Skyturtle [4e8])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: return target card from your graveyard to your hand. from Colossal Skyturtle [4e8] targeting Underground Sea [2df]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {2}{G}, Discard this card: Return target card from your gra...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [2df] from graveyard into their hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [2df] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Gilded Drake [7e5] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Gilded Drake [7e5] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Gilded Drake [7e5] - When Gilded Drake [7e5] enters, exchange control of Gilded Drake [7e5] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [7e5]. This ability still resolves if its target becomes illegal."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Gilded Drake [7e5] (source: Gilded Drake [7e5])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Starting Town [0fc]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Veil of Summer [a06] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Veil of Summer [a06] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Polluted Delta [bdd] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [bdd]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Polluted Delta [bdd] (source: Polluted Delta [bdd])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [bdd]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [bdd])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Underground Sea [bff] from library onto the Battlefield (source: Polluted Delta [bdd])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [bdd])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Mystic Remora [be1] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Mystic Remora [be1] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.UN",
+      "text": "Mana Vault [de3]: Mana Vault [de3] doesn't untap during your untap step."
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [de3] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [de3]."
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA did not pay for Mana Vault [de3] - Pay {4} to untap Mana Vault? (ICON_BADMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T7.DR",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.DR",
+      "text": "PlayerA - Ability triggers: Mana Vault [de3] - At the beginning of your draw step, if Mana Vault [de3] is tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T7.DR",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.DR",
+      "text": "PlayerA loses 1 life from Mana Vault [de3]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Kinnan, Bonder Prodigy [316] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Kinnan, Bonder Prodigy [316] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [b83] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [b83] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Elves of Deep Shadow [f4b] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Elves of Deep Shadow [f4b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB - Ability triggers: Mystic Remora [be1] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Bayou [a60] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Starting Town [0fc]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [a81] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [a81] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [a81] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.171368+00:00"
+}

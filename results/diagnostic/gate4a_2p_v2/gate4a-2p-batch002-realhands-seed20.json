@@ -1,0 +1,442 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed20",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 20,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 11469,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 105,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Scrubland [712] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Chrome Mox [ae0] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Commandeer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Chrome Mox [ae0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [ae0] - Imprint — When Chrome Mox [ae0] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB moves Misdirection [7f1] from hand to the exile zone (source: Chrome Mox [ae0])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Boseiju, Who Endures [36c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [67f] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [67f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Diamond [8f2] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Mindbreak Trap)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA casts Mindbreak Trap [6e8] using alternative casting costs from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 2 (top: Cast Mindbreak Trap)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA puts Mindbreak Trap [6e8] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Commandeer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB discards Flooded Strand [79a] (source: Mox Diamond [8f2])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Diamond [8f2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Veil of Summer [3de] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Veil of Summer [3de] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Badgermole Cub [c8d] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Badgermole Cub [c8d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Badgermole Cub [c8d] - When Badgermole Cub [c8d] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Boseiju, Who Endures [36c]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Thrasios, Triton Hero [67f] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [67f]"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "Thrasios, Triton Hero [67f] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Gaea's Cradle [211] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Avacyn's Pilgrim [3ef] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Avacyn's Pilgrim [3ef] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts City of Traitors [687] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [67f] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Badgermole Cub [c8d] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [67f]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [67f] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 2 life at combat from Badgermole Cub [c8d]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Marsh Flats [742] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Marsh Flats [742]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Marsh Flats [742] (source: Marsh Flats [742])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [742]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Marsh Flats [742])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [01a] from library onto the Battlefield (source: Marsh Flats [742])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Marsh Flats [742])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Archivist of Oghma [cc9] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB casts Swift Reconfiguration [9d5] targeting Avacyn's Pilgrim [3ef] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB puts Swift Reconfiguration [9d5] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB activates: scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card. from Thrasios, Triton Hero [67f]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB scries 1 (source: Thrasios, Triton Hero [67f])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB puts a card from library to the bottom of their library (source: Thrasios, Triton Hero [67f])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB reveals Mental Misstep (source: Thrasios, Triton Hero [67f])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Archivist of Oghma [cc9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card. from Thrasios, Triton Hero [67f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB scries 1 (source: Thrasios, Triton Hero [67f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts a card from library to the bottom of their library (source: Thrasios, Triton Hero [67f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB reveals Commandeer (source: Thrasios, Triton Hero [67f])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Underground Sea [588] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: City of Traitors [687] - When you play another land, sacrifice City of Traitors [687]."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed City of Traitors [687] (source: City of Traitors [687])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [b59] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [b59] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [67f] (1/3) blocked by Archivist of Oghma [cc9] (2/2)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Archivist of Oghma [cc9] deals 2 damage to Thrasios, Triton Hero [67f]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [67f] deals 1 damage to Archivist of Oghma [cc9]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [b59] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.768493+00:00"
+}

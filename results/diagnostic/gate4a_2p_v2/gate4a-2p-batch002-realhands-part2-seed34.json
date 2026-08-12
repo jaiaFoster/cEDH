@@ -1,0 +1,382 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed34",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 34,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 2316,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 90,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Boseiju, Who Endures [9e4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Talon Gates of Madara [c02] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB - Ability triggers: Talon Gates of Madara [c02] - When Talon Gates of Madara [c02] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA sacrificed Boseiju, Who Endures [9e4] (source: Crop Rotation [1e7])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA casts Crop Rotation [1e7] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 3 (top: Cast Commandeer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 2 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA searches their library (source: Crop Rotation [1e7])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA puts Wooded Foothills [733] from library onto the Battlefield (source: Crop Rotation [1e7])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA's library is shuffled (source: Crop Rotation [1e7])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA puts Crop Rotation [1e7] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA loses 1 life from Wooded Foothills [733]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA sacrificed Wooded Foothills [733] (source: Wooded Foothills [733])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [733]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA searches their library (source: Wooded Foothills [733])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA puts Tropical Island [d34] from library onto the Battlefield (source: Wooded Foothills [733])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [733])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mana Vault [2ee] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mana Vault [2ee] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [83c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [c65] from command"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerB loses 1 life from Force of Will [f25]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerB moves Misdirection [ef8] from hand to the exile zone (source: Force of Will [f25])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerB casts Force of Will [f25] using alternative casting costs targeting Thrasios, Triton Hero [c65] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [c65] from stack into their graveyard (source: Force of Will [f25])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Thrasios, Triton Hero [c65] is countered by Force of Will [f25]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerB puts Force of Will [f25] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [c65] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB - Ability triggers: Mana Vault [2ee] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [2ee]."
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB paid for Mana Vault [2ee] - Pay {4} to untap Mana Vault? (ICON_GOODMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts City of Brass [520] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Gilded Drake [91c] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: City of Brass [520] - Whenever City of Brass [520] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from City of Brass [520]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Gilded Drake [91c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Gilded Drake [91c] - When Gilded Drake [91c] enters, exchange control of Gilded Drake [91c] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [91c]. This ability still resolves if its target becomes illegal."
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Gilded Drake [91c] (source: Gilded Drake [91c])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Gemstone Caverns [433] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.UN",
+      "text": "Mana Vault [2ee]: Mana Vault [2ee] doesn't untap during your untap step."
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "PlayerB - Ability triggers: Mana Vault [2ee] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [2ee]."
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "PlayerB did not pay for Mana Vault [2ee] - Pay {4} to untap Mana Vault? (ICON_BADMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T6.DR",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T6.DR",
+      "text": "PlayerB - Ability triggers: Mana Vault [2ee] - At the beginning of your draw step, if Mana Vault [2ee] is tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T6.DR",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T6.DR",
+      "text": "PlayerB loses 1 life from Mana Vault [2ee]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Gaea's Cradle [cae] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Elvish Spirit Guide)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Elvish Spirit Guide [7f6] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Elvish Spirit Guide)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Elvish Spirit Guide [7f6] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.UN",
+      "text": "Mana Vault [2ee]: Mana Vault [2ee] doesn't untap during your untap step."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB - Ability triggers: Mana Vault [2ee] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [2ee]."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB did not pay for Mana Vault [2ee] - Pay {4} to untap Mana Vault? (ICON_BADMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "PlayerB - Ability triggers: Mana Vault [2ee] - At the beginning of your draw step, if Mana Vault [2ee] is tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your draw step, if {this} is tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.DR",
+      "text": "PlayerB loses 1 life from Mana Vault [2ee]"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.166835+00:00"
+}

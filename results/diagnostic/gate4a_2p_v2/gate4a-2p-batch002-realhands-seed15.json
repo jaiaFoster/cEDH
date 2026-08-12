@@ -1,0 +1,430 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed15",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 15,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 12293,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 102,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Bayou [9fb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Lotus Petal [5bb] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Lotus Petal [5bb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Verdant Catacombs [67d] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Verdant Catacombs [67d]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Verdant Catacombs [67d] (source: Verdant Catacombs [67d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [67d]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Verdant Catacombs [67d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [71e] from library onto the Battlefield (source: Verdant Catacombs [67d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Verdant Catacombs [67d])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Lotus Petal [5bb] (source: Lotus Petal [5bb])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [065] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [065] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Misty Rainforest [60e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [60e]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [60e] (source: Misty Rainforest [60e])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [60e]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [60e])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Underground Sea [d8f] from library onto the Battlefield (source: Misty Rainforest [60e])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [60e])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Kinnan, Bonder Prodigy [302] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Kinnan, Bonder Prodigy [302] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Thrasios, Triton Hero [065] (1/3) blocked by Kinnan, Bonder Prodigy [302] (2/2)"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "Kinnan, Bonder Prodigy [302] deals 2 damage to Thrasios, Triton Hero [065]"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "Thrasios, Triton Hero [065] deals 1 damage to Kinnan, Bonder Prodigy [302]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [5ca] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [5ca] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Starting Town [b82] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Kinnan, Bonder Prodigy [302] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 2 life at combat from Kinnan, Bonder Prodigy [302]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Gemstone Caverns [b1b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Oboro Breezecaller [fff] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Oboro Breezecaller [fff] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [065] (1/3) blocked by Thrasios, Triton Hero [5ca] (1/3)"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [5ca] deals 1 damage to Thrasios, Triton Hero [065]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [065] deals 1 damage to Thrasios, Triton Hero [5ca]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{U}, Discard this card: Return target creature to its ow...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA discards Colossal Skyturtle [cf6] (source: Colossal Skyturtle [cf6])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: return target creature to its owner's hand. from Colossal Skyturtle [cf6] targeting Oboro Breezecaller [fff]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{U}, Discard this card: Return target creature to its ow...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Oboro Breezecaller [fff] from battlefield into its owner's hand (source: Colossal Skyturtle [cf6])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Chord of Calling)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Starting Town [b82]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.) from Chord of Calling [c22] choosing Kinnan, Bonder Prodigy [302]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Convoke: PlayerA taps Kinnan, Bonder Prodigy [302] to pay one green mana"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.) from Chord of Calling [c22] choosing Thrasios, Triton Hero [5ca]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Convoke: PlayerA taps Thrasios, Triton Hero [5ca] to pay one green mana"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA announces a value of 0 for {X} (source: Chord of Calling [c22])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Chord of Calling [c22] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Chord of Calling)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Chord of Calling [c22])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Chord of Calling [c22])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Chord of Calling [c22] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Verdant Catacombs [c6e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [c6e]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Verdant Catacombs [c6e] (source: Verdant Catacombs [c6e])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [c6e]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [c6e])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tropical Island [6f7] from library onto the Battlefield (source: Verdant Catacombs [c6e])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [c6e])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Chrome Mox [88c] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Chrome Mox [88c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [88c] - Imprint — When Chrome Mox [88c] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Commandeer [fe1] from hand to the exile zone (source: Chrome Mox [88c])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Oboro Breezecaller [fff] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Oboro Breezecaller [fff] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [065] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [065]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [065] did 1 combat damage to PlayerA during the game."
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.762334+00:00"
+}

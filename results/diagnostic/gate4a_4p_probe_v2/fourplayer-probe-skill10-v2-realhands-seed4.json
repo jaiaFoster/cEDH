@@ -1,0 +1,50 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed4",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 4,
+  "max_turn_requested": 8,
+  "status": "UNKNOWN",
+  "elapsed_ms": null,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 7,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB puts Gemstone Caverns [98a] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB moves Tundra [f04] from hand to the exile zone (source: Gemstone Caverns [98a])"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.630581+00:00"
+}

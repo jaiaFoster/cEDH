@@ -1,0 +1,442 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed37",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 37,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 24637,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 105,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts City of Traitors [095] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Sol Ring [528] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Sol Ring [528] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tropical Island [abb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Lotus Petal [022] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Lotus Petal [022] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Lotus Petal [022] (source: Lotus Petal [022])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [928] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [928] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB discards Boseiju, Who Endures [36e] (source: Boseiju, Who Endures [36e])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: destroy target artifact, enchantment, or nonbasic land an opponent controls. That player may search their library for a land card with a basic land type, put it onto the battlefield, then shuffle. This ability costs {1} less to activate for each legendary creature you control. from Boseiju, Who Endures [36e] targeting City of Traitors [095]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "City of Traitors [095] was destroyed by Boseiju, Who Endures [36e]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA searches their library (source: Boseiju, Who Endures [36e])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA puts Underground Sea [e28] from library onto the Battlefield (source: Boseiju, Who Endures [36e])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerA's library is shuffled (source: Boseiju, Who Endures [36e])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts City of Traitors [961] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Thrasios, Triton Hero [928] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [928]"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "Thrasios, Triton Hero [928] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Flooded Strand [bb2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [bb2]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Flooded Strand [bb2] (source: Flooded Strand [bb2])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [bb2]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [bb2])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tundra [901] from library onto the Battlefield (source: Flooded Strand [bb2])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [bb2])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Training Grounds [816] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Training Grounds [816] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Oboro Breezecaller [39d] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Oboro Breezecaller [39d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed City of Traitors [961] (source: Crop Rotation [a62])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Crop Rotation [a62] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Crop Rotation [a62])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Wooded Foothills [a0e] from library onto the Battlefield (source: Crop Rotation [a62])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Crop Rotation [a62])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Crop Rotation [a62] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Wooded Foothills [a0e]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Wooded Foothills [a0e] (source: Wooded Foothills [a0e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [a0e]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Wooded Foothills [a0e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Savannah [5b9] from library onto the Battlefield (source: Wooded Foothills [a0e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Wooded Foothills [a0e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Deathrite Shaman [117] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Deathrite Shaman [117] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Starting Town [1ec] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [928] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [928]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [928] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Tymna the Weaver [4af] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tymna the Weaver [4af] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({2}, Return a land you control to its owner's hand: Untap target land.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [e28] from battlefield into their hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: untap target land. from Oboro Breezecaller [39d] targeting Tundra [901]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({2}, Return a land you control to its owner's hand: Untap target land.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Underground Sea [e28] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Voice of Victory)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Voice of Victory [23a] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Voice of Victory)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Voice of Victory [23a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Oboro Breezecaller [39d] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Oboro Breezecaller [39d]"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [4af] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [4af]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts King T'Challa [d54] as mdf side of King T'Challa [9bf] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts King T'Challa [d54] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [928] (1/3) blocked by Voice of Victory [23a] (1/3)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Voice of Victory [23a] deals 1 damage to Thrasios, Triton Hero [928]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [928] deals 1 damage to Voice of Victory [23a]"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.170194+00:00"
+}

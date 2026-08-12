@@ -1,0 +1,362 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed26",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 26,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 7622,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 85,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Boseiju, Who Endures [3f9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Birds of Paradise [0fc] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Birds of Paradise [0fc] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA moves Mental Misstep [9bb] from hand to the exile zone (source: Subtlety [af8])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Subtlety [af8] with Evoke from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Subtlety [af8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [af8] - When Subtlety [af8] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [af8] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Subtlety [af8] (source: Subtlety [af8])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T2.CL",
+      "text": "PlayerB discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T2.CL",
+      "text": "PlayerB discards Force of Negation [fc3]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Badgermole Cub [d20] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Badgermole Cub [d20] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Badgermole Cub [d20] - When Badgermole Cub [d20] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Boseiju, Who Endures [3f9]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T4.CL",
+      "text": "PlayerB discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T4.CL",
+      "text": "PlayerB discards Runic Armasaur [98f]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Wooded Foothills [669] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Noble Hierarch [8a9] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Noble Hierarch [8a9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [257] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [257] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack push: 1 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA - Ability triggers: Noble Hierarch [8a9] - exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack push: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA loses 1 life from Wooded Foothills [669]"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA sacrificed Wooded Foothills [669] (source: Wooded Foothills [669])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [669]"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack resolve: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA searches their library (source: Wooded Foothills [669])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA puts Tropical Island [fc8] from library onto the Battlefield (source: Wooded Foothills [669])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [669])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack resolve: 1 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Badgermole Cub [d20] (3/3) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 3 life at combat from Badgermole Cub [d20]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Mana Confluence [9e9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [9e9]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Elves of Deep Shadow [764] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Elves of Deep Shadow)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Elves of Deep Shadow [764] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card. from Thrasios, Triton Hero [257]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA scries 1 (source: Thrasios, Triton Hero [257])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts a card from library to the bottom of their library (source: Thrasios, Triton Hero [257])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA reveals Scrubland (source: Thrasios, Triton Hero [257])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Scrubland [aa8] from library onto the Battlefield (source: Thrasios, Triton Hero [257])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Badgermole Cub [d20] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [257] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [d20]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [257]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [257] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [9e9]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Elves of Deep Shadow [764]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Archivist of Oghma [454] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Archivist of Oghma [454] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.160249+00:00"
+}

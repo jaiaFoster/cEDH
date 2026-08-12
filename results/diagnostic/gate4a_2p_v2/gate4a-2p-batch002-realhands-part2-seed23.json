@@ -1,0 +1,474 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed23",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 23,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 5481,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 113,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Gaea's Cradle [b53] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [4a6] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [4a6] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [ac2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Diamond [ebb] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB discards Ancient Tomb [76d] (source: Mox Diamond [ebb])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Diamond [ebb] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [44a] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [44a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Misty Rainforest [ff8] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [ff8]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [ff8] (source: Misty Rainforest [ff8])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [ff8]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [ff8])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Underground Sea [e6c] from library onto the Battlefield (source: Misty Rainforest [ff8])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [ff8])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Training Grounds [532] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Training Grounds [532] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Verdant Catacombs [c66] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Verdant Catacombs [c66]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Verdant Catacombs [c66] (source: Verdant Catacombs [c66])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [c66]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Verdant Catacombs [c66])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [d73] from library onto the Battlefield (source: Verdant Catacombs [c66])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Verdant Catacombs [c66])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts King T'Challa [cc8] as mdf side of King T'Challa [77e] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts King T'Challa [cc8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Thrasios, Triton Hero [44a] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [44a]"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "Thrasios, Triton Hero [44a] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Shifting Woodland [aa3] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Tymna the Weaver [c54] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tymna the Weaver [c54] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [44a] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: King T'Challa [cc8] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [44a]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [44a] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 3 life at combat from King T'Challa [cc8]"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [c54] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [c54]"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: stack ability (Whenever a player draws their second card each turn, you draw a card.))"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB - Ability triggers: King T'Challa [cc8] - Whenever a player draws their second card each turn, you draw a card."
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever a player draws their second card each turn, you draw a card.))"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Derevi, Empyrial Tactician [c13] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Derevi, Empyrial Tactician [c13] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [c13] - Whenever Derevi, Empyrial Tactician [c13] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Mox Amber [4a6]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Training Grounds [568] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Training Grounds [568] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 3 creatures"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [44a] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: King T'Challa [cc8] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Tymna the Weaver [c54] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [44a]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [44a] did 3 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 3 life at combat from King T'Challa [cc8]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 2 life at combat from Tymna the Weaver [c54]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Tymna the Weaver [c54] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerB gains 2 life"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [c13] - Whenever Derevi, Empyrial Tactician [c13] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Mox Amber [4a6]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [c13] - Whenever Derevi, Empyrial Tactician [c13] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Mox Amber [4a6]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack push: 3 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [c13] - Whenever Derevi, Empyrial Tactician [c13] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Mox Amber [4a6]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack resolve: 3 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [c54] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [c54]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (Whenever a player draws their second card each turn, you draw a card.))"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: King T'Challa [cc8] - Whenever a player draws their second card each turn, you draw a card."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever a player draws their second card each turn, you draw a card.))"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB puts Scrubland [981] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB casts Mox Amber [096] from hand"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB puts Mox Amber [096] from stack onto the Battlefield"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.157046+00:00"
+}

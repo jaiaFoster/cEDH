@@ -1,0 +1,618 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed9",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 9,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 53363,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 149,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB puts Gemstone Caverns [b78] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB moves Marsh Flats [bd8] from hand to the exile zone (source: Gemstone Caverns [b78])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Starting Town [757] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Starting Town [757]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Noble Hierarch [52c] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Noble Hierarch [52c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Deathrite Shaman [897] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Deathrite Shaman [897] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tropical Island [4df] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Enlightened Tutor)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Enlightened Tutor [358] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Enlightened Tutor)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Enlightened Tutor [358])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA reveals Colossal Skyturtle"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Enlightened Tutor [358])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts a card from library to the top of their library (source: Enlightened Tutor [358])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Enlightened Tutor [358] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Sol Ring [1f3] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Sol Ring [1f3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Minamo, School at Water's Edge [a34] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Spellseeker)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Spellseeker [a24] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Spellseeker)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Spellseeker [a24] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, you may search your library for an instant or sorcery card wit...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Spellseeker [a24] - When Spellseeker [a24] enters, you may search your library for an instant or sorcery card with mana value 2 or less, reveal it, put it into your hand, then shuffle."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, you may search your library for an instant or sorcery card wit...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Spellseeker [a24])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts a card from library into their hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA reveals Nature's Rhythm"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Spellseeker [a24])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Imperial Seal)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Imperial Seal [3f9] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Imperial Seal)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Imperial Seal [3f9])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Imperial Seal [3f9])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts a card from library to the top of their library (source: Imperial Seal [3f9])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 2 life from Imperial Seal [3f9]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Imperial Seal [3f9] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Polluted Delta [7b7] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Polluted Delta [7b7]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Polluted Delta [7b7] (source: Polluted Delta [7b7])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for an Island or Swamp card, put it onto the battlefield, then shuffle. from Polluted Delta [7b7]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for an Island or Swamp card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Polluted Delta [7b7])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [22c] from library onto the Battlefield (source: Polluted Delta [7b7])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Polluted Delta [7b7])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Badgermole Cub [9f9] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Badgermole Cub [9f9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Badgermole Cub [9f9] - When Badgermole Cub [9f9] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Underground Sea [22c]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Deathrite Shaman [897] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 1 life at combat from Deathrite Shaman [897]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [4e8] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [4e8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Mana Vault [ba2] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Mana Vault)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Mana Vault [ba2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Delney, Streetwise Lookout)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Starting Town [757]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Delney, Streetwise Lookout [83e] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Delney, Streetwise Lookout)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Delney, Streetwise Lookout [83e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts City of Traitors [a6c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Tymna the Weaver [591] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tymna the Weaver [591] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Exotic Orchard [f2c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [ce6] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [ce6] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [591] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T6.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.UN",
+      "text": "Mana Vault [ba2]: Mana Vault [ba2] doesn't untap during your untap step."
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA - Ability triggers: Mana Vault [ba2] - At the beginning of your upkeep, you may pay {4}. If you do, untap Mana Vault [ba2]."
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of your upkeep, you may pay {4}. If you do, untap {this}.))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA paid for Mana Vault [ba2] - Pay {4} to untap Mana Vault? (ICON_BADMana Vault is untapped)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card. from Thrasios, Triton Hero [4e8]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA scries 1 (source: Thrasios, Triton Hero [4e8])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts a card from library to the bottom of their library (source: Thrasios, Triton Hero [4e8])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA reveals Gaea's Cradle (source: Thrasios, Triton Hero [4e8])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Gaea's Cradle [b81] from library onto the Battlefield (source: Thrasios, Triton Hero [4e8])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Scrubland [007] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: City of Traitors [a6c] - When you play another land, sacrifice City of Traitors [a6c]."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed City of Traitors [a6c] (source: City of Traitors [a6c])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 1 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA - Ability triggers: Noble Hierarch [52c] - exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 2 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA - Ability triggers: Noble Hierarch [52c] - exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack resolve: 2 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack resolve: 1 (top: stack ability (exalted <i>(Whenever a creature you control attacks alone, that creature gets +1/+...)"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [4e8] (3/5) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 3 life at combat from Thrasios, Triton Hero [4e8]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [4e8] did 3 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Faerie Mastermind)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Faerie Mastermind [8cf] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Faerie Mastermind)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Faerie Mastermind [8cf] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({B}, {T}: Exile target instant or sorcery card from a graveyard. Each opponent los...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: exile target instant or sorcery card from a graveyard. Each opponent loses 2 life. from Deathrite Shaman [897] targeting Imperial Seal [3f9]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({B}, {T}: Exile target instant or sorcery card from a graveyard. Each opponent los...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Imperial Seal [3f9] from graveyard to the exile zone (source: Deathrite Shaman [897])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA loses 2 life from Deathrite Shaman [897]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB discards Boseiju, Who Endures [e3a] (source: Boseiju, Who Endures [e3a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: destroy target artifact, enchantment, or nonbasic land an opponent controls. That player may search their library for a land card with a basic land type, put it onto the battlefield, then shuffle. This ability costs {1} less to activate for each legendary creature you control. from Boseiju, Who Endures [e3a] targeting Gaea's Cradle [b81]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{G}, Discard this card: Destroy target artifact, enchant...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Gaea's Cradle [b81] was destroyed by Boseiju, Who Endures [e3a]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA searches their library (source: Boseiju, Who Endures [e3a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA puts Underground Sea [d69] from library onto the Battlefield (source: Boseiju, Who Endures [e3a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA's library is shuffled (source: Boseiju, Who Endures [e3a])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [ce6] (1/3) blocked by Delney, Streetwise Lookout [83e] (2/2)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Delney, Streetwise Lookout [83e] deals 2 damage to Thrasios, Triton Hero [ce6]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [ce6] deals 1 damage to Delney, Streetwise Lookout [83e]"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [591] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.753999+00:00"
+}

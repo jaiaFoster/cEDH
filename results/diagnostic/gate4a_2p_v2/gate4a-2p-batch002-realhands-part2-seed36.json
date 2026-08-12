@@ -1,0 +1,566 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed36",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 36,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 26791,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 136,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Flooded Strand [597] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [597]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Flooded Strand [597] (source: Flooded Strand [597])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [597]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [597])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [686] from library onto the Battlefield (source: Flooded Strand [597])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [597])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Boseiju, Who Endures [347] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Delighted Halfling [300] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Delighted Halfling [300] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Chrome Mox [ed6] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Chrome Mox [ed6] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Chrome Mox [ed6] - Imprint — When Chrome Mox [ed6] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA moves Smothering Tithe [fd0] from hand to the exile zone (source: Chrome Mox [ed6])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts City of Brass [8f4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Kinnan, Bonder Prodigy [f53] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [8f4] - Whenever City of Brass [8f4] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 3 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from City of Brass [8f4]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Kinnan, Bonder Prodigy [f53] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Deathrite Shaman [2c9] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Deathrite Shaman [2c9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Sol Ring [6f9] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Sol Ring [6f9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Rhystic Study)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Rhystic Study [742] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [8f4] - Whenever City of Brass [8f4] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 3 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB loses 1 life from Force of Will [bbc]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB moves Faerie Mastermind [94c] from hand to the exile zone (source: Force of Will [bbc])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB casts Force of Will [bbc] using alternative casting costs targeting Rhystic Study [742] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 3 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Rhystic Study [742] from stack into their graveyard (source: Force of Will [bbc])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Rhystic Study [742] is countered by Force of Will [bbc]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB puts Force of Will [bbc] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from City of Brass [8f4]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Verdant Catacombs [9e4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA loses 1 life from Verdant Catacombs [9e4]"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA sacrificed Verdant Catacombs [9e4] (source: Verdant Catacombs [9e4])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [9e4]"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA searches their library (source: Verdant Catacombs [9e4])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA puts Tropical Island [169] from library onto the Battlefield (source: Verdant Catacombs [9e4])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA's library is shuffled (source: Verdant Catacombs [9e4])"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Kinnan, Bonder Prodigy [f53] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 2 life at combat from Kinnan, Bonder Prodigy [f53]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}: Exile target land card from a graveyard. Add one mana of any color.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: exile target land card from a graveyard. Add one mana of any color. from Deathrite Shaman [2c9] targeting Flooded Strand [597]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}: Exile target land card from a graveyard. Add one mana of any color.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB moves Flooded Strand [597] from graveyard to the exile zone (source: Deathrite Shaman [2c9])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Boseiju, Who Endures [347] (source: Crop Rotation [a9e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Crop Rotation [a9e] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Crop Rotation [a9e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Wooded Foothills [43f] from library onto the Battlefield (source: Crop Rotation [a9e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Crop Rotation [a9e])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Crop Rotation [a9e] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Wooded Foothills [43f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Wooded Foothills [43f] (source: Wooded Foothills [43f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [43f]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Wooded Foothills [43f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tropical Island [fa0] from library onto the Battlefield (source: Wooded Foothills [43f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Wooded Foothills [43f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [d78] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [d78] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Sylvan Library)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Sylvan Library [584] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [8f4] - Whenever City of Brass [8f4] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from City of Brass [8f4]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts King T'Challa [7fe] as mdf side of King T'Challa [7cb] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts King T'Challa [7fe] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Sylvan Library)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Sylvan Library [584] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Windswept Heath [959] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA loses 1 life from Windswept Heath [959]"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA sacrificed Windswept Heath [959] (source: Windswept Heath [959])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [959]"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA searches their library (source: Windswept Heath [959])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA puts Tundra [06d] from library onto the Battlefield (source: Windswept Heath [959])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [959])"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Kinnan, Bonder Prodigy [f53] (2/2) blocked by Thrasios, Triton Hero [d78] (1/3)"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [d78] deals 1 damage to Kinnan, Bonder Prodigy [f53]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Kinnan, Bonder Prodigy [f53] deals 2 damage to Thrasios, Triton Hero [d78]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}: Exile target land card from a graveyard. Add one mana of any color.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: exile target land card from a graveyard. Add one mana of any color. from Deathrite Shaman [2c9] targeting Wooded Foothills [43f]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}: Exile target land card from a graveyard. Add one mana of any color.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Wooded Foothills [43f] from graveyard to the exile zone (source: Deathrite Shaman [2c9])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack push: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB activates: scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card. from Thrasios, Triton Hero [d78]"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "Stack resolve: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB scries 1 (source: Thrasios, Triton Hero [d78])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB puts a card from library to the bottom of their library (source: Thrasios, Triton Hero [d78])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB reveals City of Traitors (source: Thrasios, Triton Hero [d78])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB puts City of Traitors [9ef] from library onto the Battlefield (source: Thrasios, Triton Hero [d78])"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.168979+00:00"
+}

@@ -1,0 +1,490 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed5",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 5,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 5026,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 117,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Chrome Mox [ae9] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Chrome Mox [ae9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA - Ability triggers: Chrome Mox [ae9] - Imprint — When Chrome Mox [ae9] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA moves Smothering Tithe [caa] from hand to the exile zone (source: Chrome Mox [ae9])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts City of Traitors [cf2] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T1.M2",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts City of Traitors [a1c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB moves Elvish Spirit Guide [161] from hand to the exile zone (source: Endurance [9e3])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB casts Endurance [9e3] with Evoke from hand"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB puts Endurance [9e3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB - Ability triggers: Endurance [9e3] - When Endurance [9e3] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB - Ability triggers: Endurance [9e3] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB sacrificed Endurance [9e3] (source: Endurance [9e3])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Windswept Heath [5dd] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: City of Traitors [cf2] - When you play another land, sacrifice City of Traitors [cf2]."
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [5dd]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Windswept Heath [5dd] (source: Windswept Heath [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [5dd]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Tundra [0bb] from library onto the Battlefield (source: Windswept Heath [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [5dd])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 2 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts King T'Challa [831] as mdf side of King T'Challa [6c2] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 2 (top: Cast King T'Challa)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts King T'Challa [831] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed City of Traitors [cf2] (source: City of Traitors [cf2])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Savannah [e14] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: City of Traitors [a1c] - When you play another land, sacrifice City of Traitors [a1c]."
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 2 (top: stack ability (<i>Channel</i> &mdash; {2}{G}, Discard this card: Return target card from your gra...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB discards Colossal Skyturtle [785] (source: Colossal Skyturtle [785])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: return target card from your graveyard to your hand. from Colossal Skyturtle [785] targeting Endurance [9e3]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 2 (top: stack ability (<i>Channel</i> &mdash; {2}{G}, Discard this card: Return target card from your gra...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Endurance [9e3] from graveyard into their hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When you play another land, sacrifice {this}.))"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed City of Traitors [a1c] (source: City of Traitors [a1c])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Gilded Drake [531] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB moves Deathrite Shaman [abf] from hand to the exile zone (source: Endurance [9e3])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB casts Endurance [9e3] with Evoke from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB puts Endurance [9e3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB - Ability triggers: Endurance [9e3] - When Endurance [9e3] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB - Ability triggers: Endurance [9e3] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerB sacrificed Endurance [9e3] (source: Endurance [9e3])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [9e3])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [9e3])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Gilded Drake [531] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Gilded Drake [531] - When Gilded Drake [531] enters, exchange control of Gilded Drake [531] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [531]. This ability still resolves if its target becomes illegal."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Gilded Drake [531] (source: Gilded Drake [531])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: King T'Challa [831] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 3 life at combat from King T'Challa [831]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tundra [08f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [a25] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [a25] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Training Grounds [524] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Training Grounds [524] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: King T'Challa [831] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 3 life at combat from King T'Challa [831]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Misty Rainforest [696] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [696]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [696] (source: Misty Rainforest [696])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [696]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [696])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Underground Sea [15a] from library onto the Battlefield (source: Misty Rainforest [696])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [696])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {3}{U}, Discard this card: Return target artifact, creature...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB discards Otawara, Soaring City [ca2] (source: Otawara, Soaring City [ca2])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: return target artifact, creature, enchantment, or planeswalker to its owner's hand. This ability costs {1} less to activate for each legendary creature you control. from Otawara, Soaring City [ca2] targeting King T'Challa [831]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {3}{U}, Discard this card: Return target artifact, creature...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts King T'Challa [831] from battlefield into its owner's hand (source: Otawara, Soaring City [ca2])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA casts Swift Reconfiguration [5d3] targeting Thrasios, Triton Hero [a25] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA puts Swift Reconfiguration [5d3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.747946+00:00"
+}

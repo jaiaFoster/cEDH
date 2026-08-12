@@ -1,0 +1,454 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed31",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 31,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 25184,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 108,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [7ed] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Training Grounds [55e] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Training Grounds [55e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Windswept Heath [038] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [038]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Windswept Heath [038] (source: Windswept Heath [038])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [038]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [038])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [121] from library onto the Battlefield (source: Windswept Heath [038])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [038])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Misty Rainforest [a16] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [a16]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [a16] (source: Misty Rainforest [a16])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [a16]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [a16])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Tundra [8c7] from library onto the Battlefield (source: Misty Rainforest [a16])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [a16])"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Boseiju, Who Endures [a3e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [203] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [203] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Windswept Heath [bfb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Windswept Heath [bfb]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Windswept Heath [bfb] (source: Windswept Heath [bfb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [bfb]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Windswept Heath [bfb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tropical Island [9a2] from library onto the Battlefield (source: Windswept Heath [bfb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Windswept Heath [bfb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Kinnan, Bonder Prodigy [968] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Kinnan, Bonder Prodigy [968] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Misty Rainforest [46c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [46c]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [46c] (source: Misty Rainforest [46c])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [46c]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [46c])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Underground Sea [dba] from library onto the Battlefield (source: Misty Rainforest [46c])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [46c])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Derevi, Empyrial Tactician [dd4] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Derevi, Empyrial Tactician [dd4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [dd4] - Whenever Derevi, Empyrial Tactician [dd4] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Kinnan, Bonder Prodigy [968]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [203] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [203]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [203] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [dd4] - Whenever Derevi, Empyrial Tactician [dd4] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Kinnan, Bonder Prodigy [968]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Mox Diamond [4a3] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA discards Command Tower [fc9] (source: Mox Diamond [4a3])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Mox Diamond [4a3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Ranger-Captain of Eos)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Ranger-Captain of Eos [1ca] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Ranger-Captain of Eos)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Ranger-Captain of Eos [1ca] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, you may search your library for a creature card with mana valu...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Ranger-Captain of Eos [1ca] - When Ranger-Captain of Eos [1ca] enters, you may search your library for a creature card with mana value 1 or less, reveal it, put it into your hand, then shuffle."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, you may search your library for a creature card with mana valu...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Ranger-Captain of Eos [1ca])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts a card from library into their hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA reveals Delighted Halfling"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Ranger-Captain of Eos [1ca])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [b27] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [b27] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Starting Town [12f] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [870] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [870] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Derevi, Empyrial Tactician [dd4] (2/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 2 life at combat from Derevi, Empyrial Tactician [dd4]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [dd4] - Whenever Derevi, Empyrial Tactician [dd4] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Ranger-Captain of Eos [1ca]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [870] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [870]"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.163364+00:00"
+}

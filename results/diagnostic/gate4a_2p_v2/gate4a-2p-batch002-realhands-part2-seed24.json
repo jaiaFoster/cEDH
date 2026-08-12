@@ -1,0 +1,402 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed24",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 24,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 6832,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 95,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Exotic Orchard [275] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Diamond [95b] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Force of Negation)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB discards Bayou [3a4] (source: Mox Diamond [95b])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Diamond [95b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Veil of Summer [318] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Veil of Summer)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Veil of Summer [318] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Windswept Heath [971] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [971]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Windswept Heath [971] (source: Windswept Heath [971])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [971]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [971])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tundra [7a6] from library onto the Battlefield (source: Windswept Heath [971])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [971])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Mystic Remora [ca8] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Mystic Remora [ca8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Avacyn's Pilgrim [1f7] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Avacyn's Pilgrim)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Avacyn's Pilgrim [1f7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Starting Town [040] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Faerie Mastermind)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Faerie Mastermind [038] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Faerie Mastermind)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Faerie Mastermind [038] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "PlayerA - Ability triggers: Mystic Remora [ca8] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T5.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T5.CL",
+      "text": "PlayerA discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T5.CL",
+      "text": "PlayerA discards Commandeer [ca6]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Gemstone Caverns [095] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [6ed] from command"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [6ed] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Avacyn's Pilgrim [1f7] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Faerie Mastermind [038] (2/1) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Avacyn's Pilgrim [1f7]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 2 life at combat from Faerie Mastermind [038]"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA - Ability triggers: Mystic Remora [ca8] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T7.UP",
+      "text": "PlayerA sacrificed Mystic Remora [ca8] (source: Mystic Remora [ca8])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Exotic Orchard [275] (source: Crop Rotation [5e5])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Crop Rotation [5e5] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Crop Rotation [5e5])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Wooded Foothills [187] from library onto the Battlefield (source: Crop Rotation [5e5])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Crop Rotation [5e5])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Crop Rotation [5e5] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from Wooded Foothills [187]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Wooded Foothills [187] (source: Wooded Foothills [187])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [187]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA searches their library (source: Wooded Foothills [187])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tropical Island [9e0] from library onto the Battlefield (source: Wooded Foothills [187])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [187])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Starting Town [040]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [d9d] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [d9d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Shifting Woodland [1aa] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 3 creatures"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Avacyn's Pilgrim [1f7] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Faerie Mastermind [038] (2/1) unblocked"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Thrasios, Triton Hero [6ed] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Avacyn's Pilgrim [1f7]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 2 life at combat from Faerie Mastermind [038]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [6ed]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Thrasios, Triton Hero [6ed] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [d9d] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [d9d]"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.158106+00:00"
+}

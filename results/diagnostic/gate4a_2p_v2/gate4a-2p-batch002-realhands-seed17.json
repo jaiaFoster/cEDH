@@ -1,0 +1,322 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed17",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 17,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 15591,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 75,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [d0e] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 2 (top: Cast Force of Negation)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [d0e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA moves Birds of Paradise [266] from hand to the exile zone (source: Endurance [ab7])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA casts Endurance [ab7] with Evoke from hand"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA puts Endurance [ab7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA - Ability triggers: Endurance [ab7] - When Endurance [ab7] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA - Ability triggers: Endurance [ab7] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA sacrificed Endurance [ab7] (source: Endurance [ab7])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Gaea's Cradle [1be] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Diamond [3b2] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB discards Polluted Delta [005] (source: Mox Diamond [3b2])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Diamond [3b2] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Deathrite Shaman [f10] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Deathrite Shaman [f10] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}: Exile target land card from a graveyard. Add one mana of any color.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: exile target land card from a graveyard. Add one mana of any color. from Deathrite Shaman [f10] targeting Polluted Delta [005]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}: Exile target land card from a graveyard. Add one mana of any color.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB moves Polluted Delta [005] from graveyard to the exile zone (source: Deathrite Shaman [f10])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Heartwood Storyteller)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Heartwood Storyteller [99b] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Heartwood Storyteller)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Heartwood Storyteller [99b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T7.CL",
+      "text": "PlayerA discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T7.CL",
+      "text": "PlayerA discards Birthing Pod [c3e]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({G}, {T}: Exile target creature card from a graveyard. You gain 2 life.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: exile target creature card from a graveyard. You gain 2 life. from Deathrite Shaman [f10] targeting Endurance [ab7]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({G}, {T}: Exile target creature card from a graveyard. You gain 2 life.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Endurance [ab7] from graveyard to the exile zone (source: Deathrite Shaman [f10])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB gains 2 life (source: Deathrite Shaman [f10])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Finale of Devastation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB announces a value of 0 for {X} (source: Finale of Devastation [d37])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Finale of Devastation [d37] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever a player casts a noncreature spell, each of that player's opponents may d...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Heartwood Storyteller [99b] - Whenever a player casts a noncreature spell, each of that player's opponents may draw a card."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever a player casts a noncreature spell, each of that player's opponents may d...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Finale of Devastation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Finale of Devastation [d37])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Finale of Devastation [d37])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Finale of Devastation [d37] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Flooded Strand [0aa] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Flooded Strand [0aa]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Flooded Strand [0aa] (source: Flooded Strand [0aa])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [0aa]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Flooded Strand [0aa])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Underground Sea [27c] from library onto the Battlefield (source: Flooded Strand [0aa])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Flooded Strand [0aa])"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Heartwood Storyteller [99b] (2/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 2 life at combat from Heartwood Storyteller [99b]"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.764541+00:00"
+}

@@ -1,0 +1,338 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed1",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 1,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 93112,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 79,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Tundra [da9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Esper Sentinel [5e9] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Esper Sentinel)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Esper Sentinel [5e9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts City of Traitors [310] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Tropical Island [1a9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Exotic Orchard [c31] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Birds of Paradise [d20] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Birds of Paradise [d20] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Savannah [347] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Volatile Stormdrake [a5b] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Volatile Stormdrake [a5b] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Volatile Stormdrake [a5b] - When Volatile Stormdrake [a5b] enters, exchange control of Volatile Stormdrake [a5b] and target creature an opponent controls. If you do, you get {E}{E}{E}{E}, then sacrifice that creature unless you pay an amount of {E} equal to its mana value. - targeting Birds of Paradise [d20]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA paid for Volatile Stormdrake [a5b] - Pay {E}?"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerD with 1 creature"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacked player: PlayerD"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Esper Sentinel [5e9] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerD loses 1 life at combat from Esper Sentinel [5e9]"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerD discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerD discards Hazel's Brewmaster [f6b]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC puts Boseiju, Who Endures [b95] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC casts Thrasios, Triton Hero [aa8] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC puts Thrasios, Triton Hero [aa8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Exotic Orchard [c31] (source: Crop Rotation [95a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Crop Rotation [95a] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent casts their first noncreature spell each turn, draw a card un...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA - Ability triggers: Esper Sentinel [5e9] - Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is Esper Sentinel [5e9]'s power."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent casts their first noncreature spell each turn, draw a card un...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Crop Rotation [95a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Wooded Foothills [015] from library onto the Battlefield (source: Crop Rotation [95a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Crop Rotation [95a])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Crop Rotation [95a] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Windswept Heath [141] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Windswept Heath [141]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Windswept Heath [141] (source: Windswept Heath [141])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Forest or Plains card, put it onto the battlefield, then shuffle. from Windswept Heath [141]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Plains card...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Windswept Heath [141])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tundra [c52] from library onto the Battlefield (source: Windswept Heath [141])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Windswept Heath [141])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from Wooded Foothills [015]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB sacrificed Wooded Foothills [015] (source: Wooded Foothills [015])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [015]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB searches their library (source: Wooded Foothills [015])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tropical Island [74d] from library onto the Battlefield (source: Wooded Foothills [015])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB's library is shuffled (source: Wooded Foothills [015])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Kinnan, Bonder Prodigy [b8f] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Kinnan, Bonder Prodigy [b8f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerC with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacked player: PlayerC"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Volatile Stormdrake [a5b] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerC loses 3 life at combat from Volatile Stormdrake [a5b]"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.626881+00:00"
+}

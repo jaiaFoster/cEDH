@@ -1,0 +1,402 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed39",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 39,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 3715,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 95,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [e45] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [e45] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts City of Brass [010] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Chrome Mox [eb3] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Chrome Mox [eb3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [eb3] - Imprint — When Chrome Mox [eb3] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB moves Gilded Drake [69a] from hand to the exile zone (source: Chrome Mox [eb3])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Diamond [e97] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB discards Ancient Tomb [811] (source: Mox Diamond [e97])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Diamond [e97] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Archivist of Oghma [9a3] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Archivist of Oghma [9a3] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [fd1] from command"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [fd1] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Archivist of Oghma [9a3] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 2 life at combat from Archivist of Oghma [9a3]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Starting Town [277] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Gilded Drake [0b0] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [010] - Whenever City of Brass [010] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from City of Brass [010]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Gilded Drake [0b0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Gilded Drake [0b0] - When Gilded Drake [0b0] enters, exchange control of Gilded Drake [0b0] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [0b0]. This ability still resolves if its target becomes illegal. - targeting Archivist of Oghma [9a3]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Delighted Halfling [7a4] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Delighted Halfling [7a4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [fd1] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Gilded Drake [0b0] (3/3) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Thrasios, Triton Hero [fd1]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [fd1] did 1 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 3 life at combat from Gilded Drake [0b0]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{U}, Discard this card: Return target creature to its ow...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA discards Colossal Skyturtle [77b] (source: Colossal Skyturtle [77b])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: return target creature to its owner's hand. from Colossal Skyturtle [77b] targeting Thrasios, Triton Hero [fd1]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [010] - Whenever City of Brass [010] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA loses 1 life from City of Brass [010]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA moves Finale of Devastation [998] from hand to the exile zone (source: Endurance [1a0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Endurance [1a0] with Evoke from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Endurance [1a0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Endurance [1a0] - When Endurance [1a0] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerB"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Endurance [1a0] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA sacrificed Endurance [1a0] (source: Endurance [1a0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB puts a card from graveyard to the bottom of their library (source: Endurance [1a0])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Channel</i> &mdash; {1}{U}, Discard this card: Return target creature to its ow...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB has moved Thrasios, Triton Hero [fd1] to the command zone instead of their hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [fd1] from battlefield into its owner's hand (source: Colossal Skyturtle [77b])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Archivist of Oghma [9a3] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Archivist of Oghma [9a3]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Birds of Paradise [aa0] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Birds of Paradise [aa0] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Oboro Breezecaller [38d] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Oboro Breezecaller)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Oboro Breezecaller [38d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Gilded Drake [0b0] (3/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 3 life at combat from Gilded Drake [0b0]"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.172375+00:00"
+}

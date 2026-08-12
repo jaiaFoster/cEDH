@@ -1,0 +1,50 @@
+{
+  "batch_id": "fourplayer-probe-skill10-v2-realhands",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "ai_skill": 10,
+  "requested_game_count": 10,
+  "seed_range": [
+    1,
+    10
+  ],
+  "games_completed_ok": 6,
+  "games_exception": 0,
+  "games_chunk_lost": 2,
+  "games_with_engine_errors": 0,
+  "total_events": 611,
+  "avg_events_per_game": 61.1,
+  "avg_elapsed_ms": 72019.83333333333,
+  "games_with_winner_detected": 2,
+  "chunk_failures": [
+    {
+      "chunk_index": 0,
+      "seeds_requested": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "seeds_missing": [
+        5
+      ]
+    },
+    {
+      "chunk_index": 1,
+      "seeds_requested": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "seeds_missing": [
+        10
+      ]
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.634480+00:00"
+}

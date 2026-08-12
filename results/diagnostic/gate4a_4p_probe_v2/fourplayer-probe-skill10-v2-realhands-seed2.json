@@ -1,0 +1,506 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed2",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 2,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 96412,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 121,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD puts Gemstone Caverns [9cd] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD moves Starting Town [310] from hand to the exile zone (source: Gemstone Caverns [9cd])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Bayou [ce6] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [a52] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [a52] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Verdant Catacombs [bbd] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD loses 1 life from Verdant Catacombs [bbd]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD sacrificed Verdant Catacombs [bbd] (source: Verdant Catacombs [bbd])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [bbd]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD searches their library (source: Verdant Catacombs [bbd])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Underground Sea [ae6] from library onto the Battlefield (source: Verdant Catacombs [bbd])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD's library is shuffled (source: Verdant Catacombs [bbd])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD casts Thrasios, Triton Hero [66e] from command"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Thrasios, Triton Hero [66e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Savannah [7a0] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Savannah [697] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Chrome Mox [c78] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Chrome Mox)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Chrome Mox [c78] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Chrome Mox [c78] - Imprint — When Chrome Mox [c78] enters, you may exile a nonartifact, nonland card from your hand."
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (<i>Imprint</i> &mdash; When {this} enters, you may exile a nonartifact, nonland ca...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB moves Flare of Denial [e82] from hand to the exile zone (source: Chrome Mox [c78])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Archivist of Oghma [7f7] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Archivist of Oghma [7f7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Otawara, Soaring City [b0e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [2a4] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [2a4] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA sacrificed Otawara, Soaring City [b0e] (source: Crop Rotation [85e])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA casts Crop Rotation [85e] from hand"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: Cast Crop Rotation)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA searches their library (source: Crop Rotation [85e])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA puts Wooded Foothills [f18] from library onto the Battlefield (source: Crop Rotation [85e])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA's library is shuffled (source: Crop Rotation [85e])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA puts Crop Rotation [85e] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerB - Ability triggers: Archivist of Oghma [7f7] - Whenever an opponent searches their library, you gain 1 life and draw a card."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA loses 1 life from Wooded Foothills [f18]"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA sacrificed Wooded Foothills [f18] (source: Wooded Foothills [f18])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA activates: search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle. from Wooded Foothills [f18]"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 2 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Mountain or Forest ca...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA searches their library (source: Wooded Foothills [f18])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA puts Tropical Island [95b] from library onto the Battlefield (source: Wooded Foothills [f18])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA's library is shuffled (source: Wooded Foothills [f18])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 2 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerB - Ability triggers: Archivist of Oghma [7f7] - Whenever an opponent searches their library, you gain 1 life and draw a card."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerB gains 1 life (source: Archivist of Oghma [7f7])"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerB gains 1 life (source: Archivist of Oghma [7f7])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD casts Kinnan, Bonder Prodigy [f2d] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Kinnan, Bonder Prodigy)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Kinnan, Bonder Prodigy [f2d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacked player: PlayerA"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Thrasios, Triton Hero [66e] (1/3) blocked by Thrasios, Triton Hero [2a4] (1/3)"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [2a4] deals 1 damage to Thrasios, Triton Hero [66e]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Thrasios, Triton Hero [66e] deals 1 damage to Thrasios, Triton Hero [2a4]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC puts Misty Rainforest [4c1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC loses 1 life from Misty Rainforest [4c1]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC sacrificed Misty Rainforest [4c1] (source: Misty Rainforest [4c1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [4c1]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC searches their library (source: Misty Rainforest [4c1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC puts Underground Sea [512] from library onto the Battlefield (source: Misty Rainforest [4c1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC's library is shuffled (source: Misty Rainforest [4c1])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB - Ability triggers: Archivist of Oghma [7f7] - Whenever an opponent searches their library, you gain 1 life and draw a card."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB gains 1 life (source: Archivist of Oghma [7f7])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC casts Volatile Stormdrake [1d6] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC puts Volatile Stormdrake [1d6] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC - Ability triggers: Volatile Stormdrake [1d6] - When Volatile Stormdrake [1d6] enters, exchange control of Volatile Stormdrake [1d6] and target creature an opponent controls. If you do, you get {E}{E}{E}{E}, then sacrifice that creature unless you pay an amount of {E} equal to its mana value. - targeting Archivist of Oghma [7f7]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerC paid for Volatile Stormdrake [1d6] - Pay {E}{E}?"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [85d] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [85d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts City of Brass [f68] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Training Grounds [016] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: City of Brass [f68] - Whenever City of Brass [f68] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from City of Brass [f68]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Training Grounds)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Training Grounds [016] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerC with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacked player: PlayerC"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Volatile Stormdrake [1d6] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerC loses 3 life at combat from Volatile Stormdrake [1d6]"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.628646+00:00"
+}

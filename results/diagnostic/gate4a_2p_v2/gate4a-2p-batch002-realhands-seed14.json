@@ -1,0 +1,222 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed14",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 14,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 1763,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 50,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Flooded Strand [f7b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Flooded Strand [f7b]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Flooded Strand [f7b] (source: Flooded Strand [f7b])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [f7b]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Flooded Strand [f7b])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [6ed] from library onto the Battlefield (source: Flooded Strand [f7b])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Flooded Strand [f7b])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Talon Gates of Madara [4be] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB - Ability triggers: Talon Gates of Madara [4be] - When Talon Gates of Madara [4be] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Gaea's Cradle [e10] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T4.CL",
+      "text": "PlayerB discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T4.CL",
+      "text": "PlayerB discards Smothering Tithe [b0e]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T5.CL",
+      "text": "PlayerA discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T5.CL",
+      "text": "PlayerA discards Abhorrent Oculus [61e]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB moves Avacyn's Pilgrim [4b9] from hand to the exile zone (source: Endurance [35f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Endurance [35f] with Evoke from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Endurance [35f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB - Ability triggers: Endurance [35f] - When Endurance [35f] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB - Ability triggers: Endurance [35f] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Endurance [35f] (source: Endurance [35f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [35f])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [35f])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Mystic Remora [e1f] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Mystic Remora [e1f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.761488+00:00"
+}

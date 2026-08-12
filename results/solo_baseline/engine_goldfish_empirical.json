@@ -1,0 +1,213 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "phase": "SIM_001_SOLO_BASELINE_V1",
+  "source_batch": "solo-goldfish-batch002-realhands",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "ai_skill": 6,
+  "sample_size_per_turn": {
+    "1": 15,
+    "3": 15,
+    "5": 15,
+    "7": 15,
+    "10": 15
+  },
+  "empirical_cards_seen_by_turn": {
+    "1": 8.333333333333334,
+    "3": 9.533333333333333,
+    "5": 11.2,
+    "7": 13.0,
+    "10": 14.333333333333334
+  },
+  "commander_on_battlefield_by_turn": {
+    "Tymna the Weaver": {
+      "1": 0.0,
+      "3": 0.06666666666666667,
+      "5": 0.06666666666666667,
+      "7": 0.13333333333333333,
+      "10": 0.26666666666666666
+    },
+    "Thrasios, Triton Hero": {
+      "1": 0.0,
+      "3": 0.06666666666666667,
+      "5": 0.3333333333333333,
+      "7": 0.3333333333333333,
+      "10": 0.26666666666666666
+    }
+  },
+  "deterministic_combo_all_pieces_seen_by_turn": {
+    "INT-0002": {
+      "cards": [
+        "Devoted Druid",
+        "Swift Reconfiguration"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0003": {
+      "cards": [
+        "Hazel's Brewmaster",
+        "Devoted Druid"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0006": {
+      "cards": [
+        "Oboro Breezecaller",
+        "Talon Gates of Madara",
+        "Gaea's Cradle"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0007": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Orcish Bowmasters"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0008": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Esper Sentinel"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.06666666666666667,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0009": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Runic Armasaur"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.06666666666666667
+      }
+    },
+    "INT-0010": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Spellseeker"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.06666666666666667,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0011": {
+      "cards": [
+        "Derevi, Empyrial Tactician",
+        "Gaea's Cradle"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0012": {
+      "cards": [
+        "Clever Impersonator",
+        "Birthing Pod"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0013": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Kinnan, Bonder Prodigy"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0014": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Archivist of Oghma"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    },
+    "INT-0015": {
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Badgermole Cub"
+      ],
+      "p_all_pieces_seen": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "7": 0.0,
+        "10": 0.0
+      }
+    }
+  },
+  "pod_survival_seen_by_turn": {
+    "Birthing Pod": {
+      "1": 0.0,
+      "3": 0.06666666666666667,
+      "5": 0.0,
+      "7": 0.06666666666666667,
+      "10": 0.2
+    },
+    "Survival of the Fittest": {
+      "1": 0.06666666666666667,
+      "3": 0.06666666666666667,
+      "5": 0.13333333333333333,
+      "7": 0.2,
+      "10": 0.2
+    }
+  }
+}

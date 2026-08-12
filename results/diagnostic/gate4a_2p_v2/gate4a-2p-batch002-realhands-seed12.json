@@ -1,0 +1,218 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed12",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 12,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 2545,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": "PlayerB has lost the game.",
+  "event_count": 49,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [25f] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [25f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Scrubland [6cc] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Verdant Catacombs [db5] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB loses 1 life from Verdant Catacombs [db5]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB sacrificed Verdant Catacombs [db5] (source: Verdant Catacombs [db5])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB activates: search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle. from Verdant Catacombs [db5]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Swamp or Forest card,...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB searches their library (source: Verdant Catacombs [db5])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Underground Sea [c89] from library onto the Battlefield (source: Verdant Catacombs [db5])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB's library is shuffled (source: Verdant Catacombs [db5])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Sol Ring [638] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Sol Ring [638] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Exotic Orchard [8ac] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerB discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T6.CL",
+      "text": "PlayerB discards Runic Armasaur [6a0]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Talon Gates of Madara [613] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Talon Gates of Madara [613] - When Talon Gates of Madara [613] enters, up to one target creature phases out."
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target creature phases out.))"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [43e] from command"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB casts Pact of Negation [cb9] targeting Thrasios, Triton Hero [43e] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: Cast Pact of Negation)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [43e] from stack into their graveyard (source: Pact of Negation [cb9])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Thrasios, Triton Hero [43e] is countered by Pact of Negation [cb9]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB puts Pact of Negation [cb9] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [43e] from graveyard to their command zone"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack push: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB - Ability triggers: Pact of Negation [cb9] - At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose the game."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack resolve: 1 (top: stack ability (<br>At the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose th...)"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB has lost the game."
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerA has won the game"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.758922+00:00"
+}

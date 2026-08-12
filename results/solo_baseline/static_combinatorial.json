@@ -1,0 +1,776 @@
+{
+  "run_class": "STATIC_ANALYSIS",
+  "phase": "SIM_001_SOLO_BASELINE_V1",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "library_size": 98,
+  "commanders": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "classification_counts": {
+    "lands": 27,
+    "acceleration": 13,
+    "tutors": 14,
+    "interaction": 21,
+    "color_sources_land_only": {
+      "W": 16,
+      "U": 17,
+      "B": 16,
+      "G": 21
+    }
+  },
+  "methodology_note": "Card classification (acceleration/tutor/interaction/land-colors) is heuristic oracle-text pattern matching with manual spot-corrections, not an exhaustive manual review of all 98 cards - consistent with this project's established heuristic-classification standard. Commander castability approximates 'enough matching-color LAND sources in play' and ignores actual land-drop sequencing/tapping decisions (that's ENGINE-GOLDFISH/POLICY-DEPENDENT territory, not static combinatorics) and nonland accel's contribution except where noted.",
+  "opening_hand": {
+    "land_count_distribution": {
+      "0": 0.09612917370533651,
+      "1": 0.2795140589278246,
+      "2": 0.33033479691470186,
+      "3": 0.20543208763352103,
+      "4": 0.0725054426941839,
+      "5": 0.01450108853883678,
+      "6": 0.0015191616564495674,
+      "7": 6.418992914575637e-05
+    },
+    "p_at_least_2_lands": 0.624356767366839,
+    "p_at_least_1_land": 0.9038708262946636,
+    "p_flood_6plus_lands": 0.0015833515855953237,
+    "expected_lands": 1.9285714285714284
+  },
+  "by_turn": {
+    "on_play": {
+      "1": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.7251956570741571,
+          "U": 0.7486545643970949,
+          "B": 0.7251956570741571,
+          "G": 0.8261720021241129
+        },
+        "p_at_least_1_acceleration": 0.6432196099849425,
+        "p_at_least_1_tutor": 0.6726015244567709,
+        "p_at_least_1_interaction": 0.8261720021241129,
+        "p_at_least_N_lands": {
+          "2": 0.624356767366839,
+          "3": 0.294021970452137,
+          "4": 0.08858988281861599
+        }
+      },
+      "3": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.8137772767718646,
+          "U": 0.8342163561505624,
+          "B": 0.8137772767718646,
+          "G": 0.8974860525347332
+        },
+        "p_at_least_1_acceleration": 0.7383610473222912,
+        "p_at_least_1_tutor": 0.7660639952528722,
+        "p_at_least_1_interaction": 0.8974860525347332,
+        "p_at_least_N_lands": {
+          "2": 0.7701350747441623,
+          "3": 0.4735079101676954,
+          "4": 0.20730404452214812
+        }
+      },
+      "5": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.8750272429408734,
+          "U": 0.8917918810829514,
+          "B": 0.8750272429408734,
+          "G": 0.9403659927666298
+        },
+        "p_at_least_1_acceleration": 0.8095834997110649,
+        "p_at_least_1_tutor": 0.8342256350425741,
+        "p_at_least_1_interaction": 0.9403659927666298,
+        "p_at_least_N_lands": {
+          "2": 0.8658799000824295,
+          "3": 0.6325776358088039,
+          "4": 0.35483684500686846
+        }
+      },
+      "7": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.9169854848190512,
+          "U": 0.9301463225916407,
+          "B": 0.9169854848190512,
+          "G": 0.9658072853473458
+        },
+        "p_at_least_1_acceleration": 0.8625193885911752,
+        "p_at_least_1_tutor": 0.8835458350419366,
+        "p_at_least_1_interaction": 0.9658072853473458,
+        "p_at_least_N_lands": {
+          "2": 0.9248622683504446,
+          "3": 0.7576166734641417,
+          "4": 0.5062913259574027
+        }
+      },
+      "10": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.9559637287800887,
+          "U": 0.9645561719449495,
+          "B": 0.9559637287800887,
+          "G": 0.985576538794288
+        },
+        "p_at_least_1_acceleration": 0.9169854848190512,
+        "p_at_least_1_tutor": 0.932611746500171,
+        "p_at_least_1_interaction": 0.985576538794288,
+        "p_at_least_N_lands": {
+          "2": 0.9705644197067996,
+          "3": 0.8814195648067712,
+          "4": 0.702105201502116
+        }
+      }
+    },
+    "on_draw": {
+      "1": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.7735129041819976,
+          "U": 0.7956092062130222,
+          "B": 0.7735129041819976,
+          "G": 0.8662861554800869
+        },
+        "p_at_least_1_acceleration": 0.6941882371299508,
+        "p_at_least_1_tutor": 0.7229705206941908,
+        "p_at_least_1_interaction": 0.8662861554800869,
+        "p_at_least_N_lands": {
+          "2": 0.704217927060503,
+          "3": 0.38477328828584634,
+          "4": 0.14276977406262154
+        }
+      },
+      "3": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.8472555191499564,
+          "U": 0.8658828948633763,
+          "B": 0.8472555191499564,
+          "G": 0.9216747367681108
+        },
+        "p_at_least_1_acceleration": 0.7765779729943161,
+        "p_at_least_1_tutor": 0.802862917347926,
+        "p_at_least_1_interaction": 0.9216747367681108,
+        "p_at_least_N_lands": {
+          "2": 0.8234613065781339,
+          "3": 0.556830147408276,
+          "4": 0.2790893566063407
+        }
+      },
+      "5": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.8980107384919771,
+          "U": 0.9129359962736391,
+          "B": 0.8980107384919771,
+          "G": 0.9547604083057192
+        },
+        "p_at_least_1_acceleration": 0.8380365399841241,
+        "p_at_least_1_tutor": 0.8609019696334242,
+        "p_at_least_1_interaction": 0.9547604083057192,
+        "p_at_least_N_lands": {
+          "2": 0.8991321768294751,
+          "3": 0.6996185163472021,
+          "4": 0.4314549941936092
+        }
+      },
+      "7": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.932611746500171,
+          "U": 0.9441170580733125,
+          "B": 0.932611746500171,
+          "G": 0.9742548972027075
+        },
+        "p_at_least_1_acceleration": 0.8835458350419366,
+        "p_at_least_1_tutor": 0.9027265210350294,
+        "p_at_least_1_interaction": 0.9742548972027075,
+        "p_at_least_N_lands": {
+          "2": 0.9445382206900097,
+          "3": 0.8068065543130545,
+          "4": 0.577253777018129
+        }
+      },
+      "10": {
+        "p_at_least_1_land_source_each_color": {
+          "W": 0.9645561719449495,
+          "U": 0.9719042826392892,
+          "B": 0.9645561719449495,
+          "G": 0.9892703520298971
+        },
+        "p_at_least_1_acceleration": 0.9301463225916407,
+        "p_at_least_1_tutor": 0.9441170580733125,
+        "p_at_least_1_interaction": 0.9892703520298971,
+        "p_at_least_N_lands": {
+          "2": 0.9788266257707049,
+          "3": 0.9085978742275117,
+          "4": 0.7545874541766494
+        }
+      }
+    }
+  },
+  "commander_castability_by_turn": {
+    "on_play": {
+      "1": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.294021970452137,
+          "p_both_colors_present_approx_independent": 0.5259087410392185,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.624356767366839,
+          "p_both_colors_present_approx_independent": 0.6185174403673035,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "3": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.4735079101676954,
+          "p_both_colors_present_approx_independent": 0.662233456190232,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.7701350747441623,
+          "p_both_colors_present_approx_independent": 0.7486975444414774,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "5": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.6325776358088039,
+          "p_both_colors_present_approx_independent": 0.7656726758887064,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.8658799000824295,
+          "p_both_colors_present_approx_independent": 0.8386107575957898,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "7": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.7576166734641417,
+          "p_both_colors_present_approx_independent": 0.8408623793688303,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.9248622683504446,
+          "p_both_colors_present_approx_independent": 0.898342094798049,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "10": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.8814195648067712,
+          "p_both_colors_present_approx_independent": 0.913866650743131,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.9705644197067996,
+          "p_both_colors_present_approx_independent": 0.9506439334181714,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      }
+    },
+    "on_draw": {
+      "1": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.38477328828584634,
+          "p_both_colors_present_approx_independent": 0.5983222129360681,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.704217927060503,
+          "p_both_colors_present_approx_independent": 0.6892252405148427,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "3": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.556830147408276,
+          "p_both_colors_present_approx_independent": 0.7178419147300622,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.8234613065781339,
+          "p_both_colors_present_approx_independent": 0.7980623891952122,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "5": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.6996185163472021,
+          "p_both_colors_present_approx_independent": 0.8064232864469061,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.8991321768294751,
+          "p_both_colors_present_approx_independent": 0.8716351445592082,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "7": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.8068065543130545,
+          "p_both_colors_present_approx_independent": 0.8697646697100991,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.9445382206900097,
+          "p_both_colors_present_approx_independent": 0.9198106673605377,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      },
+      "10": {
+        "Tymna the Weaver": {
+          "p_enough_total_lands": 0.9085978742275117,
+          "p_both_colors_present_approx_independent": 0.9303686088370949,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        },
+        "Thrasios, Triton Hero": {
+          "p_enough_total_lands": 0.9788266257707049,
+          "p_both_colors_present_approx_independent": 0.9614760918259342,
+          "approx_joint_upper_bound_note": "min(p_enough_total_lands, p_colors) is a tighter upper bound than the product; see ENGINE-GOLDFISH cross-check for the real figure"
+        }
+      }
+    }
+  },
+  "deterministic_combo_accessibility": {
+    "INT-0002": {
+      "interaction_id": "INT-0002",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Devoted Druid",
+        "Swift Reconfiguration"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0003": {
+      "interaction_id": "INT-0003",
+      "verification_level": "RULES_VERIFIED",
+      "cards": [
+        "Hazel's Brewmaster",
+        "Devoted Druid"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0006": {
+      "interaction_id": "INT-0006",
+      "verification_level": "RULES_VERIFIED",
+      "cards": [
+        "Oboro Breezecaller",
+        "Talon Gates of Madara",
+        "Gaea's Cradle"
+      ],
+      "piece_count": 3,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.0002301178203240059,
+          "3": 0.0005522827687776141,
+          "5": 0.0010848411529560279,
+          "7": 0.0018803913317904481,
+          "10": 0.003681885125184094
+        },
+        "on_draw": {
+          "1": 0.0003681885125184094,
+          "3": 0.0007889753839680202,
+          "5": 0.001446454870608037,
+          "7": 0.0023932253313696614,
+          "10": 0.004470860509152115
+        }
+      }
+    },
+    "INT-0007": {
+      "interaction_id": "INT-0007",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Orcish Bowmasters"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0008": {
+      "interaction_id": "INT-0008",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Esper Sentinel"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0009": {
+      "interaction_id": "INT-0009",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Runic Armasaur"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0010": {
+      "interaction_id": "INT-0010",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Spellseeker"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0011": {
+      "interaction_id": "INT-0011",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Derevi, Empyrial Tactician",
+        "Gaea's Cradle"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0012": {
+      "interaction_id": "INT-0012",
+      "verification_level": "ENGINE_COMPONENT_VERIFIED",
+      "cards": [
+        "Clever Impersonator",
+        "Birthing Pod"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0013": {
+      "interaction_id": "INT-0013",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Kinnan, Bonder Prodigy"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0014": {
+      "interaction_id": "INT-0014",
+      "verification_level": "ENGINE_EXACT_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Archivist of Oghma"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    },
+    "INT-0015": {
+      "interaction_id": "INT-0015",
+      "verification_level": "RULES_VERIFIED",
+      "cards": [
+        "Delney, Streetwise Lookout",
+        "Badgermole Cub"
+      ],
+      "piece_count": 2,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.004418262150220913,
+          "3": 0.007574163686092994,
+          "5": 0.011571638964864297,
+          "7": 0.01641068798653482,
+          "10": 0.025247212286976645
+        },
+        "on_draw": {
+          "1": 0.005891016200294551,
+          "3": 0.009467704607616242,
+          "5": 0.013885966757837155,
+          "7": 0.01914580265095729,
+          "10": 0.028613507258573534
+        }
+      }
+    }
+  },
+  "conditional_combo_piece_accessibility_own_deck_only": {
+    "INT-0001": {
+      "interaction_id": "INT-0001",
+      "verification_level": "RULES_VERIFIED",
+      "cards": [
+        "Faerie Mastermind",
+        "Smothering Tithe",
+        "Clever Impersonator"
+      ],
+      "piece_count": 3,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.0002301178203240059,
+          "3": 0.0005522827687776141,
+          "5": 0.0010848411529560279,
+          "7": 0.0018803913317904481,
+          "10": 0.003681885125184094
+        },
+        "on_draw": {
+          "1": 0.0003681885125184094,
+          "3": 0.0007889753839680202,
+          "5": 0.001446454870608037,
+          "7": 0.0023932253313696614,
+          "10": 0.004470860509152115
+        }
+      }
+    },
+    "INT-0004": {
+      "interaction_id": "INT-0004",
+      "verification_level": "RULES_VERIFIED",
+      "cards": [
+        "Faerie Mastermind",
+        "Smothering Tithe",
+        "Kinnan, Bonder Prodigy"
+      ],
+      "piece_count": 3,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.0002301178203240059,
+          "3": 0.0005522827687776141,
+          "5": 0.0010848411529560279,
+          "7": 0.0018803913317904481,
+          "10": 0.003681885125184094
+        },
+        "on_draw": {
+          "1": 0.0003681885125184094,
+          "3": 0.0007889753839680202,
+          "5": 0.001446454870608037,
+          "7": 0.0023932253313696614,
+          "10": 0.004470860509152115
+        }
+      }
+    },
+    "INT-0005": {
+      "interaction_id": "INT-0005",
+      "verification_level": "RULES_VERIFIED",
+      "cards": [
+        "Faerie Mastermind",
+        "Smothering Tithe",
+        "Training Grounds"
+      ],
+      "piece_count": 3,
+      "p_all_pieces_drawn_by_turn": {
+        "on_play": {
+          "1": 0.0002301178203240059,
+          "3": 0.0005522827687776141,
+          "5": 0.0010848411529560279,
+          "7": 0.0018803913317904481,
+          "10": 0.003681885125184094
+        },
+        "on_draw": {
+          "1": 0.0003681885125184094,
+          "3": 0.0007889753839680202,
+          "5": 0.001446454870608037,
+          "7": 0.0023932253313696614,
+          "10": 0.004470860509152115
+        }
+      }
+    }
+  },
+  "pod_survival_accessibility": {
+    "Birthing Pod": {
+      "p_drawn_by_turn": {
+        "on_play": {
+          "1": 0.0714285714285714,
+          "3": 0.09183673469387754,
+          "5": 0.11224489795918369,
+          "7": 0.13265306122448983,
+          "10": 0.16326530612244894
+        },
+        "on_draw": {
+          "1": 0.08163265306122447,
+          "3": 0.10204081632653061,
+          "5": 0.12244897959183676,
+          "7": 0.1428571428571429,
+          "10": 0.173469387755102
+        }
+      }
+    },
+    "Survival of the Fittest": {
+      "p_drawn_by_turn": {
+        "on_play": {
+          "1": 0.0714285714285714,
+          "3": 0.09183673469387754,
+          "5": 0.11224489795918369,
+          "7": 0.13265306122448983,
+          "10": 0.16326530612244894
+        },
+        "on_draw": {
+          "1": 0.08163265306122447,
+          "3": 0.10204081632653061,
+          "5": 0.12244897959183676,
+          "7": 0.1428571428571429,
+          "10": 0.173469387755102
+        }
+      }
+    }
+  },
+  "cards_seen_by_turn": {
+    "on_play": {
+      "1": 7,
+      "3": 9,
+      "5": 11,
+      "7": 13,
+      "10": 16
+    },
+    "on_draw": {
+      "1": 8,
+      "3": 10,
+      "5": 12,
+      "7": 14,
+      "10": 17
+    }
+  },
+  "mulligan_structural_hand_quality": {
+    "definition": "2-5 lands in opening 7, AND at least one single land that alone covers both colors of at least one commander (a dual/multi land) - a chosen, labeled heuristic threshold, not a universal 'keepable hand' standard",
+    "p_land_count_2_to_5": 0.6227734157812436,
+    "p_at_least_one_commander_color_pair_dual_land_in_opener": 0.7083381325440055,
+    "approx_p_meets_threshold_independence_assumption": 0.44113415833253755,
+    "caveat": "independence between land-count and dual-land presence is an approximation (both draw from the same 7 cards) - directionally informative, not exact; ENGINE-GOLDFISH provides an empirical cross-check"
+  }
+}

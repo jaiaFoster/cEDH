@@ -1,0 +1,610 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-seed11",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 11,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 50994,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 147,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Diamond [101] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA discards Tundra [6db] (source: Mox Diamond [101])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Diamond [101] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Delighted Halfling [839] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Delighted Halfling [839] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mox Diamond [e57] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB discards City of Brass [105] (source: Mox Diamond [e57])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mox Diamond [e57] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Swift Reconfiguration [fd9] targeting Delighted Halfling [839] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Swift Reconfiguration)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Swift Reconfiguration [fd9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Savannah [e1e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Delighted Halfling [a8d] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 2 (top: Cast Mindbreak Trap)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Delighted Halfling [a8d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Volatile Stormdrake [e1a] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Volatile Stormdrake [e1a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Volatile Stormdrake [e1a] - When Volatile Stormdrake [e1a] enters, exchange control of Volatile Stormdrake [e1a] and target creature an opponent controls. If you do, you get {E}{E}{E}{E}, then sacrifice that creature unless you pay an amount of {E} equal to its mana value. - targeting Delighted Halfling [a8d]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA paid for Volatile Stormdrake [e1a] - Pay {E}?"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [aba] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Ranger-Captain of Eos)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Ranger-Captain of Eos [c6a] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Ranger-Captain of Eos)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Ranger-Captain of Eos [c6a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, you may search your library for a creature card with mana valu...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB - Ability triggers: Ranger-Captain of Eos [c6a] - When Ranger-Captain of Eos [c6a] enters, you may search your library for a creature card with mana value 1 or less, reveal it, put it into your hand, then shuffle."
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, you may search your library for a creature card with mana valu...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Ranger-Captain of Eos [c6a])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts a card from library into their hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB reveals Deathrite Shaman"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Ranger-Captain of Eos [c6a])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T4.DB",
+      "text": "Attacker: Volatile Stormdrake [e1a] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T4.CD",
+      "text": "PlayerA loses 3 life at combat from Volatile Stormdrake [e1a]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Derevi, Empyrial Tactician [49a] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Derevi, Empyrial Tactician)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Derevi, Empyrial Tactician [49a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Derevi, Empyrial Tactician [49a] - Whenever Derevi, Empyrial Tactician [49a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Ranger-Captain of Eos [c6a]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Misty Rainforest [9fb] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [9fb]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [9fb] (source: Misty Rainforest [9fb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [9fb]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [9fb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Underground Sea [5c9] from library onto the Battlefield (source: Misty Rainforest [9fb])"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [9fb])"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Shang-Chi, Master of Kung Fu [283] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Shang-Chi, Master of Kung Fu)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Shang-Chi, Master of Kung Fu [283] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (Sacrifice {this}: Your opponents can't cast noncreature spells this turn.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Ranger-Captain of Eos [c6a] (source: Ranger-Captain of Eos [c6a])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: Your opponents can't cast noncreature spells this turn. from Ranger-Captain of Eos [c6a]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Sacrifice {this}: Your opponents can't cast noncreature spells this turn.))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Misty Rainforest [ab1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [ab1]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [ab1] (source: Misty Rainforest [ab1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [ab1]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [ab1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tundra [de6] from library onto the Battlefield (source: Misty Rainforest [ab1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [ab1])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB casts Volatile Stormdrake [941] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Volatile Stormdrake [941] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB - Ability triggers: Volatile Stormdrake [941] - When Volatile Stormdrake [941] enters, exchange control of Volatile Stormdrake [941] and target creature an opponent controls. If you do, you get {E}{E}{E}{E}, then sacrifice that creature unless you pay an amount of {E} equal to its mana value. - targeting Derevi, Empyrial Tactician [49a]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB paid for Volatile Stormdrake [941] - Pay {E}{E}{E}?"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Volatile Stormdrake [e1a] (3/2) blocked by Volatile Stormdrake [941] (3/2)"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Volatile Stormdrake [941] deals 3 damage to Volatile Stormdrake [e1a]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Volatile Stormdrake [e1a] deals 3 damage to Volatile Stormdrake [941]"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Volatile Stormdrake [e1a] died"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "Volatile Stormdrake [941] died"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: Cast Hazel's Brewmaster)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA casts Hazel's Brewmaster [fd9] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: Cast Hazel's Brewmaster)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Hazel's Brewmaster [fd9] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or attacks, exile up to one target card from a graveyard an...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA - Ability triggers: Hazel's Brewmaster [fd9] - Whenever Hazel's Brewmaster [fd9] enters or attacks, exile up to one target card from a graveyard and create a Food token. - targeting Ranger-Captain of Eos [c6a]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or attacks, exile up to one target card from a graveyard an...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA moves Ranger-Captain of Eos [c6a] from graveyard to the exile zone (source: Hazel's Brewmaster [fd9])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA creates a Food Token [815] token"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Tymna the Weaver [43c] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Tymna the Weaver [43c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Gaea's Cradle [222] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Deathrite Shaman [32e] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Deathrite Shaman [32e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability ({G}, {T}: Exile target creature card from a graveyard. You gain 2 life.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB activates: exile target creature card from a graveyard. You gain 2 life. from Deathrite Shaman [32e] targeting Volatile Stormdrake [e1a]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Sacrifice {this}: Your opponents can't cast noncreature spells this turn.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA sacrificed Food Token [815] (source: Food Token [815])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA activates: Your opponents can't cast noncreature spells this turn. from Food Token [815]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Sacrifice {this}: Your opponents can't cast noncreature spells this turn.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({G}, {T}: Exile target creature card from a graveyard. You gain 2 life.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB moves Volatile Stormdrake [e1a] from graveyard to the exile zone (source: Deathrite Shaman [32e])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB gains 2 life (source: Deathrite Shaman [32e])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [b3e] from command"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: Cast Mindbreak Trap)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA casts Mindbreak Trap [804] using alternative casting costs from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: Cast Mindbreak Trap)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA puts Mindbreak Trap [804] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [b3e] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Derevi, Empyrial Tactician [49a] (2/3) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 2 life at combat from Derevi, Empyrial Tactician [49a]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack push: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerB - Ability triggers: Derevi, Empyrial Tactician [49a] - Whenever Derevi, Empyrial Tactician [49a] enters or a creature you control deals combat damage to a player, you may tap or untap target permanent. - targeting Hazel's Brewmaster [fd9]"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever {this} enters or a creature you control deals combat damage to a player, ...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [43c] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [43c]"
+    }
+  ],
+  "created_at": "2026-08-12T21:28:52.757848+00:00"
+}

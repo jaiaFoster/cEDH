@@ -1,0 +1,566 @@
+{
+  "game_id": "gate4a-2p-batch002-realhands-part2-seed25",
+  "purpose": "GATE_4A_2P_DIAGNOSTIC: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "GATE_4A_2P_DIAGNOSTIC",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "ai_skill": 6,
+  "random_seed": 25,
+  "max_turn_requested": 8,
+  "status": "OK",
+  "elapsed_ms": 10276,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 136,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Diamond [5c5] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA discards Gaea's Cradle [b4d] (source: Mox Diamond [5c5])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Diamond [5c5] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Birds of Paradise [16d] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Birds of Paradise)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Birds of Paradise [16d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [c2e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Tropical Island [1c1] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB casts Mystic Remora [d1a] from hand"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: Cast Mystic Remora)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Mystic Remora [d1a] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Badgermole Cub [613] from hand"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Badgermole Cub [613] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA - Ability triggers: Badgermole Cub [613] - When Badgermole Cub [613] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Underground Sea [c2e]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Marsh Flats [ab9] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA loses 1 life from Marsh Flats [ab9]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA sacrificed Marsh Flats [ab9] (source: Marsh Flats [ab9])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [ab9]"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA searches their library (source: Marsh Flats [ab9])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Tundra [ec4] from library onto the Battlefield (source: Marsh Flats [ab9])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA's library is shuffled (source: Marsh Flats [ab9])"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [7b7] from command"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [7b7] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "PlayerB - Ability triggers: Mystic Remora [d1a] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T4.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Misty Rainforest [ae8] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Misty Rainforest [ae8]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Misty Rainforest [ae8] (source: Misty Rainforest [ae8])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [ae8]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Misty Rainforest [ae8])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [85d] from library onto the Battlefield (source: Misty Rainforest [ae8])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Misty Rainforest [ae8])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Tymna the Weaver [5c8] from command"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Tymna the Weaver [5c8] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Elvish Spirit Guide)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Elvish Spirit Guide [873] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Elvish Spirit Guide)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Elvish Spirit Guide [873] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Badgermole Cub [613] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T5.DB",
+      "text": "Attacker: Thrasios, Triton Hero [7b7] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [613]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [7b7]"
+    },
+    {
+      "turnstep": "T5.CD",
+      "text": "Thrasios, Triton Hero [7b7] did 1 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [5c8] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T5.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [5c8]"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "PlayerB - Ability triggers: Mystic Remora [d1a] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T6.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Marsh Flats [08b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB loses 1 life from Marsh Flats [08b]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB sacrificed Marsh Flats [08b] (source: Marsh Flats [08b])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB activates: search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle. from Marsh Flats [08b]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Swamp card,...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB searches their library (source: Marsh Flats [08b])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB puts Tundra [6ab] from library onto the Battlefield (source: Marsh Flats [08b])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerB's library is shuffled (source: Marsh Flats [08b])"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA activates: scry 1, then reveal the top card of your library. If it's a land card, put it onto the battlefield tapped. Otherwise, draw a card. from Thrasios, Triton Hero [7b7]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack push: 2 (top: Cast Silence)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB casts Silence [185] from hand"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 2 (top: Cast Silence)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerB puts Silence [185] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({4}: Scry 1, then reveal the top card of your library. If it's a land card, put it...)"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA scries 1 (source: Thrasios, Triton Hero [7b7])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts a card from library to the bottom of their library (source: Thrasios, Triton Hero [7b7])"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA reveals Colossal Skyturtle (source: Thrasios, Triton Hero [7b7])"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA attacks PlayerB with 5 creatures"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Underground Sea [c2e] (1/1) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Badgermole Cub [613] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Thrasios, Triton Hero [7b7] (1/3) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Tymna the Weaver [5c8] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.DB",
+      "text": "Attacker: Elvish Spirit Guide [873] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Underground Sea [c2e]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Badgermole Cub [613]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 1 life at combat from Thrasios, Triton Hero [7b7]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Thrasios, Triton Hero [7b7] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Tymna the Weaver [5c8]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "Tymna the Weaver [5c8] did 2 combat damage to PlayerB during the game."
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerB loses 2 life at combat from Elvish Spirit Guide [873]"
+    },
+    {
+      "turnstep": "T7.CD",
+      "text": "PlayerA gains 2 life"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA - Ability triggers: Tymna the Weaver [5c8] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA loses 1 life from Tymna the Weaver [5c8]"
+    },
+    {
+      "turnstep": "T7.M2",
+      "text": "PlayerA puts Boseiju, Who Endures [80c] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack push: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "PlayerB - Ability triggers: Mystic Remora [d1a] - Cumulative upkeep {1}"
+    },
+    {
+      "turnstep": "T8.UP",
+      "text": "Stack resolve: 1 (top: stack ability (Cumulative upkeep {1}))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts City of Brass [5b7] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Deathrite Shaman)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Deathrite Shaman [384] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: City of Brass [5b7] - Whenever City of Brass [5b7] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB loses 1 life from City of Brass [5b7]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA loses 1 life from Force of Will [c7e]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA moves Gilded Drake [c37] from hand to the exile zone (source: Force of Will [c7e])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA casts Force of Will [c7e] using alternative casting costs targeting Deathrite Shaman [384] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 3 (top: stack ability (Whenever an opponent casts a noncreature spell, you may draw a card unless that pl...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Mystic Remora [d1a] - Whenever an opponent casts a noncreature spell, you may draw a card unless that player pays {4}."
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 3 (top: stack ability (Whenever an opponent casts a noncreature spell, you may draw a card unless that pl...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 2 (top: Cast Force of Will)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Deathrite Shaman [384] from stack into their graveyard (source: Force of Will [c7e])"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Deathrite Shaman [384] is countered by Force of Will [c7e]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerA puts Force of Will [c7e] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:35:17.159198+00:00"
+}

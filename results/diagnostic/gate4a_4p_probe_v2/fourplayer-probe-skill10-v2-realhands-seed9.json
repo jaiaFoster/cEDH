@@ -1,0 +1,322 @@
+{
+  "game_id": "fourplayer-probe-skill10-v2-realhands-seed9",
+  "purpose": "FOUR_PLAYER_DIAGNOSTIC_PROBE: rules-engine/adapter/basic-policy stress testing, NOT cEDH metagame inference or any strategic evidence",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "gate_phase": "FOUR_PLAYER_DIAGNOSTIC_PROBE",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 4,
+  "mirror_match": true,
+  "ai_skill": 10,
+  "random_seed": 9,
+  "max_turn_requested": 8,
+  "status": "UNKNOWN",
+  "elapsed_ms": null,
+  "exception": null,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 75,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerC's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerD's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Mox Amber [387] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Amber)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Mox Amber [387] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Starting Town [362] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA casts Sol Ring [17c] from hand"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: Cast Sol Ring)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Sol Ring [17c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Misty Rainforest [737] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD loses 1 life from Misty Rainforest [737]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD sacrificed Misty Rainforest [737] (source: Misty Rainforest [737])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [737]"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD searches their library (source: Misty Rainforest [737])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD puts Underground Sea [9f6] from library onto the Battlefield (source: Misty Rainforest [737])"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerD's library is shuffled (source: Misty Rainforest [737])"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerC puts Ancient Tomb [c5b] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Flooded Strand [af4] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB loses 1 life from Flooded Strand [af4]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB sacrificed Flooded Strand [af4] (source: Flooded Strand [af4])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [af4]"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB searches their library (source: Flooded Strand [af4])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Underground Sea [9ae] from library onto the Battlefield (source: Flooded Strand [af4])"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB's library is shuffled (source: Flooded Strand [af4])"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA loses 1 life from Starting Town [362]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA casts Badgermole Cub [f83] from hand"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: Cast Badgermole Cub)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA puts Badgermole Cub [f83] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "PlayerA - Ability triggers: Badgermole Cub [f83] - When Badgermole Cub [f83] enters, earthbend 1. (Target land you control becomes a 0/0 creature with haste that's still a land. Put a +1/+1 counter on it. When it dies or is exiled, return it to the battlefield tapped.) - targeting Starting Town [362]"
+    },
+    {
+      "turnstep": "T5.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, earthbend 1. <i>(Target land you control becomes a 0/0 creatur...)"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Flooded Strand [619] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD loses 1 life from Flooded Strand [619]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD sacrificed Flooded Strand [619] (source: Flooded Strand [619])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD activates: search your library for a Plains or Island card, put it onto the battlefield, then shuffle. from Flooded Strand [619]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Plains or Island card...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD searches their library (source: Flooded Strand [619])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Tundra [a6b] from library onto the Battlefield (source: Flooded Strand [619])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD's library is shuffled (source: Flooded Strand [619])"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD casts Gilded Drake [af1] from hand"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD puts Gilded Drake [af1] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "PlayerD - Ability triggers: Gilded Drake [af1] - When Gilded Drake [af1] enters, exchange control of Gilded Drake [af1] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [af1]. This ability still resolves if its target becomes illegal. - targeting Badgermole Cub [f83]"
+    },
+    {
+      "turnstep": "T6.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerD skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerC skip attack"
+    },
+    {
+      "turnstep": "T7.CL",
+      "text": "PlayerC discards down to 7 hand cards"
+    },
+    {
+      "turnstep": "T7.CL",
+      "text": "PlayerC discards Misdirection [d70]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Otawara, Soaring City [095] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB casts Gilded Drake [60d] from hand"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: Cast Gilded Drake)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB puts Gilded Drake [60d] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "PlayerB - Ability triggers: Gilded Drake [60d] - When Gilded Drake [60d] enters, exchange control of Gilded Drake [60d] and up to one target creature an opponent controls. If you don't or can't make an exchange, sacrifice Gilded Drake [60d]. This ability still resolves if its target becomes illegal. - targeting Gilded Drake [af1]"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and up to one target creature an op...)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    }
+  ],
+  "created_at": "2026-08-12T21:44:11.633929+00:00"
+}
