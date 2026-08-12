@@ -14,7 +14,7 @@ passed for the specific model version and deck version in question.**
 
 | Gate | Description | Status | Evidence | Date |
 |---|---|---|---|---|
-| 1 | Card & rule coverage | **Blocked** | No subject decklist ingested yet; no network access to Scryfall/MTGJSON/Spellbook from this environment (`docs/SOURCES.md`) | — |
+| 1 | Card & rule coverage | **Blocked (in progress)** | Subject decklist supplied and Phase 0 legality/color-identity triage done (`docs/assignments/SIM-001.md`); full bulk Oracle ingestion still blocked — no network access to Scryfall/MTGJSON/Spellbook from this environment (`docs/SOURCES.md`) | 2026-08-12 |
 | 2 | Gold board states | Not started | depends on Gate 1 | — |
 | 3 | Gold games | Not started | depends on Gate 2 | — |
 | 4 | ~100 manually inspected games | Not started | depends on Gate 3 | — |
