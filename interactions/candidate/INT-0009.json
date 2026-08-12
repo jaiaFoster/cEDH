@@ -1,0 +1,46 @@
+{
+  "id": "INT-0009",
+  "status": "candidate",
+  "name": "Delney, Streetwise Lookout doubles Runic Armasaur's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "17913fb0-ef73-4b20-8625-b84d4e62178a",
+      "name": "Runic Armasaur",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "whenever Runic Armasaur's triggered ability would trigger",
+    "targets_required": [],
+    "other": [
+      "Runic Armasaur's oracle text: Whenever an opponent activates an ability of a creature or land that isn't a mana ability, you may draw a card.",
+      "Requires Runic Armasaur to have power 2 or less at the time of the trigger (Delney's ability text: \"Creatures you control with power 2 or less can't be blocked by creatures with power 3 or greater. If a triggered ability of a creature you control with power 2 or less triggers, that ability triggers an additional time.\") - both cards confirm this at their printed base power, but power can change from effects elsewhere in the deck (e.g. -1/-1 counters, boosts); not checked against every other card's interaction with this power threshold.",
+      "Relevant to Phase 32 robustness testing against activated-ability-heavy metagames (the assignment explicitly lists this as a robustness dimension) - Delney meaningfully increases the deck's punish for that specific field composition."
+    ]
+  },
+  "result": {
+    "summary": "Runic Armasaur's opponent-activated-ability draw trigger fires twice per qualifying opponent activation, drawing 2 cards instead of 1.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": false,
+  "verification": null,
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": "SIM-0007"
+}

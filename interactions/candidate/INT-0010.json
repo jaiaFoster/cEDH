@@ -1,0 +1,46 @@
+{
+  "id": "INT-0010",
+  "status": "candidate",
+  "name": "Delney, Streetwise Lookout doubles Spellseeker's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "a749c591-2fbe-41d8-ac5b-56ebce82d33e",
+      "name": "Spellseeker",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "whenever Spellseeker's triggered ability would trigger",
+    "targets_required": [],
+    "other": [
+      "Spellseeker's oracle text: When this creature enters, you may search your library for an instant or sorcery card with mana value 2 or less, reveal it, put it into your hand, then shuffle.",
+      "Requires Spellseeker to have power 2 or less at the time of the trigger (Delney's ability text: \"Creatures you control with power 2 or less can't be blocked by creatures with power 3 or greater. If a triggered ability of a creature you control with power 2 or less triggers, that ability triggers an additional time.\") - both cards confirm this at their printed base power, but power can change from effects elsewhere in the deck (e.g. -1/-1 counters, boosts); not checked against every other card's interaction with this power threshold.",
+      "Effectively doubles tutor density off one card when Delney is out - relevant to Phase 25 tutor-network analysis (each of the two finds still costs a separate reveal but no extra mana)."
+    ]
+  },
+  "result": {
+    "summary": "Spellseeker's ETB tutor trigger fires twice, finding up to two instant/sorcery cards with mana value 2 or less from a single Spellseeker resolution instead of one.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": false,
+  "verification": null,
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": "SIM-0007"
+}

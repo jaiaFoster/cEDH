@@ -1,0 +1,46 @@
+{
+  "id": "INT-0008",
+  "status": "candidate",
+  "name": "Delney, Streetwise Lookout doubles Esper Sentinel's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "f3537373-ef54-4578-9d05-6216420ee349",
+      "name": "Esper Sentinel",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "whenever Esper Sentinel's triggered ability would trigger",
+    "targets_required": [],
+    "other": [
+      "Esper Sentinel's oracle text: Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is this creature's power.",
+      "Requires Esper Sentinel to have power 2 or less at the time of the trigger (Delney's ability text: \"Creatures you control with power 2 or less can't be blocked by creatures with power 3 or greater. If a triggered ability of a creature you control with power 2 or less triggers, that ability triggers an additional time.\") - both cards confirm this at their printed base power, but power can change from effects elsewhere in the deck (e.g. -1/-1 counters, boosts); not checked against every other card's interaction with this power threshold.",
+      "Meaningfully raises the effective tax rate of a card already valued primarily for its tax; relevant to Phase 21 engine realization (Esper Sentinel is one of the assignment's named engines to measure)."
+    ]
+  },
+  "result": {
+    "summary": "Esper Sentinel's tax trigger fires twice on an opponent's first noncreature spell each turn: they must pay X (Esper Sentinel's power) separately for each instance to deny each draw, or you draw up to 2 cards instead of 1.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": false,
+  "verification": null,
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": "SIM-0007"
+}
