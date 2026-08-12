@@ -1,0 +1,73 @@
+{
+  "id": "GBS-0005",
+  "description": "Delney, Streetwise Lookout + Esper Sentinel: Esper Sentinel's 'draw unless opponent pays {X}' tax trigger is a power-1 creature's triggered ability, so Delney doubles it. Both independent instances offer the casting opponent their own pay-or-decline choice; this fixture demonstrates the 'decline both, can't afford either' branch (2 draws for the controller). Validates INT-0008.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "3 Island for playerB were sized exactly to cast Divination ({2}{U}) with nothing spare, so both pay-{1}-or-decline choices are forced to 'can't afford it' regardless of the opponent's preference - this isolates the doubling mechanism from opponent-choice variance, not a claim that opponents always lack spare mana.",
+    "Divination was chosen as an arbitrary cheap noncreature spell; its own draw effect benefits playerB (the caster), not playerA, and is incidental to the interaction under test.",
+    "No other permanents, hand cards beyond what's listed, or players' boards were modeled."
+  ],
+  "interaction_under_test": "INT-0008",
+  "material_characteristics": [
+    "Esper Sentinel's power is exactly 1, so its own triggered ability qualifies for Delney's power-2-or-less doubling clause",
+    "Esper Sentinel's trigger is 'draw a card unless that player pays {X}' - a targeted-at-the-caster tax effect with an opponent-controlled pay/decline choice built in, distinct from Orcish Bowmasters' (INT-0007) any-target damage or Runic Armasaur's (INT-0009) controller-side 'may'",
+    "Delney's static ability produces two independently-resolved instances, each with its own pay-or-decline choice for the casting opponent (per the official Delney ruling on independent resolution-time choices)"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the noncreature spell playerB cast (any noncreature spell triggers Esper Sentinel identically)",
+    "All board state not directly involved in the two-permanent interaction",
+    "The opponent's actual preference between paying and declining - this fixture forces 'decline' by removing the ability to pay, not by asserting opponents always decline"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Delney, Streetwise Lookout", "quantity": 1},
+          {"card": "Esper Sentinel", "quantity": 1}
+        ],
+        "hand": [],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [
+          {"card": "Island", "quantity": 3}
+        ],
+        "hand": ["Divination"],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 2
+  },
+  "expected": {
+    "legal_actions": [
+      "Seat 2 casts Divination"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that Esper Sentinel's tax only fires once (Delney alone) rather than twice, each independently offering the pay-or-decline choice",
+      "Modeling the two instances as a single 'pay {2} total or draw 2' aggregate rather than two separate {1}-or-draw-1 decisions"
+    ],
+    "outcome_if_resolved": "After seat 2 casts Divination and both Esper Sentinel trigger instances resolve (seat 2 unable to pay either {1}): seat 1's hand grows from 0 to 2 cards."
+  },
+  "rules_citations": [
+    "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",
+    "CR 603.3b (a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DelneyEsperSentinelDoubleTest#test_DelneyDoublesEsperSentinelTax, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001..0004. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

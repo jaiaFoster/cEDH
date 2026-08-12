@@ -1,0 +1,69 @@
+{
+  "id": "INT-0008",
+  "status": "verified",
+  "name": "Delney, Streetwise Lookout doubles Esper Sentinel's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "f3537373-ef54-4578-9d05-6216420ee349",
+      "name": "Esper Sentinel",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Whenever an opponent casts their first noncreature spell each turn.",
+    "targets_required": [],
+    "other": [
+      "Esper Sentinel's oracle text: 'Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is this creature's power.' Power is 1, so it qualifies for Delney's power-2-or-less doubling clause.",
+      "MODELING REQUIREMENT for future Layer 5 encoding (per docs/ARCHITECTURE.md Layer 2 and the official Delney ruling: 'Any choices made on resolution... are also made individually.'): each of the two doubled instances independently offers the casting opponent a 'pay {X} or the controller draws' choice. An opponent could legally pay for one instance and not the other - do not model this as a single 'pay {2X} or draw 2' aggregate. GBS-0005 demonstrates the 'decline both' branch of that decision tree, not the whole tree."
+    ]
+  },
+  "result": {
+    "summary": "Esper Sentinel's tax trigger fires twice on an opponent's first noncreature spell each turn: the caster independently decides, per instance, whether to pay {X} (X = Esper Sentinel's power) or let the controller draw a card - up to 2 separate pay-or-draw decisions instead of 1.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d — an ability may state that a triggered ability triggers additional times; determine how many times, then trigger that many times.",
+      "CR 603.3b — a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyEsperSentinelDoubleTest#test_DelneyDoublesEsperSentinelTax (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0005.json for the fixture record). Test setup: Delney + Esper Sentinel on the battlefield for playerA, 3 Island + Divination in hand for playerB. playerB cast Divination (a noncreature spell, exactly using all 3 mana, none spare to pay Esper Sentinel's {1} tax). Two independent trigger instances appeared (one trigger-order choice needed), each independently asking playerB 'Pay {1}?' (declined both times, matching the 'no spare mana' setup). Result: playerA's hand grew from 0 to 2 (their fixture-setup starting hand is empty; Divination's own draws go to playerB, the caster, not playerA). Passed 1/1 on the second attempt (first attempt failed with 'Missing CHOICE def' for the trigger-order decision, fixed with setChoice(playerA, \"Esper Sentinel\"); the pay/decline choices then also needed setChoice(playerB, false, 2))."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    },
+    {
+      "type": "oracle_ruling",
+      "reference": "Scryfall-sourced official ruling on Delney, Streetwise Lookout (2024-02-02): 'Any choices made as you put the ability onto the stack, such as modes and targets, are made separately for each instance of the ability. Any choices made on resolution, such as whether to put counters on a permanent, are also made individually.' Directly supports the independent-pay-or-draw decision per instance."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyEsperSentinelDoubleTest#test_DelneyDoublesEsperSentinelTax, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 603.3b"
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": null
+}

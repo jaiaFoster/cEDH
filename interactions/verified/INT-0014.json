@@ -1,0 +1,70 @@
+{
+  "id": "INT-0014",
+  "status": "verified",
+  "name": "Delney, Streetwise Lookout doubles Archivist of Oghma's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "f6589e02-8c84-4069-88d1-ebcc8520cae1",
+      "name": "Archivist of Oghma",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Any time an opponent searches their library (tutors, fetchlands, etc.), while both Delney and Archivist of Oghma are on the battlefield.",
+    "targets_required": [],
+    "other": [
+      "Delney's oracle text: 'If a triggered ability of a creature you control with power 2 or less triggers, that ability triggers an additional time.'",
+      "Archivist of Oghma's oracle text: 'Whenever an opponent searches their library, you gain 1 life and draw a card.' Power is 2, so it qualifies for Delney's doubling. Unlike INT-0008/0009/0010, this ability is mandatory (no target, no 'may', no opponent-decided cost) - both doubled instances resolve identically and automatically, so there is no real decision-tree to preserve beyond CR 603.3b's trigger-ordering choice (which is moot here since the two instances have no order-dependent effect).",
+      "Effect is opponent-triggered (fires off any opponent's library search, not the controller's own action), so frequency depends on the opponents' decks/play patterns rather than being deck-controlled."
+    ]
+  },
+  "result": {
+    "summary": "Each opponent library search triggers Archivist of Oghma's life-gain-and-draw ability twice instead of once (2 life + 2 cards per qualifying search) while both Delney and Archivist of Oghma are on the battlefield.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d — an ability may state that a triggered ability triggers additional times; determine how many times, then trigger that many times.",
+      "CR 603.3b — a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0008/0009/0010/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyArchivistOfOghmaDoubleTest#test_DelneyDoublesArchivistOfOghma (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0008.json for the fixture record). Test setup: Delney + Archivist of Oghma on the battlefield for playerA, Evolving Wilds on the battlefield and a Forest in the library for playerB. playerB activated Evolving Wilds (sacrifice, search library for a basic land) - an opponent library search. One trigger-order choice needed. Result: playerA's life rose from 20 to 22 and hand grew from 0 to 2. Passed 1/1 on the first attempt."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent scan of subject-deck creatures with power 2 or less and a triggered ability, cross-referenced against Delney's doubling clause, per the charter's named priority category 'Delney interactions'."
+    },
+    {
+      "type": "commander_spellbook",
+      "reference": "https://backend.commanderspellbook.com/variants?q=card%3D%22Delney%2C%20Streetwise%20Lookout%22%20card%3D%22Archivist%20of%20Oghma%22 returned 0 results at query time, confirming this is not already catalogued there."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyArchivistOfOghmaDoubleTest#test_DelneyDoublesArchivistOfOghma, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 603.3b"
+    }
+  ],
+  "discovered_via": "manual_review",
+  "coverage_backlog_ref": null
+}

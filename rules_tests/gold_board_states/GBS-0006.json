@@ -1,0 +1,72 @@
+{
+  "id": "GBS-0006",
+  "description": "Delney, Streetwise Lookout + Runic Armasaur: Runic Armasaur's 'may draw' opponent-activated-ability trigger is a power-2 creature's triggered ability, so Delney doubles it. Both independent instances offer the controller their own optional draw choice; this fixture demonstrates accepting both. Validates INT-0009.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Mishra's Factory + Wastes for playerB were chosen as an arbitrary source of a non-mana land activated ability with no target - any qualifying non-mana creature/land ability triggers Runic Armasaur identically.",
+    "No other permanents, hand cards beyond what's listed, or players' boards were modeled."
+  ],
+  "interaction_under_test": "INT-0009",
+  "material_characteristics": [
+    "Runic Armasaur's power is exactly 2, so its own triggered ability qualifies for Delney's power-2-or-less doubling clause",
+    "Runic Armasaur's trigger is 'you may draw a card' - an optional ability where the choice belongs to Runic Armasaur's own controller, distinct from Esper Sentinel's (INT-0008) opponent-controlled pay/decline choice",
+    "Delney's static ability produces two independently-resolved instances, each offering its own separate 'may draw' choice"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the specific non-mana land/creature ability activated (any qualifying activation triggers Runic Armasaur identically)",
+    "All board state not directly involved in the two-permanent interaction"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Delney, Streetwise Lookout", "quantity": 1},
+          {"card": "Runic Armasaur", "quantity": 1}
+        ],
+        "hand": [],
+        "life": 20
+      },
+      {
+        "seat": 2,
+        "battlefield": [
+          {"card": "Mishra's Factory", "quantity": 1},
+          {"card": "Wastes", "quantity": 1}
+        ],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 2
+  },
+  "expected": {
+    "legal_actions": [
+      "Seat 2 activates Mishra's Factory's '{1}: becomes a 2/2 Assembly-Worker' ability"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that Runic Armasaur's draw only fires once (Delney alone) rather than twice, each independently offering the controller a 'may draw' choice",
+      "Modeling the two instances as a single 'may draw 2' choice rather than two separate optional decisions"
+    ],
+    "outcome_if_resolved": "After seat 2 activates Mishra's Factory and seat 1 accepts both independent 'may draw' choices: seat 1's hand grows from 0 to 2 cards."
+  },
+  "rules_citations": [
+    "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",
+    "CR 603.3b (a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DelneyRunicArmasaurDoubleTest#test_DelneyDoublesRunicArmasaurDraw, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001..0005. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

@@ -39,6 +39,38 @@ See `../README.md`. Only interactions validated per Level 4 (rules citations
   (`org.mage.test.cards.interactions.cedh.DelneyOrcishBowmastersDoubleTest`,
   1/1 passing). Backing gold board state:
   `rules_tests/gold_board_states/GBS-0004.json`.
+- **`INT-0008`** — Delney doubles Esper Sentinel's tax trigger → two
+  independent "draw unless the caster pays {X}" decisions per qualifying
+  spell instead of one. Verified 2026-08-12 (CR 603.2d, 603.3b; XMage
+  `DelneyEsperSentinelDoubleTest`, 1/1). Backing gold board state:
+  `GBS-0005.json`.
+- **`INT-0009`** — Delney doubles Runic Armasaur's "may draw" trigger →
+  two independent optional-draw decisions per qualifying opponent
+  activation instead of one. Verified 2026-08-12 (CR 603.2d, 603.3b; XMage
+  `DelneyRunicArmasaurDoubleTest`, 1/1 on first attempt). Backing gold
+  board state: `GBS-0006.json`.
+- **`INT-0010`** — Delney doubles Spellseeker's ETB tutor trigger → two
+  independently-targeted library searches per resolution, engine-confirmed
+  capable of finding two *different* cards in one Spellseeker resolution.
+  Verified 2026-08-12 (CR 603.2d, 603.3b; XMage
+  `DelneySpellseekerDoubleTest`, 1/1 on first attempt, found Opt and Shock
+  simultaneously). Backing gold board state: `GBS-0007.json`.
+- **`INT-0014`** — Delney doubles Archivist of Oghma's mandatory
+  life-gain-and-draw trigger → 2 life + 2 cards per qualifying opponent
+  library search instead of 1 and 1 (no target/mode/choice to preserve
+  here, unlike the other four Delney doublings). Verified 2026-08-12 (CR
+  603.2d, 603.3b; XMage `DelneyArchivistOfOghmaDoubleTest`, 1/1 on first
+  attempt). Backing gold board state: `GBS-0008.json`.
 
-The other 11 candidates found so far (`interactions/candidate/`) remain
+**Modeling requirement for all five Delney-doubling interactions above**
+(`INT-0007`, `0008`, `0009`, `0010`, `0014`), established 2026-08-12 per
+user review and recorded in `docs/ARCHITECTURE.md` Layer 2: a future
+Layer 5 (Simulation) encoding must represent each doubled trigger as two
+genuinely independent instances — separate targets, separate optional
+choices, separate ordering — not a single atomic "2x" aggregate effect.
+The single-outcome gold board states above are valid evidence the
+*results* reproduce correctly; they are not license to collapse the
+decision tree when this is later encoded for policy/simulation.
+
+The other 7 candidates found so far (`interactions/candidate/`) remain
 unverified — see `coverage_backlog/BACKLOG.md` `SIM-0007`.

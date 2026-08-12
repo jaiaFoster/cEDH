@@ -57,6 +57,24 @@ reach any of the candidate rules-engine repositories or MTG data APIs (see
 **Status:** empty; populated once the decklist arrives and the interaction
 discovery pass (charter section "Interaction discovery pass") runs.
 
+**Decision-space fidelity requirement (established 2026-08-12, from
+`INT-0007`):** when a verified interaction's mechanism causes a triggered
+ability to trigger multiple times — Delney, Streetwise Lookout's clause is
+the concrete example, but the same applies to any future "triggers an
+additional time"/copy-effect interaction — Layer 5 (Simulation) must encode
+it as multiple genuinely independent instances of that ability, each with
+its own target choice, optional-cost decision, mode choice, and stack
+position, not as a single atomic aggregate effect (e.g. "deal 2 damage and
+amass 2" instead of "deal 1 damage to any target; then amass Orcs 1,
+resolving twice with two separately-targeted instances and an explicit
+trigger-ordering choice per CR 603.3b"). A gold board state's single
+recorded outcome (e.g. `GBS-0004`'s "both instances targeted the same
+player, 2 total damage") is valid evidence that the *result* is reproduced
+correctly, but it is not license to collapse the interaction's actual
+decision tree when it is later encoded for policy/simulation — targets,
+optional payments, modes, ordering, and any opponent choices along the way
+remain strategically meaningful and must stay selectable, not pre-baked.
+
 ## 3. Archetypes — `data/archetypes/`
 
 Empirical registry built from tournament data (TopDeck.gg, EDHTop16), not a

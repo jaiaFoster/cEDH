@@ -1,0 +1,71 @@
+{
+  "id": "INT-0010",
+  "status": "verified",
+  "name": "Delney, Streetwise Lookout doubles Spellseeker's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "a749c591-2fbe-41d8-ac5b-56ebce82d33e",
+      "name": "Spellseeker",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "When Spellseeker enters the battlefield.",
+    "targets_required": [
+      "Each independent instance of the doubled trigger independently searches the library and may find a DIFFERENT instant/sorcery card with mana value 2 or less - both searches happen with the full library available (the first search's shuffle occurs before the second search's target selection, per CR 603.3b's stack ordering)."
+    ],
+    "other": [
+      "Spellseeker's oracle text: 'When this creature enters, you may search your library for an instant or sorcery card with mana value 2 or less, reveal it, put it into your hand, then shuffle your library.' Power is 1, so it qualifies for Delney's power-2-or-less doubling clause.",
+      "MODELING REQUIREMENT for future Layer 5 encoding (per docs/ARCHITECTURE.md Layer 2): the two doubled instances are independently-targeted library searches, not a single 'find 2 cards' effect - a controller can find two different cards (as engine-verified below) or the same card twice if two copies exist, or decline one and take the other (each instance is separately optional). Encoding this as an atomic 'search for 2 cards' collapses real decision points (the target of each search, and each instance's independent may-search choice)."
+    ]
+  },
+  "result": {
+    "summary": "Spellseeker's ETB tutor trigger fires twice, independently, letting the controller find up to two (potentially different) instant/sorcery cards with mana value 2 or less from a single Spellseeker resolution instead of one.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d — an ability may state that a triggered ability triggers additional times; determine how many times, then trigger that many times.",
+      "CR 603.3b — a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0008/0009/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneySpellseekerDoubleTest#test_DelneyDoublesSpellseekerETB (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0007.json for the fixture record). Test setup: Delney on the battlefield, 3 Island + Spellseeker in hand, and two distinct mana-value<3 instants (Opt, Shock) in the library, for playerA. Cast Spellseeker (its ETB genuinely fires since it was cast, not fixture-placed). One trigger-order choice, two independent 'may search' choices (both accepted), and two independent target selections (Opt for the first instance, Shock for the second). Result: playerA's hand contained both Opt and Shock. Passed 1/1 on the first attempt - the strongest available engine demonstration that the two instances are genuinely independent (finding two DIFFERENT cards, not just 'the same card twice')."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    },
+    {
+      "type": "oracle_ruling",
+      "reference": "Scryfall-sourced official ruling on Delney, Streetwise Lookout (2024-02-02): 'Any choices made as you put the ability onto the stack, such as modes and targets, are made separately for each instance of the ability.' Directly confirms the two independently-targeted library searches."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneySpellseekerDoubleTest#test_DelneyDoublesSpellseekerETB, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 603.3b"
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": null
+}

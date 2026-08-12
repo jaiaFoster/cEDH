@@ -1,0 +1,70 @@
+{
+  "id": "INT-0009",
+  "status": "verified",
+  "name": "Delney, Streetwise Lookout doubles Runic Armasaur's triggered ability",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "17913fb0-ef73-4b20-8625-b84d4e62178a",
+      "name": "Runic Armasaur",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Whenever an opponent activates a non-mana ability of a creature or land.",
+    "targets_required": [],
+    "other": [
+      "Runic Armasaur's oracle text: 'Whenever an opponent activates an ability of a creature or land that isn't a mana ability, you may draw a card.' Power is 2, so it qualifies for Delney's power-2-or-less doubling clause.",
+      "The ability is a 'may' ability (optional), unlike Esper Sentinel's mandatory-with-opponent-choice or Orcish Bowmasters' mandatory shape - so the choice at stake here belongs to Runic Armasaur's own controller, not the opponent.",
+      "MODELING REQUIREMENT for future Layer 5 encoding (per docs/ARCHITECTURE.md Layer 2): each of the two doubled instances is an independent 'may draw' decision for the controller - a player could accept one and decline the other (e.g. to avoid a draw-triggered downside elsewhere in a four-player game). Do not collapse to a single 'may draw 2' choice."
+    ]
+  },
+  "result": {
+    "summary": "Runic Armasaur's opponent-activated-ability draw trigger fires twice per qualifying opponent activation: the controller independently decides, per instance, whether to draw - up to 2 cards instead of 1.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d — an ability may state that a triggered ability triggers additional times; determine how many times, then trigger that many times.",
+      "CR 603.3b — a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21) used for INT-0002/0007/0008/0013, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyRunicArmasaurDoubleTest#test_DelneyDoublesRunicArmasaurDraw (not committed to this repo — see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0006.json for the fixture record). Test setup: Delney + Runic Armasaur on the battlefield for playerA, Mishra's Factory + Wastes on the battlefield for playerB. playerB activated Mishra's Factory's '{1}: becomes a 2/2 Assembly-Worker' ability (a non-mana activated ability of a land, no target). One trigger-order choice needed, then two independent 'may draw' choices, both accepted. Result: playerA's hand grew from 0 to 2. Passed 1/1 on the first attempt."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent pairwise scan of card_cache oracle text against Delney's triggered-ability-doubling clause, 2026-08-12 (not indexed as a formal combo by Commander Spellbook - this is a value multiplier, not a win line)."
+    },
+    {
+      "type": "oracle_ruling",
+      "reference": "Scryfall-sourced official ruling on Delney, Streetwise Lookout (2024-02-02): 'Any choices made on resolution... are also made individually.' Supports the independent may-draw decision per instance."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyRunicArmasaurDoubleTest#test_DelneyDoublesRunicArmasaurDraw, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 603.3b"
+    }
+  ],
+  "discovered_via": "pairwise_scan",
+  "coverage_backlog_ref": null
+}

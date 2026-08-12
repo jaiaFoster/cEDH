@@ -1,0 +1,66 @@
+{
+  "id": "GBS-0007",
+  "description": "Delney, Streetwise Lookout + Spellseeker: Spellseeker's ETB 'may search for an instant/sorcery MV<=2' trigger is a power-1 creature's triggered ability, so Delney doubles it. Casting Spellseeker so its ETB genuinely fires produces two independently-targeted library searches, finding two DIFFERENT cards (Opt and Shock) - the strongest available demonstration that the instances are not collapsible into one. Validates INT-0010.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "3 Island were scaffolding to cast Spellseeker ({2}{U}); the mana source's identity is not material to the rule under test.",
+    "Opt and Shock were chosen as two arbitrary, cheap, distinct instant/sorcery cards for the library to make the 'two different finds' demonstration possible - any two qualifying cards would work identically.",
+    "No other permanents, hand cards, or players' boards were modeled."
+  ],
+  "interaction_under_test": "INT-0010",
+  "material_characteristics": [
+    "Spellseeker's power is exactly 1, so its own triggered ability qualifies for Delney's power-2-or-less doubling clause",
+    "Spellseeker's ETB is 'may search... reveal... put into hand... then shuffle' - the doubled instances are independently-targeted library searches, each with its own separate 'may search' choice and its own separate target card",
+    "Delney's static ability produces two independently-resolved instances; per the official Delney ruling, target choices are made separately for each instance"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the specific mana source used to cast Spellseeker",
+    "All board state not directly involved in the interaction",
+    "The specific two cards chosen to find (Opt, Shock) - any two distinct qualifying cards demonstrate the same point"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Delney, Streetwise Lookout", "quantity": 1},
+          {"card": "Island", "quantity": 3}
+        ],
+        "hand": ["Spellseeker"],
+        "library": ["Opt", "Shock"],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Spellseeker"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that Spellseeker's ETB only finds one card (Delney alone) rather than up to two",
+      "Modeling the two instances as a single 'search for 2 cards' effect rather than two separately-targeted, separately-optional searches (which could, per instance, decline, or find the same card twice if duplicates exist)"
+    ],
+    "outcome_if_resolved": "After casting Spellseeker and resolving both doubled ETB instances (finding Opt with the first, Shock with the second): both Opt and Shock are in seat 1's hand."
+  },
+  "rules_citations": [
+    "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",
+    "CR 603.3b (a player puts each of their own simultaneously-pending triggered abilities on the stack in any order they choose)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DelneySpellseekerDoubleTest#test_DelneyDoublesSpellseekerETB, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001..0006. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}
