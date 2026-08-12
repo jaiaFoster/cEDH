@@ -99,8 +99,26 @@ games, the 100-game manual inspection pass, and the sensitivity/regression
 harness for Gates 5–7. `rules_tests/regression/` accumulates a permanent test
 per discovered bug so the system never relearns the same lesson twice.
 
-**Status:** directory structure and schemas exist; no gold states yet because
-there is no ingested card data to build them from.
+This layer also owns the **synthetic-vs-deck-backed provenance boundary**
+(`docs/RUN_CLASSIFICATION.md`): `sim/validation/run_classification.py`'s
+`load_frozen_deck()` is the only sanctioned way anything in `sim/` may load
+a decklist for an empirical (`DECK_BACKED_*`) run, and it fails closed on a
+missing/mismatched deck hash, a provisional deck, an unknown/substituted
+card, or synthetic-fixture markers — see
+`rules_tests/regression/test_run_classification_guards.py`. Gold board
+states and gold games (`rules_tests/gold_board_states/`,
+`rules_tests/gold_games/`) are always `SYNTHETIC_*`-classed and structurally
+barred from feeding empirical statistics, regardless of how deck-faithful
+their setup looks.
+
+**Status:** card ingestion exists (`data/cards_cache/`), the subject deck
+is frozen with a canonical hash (`data/decklists/tymna-thrasios-treefarm-v1.json`),
+and one real Level 4 reproduction has been run against XMage (Devoted
+Druid's core ability, 3/3 passing). No `rules_tests/gold_board_states/` or
+`rules_tests/gold_games/` JSON records exist in this repo yet — the first
+XMage test files live in an external clone (not committed; XMage itself is
+GPL-licensed engine code, not this project's own artifact) and still need
+to be formalized as committed gold-state records per the schema.
 
 ## Supporting layers not in the charter's core six
 

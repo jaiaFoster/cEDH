@@ -2,11 +2,42 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cedh-research.local/schemas/gold_game.schema.json",
   "title": "Gold Game",
-  "description": "A manually-reviewed full game sequence for Validation Gate 3. Lives in rules_tests/gold_games/<id>.json.",
+  "description": "A manually-reviewed full game sequence for Validation Gate 3. Lives in rules_tests/gold_games/<id>.json. Per docs/RUN_CLASSIFICATION.md, this is always a SYNTHETIC_* run regardless of whether deck_versions references real frozen decks for flavor/context - it may never contribute to deck-performance statistics.",
   "type": "object",
-  "required": ["id", "description", "deck_versions", "seats", "turns", "expected_winner", "authored_by", "authored_date"],
+  "required": ["id", "description", "deck_versions", "seats", "turns", "expected_winner", "authored_by", "authored_date", "run_class", "representative_of_deck_draws", "synthetic_mana", "artificial_state_elements", "interaction_under_test", "material_characteristics", "abstracted_characteristics"],
   "properties": {
     "id": {"type": "string", "pattern": "^GG-[0-9]{4,}$"},
+    "run_class": {
+      "enum": ["SYNTHETIC_GOLD_STATE", "SYNTHETIC_RULES_TEST"],
+      "description": "Always one of these two - see docs/RUN_CLASSIFICATION.md. A gold game is by definition a laboratory fixture, never a deck-backed run, even when it references real deck versions for commander-specific behavior testing."
+    },
+    "representative_of_deck_draws": {
+      "const": false,
+      "description": "Always false - present explicitly per docs/RUN_CLASSIFICATION.md so a reader never has to infer it."
+    },
+    "synthetic_mana": {
+      "type": "boolean",
+      "description": "Whether mana sources in this fixture are arbitrary stand-ins rather than a real deck's actual mana base."
+    },
+    "artificial_state_elements": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Free-text list of exactly which parts of the state are intentionally not deck-representative."
+    },
+    "interaction_under_test": {
+      "type": "string",
+      "description": "The specific rule/interaction/sequence being validated - an INT-#### id where applicable, or a Comprehensive Rules citation."
+    },
+    "material_characteristics": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "What about this game DOES matter to the result and must be faithful."
+    },
+    "abstracted_characteristics": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "What's deliberately simplified because it doesn't affect the question under test."
+    },
     "description": {"type": "string"},
     "deck_versions": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 4},
     "seats": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 4},

@@ -2,11 +2,42 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cedh-research.local/schemas/gold_board_state.schema.json",
   "title": "Gold Board State",
-  "description": "A hand-authored test fixture for Validation Gate 2 (docs/VALIDATION_GATES.md). Lives in rules_tests/gold_board_states/<id>.json.",
+  "description": "A hand-authored test fixture for Validation Gate 2 (docs/VALIDATION_GATES.md). Lives in rules_tests/gold_board_states/<id>.json. Per docs/RUN_CLASSIFICATION.md, this is always a SYNTHETIC_* run - it may never contribute to deck-performance statistics regardless of how faithful its setup looks.",
   "type": "object",
-  "required": ["id", "description", "covers", "setup", "expected", "authored_by", "authored_date"],
+  "required": ["id", "description", "covers", "setup", "expected", "authored_by", "authored_date", "run_class", "representative_of_deck_draws", "synthetic_mana", "artificial_state_elements", "interaction_under_test", "material_characteristics", "abstracted_characteristics"],
   "properties": {
     "id": {"type": "string", "pattern": "^GBS-[0-9]{4,}$"},
+    "run_class": {
+      "const": "SYNTHETIC_GOLD_STATE",
+      "description": "Always SYNTHETIC_GOLD_STATE for this schema - see docs/RUN_CLASSIFICATION.md. A gold board state is by definition a laboratory fixture, never a deck-backed run."
+    },
+    "representative_of_deck_draws": {
+      "const": false,
+      "description": "Always false - present explicitly per docs/RUN_CLASSIFICATION.md so a reader never has to infer it."
+    },
+    "synthetic_mana": {
+      "type": "boolean",
+      "description": "Whether mana sources in this fixture are arbitrary stand-ins (e.g. generic basics) rather than the subject deck's actual mana base."
+    },
+    "artificial_state_elements": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Free-text list of exactly which parts of the state are intentionally not deck-representative, e.g. 'Plains/Forest count and presence are arbitrary scaffolding, not the subject deck's actual land base'."
+    },
+    "interaction_under_test": {
+      "type": "string",
+      "description": "The specific rule/interaction being validated - an INT-#### id where applicable, or a Comprehensive Rules citation for a rules-only test."
+    },
+    "material_characteristics": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "What about this state DOES matter to the result and must be faithful (e.g. 'Devoted Druid's toughness and creature-type status', 'Swift Reconfiguration's type-removal effect')."
+    },
+    "abstracted_characteristics": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "What's deliberately simplified because it doesn't affect the question under test (e.g. 'mana source identity - any W/G producer would do')."
+    },
     "description": {"type": "string"},
     "covers": {
       "type": "array",

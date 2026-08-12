@@ -48,6 +48,9 @@ Read, in order:
 2. `docs/ARCHITECTURE.md` — the six layers and how they fit together.
 3. `docs/SOURCES.md` — the source hierarchy and current access status for each source.
 4. `docs/VALIDATION_GATES.md` — why we are not running production simulations yet.
+5. `docs/RUN_CLASSIFICATION.md` — how every executable run is classified
+   synthetic vs. deck-backed, and why a gold-state test can never be
+   confused with (or silently feed) empirical deck-performance statistics.
 
 ## Current blockers
 

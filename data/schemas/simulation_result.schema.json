@@ -2,15 +2,21 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cedh-research.local/schemas/simulation_result.schema.json",
   "title": "Simulation Result",
-  "description": "Raw provenance-tagged output of one simulation run, per docs/VERSIONING.md. Lives at results/raw/<run_id>/config.json (this schema) plus a sibling games.jsonl or games/ directory of per-game records (schema not yet defined — depends on the state representation chosen once sim/ exists).",
+  "description": "Raw provenance-tagged output of one DECK-BACKED simulation run, per docs/VERSIONING.md and docs/RUN_CLASSIFICATION.md. Lives at results/raw/<run_id>/config.json (this schema) plus a sibling games.jsonl or games/ directory of per-game records (schema not yet defined — depends on the state representation chosen once sim/ exists). Synthetic laboratory fixtures (gold board states/games) NEVER use this schema — see gold_board_state.schema.json / gold_game.schema.json and docs/RUN_CLASSIFICATION.md. A run conforming to this schema is, by construction, empirical evidence about the actual subject/opponent decks, never a rules-only laboratory check.",
   "type": "object",
   "required": [
     "run_id",
+    "run_class",
     "evidence_type",
     "simulator_version",
     "rules_awareness_level",
     "subject_deck_version",
+    "subject_deck_hash",
+    "subject_deck_card_count",
+    "commander_identities",
+    "basics_substituted",
     "opponent_deck_versions",
+    "opponent_deck_hashes",
     "policy_versions",
     "random_seeds",
     "game_count",
@@ -20,11 +26,28 @@
   ],
   "properties": {
     "run_id": {"type": "string", "pattern": "^run-[0-9]{8}-.+$"},
-    "evidence_type": {"const": "simulation", "description": "Always 'simulation' for this schema; goldfish/static_probability/practice_game/tournament_game results use a different, lighter record — see docs/VERSIONING.md."},
+    "run_class": {
+      "enum": ["DECK_BACKED_GOLDFISH", "DECK_BACKED_SINGLE_PLAYER", "DECK_BACKED_FOUR_PLAYER"],
+      "description": "Per docs/RUN_CLASSIFICATION.md. This schema is reserved for deck-backed runs only - a synthetic fixture is structurally incapable of satisfying subject_deck_hash (see sim/validation/run_classification.py's load_frozen_deck() guard, which refuses to load anything carrying a SYNTHETIC_* run_class or representative_of_deck_draws=false)."
+    },
+    "evidence_type": {"enum": ["simulation", "goldfish"], "description": "goldfish for DECK_BACKED_GOLDFISH runs, simulation for DECK_BACKED_SINGLE_PLAYER/DECK_BACKED_FOUR_PLAYER. practice_game/tournament_game/static_probability results use a different, lighter record — see docs/VERSIONING.md."},
     "simulator_version": {"type": "string", "description": "git SHA of sim/ at run time."},
     "rules_awareness_level": {"type": "integer", "minimum": 0, "maximum": 4},
-    "subject_deck_version": {"type": "string"},
-    "opponent_deck_versions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "subject_deck_version": {"type": "string", "description": "Must resolve to a frozen data/decklists/<version>.json file — never data/decklists/_provisional/."},
+    "subject_deck_hash": {"type": "string", "description": "Canonical SHA-256 deck hash (sim/validation/run_classification.py's compute_deck_hash()), must match the frozen decklist file's own deck_hash field exactly."},
+    "subject_deck_card_count": {"type": "integer", "minimum": 1, "description": "Exact card count of the loaded deck, checked against the frozen file."},
+    "commander_identities": {"type": "array", "items": {"type": "string"}, "minItems": 1, "description": "Checked against the frozen decklist file's commanders field."},
+    "basics_substituted": {
+      "type": "boolean",
+      "default": false,
+      "description": "Must be false unless this run is a declared ablation (charter: never silently simplify). True requires ablation_justification to also be present and non-empty."
+    },
+    "ablation_justification": {
+      "type": ["string", "null"],
+      "description": "Required non-null/non-empty when basics_substituted is true; must explain what's being tested by the substitution and why. Null/omitted when basics_substituted is false."
+    },
+    "opponent_deck_versions": {"type": "array", "items": {"type": "string"}, "minItems": 0, "description": "Empty for DECK_BACKED_GOLDFISH/DECK_BACKED_SINGLE_PLAYER (no opponents); one entry per opposing seat for DECK_BACKED_FOUR_PLAYER."},
+    "opponent_deck_hashes": {"type": "array", "items": {"type": "string"}, "description": "One canonical deck hash per entry in opponent_deck_versions, same order, same hash-check requirement as subject_deck_hash."},
     "archetype_registry_version": {"type": ["string", "null"]},
     "policy_versions": {"type": "array", "items": {"type": "string"}},
     "pod_sampling": {
@@ -62,6 +85,15 @@
       }
     },
     "created_at": {"type": "string", "format": "date-time"}
+  },
+  "if": {
+    "properties": {"basics_substituted": {"const": true}}
+  },
+  "then": {
+    "properties": {
+      "ablation_justification": {"type": "string", "minLength": 1}
+    },
+    "required": ["ablation_justification"]
   },
   "additionalProperties": false
 }

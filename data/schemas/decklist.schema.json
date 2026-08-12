@@ -2,12 +2,17 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cedh-research.local/schemas/decklist.schema.json",
   "title": "Decklist",
-  "description": "One versioned decklist (subject or opponent). Lives at data/decklists/<deck_version>.json. A changed card list is a new file, never an edit to an existing one (docs/VERSIONING.md immutability rule).",
+  "description": "One versioned decklist (subject or opponent). Lives at data/decklists/<deck_version>.json. A changed card list is a new file, never an edit to an existing one (docs/VERSIONING.md immutability rule). Per docs/RUN_CLASSIFICATION.md: only a file with a deck_hash field is 'frozen' and eligible to back a DECK_BACKED_* run via sim/validation/run_classification.py's load_frozen_deck() — data/decklists/_provisional/ files deliberately never carry deck_hash, which is itself part of what marks them non-frozen.",
   "type": "object",
   "required": ["deck_version", "deck_name", "commanders", "cards", "role", "source", "ingested"],
   "properties": {
     "deck_version": {"type": "string", "pattern": "^.+-v[0-9]+$"},
     "deck_name": {"type": "string"},
+    "deck_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Canonical SHA-256 hash from sim/validation/run_classification.py's compute_deck_hash() (over sorted commander names + sorted (name, scryfall_id, quantity) tuples). Present only once this file is frozen/production-ready; its absence is what makes a decklist ineligible to back a DECK_BACKED_* simulation run."
+    },
     "commanders": {"type": "array", "items": {"type": "string"}, "minItems": 1, "maxItems": 2},
     "archetype_id": {"type": ["string", "null"], "description": "Null for the subject deck until/unless it's also classified against the empirical registry; required for opponent decks used in matchup analysis."},
     "role": {"enum": ["subject", "opponent"]},
