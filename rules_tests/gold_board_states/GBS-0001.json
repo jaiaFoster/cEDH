@@ -1,0 +1,70 @@
+{
+  "id": "GBS-0001",
+  "description": "Devoted Druid + Swift Reconfiguration: enchanted Devoted Druid stops being a creature (Layer 4 type change), so its own -1/-1-counter untap ability never triggers the toughness-0 state-based action — validates INT-0002 as a real, repeatable infinite-green-mana loop, not an assumed one.",
+  "covers": ["combo_loop", "activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Mana base: 2 Forest + 1 Plains are arbitrary scaffolding, not the subject deck's actual land base or mana curve — only enough {W} to cast Swift Reconfiguration once was material.",
+    "No other permanents, hand cards, or players' boards were modeled — this is a two-card isolation test, not a representative game state.",
+    "Loop was run a fixed 5 times (not to any natural stopping point) purely to demonstrate non-termination within a bounded, checkable range; the test framework has no unbounded-loop assertion."
+  ],
+  "interaction_under_test": "INT-0002",
+  "material_characteristics": [
+    "Devoted Druid's exact activated-ability costs and effects (mana ability + -1/-1-counter untap ability)",
+    "Swift Reconfiguration's exact type-changing effect ('loses all other card types', becomes a Vehicle artifact, 'not a creature unless crewed')",
+    "The Layer 4 type-change timing relative to state-based action checks (CR 613.1d, 704.5f)",
+    "That -1/-1 counters may still be placed on a non-creature permanent (CR 121) without a P/T-reduction effect to apply to"
+  ],
+  "abstracted_characteristics": [
+    "Mana source identity (any producer of {W} for the one-time Swift Reconfiguration cast would do)",
+    "All board state not directly involved in the two-card interaction",
+    "Turn/phase beyond what's needed to cast one spell and activate abilities repeatedly in a single main phase"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Forest", "quantity": 2},
+          {"card": "Plains", "quantity": 1},
+          {"card": "Devoted Druid", "quantity": 1}
+        ],
+        "hand": ["Swift Reconfiguration"],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Cast Swift Reconfiguration targeting Devoted Druid",
+      "After Swift Reconfiguration resolves: activate Devoted Druid's mana ability ({T}: Add {G})",
+      "Activate Devoted Druid's untap ability (put a -1/-1 counter on it: untap it) — repeatable without limit"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that Devoted Druid dies once total -1/-1 counters exceed its printed toughness (2) — it does not, because it is not a creature while enchanted by Swift Reconfiguration"
+    ],
+    "outcome_if_resolved": "After 5 loop iterations: Devoted Druid still on the battlefield (not in graveyard), carrying 5 -1/-1 counters, type Artifact (not Creature), with 5 {G} in the player's mana pool. The loop has no natural termination and could be run an arbitrary number of times within the same priority window."
+  },
+  "rules_citations": [
+    "CR 613.1d (Layer 4, type-changing effects)",
+    "CR 704.5f (state-based action: 0-or-less-toughness creature to graveyard — applies only to creatures)",
+    "CR 121 (counters may be placed on any permanent, not creature-restricted)",
+    "CR 702.121 (Crew — 'not a creature unless crewed')"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DevotedDruidSwiftReconfigurationTest#test_LoopSurvives_NotACreature, 1/1 passing, run 2026-08-12 against a from-source build of magefree/mage (JDK 21). Test file not committed to this repo (external engine source tree, not this project's own artifact) — see docs/RUN_CLASSIFICATION.md for why gold-state provenance doesn't require vendoring the engine itself, only recording what was run against it and when."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

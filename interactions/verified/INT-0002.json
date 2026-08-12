@@ -1,0 +1,67 @@
+{
+  "id": "INT-0002",
+  "status": "verified",
+  "name": "Devoted Druid + Swift Reconfiguration → infinite green mana",
+  "cards": [
+    {
+      "scryfall_id": "22589a81-3ea8-4e78-98c9-c015e7539cf9",
+      "name": "Devoted Druid",
+      "role": "piece"
+    },
+    {
+      "scryfall_id": "975dcfab-0281-4fee-92aa-021ea6c524c7",
+      "name": "Swift Reconfiguration",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": ["B"],
+    "mana_available": "None required to run the loop itself once both permanents are on the battlefield with Swift Reconfiguration attached to Devoted Druid — both of Devoted Druid's activated abilities have zero additional mana cost per activation ({T} for the mana ability; putting a -1/-1 counter on itself, not a mana payment, for the untap ability). {W} was required earlier to cast Swift Reconfiguration itself.",
+    "timing": "Sorcery or instant speed both work for assembly (Swift Reconfiguration has Flash), but the loop itself can be run any time its controller has priority, since neither activated ability has a timing restriction beyond the normal 'activate anytime you could cast an instant' default for activated abilities without 'activate only as a sorcery' text — confirmed absent from both abilities' Oracle text.",
+    "targets_required": [
+      "Swift Reconfiguration requires a target creature or Vehicle on cast — target Devoted Druid."
+    ],
+    "other": [
+      "Originally sourced from Commander Spellbook (variant 3807-4762): 'Activate Devoted Druid's first ability by tapping it, adding {G}. Activate Devoted Druid's second ability by putting a -1/-1 counter on it, untapping itself. Repeat.' Notable prerequisite per Spellbook: Swift Reconfiguration attached to Devoted Druid.",
+      "Spellbook color identity: GW. Spellbook popularity score: 18356. Spellbook-reported Commander legal: true."
+    ]
+  },
+  "result": {
+    "summary": "Infinite green mana (arbitrarily large, player-controlled quantity of {G}).",
+    "is_win_condition": false,
+    "is_loop": true,
+    "loop_termination": "Voluntary loop with no natural termination condition — Devoted Druid never dies from the accumulating -1/-1 counters because it is not a creature (see mechanism below), so there is no state that stops the sequence on its own. The player chooses when to stop, typically once enough {G} has been produced for the rest of the turn's spells/abilities, or before end of turn (mana empties at each step's/phase's end per CR 500.4, so the mana must be spent before the loop is exited if it's to be used)."
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 613.1d — Layer 4 of the layer system applies type-changing effects; Swift Reconfiguration's 'Enchanted permanent is a Vehicle artifact... and it loses all other card types' is a type-changing effect and is applied in this layer, making Devoted Druid stop being a Creature (and become an Artifact — Vehicle) as a continuous effect for as long as Swift Reconfiguration remains attached.",
+      "CR 704.5f — the state-based action 'if a creature has toughness 0 or less, it's put into its owner's graveyard' applies only to permanents that are creatures at the time state-based actions are checked. Because Devoted Druid is no longer a creature (per 613.1d, above) once enchanted, this SBA never applies to it regardless of how many -1/-1 counters accumulate.",
+      "CR 121 (counters) — a -1/-1 counter may be placed on a non-creature permanent; nothing in the rules restricts -1/-1 counters to creatures specifically. Placing them on Devoted Druid while it's an artifact is legal; they simply have no P/T-reducing effect to apply to (an artifact has no power/toughness to modify) until/unless it becomes a creature again (e.g. by being crewed), at which point CR 121.4-style counter application would resume mattering.",
+      "CR 702.121 (Crew) — confirms 'It's not a creature unless it's crewed' is the correct plain-English reading of Swift Reconfiguration's reminder text; the loop is never voluntarily crewed, so Devoted Druid stays a non-creature Vehicle throughout."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in a from-source Maven build of magefree/mage (JDK 21, Mage/Mage.Sets/Mage.Tests modules) via a new JUnit test, org.mage.test.cards.interactions.cedh.DevotedDruidSwiftReconfigurationTest#test_LoopSurvives_NotACreature (not committed to this repo — XMage is separately-licensed engine source, cloned to scratch space; see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0001.json for the fixture record and provenance). Test setup: Devoted Druid + Swift Reconfiguration (targeting Devoted Druid) on the battlefield for playerA, arbitrary Forest/Plains as synthetic mana scaffolding (mana source is not material to this interaction — only Swift Reconfiguration's {W} casting cost needed covering once). Ran the tap-for-G / put-counter-to-untap sequence 5 times in a single main phase. Result: 5/5 activations succeeded, Devoted Druid survived with 5 -1/-1 counters and remained an Artifact (not a Creature) throughout, 5 {G} produced. Test passed (1/1, 0 failures) after two authoring corrections (documented for the record, not hidden): (1) an initial run gave the test only green mana sources when Swift Reconfiguration costs {W}, corrected; (2) an initial run placed post-execution assertions (assertType, no turn/step args) before execute() had actually run the game, which in this test framework only registers scheduled actions/checks rather than running them immediately — corrected by moving assertType/assertPermanentCount calls to after execute()."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "commander_spellbook",
+      "reference": "https://commanderspellbook.com/combo/3807-4762"
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DevotedDruidSwiftReconfigurationTest#test_LoopSurvives_NotACreature, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 613.1d, 704.5f, 121, 702.121"
+    }
+  ],
+  "discovered_via": "commander_spellbook_pull",
+  "coverage_backlog_ref": null
+}
