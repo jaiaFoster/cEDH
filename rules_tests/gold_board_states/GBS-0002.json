@@ -1,0 +1,67 @@
+{
+  "id": "GBS-0002",
+  "description": "Delney, Streetwise Lookout + Kinnan, Bonder Prodigy + a nonland mana source (Devoted Druid): Kinnan's own 'whenever you tap a nonland permanent for mana' trigger is itself a power-2-or-less creature's triggered ability, so Delney causes it to trigger an additional time — one tap of a nonland mana source yields triple mana instead of Kinnan's usual double. Validates INT-0013.",
+  "covers": ["activated_ability", "other"],
+  "run_class": "SYNTHETIC_GOLD_STATE",
+  "representative_of_deck_draws": false,
+  "synthetic_mana": true,
+  "artificial_state_elements": [
+    "Devoted Druid was chosen as the tapped nonland mana source purely because it is already a proven, in-repo fixture from GBS-0001/INT-0002 and produces a single, unambiguous mana type ({G}) with no choice required — its specific identity is not material to the rule under test (Delney doubling Kinnan's own trigger); any nonland mana-producing permanent would exercise the same rule.",
+    "No other permanents, hand cards, lands, or players' boards were modeled — this is a three-card isolation test, not a representative game state.",
+    "Only a single mana activation was performed (not a full turn's worth of mana development) since the rule being tested applies identically and independently to each individual tap."
+  ],
+  "interaction_under_test": "INT-0013",
+  "material_characteristics": [
+    "Kinnan, Bonder Prodigy's power is exactly 2, so its own triggered mana ability qualifies for Delney's power-2-or-less doubling clause",
+    "Kinnan's 'Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced' ability is itself a triggered ability (word 'Whenever'), and specifically a triggered mana ability under CR 605.1b",
+    "Delney's static ability causes any triggered ability of a creature it controls with power 2 or less to trigger an additional time (CR 603.2d), including Kinnan's own trigger, without requiring a third card",
+    "The mana source tapped must be a nonland permanent (Kinnan's trigger condition explicitly excludes lands)"
+  ],
+  "abstracted_characteristics": [
+    "Identity of the specific nonland mana source tapped (any would trigger Kinnan/Delney identically)",
+    "All board state not directly involved in the three-card interaction",
+    "Turn/phase beyond what's needed to activate one mana ability in a single main phase"
+  ],
+  "setup": {
+    "players": [
+      {
+        "seat": 1,
+        "battlefield": [
+          {"card": "Delney, Streetwise Lookout", "quantity": 1},
+          {"card": "Kinnan, Bonder Prodigy", "quantity": 1},
+          {"card": "Devoted Druid", "quantity": 1}
+        ],
+        "hand": [],
+        "life": 20
+      }
+    ],
+    "phase": "PRECOMBAT_MAIN",
+    "priority_seat": 1
+  },
+  "expected": {
+    "legal_actions": [
+      "Activate Devoted Druid's mana ability ({T}: Add {G})"
+    ],
+    "illegal_actions_to_reject": [
+      "Any implicit assumption that tapping the nonland mana source only nets double mana (Kinnan alone) rather than triple (Kinnan's trigger plus Delney's extra copy of that same trigger)"
+    ],
+    "outcome_if_resolved": "After activating Devoted Druid's mana ability once: 3 total {G} in the player's mana pool (1 original + 1 from Kinnan's own trigger + 1 from Delney doubling that trigger), and Devoted Druid tapped."
+  },
+  "rules_citations": [
+    "CR 603.2d (a triggered ability may be stated to trigger an additional time; determine how many times, then trigger that many times)",
+    "CR 605.1b (a triggered ability that doesn't require a target, triggers from activation/resolution of an activated mana ability or from mana being added to a pool, and could add mana to a pool when it resolves, is itself a triggered mana ability)",
+    "CR 605.4 / 605.4a (triggered mana abilities follow all the rules for other triggered abilities including 603.2d, but do not use the stack and resolve immediately after the mana ability that triggered them)"
+  ],
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap, 1/1 passing, run 2026-08-12 against the same from-source build of magefree/mage (JDK 21) used for GBS-0001. Test file not committed to this repo (external engine source tree) — see docs/RUN_CLASSIFICATION.md."
+  },
+  "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+  "authored_date": "2026-08-12",
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
+}

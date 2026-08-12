@@ -1,0 +1,77 @@
+{
+  "id": "INT-0013",
+  "status": "verified",
+  "name": "Delney, Streetwise Lookout doubles Kinnan, Bonder Prodigy's own mana-doubling trigger -> tripled nonland mana",
+  "cards": [
+    {
+      "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+      "name": "Delney, Streetwise Lookout",
+      "role": "enabler"
+    },
+    {
+      "scryfall_id": "63cda4a0-0dff-4edb-ae67-a2b7e2971350",
+      "name": "Kinnan, Bonder Prodigy",
+      "role": "piece"
+    }
+  ],
+  "prerequisites": {
+    "zones": [
+      "B"
+    ],
+    "mana_available": null,
+    "timing": "Any time a nonland permanent you control is tapped for mana (most commonly during a main phase while developing mana dorks/rocks). No sorcery-speed restriction applies to either card's relevant ability.",
+    "targets_required": [],
+    "other": [
+      "Kinnan's power is exactly 2, so its own triggered ability ('Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced.') qualifies for Delney's power-2-or-less doubling clause - no third card is required.",
+      "Delney's own official ruling (2024-02-02, Scryfall-sourced): 'Delney, Streetwise Lookout's last ability doesn't copy the triggered ability; it just causes the ability to trigger an additional time. Any choices made as you put the ability onto the stack, such as modes and targets, are made separately for each instance of the ability.' This directly confirms the doubling applies generically to any qualifying triggered ability, including Kinnan's own.",
+      "Net effect for a single tap of a nonland mana source: 1 (original mana produced) + 1 (Kinnan's own trigger) + 1 (Delney's additional copy of that trigger) = 3 total mana, i.e. nonland mana sources are effectively tripled rather than merely doubled.",
+      "Does not apply to lands (Kinnan's trigger condition explicitly excludes them), so it does not touch Gaea's Cradle or basic/nonbasic lands directly.",
+      "Not a loop and not infinite by itself - a static per-tap multiplier, bounded by however many nonland mana sources are tapped that turn. Could compose with other mana lines but does not itself produce unbounded mana."
+    ]
+  },
+  "result": {
+    "summary": "Every tap of a nonland permanent you control for mana produces triple the mana instead of Kinnan's usual double, as long as both Delney and Kinnan are on the battlefield.",
+    "is_win_condition": false,
+    "is_loop": false,
+    "loop_termination": null
+  },
+  "deterministic": true,
+  "verification": {
+    "rules_citations": [
+      "CR 603.2d — an ability may state that a triggered ability triggers additional times; in this case, rather than simply determining that such an ability has triggered, determine how many times it should trigger, then that ability triggers that many times. This is the mechanic Delney's static ability relies on, and it applies generically to any qualifying triggered ability, including one that is itself a mana-related trigger.",
+      "CR 605.1b — a triggered ability is a mana ability if it doesn't require a target, it triggers from the activation or resolution of an activated mana ability (or from mana being added to a player's mana pool), and it could add mana to a player's mana pool when it resolves. Kinnan's 'Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced' meets all three criteria (no target, triggers from activating a mana ability, adds mana on resolution) and is therefore itself a triggered mana ability.",
+      "CR 605.4 / 605.4a — triggered mana abilities follow all the rules for other triggered abilities (including 603.2d, so Delney's doubling still applies), but do not go on the stack and resolve immediately after the mana ability that triggered them, without waiting for priority. This is why both instances of Kinnan's doubled trigger resolve immediately alongside the initial tap, rather than requiring separate stack resolution."
+    ],
+    "executable_engine_check": {
+      "engine": "xmage",
+      "reproduced": true,
+      "notes": "Reproduced in the same from-source Maven build of magefree/mage (JDK 21, Mage/Mage.Sets/Mage.Tests modules) used for INT-0002, via a new JUnit test, org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap (not committed to this repo — XMage is separately-licensed engine source, cloned to scratch space; see docs/RUN_CLASSIFICATION.md and rules_tests/gold_board_states/GBS-0002.json for the fixture record and provenance). Test setup: Delney, Streetwise Lookout + Kinnan, Bonder Prodigy + Devoted Druid (as an arbitrary nonland mana source - its identity is not material to this interaction) on the battlefield for playerA. Activated Devoted Druid's {T}: Add {G} mana ability once. Result: 3 total {G} in the mana pool (matching the CR 605.1b/605.4a analysis that Kinnan's trigger and its Delney-granted extra copy both resolve immediately as triggered mana abilities, no stack interaction needed). Test passed 1/1 on first attempt (no authoring corrections needed this time, unlike INT-0002/SIM-0008)."
+    },
+    "verified_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
+    "verified_date": "2026-08-12"
+  },
+  "sources": [
+    {
+      "type": "manual_discovery",
+      "reference": "Independent reasoning about Delney's 'power 2 or less' triggered-ability-doubling clause applied to Kinnan's own power (2) and its own mana-doubling trigger, prompted by the charter's named priority category 'Delney interactions'."
+    },
+    {
+      "type": "oracle_ruling",
+      "reference": "Scryfall-sourced official ruling on Delney, Streetwise Lookout (2024-02-02): 'Delney, Streetwise Lookout's last ability doesn't copy the triggered ability; it just causes the ability to trigger an additional time...' See data/cards_cache/oracle-2026-08-12/ (scryfall_id be219928-3d0e-4d00-b124-152ce8a8c13b)."
+    },
+    {
+      "type": "commander_spellbook",
+      "reference": "https://backend.commanderspellbook.com/variants?q=card%3D%22Delney%2C%20Streetwise%20Lookout%22%20card%3D%22Kinnan%2C%20Bonder%20Prodigy%22 returned 0 results at discovery time, confirming this was not already catalogued there."
+    },
+    {
+      "type": "executable_engine",
+      "reference": "magefree/mage (XMage), org.mage.test.cards.interactions.cedh.DelneyKinnanTripleManaTest#test_DelneyDoublesKinnansOwnTrigger_TripleManaFromOneTap, run 2026-08-12"
+    },
+    {
+      "type": "comprehensive_rules",
+      "reference": "CR 603.2d, 605.1b, 605.4, 605.4a"
+    }
+  ],
+  "discovered_via": "manual_review",
+  "coverage_backlog_ref": null
+}

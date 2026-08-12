@@ -7,3 +7,6 @@ looks.
 - **`GBS-0001`** — Devoted Druid + Swift Reconfiguration (backs `INT-0002`,
   now `interactions/verified/`). Cross-checked against a from-source XMage
   build, 1/1 passing.
+- **`GBS-0002`** — Delney, Streetwise Lookout + Kinnan, Bonder Prodigy
+  (backs `INT-0013`, now `interactions/verified/`). Cross-checked against
+  the same from-source XMage build, 1/1 passing.
