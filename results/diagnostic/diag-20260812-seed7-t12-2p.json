@@ -1,0 +1,246 @@
+{
+  "game_id": "diag-20260812-seed7-t12-2p",
+  "purpose": "engine/rules diagnostic only - NOT empirical evidence, must never be cited for win-rate/matchup/mulligan/turn-speed statistics",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "random_seed": 7,
+  "max_turn_requested": 12,
+  "maven_exit_code": 0,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 57,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Misty Rainforest [684] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack push: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA loses 1 life from Misty Rainforest [684]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA sacrificed Misty Rainforest [684] (source: Misty Rainforest [684])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA activates: search your library for a Forest or Island card, put it onto the battlefield, then shuffle. from Misty Rainforest [684]"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "Stack resolve: 1 (top: stack ability ({T}, Pay 1 life, Sacrifice {this}: Search your library for a Forest or Island card...)"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA searches their library (source: Misty Rainforest [684])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA puts Underground Sea [334] from library onto the Battlefield (source: Misty Rainforest [684])"
+    },
+    {
+      "turnstep": "T1.M1",
+      "text": "PlayerA's library is shuffled (source: Misty Rainforest [684])"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.M1",
+      "text": "PlayerA puts Ancient Tomb [704] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.M1",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB moves Elvish Spirit Guide [810] from hand to the exile zone (source: Endurance [a51])"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB casts Endurance [a51] with Evoke from hand"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: Cast Endurance)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB puts Endurance [a51] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Endurance [a51] - When Endurance [a51] enters, up to one target player puts all the cards from their graveyard on the bottom of their library in a random order. - targeting PlayerA"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack push: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB - Ability triggers: Endurance [a51] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 2 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerB sacrificed Endurance [a51] (source: Endurance [a51])"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, up to one target player puts all the cards from their graveyar...)"
+    },
+    {
+      "turnstep": "T8.M2",
+      "text": "PlayerA puts a card from graveyard to the bottom of their library (source: Endurance [a51])"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Mox Diamond [130] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA moves Abhorrent Oculus [c77] from hand to the exile zone (source: Subtlety [f0f])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA casts Subtlety [f0f] with Evoke from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 2 (top: Cast Subtlety)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA puts Subtlety [f0f] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 2 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [f0f] - When Subtlety [f0f] enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library."
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA - Ability triggers: Subtlety [f0f] - When this permanent enters, if its evoke cost was paid, its controller sacrifices it."
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 3 (top: stack ability (When this permanent enters, if its evoke cost was paid, its controller sacrifices ...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerA sacrificed Subtlety [f0f] (source: Subtlety [f0f])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 2 (top: stack ability (When {this} enters, choose up to one target creature spell or planeswalker spell. ...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB discards Mana Confluence [b74] (source: Mox Diamond [130])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Mox Diamond [130] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "Stack push: 1 (top: Cast Subtlety)"
+    }
+  ],
+  "created_at": "2026-08-12T18:12:20.512279+00:00"
+}

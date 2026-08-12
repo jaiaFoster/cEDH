@@ -1,0 +1,530 @@
+{
+  "game_id": "diag-20260812-seed21-t15-2p",
+  "purpose": "engine/rules diagnostic only - NOT empirical evidence, must never be cited for win-rate/matchup/mulligan/turn-speed statistics",
+  "run_class": "SYNTHETIC_DIAGNOSTIC_GAMEPLAY",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "seats": 2,
+  "mirror_match": true,
+  "random_seed": 21,
+  "max_turn_requested": 15,
+  "maven_exit_code": 0,
+  "engine_errors": [],
+  "winner_line": null,
+  "event_count": 128,
+  "events": [
+    {
+      "turnstep": "T1",
+      "text": "PlayerA's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerB's library is shuffled"
+    },
+    {
+      "turnstep": "T1",
+      "text": "PlayerA chooses that they take the first turn"
+    },
+    {
+      "turnstep": "T1.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T2.M1",
+      "text": "PlayerB puts Bayou [b82] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T2.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T3.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack push: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB casts Delighted Halfling [f79] from hand"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "Stack resolve: 1 (top: Cast Delighted Halfling)"
+    },
+    {
+      "turnstep": "T4.M1",
+      "text": "PlayerB puts Delighted Halfling [f79] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T4.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T5.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T6.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T6.DB",
+      "text": "Attacker: Delighted Halfling [f79] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T6.CD",
+      "text": "PlayerA loses 1 life at combat from Delighted Halfling [f79]"
+    },
+    {
+      "turnstep": "T7.M1",
+      "text": "PlayerA puts Tundra [5da] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T7.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T8.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T8.DB",
+      "text": "Attacker: Delighted Halfling [f79] (1/2) unblocked"
+    },
+    {
+      "turnstep": "T8.CD",
+      "text": "PlayerA loses 1 life at combat from Delighted Halfling [f79]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts City of Brass [893] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA casts Archivist of Oghma [f39] from hand"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [893] - Whenever City of Brass [893] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA loses 1 life from City of Brass [893]"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "Stack resolve: 1 (top: Cast Archivist of Oghma)"
+    },
+    {
+      "turnstep": "T9.M1",
+      "text": "PlayerA puts Archivist of Oghma [f39] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T9.DA",
+      "text": "PlayerA skip attack"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Lotus Petal [499] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Lotus Petal)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Lotus Petal [499] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB sacrificed Lotus Petal [499] (source: Lotus Petal [499])"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB casts Volatile Stormdrake [426] from hand"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: Cast Volatile Stormdrake)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB puts Volatile Stormdrake [426] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack push: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB - Ability triggers: Volatile Stormdrake [426] - When Volatile Stormdrake [426] enters, exchange control of Volatile Stormdrake [426] and target creature an opponent controls. If you do, you get {E}{E}{E}{E}, then sacrifice that creature unless you pay an amount of {E} equal to its mana value. - targeting Archivist of Oghma [f39]"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "Stack resolve: 1 (top: stack ability (When {this} enters, exchange control of {this} and target creature an opponent con...)"
+    },
+    {
+      "turnstep": "T10.M1",
+      "text": "PlayerB paid for Volatile Stormdrake [426] - Pay {E}{E}?"
+    },
+    {
+      "turnstep": "T10.DA",
+      "text": "PlayerB skip attack"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA casts Thrasios, Triton Hero [550] from command"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [893] - Whenever City of Brass [893] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA loses 1 life from City of Brass [893]"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T11.M1",
+      "text": "PlayerA puts Thrasios, Triton Hero [550] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T11.DA",
+      "text": "PlayerA attacks PlayerB with 1 creature"
+    },
+    {
+      "turnstep": "T11.DB",
+      "text": "Attacker: Volatile Stormdrake [426] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T11.CD",
+      "text": "PlayerB loses 3 life at combat from Volatile Stormdrake [426]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Mana Confluence [28e] from hand onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack push: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [28e]"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB casts Tymna the Weaver [b61] from command"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "Stack resolve: 1 (top: Cast Tymna the Weaver)"
+    },
+    {
+      "turnstep": "T12.M1",
+      "text": "PlayerB puts Tymna the Weaver [b61] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T12.DA",
+      "text": "PlayerB attacks PlayerA with 1 creature"
+    },
+    {
+      "turnstep": "T12.DB",
+      "text": "Attacker: Archivist of Oghma [f39] (2/2) blocked by Thrasios, Triton Hero [550] (1/3)"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Thrasios, Triton Hero [550] deals 1 damage to Archivist of Oghma [f39]"
+    },
+    {
+      "turnstep": "T12.CD",
+      "text": "Archivist of Oghma [f39] deals 2 damage to Thrasios, Triton Hero [550]"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [b61] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T12.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "Stack push: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "PlayerA casts Noble Hierarch [028] from hand"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [893] - Whenever City of Brass [893] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "PlayerA loses 1 life from City of Brass [893]"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "Stack resolve: 1 (top: Cast Noble Hierarch)"
+    },
+    {
+      "turnstep": "T13.M1",
+      "text": "PlayerA puts Noble Hierarch [028] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T13.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T13.DB",
+      "text": "Attacker: Volatile Stormdrake [426] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T13.DB",
+      "text": "Attacker: Thrasios, Triton Hero [550] (1/3) blocked by Tymna the Weaver [b61] (2/2)"
+    },
+    {
+      "turnstep": "T13.CD",
+      "text": "PlayerB loses 3 life at combat from Volatile Stormdrake [426]"
+    },
+    {
+      "turnstep": "T13.CD",
+      "text": "Tymna the Weaver [b61] deals 2 damage to Thrasios, Triton Hero [550]"
+    },
+    {
+      "turnstep": "T13.CD",
+      "text": "Thrasios, Triton Hero [550] deals 1 damage to Tymna the Weaver [b61]"
+    },
+    {
+      "turnstep": "T13.CD",
+      "text": "PlayerB gains 2 life"
+    },
+    {
+      "turnstep": "T13.M2",
+      "text": "Stack push: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T13.M2",
+      "text": "PlayerA casts Mox Diamond [beb] from hand"
+    },
+    {
+      "turnstep": "T13.M2",
+      "text": "Stack resolve: 1 (top: Cast Mox Diamond)"
+    },
+    {
+      "turnstep": "T13.M2",
+      "text": "PlayerA puts Mox Diamond [beb] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T14.M1",
+      "text": "Stack push: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T14.M1",
+      "text": "PlayerB loses 1 life from Mana Confluence [28e]"
+    },
+    {
+      "turnstep": "T14.M1",
+      "text": "PlayerB casts Thrasios, Triton Hero [f6c] from command"
+    },
+    {
+      "turnstep": "T14.M1",
+      "text": "Stack resolve: 1 (top: Cast Thrasios, Triton Hero)"
+    },
+    {
+      "turnstep": "T14.M1",
+      "text": "PlayerB puts Thrasios, Triton Hero [f6c] from stack onto the Battlefield"
+    },
+    {
+      "turnstep": "T14.DA",
+      "text": "PlayerB attacks PlayerA with 2 creatures"
+    },
+    {
+      "turnstep": "T14.DB",
+      "text": "Attacker: Archivist of Oghma [f39] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T14.DB",
+      "text": "Attacker: Tymna the Weaver [b61] (2/2) unblocked"
+    },
+    {
+      "turnstep": "T14.CD",
+      "text": "PlayerA loses 2 life at combat from Archivist of Oghma [f39]"
+    },
+    {
+      "turnstep": "T14.CD",
+      "text": "PlayerA loses 2 life at combat from Tymna the Weaver [b61]"
+    },
+    {
+      "turnstep": "T14.CD",
+      "text": "Tymna the Weaver [b61] did 2 combat damage to PlayerA during the game."
+    },
+    {
+      "turnstep": "T14.CD",
+      "text": "PlayerB gains 2 life"
+    },
+    {
+      "turnstep": "T14.M2",
+      "text": "Stack push: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T14.M2",
+      "text": "PlayerB - Ability triggers: Tymna the Weaver [b61] - At the beginning of each of your postcombat main phases, you may pay X life, where X is the number of opponents that were dealt combat damage this turn. If you do, draw X cards."
+    },
+    {
+      "turnstep": "T14.M2",
+      "text": "Stack resolve: 1 (top: stack ability (At the beginning of each of your postcombat main phases, you may pay X life, where...)"
+    },
+    {
+      "turnstep": "T14.M2",
+      "text": "PlayerB loses 1 life from Tymna the Weaver [b61]"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack push: 1 (top: Cast Nature's Rhythm)"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA announces a value of 1 for {X} (source: Nature's Rhythm [296])"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA casts Nature's Rhythm [296] from hand"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack push: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA - Ability triggers: City of Brass [893] - Whenever City of Brass [893] becomes tapped, it deals 1 damage to you."
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack push: 3 (top: Cast Fierce Guardianship)"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack resolve: 2 (top: stack ability (Whenever {this} becomes tapped, it deals 1 damage to you.))"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA loses 1 life from City of Brass [893]"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack push: 2 (top: Cast Fierce Guardianship)"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack resolve: 1 (top: Cast Nature's Rhythm)"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA searches their library (source: Nature's Rhythm [296])"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA puts Delighted Halfling [0ba] from library onto the Battlefield (source: Nature's Rhythm [296])"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA's library is shuffled (source: Nature's Rhythm [296])"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerA puts Nature's Rhythm [296] from stack into their graveyard"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack push: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerB - Ability triggers: Archivist of Oghma [f39] - Whenever an opponent searches their library, you gain 1 life and draw a card."
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "Stack resolve: 1 (top: stack ability (Whenever an opponent searches their library, you gain 1 life and draw a card.))"
+    },
+    {
+      "turnstep": "T15.M1",
+      "text": "PlayerB gains 1 life (source: Archivist of Oghma [f39])"
+    },
+    {
+      "turnstep": "T15.DA",
+      "text": "PlayerA attacks PlayerB with 2 creatures"
+    },
+    {
+      "turnstep": "T15.DB",
+      "text": "Attacker: Volatile Stormdrake [426] (3/2) unblocked"
+    },
+    {
+      "turnstep": "T15.DB",
+      "text": "Attacker: Thrasios, Triton Hero [550] (1/3) blocked by Thrasios, Triton Hero [f6c] (1/3)"
+    },
+    {
+      "turnstep": "T15.CD",
+      "text": "PlayerB loses 3 life at combat from Volatile Stormdrake [426]"
+    },
+    {
+      "turnstep": "T15.CD",
+      "text": "Thrasios, Triton Hero [f6c] deals 1 damage to Thrasios, Triton Hero [550]"
+    },
+    {
+      "turnstep": "T15.CD",
+      "text": "Thrasios, Triton Hero [550] deals 1 damage to Thrasios, Triton Hero [f6c]"
+    }
+  ],
+  "created_at": "2026-08-12T18:12:52.336044+00:00"
+}
