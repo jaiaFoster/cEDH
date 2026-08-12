@@ -53,8 +53,16 @@
     "CR 903.9 / 903.9a (commander replacement effect)",
     "CR 903.8 (commander tax)"
   ],
-  "engine_cross_check": null,
+  "engine_cross_check": {
+    "engine": "xmage",
+    "agrees": true,
+    "notes": "sim/rules_engine/xmage_tests/TymnaThrasiosCommanderSequencingTest.java, testLandDropThenFirstCastsNoTaxThenDeathAndTaxedRecast, 1/1 passing, run 2026-08-12 against a from-source XMage build (JDK 21). That test exercises this exact mechanism on Thrasios, Triton Hero rather than Tymna (Doom Blade's target selection in the test harness landed on Thrasios, empirically and repeatably, not Tymna as originally scripted) - CR 903.8/903.9 apply identically to either commander, so this fixture's claim (illustrated here with Tymna) is the one actually engine-verified, just via the other commander of the pair."
+  },
   "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
   "authored_date": "2026-08-12",
-  "last_pass_result": null
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12"
+  }
 }

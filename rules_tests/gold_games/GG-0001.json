@@ -1,6 +1,6 @@
 {
   "id": "GG-0001",
-  "description": "Baseline whole-game sequencing sanity check with the real subject deck against a synthetic opponent: opening hand, turn-1 draw skip, land-drop limit, first commander cast from the command zone (no tax yet), and summoning sickness carried through a live multi-turn sequence (not an isolated fixture like GBS-0011).",
+  "description": "Baseline whole-game sequencing sanity check with the real subject deck against a synthetic opponent: opening hand, turn-1 draw skip, land-drop limit, first commander cast from the command zone (no tax yet, paid at its real printed cost), and summoning sickness carried through a live multi-turn sequence (not an isolated fixture like GBS-0011).",
   "deck_versions": [
     "tymna-thrasios-treefarm-v1",
     "synthetic-generic-opponent-v1"
@@ -15,13 +15,14 @@
   "artificial_state_elements": [
     "Seat 2 is a synthetic generic opponent, not a frozen/ingested decklist - its actions are deliberately constructed to exercise seat 1's sequencing, per docs/VALIDATION_GATES.md Gate 3 exit criteria allowing constructed opponent actions for this purpose.",
     "Opening hands are hand-selected for a clean, uneventful sequencing demonstration, not drawn from a real shuffled 99.",
-    "No combo lines or removal are involved - this game is intentionally uneventful."
+    "No combo lines or removal are involved - this game is intentionally uneventful.",
+    "Tymna's cast is deliberately delayed to turn 5 (not turn 1) because her real printed cost is {1}{W}{B} (3 mana) - an earlier draft of this fixture incorrectly showed her cast on turn 1 off a single land, which is not reachable; fixed 2026-08-12 after cross-checking against the real card data used to author the matching XMage integration test (sim/rules_engine/xmage_tests/TymnaThrasiosCommanderSequencingTest.java)."
   ],
   "interaction_under_test": "CR 103.7a, CR 505.2, CR 302.6, CR 903.8",
   "material_characteristics": [
     "Seat 1 is on the play and skips their first draw step (CR 103.7a)",
     "Only one land drop per turn is legal absent a static ability granting more (CR 505.2)",
-    "Tymna the Weaver's first cast from the command zone costs its printed cost with no commander tax (CR 903.8 - tax only applies to previous casts from the command zone this game)",
+    "Tymna the Weaver's real printed cost is {1}{W}{B}; her first cast from the command zone costs exactly that with no commander tax added (CR 903.8 - tax only applies to previous casts from the command zone this game)",
     "Avacyn's Pilgrim cannot tap for mana the turn it enters (CR 302.6), and can starting its controller's next turn"
   ],
   "abstracted_characteristics": [
@@ -43,12 +44,6 @@
           "seat": 1,
           "action": "Play Bayou (land drop)",
           "legal": true
-        },
-        {
-          "seat": 1,
-          "action": "Cast Tymna the Weaver from the command zone, paying {W}{B}",
-          "legal": true,
-          "notes": "First cast this game - no commander tax yet"
         },
         {
           "seat": 1,
@@ -141,6 +136,12 @@
           "action": "Activate Avacyn's Pilgrim's mana ability ({T}: Add {W})",
           "legal": true,
           "notes": "No longer summoning-sick - continuously controlled since seat 1's most recent turn began"
+        },
+        {
+          "seat": 1,
+          "action": "Cast Tymna the Weaver from the command zone, paying {1}{W}{B} (Bayou for {B}, Savannah for {W}, Tropical Island for the generic {1}; Avacyn's Pilgrim's {W} is surplus/unused this turn)",
+          "legal": true,
+          "notes": "First cast this game - no commander tax yet (CR 903.8)"
         }
       ]
     }
@@ -155,5 +156,12 @@
   ],
   "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
   "authored_date": "2026-08-12",
-  "last_pass_result": null
+  "last_pass_result": {
+    "passed": true,
+    "sim_version": "xmage@magefree/mage (from-source build, JDK 21, 2026-08-12)",
+    "date": "2026-08-12",
+    "deviations": [
+      "The committed engine test (sim/rules_engine/xmage_tests/TymnaThrasiosCommanderSequencingTest.java) covers this fixture's commander-cast, land-drop-limit, and commander-tax-on-recast claims directly; it sets up battlefield mana via addCard rather than replaying every land-drop/draw-step action turn-by-turn, and additionally exercises the commander-death/recast/tax sequence (GBS-0019) that this fixture doesn't reach on its own."
+    ]
+  }
 }

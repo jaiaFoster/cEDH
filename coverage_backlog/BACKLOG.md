@@ -10,6 +10,7 @@ file must stay in sync with `backlog.jsonl`.
 | SIM-0001 | RULES | SIM-001's subject decklist (98 cards + 2 commanders) is transcribed from the assignment text, not independently re-pulled from the supplied Moxfield URL. Root cause changed: Moxfield itself (Cloudflare bot-wall, `Please enable cookies`) now blocks us, not our proxy — confirmed `moxfield.com` and `api.moxfield.com` both reachable at the TCP/proxy level but 403 from Moxfield's own bot protection. | If the assignment's transcription has any error, or the live Moxfield list has since changed, the deck version `tymna-thrasios-treefarm-v1` is wrong. Partially mitigated: every card's own identity/legality is now independently confirmed via the Scryfall bulk pull, so the residual risk is narrowed to "wrong card in the list" / "wrong quantity", not "wrong card data." | 2026-08-12 |
 | SIM-0004 | SIM | Volatile Stormdrake uses the Energy ({E}) counter mechanic; no other card in the subject 98 appears to produce or spend Energy (confirmed via full bulk ingestion, not just spot-check). Forge's card script for it (`v/volatile_stormdrake.txt`) does correctly implement Energy natively (`CounterType$ ENERGY`), so an eventual Forge-backed adapter gets this for free — a native tracker would still need to build it. | The rules-engine state tracker (`sim/rules_engine/`) needs explicit support for Energy as a resource type for this one card, or its ETB ability can't be modeled correctly, if we go the native-tracker route. | 2026-08-12 |
 | SIM-0012 | INTERACT | `INT-0011`'s original candidate writeup claimed Derevi's combat-damage untap trigger "scales with attacker count" (N connecting creatures → N independent untap-then-retap cycles on Gaea's Cradle). Only the single-attacker base case was engine-verified; a two-attacker extension test failed and was not resolved within that interaction's effort budget. | The multi-attacker scaling claim is downgraded to "plausible per the underlying rules mechanism (CR 603.2c, 603.3b, 117.3b), not itself engine-verified" in `interactions/verified/INT-0011.json` — must not be treated as confirmed until a working multi-attacker test exists. | 2026-08-12 |
+| INFRA-0004 | INFRA | `sim/rules_engine/` has no general Python orchestration adapter (decklist in, game log out) for automated multi-game batches. One committed real XMage JUnit test exists (`sim/rules_engine/xmage_tests/TymnaThrasiosCommanderSequencingTest.java`, backing `GG-0001`/`GBS-0019`); `GG-0002`/`GG-0003`'s full combo-to-win and disrupted-line sequences remain rules-grounded/hand-verified only, not engine-reproduced end to end. | Blocks Gate 4+ (automated ~100/1,000/10,000/million-game runs). Does not block `SIMULATION_READY_DIAGNOSTIC` — the first small diagnostic batch can be hand-driven through XMage's own test/GUI harness using `rules_tests/gold_games/` as scripts. A real adapter is required before any automated batch beyond that. | 2026-08-12 |
 
 ## Ranking (frequency × impact, per README.md's method)
 
@@ -25,14 +26,20 @@ not by ID order:
    `SIM-0004` despite lower urgency because a wrong subject deck silently
    invalidates everything else, whereas a missing Energy mechanic only
    affects one card's fidelity.
-2. **`SIM-0012` — low-moderate impact, low frequency.** A residual, narrowly-
+2. **`INFRA-0004` — high impact, blocks all of Gate 4+.** No general
+   adapter exists yet to run automated multi-game batches; only one
+   hand-authored engine test is committed so far. Doesn't block
+   `SIMULATION_READY_DIAGNOSTIC` itself (a small hand-driven diagnostic
+   batch doesn't need it), but is the single largest piece of remaining
+   work before any automated run (Gate 4's ~100 games and beyond).
+3. **`SIM-0012` — low-moderate impact, low frequency.** A residual, narrowly-
    scoped gap (whether Derevi+Cradle's untap-then-retap mechanism scales
    with attacker count) inside an already-verified interaction; the base
    case is trustworthy, only the extrapolation is unconfirmed. Cheap to
    close once revisited (needs a working two-attacker XMage test), but not
    urgent since nothing currently depends on the multi-attacker case being
    proven.
-3. **`SIM-0004` — low impact, lowest frequency.** Affects exactly one
+4. **`SIM-0004` — low impact, lowest frequency.** Affects exactly one
    card's ETB ability (Volatile Stormdrake) and only matters if/when a
    native (non-Forge) rules tracker is built — moot entirely if the
    eventual `sim/rules_engine/` adapter wraps XMage or Forge directly

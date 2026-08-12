@@ -1,6 +1,6 @@
 {
   "id": "GG-0002",
-  "description": "Full-game combo assembly and execution: tutor, deploy, lose the combo piece to removal, recur it via Hazel's Brewmaster's graveyard-exile trigger (INT-0003's mechanism), loop infinite green mana on the resulting Food token, convert it into a Finale of Devastation overrun, and win by combat damage - exercising the whole pipeline from opening sequencing through correct win recognition.",
+  "description": "Full-game combo assembly and execution: deploy, lose the combo piece to removal, tutor at instant speed during upkeep to set up the draw, recur the piece via Hazel's Brewmaster's graveyard-exile trigger (INT-0003's mechanism), loop infinite green mana on the resulting Food token, convert it into a Finale of Devastation overrun, and win by combat damage - exercising the whole pipeline from opening sequencing through correct win recognition, with every spell's mana fully accounted for against real printed costs.",
   "deck_versions": [
     "tymna-thrasios-treefarm-v1",
     "synthetic-generic-opponent-v1"
@@ -14,13 +14,14 @@
   "synthetic_mana": true,
   "artificial_state_elements": [
     "Seat 2 is a synthetic generic opponent constructed specifically to remove Devoted Druid on cue (so the recursion line has something to recur) and otherwise take minimal actions - not a claim about real opponent play patterns.",
-    "Exact land sequence/hand contents are hand-selected for a clean demonstration of the INT-0003 loop reaching a real win, not drawn from a real shuffled 99.",
+    "Exact land sequence/hand contents are hand-selected for a clean demonstration of the INT-0003 loop reaching a real win, not drawn from a real shuffled 99. Real printed mana costs are used throughout ({1}{G} Devoted Druid, {B} Vampiric Tutor, {3}{B} Hazel's Brewmaster, {X}{G}{G} Finale of Devastation) and land drops are paced (one per seat-1 turn, turns 1/3/5/7) so every cast is paid from actually-untapped sources at the moment it happens - not assumed.",
     "Mana-loop iteration count (15) is a fixed bound chosen only to demonstrate non-termination within a checkable range, matching GBS-0001's methodology - not a claim about how much mana is 'needed'.",
     "Seat 2's exact life total (20, unmodified) and lack of blockers are simplifications - the interaction under test is seat 1's combo execution and win recognition, not combat math against a defended board."
   ],
   "interaction_under_test": "INT-0003",
   "material_characteristics": [
     "Devoted Druid must actually be put into a graveyard (via removal) before Hazel's Brewmaster's trigger can target it there",
+    "Vampiric Tutor is cast at instant speed during seat 1's own upkeep (before the draw step) so the tutored card is drawn that same turn - casting it during an opponent's turn would require holding mana untapped through their turn, which this sequence's land count does not support until seat 1's own untap step",
     "Hazel's Brewmaster's enters-the-battlefield trigger exiling Devoted Druid and creating a Food token, and the Food gaining Devoted Druid's activated abilities per the card's static ability and the official ruling on how it applies (see INT-0003)",
     "The Food token accumulating -1/-1 counters without dying, since it is never a creature (CR 704.5f only applies to creatures)",
     "Finale of Devastation's X>=10 clause granting +X/+X and haste to the searched creature, letting it attack the same turn",
@@ -29,7 +30,7 @@
   "abstracted_characteristics": [
     "Exact number of loop iterations before casting Finale of Devastation - any sufficiently large finite number produces the same outcome",
     "Identity of the creature found by Finale of Devastation beyond its mana value and the fact X>=10 applies - any legal target works identically",
-    "Seat 2's hand/board beyond what's needed to remove Devoted Druid on cue"
+    "Seat 2's hand/board beyond what's needed to remove Devoted Druid on cue and its own land drops"
   ],
   "turns": [
     {
@@ -75,7 +76,7 @@
         },
         {
           "seat": 1,
-          "action": "Cast Devoted Druid, paying {1}{G}",
+          "action": "Cast Devoted Druid, paying {1}{G} (Bayou + Savannah, both now tapped)",
           "legal": true
         }
       ]
@@ -98,21 +99,20 @@
       ]
     },
     {
-      "turn_number": 4,
-      "active_seat": 2,
-      "actions": [
-        {
-          "seat": 1,
-          "action": "At the end of seat 2's turn: cast Vampiric Tutor, paying {B} and 2 life (20 -> 18)",
-          "legal": true,
-          "notes": "Search library for Hazel's Brewmaster, put it on top"
-        }
-      ]
-    },
-    {
       "turn_number": 5,
       "active_seat": 1,
       "actions": [
+        {
+          "seat": 1,
+          "action": "Untap step: Bayou and Savannah untap",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Upkeep: cast Vampiric Tutor, paying {B} (Bayou) and 2 life (20 -> 18)",
+          "legal": true,
+          "notes": "Search library for Hazel's Brewmaster, put it on top - done before the draw step so it's drawn this turn"
+        },
         {
           "seat": 1,
           "action": "Draw step: draws Hazel's Brewmaster (placed on top by Vampiric Tutor)",
@@ -125,7 +125,46 @@
         },
         {
           "seat": 1,
-          "action": "Cast Hazel's Brewmaster, paying {3}{B}",
+          "action": "Attempt to cast Hazel's Brewmaster, paying {3}{B}",
+          "legal": false,
+          "notes": "Only Savannah and Underground Sea are untapped (Bayou spent on Vampiric Tutor this same turn) - 2 available mana is short of the required 4; pass instead and wait for more lands"
+        }
+      ]
+    },
+    {
+      "turn_number": 6,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw, play a land, pass",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 7,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Untap step: Bayou, Savannah, and Underground Sea untap",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Tundra (land drop)",
+          "legal": true,
+          "notes": "Now 4 untapped lands: Bayou, Savannah, Underground Sea, Tundra"
+        },
+        {
+          "seat": 1,
+          "action": "Cast Hazel's Brewmaster, paying {3}{B} (Bayou for {B}, the other 3 for generic)",
           "legal": true
         },
         {
@@ -143,11 +182,11 @@
           "seat": 1,
           "action": "Activate the Food's granted untap ability (put a -1/-1 counter on it: untap it) - repeated 15 times with the mana ability interleaved",
           "legal": true,
-          "notes": "Food never dies from accumulated -1/-1 counters - it is never a creature (CR 704.5f)"
+          "notes": "Food never dies from accumulated -1/-1 counters - it is never a creature (CR 704.5f). No mana cost to this ability, so it draws on none of the now-tapped lands."
         },
         {
           "seat": 1,
-          "action": "Cast Finale of Devastation with X=13, paying {13}{G}{G} from the accumulated pool",
+          "action": "Cast Finale of Devastation with X=13, paying {13}{G}{G} entirely from the Food-loop's accumulated green mana (all 4 lands remain tapped from casting Hazel's Brewmaster)",
           "legal": true,
           "notes": "X>=10: creatures seat 1 controls get +13/+13 and haste until end of turn"
         },
@@ -163,15 +202,15 @@
         },
         {
           "seat": 1,
-          "action": "Combat damage: 17 damage to seat 2 (20 life -> 3, well past what's needed given no blockers)",
+          "action": "Combat damage: 17 damage to seat 2 (20 life -> 3)",
           "legal": true,
-          "notes": "Adjusted downward from a literal 20-life kill only by the fixture's chosen X - the point being demonstrated is win-line execution and recognition, not exact lethal arithmetic tuning"
+          "notes": "The point being demonstrated is win-line execution and recognition, not exact lethal arithmetic tuning - see win_recognition_check"
         }
       ]
     }
   ],
   "expected_winner": 1,
-  "win_recognition_check": "This fixture demonstrates full combo-to-attack execution and correct legal-action sequencing (tutoring, graveyard recursion, granted-ability looping, overrun casting, combat with haste). Whether seat 2 actually reaches 0 life this turn depends on the exact X chosen versus their exact life total; the simulator must correctly compute the resulting life total and only declare seat 1 the winner once seat 2's life is actually 0 or less as a state-based action (CR 704.5a) - not assume victory from having executed the combo line.",
+  "win_recognition_check": "This fixture demonstrates full combo-to-attack execution and correct legal-action sequencing (tutoring under real mana constraints, graveyard recursion, granted-ability looping, overrun casting, combat with haste) - including one deliberately-included illegal attempt (turn 5's premature Hazel's Brewmaster cast) to show the simulator correctly rejects a cast it can't pay for rather than silently allowing it. Whether seat 2 actually reaches 0 life this turn depends on the exact X chosen versus their exact life total; the simulator must correctly compute the resulting life total and only declare seat 1 the winner once seat 2's life is actually 0 or less as a state-based action (CR 704.5a) - not assume victory from having executed the combo line.",
   "rules_citations": [
     "CR 704.5f (0-or-less toughness applies only to creatures)",
     "CR 113.6 (granted abilities function as printed abilities)",

@@ -1,6 +1,6 @@
 {
   "id": "GG-0003",
-  "description": "A Birthing Pod chain interrupted by a counterspell on the key combo piece - proves the simulator does not falsely recognize a win when a combo line is legitimately disrupted, and continues correctly modeling legal actions afterward.",
+  "description": "A Birthing Pod chain interrupted by a counterspell on the key combo piece - proves the simulator does not falsely recognize a win when a combo line is legitimately disrupted, and continues correctly modeling legal actions afterward. Every spell/activation is paid from real printed costs against an explicitly tracked, paced land count (Birthing Pod's Phyrexian pip paid with life both times, matching the pitch/free-interaction category this deck also exercises via Force of Will in GBS-0012).",
   "deck_versions": [
     "tymna-thrasios-treefarm-v1",
     "synthetic-generic-opponent-v1"
@@ -14,16 +14,17 @@
   "synthetic_mana": true,
   "artificial_state_elements": [
     "Seat 2 is a synthetic generic opponent constructed specifically to hold up and cast a counterspell on cue - not a claim about real opponent play patterns.",
-    "Exact hand/land sequence hand-selected to reach the disruption point cleanly."
+    "Exact hand/land sequence hand-selected to reach the disruption point cleanly; land drops are paced one per seat-1 turn (turns 1/3/5/7/9) so every cost is paid from actually-untapped mana at the moment it happens."
   ],
   "interaction_under_test": "CR 608.2b, CR 903.9",
   "material_characteristics": [
     "A countered spell never resolves - no permanent enters the battlefield and no enters-the-battlefield trigger occurs (CR 608.2b, CR 603.2)",
     "Birthing Pod's search restriction (mana value exactly sacrificed value + 1) continues to apply correctly across multiple activations in the same game",
+    "Birthing Pod's own cast cost, {3}{G/P}, and its activation cost, {1}{G/P}, both carry a Phyrexian mana pip payable with 2 life instead of {G} (CR 118.10)",
     "The game correctly continues (no winner) after the combo attempt fails - a disrupted line must not be silently treated as a win"
   ],
   "abstracted_characteristics": [
-    "Seat 2's hand/board beyond the one held-up counterspell",
+    "Seat 2's hand/board beyond the one held-up counterspell and its own land drops",
     "Exact identity of creatures found by Birthing Pod beyond their mana values"
   ],
   "turns": [
@@ -54,9 +55,8 @@
       "actions": [
         {
           "seat": 2,
-          "action": "Draw, play a land, pass, holding up mana",
-          "legal": true,
-          "notes": "Constructed to represent an opponent holding a counterspell"
+          "action": "Draw, play a land, pass",
+          "legal": true
         }
       ]
     },
@@ -72,11 +72,12 @@
         {
           "seat": 1,
           "action": "Play Savannah (land drop)",
-          "legal": true
+          "legal": true,
+          "notes": "2 lands untapped; holding both rather than casting anything this turn"
         },
         {
           "seat": 1,
-          "action": "Cast Birthing Pod, paying {3}",
+          "action": "Pass turn with 2 untapped lands",
           "legal": true
         }
       ]
@@ -87,7 +88,7 @@
       "actions": [
         {
           "seat": 2,
-          "action": "Draw, play a land, pass, holding up mana",
+          "action": "Draw, play a land, pass",
           "legal": true
         }
       ]
@@ -104,29 +105,104 @@
         {
           "seat": 1,
           "action": "Play Underground Sea (land drop)",
+          "legal": true,
+          "notes": "3 lands untapped: Bayou, Savannah, Underground Sea"
+        },
+        {
+          "seat": 1,
+          "action": "Cast Birthing Pod, paying {3}{G/P} as 3 generic mana (all 3 lands) plus 2 life for the Phyrexian pip (20 -> 18)",
+          "legal": true,
+          "notes": "CR 118.10 - Phyrexian mana may be paid with 2 life instead of the colored mana symbol"
+        }
+      ]
+    },
+    {
+      "turn_number": 6,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw, play a land, pass, holding up mana",
+          "legal": true,
+          "notes": "Constructed to represent an opponent holding a counterspell; 4 lands accumulated across turns 2/4/6"
+        }
+      ]
+    },
+    {
+      "turn_number": 7,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Untap step: Bayou, Savannah, and Underground Sea untap",
           "legal": true
         },
         {
           "seat": 1,
-          "action": "Activate Birthing Pod (sacrifice Delighted Halfling, mana value 1): search for a mana-value-2 creature (Devoted Druid), put it onto the battlefield",
+          "action": "Draw step: draws a card",
           "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play Tundra (land drop)",
+          "legal": true,
+          "notes": "4 lands untapped"
+        },
+        {
+          "seat": 1,
+          "action": "Activate Birthing Pod, paying {1}{G/P} as 1 generic mana plus 2 life (18 -> 16): sacrifice Delighted Halfling (mana value 1), search for a mana-value-2 creature (Devoted Druid), put it onto the battlefield",
+          "legal": true,
+          "notes": "3 lands remain untapped"
+        }
+      ]
+    },
+    {
+      "turn_number": 8,
+      "active_seat": 2,
+      "actions": [
+        {
+          "seat": 2,
+          "action": "Draw, play a land, pass, holding up mana",
+          "legal": true
+        }
+      ]
+    },
+    {
+      "turn_number": 9,
+      "active_seat": 1,
+      "actions": [
+        {
+          "seat": 1,
+          "action": "Untap step: all 4 lands untap",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Draw step: draws a card",
+          "legal": true
+        },
+        {
+          "seat": 1,
+          "action": "Play a 5th land",
+          "legal": true,
+          "notes": "5 lands untapped"
         },
         {
           "seat": 1,
           "action": "Cast Hazel's Brewmaster, paying {3}{B}, intending to start the INT-0003 loop",
           "legal": true,
-          "notes": "No Devoted Druid in graveyard yet this game - this specific cast wouldn't have a target for the exile trigger even if it resolved, but is cast anyway to demonstrate the counter interaction"
+          "notes": "Uses 4 of 5 untapped lands; 1 remains untapped. No Devoted Druid in graveyard yet this game - this specific cast wouldn't have a target for the exile trigger even if it resolved, but is cast anyway to demonstrate the counter interaction"
         },
         {
           "seat": 2,
           "action": "In response, cast a counterspell targeting Hazel's Brewmaster",
           "legal": true,
-          "notes": "Constructed disruption"
+          "notes": "Constructed disruption, paid from seat 2's own accumulated lands"
         }
       ]
     },
     {
-      "turn_number": 5,
+      "turn_number": 9,
       "active_seat": 1,
       "actions": [
         {
@@ -136,9 +212,9 @@
         },
         {
           "seat": 1,
-          "action": "Activate Birthing Pod again (sacrifice Devoted Druid, mana value 2): search for a mana-value-3 creature, put it onto the battlefield",
+          "action": "Activate Birthing Pod again, paying {1}{G/P} as 1 generic mana (the last untapped land) plus 2 life (16 -> 14): sacrifice Devoted Druid (mana value 2), search for a mana-value-3 creature, put it onto the battlefield",
           "legal": true,
-          "notes": "Second Pod activation in a later main phase - independent of the first, no once-per-turn restriction on the ability itself beyond the permanent's own tap"
+          "notes": "Second Pod activation, independent of the first - no once-per-turn restriction on the ability itself beyond the permanent's own tap"
         },
         {
           "seat": 1,
@@ -152,7 +228,8 @@
   "win_recognition_check": "No state-based action for a win/loss condition is ever met in this sequence - Hazel's Brewmaster's countering prevents the INT-0003 loop from ever starting, both players remain above 0 life, and the simulator must correctly report the game as ongoing (not declare a winner) after the disruption.",
   "rules_citations": [
     "CR 608.2b (countered spells go to the graveyard, never resolve)",
-    "CR 603.2 (triggered abilities require the triggering event to actually occur)"
+    "CR 603.2 (triggered abilities require the triggering event to actually occur)",
+    "CR 118.10 (Phyrexian mana)"
   ],
   "authored_by": "cEDH Simulation & Quantitative Research Agent (Claude)",
   "authored_date": "2026-08-12",
