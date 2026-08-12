@@ -1,0 +1,81 @@
+{
+  "scryfall_id": "7a5e2f7a-8cfe-4d1b-a68d-7e6d8d10bd27",
+  "mtgjson_uuid": null,
+  "name": "Heartwood Storyteller",
+  "oracle_text": "Whenever a player casts a noncreature spell, each of that player's opponents may draw a card.",
+  "type_line": "Creature \u2014 Treefolk",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{1}{G}{G}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Treefolk"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "3",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "triggered",
+      "text": "Whenever a player casts a noncreature spell, each of that player's opponents may draw a card.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2021-03-19",
+      "text": "An ability that triggers when a player casts a spell resolves before the spell that caused it to trigger. It resolves even if that spell is countered.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-03-19",
+      "text": "Players can cast spells and activate abilities after the triggered ability resolves but before the spell that caused it to trigger does.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

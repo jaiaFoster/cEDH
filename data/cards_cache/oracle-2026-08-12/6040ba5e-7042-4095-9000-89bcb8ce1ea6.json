@@ -1,0 +1,72 @@
+{
+  "scryfall_id": "6040ba5e-7042-4095-9000-89bcb8ce1ea6",
+  "mtgjson_uuid": null,
+  "name": "Elves of Deep Shadow",
+  "oracle_text": "{T}: Add {B}. This creature deals 1 damage to you.",
+  "type_line": "Creature \u2014 Elf Druid",
+  "color_identity": [
+    "B",
+    "G"
+  ],
+  "mana_cost": "{G}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Elf",
+      "Druid"
+    ],
+    "supertypes": [],
+    "is_mana_source": true,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "1",
+    "toughness": "1",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "mana",
+      "text": "{T}: Add {B}. This creature deals 1 damage to you.",
+      "cost": "{T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

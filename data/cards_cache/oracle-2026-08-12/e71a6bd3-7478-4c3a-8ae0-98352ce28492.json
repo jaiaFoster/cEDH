@@ -1,0 +1,68 @@
+{
+  "scryfall_id": "e71a6bd3-7478-4c3a-8ae0-98352ce28492",
+  "mtgjson_uuid": null,
+  "name": "Imperial Seal",
+  "oracle_text": "Search your library for a card, then shuffle and put that card on top. You lose 2 life.",
+  "type_line": "Sorcery",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{B}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Sorcery"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Search your library for a card, then shuffle and put that card on top. You lose 2 life.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "banned",
+    "pauper": "not_legal",
+    "vintage": "restricted",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "banned",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "banned"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

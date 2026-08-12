@@ -1,0 +1,99 @@
+{
+  "scryfall_id": "f40bd797-4d12-4098-a1a8-d7e5b7b82ac9",
+  "mtgjson_uuid": null,
+  "name": "Colossal Skyturtle",
+  "oracle_text": "Flying, ward {2}\nChannel \u2014 {2}{G}, Discard this card: Return target card from your graveyard to your hand.\nChannel \u2014 {1}{U}, Discard this card: Return target creature to its owner's hand.",
+  "type_line": "Enchantment Creature \u2014 Turtle",
+  "color_identity": [
+    "G",
+    "U"
+  ],
+  "mana_cost": "{4}{G}{G}{U}",
+  "mana_value": 7.0,
+  "characteristics": {
+    "card_types": [
+      "Enchantment",
+      "Creature"
+    ],
+    "subtypes": [
+      "Turtle"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "6",
+    "toughness": "5",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Flying, ward {2}",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "Channel \u2014 {2}{G}, Discard this card: Return target card from your graveyard to your hand.",
+      "cost": "Channel \u2014 {2}{G}, Discard this card",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "Channel \u2014 {1}{U}, Discard this card: Return target creature to its owner's hand.",
+      "cost": "Channel \u2014 {1}{U}, Discard this card",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2022-02-18",
+      "text": "Discarding the card is part of the cost to activate a channel ability.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2022-02-18",
+      "text": "If a channel ability requires a target, you may not activate it without a target just to discard the card.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

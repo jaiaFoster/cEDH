@@ -1,0 +1,90 @@
+{
+  "scryfall_id": "f340cbf7-5bbe-45b9-a4bf-d1caa500ff93",
+  "mtgjson_uuid": null,
+  "name": "Chrome Mox",
+  "oracle_text": "Imprint \u2014 When this artifact enters, you may exile a nonartifact, nonland card from your hand.\n{T}: Add one mana of any of the exiled card's colors.",
+  "type_line": "Artifact",
+  "color_identity": [],
+  "mana_cost": "{0}",
+  "mana_value": 0.0,
+  "characteristics": {
+    "card_types": [
+      "Artifact"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": true,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Imprint \u2014 When this artifact enters, you may exile a nonartifact, nonland card from your hand.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "mana",
+      "text": "{T}: Add one mana of any of the exiled card's colors.",
+      "cost": "{T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2025-02-07",
+      "text": "If no card is exiled with this artifact, it can\u2019t add mana. The same is true if the exiled card is colorless.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2025-02-07",
+      "text": "This artifact's activated ability can never add {C}, even if the exiled card is colorless or has a colorless mana symbol in its mana cost.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2025-02-07",
+      "text": "If the exiled card is multicolored, you choose one of that card\u2019s colors each time you tap this artifact for mana.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "banned",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "banned",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "banned",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "banned",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "banned"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

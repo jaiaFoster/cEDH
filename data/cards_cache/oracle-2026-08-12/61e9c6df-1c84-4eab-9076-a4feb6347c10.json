@@ -1,0 +1,112 @@
+{
+  "scryfall_id": "61e9c6df-1c84-4eab-9076-a4feb6347c10",
+  "mtgjson_uuid": null,
+  "name": "Mental Misstep",
+  "oracle_text": "({U/P} can be paid with either {U} or 2 life.)\nCounter target spell with mana value 1.",
+  "type_line": "Instant",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{U/P}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "({U/P} can be paid with either {U} or 2 life.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Counter target spell with mana value 1.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2011-06-01",
+      "text": "A card with Phyrexian mana symbols in its mana cost is each color that appears in that mana cost, regardless of how that cost may have been paid.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "To calculate the mana value of a card with Phyrexian mana symbols in its cost, count each Phyrexian mana symbol as 1.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "As you cast a spell or activate an activated ability with one or more Phyrexian mana symbols in its cost, you choose how to pay for each Phyrexian mana symbol at the same time you would choose modes or choose a value for X.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "If you're at 1 life or less, you can't pay 2 life.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "Phyrexian mana is not a new color. Players can't produce Phyrexian mana.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "If a spell has {X} in its mana cost, X is considered to be the value chosen for it while that spell is on the stack.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "Each Phyrexian mana symbol in a spell's mana cost contributes 1 to that spell's mana value. For example, Mental Misstep's mana value is 1, regardless of how its cost was paid.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "banned",
+    "legacy": "banned",
+    "pauper": "not_legal",
+    "vintage": "restricted",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

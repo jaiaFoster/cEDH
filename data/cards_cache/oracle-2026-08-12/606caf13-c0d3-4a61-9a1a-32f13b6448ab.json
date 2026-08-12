@@ -1,0 +1,107 @@
+{
+  "scryfall_id": "606caf13-c0d3-4a61-9a1a-32f13b6448ab",
+  "mtgjson_uuid": null,
+  "name": "Eldritch Evolution",
+  "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card with mana value X or less, where X is 2 plus the sacrificed creature's mana value. Put that card onto the battlefield, then shuffle. Exile Eldritch Evolution.",
+  "type_line": "Sorcery",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{1}{G}{G}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Sorcery"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": "As an additional cost to cast this spell, sacrifice a creature."
+    },
+    {
+      "kind": "static",
+      "text": "Search your library for a creature card with mana value X or less, where X is 2 plus the sacrificed creature's mana value. Put that card onto the battlefield, then shuffle. Exile Eldritch Evolution.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2016-07-13",
+      "text": "Sacrificing a creature is part of Eldritch Evolution's cost. You can't sacrifice more creatures to search for more creature cards, and you can't cast Eldritch Evolution at all if you control no creatures.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2016-07-13",
+      "text": "Once you begin to cast Eldritch Evolution, no player may take actions until you're done. Notably, opponents can't try to remove the creature you wish to sacrifice.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2016-07-13",
+      "text": "A creature's mana value is determined solely by the mana symbols printed in its upper right corner (unless that creature is the back face of a double-faced card, a melded card, or is copying something else; see below). If the mana cost includes {X}, X is considered to be 0. If it's a single-faced card with no mana symbols in its upper right corner (because it's an animated land, for example), its mana value is 0. Ignore any alternative costs or additional costs (such as kicker) paid when the creature was cast.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2016-07-13",
+      "text": "A token that isn't a copy of another permanent has a mana value of 0. A token that is a copy or a creature that has become a copy of another permanent has the mana value of what it's copying.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2016-07-13",
+      "text": "The mana value of a permanent that's a double-faced card with its back face up is the mana value of its front face. The mana value of a melded permanent is the sum of the mana values of its front faces. A creature that's a copy of either has a mana value of 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2016-07-13",
+      "text": "If a card in a library has {X} in its mana cost, X is considered to be 0. If you find such a card this way, you won't have an opportunity to spend mana on {X}.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

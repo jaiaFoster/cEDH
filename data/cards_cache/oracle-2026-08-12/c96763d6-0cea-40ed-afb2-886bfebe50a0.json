@@ -1,0 +1,117 @@
+{
+  "scryfall_id": "c96763d6-0cea-40ed-afb2-886bfebe50a0",
+  "mtgjson_uuid": null,
+  "name": "Misdirection",
+  "oracle_text": "You may exile a blue card from your hand rather than pay this spell's mana cost.\nChange the target of target spell with a single target.",
+  "type_line": "Instant",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{3}{U}{U}",
+  "mana_value": 5.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "You may exile a blue card from your hand rather than pay this spell's mana cost.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": "You may exile a blue card from your hand rather than pay this spell's mana cost."
+    },
+    {
+      "kind": "static",
+      "text": "Change the target of target spell with a single target.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2004-10-04",
+      "text": "Once the spell resolves, the new target is considered to be targeted by the deflected spell. This will trigger any effects which trigger on being targeted.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "This only targets the spell being changed, not the original or new target of the spell it is affecting.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "The target of a spell that targets another spell on the stack can be changed to any other spell on the stack, even if the new target will resolve before the spell does.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "You can\u2019t make a spell which is on the stack target itself.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "You can choose to make a spell on the stack target this spell (if such a target choice would be legal had the spell been cast while this spell was on the stack). The new target for the deflected spell is not chosen until this spell resolves. This spell is still on the stack when new targets are selected for the spell.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "If there is no other legal target for the spell, this does not change the target.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "This does not check if the current target is legal. It just checks if the spell has a single target.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2004-10-04",
+      "text": "You choose the spell to target on announcement, but you pick the new target for that spell on resolution.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "legal",
+    "predh": "legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

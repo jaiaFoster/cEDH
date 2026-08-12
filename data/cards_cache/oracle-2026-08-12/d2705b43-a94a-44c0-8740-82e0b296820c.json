@@ -1,0 +1,172 @@
+{
+  "scryfall_id": "d2705b43-a94a-44c0-8740-82e0b296820c",
+  "mtgjson_uuid": null,
+  "name": "Abhorrent Oculus",
+  "oracle_text": "As an additional cost to cast this spell, exile six cards from your graveyard.\nFlying\nAt the beginning of each opponent's upkeep, manifest dread. (Look at the top two cards of your library. Put one onto the battlefield face down as a 2/2 creature and the other into your graveyard. Turn it face up any time for its mana cost if it's a creature card.)",
+  "type_line": "Creature \u2014 Eye",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{2}{U}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Eye"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "5",
+    "toughness": "5",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "As an additional cost to cast this spell, exile six cards from your graveyard.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": "As an additional cost to cast this spell, exile six cards from your graveyard."
+    },
+    {
+      "kind": "static",
+      "text": "Flying",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "At the beginning of each opponent's upkeep, manifest dread. (Look at the top two cards of your library. Put one onto the battlefield face down as a 2/2 creature and the other into your graveyard. Turn it face up any time for its mana cost if it's a creature card.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-09-20",
+      "text": "At any time, you can look at a face-down spell or permanent you control. You can't look at face-down permanents or spells you don't control unless an effect instructs or allows you to do so.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "If a face-down creature loses its abilities, it can't be turned face up with a disguise or morph ability because it will no longer have that ability (or the associated cost) once face up.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Because the permanent is on the battlefield both before and after it's turned face up, turning a permanent face up doesn't cause any enters-the-battlefield abilities to trigger.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Because face-down creatures don't have a name, they can't have the same name as any other creature, even another face-down creature.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Some cards in the Duskmourn release have abilities that trigger \"whenever you manifest dread.\" In circumstances where you are instructed to manifest dread but can't perform some or all of the steps of manifesting dread (probably because your library has one or fewer cards in it), these abilities will still trigger.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Abhorrent Oculus's additional cost must be paid even if it's cast \"without paying its mana cost\" or for any alternative cost.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "To manifest dread, look at the top two cards of your library. Manifest one (by putting it onto the battlefield face down) and put the other into your graveyard. The card you put onto the battlefield becomes a 2/2 face-down creature with no name, mana cost, creature types, or abilities. It's colorless and has a mana value of 0. Other effects that apply to the permanent can still grant it any characteristics it doesn't have or change the characteristics it does have.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Any time you have priority, you can turn a manifested permanent you control face up by revealing that it's a creature card (ignoring any copy effects or type-changing effects that might be applying to it) and paying its mana cost. This is a special action. It doesn't use the stack and can't be responded to.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "If a manifested creature would have disguise or morph if it were face up, you may also turn it face up by paying its disguise or morph cost, as appropriate.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Unlike a face-down creature that was cast using a disguise or morph ability, a manifested creature may still be turned face up after it loses its abilities if it's a creature card.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "If a double-faced card is manifested, it will be put onto the battlefield face down. While face down, it can't transform. If the front face of the card is a creature card, you can turn it face up by paying its mana cost. If you do, its front face will be up.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "If your library contains only one card when you manifest dread, you'll look at that card and put it onto the battlefield face down. You won't have the option to put it into your graveyard instead. If your library contains no cards when you manifest dread, you won't do anything.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "A permanent that turns face up or face down changes characteristics but is otherwise the same permanent. Spells and abilities that were targeting that permanent and Auras and Equipment that were attached to that permanent aren't affected unless the new characteristics of the object change the legality of those targets or attachments.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "Turning a permanent face up or face down doesn't change whether that permanent is tapped or untapped.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "If a face-down spell leaves the stack and goes to any zone other than the battlefield (if it was countered, for example), you must reveal it. Similarly, if a face-down permanent leaves the battlefield, you must reveal it. You must also reveal all face-down spells and permanents you control if you leave the game or the game ends.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "You must ensure that your face-down spells and permanents can be easily differentiated from each other. You're not allowed to mix up the cards that represent them on the battlefield to confuse other players. The order in which they entered should remain clear, as well as what ability caused them to be face down. (This includes manifest, disguise, cloak, morph, and a few older effects that turn cards face down.) Common methods for doing this include using markers or dice, or simply placing them in order on the battlefield.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-09-20",
+      "text": "If something tries to turn a face-down instant or sorcery card on the battlefield face up, reveal that card to show all players it's an instant or sorcery card. The permanent remains on the battlefield face down. Abilities that trigger when a permanent turns face up won't trigger, because even though you revealed the card, it never turned face up.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

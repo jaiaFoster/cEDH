@@ -1,0 +1,103 @@
+{
+  "scryfall_id": "63cda4a0-0dff-4edb-ae67-a2b7e2971350",
+  "mtgjson_uuid": null,
+  "name": "Kinnan, Bonder Prodigy",
+  "oracle_text": "Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced.\n{5}{G}{U}: Look at the top five cards of your library. You may put a non-Human creature card from among them onto the battlefield. Put the rest on the bottom of your library in a random order.",
+  "type_line": "Legendary Creature \u2014 Human Druid",
+  "color_identity": [
+    "G",
+    "U"
+  ],
+  "mana_cost": "{G}{U}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Druid"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "triggered",
+      "text": "Whenever you tap a nonland permanent for mana, add one mana of any type that permanent produced.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{5}{G}{U}: Look at the top five cards of your library. You may put a non-Human creature card from among them onto the battlefield. Put the rest on the bottom of your library in a random order.",
+      "cost": "{5}{G}{U}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2020-04-17",
+      "text": "You\u2019re \u201ctapping a permanent for mana\u201d only if you\u2019re activating a mana ability of that permanent that includes the {T} symbol in its cost. A mana ability produces mana as part of its effect.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-04-17",
+      "text": "The types of mana are white, blue, black, red, green, and colorless.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-04-17",
+      "text": "The additional mana is produced by Kinnan, not by the nonland permanent that you tapped for mana.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-04-17",
+      "text": "Kinnan doesn\u2019t care about any restrictions or riders the nonland permanent put on the mana it produced. The additional mana Kinnan produces won\u2019t have any restrictions or riders.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

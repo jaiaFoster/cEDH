@@ -14,7 +14,7 @@ passed for the specific model version and deck version in question.**
 
 | Gate | Description | Status | Evidence | Date |
 |---|---|---|---|---|
-| 1 | Card & rule coverage | **Blocked (in progress)** | Subject decklist supplied and Phase 0 legality/color-identity triage done (`docs/assignments/SIM-001.md`); full bulk Oracle ingestion still blocked — no network access to Scryfall/MTGJSON/Spellbook from this environment (`docs/SOURCES.md`) | 2026-08-12 |
+| 1 | Card & rule coverage | **In progress** | Network unblocked 2026-08-12; all 100 cards (98 + 2 commanders) bulk-ingested from Scryfall with full Oracle text, mana cost, color identity, and rulings (`data/cards_cache/oracle-2026-08-12/`, `data/decklists/tymna-thrasios-treefarm-v1.json`). Ability classification is heuristic, not manually reviewed. Still open: interaction discovery pass (`SIM-0005`), Forge/XMage evaluation (`INFRA-0002`), MTGJSON cross-validation. Gate not yet closable until those complete per its exit criteria below. | 2026-08-12 |
 | 2 | Gold board states | Not started | depends on Gate 1 | — |
 | 3 | Gold games | Not started | depends on Gate 2 | — |
 | 4 | ~100 manually inspected games | Not started | depends on Gate 3 | — |

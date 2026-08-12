@@ -2,33 +2,44 @@
 
 Per `docs/CHARTER.md`'s source hierarchy. For every source: what it's for,
 how we plan to access it, and what was actually confirmed reachable **from
-this execution environment**, as of 2026-08-12.
+this execution environment**.
 
 ## Environment network reality (read this first)
 
-This session's outbound egress is proxied and policy-gated. Direct testing
-(`curl` from Bash, and `WebFetch`) against every external data source below
-returned `EGRESS_BLOCKED` / `403 policy denial` at the proxy:
+**Status as of 2026-08-12 (post-fix): OPEN.** The user updated this
+environment's network egress policy mid-session. Re-tested via `curl` and
+confirmed live with real content pulls:
 
-| Host | Bash curl | WebFetch |
-|---|---|---|
-| api.scryfall.com | 403 (connect_rejected) | EGRESS_BLOCKED |
-| mtgjson.com | 403 (connect_rejected) | not retried (same proxy) |
-| backend.commanderspellbook.com | 403 (connect_rejected) | not retried |
-| topdeck.gg | 403 (connect_rejected) | EGRESS_BLOCKED |
-| cedhtop16.com | 403 (connect_rejected) | not retried |
-| edhtop16.com | 403 (connect_rejected) | not retried |
+| Host | Status |
+|---|---|
+| api.scryfall.com | **200**, live JSON confirmed (pulled real card data) |
+| mtgjson.com | **200**, live JSON confirmed |
+| backend.commanderspellbook.com | **200**, live JSON confirmed |
+| topdeck.gg | **200** |
+| edhtop16.com | **200** |
+| github.com / api.github.com | **200** |
+| raw.githubusercontent.com | reachable (404 on a wrong path — connectivity confirmed, not blocked) |
+| moxfield.com | reachable at the TCP/proxy level, but Moxfield's own Cloudflare bot-wall returns 403 (`Please enable cookies`) — this is Moxfield blocking us, not our proxy. `api.moxfield.com` hits the same wall. |
 
-`WebSearch` **does** work (it returns third-party search snippets, not raw
-API responses) and is how the infrastructure survey below was actually
-researched. So: this environment can currently *learn about* these sources
-through search-engine summaries, but cannot *pull structured data* from any
-of them via Bash or WebFetch.
+Full domain list requested and granted: see `docs/EGRESS_ALLOWLIST.md`.
 
-**Implication:** card ingestion, ruling ingestion, interaction-database
-pulls, and tournament-data pulls cannot happen inside a session configured
-like this one. Before Gate 1 (card & rule coverage) can run for real, one of
-the following is needed:
+**Before this fix** (2026-08-12, earlier in the session): this session's
+outbound egress was proxied and policy-gated, and direct testing (`curl`
+from Bash, and `WebFetch`) against every external data source below
+returned `EGRESS_BLOCKED` / `403 policy denial` at the proxy. Only
+`WebSearch` worked (third-party search snippets, not raw API responses),
+which is how the initial infrastructure survey and SIM-001 Phase 0 spot
+checks were done. That history matters for provenance: any record ingested
+before 2026-08-12's fix and tagged `resolution_status: verified_by_search`
+or `well_known` in `data/decklists/_provisional/` was WebSearch- or
+memory-derived, not bulk-pull-verified — see
+`docs/assignments/SIM-001.md` for a concrete case where a WebSearch-derived
+"verification" (Swift Reconfiguration's color) was itself wrong and only
+caught by the real Scryfall bulk pull once egress opened.
+
+**If this environment is ever recreated or the policy regresses**, before
+assuming either path below, re-run the reachability check documented in
+`docs/EGRESS_ALLOWLIST.md`:
 1. This environment's network policy is changed to allow the specific hosts
    below (ideal — enables direct, repeatable, versioned pulls), or
 2. Data is pulled out-of-band (a different environment/session with broader

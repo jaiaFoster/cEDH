@@ -1,0 +1,121 @@
+{
+  "scryfall_id": "c0516453-3e6a-4b7f-8df6-72a6e207169a",
+  "mtgjson_uuid": null,
+  "name": "Clever Impersonator",
+  "oracle_text": "You may have this creature enter as a copy of any nonland permanent on the battlefield.",
+  "type_line": "Creature \u2014 Shapeshifter",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{2}{U}{U}",
+  "mana_value": 4.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Shapeshifter"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "0",
+    "toughness": "0",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "You may have this creature enter as a copy of any nonland permanent on the battlefield.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2014-09-20",
+      "text": "Remember that if you control more than one legendary permanent with the same name, you'll choose one to remain on the battlefield and put the rest into their owner's graveyard.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "If Clever Impersonator enters the battlefield as a copy of a planeswalker, it will enter the battlefield with a number of loyalty counters on it equal to the loyalty printed in the lower right corner of the planeswalker card. It won't copy the number of loyalty counters on the original planeswalker.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "Clever Impersonator copies exactly what is printed on the chosen permanent (unless that permanent is copying something else or is a token; see below). It doesn't copy whether that permanent is tapped or untapped, whether that permanent has any counters on it or any Auras and/or Equipment attached to it, and it doesn't copy any non-copy effects that have changed that permanent's power, toughness, types, color, abilities, or so on.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "If the chosen permanent has {X} in its mana cost, X is considered to be 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "Any enters-the-battlefield abilities of the chosen permanent will trigger when Clever Impersonator enters the battlefield. Any \"as [this permanent] enters the battlefield\" or \"[this permanent] enters the battlefield with\" abilities of the chosen permanent will also work.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "You can choose not to copy anything. In that case, Clever Impersonator enters the battlefield as a 0/0 creature, and it's put into the graveyard immediately (unless something is raising its toughness above 0).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "You choose which nonland permanent Clever Impersonator will copy, if any, as it enters the battlefield. This doesn't target that nonland permanent.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "If the chosen permanent is a copy of something else (for example, if the chosen permanent is another Clever Impersonator), then your Clever Impersonator enters the battlefield as whatever the chosen permanent copied.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "If the chosen permanent is a token, Clever Impersonator copies the original characteristics of that token as defined by the effect that put that token onto the battlefield. Clever Impersonator is not a token.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2014-09-20",
+      "text": "If Clever Impersonator enters the battlefield at the same time as another permanent, it can't become a copy of that permanent. You may choose only a nonland permanent that's already on the battlefield.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

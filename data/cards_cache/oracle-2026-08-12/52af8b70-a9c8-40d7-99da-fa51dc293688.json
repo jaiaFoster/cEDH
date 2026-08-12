@@ -1,0 +1,128 @@
+{
+  "scryfall_id": "52af8b70-a9c8-40d7-99da-fa51dc293688",
+  "mtgjson_uuid": null,
+  "name": "Hazel's Brewmaster",
+  "oracle_text": "Menace\nWhenever this creature enters or attacks, exile up to one target card from a graveyard and create a Food token.\nFoods you control have all activated abilities of all creature cards exiled with this creature.",
+  "type_line": "Creature \u2014 Squirrel Warlock",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{3}{B}",
+  "mana_value": 4.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Squirrel",
+      "Warlock"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "3",
+    "toughness": "4",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Menace",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "Whenever this creature enters or attacks, exile up to one target card from a graveyard and create a Food token.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Foods you control have all activated abilities of all creature cards exiled with this creature.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-11-08",
+      "text": "Whatever you do, don't eat the delicious cards.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If an effect refers to a Food, it means any Food artifact, not just a Food artifact token. For example, you can sacrifice Tough Cookie (an Artifact Creature \u2014 Food Golem) to activate Maraleaf Rider's ability (an ability with \"Sacrifice a Food\" in its cost).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "Food is an artifact type. Even though it appears on some creatures, it's never a creature type.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "You can't sacrifice a Food to pay multiple costs. For example, you can't sacrifice a Food token to activate its own ability and also to activate Maraleaf Rider's ability.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "You don't have to choose a target for Hazel's Brewmaster's second ability. However, if you do, and that target is illegal as the ability tries to resolve, it won't resolve and none of its effects will happen. You won't create a Food token.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "Activated abilities contain a colon. They're generally written \"[Cost]: [Effect].\" Some keyword abilities are activated abilities; those will often have colons in their reminder text.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "Hazel's Brewmaster's last ability grants only activated abilities. It doesn't grant keyword abilities (unless those keyword abilities are activated), triggered abilities, or static abilities.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "The granted abilities effectively use \"this permanent\" rather than \"[that card's name],\" so you treat the abilities as though they were printed on the permanent that gained the ability. For example, say you exiled the card Argothian Sprite with Hazel's Brewmaster. Argothian Sprite has the ability \"{7}: Put two +1/+1 counters on Argothian Sprite.\" If you controlled a Gingerbrute (an Artifact Creature \u2013 Food Golem), you'd treat it as though it had the ability \"{7}: Put two +1/+1 counters on Gingerbrute.\"",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

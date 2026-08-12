@@ -1,0 +1,117 @@
+{
+  "scryfall_id": "b768efa2-e56b-4a7e-ace8-d673f10e0714",
+  "mtgjson_uuid": null,
+  "name": "Birthing Pod",
+  "oracle_text": "({G/P} can be paid with either {G} or 2 life.)\n{1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. Activate only as a sorcery.",
+  "type_line": "Artifact",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{3}{G/P}",
+  "mana_value": 4.0,
+  "characteristics": {
+    "card_types": [
+      "Artifact"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "({G/P} can be paid with either {G} or 2 life.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. Activate only as a sorcery.",
+      "cost": "{1}{G/P}, {T}, Sacrifice a creature",
+      "timing_restriction": "activate only as a sorcery",
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2011-06-01",
+      "text": "A card with Phyrexian mana symbols in its mana cost is each color that appears in that mana cost, regardless of how that cost may have been paid.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "To calculate the mana value of a card with Phyrexian mana symbols in its cost, count each Phyrexian mana symbol as 1.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "As you cast a spell or activate an activated ability with one or more Phyrexian mana symbols in its cost, you choose how to pay for each Phyrexian mana symbol at the same time you would choose modes or choose a value for X.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "If you're at 1 life or less, you can't pay 2 life.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "Phyrexian mana is not a new color. Players can't produce Phyrexian mana.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "A creature's mana value is determined solely by the mana symbols printed in its upper right corner (unless that creature is copying something else; see below). If its mana cost includes {X}, X is considered to be 0. If it has no mana symbols in its upper right corner (because it's an animated land, for example), its mana value is 0. Ignore any alternative costs or additional costs (such as kicker) paid when the creature was cast.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "A token has a mana value of 0, unless it is copying something else.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-06-01",
+      "text": "If a creature is copying something else, its mana value is the mana value of whatever it's copying.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "banned",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

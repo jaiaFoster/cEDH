@@ -1,0 +1,132 @@
+{
+  "scryfall_id": "be219928-3d0e-4d00-b124-152ce8a8c13b",
+  "mtgjson_uuid": null,
+  "name": "Delney, Streetwise Lookout",
+  "oracle_text": "Creatures you control with power 2 or less can't be blocked by creatures with power 3 or greater.\nIf a triggered ability of a creature you control with power 2 or less triggers, that ability triggers an additional time.",
+  "type_line": "Legendary Creature \u2014 Human Scout",
+  "color_identity": [
+    "W"
+  ],
+  "mana_cost": "{2}{W}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Scout"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Creatures you control with power 2 or less can't be blocked by creatures with power 3 or greater.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "If a triggered ability of a creature you control with power 2 or less triggers, that ability triggers an additional time.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-02-02",
+      "text": "Once a creature you control has become blocked, reducing its power to 2 or less and/or increasing the power of the creature blocking it to 3 or greater won't cause it to become unblocked.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "Triggered abilities use the word \"when,\" \"whenever,\" or \"at.\" They're often written as \"[Trigger condition], [effect].\" Some keyword abilities are triggered abilities and will have \"when,\" \"whenever,\" or \"at the beginning of\" in their reminder text.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "Replacement effects are unaffected by Delney, Streetwise Lookout's last ability. For example, a 1/1 creature that enters the battlefield under your control with one +1/+1 counter on it won't receive an additional +1/+1 counter.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "Abilities that apply \"as [this creature] enters the battlefield\" or \"as [this creature] is turned face up\" are also unaffected.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "Delney, Streetwise Lookout's last ability doesn't copy the triggered ability; it just causes the ability to trigger an additional time. Any choices made as you put the ability onto the stack, such as modes and targets, are made separately for each instance of the ability. Any choices made on resolution, such as whether to put counters on a permanent, are also made individually.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "If you somehow control two Delney, Streetwise Lookouts, abilities of creatures you control with power 2 or less trigger three times. A third Delney causes such abilities to trigger four times, a fourth causes such abilities to trigger five times, and so on.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "If a triggered ability is linked to a second ability, additional instances of that triggered ability are also linked to that second ability. If the second ability refers to \"the exiled card,\" it refers to all cards exiled by instances of the triggered ability.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "In some cases involving linked abilities, an ability requires information about \"the exiled card.\" When this happens, the ability gets multiple answers. If these answers are being used to determine the value of a variable, the sum is used. For example, if Elite Arcanist's enters-the-battlefield ability triggers twice, two cards are exiled. The value of X in the activation cost of Elite Arcanist's other ability is the sum of the two cards' mana values. As the ability resolves, you create copies of both cards and can cast none, one, or both of the copies in any order.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "Abilities that apply \"when [this creature] is turned face up\" will trigger an additional time only if that creature's power is 2 or less once it has been turned face up.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-02-02",
+      "text": "Once an ability of a creature you control has triggered, reducing its power to 2 or less won't cause that ability to trigger an additional time. Similarly, once an ability of a creature you control with power 2 or less has triggered an additional time due to Delney, Streetwise Lookout's last ability, increasing its power to 3 or greater won't remove that additional triggered ability from the stack.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

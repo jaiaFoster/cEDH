@@ -1,0 +1,117 @@
+{
+  "scryfall_id": "dca0a9a8-5ebc-43a3-8450-420ab6b7b76e",
+  "mtgjson_uuid": null,
+  "name": "Commandeer",
+  "oracle_text": "You may exile two blue cards from your hand rather than pay this spell's mana cost.\nGain control of target noncreature spell. You may choose new targets for it. (If that spell is an artifact, enchantment, or planeswalker, the permanent enters under your control.)",
+  "type_line": "Instant",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{5}{U}{U}",
+  "mana_value": 7.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "You may exile two blue cards from your hand rather than pay this spell's mana cost.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": "You may exile two blue cards from your hand rather than pay this spell's mana cost."
+    },
+    {
+      "kind": "static",
+      "text": "Gain control of target noncreature spell. You may choose new targets for it. (If that spell is an artifact, enchantment, or planeswalker, the permanent enters under your control.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2007-02-01",
+      "text": "If you Commandeer a spell for which buyback has been paid, the card returns to its owner's hand.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "After Commandeer resolves, you control the targeted spell. Any instance of \"you\" in that spell's text now refers to you, \"an opponent\" refers to one of your opponents, and so on. The change of control happens before new targets are chosen, so any targeting restrictions such as \"target opponent\" or \"target creature you control\" are now made in reference to you, not the spell's original controller. You may either change those targets to be legal in reference to you, or, if those are the spell's only targets, the spell doesn't resolve for having illegal targets. When the spell resolves, any illegal targets are unaffected by it and you make all decisions the spell's effect calls for.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "You may change any of the targeted spell's targets. If you change a target, you must choose a legal target for the spell. If you can't, you must leave the target the same (even if that target is now illegal).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "If the targeted spell has a triggered ability that copies it (for example, replicate or storm), the copies will be controlled by the player who cast that spell.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "If you gain control of an instant or sorcery spell with Commandeer, it will still be put into its owner's graveyard when it resolves.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "If you don't have two cards of the right color in your hand, you can't choose to cast the spell using the alternative cost.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "You can't exile a card from your hand to pay for itself. At the time you would pay costs, that card is on the stack, not in your hand.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2006-07-15",
+      "text": "You may pay the alternative cost rather than the card's mana cost. Any additional costs are paid as normal.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "banned",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

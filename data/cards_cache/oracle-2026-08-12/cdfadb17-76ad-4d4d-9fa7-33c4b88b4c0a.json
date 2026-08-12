@@ -1,0 +1,156 @@
+{
+  "scryfall_id": "cdfadb17-76ad-4d4d-9fa7-33c4b88b4c0a",
+  "mtgjson_uuid": null,
+  "name": "Sowing Mycospawn",
+  "oracle_text": "Devoid (This card has no color.)\nKicker {1}{C} (You may pay an additional {1}{C} as you cast this spell.)\nWhen you cast this spell, search your library for a land card, put it onto the battlefield, then shuffle.\nWhen you cast this spell, if it was kicked, exile target land.",
+  "type_line": "Creature \u2014 Eldrazi Fungus",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{3}{G}",
+  "mana_value": 4.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Eldrazi",
+      "Fungus"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "3",
+    "toughness": "3",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Devoid (This card has no color.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Kicker {1}{C} (You may pay an additional {1}{C} as you cast this spell.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "When you cast this spell, search your library for a land card, put it onto the battlefield, then shuffle.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "When you cast this spell, if it was kicked, exile target land.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-11-08",
+      "text": "To determine a spell's total cost, start with the mana cost (or an alternative cost if another card's effect allows you to pay one instead), add any cost increases (such as kicker), then apply any cost reductions. The spell's mana value remains unchanged, no matter what the total cost to cast it was.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If a spell's kicker cost was paid, the spell is \"kicked.\"",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "The kicker ability doesn't let you pay a kicker cost more than once.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If you put a permanent with a kicker ability onto the battlefield without casting it, you can't kick it.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If you copy a kicked spell on the stack, the copy is also kicked. If the copied spell is a permanent spell, the token the copy of that spell becomes when it enters is also kicked.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If a card or token enters as a copy of a permanent, the new permanent isn't kicked, even if the original was.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Sowing Mycospawn's triggered abilities will resolve before Sowing Mycospawn does. If Sowing Mycospawn is countered or otherwise leaves the stack in response to those triggered abilities, the triggered abilities will still resolve as normal.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "A card with devoid is just colorless. It's not colorless and the colors of mana in its mana cost.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Other cards and abilities can give a card with devoid a color. If that happens, it's just the new color, not that color and colorless.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Devoid works in all zones, not just on the battlefield.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If a card loses devoid, it will still be colorless. This is because effects that change an object's color (like the one created by devoid) are considered before the object loses devoid.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Devoid doesn't affect the color identity of the card for the purposes of the Commander variant. For example, while Abstruse Appropriation is colorless because it has devoid, its color identity is still white and black, and it can't be included in a Commander deck where the commander's color identity doesn't include both white and black.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "banned",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

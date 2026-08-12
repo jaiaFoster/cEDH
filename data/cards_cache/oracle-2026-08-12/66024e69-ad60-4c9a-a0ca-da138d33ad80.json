@@ -1,0 +1,84 @@
+{
+  "scryfall_id": "66024e69-ad60-4c9a-a0ca-da138d33ad80",
+  "mtgjson_uuid": null,
+  "name": "Mox Amber",
+  "oracle_text": "{T}: Add one mana of any color among legendary creatures and planeswalkers you control.",
+  "type_line": "Legendary Artifact",
+  "color_identity": [],
+  "mana_cost": "{0}",
+  "mana_value": 0.0,
+  "characteristics": {
+    "card_types": [
+      "Artifact"
+    ],
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": true,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "mana",
+      "text": "{T}: Add one mana of any color among legendary creatures and planeswalkers you control.",
+      "cost": "{T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2018-04-27",
+      "text": "Mox Amber's ability adds one mana of the color of your choice from among the colors of legendary creatures and legendary planeswalkers you control. It doesn't add one mana of each of those colors.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2018-04-27",
+      "text": "If you control no legendary creatures or legendary planeswalkers, you can activate Mox Amber's ability, but you won't add any mana.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2018-04-27",
+      "text": "If your legendary creatures and legendary planeswalkers are all colorless, you can activate Mox Amber's ability, but you won't add any mana. Colorless is not a color.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "banned",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "banned"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}

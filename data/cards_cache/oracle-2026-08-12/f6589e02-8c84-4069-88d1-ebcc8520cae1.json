@@ -1,0 +1,90 @@
+{
+  "scryfall_id": "f6589e02-8c84-4069-88d1-ebcc8520cae1",
+  "mtgjson_uuid": null,
+  "name": "Archivist of Oghma",
+  "oracle_text": "Flash\nWhenever an opponent searches their library, you gain 1 life and draw a card.",
+  "type_line": "Creature \u2014 Halfling Cleric",
+  "color_identity": [
+    "W"
+  ],
+  "mana_cost": "{1}{W}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Halfling",
+      "Cleric"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Flash",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "Whenever an opponent searches their library, you gain 1 life and draw a card.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2022-06-10",
+      "text": "Archivist of Oghma's triggered ability won't be put onto the stack until after the spell or ability causing the opponent to search their library finishes resolving. Notably, if that spell or ability causes any other abilities to trigger (for example, if the opponent searched for a card and put it onto the battlefield), those abilities and Archivist of Oghma's triggered ability will go on the stack at the same time. The active player puts all their abilities on the stack in any order, then each other player in turn order does the same. The last ability put onto the stack this way resolves first, and so on.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2022-06-10",
+      "text": "Archivist of Oghma's triggered ability won't trigger if you search an opponent's library or an opponent searches another player's library.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-08-12",
+  "source_version": "scryfall-live-2026-08-12"
+}
