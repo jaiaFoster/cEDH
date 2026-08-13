@@ -57,10 +57,22 @@ def _individually_affordable_from_turn_capacity(cost_str, turn_start_mana, turn_
 
 def snapshot_metrics(state, cards, combos):
     m = {}
-    total_mana = state.total_mana_value()
-    colors = state.colors_available()
+    # SOLO-003R root-cause fix: `total_mana`/`colors_available` here now report this turn's
+    # starting CAPACITY (state.turn_start_mana/turn_start_colors, captured inside develop_turn()
+    # right after the land drop, before anything is cast) - not whatever happens to be left over
+    # after the greedy policy already spent mana this turn. Every existing consumer of these two
+    # fields (in this module and in trajectory_metrics.py) wants "how much mana did this hand
+    # have to work with this turn," not "how much is unspent right now" - conflating the two was
+    # the root cause of the reviewer-flagged bug where a hand that spent its whole turn casting
+    # real spells could still be mislabeled "insufficient_mana" for finishing at 0-1 untapped.
+    # The old leftover/residual quantity is preserved separately below, under explicit names, for
+    # any diagnostic that specifically wants post-cast leftover rather than starting capacity.
+    total_mana = state.turn_start_mana
+    colors = state.turn_start_colors
     m["total_mana"] = total_mana
     m["colors_available"] = sorted(colors)
+    m["mana_remaining_unused"] = state.total_mana_value()
+    m["colors_remaining_unused"] = sorted(state.colors_available())
     m["mana_2plus"] = total_mana >= 2
     m["mana_3plus"] = total_mana >= 3
     m["mana_4plus"] = total_mana >= 4
@@ -126,8 +138,13 @@ def snapshot_metrics(state, cards, combos):
         m[f"{cname}_castable"] = castable_capacity
         m[f"{cname}_on_battlefield"] = on_bf
         if cname == "Tymna the Weaver":
-            m["tymna_creatures_for_attack"] = state.creature_count()
-            m["tymna_supported"] = on_bf and state.creature_count() >= 1
+            # SOLO-003R: "for attack" must mean attack-ELIGIBLE (excludes summoning-sick
+            # creatures, including Tymna herself if just cast this same turn) - creature_count()
+            # deliberately includes sick creatures for its OTHER uses (Cradle output, Pod/
+            # Survival fodder) where sickness doesn't apply; attack eligibility is exact
+            # rules-state and must not reuse that broader count.
+            m["tymna_creatures_for_attack"] = state.attack_eligible_creature_count()
+            m["tymna_supported"] = on_bf and state.attack_eligible_creature_count() >= 1
         if cname == "Thrasios, Triton Hero":
             # "commander + activation uses shared mana correctly" (regression test #10): a REAL
             # live check, since this asks about capacity actually remaining after a real cast.
@@ -172,7 +189,15 @@ def snapshot_metrics(state, cards, combos):
     # pieces still in hand are tentatively committed together via can_pay_jointly's underlying
     # search-then-rollback, so a "zero_step" claim reflects a real simultaneous allocation.
     battlefield_and_lands = battlefield_names | {l.name for l in state.lands}
-    has_tutor_live = len(tutor_live) > 0 or len(tutor_candidates_in_hand) > 0
+    # SOLO-003R fix: has_tutor_live previously ORed in mere hand-PRESENCE (tutor_candidates_in_hand)
+    # alongside real castability (tutor_live) - defeating the exact live-vs-present distinction
+    # this project has enforced everywhere else. A tutor only counts here if it is actually
+    # castable right now. Separately, a tutor only counts as a real path to a MISSING combo piece
+    # if its own target-class reach actually includes "combo_piece" (TUTOR_TARGETS) - a live
+    # land-only tutor (e.g. Sowing Mycospawn) cannot fetch a creature combo piece, and must not be
+    # treated as if it could.
+    has_tutor_live = len(tutor_live) > 0
+    tutor_reaches_combo_piece = any("combo_piece" in TUTOR_TARGETS.get(n, frozenset()) for n in tutor_live)
     combo_status = {}
     combo_protected = {}
     for combo in combos:
@@ -196,14 +221,25 @@ def snapshot_metrics(state, cards, combos):
         # real diagnosis would need its own backtracking search) - conservatively treat ALL
         # in-hand pieces as "stuck" for the missing-count tiering below.
         hand_stuck = [] if jointly_payable else list(in_hand)
-        missing = len(unseen) + len(hand_stuck)
+        missing_unseen = len(unseen)
+        missing_stuck = len(hand_stuck)
+        missing = missing_unseen + missing_stuck
+        # SOLO-003R fix: "one action away" previously conflated three very different situations
+        # under one label (and one_action_from_verified_win counted ALL of them as "credible win
+        # pressure"): a piece sitting in hand that just needs more mana next turn (a real,
+        # execution-only-dependent-on-mana signal); a missing piece a LIVE, combo-reaching tutor
+        # could fetch this turn (a real, concrete action); and a missing piece with no such tutor,
+        # which requires topdecking the exact card naturally (a much weaker signal that must NOT
+        # be reported as "credible win pressure").
         if missing == 0:
             status = "zero_step"
-        elif missing == 1 and unseen and has_tutor_live:
-            status = "one_action_away"
-        elif missing == 1:
-            status = "one_action_away_no_tutor"
-        elif missing == 2 and len(unseen) >= 1 and has_tutor_live:
+        elif missing == 1 and missing_stuck == 1:
+            status = "one_mana_step_from_win"
+        elif missing == 1 and missing_unseen == 1 and tutor_reaches_combo_piece:
+            status = "one_tutor_step_from_win"
+        elif missing == 1 and missing_unseen == 1:
+            status = "one_draw_step_from_win"
+        elif missing == 2 and missing_unseen >= 1 and tutor_reaches_combo_piece:
             status = "two_actions_away"
         else:
             status = "not_close"
@@ -240,13 +276,51 @@ def snapshot_metrics(state, cards, combos):
     m["combo_protected"] = combo_protected
     m["deterministic_win_available"] = any(v == "zero_step" for v in combo_status.values())
     m["deterministic_win_protected"] = any(combo_protected.get(k) for k, v in combo_status.items() if v == "zero_step")
-    m["one_action_from_verified_win"] = any(v.startswith("one_action_away") for v in combo_status.values())
+    # SOLO-003R fix: these three are now reported SEPARATELY (never collapsed into one
+    # "one action away" umbrella) precisely because they are different-strength signals - a
+    # topdeck-dependent piece (one_draw_step) must never be presented as equivalent to a
+    # tutor-backed or mana-backed one.
+    m["one_mana_step_from_win"] = any(v == "one_mana_step_from_win" for v in combo_status.values())
+    m["one_tutor_step_from_win"] = any(v == "one_tutor_step_from_win" for v in combo_status.values())
+    m["one_draw_step_from_win"] = any(v == "one_draw_step_from_win" for v in combo_status.values())
+    # "Credible win pressure" / one_action_from_verified_win must only include steps that don't
+    # depend on topdecking the exact missing card - a mana-backed step (all pieces already seen,
+    # just needs more mana) or a tutor-backed step (a live tutor that actually reaches combo
+    # pieces) are real, executable-soon facts; a draw-dependent step is not.
+    m["one_action_from_verified_win"] = m["one_mana_step_from_win"] or m["one_tutor_step_from_win"]
     m["two_actions_from_verified_win"] = any(v == "two_actions_away" for v in combo_status.values())
 
     m["cards_in_hand"] = len(state.hand)
     persistent = [p.name for p in state.nonland_perms if not MANA_SOURCES.get(p.name, {}).get("one_shot")]
     m["persistent_nonland_permanents"] = len(persistent)
     m["temporary_resources_consumed"] = len(state.temp_mana_used_log)
+
+    # SOLO-003R reviewer concept #3, the only one of (capacity, utilization, shortfall) that is
+    # actual evidence of a mana bottleneck: was a DESIRABLE action (a tutor, an engine of any
+    # tier, or an interaction spell) unavailable specifically because legal mana generation was
+    # insufficient - i.e. uncastable even against the turn's FULL starting capacity in isolation,
+    # not merely because the greedy policy chose to spend that capacity on something else first.
+    # X-cost cards are excluded (this policy doesn't model X-cost affordability at all, so their
+    # exclusion from "desirable" here isn't a mana signal). Deliberately scoped to cards actually
+    # IN HAND, not the command zone: both commanders sit in state.command_zone for essentially the
+    # entire game until cast, each needing a different 2-3 color combination - treating either as
+    # "desirable" unconditionally would make this fire on nearly every hand that hasn't assembled
+    # all four commander colors yet, which is normal and not a mana bottleneck finding. A
+    # commander's own capacity-affordability is already tracked precisely by its dedicated
+    # `{name}_castable` field above; this diagnostic isn't meant to duplicate that.
+    desirable_costs = []
+    for n in set(state.hand):
+        if n in TUTORS or n in ENGINES or n in INTERACTION_CASTABLE:
+            desirable_costs.append(cards[n]["mana_cost"])
+    mana_shortfall = False
+    for cost in desirable_costs:
+        _, _, x = parse_cost(cost)
+        if x > 0:
+            continue
+        if not _individually_affordable_from_turn_capacity(cost, state.turn_start_mana, state.turn_start_colors):
+            mana_shortfall = True
+            break
+    m["mana_shortfall"] = mana_shortfall
 
     return m
 

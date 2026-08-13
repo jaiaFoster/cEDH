@@ -156,6 +156,17 @@ class HandState:
             p.name in COMMANDERS or ("Legendary" in self.cards[p.name]["type"] and "Creature" in self.cards[p.name]["type"])
             for p in self.nonland_perms
         )
+        # Kinnan, Bonder Prodigy: "Whenever you tap a nonland permanent for mana, add one mana of
+        # any type that permanent produced." A triggered ability, not an activated one - it needs
+        # no untap/summoning-sickness check on Kinnan itself, only that Kinnan is on the
+        # battlefield. Applies to every nonland-permanent source below (dorks/rocks/Moxen/Lotus
+        # Petal) - explicitly NOT to lands (Gaea's Cradle, handled above, is a land) and NOT to
+        # Elvish Spirit Guide (never a permanent - a zero-cost ability activated from hand).
+        # Modeled as doubling that source's per-tap `count` while keeping the same `colors` set,
+        # which correctly captures "any type that permanent produced" for multi-color sources too
+        # (this payment engine already treats each unit of a multi-count source as independently
+        # assignable to any color in its set - see _try_pay).
+        kinnan_active = any(p.name == "Kinnan, Bonder Prodigy" for p in self.nonland_perms)
         for perm in self.nonland_perms:
             if perm.tapped:
                 continue
@@ -166,10 +177,11 @@ class HandState:
                 continue  # summoning sick
             if spec.get("requires_legendary") and not controls_legendary:
                 continue
+            multiplier = 2 if kinnan_active else 1
             if "colors" in spec:
-                out.append((perm, spec["colors"], 1))
+                out.append((perm, spec["colors"], 1 * multiplier))
             elif "generic" in spec:
-                out.append((perm, None, spec["generic"]))
+                out.append((perm, None, spec["generic"] * multiplier))
         # Elvish Spirit Guide: a zero-cost activated ability FROM HAND ("Exile this card from
         # your hand: Add {G}"), not a spell - modeled as a virtual untapped source while still in
         # hand, consumed (hand -> exile) only if actually used to pay for something.
@@ -178,7 +190,22 @@ class HandState:
         return out
 
     def creature_count(self):
+        """ALL creatures controlled, regardless of summoning sickness - correct for uses that
+        don't care about attacking (Cradle's per-creature mana output, Pod/Survival sacrifice/
+        discard fodder legality, board-presence diagnostics). Do NOT use this for attack-related
+        questions - see attack_eligible_creature_count()."""
         return sum(1 for p in self.nonland_perms if p.name in COMMANDERS or "Creature" in self.cards[p.name]["type"])
+
+    def attack_eligible_creature_count(self):
+        """Creatures that could LEGALLY attack right now: controlled continuously since the
+        beginning of this turn (i.e. not cast this turn - no haste-granting effects exist in this
+        decklist, so entered_turn != self.turn is the complete legality check here). This is a
+        real rules-state fact and must be exact, unlike whether an attack would actually connect
+        (blocks/removal are unknowable in this solo model - see tymna_attack_capacity())."""
+        return sum(
+            1 for p in self.nonland_perms
+            if (p.name in COMMANDERS or "Creature" in self.cards[p.name]["type"]) and p.entered_turn != self.turn
+        )
 
     def total_mana_value(self):
         return sum(count for _, _, count in self.available_sources())

@@ -45,7 +45,7 @@ def _tier_c_supported(name, state, cards):
     if name in TIER_C_STRUCTURALLY_INERT:
         return False
     if name == "Tymna the Weaver":
-        return state.creature_count() >= 1
+        return state.attack_eligible_creature_count() >= 1  # SOLO-003R: must respect summoning sickness
     if name == "Faerie Mastermind":
         # its own {3}{U} "each player draws a card" ability is the only solo-usable line
         return is_currently_castable(state, *parse_cost("{3}{U}")[:2])
@@ -201,16 +201,22 @@ def compounding_state_metrics(state, cards, m3):
 
 def tymna_attack_capacity(state, cards, cast_turn):
     """Section 9: Tymna is a conditional metric, not a success headline - and what this function
-    measures is ATTACK CAPACITY (how many creatures are currently able to attack), not confirmed
-    card productivity. This model does not simulate combat, blocks, or opponent removal, so it
-    cannot know how many of those attackers would actually connect, still less how many cards
-    that would draw (Tymna's trigger is "X = opponents dealt combat damage this turn," a
-    downstream, unsimulated fact). Creature count is a real, honest precursor signal - it is not
-    a card-draw estimate, and must not be read as one."""
+    measures is ATTACK CAPACITY (how many creatures are LEGALLY able to attack right now), not
+    confirmed card productivity. This model does not simulate combat, blocks, or opponent
+    removal, so it cannot know how many of those attackers would actually connect, still less how
+    many cards that would draw (Tymna's trigger is "X = opponents dealt combat damage this turn,"
+    a downstream, unsimulated fact) - that part is a real, honest precursor signal, not a
+    card-draw estimate, and must not be read as one.
+
+    What IS exact rules-state information, and must be counted exactly: attack ELIGIBILITY.
+    A creature cast this same turn (including Tymna herself, if just cast) has summoning sickness
+    and cannot attack - state.attack_eligible_creature_count() enforces this (unlike
+    state.creature_count(), which deliberately includes summoning-sick creatures for its other
+    uses - Cradle output, Pod/Survival fodder legality - where sickness doesn't apply)."""
     on_bf = any(p.name == "Tymna the Weaver" for p in state.nonland_perms)
     if not on_bf:
         return {"tymna_deployed": False, "tymna_attack_capacity_tier": None}
-    attackers = state.creature_count()
+    attackers = state.attack_eligible_creature_count()
     if attackers >= 3:
         tier = "attack_capacity_high"
     elif attackers >= 2:
@@ -291,14 +297,21 @@ def classify_trajectory_failure(m1, m2, m3, state, cards):
         outcome_tags.append("resource_destructive_acceleration_no_payoff")
     if _opening_hand_land_count(state, cards) >= 4 and m3["cards_in_hand"] <= 2:
         outcome_tags.append("flooded_action_light")
+    # SOLO-003R fix: total_mana is now this turn's STARTING CAPACITY (see opening_hand_metrics.
+    # snapshot_metrics), not post-cast leftover, so this check no longer mislabels a hand that
+    # spent its whole turn productively. It is still only a CAPACITY signal though, not proof a
+    # desirable action actually failed for mana reasons - that is mana_shortfall below, the only
+    # one of the three concepts (capacity/utilization/shortfall) that is real bottleneck evidence.
     if m3["total_mana"] < 2:
-        outcome_tags.append("insufficient_mana")
+        outcome_tags.append("low_mana_capacity")
+    if m3["mana_shortfall"]:
+        outcome_tags.append("mana_shortfall")
 
     causal_tags = []
     if len(state.lands) < 2:
         causal_tags.append("no_second_land")
-    if m3["total_mana"] < 2:
-        causal_tags.append("insufficient_persistent_mana")
+    if m3["mana_shortfall"]:
+        causal_tags.append("mana_shortfall")
     return outcome_tags, causal_tags
 
 
