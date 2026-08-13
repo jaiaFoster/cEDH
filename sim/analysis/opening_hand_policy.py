@@ -478,12 +478,15 @@ def is_currently_castable(state, gen, pips):
 
 
 def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction=False,
-                  forced_land=None, forced_fetch_target=None):
+                  forced_land=None, forced_fetch_target=None, forced_tutor_target=None):
     """Mutates state for one turn: untap, draw, land drop, greedy casts. Returns actions taken.
     forced_land: if given (and present in hand), overrides the greedy land-choice heuristic.
     forced_fetch_target: if forced_land (or the greedily-chosen land) is a fetch, overrides which
-    legal target it searches for. Both are used only by achievable_search.py's bounded
-    alternate-line search, never by the default policy_realized line."""
+    legal target it searches for. forced_tutor_target: if a tutor is cast this turn (whichever one
+    the greedy priority loop selects) and this card is present in state.library, it is searched
+    up and added to hand - real resolution, not just a spent card. All three are used only by
+    bounded alternate-line search (achievable_search.py / trajectory_search.py), never by the
+    default policy_realized line, which leaves tutors unresolved exactly as before MULL-005."""
     state.turn += 1
     state.untap_all()
     actions = []
@@ -617,6 +620,16 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
                     # it must never linger in nonland_perms (would corrupt engine/creature-count/
                     # persistent-resource accounting for every interaction spell and most tutors).
                     state.graveyard.append(c)
+                if cls == "tutor" and forced_tutor_target is not None and forced_tutor_target in state.library:
+                    # MULL-005: real library-search resolution, mirroring _crack_fetch's real-
+                    # search pattern - INERT (no card fetched) unless a target is explicitly
+                    # forced, so the default policy_realized line's behavior is byte-for-byte
+                    # unchanged from every previously-committed SOLO-002 through SOLO-004 result.
+                    # Only trajectory_search.py's bounded search ever passes a real target, to
+                    # explore what a specific tutor could legally find for THIS hand.
+                    state.library.remove(forced_tutor_target)
+                    state.hand.append(forced_tutor_target)
+                    actions.append(("tutor_fetch", forced_tutor_target))
                 _commit_payment(state, plan)
                 actions.append(("cast", c, _card_class(c, cards)))
                 state.cast_log.append((state.turn, c, _card_class(c, cards)))
