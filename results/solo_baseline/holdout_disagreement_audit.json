@@ -1,0 +1,3677 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_005R_HOLDOUT_DISAGREEMENT_AUDIT",
+  "sample_count": 3000,
+  "seed": 9001,
+  "seat": "play",
+  "keep_tier_threshold_size7": "C",
+  "confusion_matrix": {
+    "true_positive_both_keep": 1873,
+    "false_positive_simple_keeps_machine_ships": 412,
+    "false_negative_simple_ships_machine_keeps": 274,
+    "true_negative_both_ship": 441
+  },
+  "precision": 0.8196936542669584,
+  "recall": 0.872380065207266,
+  "false_keep_rate": 0.48300117233294254,
+  "false_mulligan_rate": 0.12761993479273404,
+  "disagreement_cause_counts": {
+    "premium_one_drop_rule": {
+      "false_keep": 14,
+      "false_mulligan": 0
+    },
+    "commander_logic": {
+      "false_keep": 128,
+      "false_mulligan": 12
+    },
+    "pod": {
+      "false_keep": 0,
+      "false_mulligan": 0
+    },
+    "oculus": {
+      "false_keep": 0,
+      "false_mulligan": 11
+    },
+    "survival": {
+      "false_keep": 0,
+      "false_mulligan": 18
+    },
+    "tutor_conversion": {
+      "false_keep": 35,
+      "false_mulligan": 60
+    },
+    "mana_without_payoff": {
+      "false_keep": 0,
+      "false_mulligan": 1
+    },
+    "retained_interaction": {
+      "false_keep": 21,
+      "false_mulligan": 10
+    },
+    "engine_realization_timing": {
+      "false_keep": 0,
+      "false_mulligan": 34
+    },
+    "hand_size_threshold": {
+      "false_keep": 139,
+      "false_mulligan": 126
+    },
+    "unclassified": {
+      "false_keep": 75,
+      "false_mulligan": 2
+    }
+  },
+  "disagreement_total": 686,
+  "sample_disagreements_capped_200": [
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Clever Impersonator",
+        "Elvish Spirit Guide",
+        "Force of Will",
+        "Misty Rainforest",
+        "Silence",
+        "Starting Town",
+        "Swan Song"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "commander colors plausible at 2-3 lands - dominant best-tier mechanism overall",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Force of Will",
+        "Hazel's Brewmaster",
+        "Imperial Seal",
+        "Kinnan, Bonder Prodigy",
+        "Mox Amber",
+        "Savannah",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "City of Traitors",
+        "Commandeer",
+        "Derevi, Empyrial Tactician",
+        "Eldritch Evolution",
+        "Marsh Flats",
+        "Shang-Chi, Master of Kung Fu",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Commandeer",
+        "Finale of Devastation",
+        "Flusterstorm",
+        "Gilded Drake",
+        "Mox Amber",
+        "Silence",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Gemstone Caverns",
+        "Minamo, School at Water's Edge",
+        "Noble Hierarch",
+        "Otawara, Soaring City",
+        "Sol Ring",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Archivist of Oghma",
+        "Deathrite Shaman",
+        "Delighted Halfling",
+        "Faerie Mastermind",
+        "Ranger-Captain of Eos",
+        "Shang-Chi, Master of Kung Fu",
+        "Underground Sea"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "City of Brass",
+        "Derevi, Empyrial Tactician",
+        "Elves of Deep Shadow",
+        "Enduring Vitality",
+        "Misdirection",
+        "Sowing Mycospawn",
+        "Training Grounds"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Eldritch Evolution",
+        "Gleaming Splendor",
+        "Mox Amber",
+        "Savannah",
+        "Smothering Tithe",
+        "Sol Ring",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "City of Brass",
+        "Fierce Guardianship",
+        "Flare of Denial",
+        "Shifting Woodland",
+        "Silence",
+        "Sowing Mycospawn",
+        "Underground Sea"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "survival",
+      "hand": [
+        "Ancient Tomb",
+        "Bayou",
+        "Crop Rotation",
+        "Ranger-Captain of Eos",
+        "Silence",
+        "Sowing Mycospawn",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "B",
+      "machine_tier_engine": "Survival of the Fittest",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Exotic Orchard",
+        "Gaea's Cradle",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mental Misstep",
+        "Savannah",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Flare of Denial",
+        "Gilded Drake",
+        "Hazel's Brewmaster",
+        "Marsh Flats",
+        "Misty Rainforest",
+        "Starting Town",
+        "Verdant Catacombs"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Chord of Calling",
+        "Faerie Mastermind",
+        "Silence",
+        "Sowing Mycospawn",
+        "Veil of Summer",
+        "Windswept Heath"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "oculus",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Elvish Spirit Guide",
+        "Exotic Orchard",
+        "Finale of Devastation",
+        "Hazel's Brewmaster",
+        "Shang-Chi, Master of Kung Fu",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Abhorrent Oculus",
+      "machine_mechanism": "battlefield_tutor_to_oculus"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Badgermole Cub",
+        "Clever Impersonator",
+        "Mox Amber",
+        "Savannah",
+        "Shifting Woodland",
+        "Training Grounds",
+        "Tundra"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Ancient Tomb",
+        "Elves of Deep Shadow",
+        "Gilded Drake",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Silence",
+        "Sowing Mycospawn",
+        "Windswept Heath"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "commander_logic",
+      "hand": [
+        "Gemstone Caverns",
+        "Minamo, School at Water's Edge",
+        "Noble Hierarch",
+        "Oboro Breezecaller",
+        "Shang-Chi, Master of Kung Fu",
+        "Veil of Summer",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "2-3 lands with no engine, no cheap tutor, no plausible commander colors",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "City of Traitors",
+        "Delney, Streetwise Lookout",
+        "Finale of Devastation",
+        "Flooded Strand",
+        "Nature's Rhythm",
+        "Swift Reconfiguration",
+        "Verdant Catacombs"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Commandeer",
+        "Enduring Vitality",
+        "Force of Negation",
+        "Mana Confluence",
+        "Rhystic Study",
+        "Underground Sea",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Colossal Skyturtle",
+        "Eldritch Evolution",
+        "Imperial Seal",
+        "Pact of Negation",
+        "Savannah",
+        "Spellseeker"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Chrome Mox",
+        "Devoted Druid",
+        "Elves of Deep Shadow",
+        "Fierce Guardianship",
+        "Kinnan, Bonder Prodigy",
+        "Mental Misstep",
+        "Noble Hierarch"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Boseiju, Who Endures",
+        "Delney, Streetwise Lookout",
+        "Eldritch Evolution",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mox Diamond",
+        "Veil of Summer"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Chord of Calling",
+        "Delighted Halfling",
+        "Devoted Druid",
+        "Mental Misstep",
+        "Misty Rainforest",
+        "Talon Gates of Madara",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Elvish Spirit Guide",
+        "Heartwood Storyteller",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mox Amber",
+        "Ranger-Captain of Eos",
+        "Sylvan Library",
+        "Veil of Summer"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Eldritch Evolution",
+        "Force of Negation",
+        "Force of Will",
+        "Heartwood Storyteller",
+        "Marsh Flats",
+        "Sol Ring",
+        "Underground Sea"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Commandeer",
+        "Enlightened Tutor",
+        "Scrubland",
+        "Smothering Tithe",
+        "Survival of the Fittest",
+        "Sylvan Library",
+        "Veil of Summer"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "retained_interaction",
+      "hand": [
+        "Abhorrent Oculus",
+        "Finale of Devastation",
+        "Hazel's Brewmaster",
+        "Misty Rainforest",
+        "Oboro Breezecaller",
+        "Rhystic Study",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "natural_engine+free_interaction"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Badgermole Cub",
+        "Birds of Paradise",
+        "Birthing Pod",
+        "Devoted Druid",
+        "Gaea's Cradle",
+        "Gemstone Caverns",
+        "Kinnan, Bonder Prodigy"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Commandeer",
+        "Elves of Deep Shadow",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Nature's Rhythm",
+        "Savannah",
+        "Sol Ring",
+        "Talon Gates of Madara"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Eldritch Evolution",
+        "Elves of Deep Shadow",
+        "Gemstone Caverns",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mox Amber",
+        "Oboro Breezecaller",
+        "Rhystic Study"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Chord of Calling",
+        "Elves of Deep Shadow",
+        "Gilded Drake",
+        "Kinnan, Bonder Prodigy",
+        "Shang-Chi, Master of Kung Fu",
+        "Starting Town",
+        "Training Grounds"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Clever Impersonator",
+        "Elves of Deep Shadow",
+        "Misty Rainforest",
+        "Mox Amber",
+        "Polluted Delta",
+        "Savannah",
+        "Veil of Summer"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Badgermole Cub",
+        "Devoted Druid",
+        "Enlightened Tutor",
+        "Mox Diamond",
+        "Runic Armasaur",
+        "Shang-Chi, Master of Kung Fu",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Endurance",
+        "Ranger-Captain of Eos",
+        "Scrubland",
+        "Sylvan Library",
+        "Underground Sea",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "4+ lands with a real engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "City of Brass",
+        "Enlightened Tutor",
+        "Force of Will",
+        "Mental Misstep",
+        "Oboro Breezecaller",
+        "Polluted Delta",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "survival",
+      "hand": [
+        "Abhorrent Oculus",
+        "Chord of Calling",
+        "Delney, Streetwise Lookout",
+        "Endurance",
+        "Marsh Flats",
+        "Shang-Chi, Master of Kung Fu",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "B",
+      "machine_tier_engine": "Survival of the Fittest",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "City of Brass",
+        "Devoted Druid",
+        "Gleaming Splendor",
+        "Mindbreak Trap",
+        "Oboro Breezecaller",
+        "Rhystic Study",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Bayou",
+        "Birthing Pod",
+        "Devoted Druid",
+        "Gaea's Cradle",
+        "Heartwood Storyteller",
+        "Savannah",
+        "Underground Sea"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "4+ lands with a real engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Hazel's Brewmaster",
+        "Mana Confluence",
+        "Runic Armasaur",
+        "Shang-Chi, Master of Kung Fu",
+        "Subtlety",
+        "Tundra",
+        "Windswept Heath"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Devoted Druid",
+        "Elvish Spirit Guide",
+        "Enlightened Tutor",
+        "Faerie Mastermind",
+        "Mana Vault",
+        "Mox Amber",
+        "Noble Hierarch"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Abhorrent Oculus",
+        "Archivist of Oghma",
+        "Bayou",
+        "Derevi, Empyrial Tactician",
+        "Gleaming Splendor",
+        "Mox Amber",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Crop Rotation",
+        "Enduring Vitality",
+        "Flare of Denial",
+        "Gleaming Splendor",
+        "Ranger-Captain of Eos",
+        "Shang-Chi, Master of Kung Fu",
+        "Starting Town"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "natural_engine+tutor_retained"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Gleaming Splendor",
+        "Hazel's Brewmaster",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Ranger-Captain of Eos",
+        "Rhystic Study",
+        "Sylvan Library",
+        "Verdant Catacombs"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Command Tower",
+        "Commandeer",
+        "Derevi, Empyrial Tactician",
+        "Devoted Druid",
+        "Gemstone Caverns",
+        "Mana Confluence",
+        "Underground Sea"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Clever Impersonator",
+        "Endurance",
+        "Flusterstorm",
+        "Force of Will",
+        "Marsh Flats",
+        "Mental Misstep"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Bayou",
+        "Enlightened Tutor",
+        "Fierce Guardianship",
+        "Finale of Devastation",
+        "Flooded Strand",
+        "Hazel's Brewmaster",
+        "Polluted Delta"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine+free_interaction"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Bayou",
+        "Clever Impersonator",
+        "Gaea's Cradle",
+        "Hazel's Brewmaster",
+        "Heartwood Storyteller",
+        "Pact of Negation",
+        "Silence"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Esper Sentinel",
+        "Gemstone Caverns",
+        "Gleaming Splendor",
+        "Sol Ring",
+        "Subtlety",
+        "Swift Reconfiguration",
+        "Veil of Summer"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Force of Negation",
+        "Force of Will",
+        "Gilded Drake",
+        "Rhystic Study",
+        "Savannah",
+        "Survival of the Fittest",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Badgermole Cub",
+        "Birthing Pod",
+        "Enduring Vitality",
+        "Shifting Woodland",
+        "Sowing Mycospawn",
+        "Swift Reconfiguration",
+        "Windswept Heath"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "commander_logic",
+      "hand": [
+        "Chrome Mox",
+        "Commandeer",
+        "Derevi, Empyrial Tactician",
+        "Devoted Druid",
+        "Finale of Devastation",
+        "Mental Misstep",
+        "Noble Hierarch"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "2+ acceleration with no engine/tutor/commander destination - 58.8% Tier D/F measured",
+      "machine_tier": "B",
+      "machine_tier_engine": "Abhorrent Oculus",
+      "machine_mechanism": "battlefield_tutor_to_oculus"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Archivist of Oghma",
+        "Badgermole Cub",
+        "Gaea's Cradle",
+        "Misdirection",
+        "Oboro Breezecaller",
+        "Silence",
+        "Sol Ring"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Archivist of Oghma",
+      "machine_mechanism": "rock_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Devoted Druid",
+        "Flare of Denial",
+        "Force of Will",
+        "Gaea's Cradle",
+        "Ranger-Captain of Eos",
+        "Survival of the Fittest",
+        "Verdant Catacombs"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Commandeer",
+        "Fierce Guardianship",
+        "Orcish Bowmasters",
+        "Otawara, Soaring City",
+        "Shifting Woodland",
+        "Swift Reconfiguration",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Endurance",
+        "Fierce Guardianship",
+        "Flusterstorm",
+        "Hazel's Brewmaster",
+        "Mox Amber",
+        "Scrubland"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Crop Rotation",
+        "Finale of Devastation",
+        "Hazel's Brewmaster",
+        "Kinnan, Bonder Prodigy",
+        "Mana Vault",
+        "Orcish Bowmasters",
+        "Tropical Island"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Demonic Tutor",
+        "Imperial Seal",
+        "Oboro Breezecaller",
+        "Polluted Delta",
+        "Shang-Chi, Master of Kung Fu",
+        "Swift Reconfiguration",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Devoted Druid",
+        "Force of Negation",
+        "Gaea's Cradle",
+        "Gemstone Caverns",
+        "Orcish Bowmasters",
+        "Tropical Island"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Birthing Pod",
+        "City of Brass",
+        "Flare of Denial",
+        "Force of Negation",
+        "Savannah",
+        "Silence",
+        "Swan Song"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Bayou",
+        "Crop Rotation",
+        "Mindbreak Trap",
+        "Spellseeker",
+        "Underground Sea",
+        "Veil of Summer"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Eldritch Evolution",
+        "Gaea's Cradle",
+        "Mental Misstep",
+        "Subtlety",
+        "Vampiric Tutor",
+        "Volatile Stormdrake",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Colossal Skyturtle",
+        "Crop Rotation",
+        "Gleaming Splendor",
+        "Minamo, School at Water's Edge",
+        "Mindbreak Trap",
+        "Verdant Catacombs"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine+tutor_retained"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Birthing Pod",
+        "Chord of Calling",
+        "Clever Impersonator",
+        "Elvish Spirit Guide",
+        "Esper Sentinel",
+        "Exotic Orchard",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Archivist of Oghma",
+        "Birds of Paradise",
+        "Deathrite Shaman",
+        "Enlightened Tutor",
+        "Gleaming Splendor",
+        "Mental Misstep",
+        "Mox Amber"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Fierce Guardianship",
+        "Mox Amber",
+        "Nature's Rhythm",
+        "Noble Hierarch",
+        "Sol Ring",
+        "Sowing Mycospawn",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Avacyn's Pilgrim",
+        "Bayou",
+        "Elves of Deep Shadow",
+        "Gaea's Cradle",
+        "Mana Vault",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "mana_without_payoff",
+      "hand": [
+        "Chord of Calling",
+        "Delighted Halfling",
+        "Imperial Seal",
+        "Mox Diamond",
+        "Oboro Breezecaller",
+        "Orcish Bowmasters",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Chord of Calling",
+        "Clever Impersonator",
+        "Colossal Skyturtle",
+        "Flusterstorm",
+        "Gleaming Splendor",
+        "Spellseeker",
+        "Tropical Island"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Fierce Guardianship",
+        "Gaea's Cradle",
+        "Heartwood Storyteller",
+        "Mana Vault",
+        "Marsh Flats",
+        "Misdirection",
+        "Talon Gates of Madara"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Archivist of Oghma",
+        "Crop Rotation",
+        "Enduring Vitality",
+        "Flare of Denial",
+        "Gaea's Cradle",
+        "Sylvan Library",
+        "Underground Sea"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Badgermole Cub",
+        "Bayou",
+        "Birthing Pod",
+        "Boseiju, Who Endures",
+        "Misty Rainforest",
+        "Swan Song",
+        "Windswept Heath"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "4+ lands with a real engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Minamo, School at Water's Edge",
+        "Misdirection",
+        "Nature's Rhythm",
+        "Tundra",
+        "Veil of Summer",
+        "Windswept Heath"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "retained_interaction",
+      "hand": [
+        "Force of Negation",
+        "Marsh Flats",
+        "Mindbreak Trap",
+        "Pact of Negation",
+        "Polluted Delta",
+        "Sowing Mycospawn",
+        "Subtlety"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine+paid_interaction"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Colossal Skyturtle",
+        "Deathrite Shaman",
+        "Delney, Streetwise Lookout",
+        "Elvish Spirit Guide",
+        "Fierce Guardianship",
+        "Orcish Bowmasters",
+        "Shifting Woodland"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Crop Rotation",
+        "Devoted Druid",
+        "Flooded Strand",
+        "Misdirection",
+        "Starting Town",
+        "Tropical Island",
+        "Veil of Summer"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "CMC1 tutor at 2-3 lands - ~25-27% direct T2-engine conversion",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Archivist of Oghma",
+        "Deathrite Shaman",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Smothering Tithe",
+        "Spellseeker",
+        "Volatile Stormdrake",
+        "Windswept Heath"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Derevi, Empyrial Tactician",
+        "Hazel's Brewmaster",
+        "Mox Amber",
+        "Oboro Breezecaller",
+        "Smothering Tithe",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Mox Diamond",
+        "Pact of Negation",
+        "Swan Song",
+        "Vampiric Tutor",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Marsh Flats",
+        "Mox Amber",
+        "Spellseeker",
+        "Swift Reconfiguration",
+        "Volatile Stormdrake",
+        "Windswept Heath"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Chord of Calling",
+        "Enduring Vitality",
+        "Flusterstorm",
+        "Marsh Flats",
+        "Rhystic Study",
+        "Subtlety",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Crop Rotation",
+        "Hazel's Brewmaster",
+        "Mental Misstep",
+        "Mox Diamond",
+        "Pact of Negation",
+        "Swan Song",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Archivist of Oghma",
+        "Delney, Streetwise Lookout",
+        "Exotic Orchard",
+        "Gaea's Cradle",
+        "Hazel's Brewmaster",
+        "Minamo, School at Water's Edge",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "survival",
+      "hand": [
+        "Demonic Tutor",
+        "Derevi, Empyrial Tactician",
+        "Eldritch Evolution",
+        "Mana Confluence",
+        "Misdirection",
+        "Survival of the Fittest",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "B",
+      "machine_tier_engine": "Survival of the Fittest",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Birds of Paradise",
+        "City of Brass",
+        "Enduring Vitality",
+        "Mana Vault",
+        "Runic Armasaur",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Archivist of Oghma",
+        "Clever Impersonator",
+        "Faerie Mastermind",
+        "Spellseeker",
+        "Starting Town",
+        "Sylvan Library",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Bayou",
+        "Endurance",
+        "Force of Negation",
+        "Gilded Drake",
+        "Hazel's Brewmaster",
+        "Orcish Bowmasters",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Endurance",
+        "Force of Negation",
+        "Gaea's Cradle",
+        "Gemstone Caverns",
+        "Mental Misstep",
+        "Misty Rainforest",
+        "Polluted Delta"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Exotic Orchard",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mana Vault",
+        "Swan Song",
+        "Veil of Summer",
+        "Verdant Catacombs",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Command Tower",
+        "Flusterstorm",
+        "Gemstone Caverns",
+        "Nature's Rhythm",
+        "Shang-Chi, Master of Kung Fu",
+        "Swift Reconfiguration",
+        "Windswept Heath"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Bayou",
+        "Birthing Pod",
+        "Chord of Calling",
+        "Fierce Guardianship",
+        "Orcish Bowmasters",
+        "Pact of Negation",
+        "Polluted Delta"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Flusterstorm",
+        "Gleaming Splendor",
+        "Imperial Seal",
+        "Kinnan, Bonder Prodigy",
+        "Sol Ring",
+        "Sowing Mycospawn",
+        "Tundra"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Finale of Devastation",
+        "Lotus Petal",
+        "Mox Amber",
+        "Spellseeker",
+        "Subtlety",
+        "Swift Reconfiguration",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Archivist of Oghma",
+        "Elvish Spirit Guide",
+        "Gaea's Cradle",
+        "Gilded Drake",
+        "Gleaming Splendor",
+        "Mental Misstep",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Clever Impersonator",
+        "Derevi, Empyrial Tactician",
+        "Exotic Orchard",
+        "Hazel's Brewmaster",
+        "Heartwood Storyteller",
+        "Smothering Tithe",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Eldritch Evolution",
+        "Flooded Strand",
+        "Force of Will",
+        "Mindbreak Trap",
+        "Misdirection",
+        "Shang-Chi, Master of Kung Fu",
+        "Training Grounds"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Elves of Deep Shadow",
+        "Enduring Vitality",
+        "Misdirection",
+        "Nature's Rhythm",
+        "Rhystic Study",
+        "Starting Town"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Chord of Calling",
+        "Derevi, Empyrial Tactician",
+        "Fierce Guardianship",
+        "Gemstone Caverns",
+        "Nature's Rhythm",
+        "Polluted Delta",
+        "Sol Ring"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Ancient Tomb",
+        "Crop Rotation",
+        "Enduring Vitality",
+        "Fierce Guardianship",
+        "Gilded Drake",
+        "Minamo, School at Water's Edge",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Colossal Skyturtle",
+        "Deathrite Shaman",
+        "Elvish Spirit Guide",
+        "Hazel's Brewmaster",
+        "Mox Diamond",
+        "Spellseeker",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Abhorrent Oculus",
+        "Clever Impersonator",
+        "Elvish Spirit Guide",
+        "Endurance",
+        "Gaea's Cradle",
+        "Minamo, School at Water's Edge",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "CMC1 tutor at 2-3 lands - ~25-27% direct T2-engine conversion",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Crop Rotation",
+        "Demonic Tutor",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Misdirection",
+        "Survival of the Fittest",
+        "Tundra"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "premium_one_drop_rule",
+      "hand": [
+        "Enlightened Tutor",
+        "Flusterstorm",
+        "Hazel's Brewmaster",
+        "Imperial Seal",
+        "Mystic Remora",
+        "Rhystic Study",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Mental Misstep",
+        "Misty Rainforest",
+        "Sowing Mycospawn",
+        "Swan Song",
+        "Talon Gates of Madara",
+        "Veil of Summer"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Badgermole Cub",
+        "Mana Confluence",
+        "Mindbreak Trap",
+        "Survival of the Fittest",
+        "Swan Song",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Birds of Paradise",
+        "City of Brass",
+        "Faerie Mastermind",
+        "Finale of Devastation",
+        "Shang-Chi, Master of Kung Fu",
+        "Sowing Mycospawn"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Chord of Calling",
+        "Deathrite Shaman",
+        "Delney, Streetwise Lookout",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Kinnan, Bonder Prodigy",
+        "Orcish Bowmasters",
+        "Runic Armasaur"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Chord of Calling",
+        "Clever Impersonator",
+        "Heartwood Storyteller",
+        "Mana Vault",
+        "Orcish Bowmasters",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Esper Sentinel",
+        "Kinnan, Bonder Prodigy",
+        "Noble Hierarch",
+        "Shang-Chi, Master of Kung Fu",
+        "Sol Ring",
+        "Subtlety",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "dork_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Commandeer",
+        "Delighted Halfling",
+        "Devoted Druid",
+        "Flusterstorm",
+        "Mana Confluence",
+        "Mox Diamond",
+        "Polluted Delta"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Crop Rotation",
+        "Deathrite Shaman",
+        "Force of Negation",
+        "Rhystic Study",
+        "Silence",
+        "Subtlety",
+        "Verdant Catacombs"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Gemstone Caverns",
+        "Gilded Drake",
+        "Heartwood Storyteller",
+        "Mana Vault",
+        "Mental Misstep",
+        "Oboro Breezecaller",
+        "Subtlety"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Clever Impersonator",
+        "Commandeer",
+        "Fierce Guardianship",
+        "Lotus Petal",
+        "Mana Vault",
+        "Orcish Bowmasters",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Chord of Calling",
+        "City of Traitors",
+        "Clever Impersonator",
+        "Commandeer",
+        "Runic Armasaur",
+        "Underground Sea"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "commander_logic",
+      "hand": [
+        "Chrome Mox",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Lotus Petal",
+        "Oboro Breezecaller",
+        "Otawara, Soaring City",
+        "Spellseeker",
+        "Swan Song"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "2+ acceleration with no engine/tutor/commander destination - 58.8% Tier D/F measured",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_plus_accel_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Chord of Calling",
+        "Derevi, Empyrial Tactician",
+        "Fierce Guardianship",
+        "Silence",
+        "Sol Ring",
+        "Starting Town",
+        "Windswept Heath"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Boseiju, Who Endures",
+        "Elvish Spirit Guide",
+        "Faerie Mastermind",
+        "Imperial Seal",
+        "Orcish Bowmasters",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "retained_interaction",
+      "hand": [
+        "Bayou",
+        "Derevi, Empyrial Tactician",
+        "Flare of Denial",
+        "Nature's Rhythm",
+        "Savannah",
+        "Sowing Mycospawn",
+        "Tundra"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine+free_interaction"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Force of Negation",
+        "Gaea's Cradle",
+        "Hazel's Brewmaster",
+        "Misdirection",
+        "Savannah",
+        "Talon Gates of Madara"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "commander_logic",
+      "hand": [
+        "Ancient Tomb",
+        "Chrome Mox",
+        "Elvish Spirit Guide",
+        "Gilded Drake",
+        "Minamo, School at Water's Edge",
+        "Orcish Bowmasters",
+        "Spellseeker"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "2+ acceleration with no engine/tutor/commander destination - 58.8% Tier D/F measured",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "rock_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Abhorrent Oculus",
+        "City of Traitors",
+        "Delighted Halfling",
+        "Eldritch Evolution",
+        "Force of Will",
+        "Gilded Drake",
+        "Misty Rainforest"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Clever Impersonator",
+        "Eldritch Evolution",
+        "Elves of Deep Shadow",
+        "Faerie Mastermind",
+        "Mox Diamond",
+        "Shifting Woodland",
+        "Silence"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Command Tower",
+        "Flusterstorm",
+        "Misdirection",
+        "Pact of Negation",
+        "Subtlety",
+        "Tropical Island"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Eldritch Evolution",
+        "Fierce Guardianship",
+        "Flooded Strand",
+        "Mana Confluence",
+        "Mental Misstep",
+        "Minamo, School at Water's Edge",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine+free_interaction"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Badgermole Cub",
+        "Devoted Druid",
+        "Endurance",
+        "Misdirection",
+        "Noble Hierarch",
+        "Shang-Chi, Master of Kung Fu",
+        "Tropical Island"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Ancient Tomb",
+        "Boseiju, Who Endures",
+        "Exotic Orchard",
+        "Flare of Denial",
+        "Shang-Chi, Master of Kung Fu",
+        "Underground Sea",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Boseiju, Who Endures",
+        "Force of Will",
+        "Gilded Drake",
+        "Mental Misstep",
+        "Underground Sea",
+        "Veil of Summer"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Elves of Deep Shadow",
+        "Enduring Vitality",
+        "Force of Negation",
+        "Mental Misstep",
+        "Orcish Bowmasters",
+        "Talon Gates of Madara",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Enduring Vitality",
+        "Gemstone Caverns",
+        "Orcish Bowmasters",
+        "Scrubland",
+        "Sol Ring",
+        "Starting Town",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Eldritch Evolution",
+        "Gaea's Cradle",
+        "Minamo, School at Water's Edge",
+        "Oboro Breezecaller",
+        "Shifting Woodland",
+        "Starting Town",
+        "Swan Song"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "4+ lands, commander colors plausible, no card engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Clever Impersonator",
+        "Elvish Spirit Guide",
+        "Hazel's Brewmaster",
+        "Polluted Delta",
+        "Shang-Chi, Master of Kung Fu",
+        "Verdant Catacombs",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "commander colors plausible at 2-3 lands - dominant best-tier mechanism overall",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Archivist of Oghma",
+        "Chrome Mox",
+        "Endurance",
+        "Gleaming Splendor",
+        "Mindbreak Trap",
+        "Shang-Chi, Master of Kung Fu",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Command Tower",
+        "Elvish Spirit Guide",
+        "Flare of Denial",
+        "Misdirection",
+        "Misty Rainforest",
+        "Sowing Mycospawn",
+        "Swan Song"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "commander colors plausible at 2-3 lands - dominant best-tier mechanism overall",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Archivist of Oghma",
+        "Boseiju, Who Endures",
+        "Derevi, Empyrial Tactician",
+        "Kinnan, Bonder Prodigy",
+        "Mox Amber",
+        "Shifting Woodland",
+        "Spellseeker"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "survival",
+      "hand": [
+        "Bayou",
+        "Commandeer",
+        "Delney, Streetwise Lookout",
+        "Heartwood Storyteller",
+        "Mindbreak Trap",
+        "Smothering Tithe",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "B",
+      "machine_tier_engine": "Survival of the Fittest",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Archivist of Oghma",
+        "Delighted Halfling",
+        "Demonic Tutor",
+        "Flusterstorm",
+        "Otawara, Soaring City",
+        "Subtlety"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Finale of Devastation",
+        "Gleaming Splendor",
+        "Lotus Petal",
+        "Mindbreak Trap",
+        "Misdirection",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "unclassified",
+      "hand": [
+        "Flooded Strand",
+        "Gemstone Caverns",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Veil of Summer",
+        "Voice of Victory",
+        "Volatile Stormdrake",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Bayou",
+        "Esper Sentinel",
+        "Gaea's Cradle",
+        "Misdirection",
+        "Mystic Remora",
+        "Nature's Rhythm",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Colossal Skyturtle",
+        "Deathrite Shaman",
+        "Finale of Devastation",
+        "Hazel's Brewmaster",
+        "Mental Misstep",
+        "Noble Hierarch",
+        "Scrubland"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Clever Impersonator",
+        "Delney, Streetwise Lookout",
+        "Force of Will",
+        "Mana Vault",
+        "Minamo, School at Water's Edge",
+        "Pact of Negation"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Chord of Calling",
+        "Derevi, Empyrial Tactician",
+        "Endurance",
+        "Gleaming Splendor",
+        "Marsh Flats",
+        "Savannah"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Badgermole Cub",
+        "City of Brass",
+        "Enlightened Tutor",
+        "Faerie Mastermind",
+        "Fierce Guardianship",
+        "Mental Misstep",
+        "Mindbreak Trap"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Enduring Vitality",
+        "Flusterstorm",
+        "Heartwood Storyteller",
+        "Kinnan, Bonder Prodigy",
+        "Tropical Island",
+        "Underground Sea"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Enlightened Tutor",
+        "Flusterstorm",
+        "Hazel's Brewmaster",
+        "Mental Misstep",
+        "Mindbreak Trap",
+        "Scrubland"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Birthing Pod",
+        "Deathrite Shaman",
+        "Delney, Streetwise Lookout",
+        "Esper Sentinel",
+        "Flusterstorm",
+        "Imperial Seal",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Birds of Paradise",
+        "Eldritch Evolution",
+        "Hazel's Brewmaster",
+        "Mana Vault",
+        "Nature's Rhythm",
+        "Pact of Negation",
+        "Tundra"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "retained_interaction",
+      "hand": [
+        "Abhorrent Oculus",
+        "City of Traitors",
+        "Deathrite Shaman",
+        "Finale of Devastation",
+        "Heartwood Storyteller",
+        "Ranger-Captain of Eos",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine+free_interaction"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Abhorrent Oculus",
+        "Chord of Calling",
+        "Derevi, Empyrial Tactician",
+        "Gaea's Cradle",
+        "Orcish Bowmasters",
+        "Polluted Delta",
+        "Talon Gates of Madara"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "commander colors plausible at 2-3 lands - dominant best-tier mechanism overall",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Demonic Tutor",
+        "Exotic Orchard",
+        "Force of Negation",
+        "Gemstone Caverns",
+        "Scrubland",
+        "Swift Reconfiguration",
+        "Training Grounds"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Eldritch Evolution",
+        "Enlightened Tutor",
+        "Gaea's Cradle",
+        "Misdirection",
+        "Scrubland",
+        "Underground Sea"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "City of Traitors",
+        "Clever Impersonator",
+        "Delighted Halfling",
+        "Derevi, Empyrial Tactician",
+        "Gaea's Cradle",
+        "Rhystic Study",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Gleaming Splendor",
+        "Imperial Seal",
+        "Mana Confluence",
+        "Shifting Woodland",
+        "Subtlety",
+        "Swift Reconfiguration",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Colossal Skyturtle",
+        "Eldritch Evolution",
+        "Marsh Flats",
+        "Pact of Negation",
+        "Sylvan Library",
+        "Training Grounds",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "tutor_plus_accel_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Clever Impersonator",
+        "Demonic Tutor",
+        "Derevi, Empyrial Tactician",
+        "Elvish Spirit Guide",
+        "Runic Armasaur",
+        "Shifting Woodland",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Runic Armasaur",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Ancient Tomb",
+        "Badgermole Cub",
+        "Derevi, Empyrial Tactician",
+        "Force of Negation",
+        "Pact of Negation",
+        "Survival of the Fittest",
+        "Sylvan Library"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "retained_interaction",
+      "hand": [
+        "Crop Rotation",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mox Amber",
+        "Scrubland",
+        "Subtlety",
+        "Sylvan Library",
+        "Tundra"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "interaction_only"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Chord of Calling",
+        "Deathrite Shaman",
+        "Delney, Streetwise Lookout",
+        "Eldritch Evolution",
+        "Misdirection",
+        "Shang-Chi, Master of Kung Fu",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Deathrite Shaman",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Delighted Halfling",
+        "Elves of Deep Shadow",
+        "Fierce Guardianship",
+        "Mox Amber",
+        "Orcish Bowmasters",
+        "Otawara, Soaring City",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Commandeer",
+        "Nature's Rhythm",
+        "Orcish Bowmasters",
+        "Pact of Negation",
+        "Savannah",
+        "Smothering Tithe",
+        "Vampiric Tutor"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Faerie Mastermind",
+        "Fierce Guardianship",
+        "Pact of Negation",
+        "Scrubland",
+        "Sowing Mycospawn",
+        "Swift Reconfiguration",
+        "Training Grounds"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Faerie Mastermind",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Eldritch Evolution",
+        "Endurance",
+        "Exotic Orchard",
+        "Fierce Guardianship",
+        "Mana Vault",
+        "Mox Amber",
+        "Tropical Island"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Chord of Calling",
+        "Finale of Devastation",
+        "Force of Will",
+        "Imperial Seal",
+        "Sowing Mycospawn",
+        "Talon Gates of Madara"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Sylvan Library",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Force of Negation",
+        "Mana Vault",
+        "Marsh Flats",
+        "Noble Hierarch",
+        "Talon Gates of Madara",
+        "Training Grounds",
+        "Underground Sea"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "survival",
+      "hand": [
+        "Badgermole Cub",
+        "Flusterstorm",
+        "Force of Negation",
+        "Mindbreak Trap",
+        "Runic Armasaur",
+        "Survival of the Fittest",
+        "Tropical Island"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "B",
+      "machine_tier_engine": "Survival of the Fittest",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Elvish Spirit Guide",
+        "Esper Sentinel",
+        "Exotic Orchard",
+        "Gaea's Cradle",
+        "Oboro Breezecaller",
+        "Sol Ring",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "City of Traitors",
+        "Colossal Skyturtle",
+        "Exotic Orchard",
+        "Gemstone Caverns",
+        "Kinnan, Bonder Prodigy",
+        "Scrubland",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "4+ lands with a real engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Devoted Druid",
+        "Faerie Mastermind",
+        "Gemstone Caverns",
+        "Mental Misstep",
+        "Mox Amber",
+        "Runic Armasaur",
+        "Silence"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Ancient Tomb",
+        "Crop Rotation",
+        "Gleaming Splendor",
+        "Mana Vault",
+        "Mindbreak Trap",
+        "Misty Rainforest",
+        "Shifting Woodland"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Gleaming Splendor",
+        "Minamo, School at Water's Edge",
+        "Otawara, Soaring City",
+        "Scrubland",
+        "Silence",
+        "Smothering Tithe",
+        "Windswept Heath"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "4+ lands with a real engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "City of Brass",
+        "Devoted Druid",
+        "Enlightened Tutor",
+        "Mana Vault",
+        "Sol Ring",
+        "Talon Gates of Madara",
+        "Voice of Victory"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Badgermole Cub",
+        "Chrome Mox",
+        "Crop Rotation",
+        "Derevi, Empyrial Tactician",
+        "Force of Negation",
+        "Mox Amber",
+        "Swift Reconfiguration"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "City of Traitors",
+        "Elvish Spirit Guide",
+        "Enduring Vitality",
+        "Flusterstorm",
+        "Orcish Bowmasters",
+        "Polluted Delta",
+        "Starting Town"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "commander colors plausible at 2-3 lands - dominant best-tier mechanism overall",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Elves of Deep Shadow",
+        "Force of Negation",
+        "Nature's Rhythm",
+        "Oboro Breezecaller",
+        "Savannah",
+        "Sowing Mycospawn",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Chrome Mox",
+        "Force of Negation",
+        "Gemstone Caverns",
+        "Runic Armasaur",
+        "Spellseeker",
+        "Swan Song",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Endurance",
+        "Lotus Petal",
+        "Ranger-Captain of Eos",
+        "Rhystic Study",
+        "Underground Sea",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Clever Impersonator",
+        "Elvish Spirit Guide",
+        "Enduring Vitality",
+        "Force of Will",
+        "Hazel's Brewmaster",
+        "Smothering Tithe",
+        "Subtlety"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "0 lands",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "Delney, Streetwise Lookout",
+        "Gemstone Caverns",
+        "Shang-Chi, Master of Kung Fu",
+        "Sol Ring",
+        "Swan Song",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Archivist of Oghma",
+        "Badgermole Cub",
+        "Deathrite Shaman",
+        "Finale of Devastation",
+        "Imperial Seal",
+        "Starting Town",
+        "Survival of the Fittest"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "commander_logic",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Delighted Halfling",
+        "Gleaming Splendor",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mindbreak Trap",
+        "Shifting Woodland",
+        "Swan Song"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "2+ acceleration with no engine/tutor/commander destination - 58.8% Tier D/F measured",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "dork_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Chord of Calling",
+        "Elves of Deep Shadow",
+        "Enlightened Tutor",
+        "Imperial Seal",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mox Diamond",
+        "Tundra"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "oculus",
+      "hand": [
+        "Colossal Skyturtle",
+        "Derevi, Empyrial Tactician",
+        "Gaea's Cradle",
+        "Mindbreak Trap",
+        "Nature's Rhythm",
+        "Starting Town",
+        "Tropical Island"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "B",
+      "machine_tier_engine": "Abhorrent Oculus",
+      "machine_mechanism": "battlefield_tutor_to_oculus"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Exotic Orchard",
+        "Mindbreak Trap",
+        "Orcish Bowmasters",
+        "Ranger-Captain of Eos",
+        "Rhystic Study",
+        "Starting Town"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "City of Brass",
+        "Gilded Drake",
+        "Imperial Seal",
+        "Marsh Flats",
+        "Mindbreak Trap",
+        "Silence",
+        "Underground Sea"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Finale of Devastation",
+        "Force of Negation",
+        "Mental Misstep",
+        "Oboro Breezecaller",
+        "Otawara, Soaring City",
+        "Scrubland",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Ancient Tomb",
+        "Bayou",
+        "Colossal Skyturtle",
+        "Derevi, Empyrial Tactician",
+        "Ranger-Captain of Eos",
+        "Shifting Woodland",
+        "Voice of Victory"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "commander colors plausible at 2-3 lands - dominant best-tier mechanism overall",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Archivist of Oghma",
+        "City of Traitors",
+        "Silence",
+        "Training Grounds",
+        "Tropical Island",
+        "Vampiric Tutor",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Bayou",
+        "City of Brass",
+        "Clever Impersonator",
+        "Commandeer",
+        "Imperial Seal",
+        "Sowing Mycospawn",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Lotus Petal",
+        "Mana Vault",
+        "Minamo, School at Water's Edge",
+        "Talon Gates of Madara",
+        "Underground Sea",
+        "Windswept Heath",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Hazel's Brewmaster",
+        "Marsh Flats",
+        "Minamo, School at Water's Edge",
+        "Runic Armasaur",
+        "Verdant Catacombs",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "4+ lands with a real engine",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Finale of Devastation",
+        "Flusterstorm",
+        "Gleaming Splendor",
+        "Mental Misstep",
+        "Otawara, Soaring City",
+        "Silence"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Abhorrent Oculus",
+        "Chord of Calling",
+        "City of Traitors",
+        "Gemstone Caverns",
+        "Silence",
+        "Survival of the Fittest",
+        "Voice of Victory"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Abhorrent Oculus",
+        "Enduring Vitality",
+        "Imperial Seal",
+        "Mana Confluence",
+        "Shang-Chi, Master of Kung Fu",
+        "Smothering Tithe",
+        "Volatile Stormdrake"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "A",
+      "machine_tier_engine": "Esper Sentinel",
+      "machine_mechanism": "tutor_to_engine+free_interaction"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Ancient Tomb",
+        "Badgermole Cub",
+        "Commandeer",
+        "Deathrite Shaman",
+        "Gaea's Cradle",
+        "Runic Armasaur",
+        "Spellseeker"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "an engine card present at 2-3 lands",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "commander_logic",
+      "hand": [
+        "Ancient Tomb",
+        "Eldritch Evolution",
+        "Force of Will",
+        "Mana Vault",
+        "Mental Misstep",
+        "Scrubland",
+        "Shifting Woodland"
+      ],
+      "simple_grade": "CONDITIONAL_KEEP",
+      "simple_reason": "acceleration fuels a plausible T2 commander line",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_keep",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Commandeer",
+        "Elvish Spirit Guide",
+        "Imperial Seal",
+        "Lotus Petal",
+        "Orcish Bowmasters",
+        "Silence",
+        "Smothering Tithe"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "D",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "commander_logic",
+      "hand": [
+        "Elvish Spirit Guide",
+        "Endurance",
+        "Mox Diamond",
+        "Noble Hierarch",
+        "Otawara, Soaring City",
+        "Spellseeker",
+        "Voice of Victory"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "2+ acceleration with no engine/tutor/commander destination - 58.8% Tier D/F measured",
+      "machine_tier": "C",
+      "machine_tier_engine": "Thrasios, Triton Hero",
+      "machine_mechanism": "commander_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "hand_size_threshold",
+      "hand": [
+        "Ancient Tomb",
+        "City of Brass",
+        "Eldritch Evolution",
+        "Force of Negation",
+        "Hazel's Brewmaster",
+        "Mindbreak Trap",
+        "Swan Song"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "C",
+      "machine_tier_engine": "Faerie Mastermind",
+      "machine_mechanism": "natural_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "tutor_conversion",
+      "hand": [
+        "Abhorrent Oculus",
+        "Flusterstorm",
+        "Ranger-Captain of Eos",
+        "Swan Song",
+        "Underground Sea",
+        "Vampiric Tutor",
+        "Wooded Foothills"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "machine_tier": "A",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "tutor_to_engine"
+    },
+    {
+      "type": "false_mulligan",
+      "cause": "engine_realization_timing",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Devoted Druid",
+        "Force of Negation",
+        "Runic Armasaur",
+        "Smothering Tithe",
+        "Sowing Mycospawn",
+        "Starting Town"
+      ],
+      "simple_grade": "SHIP",
+      "simple_reason": "1 land with no qualifying executable acceleration",
+      "machine_tier": "C",
+      "machine_tier_engine": "Mystic Remora",
+      "machine_mechanism": "dork_to_engine"
+    },
+    {
+      "type": "false_keep",
+      "cause": "unclassified",
+      "hand": [
+        "Birthing Pod",
+        "Eldritch Evolution",
+        "Elves of Deep Shadow",
+        "Endurance",
+        "Mox Amber",
+        "Oboro Breezecaller",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "simple_grade": "SNAP_KEEP",
+      "simple_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "machine_tier": "F",
+      "machine_tier_engine": null,
+      "machine_mechanism": "none"
+    }
+  ],
+  "note": "precision/recall/false_keep_rate/false_mulligan_rate all use TRAJECTORY_MACHINE_R (the bounded-search ceiling) as ground truth and TRAJECTORY_SIMPLE_R as the predictor - false_keep = SIMPLE keeps a hand MACHINE would ship (precision loss), false_mulligan = SIMPLE ships a hand MACHINE would keep (recall loss). disagreement_cause_counts classifies EVERY disagreement (not just the capped 200-hand sample) by the ten named mechanisms in assignment section 23, single-cause, priority-ordered (reason-string evidence checked before destination inference) - see classify_disagreement_cause() for the exact ordering. A high recall/precision headline does not excuse a concentrated cause cluster; both are reported. IMPORTANT DISCLOSED CAVEAT found via manual inspection of premium_one_drop_rule false_keep examples: TRAJECTORY_MACHINE_R itself is not a perfect ceiling for hands whose ONLY land is a fetchland - trajectory_search.py's bounded search (_candidate_configs) explores hand/library-top tutor targets, Pod/Survival activations, and battlefield-tutor targets, but NEVER alternate fetchland targets; a fetch's crack target is always chosen by develop_turn's own greedy land-drop heuristic (which can legitimately prefer a target that enables an immediate lower-priority cast this turn over one that would enable a higher-priority premium engine, e.g. fetching Bayou for Imperial Seal's B instead of Tropical Island for Mystic Remora's U). A hand can therefore be graded a real 'false_keep' against MACHINE_R here even when a legal, reachable line the search never explored would have made SIMPLE_R's SNAP_KEEP correct. Some (not necessarily all) of the premium_one_drop_rule false_keep count is this MACHINE-side gap, not a SIMPLE-side error - manual spot-check before treating this cause's count as proof the premium-one-drop rule needs further tightening. Exploring alternate fetch targets as a 6th bounded-search family is disclosed future work, not implemented this phase (scope/effort tradeoff, consistent with the project's other disclosed bounded-search limitations)."
+}
