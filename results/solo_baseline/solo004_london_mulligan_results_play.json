@@ -60,56 +60,56 @@
           "mean_cards_remaining_t3": 1.8866933855283188
         }
       },
-      "elapsed_seconds": 800.0805613994598
+      "elapsed_seconds": 793.0031046867371
     },
     "SIMPLE_RULES": {
       "sample_size": 100000,
       "mulligan_distribution": {
-        "0": 0.62589,
-        "1": 0.23446,
-        "3+": 0.05226,
-        "2": 0.08739
+        "0": 0.60033,
+        "1": 0.23998,
+        "2": 0.09597,
+        "3+": 0.06372
       },
-      "avg_final_hand_size": 6.41434,
-      "expected_card_disadvantage": 0.5856599999999998,
-      "overall_t3_strong_state_rate": 0.58145,
-      "overall_t3_stalled_rate": 0.15972,
-      "overall_mana_shortfall_rate": 0.38199,
+      "avg_final_hand_size": 6.35139,
+      "expected_card_disadvantage": 0.6486099999999997,
+      "overall_t3_strong_state_rate": 0.58937,
+      "overall_t3_stalled_rate": 0.16539,
+      "overall_mana_shortfall_rate": 0.38649,
       "by_mulligan_count": {
         "0": {
-          "pct_of_population": 0.62589,
-          "t3_strong_state_rate": 0.5741424211922223,
-          "t3_stalled_rate": 0.16619533783891738,
-          "t2_engine_rate": 0.25381456805508956,
-          "mana_shortfall_rate": 0.43694578919618465,
-          "mean_cards_remaining_t3": 3.5432104682931507
+          "pct_of_population": 0.60033,
+          "t3_strong_state_rate": 0.5829293888361401,
+          "t3_stalled_rate": 0.1716555894258158,
+          "t2_engine_rate": 0.26152282911065583,
+          "mana_shortfall_rate": 0.4468375726683657,
+          "mean_cards_remaining_t3": 3.5481984908300435
         },
         "1": {
-          "pct_of_population": 0.23446,
-          "t3_strong_state_rate": 0.6024908299923227,
-          "t3_stalled_rate": 0.144161050925531,
-          "t2_engine_rate": 0.30798430435895247,
-          "mana_shortfall_rate": 0.3161733344706986,
-          "mean_cards_remaining_t3": 3.3078563507634566
+          "pct_of_population": 0.23998,
+          "t3_strong_state_rate": 0.6108842403533628,
+          "t3_stalled_rate": 0.15005417118093176,
+          "t2_engine_rate": 0.3173181098424869,
+          "mana_shortfall_rate": 0.3243603633636136,
+          "mean_cards_remaining_t3": 3.318651554296191
         },
         "2": {
-          "pct_of_population": 0.08739,
-          "t3_strong_state_rate": 0.6048746996223824,
-          "t3_stalled_rate": 0.13605675706602585,
-          "t2_engine_rate": 0.32028836251287335,
-          "mana_shortfall_rate": 0.251745050921158,
-          "mean_cards_remaining_t3": 2.7643895182515164
+          "pct_of_population": 0.09597,
+          "t3_strong_state_rate": 0.6114410753360425,
+          "t3_stalled_rate": 0.1419193497968115,
+          "t2_engine_rate": 0.3293737626341565,
+          "mana_shortfall_rate": 0.26018547462748776,
+          "mean_cards_remaining_t3": 2.7731582786287383
         },
         "3+": {
-          "pct_of_population": 0.05226,
-          "t3_strong_state_rate": 0.535399923459625,
-          "t3_stalled_rate": 0.19154228855721392,
-          "t2_engine_rate": 0.27784156142365096,
-          "mana_shortfall_rate": 0.23689246077305778,
-          "mean_cards_remaining_t3": 2.0686949866054345
+          "pct_of_population": 0.06372,
+          "t3_strong_state_rate": 0.5357815442561206,
+          "t3_stalled_rate": 0.19946641556811048,
+          "t2_engine_rate": 0.28358443188951665,
+          "mana_shortfall_rate": 0.24215317011927182,
+          "mean_cards_remaining_t3": 2.0811362209667292
         }
       },
-      "elapsed_seconds": 340.6234233379364
+      "elapsed_seconds": 374.6085629463196
     },
     "MACHINE_OPTIMAL": {
       "sample_size": 5000,
@@ -158,7 +158,7 @@
           "mean_cards_remaining_t3": 1.798901098901099
         }
       },
-      "elapsed_seconds": 46.396459341049194
+      "elapsed_seconds": 47.049726247787476
     },
     "KEEP_EVERYTHING_BASELINE_NOTE": "See solo003r_trajectory_census_{play,draw}.json: t3_any_strong_state = 0.438 (play) / 0.511 (draw), avg_hand_size = 7.0 always, expected_card_disadvantage = 0."
   }
