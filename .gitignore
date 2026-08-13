@@ -5,3 +5,9 @@ __pycache__/
 venv/
 *.egg-info/
 .DS_Store
+
+# SOLO-004 raw per-hand datasets: full JSONL is 100k+ rows and routinely exceeds GitHub's 100MB
+# file limit uncompressed (~600MB observed) - only the gzip-compressed version (~15MB, ~40x
+# smaller thanks to the repeated key names) is committed. The raw file is fully regeneratable via
+# run_solo004_dataset.py with the same --seed, so nothing is lost by not tracking it directly.
+results/solo_baseline/*.jsonl

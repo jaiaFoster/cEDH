@@ -26,6 +26,7 @@ Output is JSONL (one compact JSON object per hand) rather than one giant JSON ar
 or diff. A small provenance/summary JSON is written alongside it.
 """
 import argparse
+import gzip
 import json
 import random
 import sys
@@ -149,12 +150,15 @@ def main():
 
     out_path = Path(args.out) if args.out else (
         REPO_ROOT / "results" / "solo_baseline" / f"solo004_opening_hand_dataset_{args.seat}"
-        f"{'_achievable' if args.achievable else ''}.jsonl"
+        f"{'_achievable' if args.achievable else ''}.jsonl.gz"
     )
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # gzip directly: the raw JSONL routinely exceeds GitHub's 100MB file limit at 100k+ rows (the
+    # repeated key names dominate size, so gzip compresses ~40x) - see .gitignore. Fully
+    # regeneratable from --seed regardless, so nothing is lost by not keeping the raw file.
     t0 = time.time()
-    with out_path.open("w", encoding="utf-8") as f:
+    with gzip.open(out_path, "wt", encoding="utf-8") as f:
         for i in range(args.count):
             row = run_one_hand(names, rng, cards, combos, on_play, args.achievable)
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
@@ -175,7 +179,7 @@ def main():
         "hands_per_second": args.count / elapsed,
         "dataset_file": str(out_path),
     }
-    summary_path = out_path.with_suffix(".summary.json")
+    summary_path = Path(str(out_path).replace(".jsonl.gz", ".summary.json"))
     summary_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {out_path} ({args.count} hands in {elapsed:.1f}s, {args.count / elapsed:.1f} hands/sec)")
     print(f"wrote {summary_path}")
