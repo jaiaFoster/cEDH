@@ -1766,3 +1766,323 @@ section 20: seat-specific/pod-position mulligan policies (turbo-pod, stax-pod, e
 require validated opponent/pod simulations this project doesn't yet have; the opener-feature
 infrastructure built here is designed to later condition on pod/seat information once that
 exists, but does not do so now.
+
+---
+
+# SIM-001 MULL-005 — Trajectory-First Mulligan Model + Pod-Conditioned Keep Guidance
+
+The governing constraint for this phase, stated verbatim in the assignment: **"Pod context
+modifies a structurally coherent hand. It does not rescue a hand with no credible engine
+trajectory."** And the central discipline: **keep trajectories, not resources** - mana, a tutor,
+interaction, and acceleration are none of them a reason to keep a hand on their own; they matter
+only insofar as they produce or protect a real T1-T3 engine line. This phase does not replace
+SOLO-004's infrastructure (London mulligan mechanics, search-based bottoming, dataset-generation
+machinery are all reused, not rebuilt) - it replaces SOLO-004's *opener-evaluation logic*, which
+graded a hand by which resource-presence features it happened to have, with trajectory-first
+evaluation, which grades a hand by which actual T1-T3 line the engine can simulate for it.
+
+## Method summary
+
+1. **Real tutor resolution** (`opening_hand_policy.py`'s `forced_tutor_target` parameter): every
+   tutor in this deck previously cast and fizzled - no target was ever fetched, in SOLO-002 through
+   SOLO-004 alike. A tutor can now genuinely search the library and add a named card to hand,
+   provably a no-op when unforced (regression-tested), so every prior committed result stays
+   byte-for-byte reproducible.
+2. **Bounded trajectory search** (`trajectory_search.py`): for a hand holding a tutor, tries
+   forcing it toward a small disclosed candidate set (the four Tier-A engines, Sol Ring, Gaea's
+   Cradle) under two priority-order variants - `DEFAULT_PRIORITY` and `TUTOR_FIRST_PRIORITY` (a
+   tutor sitting behind "commander" in cast priority never gets cast at all whenever a commander is
+   also affordable, so target-branching alone is pointless without also branching sequencing).
+   `greedy_realized` (the single pre-MULL-005 line) and `best_known_achievable` are reported
+   separately, per the assignment's explicit constraint never to conflate the two.
+3. **Trajectory tier grading** (`trajectory_grading.py`): every simulated line is graded S/A/B/C/D/F
+   from what the engine ACTUALLY did (its `cast_log`), not from opener-only proxy features, and
+   tagged with a MECHANISM (`natural_engine`, `dork_to_engine`, `rock_to_engine`, `tutor_to_engine`,
+   `tutor_plus_accel_to_engine`, `commander_engine`, `engine_to_second_engine`, `cradle_development`,
+   `none`) plus a resource-cost breakdown (cards spent, mana consumed, cards/interaction/tutor
+   retained).
+
+## The two mandated corrections, both confirmed by simulation
+
+**Correction (A): acceleration only matters with a destination.** SOLO-004's `SIMPLE_RULES` had an
+unconditional "2+ acceleration = snap keep." Measured directly (`mull005_accel_without_payoff_
+analysis.json`): hands with 2+ acceleration and a real destination (an engine in hand, or the mana
+fuels a productive commander line) reach Tier S/A 44-55% of the time with 0-21% Tier D/F. Hands with
+2+ acceleration and **truly no destination at all** - no engine, no cheap tutor, and not even
+enough color access for Tymna/Thrasios - hit Tier D/F **58.8%** of the time (n=500) and Tier S/A
+only **20.8%**, both *worse* than the under-2-acceleration baseline (18.3%/43.2%). The rule was
+actively wrong for this subset, not merely imprecise.
+
+**Correction (B): a T1 creature dork enabling a T2 engine is a premium line.** Directly measured
+from simulated `cast_log`s (`mull005_tutor_dork_analysis.json`): the `dork_to_engine` mechanism
+fires in 2,591/30,000 hands (8.6%) and reaches Tier A in **48.6%** of those - a summoning-sick T1
+Birds of Paradise into a T2 Rhystic Study is graded exactly as favorably as a T1 Sol Ring into the
+same T2 engine (`rock_to_engine`), because the grading reads the actual T2 board state, not
+whether the accelerant itself could tap on turn 1.
+
+## Tutor economics, measured per card (not as one "tutors" class)
+
+SOLO-004 concluded "tutors are negative" as a blanket fact. The correct question, per the
+assignment, is whether a *specific* tutor can legally and economically become a T1/T2 engine.
+Bucketing every hand holding each tutor by what the bounded search's best line actually did with
+it (`mull005_tutor_dork_analysis.json`, n≈2,050-2,280 hands/card):
+
+| Tutor | CMC | Reaches T2 engine | Live but delayed | Stranded | Superseded by commander |
+|---|---|---|---|---|---|
+| Crop Rotation | 1 | 27.4% | 5.9% | 48.9% | 17.4% |
+| Vampiric Tutor | 1 | 27.1% | 4.9% | 46.3% | 21.5% |
+| Enlightened Tutor | 1 | 26.6% | 4.9% | 47.8% | 20.6% |
+| Imperial Seal | 1 | 24.8% | 4.2% | 45.9% | 24.6% |
+| Demonic Tutor | 2 | 11.5% | 6.0% | 44.4% | 38.1% |
+| Spellseeker | 3 | 8.8% | 3.3% | 48.9% | 39.0% |
+| Ranger-Captain of Eos | 3 | 8.1% | 2.5% | 51.6% | 37.8% |
+| Eldritch Evolution | 3 | 7.7% | 2.7% | 52.2% | 37.3% |
+| Nature's Rhythm | 3 | 7.5% | 2.7% | 53.5% | 36.2% |
+| Birthing Pod | 3 | 7.4% | 3.2% | 54.7% | 34.7% |
+| Finale of Devastation | 4+ | 7.4% | 1.8% | 50.8% | 40.0% |
+| Sowing Mycospawn | 3 | 7.3% | 2.7% | 53.0% | 36.9% |
+| Chord of Calling | X | 6.9% | 2.6% | 52.9% | 37.7% |
+| Survival of the Fittest | 2 | 6.8% | 4.2% | 63.7% | 25.3% |
+
+A sharp, CMC-driven split: every CMC1 tutor reaches a T2 engine roughly 25-27% of the time it's
+held; every CMC2+ tutor manages only 7-12%. `pod_archetypes.py` and `trajectory_policies.py` both
+encode this directly - `CHEAP_TUTORS_WITH_REAL_T2_CONVERSION` (Vampiric Tutor, Enlightened Tutor,
+Imperial Seal, Crop Rotation) is the only tutor subset that earns any keep credit on its own; every
+other tutor in this deck is not a keep signal by itself, matching SOLO-004's finding but now for
+the *right, disaggregated* reason. Search value: the bounded search recovers a strictly better tier
+than the pre-MULL-005 greedy line in 20.6% of all hands holding any tutor.
+
+## Hand-size-specific trajectory thresholds (7/6/5/4)
+
+`derive_hand_size_trajectory_thresholds.py` searches optimal London-mulligan bottoming of a fresh 7
+down to each size and grades the result by trajectory tier (`mull005_hand_size_thresholds.json`).
+**Important limitation, disclosed rather than smoothed over**: a T1-T3 trajectory grade has no
+built-in penalty for holding fewer cards - bottoming a card that was never going to be cast is
+tier-neutral, so raw expected tier value rises slightly as hand size shrinks (7→6→5→4:
+1.72/2.12/2.25/2.40). This project has no full-game/4-player data to derive a real cost-of-mulligan
+from, so thresholds are reported at several disclosed assumed per-card costs rather than one
+invented "true" figure. At a moderate assumed cost of 1.0 tier-value-point per card:
+
+| Hand size | Keep at or above | Mulligan-alternative EV (cost-adjusted) |
+|---|---|---|
+| 7 | Tier B | 1.12 |
+| 6 | Tier C | 0.25 |
+| 5 | Tier D (i.e. ship only Tier F) | -0.60 |
+| 4 | no derived threshold (out of 7/6/5/4 scope) | - |
+
+## TRAJECTORY_MACHINE / TRAJECTORY_TREE / TRAJECTORY_SIMPLE
+
+Three policies (`trajectory_policies.py`), mirroring SOLO-004's machine/tree/simple pattern but
+graded on trajectory tier:
+
+- **TRAJECTORY_MACHINE** - the ceiling. Runs the bounded search and keeps iff the best tier clears
+  the hand-size threshold above. Not memorizable at the table.
+- **TRAJECTORY_TREE** - depth-4 decision tree fit on opener-visible features only, predicting
+  TRAJECTORY_MACHINE's label (`mull005_trajectory_tree_policy.json`). Holdout AUC **0.832**,
+  accuracy **0.739**. Dominant split: `distinct_colors_potential <= 1.5` - color access for a
+  commander line is the single strongest opener-visible predictor of trajectory quality in this
+  deck, ahead of any resource-presence feature SOLO-004 measured.
+- **TRAJECTORY_SIMPLE** - a ≤10-rule human-usable ladder directly encoding both corrections above
+  (full rule ladder and citations in `trajectory_policies.py`'s docstring). Validated against
+  TRAJECTORY_MACHINE on 15,000 hands: 62.5% agreement, 91.8% recall (rarely mis-ships a hand the
+  machine would keep), 56.2% precision (over-keeps some hands, mainly via its commander-colors
+  fallback rule, whose true keep rate is ~56-59% on its own - a single opener-visible feature
+  cannot fully predict commander productivity, and this is disclosed rather than hidden).
+
+## Full London mulligan simulation: trajectory-first vs. resource-first, head-to-head
+
+`run_mull005_london_mulligan_sim.py` runs real London mulligan sequences (20,000/policy, 1,500 for
+the expensive MACHINE policy, both seats), bottoming scored uniformly by trajectory tier so only
+the KEEP decision differs between policies compared - and re-runs SOLO-004's own `SIMPLE_RULES`/
+`TREE_DEPTH4` through the identical loop, so this is a genuine head-to-head under one shared metric,
+not two studies compared by eye. Because raw mean tier value structurally favors more-aggressive
+mulliganing (see the hand-size-threshold limitation above), results are reported both raw and at
+an assumed mulligan cost of 1.0 tier-value-point/card:
+
+| Policy | Play (cost-adj.) | Draw (cost-adj.) | Play avg. final hand size |
+|---|---|---|---|
+| TRAJECTORY_MACHINE | **2.53** | **3.06** | 5.97 |
+| TRAJECTORY_SIMPLE | 2.09 | 2.55 | 6.70 |
+| TRAJECTORY_TREE | 1.97 | 2.35 | 6.19 |
+| SOLO004_SIMPLE_RULES | 1.88 | 2.32 | 6.35 |
+| SOLO004_TREE_DEPTH4 | 1.65 | 1.68 | 5.30 |
+
+`SOLO004_TREE_DEPTH4` has the *highest raw* mean tier value of any cheap policy (3.35 play / 3.64
+draw) but drops to *last place* once its aggressive over-mulliganing (avg. final hand size 5.30,
+worst of any policy) is fairly priced in - it was winning by spending more cards, not by making
+better decisions. Once that's corrected for, **`TRAJECTORY_SIMPLE` beats every SOLO-004 baseline,
+including the more complex `TREE_DEPTH4`, on both seats**, while remaining the smallest, most
+human-usable ruleset tested.
+
+## Pod-conditioning overlay - explicitly non-simulated
+
+`pod_archetypes.py` defines multi-dimensional tags (speed, primary resource axis, interaction
+demand, resilience profile) and qualitative increase/decrease-value priors for ten named pod
+archetypes: RogSi, Kinnan, Rog/Thras Tree Farm, Blue Farm, Sisay, Tayam, Tivit, Etali, stax-heavy
+pods, and generic midrange/grind pods. **None of this is simulation output** - this project has run
+no 4-player matchup data (out of scope this phase). `pod_conditioned_grade()` combines a REAL
+`structural_hand_grade()` with bounded (+2/+1/0/-1/-2) per-archetype modifiers over nine disclosed
+feature categories, and every result carries two separate, always-distinct confidence labels:
+`structural_confidence: SIMULATED` and `pod_confidence: STRATEGIC_PRIOR_UNVALIDATED`. **A
+structural SHIP can never be promoted into any keep band, regardless of total modifier** - enforced
+in code (8 regression tests), not left as a documentation convention. Per the assignment's explicit
+constraint, no pod-conditioned recommendation anywhere in this project claims a simulated
+percentage (e.g. "wins 63% against RogSi") - only structural language ("against RogSi, live stack
+interaction receives a positive keep modifier because...").
+
+### Pod-guidance table (opponent archetype → mulligan pressure, no simulated numbers)
+
+| Archetype | Speed | Mulligan pressure | Gains value | Loses value |
+|---|---|---|---|---|
+| RogSi | very fast | HIGH - mulligan toward speed/interaction | free/cheap interaction, T1-T2 development, redundant fast starts | pure card-advantage engines with no early defense, delayed tutors, durdly ramp |
+| Sisay | fast-medium | MEDIUM-HIGH - be live early | stack interaction (ideally free), proactive speed | slow grindy plans that let Sisay out-tutor you |
+| Kinnan | fast-medium | MEDIUM-HIGH | interaction that hits noncreature permanents, mana resilience, fast starts | zero-interaction hands |
+| Rog/Thras Tree Farm | medium | BASELINE | engines that come online FASTER than theirs, synergy-piece-specific interaction, redundancy | racing on raw damage with no engine backing |
+| Tayam | medium | BASELINE | graveyard interaction specifically, resilience/redundancy | purely proactive hands with no way to interact with recursion |
+| Tivit | medium | BASELINE | interaction (esp. around extra-turn/blink triggers), card-advantage engines | hyper-aggressive plans with no staying power |
+| midrange/grind | medium | BASELINE | card-advantage engines, redundancy | (closest archetype to this project's own solo baseline) |
+| Etali | medium-slow | LOW-MEDIUM - punish their slow start | proactive fast starts, held interaction for their top end | purely reactive/passive hands |
+| Blue Farm | slow | LOW - patience rewarded | your own card-advantage engines, mana resilience/patience | one-shot interaction with no follow-up, raw speed with no staying power |
+| stax-heavy | slow by design | LOW BUT SHARP - must survive to execute | mana resilience, proactive plays BEFORE a lock resolves, tutors for your own answers | greedy multi-piece combo lines, fragile one-shot mana |
+
+### Primer quick-reference table (excerpt - full 72-row table in `mull005_primer_tables.json`)
+
+Trajectory tier × hand size × pod speed → KEEP/SHIP. Hand-size axis is SIMULATED; pod-speed axis is
+a disclosed qualitative adjustment (FAST pods only credit on-time tiers S/A regardless of hand
+size; SLOW pods relax the neutral bar by one tier step, but never as far as Tier F). At hand size 7:
+
+| Trajectory tier | vs. FAST pod | vs. MEDIUM pod | vs. SLOW pod |
+|---|---|---|---|
+| S | KEEP | KEEP | KEEP |
+| A | KEEP | KEEP | KEEP |
+| B | SHIP | KEEP | KEEP |
+| C | SHIP | SHIP | KEEP |
+| D | SHIP | SHIP | SHIP |
+| F | SHIP | SHIP | SHIP |
+
+## Example sets (`mull005_annotated_examples.json`)
+
+**10 snap keeps, 10 conditional keeps, 10 mulligans** - fully annotated with hand, land count,
+structural grade + reason, and the bounded search's best-known tier/mechanism/engine/turn.
+
+**5 misleading hands** - real disagreements between SOLO-004's old `SIMPLE_RULES` and the new
+`TRAJECTORY_SIMPLE`, each confirmed correct by the bounded trajectory search (not invented
+illustrations). All five are cases the OLD rule shipped and the NEW rule correctly keeps:
+
+1. `City of Brass, Deathrite Shaman, Elves of Deep Shadow, King T'Challa, Ranger-Captain of Eos,
+   Training Grounds, Volatile Stormdrake` - 1 land. Old rule ships (creature-only acceleration at 1
+   land was never a keep signal). New rule keeps (correction B): best line reaches Tier A via a T2
+   Tymna, the mana fueled by the two creature dorks.
+2-5. Four more 1-3-land hands built around a T1 creature dork or a CMC1 tutor reaching an engine or
+   a plausible commander line - `dork_to_engine`/`commander_engine` mechanisms, Tier A/B, all
+   correctly reclassified from ship to keep. Full detail in the JSON file.
+
+**17 pod-conditioned examples** across 10 distinct archetype/combo queries (including
+`["Kinnan", "RogSi", "Tayam"]`, `["RogSi", "Sisay"]`, `["Blue Farm", "stax_heavy"]`), each showing
+the structural grade, the pod modifier breakdown per archetype, and the pod-adjusted grade - with
+the SHIP floor visibly holding on every SHIP-structural example regardless of the pod combination.
+
+## A limitation found during validation, not corrected this phase (disclosed, not hidden)
+
+Building the example set surfaced a real gap: `structural_hand_grade`'s "premium one-drop in hand"
+rule (inherited unchanged from SOLO-004's `SIMPLE_RULES`) does not check color castability. Of the
+2,138 dataset hands holding Mystic Remora or Esper Sentinel, **19.3% (412 hands) still reach best
+Tier D or F** - almost entirely because the premium card has no reliable color source, not because
+of anything the acceleration/tutor/commander corrections above touch. Both the old and new SIMPLE
+rulesets share this blind spot; fixing it (a color-castability check on the snap-keep rule) is real,
+quantified future work, explicitly not one of MULL-005's two mandated corrections and therefore not
+addressed in this phase's rule ladder.
+
+## Machine-readable outputs
+
+| Artifact | Contents |
+|---|---|
+| `sim/analysis/trajectory_grading.py` | Tier S/A/B/C/D/F grading + mechanism tagging + resource cost |
+| `sim/analysis/trajectory_search.py` | Bounded tutor-target × priority-order best-known trajectory search |
+| `sim/analysis/trajectory_policies.py` | TRAJECTORY_MACHINE/SIMPLE + `structural_hand_grade()` |
+| `sim/analysis/pod_archetypes.py` | Archetype tags + bounded pod modifiers + `pod_conditioned_grade()` |
+| `mull005_trajectory_dataset_{play,draw}.jsonl.gz` | 15k-hand opener-feature + greedy-outcome + trajectory-graded dataset per seat |
+| `mull005_tutor_dork_analysis.json` | Per-tutor-card conversion rates + dork-to-engine analysis |
+| `mull005_accel_without_payoff_analysis.json` | Acceleration-without-destination analysis (correction A) |
+| `mull005_hand_size_thresholds.json` | Trajectory-tier keep thresholds per hand size, cost-sensitivity swept |
+| `mull005_trajectory_tree_policy.json` | Fitted depth-4 tree, holdout-checked |
+| `mull005_london_mulligan_results_{play,draw}.json` | Full mulligan sim, 5 policies, cost-adjusted comparison |
+| `mull005_annotated_examples.json` | Required example sets (snap keeps/conditional keeps/mulligans/misleading/pod-conditioned) |
+| `mull005_primer_tables.json` | Primer quick-reference table + pod-guidance table |
+
+All files carry `run_class: DECK_BACKED_GOLDFISH` provenance, and every random sample is seeded and
+disclosed (primary seed 42; example generation seed 7). 38 new regression tests across 7 new test
+files (`test_mull005_trajectory_engine.py`, `test_mull005_trajectory_grading.py`,
+`test_mull005_trajectory_search.py`, `test_mull005_trajectory_policies.py`,
+`test_mull005_pod_archetypes.py`, `test_mull005_examples.py`, `test_mull005_primer_tables.py`) -
+full suite at 115 passed / 3 skipped.
+
+## Key questions answered
+
+1. **Does a tutor deserve any keep credit at all?** Yes, but only per-card, not as a class: CMC1
+   tutors (Vampiric Tutor, Enlightened Tutor, Imperial Seal, Crop Rotation) reach a T2 engine
+   ~25-27% of the time held; every CMC2+ tutor manages only 7-12% and is not a keep signal alone.
+2. **Was SOLO-004's "tutors are negative" conclusion correct?** Directionally, for most tutors -
+   but it collapsed a real, measured 4x spread (27% vs 7%) into one blanket verdict.
+3. **Is a T1 creature dork into a T2 engine actually good, or just "acceleration with no
+   payoff"?** Genuinely good - `dork_to_engine` reaches Tier A 48.6% of the time it fires, graded
+   identically to a T1 rock into the same T2 engine.
+4. **Was "2+ acceleration = snap keep" ever correct?** Only with a destination. With none at all,
+   it's actively wrong - 58.8% Tier D/F, worse than the under-2-acceleration baseline.
+5. **What single opener-visible feature best predicts trajectory quality?** Commander color access
+   (`distinct_colors_potential`) - the depth-4 tree's root split, ahead of any resource-presence
+   feature SOLO-004 measured.
+6. **How much value does the bounded trajectory search recover over the pre-MULL-005 greedy
+   line?** A strictly better tier in 20.6% of hands holding any tutor.
+7. **Does a simple, human-usable rule set actually beat SOLO-004's more complex tree?** Yes, once
+   mulligan cost is fairly priced in - `TRAJECTORY_SIMPLE` beats `SOLO004_TREE_DEPTH4` on both
+   seats despite being far smaller, because the tree's apparent edge was mostly bought with extra
+   mulligans.
+8. **What is the true cost of one more mulligan under trajectory-first grading?** Unmeasurable as
+   one number from this simulator alone (T1-T3 trajectory has no built-in per-card cost) - reported
+   as a disclosed sensitivity sweep (0.0-2.0 tier-value-points/card) rather than one invented figure.
+9. **What should be kept at each hand size, at a moderate assumed mulligan cost?** 7: Tier B+.
+   6: Tier C+. 5: Tier D+ (ship only Tier F). 4: no data derived within this phase's scope.
+10. **How good is a small (<10-rule) human policy compared to the simulated ceiling?**
+    62.5% agreement with TRAJECTORY_MACHINE, 91.8% recall, 56.2% precision - it rarely mis-ships a
+    good hand, but over-keeps some hands on its commander-colors fallback rule (~56-59% true keep
+    rate on its own).
+11. **Can pod context ever turn a genuinely bad hand into a keep?** No - enforced structurally
+    (SHIP is a hard floor in `pod_conditioned_grade()`), not just claimed in prose.
+12. **Is the pod-conditioning overlay simulated data?** No, and it says so on every single result
+    (`pod_confidence: STRATEGIC_PRIOR_UNVALIDATED`) - it is disclosed strategic judgment, explicitly
+    built to be edited, not measured fact.
+13. **Which pods reward speed over resilience, and which reward the opposite?** RogSi and Sisay
+    reward speed/interaction over card advantage; Blue Farm and stax-heavy pods reward patience,
+    card advantage, and mana resilience over raw speed.
+14. **Does this deck's own archetype (Tymna/Thrasios treefarm) have a named pod entry?** Yes -
+    "Rog/Thras Tree Farm" - a mirror-match entry rewarding engine tempo and synergy-piece-specific
+    interaction over racing on damage.
+15. **Are all ten named archetypes measured with equal confidence?** No - all ten carry the
+    identical `STRATEGIC_PRIOR_UNVALIDATED` label; none has been checked against pod simulation, and
+    the write-up does not imply otherwise for any of them.
+16. **What new, real engine capability did this phase add?** Genuine tutor library-search
+    resolution (`forced_tutor_target`) - provably a no-op by default, so every SOLO-002 through
+    SOLO-004 result stays reproducible.
+17. **Did building the example set surface any new problems?** Yes - a real 19.3% false-keep rate
+    on the "premium one-drop in hand" snap-keep rule, caused by unmodeled color castability,
+    inherited unchanged from SOLO-004 and disclosed as future work rather than fixed here.
+18. **Does play vs. draw change the trajectory-first ranking of policies?** No - the same ranking
+    (MACHINE > SIMPLE > TREE > SOLO004_SIMPLE_RULES > SOLO004_TREE_DEPTH4, cost-adjusted) holds on
+    both seats.
+19. **Is a full 4-player matchup simulation part of this phase's deliverable?** No, explicitly out
+    of scope per the assignment's stop condition - see below.
+20. **What is the final trajectory-first primer guide?** See "TRAJECTORY_MACHINE / TRAJECTORY_TREE
+    / TRAJECTORY_SIMPLE", the pod-guidance and primer quick-reference tables, and the example sets
+    above.
+
+## Explicit scope disclosure
+
+This completes MULL-005 per its own stop condition: **a validated trajectory-first structural
+mulligan policy plus a transparent qualitative pod-conditioning overlay.** Explicitly NOT run this
+phase, per the assignment: full 4-player matchup simulation against any of the ten named
+archetypes - the pod overlay is deliberately, permanently labeled as an unvalidated strategic prior
+until that simulation exists. Deckbuilding ablations (SOLO-004's own stop condition, still
+standing) remain out of scope. The "premium one-drop castability" gap found during example
+generation (above) is real, quantified, and deliberately left for a future phase rather than folded
+in here as scope creep beyond the assignment's two named corrections.
