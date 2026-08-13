@@ -1,0 +1,354 @@
+{
+  "phase": "SIM_001_MULL_005R_CENSUS",
+  "source_dataset": "results/solo_baseline/mull005r_trajectory_dataset_play.jsonl.gz",
+  "sample_count": 15000,
+  "seat": "play",
+  "note": "named_trajectory tags are MULTI-LABEL (a hand can match more than one); frequencies sum to more than 1.0.",
+  "named_trajectories": [
+    {
+      "named_trajectory": "unclassified",
+      "count": 6630,
+      "frequency": 0.442,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.351,
+      "tier_distribution": {
+        "S": 30,
+        "A": 1258,
+        "B": 443,
+        "C": 4899,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "no_destination_reached",
+      "count": 2997,
+      "frequency": 0.1998,
+      "keep_at_7_rate": 0.0,
+      "avg_tier_turn": null,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1192,
+        "F": 1805
+      }
+    },
+    {
+      "named_trajectory": "acceleration_rich_destination_poor",
+      "count": 1135,
+      "frequency": 0.0757,
+      "keep_at_7_rate": 0.0,
+      "avg_tier_turn": null,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 629,
+        "F": 506
+      }
+    },
+    {
+      "named_trajectory": "survival_online",
+      "count": 735,
+      "frequency": 0.049,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.659,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 668,
+        "C": 67,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "tutor_to_t2_premium_engine",
+      "count": 718,
+      "frequency": 0.0479,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 718,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t1_dork_to_t2_premium_engine",
+      "count": 466,
+      "frequency": 0.0311,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 466,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t1_remora",
+      "count": 442,
+      "frequency": 0.0295,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 1.0,
+      "tier_distribution": {
+        "S": 442,
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t1_sentinel",
+      "count": 434,
+      "frequency": 0.0289,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 1.0,
+      "tier_distribution": {
+        "S": 434,
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "engine_plus_live_free_interaction",
+      "count": 328,
+      "frequency": 0.0219,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.155,
+      "tier_distribution": {
+        "S": 23,
+        "A": 102,
+        "B": 39,
+        "C": 164,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_library",
+      "count": 297,
+      "frequency": 0.0198,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 297,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "pod_online_t3",
+      "count": 267,
+      "frequency": 0.0178,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.7,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 231,
+        "C": 36,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_archivist",
+      "count": 182,
+      "frequency": 0.0121,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 182,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "natures_rhythm_to_oculus",
+      "count": 113,
+      "frequency": 0.0075,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.496,
+      "tier_distribution": {
+        "S": 0,
+        "A": 56,
+        "B": 57,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "finale_to_oculus",
+      "count": 112,
+      "frequency": 0.0075,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.464,
+      "tier_distribution": {
+        "S": 0,
+        "A": 60,
+        "B": 52,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "tutor_to_mana_vault",
+      "count": 98,
+      "frequency": 0.0065,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.49,
+      "tier_distribution": {
+        "S": 0,
+        "A": 38,
+        "B": 53,
+        "C": 7,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_mastermind",
+      "count": 96,
+      "frequency": 0.0064,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 6,
+        "C": 90,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "pod_online_t2",
+      "count": 84,
+      "frequency": 0.0056,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 67,
+        "C": 17,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_rhystic",
+      "count": 62,
+      "frequency": 0.0041,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 62,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "mana_vault_or_rock_to_t2_tithe",
+      "count": 43,
+      "frequency": 0.0029,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.488,
+      "tier_distribution": {
+        "S": 0,
+        "A": 22,
+        "B": 0,
+        "C": 21,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_tithe",
+      "count": 34,
+      "frequency": 0.0023,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 34,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_armasaur",
+      "count": 17,
+      "frequency": 0.0011,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "t2_heartwood",
+      "count": 17,
+      "frequency": 0.0011,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.0,
+      "tier_distribution": {
+        "S": 0,
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 0,
+        "F": 0
+      }
+    },
+    {
+      "named_trajectory": "chord_to_oculus",
+      "count": 11,
+      "frequency": 0.0007,
+      "keep_at_7_rate": 1.0,
+      "avg_tier_turn": 2.727,
+      "tier_distribution": {
+        "S": 0,
+        "A": 3,
+        "B": 8,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      }
+    }
+  ]
+}

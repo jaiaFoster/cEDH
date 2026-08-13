@@ -137,8 +137,14 @@ def _t2_or_t3_supported_tier_b_or_c(state, cards, cast_by_turn):
 def grade_trajectory(state, cards, m1, m2, m3):
     """Returns a dict: tier, tier_engine (the specific card/commander that earned the tier),
     tier_turn (when it came online), mechanism, resource_cost."""
-    battlefield_t1 = {n for (t, n, c) in state.cast_log if t == 1}
-    battlefield_t2 = {n for (t, n, c) in state.cast_log if t <= 2}
+    # Filtered to ONLINE_CLASSES, matching _engine_online_turn below - cast_log also records
+    # non-battlefield events under the SAME card name (a tutor spell being cast: class "tutor"; a
+    # creature discarded to Survival: class "survival_discard"), and a card can be both an engine
+    # AND legal fodder (e.g. Abhorrent Oculus, a creature, discarded to Survival to find something
+    # else) - without this filter, a discarded/consumed card would be misread as "on the
+    # battlefield" and could wrongly earn Tier S/A credit for a card that was never actually cast.
+    battlefield_t1 = {n for (t, n, c) in state.cast_log if t == 1 and c in ONLINE_CLASSES}
+    battlefield_t2 = {n for (t, n, c) in state.cast_log if t <= 2 and c in ONLINE_CLASSES}
     snapshots = {1: m1, 2: m2, 3: m3}
 
     thras_benefit_turn = _thrasios_concrete_benefit_turn(state, cards, snapshots)

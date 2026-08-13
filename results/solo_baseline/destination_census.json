@@ -1,0 +1,133 @@
+{
+  "phase": "SIM_001_MULL_005R_CENSUS",
+  "source_dataset": "results/solo_baseline/mull005r_trajectory_dataset_play.jsonl.gz",
+  "sample_count": 15000,
+  "seat": "play",
+  "note": "destination_family is a single best-match classification per hand (mutually exclusive, assignment section 16) using trajectory_best__* fields; search_label_prefix_distribution shows how often each of the 5 bounded-search families (greedy/tutor/pod/survival/battlefield_tutor/land_tutor) actually won as best-known trajectory in this sample - the Pod-activation family never won outright in this 15,000-hand sample (0 occurrences), a real, disclosed rarity finding, not a bug: Pod's OWN board presence + a sac creature already earns Tier B/C credit via the generic support check before an explicit activation is even attempted, and Pod's {1}{G/P} activation on top of its own {3}{G/P} cast is genuinely mana-heavy for a T1-T3 window.",
+  "search_label_prefix_distribution": {
+    "greedy": 12730,
+    "tutor": 1947,
+    "battlefield_tutor": 282,
+    "land_tutor": 40,
+    "survival": 1
+  },
+  "destination_families": [
+    {
+      "destination_family": "t1_resource_engine",
+      "count": 819,
+      "frequency": 0.0546,
+      "strong_state_rate": 0.978,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "S": 819
+      }
+    },
+    {
+      "destination_family": "t2_smothering_tithe",
+      "count": 31,
+      "frequency": 0.0021,
+      "strong_state_rate": 1.0,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "A": 31
+      }
+    },
+    {
+      "destination_family": "t2_other_premium_resource_engine",
+      "count": 1841,
+      "frequency": 0.1227,
+      "strong_state_rate": 0.6312,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "A": 1841
+      }
+    },
+    {
+      "destination_family": "secondary_engine",
+      "count": 5484,
+      "frequency": 0.3656,
+      "strong_state_rate": 0.4136,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "C": 5032,
+        "B": 452
+      }
+    },
+    {
+      "destination_family": "early_pod_online",
+      "count": 320,
+      "frequency": 0.0213,
+      "strong_state_rate": 0.5563,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "C": 52,
+        "B": 268
+      }
+    },
+    {
+      "destination_family": "pod_to_oculus",
+      "count": 0,
+      "frequency": 0.0,
+      "strong_state_rate": null,
+      "keep_at_7_rate": null,
+      "keep_at_6_rate": null,
+      "tier_distribution": {}
+    },
+    {
+      "destination_family": "other_early_oculus",
+      "count": 216,
+      "frequency": 0.0144,
+      "strong_state_rate": 0.3333,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "B": 105,
+        "A": 111
+      }
+    },
+    {
+      "destination_family": "survival_online",
+      "count": 684,
+      "frequency": 0.0456,
+      "strong_state_rate": 0.3421,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "C": 61,
+        "B": 623
+      }
+    },
+    {
+      "destination_family": "exceptional_composite_state",
+      "count": 822,
+      "frequency": 0.0548,
+      "strong_state_rate": 0.8637,
+      "keep_at_7_rate": 1.0,
+      "keep_at_6_rate": 1.0,
+      "tier_distribution": {
+        "C": 351,
+        "A": 253,
+        "S": 85,
+        "B": 133
+      }
+    },
+    {
+      "destination_family": "no_premium_destination",
+      "count": 4783,
+      "frequency": 0.3189,
+      "strong_state_rate": 0.2868,
+      "keep_at_7_rate": 0.1361,
+      "keep_at_6_rate": 0.5168,
+      "tier_distribution": {
+        "D": 1821,
+        "F": 2311,
+        "A": 651
+      }
+    }
+  ]
+}

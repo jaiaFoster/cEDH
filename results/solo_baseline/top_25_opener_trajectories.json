@@ -1,0 +1,945 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_005R_TOP_25_OPENER_TRAJECTORIES",
+  "sample_count": 3000,
+  "seed": 2025,
+  "seat": "play",
+  "hand_size_thresholds_source": "mull005r_hand_size_thresholds.json (assumed_mulligan_card_cost=1.0)",
+  "note": "Selected to SPREAD across distinct (tier, tier_engine, mechanism) buckets found in this sample, best-tier-first, not literally the single 25 highest-scoring hands (which would mostly be near-duplicate S-tier premium-one-drop lines) - representative of the range of real opener trajectories this deck reaches, per assignment section 15.",
+  "trajectories": [
+    {
+      "rank": 1,
+      "hand": [
+        "Polluted Delta",
+        "Flusterstorm",
+        "Abhorrent Oculus",
+        "Silence",
+        "Wooded Foothills",
+        "Mystic Remora",
+        "Underground Sea"
+      ],
+      "tier": "S",
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 1,
+      "mechanism": "natural_engine+paid_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 3,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": true,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 2
+    },
+    {
+      "rank": 2,
+      "hand": [
+        "Mox Amber",
+        "Training Grounds",
+        "Heartwood Storyteller",
+        "Chrome Mox",
+        "Mystic Remora",
+        "Polluted Delta",
+        "Pact of Negation"
+      ],
+      "tier": "S",
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 1,
+      "mechanism": "natural_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 4,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 3,
+      "hand": [
+        "Voice of Victory",
+        "Swan Song",
+        "Rhystic Study",
+        "Hazel's Brewmaster",
+        "Esper Sentinel",
+        "Minamo, School at Water's Edge",
+        "Mana Confluence"
+      ],
+      "tier": "S",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 1,
+      "mechanism": "natural_engine+paid_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 2,
+        "cards_in_hand_t3": 5,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": true,
+        "engine_plus_verified_combo_proximity": true
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 4
+    },
+    {
+      "rank": 4,
+      "hand": [
+        "Tundra",
+        "Devoted Druid",
+        "Abhorrent Oculus",
+        "Ranger-Captain of Eos",
+        "Scrubland",
+        "Sylvan Library",
+        "Esper Sentinel"
+      ],
+      "tier": "S",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 1,
+      "mechanism": "natural_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 2,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 17
+    },
+    {
+      "rank": 5,
+      "hand": [
+        "Gemstone Caverns",
+        "Badgermole Cub",
+        "Smothering Tithe",
+        "Esper Sentinel",
+        "Polluted Delta",
+        "Otawara, Soaring City",
+        "Mox Diamond"
+      ],
+      "tier": "S",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 1,
+      "mechanism": "natural_engine",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 6,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 6,
+      "hand": [
+        "Mindbreak Trap",
+        "Mystic Remora",
+        "Wooded Foothills",
+        "Boseiju, Who Endures",
+        "Talon Gates of Madara",
+        "Devoted Druid",
+        "Marsh Flats"
+      ],
+      "tier": "S",
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 1,
+      "mechanism": "natural_engine",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 5,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 7,
+      "hand": [
+        "Enduring Vitality",
+        "City of Traitors",
+        "Enlightened Tutor",
+        "Tundra",
+        "Misty Rainforest",
+        "Esper Sentinel",
+        "Flare of Denial"
+      ],
+      "tier": "S",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 1,
+      "mechanism": "natural_engine+tutor_retained",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 4,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": true,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 21
+    },
+    {
+      "rank": 8,
+      "hand": [
+        "Mana Confluence",
+        "Survival of the Fittest",
+        "Exotic Orchard",
+        "Lotus Petal",
+        "Mystic Remora",
+        "Mox Diamond",
+        "Command Tower"
+      ],
+      "tier": "S",
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 1,
+      "mechanism": "natural_engine+tutor_retained",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 4,
+        "one_shot_mana_consumed": 1,
+        "persistent_mana_remaining_t3": 4,
+        "cards_in_hand_t3": 1,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": true,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 1
+    },
+    {
+      "rank": 9,
+      "hand": [
+        "Tropical Island",
+        "Nature's Rhythm",
+        "Exotic Orchard",
+        "Ancient Tomb",
+        "Crop Rotation",
+        "Enlightened Tutor",
+        "Elvish Spirit Guide"
+      ],
+      "tier": "S",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 1,
+      "mechanism": "battlefield_tutor_to_engine",
+      "search_label": "battlefield_tutor:Nature's Rhythm->Esper Sentinel",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 1,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 26
+    },
+    {
+      "rank": 10,
+      "hand": [
+        "Elvish Spirit Guide",
+        "Sol Ring",
+        "Starting Town",
+        "City of Traitors",
+        "Sylvan Library",
+        "Pact of Negation",
+        "Chrome Mox"
+      ],
+      "tier": "A",
+      "tier_engine": "Sylvan Library",
+      "tier_turn": 1,
+      "mechanism": "natural_engine",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 4,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 7,
+        "cards_in_hand_t3": 1,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 11,
+      "hand": [
+        "Rhystic Study",
+        "Heartwood Storyteller",
+        "Exotic Orchard",
+        "Lotus Petal",
+        "Sowing Mycospawn",
+        "Endurance",
+        "Ancient Tomb"
+      ],
+      "tier": "A",
+      "tier_engine": "Rhystic Study",
+      "tier_turn": 1,
+      "mechanism": "natural_engine",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 3,
+        "one_shot_mana_consumed": 1,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 7
+    },
+    {
+      "rank": 12,
+      "hand": [
+        "Nature's Rhythm",
+        "Smothering Tithe",
+        "Mana Vault",
+        "Savannah",
+        "Mox Diamond",
+        "Marsh Flats",
+        "Mindbreak Trap"
+      ],
+      "tier": "A",
+      "tier_engine": "Smothering Tithe",
+      "tier_turn": 1,
+      "mechanism": "natural_engine",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 3,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 1,
+        "live_interaction_retained_t3": false,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 13,
+      "hand": [
+        "Clever Impersonator",
+        "Mox Amber",
+        "Misty Rainforest",
+        "Ancient Tomb",
+        "Training Grounds",
+        "Mana Vault",
+        "Nature's Rhythm"
+      ],
+      "tier": "A",
+      "tier_engine": "Abhorrent Oculus",
+      "tier_turn": 2,
+      "mechanism": "battlefield_tutor_to_oculus+paid_interaction",
+      "search_label": "battlefield_tutor:Nature's Rhythm->Abhorrent Oculus",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 4,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 7,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": true,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 5
+    },
+    {
+      "rank": 14,
+      "hand": [
+        "Misty Rainforest",
+        "Mana Vault",
+        "Gemstone Caverns",
+        "Polluted Delta",
+        "Otawara, Soaring City",
+        "Veil of Summer",
+        "King T'Challa // Black Panther, Hope Enduring"
+      ],
+      "tier": "A",
+      "tier_engine": "Thrasios, Triton Hero",
+      "tier_turn": 2,
+      "mechanism": "commander_engine+paid_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 6,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": true,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": true,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 15,
+      "hand": [
+        "Oboro Breezecaller",
+        "City of Traitors",
+        "Marsh Flats",
+        "Demonic Tutor",
+        "Birds of Paradise",
+        "Silence",
+        "Elvish Spirit Guide"
+      ],
+      "tier": "A",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "mechanism": "dork_to_engine+paid_interaction",
+      "search_label": "tutor:Esper Sentinel:TUTOR_FIRST_PRIORITY",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 3,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 5,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": true,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 27
+    },
+    {
+      "rank": 16,
+      "hand": [
+        "Mystic Remora",
+        "Veil of Summer",
+        "Gilded Drake",
+        "Rhystic Study",
+        "Starting Town",
+        "Mana Vault",
+        "Pact of Negation"
+      ],
+      "tier": "A",
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 2,
+      "mechanism": "rock_to_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 3,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 4,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 3
+    },
+    {
+      "rank": 17,
+      "hand": [
+        "Minamo, School at Water's Edge",
+        "Force of Negation",
+        "Mox Amber",
+        "Training Grounds",
+        "Gemstone Caverns",
+        "Flooded Strand",
+        "Otawara, Soaring City"
+      ],
+      "tier": "A",
+      "tier_engine": "Thrasios, Triton Hero",
+      "tier_turn": 2,
+      "mechanism": "commander_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 3,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 4,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": true,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 1
+    },
+    {
+      "rank": 18,
+      "hand": [
+        "Esper Sentinel",
+        "Endurance",
+        "Hazel's Brewmaster",
+        "Fierce Guardianship",
+        "City of Brass",
+        "Misty Rainforest",
+        "Avacyn's Pilgrim"
+      ],
+      "tier": "A",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "mechanism": "dork_to_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 4,
+        "cards_in_hand_t3": 1,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 5
+    },
+    {
+      "rank": 19,
+      "hand": [
+        "Tundra",
+        "Clever Impersonator",
+        "Runic Armasaur",
+        "Minamo, School at Water's Edge",
+        "Tropical Island",
+        "Misty Rainforest",
+        "Wooded Foothills"
+      ],
+      "tier": "A",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "mechanism": "natural_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 5
+    },
+    {
+      "rank": 20,
+      "hand": [
+        "Verdant Catacombs",
+        "Marsh Flats",
+        "Fierce Guardianship",
+        "Finale of Devastation",
+        "Force of Negation",
+        "Smothering Tithe",
+        "Crop Rotation"
+      ],
+      "tier": "A",
+      "tier_engine": "Abhorrent Oculus",
+      "tier_turn": 2,
+      "mechanism": "battlefield_tutor_to_oculus+free_interaction",
+      "search_label": "battlefield_tutor:Finale of Devastation->Abhorrent Oculus",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 4,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 4
+    },
+    {
+      "rank": 21,
+      "hand": [
+        "Volatile Stormdrake",
+        "Tundra",
+        "Mystic Remora",
+        "Faerie Mastermind",
+        "Boseiju, Who Endures",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Flooded Strand"
+      ],
+      "tier": "A",
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 2,
+      "mechanism": "natural_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 1,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 3,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 7
+    },
+    {
+      "rank": 22,
+      "hand": [
+        "Chord of Calling",
+        "Oboro Breezecaller",
+        "Gemstone Caverns",
+        "Hazel's Brewmaster",
+        "Elves of Deep Shadow",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Tropical Island"
+      ],
+      "tier": "A",
+      "tier_engine": "Sylvan Library",
+      "tier_turn": 2,
+      "mechanism": "dork_to_engine+free_interaction",
+      "search_label": "greedy",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 3,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": false,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": false,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 11
+    },
+    {
+      "rank": 23,
+      "hand": [
+        "Eldritch Evolution",
+        "Orcish Bowmasters",
+        "Mana Confluence",
+        "Gleaming Splendor",
+        "Otawara, Soaring City",
+        "Enlightened Tutor",
+        "Fierce Guardianship"
+      ],
+      "tier": "A",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "mechanism": "tutor_to_engine+free_interaction",
+      "search_label": "tutor:Esper Sentinel:DEFAULT_PRIORITY",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 3,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 23
+    },
+    {
+      "rank": 24,
+      "hand": [
+        "Ranger-Captain of Eos",
+        "Smothering Tithe",
+        "Gaea's Cradle",
+        "Flooded Strand",
+        "Enlightened Tutor",
+        "Minamo, School at Water's Edge",
+        "Vampiric Tutor"
+      ],
+      "tier": "A",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "mechanism": "tutor_to_engine+paid_interaction",
+      "search_label": "tutor:Esper Sentinel:DEFAULT_PRIORITY",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 2,
+        "one_shot_mana_consumed": 0,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 2,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": false,
+        "engine_plus_live_paid_interaction": true,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 19
+    },
+    {
+      "rank": 25,
+      "hand": [
+        "Minamo, School at Water's Edge",
+        "Underground Sea",
+        "Heartwood Storyteller",
+        "Imperial Seal",
+        "Fierce Guardianship",
+        "Noble Hierarch",
+        "Lotus Petal"
+      ],
+      "tier": "A",
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "mechanism": "tutor_plus_accel_to_engine+free_interaction",
+      "search_label": "tutor:Esper Sentinel:DEFAULT_PRIORITY",
+      "resource_cost": {
+        "cards_spent_by_tier_turn": 4,
+        "one_shot_mana_consumed": 1,
+        "persistent_mana_remaining_t3": 3,
+        "cards_in_hand_t3": 1,
+        "live_interaction_retained_t3": true,
+        "tutor_consumed": true,
+        "tutor_still_live_t3": false,
+        "second_engine_potential": true,
+        "commander_access": false,
+        "engine_plus_live_free_interaction": true,
+        "engine_plus_live_paid_interaction": false,
+        "engine_plus_verified_combo_proximity": false
+      },
+      "keep_recommendations": {
+        "keep_at_7": true,
+        "keep_at_6": true,
+        "keep_at_5": true
+      },
+      "candidates_tried": 25
+    }
+  ]
+}

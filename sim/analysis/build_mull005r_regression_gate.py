@@ -179,6 +179,19 @@ GATE_ITEMS = [
         "property": "Engine realization timing (deployment vs. actual value realization) is tracked per-engine, distinguishing opponent-triggered/proxy-credited Tier-A engines from support-gated Tier-C engines and structurally-inert cards (REALIZE-001/002)",
         "tests": ["rules_tests/regression/test_mull005r_engine_realization.py"],
     },
+    {
+        "id": "GATE-26", "category": "NEW",
+        "property": "Survival-of-the-Fittest activation never crashes when the only green source is the discarded creature itself (Elvish Spirit Guide double-use)",
+        "tests": [
+            "rules_tests/regression/test_mull005r_pod_oculus_survival.py::test_survival_cannot_discard_elvish_spirit_guide_when_esg_is_the_only_green_source",
+            "rules_tests/regression/test_mull005r_pod_oculus_survival.py::test_survival_can_discard_a_different_creature_while_paying_with_esg",
+        ],
+    },
+    {
+        "id": "GATE-27", "category": "NEW",
+        "property": "grade_trajectory's battlefield_t1/battlefield_t2 Tier S/A checks are filtered to ONLINE_CLASSES - a creature discarded to Survival or otherwise consumed as fodder never earns tier credit as if it were cast",
+        "tests": ["rules_tests/regression/test_mull005r_grading_corrections.py::test_creature_discarded_to_survival_is_not_credited_as_a_battlefield_engine"],
+    },
 ]
 
 

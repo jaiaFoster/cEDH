@@ -27,6 +27,8 @@ FAKE_CARDS = {
     "Birds of Paradise": {"name": "Birds of Paradise", "type": "Creature — Bird", "mana_cost": "{G}", "cmc": 1},
     "Mox Amber": {"name": "Mox Amber", "type": "Legendary Artifact", "mana_cost": "{0}", "cmc": 0},
     "Abhorrent Oculus": {"name": "Abhorrent Oculus", "type": "Creature — Eye", "mana_cost": "{2}{U}", "cmc": 3},
+    "Esper Sentinel": {"name": "Esper Sentinel", "type": "Artifact Creature — Human Soldier", "mana_cost": "{W}", "cmc": 1},
+    "Survival of the Fittest": {"name": "Survival of the Fittest", "type": "Enchantment", "mana_cost": "{1}{G}", "cmc": 2},
     "Birthing Pod": {"name": "Birthing Pod", "type": "Artifact", "mana_cost": "{3}{G/P}", "cmc": 4},
     "Devoted Druid": {"name": "Devoted Druid", "type": "Creature — Elf Druid", "mana_cost": "{1}{G}", "cmc": 2},
     "Filler Land": {"name": "Filler Land", "type": "Land", "mana_cost": "", "cmc": 0},
@@ -117,6 +119,32 @@ def test_thrasios_enables_mox_amber_earns_tier_credit():
     g = grade_trajectory(state, FAKE_CARDS, snaps[1], snaps[2], snaps[3])
     assert g["tier_engine"] == "Thrasios, Triton Hero"
     assert g["tier"] in ("A", "B")
+
+
+def test_creature_discarded_to_survival_is_not_credited_as_a_battlefield_engine():
+    # Regression for a real bug found generating the MULL-005R top-25 opener trajectory report:
+    # Abhorrent Oculus (a Creature) can legally be DISCARDED to Survival of the Fittest as fodder
+    # to find something else. cast_log records this under class "survival_discard" - the card goes
+    # to the GRAVEYARD, never the battlefield. grade_trajectory's Tier S/A battlefield_t1/
+    # battlefield_t2 sets must filter by ONLINE_CLASSES (like _engine_online_turn already does),
+    # not treat every cast_log NAME as "on the battlefield" regardless of class - otherwise a
+    # discarded engine card falsely earns Tier S/A credit for never having been cast at all.
+    state = HandState(["Abhorrent Oculus"], ["Esper Sentinel"] + ["Filler Land"] * 15,
+                       on_play=True, rng=random.Random(0), cards=FAKE_CARDS)
+    state.turn = 1
+    state.nonland_perms.append(Perm("Survival of the Fittest", 0, False))
+    state.lands.append(LandInPlay("Tropical Island", 0, tapped=False))
+    from pod_and_battlefield_tutors import try_activate_survival
+    assert try_activate_survival(state, FAKE_CARDS, "Abhorrent Oculus", "Esper Sentinel")
+    assert "Abhorrent Oculus" in state.graveyard
+    assert "Abhorrent Oculus" not in [p.name for p in state.nonland_perms]
+    m1 = snapshot_metrics(state, FAKE_CARDS, [])
+    m3 = snapshot_metrics(state, FAKE_CARDS, [])
+    g = grade_trajectory(state, FAKE_CARDS, m1, m1, m3)
+    assert g["tier_engine"] != "Abhorrent Oculus", (
+        "Oculus was discarded, not cast - it must never earn tier credit for being on the "
+        f"battlefield (got tier_engine={g['tier_engine']!r}, tier={g['tier']!r})"
+    )
 
 
 def test_oculus_on_battlefield_graded_as_premium_destination():
