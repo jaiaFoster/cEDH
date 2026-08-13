@@ -1,0 +1,45 @@
+{
+  "phase": "SIM_001_MULL_006_ENGINE_STRENGTH_PRIOR",
+  "evidence_type": "PILOT_SUPPLIED_STRATEGIC_PRIOR",
+  "strength_order_strongest_first": [
+    "S",
+    "A+",
+    "A",
+    "A-",
+    "B+",
+    "B",
+    "B-",
+    "C+/B-"
+  ],
+  "strength_rank": {
+    "S": 0,
+    "A+": 1,
+    "A": 2,
+    "A-": 3,
+    "B+": 4,
+    "B": 5,
+    "B-": 6,
+    "C+/B-": 7
+  },
+  "engine_strength_prior": {
+    "Smothering Tithe": "S",
+    "Birthing Pod": "S",
+    "Rhystic Study": "A+",
+    "Mystic Remora": "A",
+    "Faerie Mastermind": "A",
+    "Esper Sentinel": "A-",
+    "Archivist of Oghma": "A-",
+    "Sylvan Library": "B+",
+    "Survival of the Fittest": "B",
+    "Heartwood Storyteller": "B-",
+    "Runic Armasaur": "C+/B-"
+  },
+  "functional_gates": {
+    "Birthing Pod": "deployed (on battlefield, untapped) AND legal fodder (another creature on the battlefield) AND the {1}{G/P} activation currently payable. Does NOT additionally verify the resulting found card is a genuine upgrade - a disclosed simplification (see engine_strength_prior.functional_pod docstring).",
+    "Survival of the Fittest": "deployed AND a discardable creature card actually in hand AND the {G} activation currently payable."
+  },
+  "deployment_required_for_every_entry": "Every engine in this table requires being ON THE BATTLEFIELD, including Faerie Mastermind - the FAERIE MASTERMIND CORRECTION removes the ACTIVATION-support requirement MULL-005R imposed (its {3}{U} ability need not be payable), it does NOT remove the deployment requirement. A card sitting in hand has no live ability at all.",
+  "abhorrent_oculus_excluded": "Abhorrent Oculus is deliberately NOT in this table - it remains a separate PREMIER DESTINATION per assignment section 3, never folded into the resource-engine strength ranking. Its trajectory quality is determined by deployment turn/route/resources consumed/resulting board/follow-up/resilience/agency, not an engine-strength label.",
+  "faerie_mastermind_correction": "MULL-005R (REALIZE-001) required Mastermind's {3}{U} activated ability to be currently payable before granting ANY Tier-C credit, on the reasoning that its passive trigger is structurally unmeasurable by a solo/no-opponent model. MULL-006 explicitly overrides this for ENGINE-STRENGTH purposes only: Mastermind is proxy-credited as strength A on deployment alone, the same disclosed-proxy treatment already given to Rhystic Study/Mystic Remora/Smothering Tithe (equally unmeasurable opponent-triggered engines - TITHE-001's consistency argument, now extended). The activated ability remains real additional utility, not a prerequisite for the label. This does NOT retroactively change MULL-005R's own committed trajectory-tier grading (grade_trajectory()/trajectory_metrics.py's _tier_c_supported are untouched) - it is a new, additive strength-prior layer alongside the existing tier system, per the assignment's instruction to keep intrinsic strength and the legacy grading separate while the two are tested together (sections 3-5).",
+  "note": "This is a PILOT-SUPPLIED STRATEGIC PRIOR, not an empirical finding - never cite this ranking itself as 'simulation-proven'. Only its INTERACTIONS with deployment speed, seat, draw dependence, resilience, and pod context (tested in later MULL-006 artifacts) are simulation-derived."
+}
