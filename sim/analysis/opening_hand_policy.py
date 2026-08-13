@@ -243,12 +243,16 @@ def _fetch_potential_colors(state, fetch_name):
     return colors
 
 
-def _crack_fetch(state, fetch_name, need_colors):
+def _crack_fetch(state, fetch_name, need_colors, forced_target=None):
     """Real fetch resolution: search library for a legal target (by the fetch's actual printed
     basic types, not an assumed color pair), put it onto the battlefield untapped, sacrifice the
     fetch, lose 1 life, then the library's remaining order stands (removing one card from an
     already-uniformly-shuffled remainder is statistically equivalent to a fresh shuffle for a
-    single Monte Carlo trial - no explicit reshuffle needed)."""
+    single Monte Carlo trial - no explicit reshuffle needed).
+
+    forced_target: if given and a legal target right now, overrides the greedy need-colors-scored
+    choice - used only by the bounded sequencing search (achievable_search.py) to explore
+    alternate fetch targets, never by the default greedy policy_realized line."""
     targets = _legal_fetch_targets(state, fetch_name)
     if not targets:
         # No legal target left in the library (rare - would require this hand to have already
@@ -258,12 +262,15 @@ def _crack_fetch(state, fetch_name, need_colors):
         state.lands.append(LandInPlay(fetch_name, state.turn, tapped=True))
         return
 
-    def score(name):
-        colors = {BASIC_TYPE_COLOR[t] for t in DUAL_LAND_BASIC_TYPES[name]}
-        return len(colors & need_colors) * 2 + len(colors) * 0.1
+    if forced_target is not None and forced_target in targets:
+        chosen = forced_target
+    else:
+        def score(name):
+            colors = {BASIC_TYPE_COLOR[t] for t in DUAL_LAND_BASIC_TYPES[name]}
+            return len(colors & need_colors) * 2 + len(colors) * 0.1
 
-    targets.sort(key=score, reverse=True)
-    chosen = targets[0]
+        targets.sort(key=score, reverse=True)
+        chosen = targets[0]
     state.library.remove(chosen)
     state.lands.append(LandInPlay(chosen, state.turn, tapped=False))
     state.graveyard.append(fetch_name)
@@ -437,11 +444,13 @@ def is_currently_castable(state, gen, pips):
     return _try_pay(state, gen, pips) is not None
 
 
-def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction=False, forced_land=None):
+def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction=False,
+                  forced_land=None, forced_fetch_target=None):
     """Mutates state for one turn: untap, draw, land drop, greedy casts. Returns actions taken.
-    forced_land: if given (and present in hand), overrides the greedy land-choice heuristic -
-    used only by achievable_search.py's bounded alternate-line search, never by the default
-    policy_realized line."""
+    forced_land: if given (and present in hand), overrides the greedy land-choice heuristic.
+    forced_fetch_target: if forced_land (or the greedily-chosen land) is a fetch, overrides which
+    legal target it searches for. Both are used only by achievable_search.py's bounded
+    alternate-line search, never by the default policy_realized line."""
     state.turn += 1
     state.untap_all()
     actions = []
@@ -466,7 +475,7 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
         state.hand.remove(land)
         _maybe_sacrifice_city_of_traitors(state)
         if land in FETCH_LANDS:
-            _crack_fetch(state, land, need_colors or set(COLORS))
+            _crack_fetch(state, land, need_colors or set(COLORS), forced_target=forced_fetch_target)
         else:
             state.lands.append(LandInPlay(land, state.turn))
         actions.append(("land", land))

@@ -129,9 +129,9 @@ def t2_quality_metrics(state, cards, m2):
 
 def t3_strong_state_metrics(state, cards, m3):
     """Per the SOLO-003 conceptual correction: Tymna castable/supported/on-battlefield must NOT
-    inflate any generic "strong state" flag - it has its own dedicated conditional-productivity
-    tiers (tymna_conditional_productivity below) precisely so a deployed-but-unsupported Tymna
-    can never masquerade as a genuine card-advantage/compounding state here."""
+    inflate any generic "strong state" flag - it has its own dedicated attack-capacity tiers
+    (tymna_attack_capacity below) precisely so a deployed-but-unsupported Tymna can never
+    masquerade as a genuine card-advantage/compounding state here."""
     battlefield_names = {p.name for p in state.nonland_perms}
     tier_a_online = any(n in ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE for n in battlefield_names)
     tier_c_supported_online = any(
@@ -191,28 +191,49 @@ def compounding_state_metrics(state, cards, m3):
     }
 
 
-def tymna_conditional_productivity(state, cards, cast_turn):
-    """Section 9: Tymna is a conditional CONVERSION metric, not a success headline."""
+def tymna_attack_capacity(state, cards, cast_turn):
+    """Section 9: Tymna is a conditional metric, not a success headline - and what this function
+    measures is ATTACK CAPACITY (how many creatures are currently able to attack), not confirmed
+    card productivity. This model does not simulate combat, blocks, or opponent removal, so it
+    cannot know how many of those attackers would actually connect, still less how many cards
+    that would draw (Tymna's trigger is "X = opponents dealt combat damage this turn," a
+    downstream, unsimulated fact). Creature count is a real, honest precursor signal - it is not
+    a card-draw estimate, and must not be read as one."""
     on_bf = any(p.name == "Tymna the Weaver" for p in state.nonland_perms)
     if not on_bf:
-        return {"tymna_deployed": False, "tymna_tier": None}
+        return {"tymna_deployed": False, "tymna_attack_capacity_tier": None}
     attackers = state.creature_count()
     if attackers >= 3:
-        tier = "tymna_high"
+        tier = "attack_capacity_high"
     elif attackers >= 2:
-        tier = "tymna_medium"
-    elif attackers >= 1:
-        tier = "tymna_low"
+        tier = "attack_capacity_medium"
     else:
-        tier = "tymna_low"  # deployed with no attackers at all - essentially inert this turn
+        tier = "attack_capacity_low"  # 0 or 1 attackers - essentially inert this turn either way
     return {
-        "tymna_deployed": True, "tymna_cast_turn": cast_turn, "tymna_creatures_present": attackers,
-        "tymna_tier": tier,
+        "tymna_deployed": True, "tymna_cast_turn": cast_turn, "tymna_creatures_able_to_attack": attackers,
+        "tymna_attack_capacity_tier": tier,
     }
 
 
 def thrasios_productivity(state, cards, m3):
-    """Section 10: measure PRODUCTIVITY, not presence."""
+    """Section 10: measure PRODUCTIVITY, not presence.
+
+    Corrected wording (the checkpoint's first pass conflated three unrelated mechanisms here):
+    Training Grounds' real text is "Activated abilities of CREATURES you control cost {2}
+    less" - it only ever touches an ACTIVATED ability of a CREATURE. In this deck that is
+    Thrasios's own {4} scry/draw ability (modeled below, thrasios_activation_cost_generic) and,
+    separately, Kinnan's own {5}{G}{U} tutor ability if Kinnan is out (NOT modeled - no metric
+    here tracks Kinnan's own activation). Training Grounds has NO textual relationship
+    whatsoever to Kinnan's mana-doubling ability ("whenever you tap a nonland permanent for
+    mana, add one mana...") - that is a TRIGGERED ability with no mana cost of its own, so there
+    is nothing for Training Grounds to discount. Nor does it interact with Gaea's Cradle at all
+    - Cradle is a LAND, not a creature, so Training Grounds' text can never apply to it under any
+    circumstance. What Kinnan and Cradle genuinely do for Thrasios's activation, by an entirely
+    different and equally unmodeled mechanism, is help GENERATE the {4}: Kinnan's trigger can
+    double a mana dork's output when tapped (not modeled - available_sources() has no Kinnan
+    check), and Cradle is just more raw mana on board (no special interaction, already correctly
+    reflected in total_mana). Both are tracked below purely as board-state diagnostics, not as a
+    claim that either mechanism's magnitude is modeled."""
     on_bf = any(p.name == "Thrasios, Triton Hero" for p in state.nonland_perms)
     act_cost = thrasios_activation_cost_generic(state)
     activation_now = on_bf and is_currently_castable(state, act_cost, [])
@@ -225,14 +246,23 @@ def thrasios_productivity(state, cards, m3):
         "thrasios_activation_cost_generic": act_cost if on_bf else None,
         "thrasios_activation_now": activation_now,
         "thrasios_training_grounds_discount_active": on_bf and training_grounds_active,
-        "thrasios_kinnan_present": on_bf and kinnan_active,
-        "thrasios_cradle_present": on_bf and cradle_active,
+        # co-presence diagnostics only - neither number's magnitude is modeled, see docstring
+        "thrasios_kinnan_co_present_mana_boost_unmodeled": on_bf and kinnan_active,
+        "thrasios_cradle_co_present": on_bf and cradle_active,
         "thrasios_productive": activation_now,  # productivity is defined by real activation capacity, not presence
     }
 
 
 def classify_trajectory_failure(m1, m2, m3, state, cards):
-    """Section 20: outcome failure (what) vs. causal diagnosis (why), both multi-label."""
+    """Section 20: outcome failure (what) vs. causal diagnosis (why), both multi-label.
+
+    Deliberately does NOT append a composite "functional"/"success" tag when no negative tag
+    applies (a hand with an empty outcome_tags list has no diagnosed failure - that is not the
+    same claim as "this hand is good," and per the correctness-repair instruction such a
+    composite must never be available for mulligan-policy optimization to latch onto as a de
+    facto single success score). Query the granular, explicitly-named positive-state flags in
+    t3_strong_state_metrics()/compounding_state_metrics() instead when a positive signal is
+    actually needed."""
     outcome_tags = []
     t3strong = t3_strong_state_metrics(state, cards, m3)
     if not m1["any_engine_active"] and not m1["mana_2plus"] and m1["total_mana"] < 2 and m2["total_mana"] < 2:
@@ -255,8 +285,6 @@ def classify_trajectory_failure(m1, m2, m3, state, cards):
         outcome_tags.append("flooded_action_light")
     if m3["total_mana"] < 2:
         outcome_tags.append("insufficient_mana")
-    if not outcome_tags:
-        outcome_tags.append("functional")
 
     causal_tags = []
     if len(state.lands) < 2:
@@ -264,3 +292,82 @@ def classify_trajectory_failure(m1, m2, m3, state, cards):
     if m3["total_mana"] < 2:
         causal_tags.append("insufficient_persistent_mana")
     return outcome_tags, causal_tags
+
+
+def trajectory_family_tags(state, cards, m1, m2, m3):
+    """SOLO-003 sections 4 (T1->T2 sequence families) and 16 (opening-hand pattern families).
+
+    Explicitly a RULE-BASED starting taxonomy, not a data-derived clustering - labeled as such
+    per the spec's own instruction ("If rule-based taxonomy is used, explicitly label it as
+    such"). Multi-label: a hand can match several families at once. A real clustering pass over
+    the full per-hand feature vector remains future work, same disclosed scope reduction as
+    SOLO-002R's archetype tags.
+    """
+    tags = []
+    cast_t1 = {n for (t, n, c) in state.cast_log if t == 1}
+    cast_t2 = {n for (t, n, c) in state.cast_log if t == 2}
+    dork_t1 = any(MANA_SOURCES.get(n, {}).get("creature") for n in cast_t1)
+    accel_t1 = any(n in ACCELERATION for n in cast_t1)
+    t2q = t2_quality_metrics(state, cards, m2)
+    t3strong = t3_strong_state_metrics(state, cards, m3)
+
+    # ---- T1 -> T2 acceleration trajectories (section 4) ----
+    if dork_t1 and "Rhystic Study" in cast_t2:
+        tags.append("t1_dork_to_t2_rhystic_study")
+    if dork_t1 and "Survival of the Fittest" in cast_t2:
+        tags.append("t1_dork_to_t2_survival")
+    if dork_t1 and "Birthing Pod" in cast_t2:
+        tags.append("t1_dork_to_t2_pod")
+    if accel_t1 and "Kinnan, Bonder Prodigy" in cast_t2:
+        tags.append("t1_accel_to_t2_kinnan")
+    if accel_t1 and any(n in COMMANDERS for n in cast_t2):
+        tags.append("t1_accel_to_t2_commander")
+    if accel_t1 and len([n for (t, n, c) in state.cast_log if t == 2]) >= 2:
+        tags.append("t1_fast_mana_to_t2_multiple_actions")
+
+    # ---- T1 -> T2 engine trajectories ----
+    if "Mystic Remora" in cast_t1 and any(n in ACCELERATION for n in cast_t2):
+        tags.append("t1_remora_to_t2_mana_development")
+    if "Esper Sentinel" in cast_t1 and m2["two_plus_engines_active"]:
+        tags.append("t1_sentinel_to_t2_second_engine")
+    if m1["any_engine_active"] and any(n in TUTORS for n in cast_t2):
+        tags.append("t1_engine_to_t2_tutor")
+    if m1["any_engine_active"] and t2q["t2_development_plus_interaction"]:
+        tags.append("t1_engine_to_t2_dev_plus_interaction")
+    if accel_t1 and t2q["t2_primary_engine_online"]:
+        tags.append("t1_accel_to_t2_premium_engine")
+
+    # ---- creature-board trajectories: enough bodies to matter for Cradle/Chord/Pod/Survival ----
+    if state.creature_count() >= 3:
+        tags.append("creature_board_supports_cradle_chord_infrastructure")
+    if CRADLE in [l.name for l in state.lands] and state.creature_count() >= 3:
+        tags.append("creature_swarm_to_cradle")
+
+    # ---- section 16: opening-hand pattern families (T3 snapshot-level) ----
+    if m1["any_engine_active"]:
+        tags.append("t1_engine_hand")
+    if m3["tutor_castable"]:
+        tags.append("tutor_conversion_hand")
+    total_live_interaction = len(m1["live_interaction"]) + len(m2["live_interaction"]) + len(m3["live_interaction"])
+    if total_live_interaction >= 2 and m3["total_mana"] < 3:
+        tags.append("interaction_heavy_slow_hand")
+    if m3["temporary_resources_consumed"] >= 2:
+        tags.append("explosive_resource_destructive_hand")
+    commander_online = any(n in COMMANDERS for n in {p.name for p in state.nonland_perms})
+    if commander_online and (
+        m3.get("tymna_supported") or thrasios_productivity(state, cards, m3)["thrasios_activation_now"]
+    ):
+        tags.append("commander_conversion_hand")
+    land_count = len(state.lands)
+    if land_count == 1 and t3strong["t3_any_strong_state"]:
+        tags.append("strong_one_land_hand")
+    if land_count == 2 and not t3strong["t3_any_strong_state"]:
+        tags.append("deceptive_two_land_hand")
+    if land_count >= 4:
+        tags.append("flooded_hand")
+    if not t3strong["t3_any_strong_state"] and m3["total_mana"] < 2:
+        tags.append("genuinely_nonfunctional_hand")
+
+    if not tags:
+        tags.append("unclassified_hand")
+    return tags

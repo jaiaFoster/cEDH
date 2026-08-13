@@ -5,6 +5,17 @@ short implementation checkpoint."** This is that checkpoint. Nothing below has b
 produce a large-scale trajectory census yet — everything here is infrastructure, validated by
 regression tests and small-sample smoke tests (500-3,000 hands), not a production run.
 
+**Revision note**: this checkpoint was conditionally approved with six required corrections,
+all applied and re-validated before the census ran: (1) the composite `"functional"` outcome tag
+removed from the failure taxonomy entirely - see item 4; (2) the achievable-search expansion
+(item 5) is now actually implemented (T1-T3 land/fetch branching with state dedup), not just
+proposed; (3) explicit `trajectory_family_tags()` added (`trajectory_metrics.py`) covering the
+section-4/section-16 named sequence and pattern families; (4) the Tymna metric is renamed
+`tymna_attack_capacity` and reframed away from "productivity" - see item 2; (5) the Training
+Grounds/Kinnan/Cradle wording is corrected - Training Grounds has no textual relationship to
+either, see item 2; (6) the paired-ablation proposal (item 6) is redesigned to exclude the
+solo-model-inert cards it originally (and wrongly) proposed cutting.
+
 Code added this phase: `sim/analysis/interaction_model.py` (new), `sim/analysis/
 trajectory_metrics.py` (new), `sim/analysis/opening_hand_model.py` (engine taxonomy extended),
 `sim/analysis/opening_hand_policy.py` (real alternate-cost casting wired into the greedy policy),
@@ -73,18 +84,46 @@ the only two Tier-C cards that can register as "supported" here.
   pairs (card-engine+mana-engine, card-engine+interaction, card-engine+tutor, mana-engine+tutor,
   Cradle+creature-infrastructure, Survival-supported, Pod-supported, tutor+resources-to-deploy,
   engine+win-conversion, multi-engine+interaction).
-- **Tymna** (`tymna_conditional_productivity`, section 9): not scored as success. Deployed +
-  creature count only, classified `tymna_low` (0-1 attackers) / `tymna_medium` (2) / `tymna_high`
-  (3+). Smoke-test distribution (3,000 hands, on the play): 68.8% no Tymna deployed by T3, 15.8%
-  high, 13.0% medium, 2.5% low — i.e. **when Tymna does come down, it's usually well-supported**,
-  which is itself a finding worth flagging once validated at scale (early Tymna casts in this
-  greedy policy tend to happen only once a real board already exists, since commander priority
-  sits behind acceleration/premium-engine but the policy still needs the mana `first`).
+- **Trajectory-family tags** (`trajectory_family_tags`, sections 4 + 16, added per the checkpoint
+  revision): rule-based, explicitly-labeled-as-such multi-label tags covering the named T1→T2
+  sequence families (dork→Rhystic Study, dork→Survival, dork→Pod, accel→Kinnan, accel→commander,
+  fast-mana→multiple-T2-actions, Remora→mana development, Sentinel→second engine, engine→tutor,
+  engine→development+interaction, accel→premium T2 engine) and the section-16 hand-pattern
+  families (T1 engine hand, tutor-conversion hand, interaction-heavy slow hand, explosive
+  resource-destructive hand, commander-conversion hand, strong one-land hand, deceptive two-land
+  hand, flooded hand, genuinely-nonfunctional hand, creature-swarm-to-Cradle). 2,000-hand smoke
+  test: no exceptions, most common tags `commander_conversion_hand` (41.4%),
+  `genuinely_nonfunctional_hand` (37.1%), `t1_accel_to_t2_commander` (22.5%) - a real,
+  data-derived clustering pass remains future work (same disclosed reduction as SOLO-002R's
+  archetype tags).
+- **Tymna** (`tymna_attack_capacity`, section 9, renamed from an earlier "conditional
+  productivity" framing): not scored as success, and explicitly **not** labeled as productivity
+  at all — it measures ATTACK CAPACITY (creatures currently able to attack), not confirmed card
+  draw. This model does not simulate combat, blocks, or opponent removal, so it has no way to
+  know how many of those attackers would actually connect, and Tymna's trigger is defined in
+  terms of "opponents dealt combat damage this turn" - a downstream fact this model cannot
+  observe. Classified `attack_capacity_low` (0-1 creatures) / `attack_capacity_medium` (2) /
+  `attack_capacity_high` (3+). Smoke-test distribution (3,000 hands, on the play): 68.8% no
+  Tymna deployed by T3, 15.8% high, 13.0% medium, 2.5% low capacity — i.e. **when Tymna does
+  come down, it usually has real attack capacity already**, which is itself a finding worth
+  flagging once validated at scale (early Tymna casts in this greedy policy tend to happen only
+  once a real board already exists, since commander priority sits behind acceleration/
+  premium-engine but the policy still needs the mana first).
 - **Thrasios** (`thrasios_productivity`, section 10): productivity is defined as
   `thrasios_activation_now` (a real, live `{4}` payment check — reduced to `{2}` when Training
   Grounds is in play, per its actual Oracle text, floor of 1 mana never reached here) — not mere
-  battlefield presence. Kinnan/Cradle co-presence are recorded as diagnostic flags (their precise
-  mana-doubling interaction with Thrasios's activation is *not* fully modeled - see item 8).
+  battlefield presence. **Correction from the first pass of this checkpoint**: Training Grounds
+  has no relationship to Kinnan or Cradle at all - its real text ("Activated abilities of
+  creatures you control cost {2} less") only ever discounts an activated ability of a creature.
+  In this deck that's Thrasios's own `{4}` (modeled) and, separately, Kinnan's own `{5}{G}{U}`
+  tutor ability if Kinnan is in play (not modeled - no metric tracks Kinnan's own activation).
+  Training Grounds' text cannot apply to Kinnan's mana-doubling ability (a triggered ability with
+  no mana cost to discount) or to Gaea's Cradle (a land, not a creature) under any circumstance.
+  What Kinnan and Cradle actually contribute to affording Thrasios's activation is a completely
+  different, also-unmodeled mechanism: Kinnan can double a mana dork's output when tapped
+  (`available_sources()` has no Kinnan check), and Cradle is simply more raw mana already
+  reflected in `total_mana`. Both are recorded as board-state co-presence diagnostics only, never
+  as a claim that either mechanism's magnitude is modeled.
 
 ## 3. Live-interaction implementation status (`interaction_model.py`)
 
@@ -119,7 +158,13 @@ Two separate, multi-label tag sets per hand (never collapsed into one):
 - **Outcome** (what went wrong): `no_proactive_development`, `development_but_no_compounding_value`,
   `stranded_or_unsupported_engine`, `stranded_tutor`, `stranded_interaction` (live earlier, dead
   and never cast by T3), `color_failure`, `resource_destructive_acceleration_no_payoff`,
-  `flooded_action_light`, `insufficient_mana`, `functional` (no negative tag applies).
+  `flooded_action_light`, `insufficient_mana`. **Correction from the first pass**: no composite
+  "functional"/"no negative tag applies" label is emitted anymore - a hand with an empty
+  outcome-tag list means no diagnosed failure, which is not itself a success claim, and per
+  instruction no single composite score of any kind may exist for mulligan-policy optimization to
+  latch onto. A positive signal, when one is actually needed, comes from the explicitly-named
+  flags in `t3_strong_state_metrics`/`compounding_state_metrics` instead - never from the absence
+  of a failure tag.
 - **Causal** (why): reuses/extends SOLO-002R's granular diagnosis (`no_second_land`,
   `insufficient_persistent_mana`, Mox-dependency, no-Cradle-fodder, no-Chrome-Mox-fodder,
   no-Mox-Diamond-land, color-specific misses).
@@ -133,60 +178,85 @@ folded into `stranded_or_unsupported_engine`) — flagged as remaining work, not
 `insufficient_mana` 64.4%, `stranded_tutor` 59.8%, `stranded_or_unsupported_engine` 54.6%,
 `no_proactive_development` 53.8% (heavily overlapping - most failing hands carry several tags),
 `development_but_no_compounding_value` 18.9%, `color_failure` 12.7%,
-`resource_destructive_acceleration_no_payoff` 6.4%, `functional` only 2.1%. This is *harsher*
-than SOLO-002R's `meaningful_development_rate_t3` (23.4%) because `t3_any_strong_state` sets a
-materially higher bar than SOLO-002R's "2+ mana AND (any engine OR tutor OR interaction)" — by
-design, per the SOLO-003 instruction not to treat commander/any-engine presence as success.
+`resource_destructive_acceleration_no_payoff` 6.4%. Only 2.1% of hands carry no outcome tag at
+all (an absence-of-diagnosed-failure count, reported here purely for context - **not** the
+composite success label it would have been under the first pass of this checkpoint, since that
+label has been removed; `t3_any_strong_state` was 50.3% in the same batch and is the metric that
+actually answers "did this hand reach a strong state," independent of failure-tag presence). This
+failure-tag picture is *harsher* than SOLO-002R's `meaningful_development_rate_t3` (23.4%)
+because `t3_any_strong_state` sets a materially higher bar than SOLO-002R's "2+ mana AND (any
+engine OR tutor OR interaction)" — by design, per the SOLO-003 instruction not to treat
+commander/any-engine presence as success.
 
 ## 5. Bounded-search expansion plan
 
-Current state (SOLO-002R, unchanged so far): `achievable_search.py` explores turn-1 land-drop
-choice × 3 priority orderings, capped at 12 lines/hand (~6x the cost of a single greedy line).
+**Implemented** (this was "proposed, not yet built" in the first pass of this checkpoint;
+`achievable_search.py` now does this): a frontier/BFS-style search across all three turns,
+branching each turn on land choice × top-2 legal fetch targets (when the chosen land is a fetch)
+× 3 priority orderings, capped at `MAX_BRANCHES_PER_STATE=6` branches tried per surviving state
+and `MAX_FRONTIER_STATES=8` states carried into the next turn - with **state deduplication**: two
+branches reaching an identical `(lands, battlefield, hand, life, command_zone)` signature are
+merged, so equivalent lines are never re-explored. Measured cost: ~21 lines/hand on average (far
+below the ~400-line worst case, because dedup collapses many priority-variant branches that
+happen to reach the same board state) at ~280 hands/sec - a 20,000-hand run now takes about a
+minute. `policy_realized` is still the exact single default-greedy line, reported alongside
+`best_known_achievable` exactly as before (unchanged contract). Validated against the prior
+T1-only search: T2/T3 achievable-vs-realized gaps grew as expected (e.g. `t3_tymna_supported`'s
+gap widened from 6.2pp to 9.4pp on a comparable sample), confirming the expansion finds real
+additional lines rather than just spending more cycles on equivalent ones.
 
-Proposed expansion for SOLO-003, **not yet implemented** (this checkpoint stops short of it,
-flagged as the next concrete build step once the trajectory metric definitions above are
-confirmed):
-- Alternate T2/T3 land choice, not just T1 — the highest-value addition, since SOLO-002R's own
-  gap analysis showed `t1_any_meaningful_development` had the largest achievable-vs-realized gap
-  (8.4pp), suggesting later-turn land sequencing may matter too.
-- Alternate fetch target (currently the fetch always takes the need-colors-scored best target -
-  trying the 2nd/3rd-best target when it changes what's castable next turn).
-- Alternate acceleration sequencing (which mana source pays for what, when several exist).
-- Alternate engine-vs-commander priority variants beyond the current 3 (e.g. a "tutor-first"
-  ordering, a "commander-never" ordering to isolate Tymna/Thrasios's true opportunity cost).
-- Tutor-timing variants (cast a tutor T1 vs. hold for T2 with more mana).
-- **State deduplication**: two lines that reach an identical (lands, battlefield, hand-set,
-  mana-available) tuple should be merged rather than re-explored — not yet implemented; without
-  it, expanding the branch factors above multiplies cost roughly geometrically. This is the
-  single most important addition needed before a 3-4x larger branching factor becomes affordable
-  at 100k+ scale.
-- Every metric this expanded search touches must keep reporting `policy_realized` alongside
-  `best_known_achievable` exactly as SOLO-002R already does (unchanged contract).
+Still not included (disclosed, real limitations, not oversights):
+- Alternate acceleration sequencing (which specific mana source pays for what, when several
+  untapped sources could each cover the same cost) - the payment search already picks
+  deterministically, not exhaustively, among equally-valid sources.
+- Tutor-timing variants (cast a tutor T1 vs. deliberately hold it for T2 with more mana) are not
+  a separate explored axis - the priority-order variants change *relative* casting order but
+  don't model "choose to pass with mana up."
+- The state-signature dedup does not track exact remaining library composition beyond "same
+  hand" (see achievable_search.py's docstring for the caveat and why it's judged acceptable for
+  a bounded, non-exhaustive search).
 
-## 6. Proposed initial paired land/mana ablations
+## 6. Proposed initial paired land/mana ablations (redesigned)
 
-Per the instruction not to cherry-pick a cut that makes an addition look favorable, and to run
-multiple variants when no neutral cut exists: this decklist has no obviously "free" cut (every
-nonland card was chosen for a reason), so the proposal below is **explicitly multiple candidate
-variants**, not one judgment call presented as neutral.
+**The first pass of this checkpoint proposed Smothering Tithe and Runic Armasaur as the cut
+candidates for every land-addition variant. That was a real methodological error, caught before
+any run was executed**: both cards are only "weak" in this project's own data because they're
+`TIER_C_STRUCTURALLY_INERT` — an artifact of the solo/no-opponent model, not a fact about the
+cards' real power level (both are perfectly good pod cards). Using them as the cut would have
+biased every "+1/+2 land" result upward for a reason that would evaporate the moment this same
+question was asked in a real pod context. **Redesigned below, with the biased candidates
+explicitly banned from consideration.**
 
-- **+1 land, variant A**: cut Smothering Tithe (Tier-C, one of the four cards this checkpoint
-  found to be structurally inert in a solo model — the least defensible cut *for this specific
-  solo-goldfish question*, though it would matter in a real pod).
-  Add a land, e.g. another WUBG-flexible untapped dual chosen for color-need balance.
-- **+1 land, variant B**: cut Runic Armasaur (also structurally inert here, same caveat).
-- **+2 lands**: cut both Smothering Tithe and Runic Armasaur.
-- **+1 persistent accelerant**: add a second copy of an existing mana-dork *effect* is not legal
-  in a singleton deck, so this variant instead swaps a narrow/rarely-live card (candidate:
-  Nature's Rhythm, the deck's most situational tutor per SOLO-002R's tutor-target data) for a
-  proposed dork not currently in the list — deferred until a specific card is named, since
-  inventing a new card for a paired test needs the same real-card-data discipline as everything
-  else in this pipeline (no synthetic cards except the already-approved Part-E infrastructure
-  demo).
-- **+1 high-quality colored land / utility-land substitution**: candidate is swapping Exotic
-  Orchard (modeled as producing zero mana in this solo context, per SOLO-002R) for a real
-  colored dual — directly testable and arguably the least judgment-laden swap of the set, since
-  Exotic Orchard already contributes nothing to solo mana totals.
+**Banned from cut-candidacy for this specific question** (their apparent weakness is a modeling
+artifact, not a power-level fact — using any of them would repeat the exact error just described):
+Heartwood Storyteller, Runic Armasaur, Archivist of Oghma, Smothering Tithe, Delney Streetwise
+Lookout (all `TIER_C_STRUCTURALLY_INERT` or combat-dependent), and **Exotic Orchard** (its "zero
+mana in solo" modeling is the same class of artifact — Exotic Orchard is a strong land in a real
+pod with diverse opponent manabases; cutting it *because our model can't see that value* would be
+the identical bias applied to a land instead of a spell).
+
+**Redesigned priority order, least biased first:**
+
+1. **Land-for-land quality swaps (primary, lowest bias risk)** — the cleanest way to isolate "does
+   more/better mana help" without touching action density (tutor/engine/interaction count) at
+   all. Candidate: swap one of the narrow-ability Legendary utility lands (Boseiju/Minamo/
+   Otawara/Talon Gates of Madara/Starting Town - each a modal, situational land whose ability is
+   independent of opponent count) for a land that reliably taps for a needed color every turn.
+   This tests mana *reliability* in complete isolation from the nonland-card-cut problem above,
+   since no spell slot changes at all.
+2. **+1 / +2 land via nonland cut, restricted to solo-and-pod-independent weakness evidence** —
+   candidates limited to cards whose narrowness is a fact about the card's own design, not about
+   opponent-absence: Sowing Mycospawn and Crop Rotation (both land-only tutors — the narrowest
+   target class in SOLO-002R's own tutor-target-accessibility data, a fact true in any seat count)
+   and Nature's Rhythm (the deck's most situational tutor by the same data). Run as **separate,
+   non-competing variants** rather than one chosen "representative" cut - report each on its own,
+   consistent with the multi-variant discipline already used elsewhere in this project. Every
+   variant still carries real judgment risk (this project has no exhaustive pod-power model for
+   any card) and that risk is disclosed in each run's `ablation_justification`, not hidden by
+   picking only one.
+3. **+1 persistent accelerant** — deferred until a specific real card is named for the swap (no
+   synthetic cards outside the already-approved Part-E infrastructure demo), using the same
+   land-only-tutor cut candidates from (2) as the donor slot if pursued.
 
 All variants use the existing `run_paired_comparison.py` harness (seed-matched, real Oracle-text
 card data, `basics_substituted`/`ablation_justification` provenance fields) - no new
