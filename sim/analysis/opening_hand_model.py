@@ -75,6 +75,17 @@ def parse_cost(mana_cost_str):
     return generic, pips, x_count
 
 
+def card_colors(name, cards):
+    """A card's color, derived from the mana symbols in its own printed mana cost - the correct
+    rules basis for card color (barring color-indicator/devoid cases, none of which are present
+    in this decklist). Used by the alternate-cost interaction model (pitch/sacrifice colors)."""
+    gen, pips, x = parse_cost(cards[name]["mana_cost"])
+    colors = set()
+    for p in pips:
+        colors |= (p if isinstance(p, frozenset) else {p})
+    return colors
+
+
 # ---- land / mana source model ------------------------------------------
 
 LAND_COLOR_SETS = {
@@ -181,6 +192,62 @@ ENGINES = {
     "Thrasios, Triton Hero": "commander_engine",
 }
 PREMIUM_ONE_DROP_ENGINES = {"Mystic Remora", "Esper Sentinel"}
+
+# ---- SIM-001 SOLO-003 engine taxonomy: NOT all ENGINES entries contribute equally to
+# "any_engine_active" or similar broad metrics. A card can belong to more than one tier (Birthing
+# Pod/Survival of the Fittest are both infrastructure AND conversion; Gaea's Cradle is both
+# infrastructure AND mana development) - tier membership drives which SOLO-003 trajectory metrics
+# a card counts toward, it does not replace the existing ENGINES/TUTORS/ACCELERATION
+# classifications SOLO-002R already relies on.
+#
+# A. Primary early card-advantage engines - tracked INDIVIDUALLY by exact card, never collapsed
+#    into one interchangeable "engine" label (Remora/Sentinel/Rhystic/Sylvan are materially
+#    different: different mana cost, different color, different downside/upside shape).
+ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE = {
+    "Mystic Remora", "Esper Sentinel", "Rhystic Study", "Sylvan Library",
+}
+# B. High-leverage infrastructure engines - functionality is CONDITIONAL on supporting board
+#    state, not merely presence (Cradle needs creatures; Training Grounds needs a creature with
+#    a relevant activated ability - notably Thrasios's own {4} activation, reduced to {2} while
+#    Training Grounds is in play; Pod/Survival need a legal sacrifice/discard target).
+ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE = {
+    "Survival of the Fittest", "Birthing Pod", "Kinnan, Bonder Prodigy",
+    "Gaea's Cradle", "Training Grounds",
+}
+# C. Conditional/contextual value engines - only actually productive when their specific
+#    condition is supported (Tymna needs an attacker; Faerie Mastermind/Heartwood
+#    Storyteller/Runic Armasaur/Archivist of Oghma/Delney trigger off specific board actions;
+#    Smothering Tithe/Deathrite Shaman are structurally near-dead in a solo/no-opponent,
+#    graveyard-ability-unmodeled context respectively - flagged, not silently dropped).
+ENGINE_TIER_C_CONDITIONAL_VALUE = {
+    "Tymna the Weaver", "Faerie Mastermind", "Heartwood Storyteller", "Runic Armasaur",
+    "Archivist of Oghma", "Delney, Streetwise Lookout", "Smothering Tithe", "Deathrite Shaman",
+}
+# D. Mana/development infrastructure - does NOT count as card-advantage merely by being present;
+#    contributes to trajectories by accelerating stronger subsequent actions instead.
+ENGINE_TIER_D_MANA_DEVELOPMENT = set(ACCELERATION) | {"Gaea's Cradle"}
+# E. Tutor/conversion infrastructure - measured by CURRENT conversion ability (see
+#    interaction_model.py / trajectory_metrics.py), not mere presence. TUTORS is already defined
+#    above this point in the file.
+ENGINE_TIER_E_TUTOR_CONVERSION = set(TUTORS)
+
+ENGINE_TIERS = {}
+for _name in (ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE | ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE
+              | ENGINE_TIER_C_CONDITIONAL_VALUE | ENGINE_TIER_D_MANA_DEVELOPMENT
+              | ENGINE_TIER_E_TUTOR_CONVERSION):
+    tiers = set()
+    if _name in ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE:
+        tiers.add("A")
+    if _name in ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE:
+        tiers.add("B")
+    if _name in ENGINE_TIER_C_CONDITIONAL_VALUE:
+        tiers.add("C")
+    if _name in ENGINE_TIER_D_MANA_DEVELOPMENT:
+        tiers.add("D")
+    if _name in ENGINE_TIER_E_TUTOR_CONVERSION:
+        tiers.add("E")
+    ENGINE_TIERS[_name] = tiers
+del _name
 
 COMMANDERS = {
     "Tymna the Weaver": {"cost": "{1}{W}{B}"},

@@ -26,6 +26,7 @@ from opening_hand_model import (
     MANA_SOURCES, ACCELERATION, TUTORS, INTERACTION_CASTABLE, ENGINES,
     PREMIUM_ONE_DROP_ENGINES, COMMANDERS,
 )
+from interaction_model import resolve_interaction_cast, commit_interaction_cast
 
 DEFAULT_PRIORITY = ["free_accel", "paid_accel", "premium_engine", "commander", "engine", "tutor", "interaction"]
 
@@ -96,6 +97,7 @@ class HandState:
         self.turn_start_mana = 0
         self.turn_start_colors = set()
         self.command_zone = set(COMMANDERS.keys())
+        self.pact_of_negation_obligations = []  # SOLO-003: tracked, not enforced - see interaction_model.py
         _setup_gemstone_caverns(self)
 
     # ---- turn transitions ----
@@ -483,7 +485,18 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
             if not castable:
                 continue
             best = None
+            best_interaction_resolution = None
             for c in castable:
+                if cls == "interaction":
+                    # SOLO-003: real alternate-cost interaction model - resolve_interaction_cast
+                    # tries mana payment first, then a real alt cost (pitch/sac/free), instead of
+                    # only ever checking the printed mana cost.
+                    resolution = resolve_interaction_cast(c, state, cards)
+                    if resolution is not None:
+                        best = (c, None, None, None)
+                        best_interaction_resolution = resolution
+                        break
+                    continue
                 cost_str = COMMANDERS[c]["cost"] if cls == "commander" else cards[c]["mana_cost"]
                 gen, pips, x = parse_cost(cost_str)
                 if x > 0:
@@ -498,6 +511,29 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
                     break
             if best:
                 c, gen, pips, plan = best
+                if cls == "interaction":
+                    kind, payload = best_interaction_resolution
+                    state.hand.remove(c)
+                    if kind == "mana":
+                        _commit_payment(state, payload)
+                    # always run the non-mana side effects too (pitch/sac apply only for their
+                    # own kind; Pact of Negation's deferred-obligation tracking must fire
+                    # regardless of payment path, since Pact's normal path IS the "mana" kind -
+                    # its printed cost is already {0}).
+                    commit_interaction_cast(c, best_interaction_resolution, state)
+                    if kind == "mana" and "Creature" in cards[c]["type"]:
+                        # hardcast Subtlety/Endurance (the deck's only creature-typed
+                        # interaction, both Evoke incarnations): stays as a real permanent.
+                        state.nonland_perms.append(Perm(c, state.turn, True))
+                    else:
+                        # every true Instant, plus an EVOKED Subtlety/Endurance (real Oracle
+                        # rule: an evoked permanent enters, then its controller immediately
+                        # sacrifices it as part of resolving the evoke ability) - graveyard.
+                        state.graveyard.append(c)
+                    actions.append(("cast", c, "interaction"))
+                    state.cast_log.append((state.turn, c, "interaction"))
+                    changed = True
+                    break
                 if cls == "commander":
                     state.command_zone.discard(c)
                     state.nonland_perms.append(Perm(c, state.turn, True))

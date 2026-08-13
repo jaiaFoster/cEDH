@@ -30,6 +30,7 @@ from opening_hand_model import (
     load_deterministic_combos,
 )
 from opening_hand_policy import is_currently_castable, can_pay_jointly, _try_pay, _commit_payment, _rollback_payment
+from interaction_model import interaction_is_live
 
 THRASIOS_ACTIVATION_COST = "{4}"
 POD_ACTIVATION_COST = "{1}{G/P}"
@@ -74,18 +75,20 @@ def snapshot_metrics(state, cards, combos):
     m["two_plus_engines_active"] = len(active_engines) >= 2
 
     # "Retained interaction" is inherently a residual question - given whatever the policy
-    # ACTUALLY did this turn, is there still enough real mana left to also cast an interaction
-    # card? Checked live against current remaining untapped sources (is_currently_castable),
-    # never against the turn's full starting capacity.
+    # ACTUALLY did this turn, is there still enough real mana AND/OR a real alternate cost
+    # (pitch/sacrifice/commander-gated-free) left to also cast an interaction card? SOLO-003:
+    # uses interaction_is_live() (interaction_model.py), the real alternate-cost model, not just
+    # a plain mana-cost check - Force of Will/Fierce Guardianship/etc. are only premium BECAUSE
+    # of their alternate costs, so checking printed mana cost alone understated this metric.
     turn_hand = set(state.hand) | {n for (t, n, c) in state.cast_log if t == state.turn}
     interaction_candidates = sorted(n for n in turn_hand if n in INTERACTION_CASTABLE)
-    live_interaction = []
-    for n in interaction_candidates:
-        gen, pips, x = parse_cost(cards[n]["mana_cost"])
-        if x == 0 and is_currently_castable(state, gen, pips):
-            live_interaction.append(n)
+    live_interaction = [n for n in interaction_candidates if interaction_is_live(n, state, cards)]
     m["live_interaction"] = live_interaction
     m["has_live_interaction"] = len(live_interaction) > 0
+    m["free_or_alt_cost_interaction_live"] = any(
+        n for n in live_interaction
+        if not is_currently_castable(state, *parse_cost(cards[n]["mana_cost"])[:2])
+    )
     # Now a TRUE joint statement, not an approximation: any_engine_active reflects a real sunk
     # deployment (mana already spent for real), and has_live_interaction is checked against what
     # is genuinely still untapped after that - their conjunction is a correct joint fact.
