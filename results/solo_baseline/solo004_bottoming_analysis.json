@@ -1,0 +1,1291 @@
+{
+  "profile": "BALANCED",
+  "seat": "play",
+  "seed": 42,
+  "bottom_1": {
+    "n_bottom": 1,
+    "sample_count": 3000,
+    "profile": "BALANCED",
+    "seat": "play",
+    "heuristic_agreement_rate": 0.16866666666666666,
+    "heuristic_near_optimal_rate": 0.35133333333333333,
+    "near_optimal_epsilon": 0.01,
+    "mean_score_gap_search_minus_heuristic": 0.04114166666666665,
+    "mean_score_gap_when_disagreeing": 0.04948877305533278,
+    "disagreement_rate": 0.8313333333333334,
+    "bottomed_card_class_distribution": {
+      "interaction": 0.227,
+      "land": 0.20366666666666666,
+      "tutor": 0.18933333333333333,
+      "acceleration": 0.14866666666666667,
+      "other": 0.117,
+      "engine": 0.10666666666666667,
+      "premium_engine": 0.007666666666666666
+    },
+    "bottomed_card_class_by_opening_land_count": {
+      "1": {
+        "interaction": 0.23736780258519388,
+        "tutor": 0.20329024676850763,
+        "acceleration": 0.14806110458284372,
+        "land": 0.13513513513513514,
+        "other": 0.13278495887191538,
+        "engine": 0.13043478260869565,
+        "premium_engine": 0.012925969447708578
+      },
+      "2": {
+        "interaction": 0.23855165069222578,
+        "land": 0.20979765708200213,
+        "tutor": 0.18849840255591055,
+        "acceleration": 0.14057507987220447,
+        "other": 0.11075612353567625,
+        "engine": 0.10969116080937168,
+        "premium_engine": 0.002129925452609159
+      },
+      "0": {
+        "interaction": 0.2564102564102564,
+        "acceleration": 0.21153846153846154,
+        "tutor": 0.1955128205128205,
+        "other": 0.1891025641025641,
+        "engine": 0.11538461538461539,
+        "premium_engine": 0.03205128205128205
+      },
+      "3": {
+        "land": 0.319935691318328,
+        "interaction": 0.20257234726688103,
+        "tutor": 0.1720257234726688,
+        "acceleration": 0.1382636655948553,
+        "other": 0.08681672025723473,
+        "engine": 0.08038585209003216
+      },
+      "4": {
+        "land": 0.33185840707964603,
+        "tutor": 0.1902654867256637,
+        "interaction": 0.1902654867256637,
+        "acceleration": 0.13274336283185842,
+        "other": 0.084070796460177,
+        "engine": 0.07079646017699115
+      },
+      "5": {
+        "land": 0.47619047619047616,
+        "tutor": 0.14285714285714285,
+        "interaction": 0.11904761904761904,
+        "acceleration": 0.11904761904761904,
+        "engine": 0.09523809523809523,
+        "other": 0.047619047619047616
+      },
+      "6": {
+        "land": 0.625,
+        "interaction": 0.125,
+        "tutor": 0.125,
+        "acceleration": 0.125
+      }
+    },
+    "representative_disagreement_examples": [
+      {
+        "hand": [
+          "Swift Reconfiguration",
+          "Mox Amber",
+          "Nature's Rhythm",
+          "Chord of Calling",
+          "Fierce Guardianship",
+          "Elvish Spirit Guide",
+          "Ancient Tomb"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "Ancient Tomb"
+        ],
+        "search_optimal_score": 0.2975,
+        "heuristic_bottom": [
+          "Swift Reconfiguration"
+        ],
+        "heuristic_score": 0.2075,
+        "gap": 0.09
+      },
+      {
+        "hand": [
+          "City of Brass",
+          "Shang-Chi, Master of Kung Fu",
+          "Gemstone Caverns",
+          "Deathrite Shaman",
+          "Commandeer",
+          "Mental Misstep",
+          "Chrome Mox"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Commandeer"
+        ],
+        "search_optimal_score": 0.28,
+        "heuristic_bottom": [
+          "Shang-Chi, Master of Kung Fu"
+        ],
+        "heuristic_score": 0.23,
+        "gap": 0.05000000000000002
+      },
+      {
+        "hand": [
+          "Underground Sea",
+          "Devoted Druid",
+          "Mana Confluence",
+          "Commandeer",
+          "Subtlety",
+          "Voice of Victory",
+          "Sylvan Library"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Underground Sea"
+        ],
+        "search_optimal_score": 0.38,
+        "heuristic_bottom": [
+          "Voice of Victory"
+        ],
+        "heuristic_score": 0.17250000000000001,
+        "gap": 0.2075
+      },
+      {
+        "hand": [
+          "Imperial Seal",
+          "Veil of Summer",
+          "Mental Misstep",
+          "Voice of Victory",
+          "Gilded Drake",
+          "Deathrite Shaman",
+          "Sylvan Library"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Sylvan Library"
+        ],
+        "search_optimal_score": 0.4125,
+        "heuristic_bottom": [
+          "Voice of Victory"
+        ],
+        "heuristic_score": 0.3625,
+        "gap": 0.04999999999999999
+      },
+      {
+        "hand": [
+          "Subtlety",
+          "Tropical Island",
+          "Mindbreak Trap",
+          "Gaea's Cradle",
+          "Spellseeker",
+          "Lotus Petal",
+          "Verdant Catacombs"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Tropical Island"
+        ],
+        "search_optimal_score": 0.2725,
+        "heuristic_bottom": [
+          "Subtlety"
+        ],
+        "heuristic_score": 0.2275,
+        "gap": 0.04500000000000001
+      },
+      {
+        "hand": [
+          "Windswept Heath",
+          "Demonic Tutor",
+          "Orcish Bowmasters",
+          "Polluted Delta",
+          "Veil of Summer",
+          "Flusterstorm",
+          "Mystic Remora"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Windswept Heath"
+        ],
+        "search_optimal_score": 0.37250000000000005,
+        "heuristic_bottom": [
+          "Orcish Bowmasters"
+        ],
+        "heuristic_score": 0.3425,
+        "gap": 0.030000000000000027
+      },
+      {
+        "hand": [
+          "Finale of Devastation",
+          "Elvish Spirit Guide",
+          "Misdirection",
+          "Fierce Guardianship",
+          "Oboro Breezecaller",
+          "Smothering Tithe",
+          "Volatile Stormdrake"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Smothering Tithe"
+        ],
+        "search_optimal_score": 0.1675,
+        "heuristic_bottom": [
+          "Oboro Breezecaller"
+        ],
+        "heuristic_score": 0.08000000000000002,
+        "gap": 0.0875
+      },
+      {
+        "hand": [
+          "Volatile Stormdrake",
+          "Deathrite Shaman",
+          "Ranger-Captain of Eos",
+          "Rhystic Study",
+          "Marsh Flats",
+          "Commandeer",
+          "Tundra"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Commandeer"
+        ],
+        "search_optimal_score": 0.25,
+        "heuristic_bottom": [
+          "Volatile Stormdrake"
+        ],
+        "heuristic_score": 0.2,
+        "gap": 0.04999999999999999
+      },
+      {
+        "hand": [
+          "Esper Sentinel",
+          "Shang-Chi, Master of Kung Fu",
+          "Boseiju, Who Endures",
+          "Wooded Foothills",
+          "Sol Ring",
+          "Sowing Mycospawn",
+          "Training Grounds"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Boseiju, Who Endures"
+        ],
+        "search_optimal_score": 0.475,
+        "heuristic_bottom": [
+          "Shang-Chi, Master of Kung Fu"
+        ],
+        "heuristic_score": 0.44499999999999995,
+        "gap": 0.030000000000000027
+      },
+      {
+        "hand": [
+          "Mana Confluence",
+          "Underground Sea",
+          "Polluted Delta",
+          "Eldritch Evolution",
+          "Mystic Remora",
+          "Kinnan, Bonder Prodigy",
+          "Delney, Streetwise Lookout"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Eldritch Evolution"
+        ],
+        "search_optimal_score": 0.465,
+        "heuristic_bottom": [
+          "Mana Confluence"
+        ],
+        "heuristic_score": 0.43000000000000005,
+        "gap": 0.034999999999999976
+      },
+      {
+        "hand": [
+          "Hazel's Brewmaster",
+          "Colossal Skyturtle",
+          "Otawara, Soaring City",
+          "Avacyn's Pilgrim",
+          "Gilded Drake",
+          "Delney, Streetwise Lookout",
+          "Exotic Orchard"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Delney, Streetwise Lookout"
+        ],
+        "search_optimal_score": 0.135,
+        "heuristic_bottom": [
+          "Hazel's Brewmaster"
+        ],
+        "heuristic_score": 0.085,
+        "gap": 0.05
+      },
+      {
+        "hand": [
+          "Force of Negation",
+          "Chrome Mox",
+          "Abhorrent Oculus",
+          "Flusterstorm",
+          "Windswept Heath",
+          "Bayou",
+          "Flooded Strand"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Flusterstorm"
+        ],
+        "search_optimal_score": 0.4075,
+        "heuristic_bottom": [
+          "Abhorrent Oculus"
+        ],
+        "heuristic_score": 0.255,
+        "gap": 0.15249999999999997
+      },
+      {
+        "hand": [
+          "Savannah",
+          "Voice of Victory",
+          "Starting Town",
+          "Scrubland",
+          "Birthing Pod",
+          "Fierce Guardianship",
+          "Silence"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Savannah"
+        ],
+        "search_optimal_score": 0.3225,
+        "heuristic_bottom": [
+          "Voice of Victory"
+        ],
+        "heuristic_score": 0.17250000000000001,
+        "gap": 0.15
+      },
+      {
+        "hand": [
+          "Fierce Guardianship",
+          "Noble Hierarch",
+          "Otawara, Soaring City",
+          "Talon Gates of Madara",
+          "Demonic Tutor",
+          "Spellseeker",
+          "Archivist of Oghma"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Demonic Tutor"
+        ],
+        "search_optimal_score": 0.22,
+        "heuristic_bottom": [
+          "Fierce Guardianship"
+        ],
+        "heuristic_score": 0.185,
+        "gap": 0.035
+      },
+      {
+        "hand": [
+          "Mental Misstep",
+          "Elvish Spirit Guide",
+          "Rhystic Study",
+          "Sol Ring",
+          "Minamo, School at Water's Edge",
+          "Imperial Seal",
+          "Wooded Foothills"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Elvish Spirit Guide"
+        ],
+        "search_optimal_score": 0.57,
+        "heuristic_bottom": [
+          "Mental Misstep"
+        ],
+        "heuristic_score": 0.51,
+        "gap": 0.05999999999999994
+      }
+    ]
+  },
+  "bottom_2": {
+    "n_bottom": 2,
+    "sample_count": 2000,
+    "profile": "BALANCED",
+    "seat": "play",
+    "heuristic_agreement_rate": 0.061,
+    "heuristic_near_optimal_rate": 0.214,
+    "near_optimal_epsilon": 0.01,
+    "mean_score_gap_search_minus_heuristic": 0.06496500000000002,
+    "mean_score_gap_when_disagreeing": 0.06918530351437702,
+    "disagreement_rate": 0.9390000000000001,
+    "bottomed_card_class_distribution": {
+      "tutor": 0.21175,
+      "interaction": 0.2045,
+      "land": 0.20425,
+      "engine": 0.1285,
+      "other": 0.12725,
+      "acceleration": 0.117,
+      "premium_engine": 0.00675
+    },
+    "bottomed_card_class_by_opening_land_count": {
+      "1": {
+        "tutor": 0.24379432624113476,
+        "interaction": 0.22429078014184398,
+        "engine": 0.15602836879432624,
+        "other": 0.13386524822695037,
+        "acceleration": 0.12677304964539007,
+        "land": 0.10283687943262411,
+        "premium_engine": 0.012411347517730497
+      },
+      "2": {
+        "tutor": 0.23083067092651757,
+        "interaction": 0.21166134185303515,
+        "land": 0.19249201277955272,
+        "other": 0.12619808306709265,
+        "engine": 0.12060702875399361,
+        "acceleration": 0.11581469648562301,
+        "premium_engine": 0.0023961661341853034
+      },
+      "0": {
+        "interaction": 0.25227272727272726,
+        "tutor": 0.22045454545454546,
+        "engine": 0.17272727272727273,
+        "other": 0.16590909090909092,
+        "acceleration": 0.16590909090909092,
+        "premium_engine": 0.022727272727272728
+      },
+      "3": {
+        "land": 0.3382352941176471,
+        "interaction": 0.17524509803921567,
+        "tutor": 0.15808823529411764,
+        "other": 0.12009803921568628,
+        "engine": 0.10416666666666667,
+        "acceleration": 0.10416666666666667
+      },
+      "4": {
+        "land": 0.4594594594594595,
+        "tutor": 0.16891891891891891,
+        "interaction": 0.14189189189189189,
+        "other": 0.09121621621621621,
+        "engine": 0.07094594594594594,
+        "acceleration": 0.06756756756756757
+      },
+      "5": {
+        "land": 0.6785714285714286,
+        "tutor": 0.10714285714285714,
+        "engine": 0.08928571428571429,
+        "interaction": 0.05357142857142857,
+        "other": 0.03571428571428571,
+        "acceleration": 0.03571428571428571
+      },
+      "6": {
+        "land": 0.8333333333333334,
+        "interaction": 0.08333333333333333,
+        "tutor": 0.08333333333333333
+      }
+    },
+    "representative_disagreement_examples": [
+      {
+        "hand": [
+          "Swift Reconfiguration",
+          "Mox Amber",
+          "Nature's Rhythm",
+          "Chord of Calling",
+          "Fierce Guardianship",
+          "Elvish Spirit Guide",
+          "Ancient Tomb"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "Mox Amber",
+          "Ancient Tomb"
+        ],
+        "search_optimal_score": 0.2975,
+        "heuristic_bottom": [
+          "Swift Reconfiguration",
+          "Fierce Guardianship"
+        ],
+        "heuristic_score": 0.1875,
+        "gap": 0.10999999999999999
+      },
+      {
+        "hand": [
+          "Sol Ring",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Pact of Negation",
+          "Silence",
+          "Wooded Foothills",
+          "Finale of Devastation",
+          "Chord of Calling"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Silence"
+        ],
+        "search_optimal_score": 0.2475,
+        "heuristic_bottom": [
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Pact of Negation"
+        ],
+        "heuristic_score": 0.1875,
+        "gap": 0.06
+      },
+      {
+        "hand": [
+          "Underground Sea",
+          "Devoted Druid",
+          "Mana Confluence",
+          "Commandeer",
+          "Subtlety",
+          "Voice of Victory",
+          "Sylvan Library"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Underground Sea",
+          "Commandeer"
+        ],
+        "search_optimal_score": 0.345,
+        "heuristic_bottom": [
+          "Voice of Victory",
+          "Commandeer"
+        ],
+        "heuristic_score": 0.1875,
+        "gap": 0.15749999999999997
+      },
+      {
+        "hand": [
+          "Imperial Seal",
+          "Veil of Summer",
+          "Mental Misstep",
+          "Voice of Victory",
+          "Gilded Drake",
+          "Deathrite Shaman",
+          "Sylvan Library"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Imperial Seal",
+          "Sylvan Library"
+        ],
+        "search_optimal_score": 0.39749999999999996,
+        "heuristic_bottom": [
+          "Voice of Victory",
+          "Gilded Drake"
+        ],
+        "heuristic_score": 0.34750000000000003,
+        "gap": 0.04999999999999993
+      },
+      {
+        "hand": [
+          "Windswept Heath",
+          "Demonic Tutor",
+          "Orcish Bowmasters",
+          "Polluted Delta",
+          "Veil of Summer",
+          "Flusterstorm",
+          "Mystic Remora"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Demonic Tutor",
+          "Orcish Bowmasters"
+        ],
+        "search_optimal_score": 0.465,
+        "heuristic_bottom": [
+          "Orcish Bowmasters",
+          "Veil of Summer"
+        ],
+        "heuristic_score": 0.3425,
+        "gap": 0.1225
+      },
+      {
+        "hand": [
+          "Finale of Devastation",
+          "Elvish Spirit Guide",
+          "Misdirection",
+          "Fierce Guardianship",
+          "Oboro Breezecaller",
+          "Smothering Tithe",
+          "Volatile Stormdrake"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Misdirection",
+          "Smothering Tithe"
+        ],
+        "search_optimal_score": 0.1575,
+        "heuristic_bottom": [
+          "Oboro Breezecaller",
+          "Volatile Stormdrake"
+        ],
+        "heuristic_score": 0.07,
+        "gap": 0.0875
+      },
+      {
+        "hand": [
+          "Devoted Druid",
+          "Subtlety",
+          "Polluted Delta",
+          "Abhorrent Oculus",
+          "Mana Vault",
+          "Delighted Halfling",
+          "Command Tower"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Subtlety",
+          "Mana Vault"
+        ],
+        "search_optimal_score": 0.2325,
+        "heuristic_bottom": [
+          "Abhorrent Oculus",
+          "Subtlety"
+        ],
+        "heuristic_score": 0.20750000000000002,
+        "gap": 0.024999999999999994
+      },
+      {
+        "hand": [
+          "Eldritch Evolution",
+          "Veil of Summer",
+          "Esper Sentinel",
+          "Gaea's Cradle",
+          "Enlightened Tutor",
+          "Delney, Streetwise Lookout",
+          "Avacyn's Pilgrim"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "Veil of Summer",
+          "Gaea's Cradle"
+        ],
+        "search_optimal_score": 0.41,
+        "heuristic_bottom": [
+          "Veil of Summer",
+          "Avacyn's Pilgrim"
+        ],
+        "heuristic_score": 0.1,
+        "gap": 0.30999999999999994
+      },
+      {
+        "hand": [
+          "Esper Sentinel",
+          "Shang-Chi, Master of Kung Fu",
+          "Boseiju, Who Endures",
+          "Wooded Foothills",
+          "Sol Ring",
+          "Sowing Mycospawn",
+          "Training Grounds"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Shang-Chi, Master of Kung Fu",
+          "Boseiju, Who Endures"
+        ],
+        "search_optimal_score": 0.45999999999999996,
+        "heuristic_bottom": [
+          "Shang-Chi, Master of Kung Fu",
+          "Training Grounds"
+        ],
+        "heuristic_score": 0.43000000000000005,
+        "gap": 0.029999999999999916
+      },
+      {
+        "hand": [
+          "Mana Confluence",
+          "Underground Sea",
+          "Polluted Delta",
+          "Eldritch Evolution",
+          "Mystic Remora",
+          "Kinnan, Bonder Prodigy",
+          "Delney, Streetwise Lookout"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Eldritch Evolution",
+          "Delney, Streetwise Lookout"
+        ],
+        "search_optimal_score": 0.45,
+        "heuristic_bottom": [
+          "Mana Confluence",
+          "Underground Sea"
+        ],
+        "heuristic_score": 0.4075,
+        "gap": 0.04250000000000004
+      },
+      {
+        "hand": [
+          "Avacyn's Pilgrim",
+          "Enlightened Tutor",
+          "Rhystic Study",
+          "Shifting Woodland",
+          "Swan Song",
+          "Mental Misstep",
+          "Starting Town"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Enlightened Tutor",
+          "Rhystic Study"
+        ],
+        "search_optimal_score": 0.44,
+        "heuristic_bottom": [
+          "Swan Song",
+          "Mental Misstep"
+        ],
+        "heuristic_score": 0.365,
+        "gap": 0.07500000000000001
+      },
+      {
+        "hand": [
+          "Mana Vault",
+          "Sowing Mycospawn",
+          "Abhorrent Oculus",
+          "Volatile Stormdrake",
+          "Veil of Summer",
+          "Marsh Flats",
+          "Birds of Paradise"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "Sowing Mycospawn",
+          "Birds of Paradise"
+        ],
+        "search_optimal_score": 0.40750000000000003,
+        "heuristic_bottom": [
+          "Abhorrent Oculus",
+          "Volatile Stormdrake"
+        ],
+        "heuristic_score": 0.1825,
+        "gap": 0.22500000000000003
+      },
+      {
+        "hand": [
+          "Hazel's Brewmaster",
+          "Colossal Skyturtle",
+          "Otawara, Soaring City",
+          "Avacyn's Pilgrim",
+          "Gilded Drake",
+          "Delney, Streetwise Lookout",
+          "Exotic Orchard"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Otawara, Soaring City",
+          "Delney, Streetwise Lookout"
+        ],
+        "search_optimal_score": 0.135,
+        "heuristic_bottom": [
+          "Hazel's Brewmaster",
+          "Colossal Skyturtle"
+        ],
+        "heuristic_score": 0.07,
+        "gap": 0.065
+      },
+      {
+        "hand": [
+          "Heartwood Storyteller",
+          "Flare of Denial",
+          "Oboro Breezecaller",
+          "Gleaming Splendor",
+          "Windswept Heath",
+          "Volatile Stormdrake",
+          "Ancient Tomb"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Heartwood Storyteller",
+          "Flare of Denial"
+        ],
+        "search_optimal_score": 0.35750000000000004,
+        "heuristic_bottom": [
+          "Oboro Breezecaller",
+          "Gleaming Splendor"
+        ],
+        "heuristic_score": 0.14750000000000002,
+        "gap": 0.21000000000000002
+      },
+      {
+        "hand": [
+          "Savannah",
+          "Voice of Victory",
+          "Starting Town",
+          "Scrubland",
+          "Birthing Pod",
+          "Fierce Guardianship",
+          "Silence"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Savannah",
+          "Silence"
+        ],
+        "search_optimal_score": 0.3225,
+        "heuristic_bottom": [
+          "Voice of Victory",
+          "Fierce Guardianship"
+        ],
+        "heuristic_score": 0.12250000000000001,
+        "gap": 0.2
+      }
+    ]
+  },
+  "bottom_3": {
+    "n_bottom": 3,
+    "sample_count": 800,
+    "profile": "BALANCED",
+    "seat": "play",
+    "heuristic_agreement_rate": 0.04625,
+    "heuristic_near_optimal_rate": 0.15125,
+    "near_optimal_epsilon": 0.01,
+    "mean_score_gap_search_minus_heuristic": 0.0854281249999999,
+    "mean_score_gap_when_disagreeing": 0.0895707732634337,
+    "disagreement_rate": 0.95375,
+    "bottomed_card_class_distribution": {
+      "tutor": 0.21458333333333332,
+      "land": 0.20458333333333334,
+      "interaction": 0.18375,
+      "other": 0.16333333333333333,
+      "engine": 0.12791666666666668,
+      "acceleration": 0.10166666666666667,
+      "premium_engine": 0.004166666666666667
+    },
+    "bottomed_card_class_by_opening_land_count": {
+      "1": {
+        "tutor": 0.25499231950844853,
+        "interaction": 0.21658986175115208,
+        "other": 0.16897081413210446,
+        "engine": 0.1490015360983103,
+        "acceleration": 0.11059907834101383,
+        "land": 0.09062980030721966,
+        "premium_engine": 0.009216589861751152
+      },
+      "2": {
+        "tutor": 0.23751686909581646,
+        "interaction": 0.19163292847503374,
+        "other": 0.18218623481781376,
+        "land": 0.1632928475033738,
+        "engine": 0.11740890688259109,
+        "acceleration": 0.10526315789473684,
+        "premium_engine": 0.002699055330634278
+      },
+      "0": {
+        "interaction": 0.23333333333333334,
+        "tutor": 0.2111111111111111,
+        "engine": 0.2037037037037037,
+        "other": 0.1925925925925926,
+        "acceleration": 0.15185185185185185,
+        "premium_engine": 0.007407407407407408
+      },
+      "3": {
+        "land": 0.3581780538302277,
+        "tutor": 0.15320910973084886,
+        "other": 0.14699792960662525,
+        "interaction": 0.14492753623188406,
+        "engine": 0.10973084886128365,
+        "acceleration": 0.08695652173913043
+      },
+      "4": {
+        "land": 0.5147058823529411,
+        "tutor": 0.17647058823529413,
+        "interaction": 0.10294117647058823,
+        "other": 0.09803921568627451,
+        "engine": 0.06372549019607843,
+        "acceleration": 0.04411764705882353
+      },
+      "5": {
+        "land": 0.6190476190476191,
+        "tutor": 0.11904761904761904,
+        "other": 0.09523809523809523,
+        "interaction": 0.07142857142857142,
+        "engine": 0.047619047619047616,
+        "acceleration": 0.047619047619047616
+      },
+      "6": {
+        "land": 0.7777777777777778,
+        "interaction": 0.1111111111111111,
+        "tutor": 0.1111111111111111
+      }
+    },
+    "representative_disagreement_examples": [
+      {
+        "hand": [
+          "Swift Reconfiguration",
+          "Mox Amber",
+          "Nature's Rhythm",
+          "Chord of Calling",
+          "Fierce Guardianship",
+          "Elvish Spirit Guide",
+          "Ancient Tomb"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "Swift Reconfiguration",
+          "Mox Amber",
+          "Ancient Tomb"
+        ],
+        "search_optimal_score": 0.2825,
+        "heuristic_bottom": [
+          "Swift Reconfiguration",
+          "Fierce Guardianship",
+          "Mox Amber"
+        ],
+        "heuristic_score": 0.1875,
+        "gap": 0.09499999999999997
+      },
+      {
+        "hand": [
+          "City of Brass",
+          "Shang-Chi, Master of Kung Fu",
+          "Gemstone Caverns",
+          "Deathrite Shaman",
+          "Commandeer",
+          "Mental Misstep",
+          "Chrome Mox"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Shang-Chi, Master of Kung Fu",
+          "Gemstone Caverns",
+          "Deathrite Shaman"
+        ],
+        "search_optimal_score": 0.27,
+        "heuristic_bottom": [
+          "Shang-Chi, Master of Kung Fu",
+          "Commandeer",
+          "Mental Misstep"
+        ],
+        "heuristic_score": 0.24,
+        "gap": 0.030000000000000027
+      },
+      {
+        "hand": [
+          "Avacyn's Pilgrim",
+          "Shang-Chi, Master of Kung Fu",
+          "Polluted Delta",
+          "Exotic Orchard",
+          "Finale of Devastation",
+          "Enduring Vitality",
+          "Gemstone Caverns"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Shang-Chi, Master of Kung Fu",
+          "Exotic Orchard",
+          "Finale of Devastation"
+        ],
+        "search_optimal_score": 0.16749999999999998,
+        "heuristic_bottom": [
+          "Shang-Chi, Master of Kung Fu",
+          "Enduring Vitality",
+          "Avacyn's Pilgrim"
+        ],
+        "heuristic_score": 0.13749999999999998,
+        "gap": 0.03
+      },
+      {
+        "hand": [
+          "Sol Ring",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Pact of Negation",
+          "Silence",
+          "Wooded Foothills",
+          "Finale of Devastation",
+          "Chord of Calling"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Silence",
+          "Finale of Devastation"
+        ],
+        "search_optimal_score": 0.2325,
+        "heuristic_bottom": [
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Pact of Negation",
+          "Silence"
+        ],
+        "heuristic_score": 0.17250000000000001,
+        "gap": 0.06
+      },
+      {
+        "hand": [
+          "Underground Sea",
+          "Devoted Druid",
+          "Mana Confluence",
+          "Commandeer",
+          "Subtlety",
+          "Voice of Victory",
+          "Sylvan Library"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Underground Sea",
+          "Commandeer",
+          "Subtlety"
+        ],
+        "search_optimal_score": 0.38,
+        "heuristic_bottom": [
+          "Voice of Victory",
+          "Commandeer",
+          "Subtlety"
+        ],
+        "heuristic_score": 0.17250000000000001,
+        "gap": 0.2075
+      },
+      {
+        "hand": [
+          "Imperial Seal",
+          "Veil of Summer",
+          "Mental Misstep",
+          "Voice of Victory",
+          "Gilded Drake",
+          "Deathrite Shaman",
+          "Sylvan Library"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Imperial Seal",
+          "Veil of Summer",
+          "Sylvan Library"
+        ],
+        "search_optimal_score": 0.38249999999999995,
+        "heuristic_bottom": [
+          "Voice of Victory",
+          "Gilded Drake",
+          "Veil of Summer"
+        ],
+        "heuristic_score": 0.3325,
+        "gap": 0.04999999999999993
+      },
+      {
+        "hand": [
+          "Demonic Tutor",
+          "Eldritch Evolution",
+          "Mana Vault",
+          "Mox Diamond",
+          "Pact of Negation",
+          "Clever Impersonator",
+          "Orcish Bowmasters"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Demonic Tutor",
+          "Eldritch Evolution",
+          "Mox Diamond"
+        ],
+        "search_optimal_score": 0.2075,
+        "heuristic_bottom": [
+          "Clever Impersonator",
+          "Orcish Bowmasters",
+          "Pact of Negation"
+        ],
+        "heuristic_score": 0.1825,
+        "gap": 0.024999999999999994
+      },
+      {
+        "hand": [
+          "Windswept Heath",
+          "Demonic Tutor",
+          "Orcish Bowmasters",
+          "Polluted Delta",
+          "Veil of Summer",
+          "Flusterstorm",
+          "Mystic Remora"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Demonic Tutor",
+          "Orcish Bowmasters",
+          "Veil of Summer"
+        ],
+        "search_optimal_score": 0.465,
+        "heuristic_bottom": [
+          "Orcish Bowmasters",
+          "Veil of Summer",
+          "Flusterstorm"
+        ],
+        "heuristic_score": 0.3425,
+        "gap": 0.1225
+      },
+      {
+        "hand": [
+          "Pact of Negation",
+          "Marsh Flats",
+          "Windswept Heath",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Faerie Mastermind",
+          "City of Traitors",
+          "Runic Armasaur"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Marsh Flats",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Faerie Mastermind"
+        ],
+        "search_optimal_score": 0.1975,
+        "heuristic_bottom": [
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Pact of Negation",
+          "Marsh Flats"
+        ],
+        "heuristic_score": 0.1675,
+        "gap": 0.03
+      },
+      {
+        "hand": [
+          "Finale of Devastation",
+          "Elvish Spirit Guide",
+          "Misdirection",
+          "Fierce Guardianship",
+          "Oboro Breezecaller",
+          "Smothering Tithe",
+          "Volatile Stormdrake"
+        ],
+        "land_count": 0,
+        "search_optimal_bottom": [
+          "Finale of Devastation",
+          "Misdirection",
+          "Smothering Tithe"
+        ],
+        "search_optimal_score": 0.14250000000000002,
+        "heuristic_bottom": [
+          "Oboro Breezecaller",
+          "Volatile Stormdrake",
+          "Misdirection"
+        ],
+        "heuristic_score": 0.05500000000000001,
+        "gap": 0.08750000000000001
+      },
+      {
+        "hand": [
+          "Volatile Stormdrake",
+          "Deathrite Shaman",
+          "Ranger-Captain of Eos",
+          "Rhystic Study",
+          "Marsh Flats",
+          "Commandeer",
+          "Tundra"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Volatile Stormdrake",
+          "Ranger-Captain of Eos",
+          "Commandeer"
+        ],
+        "search_optimal_score": 0.22,
+        "heuristic_bottom": [
+          "Volatile Stormdrake",
+          "Commandeer",
+          "Marsh Flats"
+        ],
+        "heuristic_score": 0.085,
+        "gap": 0.135
+      },
+      {
+        "hand": [
+          "Devoted Druid",
+          "Subtlety",
+          "Polluted Delta",
+          "Abhorrent Oculus",
+          "Mana Vault",
+          "Delighted Halfling",
+          "Command Tower"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Subtlety",
+          "Delighted Halfling",
+          "Command Tower"
+        ],
+        "search_optimal_score": 0.24250000000000002,
+        "heuristic_bottom": [
+          "Abhorrent Oculus",
+          "Subtlety",
+          "Devoted Druid"
+        ],
+        "heuristic_score": 0.1575,
+        "gap": 0.08500000000000002
+      },
+      {
+        "hand": [
+          "Eldritch Evolution",
+          "Veil of Summer",
+          "Esper Sentinel",
+          "Gaea's Cradle",
+          "Enlightened Tutor",
+          "Delney, Streetwise Lookout",
+          "Avacyn's Pilgrim"
+        ],
+        "land_count": 1,
+        "search_optimal_bottom": [
+          "Eldritch Evolution",
+          "Veil of Summer",
+          "Gaea's Cradle"
+        ],
+        "search_optimal_score": 0.39499999999999996,
+        "heuristic_bottom": [
+          "Veil of Summer",
+          "Avacyn's Pilgrim",
+          "Eldritch Evolution"
+        ],
+        "heuristic_score": 0.085,
+        "gap": 0.30999999999999994
+      },
+      {
+        "hand": [
+          "Mana Confluence",
+          "Underground Sea",
+          "Polluted Delta",
+          "Eldritch Evolution",
+          "Mystic Remora",
+          "Kinnan, Bonder Prodigy",
+          "Delney, Streetwise Lookout"
+        ],
+        "land_count": 3,
+        "search_optimal_bottom": [
+          "Mana Confluence",
+          "Eldritch Evolution",
+          "Delney, Streetwise Lookout"
+        ],
+        "search_optimal_score": 0.45,
+        "heuristic_bottom": [
+          "Mana Confluence",
+          "Underground Sea",
+          "Polluted Delta"
+        ],
+        "heuristic_score": 0.085,
+        "gap": 0.365
+      },
+      {
+        "hand": [
+          "Avacyn's Pilgrim",
+          "Enlightened Tutor",
+          "Rhystic Study",
+          "Shifting Woodland",
+          "Swan Song",
+          "Mental Misstep",
+          "Starting Town"
+        ],
+        "land_count": 2,
+        "search_optimal_bottom": [
+          "Enlightened Tutor",
+          "Rhystic Study",
+          "Shifting Woodland"
+        ],
+        "search_optimal_score": 0.44,
+        "heuristic_bottom": [
+          "Swan Song",
+          "Mental Misstep",
+          "Avacyn's Pilgrim"
+        ],
+        "heuristic_score": 0.2925,
+        "gap": 0.14750000000000002
+      }
+    ]
+  },
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false
+}

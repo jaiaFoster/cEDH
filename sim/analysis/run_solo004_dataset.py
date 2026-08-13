@@ -69,15 +69,16 @@ def _new_outcome_fields(state, m1, m2, m3, t3s, comp):
     }
 
 
-def run_one_hand(names, rng, cards, combos, on_play, run_achievable, max_turn=3):
-    lib = names[:]
-    rng.shuffle(lib)
-    hand = lib[:7]
-    lib_after_deal = lib[7:]
+def simulate_hand_outcome(hand, library, on_play, cards, combos, run_achievable=False, max_turn=3):
+    """Everything from run_one_hand() that doesn't depend on HOW the hand/library were arrived
+    at - i.e. the part that's reusable for a London-mulligan-bottomed hand, not just a fresh
+    keep-everything deal. `library` is assumed to already be in real draw order (index 0 = next
+    card) - a bottoming search passes `library_after_deal + bottomed_cards` here, exactly
+    matching real London mulligan mechanics (bottomed cards go to the bottom in whatever relative
+    order, the rest of the library keeps its prior order - no reshuffle)."""
+    raw = raw_hand_features(hand, library, cards)
 
-    raw = raw_hand_features(hand, lib_after_deal, cards)
-
-    state = HandState(hand, lib_after_deal, on_play=on_play, rng=rng, cards=cards)
+    state = HandState(hand, library, on_play=on_play, rng=random.Random(0), cards=cards)
     snaps = {}
     for t in range(1, max_turn + 1):
         develop_turn(state, cards, priority_order=DEFAULT_PRIORITY)
@@ -123,13 +124,21 @@ def run_one_hand(names, rng, cards, combos, on_play, run_achievable, max_turn=3)
 
     if run_achievable:
         policy_realized, best_known, lines = compute_policy_realized_and_best_known_achievable(
-            hand, lib_after_deal, on_play, cards, combos, max_turn=max_turn
+            hand, library, on_play, cards, combos, max_turn=max_turn
         )
         row.update({f"achv_realized__{k}": v for k, v in policy_realized.items()})
         row.update({f"achv_best_known__{k}": v for k, v in best_known.items()})
         row["achv_lines_explored"] = lines
 
     return row
+
+
+def run_one_hand(names, rng, cards, combos, on_play, run_achievable, max_turn=3):
+    lib = names[:]
+    rng.shuffle(lib)
+    hand = lib[:7]
+    lib_after_deal = lib[7:]
+    return simulate_hand_outcome(hand, lib_after_deal, on_play, cards, combos, run_achievable, max_turn)
 
 
 def main():
