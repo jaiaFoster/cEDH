@@ -1,0 +1,95 @@
+{
+  "accel_2plus_by_destination": {
+    "accel_with_tutor_reaching_engine": {
+      "n": 1282,
+      "tier_distribution": {
+        "B": 0.1396,
+        "D": 0.092,
+        "A": 0.4072,
+        "C": 0.1864,
+        "F": 0.1154,
+        "S": 0.0593
+      },
+      "fraction_tier_S_or_A": 0.4665,
+      "fraction_tier_D_or_F": 0.2075
+    },
+    "accel_with_no_destination": {
+      "n": 1632,
+      "tier_distribution": {
+        "C": 0.19,
+        "B": 0.1863,
+        "D": 0.1066,
+        "A": 0.4301,
+        "F": 0.0735,
+        "S": 0.0135
+      },
+      "fraction_tier_S_or_A": 0.4436,
+      "fraction_tier_D_or_F": 0.1801
+    },
+    "accel_with_engine_in_hand": {
+      "n": 4080,
+      "tier_distribution": {
+        "F": 0.126,
+        "A": 0.3828,
+        "C": 0.1995,
+        "B": 0.165,
+        "D": 0.0647,
+        "S": 0.062
+      },
+      "fraction_tier_S_or_A": 0.4449,
+      "fraction_tier_D_or_F": 0.1907
+    }
+  },
+  "accel_with_no_destination_split": {
+    "commander_rescued": {
+      "n": 1132,
+      "tier_distribution": {
+        "C": 0.2041,
+        "B": 0.2482,
+        "A": 0.5477
+      },
+      "fraction_tier_S_or_A": 0.5477,
+      "fraction_tier_D_or_F": 0.0
+    },
+    "truly_stranded_no_commander_either": {
+      "n": 500,
+      "tier_distribution": {
+        "D": 0.348,
+        "A": 0.164,
+        "F": 0.24,
+        "S": 0.044,
+        "C": 0.158,
+        "B": 0.046
+      },
+      "fraction_tier_S_or_A": 0.208,
+      "fraction_tier_D_or_F": 0.588
+    }
+  },
+  "accel_2plus_overall": {
+    "n": 6994,
+    "tier_distribution": {
+      "B": 0.1653,
+      "D": 0.0795,
+      "C": 0.1949,
+      "F": 0.1118,
+      "A": 0.3983,
+      "S": 0.0502
+    },
+    "fraction_tier_S_or_A": 0.4485,
+    "fraction_tier_D_or_F": 0.1913
+  },
+  "accel_lt2_overall": {
+    "n": 23006,
+    "tier_distribution": {
+      "C": 0.3239,
+      "A": 0.3313,
+      "F": 0.1334,
+      "B": 0.0611,
+      "S": 0.1008,
+      "D": 0.0496
+    },
+    "fraction_tier_S_or_A": 0.4321,
+    "fraction_tier_D_or_F": 0.183
+  },
+  "note": "If accel_with_no_destination's fraction_tier_D_or_F is close to (or worse than) accel_lt2_overall's, that confirms 2+ acceleration alone (with no engine in hand and no tutor reaching one) is NOT predictive of a good trajectory, validating MULL-005's removal of the blanket '2+ acceleration = snap keep' rule for the no-destination case."
+}
