@@ -1,0 +1,21 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_005R_TRAJECTORY_DATASET_CORRECTED",
+  "regression_gate": "results/solo_baseline/mull005r_regression_gate.json (OPEN_FOR_PRODUCTION_RERUN, verified before this run)",
+  "sample_count": 15000,
+  "seed": 1006,
+  "seat": "draw",
+  "on_play": false,
+  "elapsed_seconds": 101.62160420417786,
+  "hands_per_second": 147.60640827773236,
+  "dataset_file": "/home/user/cEDH/results/solo_baseline/mull005r_trajectory_dataset_draw.jsonl.gz"
+}
