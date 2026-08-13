@@ -26,15 +26,32 @@ search now covers five distinct mechanism families, not just hand/library-top tu
   5. Crop Rotation's own land-target search (Gaea's Cradle, the deck's single highest-value
      alternate land target).
 
+MULL-006 (t1_t3_trajectory_audit.json / assignment section 2 - "alternate fetch-target search
+before using the machine policy as a reference evaluator"): a 6th family, alternate fetchland
+targets. MULL-005R disclosed a real gap here (found via the top-25/holdout-audit work): a fetch's
+crack target was ALWAYS chosen by develop_turn's own greedy need-colors-scored land-drop heuristic,
+never branched by this search - so a hand whose ONLY route to a premium color (e.g. Mystic Remora's
+U) ran through a specific fetch target that the greedy heuristic didn't prefer (because a different
+target enabled an immediate lower-priority cast that turn) could be misjudged as unable to reach
+that engine at all. Family 6 forces each fetchland actually in the OPENING HAND to search for each
+of its real legal targets (by the fetch's actual printed basic types, via
+FETCH_LAND_TARGET_TYPES/DUAL_LAND_BASIC_TYPES - never an assumed color pair) still present in the
+library, reusing develop_turn's existing `forced_fetch_target` plumbing (already built for
+achievable_search.py, previously never wired into this module).
+
 Still deliberately NOT exhaustive - trying every one of ~90 library cards as a target per hand
-would be intractable at any real sample size. Each family is bounded to a small, disclosed
-candidate set, consistent with this project's established practice (achievable_search.py's own
-land/fetch/priority branching is similarly bounded, not exhaustive).
+would be intractable at any real sample size, and family 6 only branches ONE fetch's target at a
+time (holding every other turn's choices at the greedy default), not the full joint combination
+across multiple fetches in the same hand (a BOUNDED_SEARCH_LOWER_BOUND limitation, disclosed, not
+claimed exhaustive). Each family is bounded to a small, disclosed candidate set, consistent with
+this project's established practice (achievable_search.py's own land/fetch/priority branching is
+similarly bounded, not exhaustive).
 """
 import random
 
 from opening_hand_model import (
     ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE, CRADLE, TUTORS, PREMIUM_ONE_DROP_ENGINES,
+    FETCH_LANDS, FETCH_LAND_TARGET_TYPES, DUAL_LAND_BASIC_TYPES,
 )
 from opening_hand_policy import HandState, develop_turn, DEFAULT_PRIORITY, OCULUS_NAME
 from opening_hand_metrics import snapshot_metrics
@@ -68,7 +85,7 @@ LAND_TUTOR_TARGET_CANDIDATES = [CRADLE]
 
 def _simulate(hand, library, on_play, cards, combos, priority_order=DEFAULT_PRIORITY,
               forced_tutor_target=None, forced_pod_activation=None, forced_survival_activations=None,
-              forced_battlefield_tutor=None, forced_land_tutor=None, max_turn=3):
+              forced_battlefield_tutor=None, forced_land_tutor=None, forced_fetch_target=None, max_turn=3):
     state = HandState(list(hand), list(library), on_play=on_play, rng=random.Random(0), cards=cards)
     snaps = {}
     for t in range(1, max_turn + 1):
@@ -76,6 +93,7 @@ def _simulate(hand, library, on_play, cards, combos, priority_order=DEFAULT_PRIO
             state, cards, priority_order=priority_order, forced_tutor_target=forced_tutor_target,
             forced_pod_activation=forced_pod_activation, forced_survival_activations=forced_survival_activations,
             forced_battlefield_tutor=forced_battlefield_tutor, forced_land_tutor=forced_land_tutor,
+            forced_fetch_target=forced_fetch_target,
         )
         snaps[t] = snapshot_metrics(state, cards, combos)
     return state, snaps.get(1), snaps.get(2), snaps.get(3)
@@ -155,6 +173,26 @@ def _candidate_configs(hand, library, cards):
             if target not in library:
                 continue
             yield (f"land_tutor:{tutor_name}->{target}", {"forced_land_tutor": (tutor_name, target)})
+
+    # ---- family 6: alternate fetchland targets (MULL-006 section 2) ---------------------------
+    # Only fetches actually IN THE OPENING HAND - a fetch that might be drawn later is already
+    # covered by the greedy line's own in-the-moment choice when it's drawn, same as every other
+    # card this search doesn't specifically branch on. Each candidate forces ONE fetch's target;
+    # every other turn's land/fetch choice still uses develop_turn's own greedy heuristic (a
+    # disclosed, bounded, non-joint search - see module docstring).
+    seen_fetch_targets = set()
+    for fetch_name in sorted(set(hand) & FETCH_LANDS):
+        types_wanted = FETCH_LAND_TARGET_TYPES.get(fetch_name, frozenset())
+        legal_targets = sorted(
+            name for name, types in DUAL_LAND_BASIC_TYPES.items()
+            if (types & types_wanted) and name in library
+        )
+        for target in legal_targets:
+            key = (fetch_name, target)
+            if key in seen_fetch_targets:
+                continue
+            seen_fetch_targets.add(key)
+            yield (f"fetch:{fetch_name}->{target}", {"forced_fetch_target": target})
 
 
 def find_best_trajectory(hand, library, on_play, cards, combos):

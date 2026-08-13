@@ -1,0 +1,399 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_FETCH_BRANCHING_VALIDATION",
+  "sample_count": 5000,
+  "seed": 6001,
+  "seat": "play",
+  "keep_tier_threshold_size7": "C",
+  "hands_with_at_least_one_fetch_candidate": 2067,
+  "hands_with_fetch_candidate_rate": 0.4134,
+  "best_trajectory_changed_count": 414,
+  "best_trajectory_changed_rate": 0.0828,
+  "best_trajectory_changed_rate_among_hands_with_fetch_candidates": 0.2003,
+  "mulligan_decision_changed_count": 167,
+  "mulligan_decision_changed_rate": 0.0334,
+  "computational_cost": {
+    "elapsed_seconds_total": 60.56156849861145,
+    "avg_candidates_tried_with_fetch_family": 14.893,
+    "avg_candidates_tried_without_fetch_family": 12.715,
+    "avg_extra_candidates_from_fetch_family": 2.178
+  },
+  "remaining_bounded_search_limitations": [
+    "Family 6 only branches ONE fetch's target at a time per candidate, holding every other turn's land/fetch/tutor choice at the greedy default - NOT the full joint combination across multiple fetches in the same hand (BOUNDED_SEARCH_LOWER_BOUND).",
+    "Family 6 only considers fetches actually present in the OPENING HAND, not a fetch drawn on a later turn within the T1-T3 window.",
+    "The search still does not explore Kinnan/Cradle/other mana-doubling interactions jointly with fetch-target choice.",
+    "No other bounded family (tutor targets, Pod/Survival activations, battlefield tutors) has yet been cross-branched WITH fetch-target alternatives in the same candidate (each family is still independent, not a joint product search)."
+  ],
+  "example_decision_flips": [
+    {
+      "hand": [
+        "Endurance",
+        "Gaea's Cradle",
+        "Pact of Negation",
+        "Scrubland",
+        "Training Grounds",
+        "Verdant Catacombs",
+        "Wooded Foothills"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Verdant Catacombs->Bayou",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Bayou",
+        "Chord of Calling",
+        "Endurance",
+        "Mental Misstep",
+        "Otawara, Soaring City",
+        "Voice of Victory",
+        "Windswept Heath"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Windswept Heath->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Devoted Druid",
+        "Enduring Vitality",
+        "Flooded Strand",
+        "Force of Negation",
+        "Misdirection",
+        "Starting Town"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Flooded Strand->Savannah",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Bayou",
+        "Boseiju, Who Endures",
+        "Flooded Strand",
+        "Hazel's Brewmaster",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mana Confluence",
+        "Mental Misstep"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Flooded Strand->Tropical Island",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Birthing Pod",
+        "Commandeer",
+        "Derevi, Empyrial Tactician",
+        "Eldritch Evolution",
+        "Flooded Strand",
+        "Hazel's Brewmaster",
+        "Shifting Woodland"
+      ],
+      "tier_before": "F",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Faerie Mastermind",
+      "search_label_after": "fetch:Flooded Strand->Tropical Island",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Marsh Flats",
+        "Minamo, School at Water's Edge",
+        "Spellseeker",
+        "Subtlety",
+        "Swift Reconfiguration",
+        "Talon Gates of Madara",
+        "Underground Sea"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Marsh Flats->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Gaea's Cradle",
+        "Imperial Seal",
+        "Mindbreak Trap",
+        "Mystic Remora",
+        "Nature's Rhythm",
+        "Polluted Delta"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "S",
+      "tier_engine_after": "Mystic Remora",
+      "search_label_after": "fetch:Polluted Delta->Tropical Island",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Ancient Tomb",
+        "Commandeer",
+        "Crop Rotation",
+        "Devoted Druid",
+        "Flare of Denial",
+        "Flusterstorm",
+        "Misty Rainforest"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "A",
+      "tier_engine_after": "Mystic Remora",
+      "search_label_after": "fetch:Misty Rainforest->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Chord of Calling",
+        "Enduring Vitality",
+        "Flare of Denial",
+        "Marsh Flats",
+        "Runic Armasaur",
+        "Savannah",
+        "Spellseeker"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Marsh Flats->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Commandeer",
+        "Mana Confluence",
+        "Marsh Flats",
+        "Orcish Bowmasters",
+        "Otawara, Soaring City",
+        "Shang-Chi, Master of Kung Fu",
+        "Silence"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Marsh Flats->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Boseiju, Who Endures",
+        "Crop Rotation",
+        "Flooded Strand",
+        "Misty Rainforest",
+        "Ranger-Captain of Eos",
+        "Tropical Island",
+        "Tundra"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Flooded Strand->Underground Sea",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "City of Traitors",
+        "Colossal Skyturtle",
+        "Flooded Strand",
+        "Kinnan, Bonder Prodigy",
+        "Misdirection",
+        "Mystic Remora",
+        "Voice of Victory"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "S",
+      "tier_engine_after": "Mystic Remora",
+      "search_label_after": "fetch:Flooded Strand->Tropical Island",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Finale of Devastation",
+        "Gaea's Cradle",
+        "Marsh Flats",
+        "Spellseeker",
+        "Subtlety",
+        "Survival of the Fittest",
+        "Veil of Summer"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Survival of the Fittest",
+      "search_label_after": "fetch:Marsh Flats->Savannah",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Ancient Tomb",
+        "Chord of Calling",
+        "Eldritch Evolution",
+        "Force of Will",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Polluted Delta",
+        "Shifting Woodland"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "A",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Polluted Delta->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Exotic Orchard",
+        "Force of Will",
+        "Runic Armasaur",
+        "Subtlety",
+        "Talon Gates of Madara",
+        "Veil of Summer",
+        "Verdant Catacombs"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Verdant Catacombs->Underground Sea",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Gemstone Caverns",
+        "Gleaming Splendor",
+        "Lotus Petal",
+        "Mox Diamond",
+        "Orcish Bowmasters",
+        "Rhystic Study",
+        "Verdant Catacombs"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Verdant Catacombs->Bayou",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Commandeer",
+        "Kinnan, Bonder Prodigy",
+        "Marsh Flats",
+        "Mox Amber",
+        "Mystic Remora",
+        "Rhystic Study",
+        "Spellseeker"
+      ],
+      "tier_before": "F",
+      "tier_engine_before": null,
+      "tier_after": "S",
+      "tier_engine_after": "Mystic Remora",
+      "search_label_after": "fetch:Marsh Flats->Tundra",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Delighted Halfling",
+        "Delney, Streetwise Lookout",
+        "Gemstone Caverns",
+        "Imperial Seal",
+        "Mana Vault",
+        "Verdant Catacombs"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Delney, Streetwise Lookout",
+      "search_label_after": "fetch:Verdant Catacombs->Scrubland",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Ancient Tomb",
+        "Clever Impersonator",
+        "Colossal Skyturtle",
+        "Esper Sentinel",
+        "Nature's Rhythm",
+        "Polluted Delta",
+        "Silence"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "S",
+      "tier_engine_after": "Esper Sentinel",
+      "search_label_after": "fetch:Polluted Delta->Scrubland",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    },
+    {
+      "hand": [
+        "Crop Rotation",
+        "Devoted Druid",
+        "Gemstone Caverns",
+        "Mana Confluence",
+        "Rhystic Study",
+        "Tropical Island",
+        "Verdant Catacombs"
+      ],
+      "tier_before": "D",
+      "tier_engine_before": null,
+      "tier_after": "C",
+      "tier_engine_after": "Thrasios, Triton Hero",
+      "search_label_after": "fetch:Verdant Catacombs->Savannah",
+      "decision_before": "MULLIGAN",
+      "decision_after": "KEEP"
+    }
+  ],
+  "note": "'best_trajectory_changed' compares (tier, tier_engine) with vs without family 6; a changed mulligan DECISION additionally requires crossing the keep/ship threshold at hand size 7 (mull005r_hand_size_thresholds.json, cost=1.0) - most tier changes do not cross that specific boundary, so the decision-changed rate is expected to be smaller than the trajectory-changed rate."
+}
