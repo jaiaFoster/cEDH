@@ -2086,3 +2086,323 @@ until that simulation exists. Deckbuilding ablations (SOLO-004's own stop condit
 standing) remain out of scope. The "premium one-drop castability" gap found during example
 generation (above) is real, quantified, and deliberately left for a future phase rather than folded
 in here as scope creep beyond the assignment's two named corrections.
+
+# SIM-001 MULL-005R — Trajectory Architecture Repair + Early-Game Destination Search
+
+## 1. Executive Summary
+
+MULL-005's own validation surfaced real gaps: the model was still too centered on conventional
+card-draw engines, treated Abhorrent Oculus and Birthing Pod as afterthoughts rather than
+first-class destinations, mismodeled Smothering Tithe and Mana Vault, used an arbitrarily small
+fixed tutor-target list, and — most consequentially — credited generic commander access as if it
+were a real mulligan destination. This phase re-audited all 98 cards' real Oracle text for T1-T3
+relevance (26 findings, `t1_t3_trajectory_audit.json`), rebuilt the scoring/search engine against
+that audit, proved every new mechanic with regression tests before any large-scale rerun (a
+29-item BLOCKING gate, `mull005r_regression_gate.json`, `OPEN_FOR_PRODUCTION_RERUN`), then reran
+the full production pipeline: a fresh 15,000-hand trajectory dataset per seat, destination and
+named-trajectory censuses, a top-25 opener report, re-derived hand-size thresholds, rebuilt
+TRAJECTORY_SIMPLE_R/TREE_R/MACHINE_R policies with a fresh London mulligan simulation, a holdout
+false-keep/false-mulligan audit, a true paired comparison against MULL-005 on identical dealt
+hands, an audited pod-conditioning overlay, and a regenerated primer example set.
+
+**The single largest, most consequential finding of this entire phase**: MULL-005's generic
+commander-access credit was extremely common. In a threshold-invariant paired comparison (tier
+composition alone, holding the keep/mulligan bar fixed at S/A/B for both models), **2,024 of
+15,000 hands (13.5%) drop out of a keep-worthy tier specifically because commander-access credit
+was removed** — by far the dominant single effect of this whole correction phase, larger than
+every genuine new-destination-understanding gain (Oculus, Pod, Survival, Tithe, dork chains, and
+Thrasios's own narrowed concrete-benefit credit) combined. MULL-005R is a more conservative,
+narrower, and — per every regression test and audit built to check it — more correct model of
+what this deck's openers actually accomplish.
+
+## 2. Subject, Provenance, and Regression Gate
+
+Subject: `tymna-thrasios-treefarm-v1`, hash
+`4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a` — verified unchanged from every
+prior phase (section 0's provenance check, no discrepancy). Oracle text for every finding below is
+pulled from `data/cards_cache/oracle-2026-08-12` for this exact deck, not recalled from general MTG
+knowledge.
+
+Per the assignment's own explicit ordering constraint ("do NOT begin the large-scale rerun until
+the trajectory audit and resulting model changes have been documented and regression-tested"), the
+audit (`t1_t3_trajectory_audit.json`) was committed first, engine corrections and their regression
+tests second, and only then was every large-scale artifact generated. The final regression gate
+(`mull005r_regression_gate.json`) explicitly enumerates 29 items — 10 PRESERVED SOLO-002R mana-
+correctness properties the assignment says must not regress, 19 NEW MULL-005R corrections — each
+naming the exact test(s) that prove it, all run by the gate script itself (not merely asserted):
+**29/29 pass, full suite 187 passed / 3 skipped, `gate_status: OPEN_FOR_PRODUCTION_RERUN`.** Two
+real engine bugs were found and fixed only by actually running the corrected engine at scale
+(a Survival-of-the-Fittest/Elvish-Spirit-Guide double-use crash, and a discarded-fodder tier-credit
+bug where a creature sacrificed to Survival could be misread as "cast" if its name also happened to
+be a premium destination) — both are now GATE-26/GATE-27, and a third systemic gap (the legacy
+`ENGINES` classification dict still crediting Tymna/Thrasios as generic engines one layer below the
+tier-grading fix) is GATE-28, found while auditing the pod-conditioning overlay.
+
+## 3. Governing Principle and Method Summary
+
+**KEEP TRAJECTORIES, NOT RESOURCES**, expanded this phase: what powerful game state can this opener
+legally establish, how early, what resources does that require, when does the resulting engine
+begin producing value, and what agency remains afterward? Trajectory tier (S/A/B/C/D/F) is graded
+per-hand from an actually-simulated T1-T3 line — either the single greedy `DEFAULT_PRIORITY` line,
+or the best of a **bounded** search over 5 candidate families (hand/library-top tutor targets, Pod
+activations, Survival activations, battlefield-creature tutors, battlefield-land tutors) — never a
+resource-presence count. Every correction below is grounded in real Oracle text and proven by a
+regression test before being trusted at scale, per this project's standing discipline.
+
+## 4. T1-T3 Trajectory Audit (26 findings)
+
+`t1_t3_trajectory_audit.json`: **19 VERIFIED, 1 REJECTED, 6 CANDIDATE** (deferred, disclosed —
+mechanically real but low-T1-T3-frequency or genuinely engine-risky to implement correctly this
+phase: Delighted Halfling's legendary-restricted color mana, Badgermole Cub's full mechanic,
+Enduring Vitality's creature-mana-ability grant, Shang-Chi's haste/restricted-mana synergies,
+Derevi/Clever-Impersonator doubling Pod activations, Chord of Calling's Convoke reduction). Key
+finding families: `OCULUS-001..006`, `POD-001..003`, `SURV-001`, `TITHE-001..002`, `REALIZE-001..
+002`, `DORK-001..005`, `CMDR-001..003`, `KINNAN-001`, `AGENCY-001`, `PREMIUM-001`, `COMBO-001`.
+
+## 5. Destination Family Corrections
+
+**Abhorrent Oculus** (`OCULUS-001..006`): real Oracle text is "As an ADDITIONAL cost to cast this
+spell, exile six cards from your graveyard" — never a realistic T1-T3 hard-cast in this deck.
+Enforced as permanently uncastable from hand (`uncastable_from_hand` classification, regression-
+tested), reachable ONLY via 5 verified "put onto the battlefield" search routes that bypass both
+mana cost and additional cost: Birthing Pod, Eldritch Evolution, Finale of Devastation, Nature's
+Rhythm, Chord of Calling. Graded as a first-class Tier A/B destination once actually on the
+battlefield (never merely found or in hand).
+
+**Birthing Pod** (`POD-001..003`): modeled as a real activated ability
+(`{1}{G/P}, T, Sacrifice a creature: search for a creature MV = sac's MV + 1, put it onto the
+battlefield`), state-aware (requires a genuine sacrificeable creature, not "Pod in play = online").
+Disclosed finding from the destination census: **the Pod-activation search family never won as the
+best-known trajectory in a 15,000-hand sample (0 occurrences)** — not a bug (the mechanism is fully
+regression-tested and provably reachable in targeted tests), but a real rarity finding: Pod's own
+board presence already earns generic Tier B/C credit before an explicit activation is attempted,
+and Pod's activation cost on top of its own `{3}{G/P}` cast is genuinely mana-heavy for a T1-T3
+window.
+
+**Survival of the Fittest**: modeled state-aware (requires a discardable creature card in hand,
+never "present = online"), reachable via a real activation search family. Appears as the
+`tier_engine` destination in 4.6% of the corrected dataset.
+
+**Smothering Tithe / Mana Vault** (`TITHE-001..002`): Tithe's "whenever an opponent draws a card"
+trigger is mechanically identical in opponent-dependence to Rhystic Study's "whenever an opponent
+casts a spell" — MULL-005 zeroed Tithe out entirely while crediting Rhystic Study on deployment
+alone, an inconsistency, not a principled distinction. Tithe is now promoted into
+`ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE` and credited identically. In the corrected dataset Tithe
+reaches Tier A 24 times per 15,000 hands where it previously reached Tier A zero times (see
+section 14's paired comparison).
+
+**T1 dorks** (`DORK-001..005`): MULL-005's "T1 dork → T2 engine is real" finding preserved, but
+each mana creature audited individually against exact Oracle text. Devoted Druid's real ceiling
+(2 mana/turn via its no-tap-symbol "-1/-1 counter: untap" ability, once not summoning sick) is now
+modeled — a genuine correction, not previously represented at all.
+
+**Kinnan, Bonder Prodigy** (`KINNAN-001`): confirmed never a standalone tier destination — it is
+purely a mana-doubling mechanism (already correctly modeled in `available_sources()`) crediting
+whatever OTHER destination it accelerates. Removed from `ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE`.
+
+## 6. Tutor Search Generalization
+
+MULL-005's six-hand-tutor-target bottleneck removed. `trajectory_search.py`'s bounded search now
+covers 5 mechanism families (hand/library-top tutor, Pod activation, Survival activation,
+battlefield-creature tutor, battlefield-land tutor), each with a disclosed candidate set — not
+exhaustive over the full ~90-card library, labeled `search_label` per result so every downstream
+artifact can distinguish `greedy` from a specific forced search family. Mana Vault is now included
+as a tutor target when legally tutorable. Dork-tutoring gets NO generic engine credit by design —
+only when it solves a specific bottleneck the search is actually exploring.
+
+## 7. Commander Credit Correction
+
+Per the pilot's explicit directive, Tymna the Weaver receives **zero positive mulligan credit
+anywhere** in trajectory grading (`CMDR-001`) — proven by regression test regardless of attack
+support. Thrasios, Triton Hero is credited ONLY for a concrete, specific benefit — enabling Mox
+Amber, turning Fierce Guardianship free, or genuine immediate `{4}`-activation productivity, always
+requiring Thrasios actually ON the battlefield, never merely castable (`CMDR-002`). The generic
+`commander_colors_plausible → keep` heuristic that MULL-005 still used as a Tier-A/A fallback in
+`structural_hand_grade()`'s acceleration rules was deleted.
+
+A **third, previously-undiscovered layer** of the same bias (`CMDR-003`) was found auditing the
+pod-conditioning overlay: an older, broader `ENGINES` classification dict (predating the tier-based
+corrections, feeding opener feature extraction and per-turn snapshot metrics) still listed both
+commanders as `"commander_engine"`, silently reintroducing commander-access credit one layer below
+where CMDR-001/002 were applied — concretely, a commander cast during the T1 feature-extraction
+simulation could contaminate `has_any_engine_card`/`any_engine_active`/`engine_count` fields several
+other modules read. Fixed by removing both commanders from that dict (Kinnan, a real castable
+permanent rather than a commander, deliberately left in).
+
+## 8. Retained Agency, Composite States, and Combo Proximity
+
+Per section 9's requirement, interaction stays secondary to the primary destination — never the
+keep reason alone — but a strong trajectory that retains relevant interaction is measurably better
+than one that consumes everything. `ENGINE_PLUS_LIVE_FREE_INTERACTION`/
+`ENGINE_PLUS_LIVE_PAID_INTERACTION` composite flags added to every graded trajectory's
+`resource_cost`, both strictly gated on `has_real_destination` so interaction-only hands (no
+engine) never set either flag. Verified combo proximity (`COMBO-001`) is wired in as an analogous
+upside modifier (`ENGINE_PLUS_VERIFIED_COMBO_PROXIMITY`, sourced entirely from the existing
+verified-combo registry, never a new speculative line) — `grade_trajectory()` never reads either
+flag, so neither composite can promote a hand's tier on its own, satisfying "upside modifier only,
+never the primary destination."
+
+## 9. Engine Realization Timing
+
+`engine_realization_analysis.json`: 16 ability entries across 15 cards, each with real Oracle text
+and four independent fields MULL-005 conflated into one "engine active" flag — realization
+mechanism, whether the trigger can fire on an opponent's turn (structural, from Oracle text alone),
+whether THIS solo model can ever simulate the value firing, and whether the current grading model
+credits it on deployment alone (a disclosed proxy) or requires an explicit support check. Central
+finding, generalizing TITHE-001: opponent-dependence alone does not predict credit — every Tier-A
+engine is opponent-triggered and unmeasurable, yet proxy-credited on deployment; Tier-C engines with
+identical opponent-dependence (Faerie Mastermind's passive, Archivist, Armasaur, Heartwood) get no
+such proxy, and four are zeroed out entirely regardless of board state.
+
+## 10. Large-Scale Results
+
+15,000-hand trajectory dataset per seat (`mull005r_trajectory_dataset_{play,draw}.jsonl.gz`).
+**Destination census** (`destination_census.json`, 10 mutually-exclusive families): `secondary_engine`
+36.6%, `no_premium_destination` 31.9%, `t2_other_premium_resource_engine` 12.3%,
+`exceptional_composite_state` 5.5%, `t1_resource_engine` 5.5%, `survival_online` 4.6%,
+`early_pod_online` 2.1%, `other_early_oculus` 1.4%, `t2_smothering_tithe` 0.2%,
+`pod_to_oculus` 0.0% (0/15,000 — the disclosed Pod-route rarity from section 5). **Named-trajectory
+census** (`named_trajectory_census.json`, ~20 multi-label tags): `no_destination_reached` 20.0%,
+`acceleration_rich_destination_poor` 7.6%, `tutor_to_t2_premium_engine` 4.8%,
+`survival_online` 4.9%, `t1_dork_to_t2_premium_engine` 3.1%, `t1_remora`/`t1_sentinel` ~2.9-3.0%
+each, down to the rarest confirmed-real routes (`finale_to_oculus`/`natures_rhythm_to_oculus`
+0.75% each). **Top-25 opener trajectories** (`top_25_opener_trajectories.json`): a fresh 3,000-hand
+sample deduplicated to one representative per (tier, tier_engine, mechanism) bucket so the 25 span
+the real range of destinations this deck reaches, each with `keep_at_{7,6,5}` recommendations from
+the re-derived thresholds (section 11).
+
+## 11. Hand-Size Policy Re-Derivation
+
+Re-tested (not hard-coded) against the corrected engine, fresh seed (`mull005r_hand_size_
+thresholds.json`). The corrected engine's expected tier value is measurably LOWER than MULL-005's
+at every hand size (7-card EV 1.25 vs 1.72 previously; Tier-A rate 11.6% vs 22.5%) — expected, since
+this greedy-only measurement (no bounded search, for tractability) no longer gets inflated Tier-A
+credit from generic commander access or color-blind premium-one-drops, and doesn't benefit from the
+new Pod/Oculus/Survival bounded-search routes (those only fire via the full search). At assumed
+mulligan cost 1.0: **keep-at-7 shifted from Tier B to Tier C**, keep-at-6 from Tier C to Tier D,
+keep-at-5 stays Tier D — a real, more mulligan-tolerant policy shift, reported plainly rather than
+smoothed over.
+
+## 12. Policy Rebuild and London Mulligan Simulation
+
+`trajectory_policies.py`'s `_load_thresholds()` now reads the re-derived thresholds, making
+`trajectory_simple_policy`/`structural_hand_grade` and `trajectory_machine_policy`
+TRAJECTORY_SIMPLE_R/MACHINE_R by construction. `TRAJECTORY_TREE_R` refit against the corrected
+15,000-hand dataset (AUC 0.806, holdout AUC 0.813, n=15,000, 64 features) — a materially different
+split structure, leading with `distinct_colors_potential`/`t1_accel_executable_now` rather than raw
+land/mana counts. Full London mulligan simulation, both seats, n=20,000 cheap-policy/1,500
+machine-policy (mean tier value, cost-1.0-adjusted):
+
+| Policy | Play | Draw |
+|---|---|---|
+| TRAJECTORY_MACHINE_R | 1.731 | 1.890 |
+| TRAJECTORY_SIMPLE_R | 1.452 | 1.704 |
+| TRAJECTORY_TREE_R | 1.436 | 1.675 |
+| SOLO004_SIMPLE_RULES | 1.313 | 1.593 |
+| SOLO004_TREE_DEPTH4 | 0.979 | 0.980 |
+
+MULL-005's central finding ("trajectory-first heuristics beat resource-first heuristics under one
+shared cost-adjusted metric") holds under the corrected engine on both seats — SOLO004_TREE_DEPTH4's
+high raw S/A rate is fully offset by aggressive over-mulliganing (avg final hand ~5.0-5.3 cards vs
+~6.6-6.8 for the trajectory policies) once mulligan cost is priced in at all.
+
+## 13. Holdout Validation (False-Keep / False-Mulligan Audit)
+
+Fresh holdout seed (unused by any prior artifact), TRAJECTORY_SIMPLE_R vs TRAJECTORY_MACHINE_R
+(ground truth), n=3,000: **precision=0.8197, recall=0.8724, false_keep_rate=0.4830,
+false_mulligan_rate=0.1276** — reported plainly, not accepted merely because recall looks
+reasonable, per the assignment's explicit instruction. All 686 disagreements classified by cause:
+`hand_size_threshold` (139/126 — the largest cluster, expected: borderline-tier hands at the
+keep/ship boundary), `premium_one_drop_rule` (128/12), `tutor_conversion` (35/60),
+`engine_realization_timing` (0/34), `retained_interaction` (21/10), `survival` (0/18),
+`oculus` (0/11), `unclassified` (75/2), `mana_without_payoff` (0/1), `pod` (0/0). Manual inspection
+of `premium_one_drop_rule` false-keeps surfaced a real, disclosed limitation in TRAJECTORY_MACHINE_R
+itself: the bounded search never explores ALTERNATE FETCHLAND TARGETS (a fetch's crack target is
+chosen by the greedy land-drop heuristic alone), so some of this cause's count reflects a
+machine-side search gap, not a SIMPLE-side rule error — documented so this cluster isn't mistaken
+for proof the premium-one-drop rule needs further tightening without a manual check.
+
+## 14. Paired Comparison Against MULL-005
+
+TRUE pairing (identical seed=42/n=15,000/deck, verified row-for-row identical opening hands via
+`random.Random.shuffle`'s single-call-per-hand guarantee) between MULL-005's committed grading and
+a fresh rerun of the exact same hands through the corrected engine. Reported at BOTH each dataset's
+own derived threshold (conflates tier-composition change with the threshold itself moving) and a
+fixed threshold (tier in {S,A,B} for both — isolates pure tier-composition change):
+
+- **Threshold-invariant**: 766 hands (5.1%) newly reach S/A/B; **2,482 (16.6%) drop out** —
+  dominated by `commander_access_removed` (2,024 of 2,482, 81.5%), confirming section 1's headline
+  finding. Newly-kept causes: `thrasios_concrete_benefit_understood` 249, `oculus_understood` 188,
+  `survival_understood` 109, `birthing_pod_generic_infra_credit_understood` 59,
+  `dork_to_engine_understood` 54, `tutor_to_mana_vault_to_engine_understood` 30,
+  `smothering_tithe_promoted` 19, `expanded_tutor_search_understood` 22, `other` 36 (4.7%, manually
+  spot-checked as minor mechanism-label variance, not a distinct new cause).
+- **Threshold-relative** (both models' own derived bar, B→C): 4,068 (27.1%) newly kept / 362 (2.4%)
+  newly shipped — mostly reflecting the bar itself moving down (section 11), not pure engine
+  understanding; reported separately and explicitly not to be cited as "X hands newly kept because
+  the model understands Y" (that claim belongs to the threshold-invariant numbers above).
+- Smothering Tithe's realization-timing promotion directly: tier distribution as `tier_engine`
+  moved from `{C: 55}` (old — never reached Tier A) to `{C: 60, A: 24}` (new — 24 hands now
+  correctly reach Tier A, identically to Rhystic Study/Mystic Remora).
+
+## 15. Pod-Conditioning Overlay and Primer Materials
+
+Per the assignment's explicit constraint, `pod_archetypes.py`'s own algorithm (ARCHETYPES/
+POD_MODIFIERS qualitative priors, the hard SHIP floor, the two mandatory confidence labels) is
+preserved unchanged — no full pod simulation was run, and `pod_confidence` remains
+`STRATEGIC_PRIOR_UNVALIDATED` on every archetype. What was audited and fixed is whether the
+overlay's real, simulated inputs are still correct under the corrected engine (the CMDR-003 fix,
+section 7). 6 new regression tests prove the hard SHIP floor holds for every named archetype
+(individually and all stacked together) under the corrected model, and that named worked examples
+(RogSi, Tayam) still behave per their disclosed qualitative priors.
+
+Primer example hands regenerated (`mull005r_annotated_examples.json`): 10 snap keeps, 10 ordinary
+keeps (CONDITIONAL_KEEP robust across every archetype), **9/10** pod-dependent keeps (a real,
+disclosed finding from an exhaustive 200,000-hand search, not a padded example — flipping a band
+requires a net ±2 pod modifier, which most single-archetype category overlaps don't reach), 10
+mulligans (demonstrating the hard SHIP floor explicitly per example), 10 misleading hands (SOLO-004
+resource-first vs trajectory-first disagreements confirmed correct by the bounded search). Primer
+quick-reference table rebuilt against the re-derived thresholds (`mull005r_primer_tables.json`,
+72 rows) — construction logic itself unchanged, per this section's own finding that the overlay
+needed no algorithmic correction.
+
+## 16. Key Conclusions, Scope Disclosures, and Limitations/Next Questions
+
+**Key conclusions:**
+1. The single largest correction this phase makes is removing commander-access credit — it was
+   the dominant driver of MULL-005's keep decisions, larger than every genuine destination-
+   understanding gain combined (section 14).
+2. Tithe/Rhystic/Remora/Sentinel are now scored consistently — all four are equally
+   unmeasurable-by-simulation opponent-triggered engines, and all four are proxy-credited
+   identically (section 9), closing a real, previously-arbitrary inconsistency.
+3. Oculus, Pod, and Survival are now real, first-class, state-aware destinations rather than
+   afterthoughts — but Pod's own activation search is disclosed as rare at natural T1-T3 frequency
+   (0/15,000), a genuine finding about this deck's mana curve, not a modeling failure.
+4. TRAJECTORY_SIMPLE_R still beats both SOLO-004 baselines under the corrected engine on both
+   seats (section 12), but its own precision/recall profile (0.82/0.87) is real and imperfect,
+   concentrated in specific, named, diagnosable causes (section 13) rather than uniform noise.
+5. The bounded trajectory search is disclosed as non-exhaustive in a NEW, specific way found this
+   phase: it never explores alternate fetchland targets (section 13) — a real scope limitation
+   layered onto the already-disclosed non-exhaustiveness of every other bounded-search family.
+
+**Scope disclosures** (unchanged from MULL-005, still standing): solo trajectory value is not
+multiplayer win rate; opponent-triggered engine productivity is a disclosed proxy, not a simulated
+fact; pod modifiers are strategic priors, never simulated; interaction value is understated by a
+solo model with no real opponent turns; T1-T3 optimization does not capture full-game consequences;
+hand-size cost has no single "true" figure from this simulator, reported as a sensitivity sweep;
+the bounded search is bounded, not exhaustive, and this phase found and disclosed a specific new
+instance of that (fetch-target alternatives) rather than assuming completeness.
+
+**Explicitly NOT run this phase**, per the assignment's stop condition: full 4-player matchup
+simulation against any named pod archetype (the pod overlay remains permanently
+`STRATEGIC_PRIOR_UNVALIDATED` until that exists); deckbuilding ablations (still out of scope from
+SOLO-004); exhaustive fetch-target search as a 6th bounded-search family (disclosed future work,
+section 13, not implemented — a real, scoped engineering decision, not an oversight).
+
+**Next questions**, for a future phase: (1) does adding alternate-fetch-target search meaningfully
+change the false_keep_rate attributed to `premium_one_drop_rule`? (2) does Pod's true T1-T3
+frequency change materially in a larger sample, or is 0/15,000 a stable structural fact about this
+mana curve? (3) would a land-count floor on the premium-one-drop SNAP_KEEP rule (this phase's
+holdout audit surfaced 1-land hands still unconditionally snap-keeping) measurably improve
+TRAJECTORY_SIMPLE_R's precision without materially hurting recall? (4) full 4-player pod-conditioned
+matchup simulation remains this project's largest genuinely unaddressed question.
