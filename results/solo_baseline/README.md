@@ -748,3 +748,273 @@ DECK_BACKED_GOLDFISH` provenance (`subject_deck_hash`, `subject_deck_card_count`
 `commander_identities`) per `docs/RUN_CLASSIFICATION.md`, and the original SOLO-002 files are
 marked `status: SUPERSEDED_PENDING_CORRECTNESS_RERUN` with a `superseded_by` pointer, retained
 for provenance, not deleted.
+
+---
+
+# SIM-001 SOLO-003 — Early-Game Trajectory & Mulligan Quality Audit (Part A: Trajectory Census)
+
+Builds on SOLO-002R's corrected mana/rules engine. Per the engagement's own central correction:
+**this section does not use "any engine active" or "Tymna supported" as headline success
+measures.** Every finding below is built from `sim/analysis/trajectory_metrics.py`'s velocity/
+compounding-advantage/agency/conversion metrics - see `results/solo_baseline/
+SOLO-003_CHECKPOINT.md` for the full engine-taxonomy, interaction-model, and failure-taxonomy
+design (revised per checkpoint review before this census ran). Same subject deck/hash as above.
+`run_class: DECK_BACKED_GOLDFISH` throughout.
+
+**Scale**: 100,000 hands on the play + 100,000 hands on the draw (keep-everything, no mulligan
+yet), ~76-80s each. A 15,000-hand bounded achievable-search supplement (T1-T3 land/fetch
+sequencing with state deduplication) ran separately, per established practice of using a smaller
+sample for the ~20x-more-expensive search pass.
+
+## A. What random sevens actually do (T1 → T2 → T3)
+
+| Metric | On the play | On the draw |
+|---|---|---|
+| T1: any Tier-A engine (Remora/Sentinel/Rhystic/Sylvan) cast | 6.3% | 7.1%\* |
+| T1: engine deployed (any tier) | 18.6% | - |
+| T1: live interaction | 22.8% | - |
+| T1: compound development (2+ of engine/mana-dev/interaction) | 19.4% | - |
+| T2: primary (Tier-A) engine online | 18.0% | - |
+| T2: infrastructure (Tier-B, *supported*) online | 4.5% | - |
+| T2: development + live interaction (real alt-cost model) | 2.0% | - |
+| T3: strong card-advantage state | 18.1% | 21.4% |
+| T3: strong mana state | 7.4% | 7.7% |
+| T3: strong conversion state (tutor live + reaches engine/combo) | 1.0% | 1.3% |
+| T3: strong interaction state | 5.5% | 6.7% |
+| T3: strong optionality (2+ strong states at once) | 2.5% | 3.4% |
+| T3: credible win pressure (deterministic or one-action-away) | 33.7% | 38.5% |
+| **T3: any strong state** | **49.9%** | **55.6%** |
+| T3: stalled | 45.3% | 39.9% |
+
+\* on-play numbers not independently re-quoted for T1 breakdown to save space - see the raw
+`solo003_trajectory_census_{play,draw}.json` files for full parity.
+
+The draw is uniformly stronger (extra card + a chance at Gemstone Caverns' real value), most
+visibly on strong card-advantage (+3.4pp) and credible win pressure (+4.8pp). Development +
+interaction is rare in absolute terms (~2%) even with the corrected real alternate-cost model -
+this deck's actual bottleneck (per SOLO-002R and confirmed again here) is mana, not interaction
+density, so "developed while holding up interaction" is inherently a high bar most hands don't
+clear by T3.
+
+## B. Most common strong/notable opening sequences (rule-based trajectory families)
+
+Top families by frequency (on the play, multi-label, see `trajectory_family_tags` in the
+checkpoint for the full rule set - explicitly a starting taxonomy, not a data-derived clustering):
+
+| Family | % of hands |
+|---|---|
+| `commander_conversion_hand` (a commander online with real productivity, not just presence) | 41.1% |
+| `genuinely_nonfunctional_hand` (no strong state AND <2 mana) | 36.0% |
+| `t1_accel_to_t2_commander` | 23.1% |
+| `creature_board_supports_cradle_chord_infrastructure` (3+ creatures) | 22.8% |
+| `t1_engine_hand` | 18.6% |
+| `deceptive_two_land_hand` (2 lands, no strong state) | 14.3% |
+| `strong_one_land_hand` (1 land, strong state anyway) | 13.2% |
+| `t1_fast_mana_to_t2_multiple_actions` | 11.7% |
+| `t1_accel_to_t2_premium_engine` | 9.2% |
+| `flooded_hand` (4+ opening-hand lands) | 8.8% |
+
+The rarest named sequences are the most specific engine-to-engine chains (`t1_dork_to_t2_pod`
+0.05%, `t1_dork_to_t2_rhystic_study` 0.11%, `t1_accel_to_t2_kinnan` 0.13%) - these are real,
+just naturally uncommon given they require two specific cards to co-occur in one 7-9 card window.
+
+## C. Most common bad opening sequences (revised failure taxonomy)
+
+Two separate tag sets, never collapsed into one score (outcome = what went wrong; causal = why):
+
+| Outcome tag | % of hands |
+|---|---|
+| `insufficient_mana` | 64.9% |
+| `stranded_tutor` (tutor in hand, never live) | 60.2% |
+| `stranded_or_unsupported_engine` | 56.3% |
+| `no_proactive_development` | 55.7% |
+| `development_but_no_compounding_value` | 18.2% |
+| `color_failure` | 12.8% |
+| `resource_destructive_acceleration_no_payoff` | 6.5% |
+| `flooded_action_light` | 1.3% |
+
+(Heavily overlapping by design - most failing hands carry several tags simultaneously; there is
+no `"functional"` catch-all tag, per the checkpoint correction - a hand's absence of a failure
+tag is read from the strong-state flags in section A instead, never from tag absence itself.)
+Causal diagnosis is dominated by `insufficient_persistent_mana` (64.9%, tautologically matching
+the outcome tag) and `no_second_land` (24.9%) - mana remains this deck's central, structural
+bottleneck in the T1-3 window, exactly as SOLO-002R found and this larger, richer census confirms
+again from a different angle.
+
+## D. What land count actually means (0/1/2/3/4/5+ stratification)
+
+**The central, clean finding of this census**: strong-compounding-state rate as a function of
+*opening-hand* land count (not lands played - that's structurally capped at 3 by turn 3 and
+would hide this entirely; see the checkpoint's disclosed fix for why this distinction matters):
+
+| Opening-hand lands | % of population | T3 strong-state rate (play) | T3 strong-state rate (draw) |
+|---|---|---|---|
+| 0 | 9.7% | 23.5% | 33.0% |
+| 1 | 28.0% | 47.0% | 53.9% |
+| **2** | **33.0%** | **56.7%** | **60.6%** |
+| 3 | 20.5% | 55.0% | 59.9% |
+| 4 | 7.2% | 51.3% | 58.3% |
+| 5+ | 1.6% | 47.5% | 52.1% |
+
+**Two lands is empirically the peak, not just "the usual advice"** - the strong-state rate rises
+sharply from 0→1→2 lands, essentially plateaus from 2→3 (56.7%→55.0% play, 60.6%→59.9% draw -
+within noise), and then *declines* at 4 and clearly declines at 5+. This directly answers the
+engagement's own question ("Is two lands actually the ideal baseline?") with a yes, for this
+exact 27-land, acceleration-dense list - three is a legitimate, nearly-equivalent keep, and four
+or more measurably costs the hand real strong-state probability without buying back enough
+consistency to compensate (mean cards remaining at T3 climbs from 3.38 at 2 lands to 3.72 at 4 to
+4.34 at 5+, i.e. those extra lands are mostly just sitting dead in hand past the 3rd land drop).
+
+## E. What makes a one-land hand keepable
+
+1-land hands split sharply by whether Turn 1 acceleration (a mana creature, a persistent rock, or
+burst mana) was available and used:
+
+- **With T1 acceleration**: 56.0% reach a T3 strong state.
+- **Without T1 acceleration**: 36.6% reach a T3 strong state.
+
+A **19.4-percentage-point gap** - a one-land hand with real T1 acceleration performs close to an
+*average* two-land hand (56.7%), while a one-land hand with no acceleration is closer to the
+0-land tier. Practical finding: **"one land" is not itself a keep/mulligan signal - "one land plus
+a genuine T1 mana source" is.** 25.1% of 1-land hands had a mana creature available, 28.3% had a
+persistent rock, 11.0% had burst mana (Lotus Petal/Elvish Spirit Guide) - these categories
+overlap (a hand can have more than one).
+
+## F. What makes a two-land hand good
+
+The single largest hand class (33.0% of the population) is also the most heterogeneous:
+
+- Overall strong-state rate: 56.7% - but **43.3% of two-land hands are "deceptive"** (2 lands,
+  no strong state reached) - a large minority of the "ideal" land count still underperforms.
+- Full color coverage (all of W/U/B/G reachable by some point in T1-3) barely moves the needle on
+  this coarse strong-state flag: 57.4% with full color vs. 56.5% without - suggesting that at 2
+  lands, raw mana quantity/engine access dominates over color completeness for *this* metric
+  (color could still matter more for specific colored spells not captured by the broad
+  strong-state flag - a finer color-specific breakdown is future work).
+- 69.3% of two-land hands get *some* engine online by T2 (a looser bar than "primary Tier-A
+  engine," which is part of why this doesn't match section A's 18.0% population-wide T2
+  primary-engine rate).
+- Tutor-convertible by T3: only 1.9%. Live interaction retained by T3: only 6.6%. Two lands alone
+  is not remotely enough to also hold up interaction or convert a tutor in this list.
+
+## G. When three or more lands become costly (opportunity cost)
+
+| Opening-hand lands | T1 engine rate | Tutor-convertible T3 | Live interaction T3 | Mean cards remaining T3 | Strong-state rate | Stalled rate |
+|---|---|---|---|---|---|---|
+| 3 | 21.2% | 2.0% | 6.7% | 3.24 | 55.0% | 38.0% |
+| 4 | 19.3% | 2.0% | 6.7% | 3.72 | 51.3% | 42.3% |
+| 5+ | 14.3% | 1.6% | 5.2% | 4.34 | 47.5% | 47.2% |
+
+A clean, monotonic story: every action-density metric (T1 engine rate, strong-state rate) declines
+as opening-hand land count climbs past 3, while cards-remaining and stalled-rate both climb -
+extra lands beyond 3 are consistently *more mana this hand didn't need* rather than *more
+consistency this hand was short on*. Combined with section D: **the practical land-count target
+for a keepable seven in this list is 2, with 3 an acceptable near-equivalent; 4+ is a real,
+measurable cost, not merely "safe but slow."**
+
+## H. Development + interaction (real alternate-cost model)
+
+Using the corrected alternate-cost interaction model (Force of Will/Fierce Guardianship/Flare of
+Denial/Subtlety/Misdirection/Commandeer/Endurance's real alt costs, Force of Negation/Mindbreak
+Trap confirmed structurally unavailable solo - see checkpoint item 3), T2 development +
+interaction sits at only 2.0% of the population. This is a real number, not an artifact of an
+undercounted interaction model (the alt-cost fix, if anything, pushes this *up* relative to a
+naive mana-only check) - it reflects that by T2, most hands that developed anything meaningful
+have already spent the mana that would have paid for interaction, exactly the mana-scarcity
+story sections C/D/G already tell from other angles.
+
+Compounding-state combination rates (T3, population-wide): `card_engine_plus_mana_engine` 10.9%,
+`engine_plus_win_conversion` 9.3%, `multi_engine_plus_interaction` 2.6%, `cradle_plus_creature_
+infrastructure` 3.0%, `survival_supported` 3.4%, `mana_engine_plus_tutor` 1.2%,
+`card_engine_plus_interaction` 1.0%, `tutor_plus_resources_to_deploy` 0.9%, `card_engine_plus_
+tutor` 0.1%, `pod_supported` 0.05% (Pod is rarely both deployed and actually functional this
+early - consistent with SOLO-002R's near-zero Pod-functional rate).
+
+## I. Tymna and Thrasios (conditional metrics only, never headline success)
+
+**Tymna** is measured as attack capacity (creatures able to attack), explicitly not confirmed
+card productivity - this model doesn't simulate combat/blocks, so it cannot know how many
+attacks would connect: `not_deployed` 60.3%, `attack_capacity_high` (3+ creatures) 18.0%,
+`attack_capacity_medium` (2) 16.9%, `attack_capacity_low` (0-1) 4.8%. **When Tymna is deployed,
+it usually already has real attack capacity** (34.9 of the 39.7% deployed rate is medium-or-high)
+- consistent with the greedy policy's commander-priority sitting behind acceleration/premium-
+engine, so by the time enough mana exists to cast Tymna, a board often already exists too.
+
+**Thrasios** productivity (real `{4}` activation check, `{2}` when Training Grounds is out per
+its actual Oracle text - Training Grounds has no relationship to Kinnan's mana-doubling trigger
+or to Gaea's Cradle, both corrected in the checkpoint after an initial wording error) is
+**2.7%** of the population by T3 - i.e. Thrasios being *on the battlefield* is common (SOLO-002R
+found ~46-53% battlefield presence), but Thrasios being *productive* (able to actually activate)
+is rare. This is exactly the gap the engagement asked this audit to surface: presence and
+productivity are very different numbers for this commander.
+
+## Bounded achievable-search supplement (15,000 hands, T1-T3 land/fetch dedup search)
+
+| Target | policy_realized | best_known_achievable | gap |
+|---|---|---|---|
+| T1 premium engine | 6.1% | 6.7% | 0.6pp |
+| T1 two-drop engine | 3.0% | 3.5% | 0.4pp |
+| T1 any meaningful development | 31.9% | 37.9% | 6.0pp |
+| T2 engine | 56.4% | 61.8% | 5.3pp |
+| T2 engine + interaction | 4.0% | 4.9% | 0.9pp |
+| T3 Tymna supported | 39.7% | 48.4% | 8.7pp |
+| T3 Thrasios activation | 2.6% | 4.6% | 2.0pp |
+| T3 Pod functional | 0.04% | 0.19% | 0.15pp |
+| T3 Survival functional | 0.9% | 2.5% | 1.5pp |
+| T3 Cradle 3+ | 1.3% | 1.8% | 0.5pp |
+| T3 deterministic win | 0.3% | 0.9% | 0.6pp |
+
+Gaps are modest (0.15-8.7pp) and land-choice/fetch-target sequencing (not just priority order)
+now demonstrably matters more than SOLO-002R's T1-only search found (`t3_tymna_supported`'s gap
+widened from 6.2pp to 8.7pp with the expanded search) - the greedy policy remains a reasonable,
+not-wildly-suboptimal heuristic, while confirming a hand should not be written off as incapable
+purely because this one policy chose a different legal line.
+
+## Practical findings (primer-facing, per the engagement's own requested format)
+
+- **Two lands is not itself the keep rule, but it is empirically the right target**: strong-state
+  rate peaks at 2 opening-hand lands (56.7% play / 60.6% draw), 3 lands is a near-equivalent
+  (55.0%/59.9%), and 4+ lands is a measurable, monotonic cost (51.3%→47.5% play as lands climb
+  from 4 to 5+), not just "safe but slow."
+- **One-land hands containing genuine Turn-1 acceleration perform close to an average two-land
+  keep** (56.0% strong-state rate vs. 56.7% for the 2-land population overall), while one-land
+  hands without any T1 acceleration underperform badly (36.6%) - "one land" alone is not a
+  meaningful keep/mulligan signal; "one land plus real T1 mana development" is.
+- **Two-land hands are not uniformly good** - 43.3% of them reach no T3 strong state at all,
+  meaning land count alone is a weak predictor within this bucket; color completeness barely
+  moves this particular metric, so the real differentiator is more likely mana quantity/engine
+  access (a finer feature breakdown is the natural next analysis, not yet run - see below).
+  - **Commander presence and commander productivity are different facts.** Thrasios is on the
+  battlefield far more often than it is actually able to activate (2.7% real activation vs.
+  SOLO-002R's ~46-53% presence); Tymna's productivity (attack capacity) is concentrated in hands
+  where it was cast late enough to already have board support, not evenly spread across all
+  deployments.
+- **Mana remains this deck's dominant, structural bottleneck** in the T1-3 window across every
+  lens this audit applied (raw failure taxonomy, land-count stratification, one/two-land audits,
+  development+interaction rarity) - not engine density, not tutor density, not interaction
+  density, consistent with and further sharpened from SOLO-002R's own headline finding.
+
+## Explicit scope disclosure
+
+Consistent with this project's standing practice of disclosing reductions rather than silently
+omitting them: **this write-up completes SOLO-003 Part A (the trajectory census) and its
+required first-deliverable checkpoint, plus a supplementary achievable-search pass.** The
+following later phases of the SOLO-003 spec are **not yet run**, flagged as the natural next
+phase rather than silently skipped:
+
+- **Part B/C (candidate mulligan-heuristic derivation + London mulligan simulation)** - this
+  census is exactly the input Part B needs ("do not begin by deciding keep rules - derive them
+  from the census"), but deriving and then simulating new trajectory-informed keep policies
+  against the existing SOLO-002R policies is a distinct, substantial next step not executed here.
+- **Section 15 (opening-hand feature-tradeoff analysis)** and **section 16's data-derived
+  clustering** (as opposed to the rule-based `trajectory_family_tags` delivered above) - both
+  flagged as future work in the checkpoint.
+- **Paired land/mana-density ablations** - the checkpoint redesigned the candidate proposal (to
+  avoid the solo-model-inert-card bias its first draft had) but did not execute any ablation run.
+- **Sections J/K/L of the "required primary report" structure** (mulligan-policy comparison,
+  mana-density ablations, consolidated practical findings beyond what's stated above) depend on
+  the above and are correspondingly not yet written.
+
+All trajectory-census and achievable-search files carry `run_class: DECK_BACKED_GOLDFISH`
+provenance (`subject_deck_hash`, `subject_deck_card_count`, `commander_identities`) per
+`docs/RUN_CLASSIFICATION.md`. Regression suite: 63 passed, 3 skipped (pre-existing, unrelated).

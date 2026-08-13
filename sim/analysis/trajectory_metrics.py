@@ -31,6 +31,14 @@ TIER_C_STRUCTURALLY_INERT = {
 TRAINING_GROUNDS_ACTIVATION_DISCOUNT = 2  # "costs {2} less... can't reduce below one mana"
 
 
+def _opening_hand_land_count(state, cards):
+    """The ORIGINAL 7-card hand's land count, not len(state.lands) after development (which is
+    structurally capped at 3 - only 3 land drops are possible in a 3-turn horizon, so a 5-land
+    opener still only ever shows 3 lands on the battlefield). Flood/multi-land-hand questions
+    must be asked about the opening hand, not this turn-structure-capped battlefield count."""
+    return sum(1 for c in state.opening_hand if "Land" in cards[c]["type"])
+
+
 def _tier_c_supported(name, state, cards):
     """Whether a Tier-C conditional engine's real condition is actually satisfied right now.
     See module docstring for which ones are structurally inert in a solo model."""
@@ -281,7 +289,7 @@ def classify_trajectory_failure(m1, m2, m3, state, cards):
         outcome_tags.append("color_failure")
     if m3["temporary_resources_consumed"] > 0 and not t3strong["t3_any_strong_state"]:
         outcome_tags.append("resource_destructive_acceleration_no_payoff")
-    if len(state.lands) >= 4 and m3["cards_in_hand"] <= 2:
+    if _opening_hand_land_count(state, cards) >= 4 and m3["cards_in_hand"] <= 2:
         outcome_tags.append("flooded_action_light")
     if m3["total_mana"] < 2:
         outcome_tags.append("insufficient_mana")
@@ -358,12 +366,15 @@ def trajectory_family_tags(state, cards, m1, m2, m3):
         m3.get("tymna_supported") or thrasios_productivity(state, cards, m3)["thrasios_activation_now"]
     ):
         tags.append("commander_conversion_hand")
-    land_count = len(state.lands)
-    if land_count == 1 and t3strong["t3_any_strong_state"]:
+    # Opening-hand land count, not len(state.lands) - see _opening_hand_land_count's docstring
+    # (battlefield lands are structurally capped at 3 by turn 3, so a ">=4" check against them
+    # could never fire; these tags are about the SEVEN CARDS DEALT, not the T3 board).
+    opening_land_count = _opening_hand_land_count(state, cards)
+    if opening_land_count == 1 and t3strong["t3_any_strong_state"]:
         tags.append("strong_one_land_hand")
-    if land_count == 2 and not t3strong["t3_any_strong_state"]:
+    if opening_land_count == 2 and not t3strong["t3_any_strong_state"]:
         tags.append("deceptive_two_land_hand")
-    if land_count >= 4:
+    if opening_land_count >= 4:
         tags.append("flooded_hand")
     if not t3strong["t3_any_strong_state"] and m3["total_mana"] < 2:
         tags.append("genuinely_nonfunctional_hand")

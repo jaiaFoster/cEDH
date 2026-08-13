@@ -1,0 +1,246 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_SOLO_003_PART_A_TRAJECTORY_CENSUS",
+  "sample_count": 100000,
+  "seed": 42,
+  "seat": "draw",
+  "on_play": false,
+  "elapsed_seconds": 74.30484366416931,
+  "hands_per_second": 1345.8072861570558,
+  "policy": "default_greedy",
+  "sample_size": 100000,
+  "primary_trajectory_table": {
+    "t1": {
+      "t1_any_tier_a_engine": 0.0766,
+      "t1_accelerated_two_drop": 0.00714,
+      "t1_mana_creature": 0.28477,
+      "t1_persistent_rock": 0.30504,
+      "t1_multiple_persistent_mana_sources": 0.09861,
+      "t1_burst_mana_used": 0.1066,
+      "t1_acceleration_retaining_resources": 0.43317,
+      "t1_engine_deployed": 0.23207,
+      "t1_live_interaction": 0.27271,
+      "t1_compound_development": 0.2585
+    },
+    "t2": {
+      "t2_primary_engine_online": 0.21365,
+      "t2_infrastructure_online_supported": 0.0579,
+      "t2_development_plus_interaction": 0.02414
+    },
+    "t3": {
+      "t3_strong_card_advantage_state": 0.21434,
+      "t3_strong_mana_state": 0.07715,
+      "t3_strong_conversion_state": 0.01306,
+      "t3_strong_interaction_state": 0.06672,
+      "t3_strong_optionality_state": 0.03386,
+      "t3_credible_win_pressure": 0.38549,
+      "t3_any_strong_state": 0.55607,
+      "t3_stalled": 0.39939
+    }
+  },
+  "compounding_state_table": {
+    "card_engine_plus_mana_engine": 0.14064,
+    "card_engine_plus_interaction": 0.01424,
+    "card_engine_plus_tutor": 0.00234,
+    "mana_engine_plus_tutor": 0.01525,
+    "cradle_plus_creature_infrastructure": 0.03855,
+    "survival_supported": 0.0423,
+    "pod_supported": 0.00079,
+    "tutor_plus_resources_to_deploy": 0.01177,
+    "engine_plus_win_conversion": 0.116,
+    "multi_engine_plus_interaction": 0.03817
+  },
+  "land_count_stratification": {
+    "0": {
+      "n": 9666,
+      "pct_of_population": 0.09666,
+      "t1_premium_engine": 0.03569211669770329,
+      "t1_meaningful_development": 0.1723567142561556,
+      "t2_primary_engine": 0.12435340368301262,
+      "t2_infrastructure_online": 0.025656941858059175,
+      "t2_dev_plus_interaction": 0.00941444237533623,
+      "t3_strong_compounding_state": 0.3301262156010759,
+      "t3_tutor_convertible": 0.0033105731429753774,
+      "t3_credible_win_pressure": 0.18228843368508174,
+      "t3_stalled": 0.6609766190771778,
+      "mean_cards_remaining_t3": 5.886199048210221
+    },
+    "1": {
+      "n": 28001,
+      "pct_of_population": 0.28001,
+      "t1_premium_engine": 0.07624727688296846,
+      "t1_meaningful_development": 0.3959501446376915,
+      "t2_primary_engine": 0.21284954108781828,
+      "t2_infrastructure_online": 0.05585514803042749,
+      "t2_dev_plus_interaction": 0.024784829113245956,
+      "t3_strong_compounding_state": 0.5387664726259777,
+      "t3_tutor_convertible": 0.01278525766936895,
+      "t3_credible_win_pressure": 0.3589157530088211,
+      "t3_stalled": 0.42702046355487305,
+      "mean_cards_remaining_t3": 4.488732545266241
+    },
+    "2": {
+      "n": 32996,
+      "pct_of_population": 0.32996,
+      "t1_premium_engine": 0.0849496908716208,
+      "t1_meaningful_development": 0.3998969572069342,
+      "t2_primary_engine": 0.23793793187052975,
+      "t2_infrastructure_online": 0.07061461995393381,
+      "t2_dev_plus_interaction": 0.028457994908473755,
+      "t3_strong_compounding_state": 0.6061037701539581,
+      "t3_tutor_convertible": 0.021366226209237484,
+      "t3_credible_win_pressure": 0.43108255546126806,
+      "t3_stalled": 0.3391623227057825,
+      "mean_cards_remaining_t3": 3.7023881682628197
+    },
+    "3": {
+      "n": 20549,
+      "pct_of_population": 0.20549,
+      "t1_premium_engine": 0.08452966081074505,
+      "t1_meaningful_development": 0.3861015134556426,
+      "t2_primary_engine": 0.22706701056012457,
+      "t2_infrastructure_online": 0.06068421821013188,
+      "t2_dev_plus_interaction": 0.024916054309212128,
+      "t3_strong_compounding_state": 0.59905591512969,
+      "t3_tutor_convertible": 0.026278651029247164,
+      "t3_credible_win_pressure": 0.4276607134167113,
+      "t3_stalled": 0.3461482310574724,
+      "mean_cards_remaining_t3": 3.6502506204681495
+    },
+    "4": {
+      "n": 7190,
+      "pct_of_population": 0.0719,
+      "t1_premium_engine": 0.07524339360222532,
+      "t1_meaningful_development": 0.38094575799721836,
+      "t2_primary_engine": 0.20055632823365785,
+      "t2_infrastructure_online": 0.04853963838664812,
+      "t2_dev_plus_interaction": 0.021279554937413073,
+      "t3_strong_compounding_state": 0.5826147426981919,
+      "t3_tutor_convertible": 0.03031988873435327,
+      "t3_credible_win_pressure": 0.4261474269819193,
+      "t3_stalled": 0.3620305980528512,
+      "mean_cards_remaining_t3": 4.023643949930459
+    },
+    "5+": {
+      "n": 1598,
+      "pct_of_population": 0.01598,
+      "t1_premium_engine": 0.06195244055068836,
+      "t1_meaningful_development": 0.2715894868585732,
+      "t2_primary_engine": 0.15269086357947434,
+      "t2_infrastructure_online": 0.03254067584480601,
+      "t2_dev_plus_interaction": 0.015644555694618274,
+      "t3_strong_compounding_state": 0.5206508135168961,
+      "t3_tutor_convertible": 0.016270337922403004,
+      "t3_credible_win_pressure": 0.41364205256570713,
+      "t3_stalled": 0.4292866082603254,
+      "mean_cards_remaining_t3": 4.933667083854819
+    }
+  },
+  "one_land_audit": {
+    "n": 28001,
+    "with_mana_creature_t1_rate": 0.30613192385986215,
+    "with_persistent_rock_t1_rate": 0.32759544301989213,
+    "with_burst_mana_t1_rate": 0.12660262133495231,
+    "strong_state_rate_overall": 0.5387664726259777,
+    "strong_state_rate_with_t1_accel": 0.5989361080259543,
+    "strong_state_rate_without_t1_accel": 0.444281255737103,
+    "stalled_rate": 0.42702046355487305
+  },
+  "two_land_audit": {
+    "n": 32996,
+    "strong_state_rate_overall": 0.6061037701539581,
+    "strong_state_rate_full_color_by_t3": 0.5992290475006218,
+    "strong_state_rate_color_screwed": 0.6083193075258475,
+    "deceptive_two_land_rate": 0.39389622984604195,
+    "engine_by_t2_rate": 0.7526972966420172,
+    "tutor_convertible_t3_rate": 0.021366226209237484,
+    "live_interaction_t3_rate": 0.07652442720329737
+  },
+  "opportunity_cost_3plus": {
+    "3": {
+      "n": 20549,
+      "t1_engine_rate": 0.2723733515012896,
+      "tutor_convertible_t3_rate": 0.026278651029247164,
+      "live_interaction_t3_rate": 0.07839797557058738,
+      "mean_cards_remaining_t3": 3.6502506204681495,
+      "strong_state_rate": 0.59905591512969,
+      "stalled_rate": 0.3461482310574724,
+      "flooded_hand_rate": 0.0
+    },
+    "4": {
+      "n": 7190,
+      "t1_engine_rate": 0.2757997218358832,
+      "tutor_convertible_t3_rate": 0.03031988873435327,
+      "live_interaction_t3_rate": 0.0756606397774687,
+      "mean_cards_remaining_t3": 4.023643949930459,
+      "strong_state_rate": 0.5826147426981919,
+      "stalled_rate": 0.3620305980528512,
+      "flooded_hand_rate": 1.0
+    },
+    "5+": {
+      "n": 1598,
+      "t1_engine_rate": 0.1821026282853567,
+      "tutor_convertible_t3_rate": 0.016270337922403004,
+      "live_interaction_t3_rate": 0.04881101376720901,
+      "mean_cards_remaining_t3": 4.933667083854819,
+      "strong_state_rate": 0.5206508135168961,
+      "stalled_rate": 0.4292866082603254,
+      "flooded_hand_rate": 1.0
+    }
+  },
+  "outcome_failure_distribution": {
+    "insufficient_mana": 0.65269,
+    "stranded_tutor": 0.6285,
+    "stranded_or_unsupported_engine": 0.6028,
+    "no_proactive_development": 0.5226,
+    "development_but_no_compounding_value": 0.17398,
+    "color_failure": 0.12765,
+    "resource_destructive_acceleration_no_payoff": 0.06428,
+    "flooded_action_light": 0.01242
+  },
+  "causal_diagnosis_distribution": {
+    "insufficient_persistent_mana": 0.65269,
+    "no_second_land": 0.19585
+  },
+  "trajectory_family_distribution": {
+    "commander_conversion_hand": 0.50436,
+    "genuinely_nonfunctional_hand": 0.31934,
+    "creature_board_supports_cradle_chord_infrastructure": 0.31421,
+    "t1_accel_to_t2_commander": 0.2931,
+    "t1_engine_hand": 0.23207,
+    "t1_fast_mana_to_t2_multiple_actions": 0.16747,
+    "strong_one_land_hand": 0.15086,
+    "deceptive_two_land_hand": 0.12997,
+    "t1_accel_to_t2_premium_engine": 0.12244,
+    "unclassified_hand": 0.10879,
+    "flooded_hand": 0.08788,
+    "interaction_heavy_slow_hand": 0.0494,
+    "t1_engine_to_t2_tutor": 0.03351,
+    "t1_sentinel_to_t2_second_engine": 0.02295,
+    "creature_swarm_to_cradle": 0.0205,
+    "tutor_conversion_hand": 0.01879,
+    "t1_engine_to_t2_dev_plus_interaction": 0.0078,
+    "t1_remora_to_t2_mana_development": 0.00578,
+    "explosive_resource_destructive_hand": 0.0053,
+    "t1_dork_to_t2_survival": 0.00505,
+    "t1_accel_to_t2_kinnan": 0.00146,
+    "t1_dork_to_t2_rhystic_study": 0.00132,
+    "t1_dork_to_t2_pod": 0.0008
+  },
+  "tymna_attack_capacity_distribution": {
+    "not_deployed": 0.51069,
+    "attack_capacity_high": 0.25643,
+    "attack_capacity_medium": 0.18689,
+    "attack_capacity_low": 0.04599
+  },
+  "thrasios_productive_rate_t3": 0.03465
+}

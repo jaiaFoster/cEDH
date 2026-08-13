@@ -74,6 +74,12 @@ def _bottom_priority_score(name, cards):
 class HandState:
     def __init__(self, hand, library, on_play, rng, cards):
         self.hand = list(hand)
+        # Permanent record of the ORIGINAL 7 cards dealt, before any development - needed for
+        # SOLO-003's opening-hand land-count stratification (section 11). This is NOT the same
+        # thing as len(self.lands) after development, which is structurally capped at 3 (only 3
+        # land drops are possible in a 3-turn horizon) regardless of how many lands the opening
+        # hand actually had.
+        self.opening_hand = list(hand)
         self.library = list(library)
         self.on_play = on_play
         self.rng = rng

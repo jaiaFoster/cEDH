@@ -45,6 +45,7 @@ def clone_state(state):
     reference; everything develop_turn can mutate is copied."""
     new = HandState.__new__(HandState)
     new.hand = list(state.hand)
+    new.opening_hand = list(state.opening_hand)
     new.library = list(state.library)
     new.on_play = state.on_play
     new.rng = state.rng

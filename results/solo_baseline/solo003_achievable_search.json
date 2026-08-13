@@ -1,0 +1,77 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_SOLO_002R_ACHIEVABLE_SEARCH",
+  "sample_count": 15000,
+  "seed": 42,
+  "on_play": true,
+  "avg_lines_explored_per_hand": 21.7268,
+  "search_bound_max_lines": 12,
+  "elapsed_seconds": 52.626691818237305,
+  "comparison": {
+    "t1_premium_engine": {
+      "policy_realized_rate": 0.061066666666666665,
+      "best_known_achievable_rate": 0.06726666666666667,
+      "gap": 0.0062
+    },
+    "t1_two_drop_engine": {
+      "policy_realized_rate": 0.030266666666666667,
+      "best_known_achievable_rate": 0.03453333333333333,
+      "gap": 0.004266666666666667
+    },
+    "t1_any_meaningful_development": {
+      "policy_realized_rate": 0.31926666666666664,
+      "best_known_achievable_rate": 0.37893333333333334,
+      "gap": 0.059666666666666666
+    },
+    "t2_engine": {
+      "policy_realized_rate": 0.5644666666666667,
+      "best_known_achievable_rate": 0.6178,
+      "gap": 0.05333333333333334
+    },
+    "t2_engine_plus_interaction": {
+      "policy_realized_rate": 0.0396,
+      "best_known_achievable_rate": 0.048933333333333336,
+      "gap": 0.009333333333333334
+    },
+    "t3_tymna_supported": {
+      "policy_realized_rate": 0.39686666666666665,
+      "best_known_achievable_rate": 0.4842,
+      "gap": 0.08733333333333333
+    },
+    "t3_thrasios_activation": {
+      "policy_realized_rate": 0.0262,
+      "best_known_achievable_rate": 0.0458,
+      "gap": 0.0196
+    },
+    "t3_pod_functional": {
+      "policy_realized_rate": 0.0004,
+      "best_known_achievable_rate": 0.0019333333333333333,
+      "gap": 0.0015333333333333334
+    },
+    "t3_survival_functional": {
+      "policy_realized_rate": 0.009133333333333334,
+      "best_known_achievable_rate": 0.024533333333333334,
+      "gap": 0.0154
+    },
+    "t3_cradle_3plus": {
+      "policy_realized_rate": 0.0128,
+      "best_known_achievable_rate": 0.017866666666666666,
+      "gap": 0.005066666666666666
+    },
+    "t3_deterministic_win": {
+      "policy_realized_rate": 0.0026666666666666666,
+      "best_known_achievable_rate": 0.008733333333333333,
+      "gap": 0.006066666666666666
+    }
+  },
+  "note": "A hand should not be labeled incapable merely because the greedy policy chose another legal line. 'gap' = how often the bounded search found the target state reachable via SOME alternative line even though the single default greedy policy line (policy_realized, same line used by the main Part A census) did not reach it. This is a lower bound on true achievability - the search is bounded (see achievable_search.py), not exhaustive."
+}
