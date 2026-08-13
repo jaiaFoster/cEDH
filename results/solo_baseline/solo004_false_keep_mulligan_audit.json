@@ -1,0 +1,438 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_SOLO_004_FALSE_KEEP_MULLIGAN_AUDIT",
+  "sample_count": 8000,
+  "seed": 777,
+  "seat": "play",
+  "note": "False keep = SIMPLE_RULES keeps, actual outcome was NOT strong-state, AND TREE_DEPTH4 independently would have shipped it. False mulligan = SIMPLE_RULES ships, actual outcome WAS strong-state, AND TREE_DEPTH4 independently would have kept it. Requiring both signals filters single-draw luck/unluck from genuine heuristic defects.",
+  "false_keep_rate": 0.20875,
+  "false_mulligan_rate": 0.005125,
+  "false_keep_examples": [
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Bayou",
+        "Endurance",
+        "Gemstone Caverns",
+        "Imperial Seal",
+        "Kinnan, Bonder Prodigy",
+        "Shifting Woodland"
+      ],
+      "land_count": 3,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": false,
+      "actual_mana_shortfall": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "color_failure"
+      ]
+    },
+    {
+      "hand": [
+        "Ancient Tomb",
+        "Devoted Druid",
+        "Mindbreak Trap",
+        "Mystic Remora",
+        "Noble Hierarch",
+        "Rhystic Study",
+        "Survival of the Fittest"
+      ],
+      "land_count": 1,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": true,
+      "actual_mana_shortfall": true,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_tutor",
+        "mana_shortfall"
+      ]
+    },
+    {
+      "hand": [
+        "Eldritch Evolution",
+        "Gaea's Cradle",
+        "Heartwood Storyteller",
+        "Lotus Petal",
+        "Otawara, Soaring City",
+        "Swift Reconfiguration",
+        "Voice of Victory"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": false,
+      "actual_mana_shortfall": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "resource_destructive_acceleration_no_payoff"
+      ]
+    },
+    {
+      "hand": [
+        "Elvish Spirit Guide",
+        "Gemstone Caverns",
+        "Imperial Seal",
+        "Mana Confluence",
+        "Marsh Flats",
+        "Pact of Negation",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "land_count": 3,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": false,
+      "actual_mana_shortfall": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "resource_destructive_acceleration_no_payoff"
+      ]
+    },
+    {
+      "hand": [
+        "Demonic Tutor",
+        "Force of Will",
+        "Gaea's Cradle",
+        "Gleaming Splendor",
+        "Lotus Petal",
+        "Nature's Rhythm",
+        "Runic Armasaur"
+      ],
+      "land_count": 1,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": true,
+      "actual_mana_shortfall": true,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "resource_destructive_acceleration_no_payoff",
+        "mana_shortfall"
+      ]
+    },
+    {
+      "hand": [
+        "Kinnan, Bonder Prodigy",
+        "Misdirection",
+        "Oboro Breezecaller",
+        "Otawara, Soaring City",
+        "Ranger-Captain of Eos",
+        "Scrubland",
+        "Smothering Tithe"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": false,
+      "actual_mana_shortfall": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "color_failure"
+      ]
+    },
+    {
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Elvish Spirit Guide",
+        "Heartwood Storyteller",
+        "Nature's Rhythm",
+        "Otawara, Soaring City",
+        "Training Grounds",
+        "Underground Sea"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": true,
+      "actual_mana_shortfall": true,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "resource_destructive_acceleration_no_payoff",
+        "mana_shortfall"
+      ]
+    },
+    {
+      "hand": [
+        "Command Tower",
+        "Crop Rotation",
+        "Derevi, Empyrial Tactician",
+        "Elves of Deep Shadow",
+        "Minamo, School at Water's Edge",
+        "Starting Town",
+        "Training Grounds"
+      ],
+      "land_count": 3,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": false,
+      "actual_mana_shortfall": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine"
+      ]
+    },
+    {
+      "hand": [
+        "City of Traitors",
+        "Fierce Guardianship",
+        "Finale of Devastation",
+        "Force of Negation",
+        "Heartwood Storyteller",
+        "Mental Misstep",
+        "Minamo, School at Water's Edge"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": true,
+      "actual_mana_shortfall": true,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "mana_shortfall"
+      ]
+    },
+    {
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Elvish Spirit Guide",
+        "Flusterstorm",
+        "Gemstone Caverns",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Minamo, School at Water's Edge",
+        "Pact of Negation"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": true,
+      "actual_mana_shortfall": true,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "resource_destructive_acceleration_no_payoff",
+        "mana_shortfall"
+      ]
+    }
+  ],
+  "false_mulligan_examples": [
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Enduring Vitality",
+        "Finale of Devastation",
+        "Mana Vault",
+        "Polluted Delta",
+        "Shifting Woodland",
+        "Swan Song"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Bayou",
+        "Fierce Guardianship",
+        "Flooded Strand",
+        "Gaea's Cradle",
+        "Mana Vault",
+        "Windswept Heath",
+        "Wooded Foothills"
+      ],
+      "land_count": 5,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "t1_fast_mana_to_t2_multiple_actions",
+        "commander_conversion_hand",
+        "flooded_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Ancient Tomb",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mana Vault",
+        "Misty Rainforest",
+        "Oboro Breezecaller",
+        "Training Grounds",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Chord of Calling",
+        "City of Traitors",
+        "Colossal Skyturtle",
+        "Elvish Spirit Guide",
+        "Kinnan, Bonder Prodigy",
+        "Silence"
+      ],
+      "land_count": 1,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "strong_one_land_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Demonic Tutor",
+        "Flooded Strand",
+        "Gaea's Cradle",
+        "Mana Vault",
+        "Spellseeker",
+        "Tundra",
+        "Windswept Heath"
+      ],
+      "land_count": 4,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "creature_board_supports_cradle_chord_infrastructure",
+        "commander_conversion_hand",
+        "flooded_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Exotic Orchard",
+        "Flooded Strand",
+        "Gemstone Caverns",
+        "Gilded Drake",
+        "Mana Vault",
+        "Pact of Negation",
+        "Subtlety"
+      ],
+      "land_count": 3,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "commander_conversion_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Boseiju, Who Endures",
+        "Clever Impersonator",
+        "Exotic Orchard",
+        "Mana Vault",
+        "Otawara, Soaring City",
+        "Talon Gates of Madara",
+        "Veil of Summer"
+      ],
+      "land_count": 4,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "commander_conversion_hand",
+        "flooded_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Command Tower",
+        "Enlightened Tutor",
+        "Exotic Orchard",
+        "Force of Will",
+        "Mana Vault",
+        "Nature's Rhythm",
+        "Swan Song"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Chord of Calling",
+        "Gemstone Caverns",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mana Vault",
+        "Misdirection",
+        "Misty Rainforest",
+        "Pact of Negation"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Command Tower",
+        "Exotic Orchard",
+        "Flusterstorm",
+        "Gilded Drake",
+        "Mana Vault",
+        "Silence"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "MULLIGAN",
+      "tree_depth4_decision": "KEEP",
+      "actual_t3_any_strong_state": true,
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    }
+  ]
+}
