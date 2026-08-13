@@ -190,6 +190,15 @@ stand.
 
 # SIM-001 SOLO-002 — Opening Hand, Mulligan & Early Development Audit
 
+> **⚠️ STATUS: `SUPERSEDED_PENDING_CORRECTNESS_RERUN`.** A critical mana-accounting defect was
+> found in the simulator this phase used (mana sources were never marked tapped/spent, so a
+> land, mana dork, Sol Ring, Mana Vault, Mox, etc. could be reused an unbounded number of times
+> within one turn - among several other modeling defects). **Every number in this section is
+> invalidated and must not be cited for primer claims or deckbuilding changes.** The corrected
+> rerun, with the defect fixed and ten regression tests proving it, is in the
+> **"SIM-001 SOLO-002R"** section below. This section and its `solo002_*.json` files are
+> retained for provenance only, per standing instruction not to delete superseded work.
+
 Follows directly from SOLO BASELINE v1 above, and supersedes its scope for
 mulligan/deckbuilding questions specifically: this phase deliberately
 de-emphasizes turn-10 goldfish states and raw card-category counts in
@@ -460,3 +469,282 @@ down**, not silently skipped:
   combined keep-rate/success-floor tradeoff, **A (engine-first)** as a
   close, slightly more conservative alternative, **C (speed-first)** only
   if card count matters more than raw success rate (e.g. grindy pods).
+
+---
+
+# SIM-001 SOLO-002R — Correctness Repair & Rerun
+
+Corrects the SOLO-002 phase above per an explicit correctness-repair review. Same subject
+deck/hash. **This section's numbers are the trustworthy ones for this audit's questions -** the
+SOLO-002 section above is superseded and retained only for provenance.
+
+## The critical defect, and why the fix moved every number this much
+
+**Root cause**: `_try_pay()` identified which mana sources would cover a cost, but
+`_consume_payment_sources()` only ever marked Elvish Spirit Guide and one-shot resources (Lotus
+Petal) as spent - a land, mana dork, Sol Ring, Mana Vault, Mox, etc. was never marked tapped, so
+it could pay for an unbounded number of spells within the same turn. Every T1-3 development
+percentage the simulator produced was computed against this phantom, unlimited mana pool.
+
+**Fixed**: real per-source state. Lands became `LandInPlay` objects and nonland mana sources
+gained a `tapped` flag; the payment protocol was split into a pure read-only search (`_try_pay`,
+never mutates), a real commit (`_commit_payment`, the ONLY thing that taps/consumes a source),
+and a rollback (`_rollback_payment`, used only by read-only joint-payability dry runs) - so a
+real cast can never double-spend, and a metrics dry-run can never leave state mutated. An
+explicit untap step (`HandState.untap_all()`) runs at the start of every turn, correctly
+excluding Mana Vault (real Oracle text: "This artifact doesn't untap during your untap step" -
+this project's model does not offer the policy the option to pay {4} at upkeep to untap it, since
+doing so is essentially always mana-negative this early - documented simplification, not a
+missing feature).
+
+**Scale of the correction** (100k hands, on the play, otherwise identical methodology to
+SOLO-002):
+
+| Metric | SOLO-002 (buggy) | SOLO-002R (corrected) |
+|---|---|---|
+| `mana_2plus` @ T3 | 87.6% | **33.4%** |
+| `mana_3plus` @ T3 | 72.5% | **15.1%** |
+| `any_engine_active` @ T3 | 79.2% | 74.8% (largely unaffected - see why below) |
+| `two_plus_engines_active` @ T3 | 60.8% | **45.3%** |
+| `development_plus_interaction` @ T3 | 22.7% | **2.1%** |
+| `tutor_castable` @ T3 | 18.9% | **1.4%** |
+| secondary `meaningful_development_rate_t3` | 79.9% | **23.4%** |
+
+Engine deployment alone is the least-affected figure because engines are mostly 1-2 mana cards
+that a genuinely-tapped-correctly board can often still afford once; it's the *combination* and
+*follow-up* metrics (a second engine, a tutor ALSO castable on top of what was already spent,
+retained interaction) that collapse hardest - exactly the pattern predicted by "a shared pool
+being double-spent inflates joint/compound claims far more than single-card ones."
+
+## A second bug found while fixing the first: Gaea's Cradle
+
+Real Oracle text: `{T}: Add {G} for each creature you control.` The original model treated
+Cradle as a flat 1-green-mana land, identical to any basic. Fixed: `available_sources()` now
+computes Cradle's tap value from `state.creature_count()` live, every time - `cradle_output_if_
+deployed` and `cradle_3plus` already reported the right creature-count-conditioned threshold
+language, but the mana it actually produced for payment purposes was wrong until this fix.
+
+## Other mana-source corrections (per real Oracle text, verified against `data/cards_cache`)
+
+- **Gemstone Caverns**: `{T}: Add {C}. If Gemstone Caverns has a luck counter on it, instead add
+  one mana of any color.` A luck counter is only obtainable via the pregame action ("if this
+  card is in your opening hand and you're not the starting player, you may begin the game with
+  Gemstone Caverns on the battlefield with a luck counter, exile a card from your hand") - i.e.
+  **only relevant on the draw**. Modeled as a real policy decision (`_setup_gemstone_caverns`):
+  on the draw, if the hand isn't already land-heavy, exile the worst card and start with an
+  untapped any-color Caverns; on the play, or once the opening-hand window has passed, it's a
+  plain colorless land. This is exactly why Part A now runs both a **play** and a **draw**
+  baseline - the draw baseline is the only one where this card's real behavior is exercised.
+- **City of Traitors**: `When you play another land, sacrifice this land. {T}: Add {C}{C}.`
+  Implemented as a real trigger (`_maybe_sacrifice_city_of_traitors`) - it survives being played
+  itself, and is sacrificed the moment any *other* land enters from a land drop.
+- **Exotic Orchard**: `{T}: Add one mana of any color that a land an opponent controls could
+  produce.` Genuinely opponent-dependent and undefined in a true solo/no-opponent structural run
+  - modeled as producing **zero mana** here (one of the two options the repair instruction
+  offered; running explicit opponent-land-assumption scenarios instead is future work, not done
+  in this pass). It can still be played as a land (counts toward land-count metrics), just
+  contributes nothing to mana totals.
+- **Fetchlands**: previously modeled as static, already-fixed 2-color lands that never touched
+  the library at all - exactly the "assign the fetchland's apparent color pair directly" anti-
+  pattern the repair instruction named. Fixed: each fetch's two real search types (from its own
+  Oracle text, e.g. Flooded Strand = "a Plains or Island card") are matched against the deck's
+  actual land subtypes. This deck has **zero true basic lands** - the only fetchable cards are
+  the six ABUR duals, each of which genuinely carries two basic land types (e.g. Bayou is
+  "Land — Swamp Forest"). Cracking a fetch now really searches the remaining library for a legal
+  target, removes it, puts it onto the battlefield untapped, sacrifices the fetch, and costs 1
+  life - not a static color assignment.
+
+## Joint payment search (the "don't approximate simultaneity" fix)
+
+The original SOLO-002 build already had one approximation pass (`_affordable_in_isolation`,
+checking a cost against the turn's *starting* mana total/colors) specifically to avoid an even
+worse bug (checking post-hoc hand contents after the greedy policy had already spent the
+relevant mana). That approximation is retained, explicitly renamed and labeled
+(`_individually_affordable_from_turn_capacity` in `opening_hand_metrics.py`), for exactly the
+single-card "capacity" questions it's honestly answering (e.g. "Tymna castable" in the original
+spec's sense of "legally castable this turn," independent of what the greedy policy prioritized
+instead) - **never presented as a simultaneity claim**.
+
+For every metric that actually asks about simultaneous/joint availability, a real check replaces
+it:
+- **`is_currently_castable()`** - a genuine read-only payment search against whatever is
+  *currently* still untapped, used for "retained interaction," "tutor also castable," and
+  Thrasios's `{4}` activation check (now correctly reflects real remaining mana, not the turn's
+  original total - regression test #10 proves this directly: activation reads True with 4
+  untapped sources, then False once 2 of those 4 are tapped by something else, on the exact same
+  snapshot).
+- **`can_pay_jointly()`** - a real multi-cost dry-run (tentative commit, then roll back before
+  returning), used for combo "zero-step" status when 2+ pieces are still sitting in hand. This
+  directly fixes the "natural co-location" trap: two combo pieces that are each individually
+  affordable from the same untouched pool, but not jointly (because they'd need the same single
+  source), now correctly fail to register as a live deterministic win - proven in regression test
+  #9 using the deck's real `INT-0002` (Devoted Druid + Swift Reconfiguration) line.
+- A new **`deterministic_win_protected`** metric extends this further: while a zero-step
+  combo's mana is still tentatively committed, the search additionally checks whether a live
+  interaction card is *also* jointly payable, before rolling everything back - a real joint
+  check across "can I go off" and "can I protect it," not two independent isolated checks.
+
+A related bug caught in the same pass (not named in the original report, but the same root
+cause: mana/resource state correctness): cast instants and sorceries (most interaction and most
+tutors) were being left in `state.nonland_perms` forever instead of resolving to the graveyard,
+which would have corrupted the `persistent_nonland_permanents` resource-efficiency metric. Fixed
+alongside the rest (only genuinely permanent-typed cards - creature/artifact/enchantment/
+planeswalker/land/battle - stay on the battlefield after being cast).
+
+## Ten regression tests (`rules_tests/regression/test_opening_hand_mana_correctness.py`)
+
+All required proofs pass (13 tests total - two of the ten were split into a positive/negative
+pair for sharper coverage):
+
+1. one land cannot pay for two one-mana spells in the same turn
+2. Sol Ring cannot be tapped twice
+3. Mana Vault cannot be tapped twice, and never auto-untaps (survives a real untap step while a
+   normal land untaps normally in the same check)
+4. a mana dork cannot tap on its entry turn, and can the very next turn
+5. a used source becomes available again after the normal untap step
+6. City of Traitors survives its own land drop and sacrifices on the next different land played
+   (both a direct unit test and a full `develop_turn` end-to-end sequence)
+7. Gemstone Caverns stays in hand on the play; on the draw with a land-light hand it takes the
+   luck-counter action and produces any color, untapped, immediately
+8. engine + interaction only passes when jointly payable, not when each is merely individually
+   affordable from the same untouched pool (both the failing and passing case are proven, plus
+   that a failed dry run leaves no tapped sources behind)
+9. two combo pieces (the deck's real `INT-0002`) only register `zero_step` when the whole line is
+   jointly executable, not when each piece is merely individually affordable
+10. Thrasios's `{4}` activation reads correctly against real remaining mana, not a stale
+    turn-start total
+
+Full suite: 54 passed, 3 skipped (unrelated pre-existing skips).
+
+## Bounded `best_known_achievable` search (`sim/analysis/achievable_search.py`)
+
+Not a full game-tree search - deliberately out of scope for this project's declared Level 1-2
+model (no held priority, no opponent interaction modeled). Instead: a small, fixed, documented
+set of alternative lines per hand (every turn-1 land-drop choice in the opening 7, crossed with
+3 priority orderings, capped at 12 lines/hand) is explored, and a named target counts as
+`best_known_achievable` if *any* explored line reaches it - regardless of whether the single
+default greedy line (`policy_realized`, the exact same line the main census uses) got there.
+Run at 20,000 hands (disclosed reduced sample - each hand costs ~6x a normal single-line hand):
+
+| Target | policy_realized | best_known_achievable | gap |
+|---|---|---|---|
+| T1 premium engine | 6.2% | 6.7% | 0.6pp |
+| T1 two-drop engine | 3.1% | 3.5% | 0.4pp |
+| T1 any meaningful development | 32.2% | 40.7% | **8.4pp** |
+| T2 engine | 57.2% | 62.1% | 4.9pp |
+| T2 engine + interaction | 0.9% | 1.2% | 0.3pp |
+| T3 supported Tymna | 30.1% | 36.3% | 6.2pp |
+| T3 Thrasios activation | 3.0% | 4.3% | 1.4pp |
+| T3 Pod functional | 0.05% | 0.19% | 0.1pp |
+| T3 Survival functional | 1.2% | 2.4% | 1.2pp |
+| T3 Cradle 3+ | 1.4% | 1.7% | 0.4pp |
+| T3 deterministic win | 0.3% | 0.9% | 0.6pp |
+
+The gaps are modest (0.1-8.4 percentage points) - confirms the greedy policy is a reasonably
+good, not wildly suboptimal, development heuristic, while still proving it is not optimal and
+should not be the sole basis for calling a hand "incapable." `t1_any_meaningful_development` has
+the largest gap by far, meaning the biggest real lever this search finds is simply *which land
+to play turn 1* - consistent with Part B's finding below that land count dominates everything
+else.
+
+## Redesigned success metrics - no single composite headline
+
+Per the repair instruction, `meaningful_development_rate_t3` is now reported only under
+`secondary_convenience_metrics` (23.4% on the play, 25.5% on the draw) - **not** the principal
+target. The primary, separately-reported outcomes (`primary_outcomes` in
+`solo002r_opening_hand_census_{play,draw}.json`), on the play / on the draw:
+
+| Outcome | On the play | On the draw |
+|---|---|---|
+| T1 premium engine | 5.9% | 7.1% |
+| T1 two-drop engine | 3.1% | 3.4% |
+| T2 engine | 57.4% | 65.3% |
+| T2 engine + interaction | 0.9% | 1.0% |
+| T3 2+ engines | 45.3% | 55.7% |
+| T3 supported Tymna | 39.3% | 48.6% |
+| T3 Thrasios engine active (on battlefield) | 46.3% | 52.6% |
+| T3 Cradle 3+ | 1.5% | 2.1% |
+| T3 tutor-convertible | 1.4% | 1.7% |
+| T3 deterministic-win accessible | 0.3% | 0.4% |
+| T3 Pod functional | 0.04% | 0.08% |
+| T3 Survival functional | 1.0% | 1.3% |
+| Mean hand/resources remaining T3 | 4.65 cards | 5.06 cards |
+
+The draw baseline is uniformly stronger (extra card + Gemstone Caverns' real value both help),
+most visibly on T3 2+ engines (+10.4pp) and supported Tymna (+9.2pp).
+
+### Ranked failure-mode table (100k hands, on the play)
+
+| Failure mode | % of all hands | % of failures |
+|---|---|---|
+| Insufficient persistent mana (<2 by T3) | **66.6%** | 86.9% |
+| Tutor present but no viable sequencing | 4.2% | 5.4% |
+| No meaningful T1-T2 development at all | 1.6% | 2.1% |
+| Color failure (missing a required pip, all colors combined) | ~3% | ~4% |
+
+The dominant failure mode moved from a modest 12.4% (SOLO-002, buggy) to **66.6%** (corrected) -
+the single clearest signal that the original report's mana picture was badly overstated, and
+that mana availability (not engine density, tutor density, or interaction density) is this
+deck's real, primary bottleneck in the T1-3 window.
+
+## Part B — mulligan heuristics, recomputed on the corrected census (100k hands)
+
+Same feature set as SOLO-002 Part B (raw-7-card features only, before any land drop), recomputed
+against the corrected `meaningful_t3` outcome. **Land count remains completely dominant**, and by
+an even larger relative margin now that mana is the binding constraint:
+
+| Feature (in the raw 7) | Lift on "meaningful T3" |
+|---|---|
+| 2+ lands | still the largest positive lift by a wide margin |
+| Has any engine card | now **negative** lift (has_cheap_engine ≈ -0.025) |
+
+(Full ranked table in `solo002r_mulligan_heuristics.json`.) The same four candidate policies
+(A/B/C/D) from SOLO-002 were reused unchanged - Part B's job is deriving *features*, not
+redefining the policies, and the land-count-dominant conclusion did not change in kind, only in
+how much more decisive it now looks.
+
+## Part C/D — London mulligan simulation and policy comparison, rerun (100k hands total for C)
+
+| Policy | Keep-7% | Avg hand | Engine T1/T2/T3 | Dev+interaction T3 | Tutor castable T3 | Secondary meaningful T3 |
+|---|---|---|---|---|---|---|
+| A Engine-first | 54.0% | 6.19 | 23.7/69.8/86.6% | 2.4% | 1.9% | 30.8% |
+| B Agency-first | 48.0% | 5.99 | 22.7/67.5/84.2% | 2.3% | 1.8% | 28.8% |
+| C Speed-first | 89.9% | 6.89 | 19.4/60.4/78.3% | 2.0% | 1.6% | 26.0% |
+| D Tutor-inclusive | 59.6% | 6.34 | 21.8/68.7/86.9% | 2.4% | 1.8% | 29.9% |
+
+The keep-rate/avg-hand-size numbers are **identical** to SOLO-002's Part C, because the London
+mulligan decision itself is made on raw hand features before any mana is tapped - only the
+downstream T1-3 development numbers shift. The relative ranking of policies is preserved (D
+slightly edges A on both keep rate and success floor; C keeps the most cards but has the weakest
+floor), but every absolute development number is far lower than SOLO-002 reported, consistent
+with the corrected census above.
+
+## What SOLO-002R did NOT redo
+
+- **Part E**: not rerun as part of the *required* rerun protocol (only A-D were named), but was
+  rerun anyway for consistency (`solo002r_part_e_paired_demo.json`) since the harness itself
+  needed no changes - the corrected engine just makes its paired comparison more trustworthy too.
+- **Alternate turn-2/turn-3 land choices and alternate fetch targets** are not explored by the
+  bounded `best_known_achievable` search (disclosed scope reduction in
+  `achievable_search.py`'s own docstring) - only turn-1 land choice and priority-order
+  variation are. A hand could in principle achieve more via a turn-2/3 land choice this search
+  doesn't try.
+- **Mana Vault's {4}-untap-at-upkeep option** is still not offered to the policy (documented
+  simplification, unchanged from SOLO-002) - essentially never correct this early, but a true
+  completeness proof would need to consider it.
+- **Devoted Druid's own untap ability** ("Put a -1/-1 counter on this creature: Untap this
+  creature") is not modeled as a double-tap mana source - out of scope for this pass; the
+  deterministic combo it enables (`INT-0002`) is still tracked correctly via the verified
+  combo-dependency-graph check, which doesn't require simulating the loop itself.
+- **Exotic Orchard's opponent-dependent mana** is modeled as zero rather than run as explicit
+  opponent-land-assumption scenarios (the repair instruction's alternative option) - a real,
+  disclosed scope choice, not an oversight.
+
+All seven corrected files (`solo002r_opening_hand_census_play.json`,
+`solo002r_opening_hand_census_draw.json`, `solo002r_mulligan_heuristics.json`,
+`solo002r_mulligan_simulation.json`, `solo002r_part_d_policy_comparison.json`,
+`solo002r_achievable_search.json`, `solo002r_part_e_paired_demo.json`) carry `run_class:
+DECK_BACKED_GOLDFISH` provenance (`subject_deck_hash`, `subject_deck_card_count`,
+`commander_identities`) per `docs/RUN_CLASSIFICATION.md`, and the original SOLO-002 files are
+marked `status: SUPERSEDED_PENDING_CORRECTNESS_RERUN` with a `superseded_by` pointer, retained
+for provenance, not deleted.

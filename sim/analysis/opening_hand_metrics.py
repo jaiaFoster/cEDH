@@ -1,6 +1,27 @@
-"""SIM-001 SOLO-002 — per-hand metric extraction after development, matching
-the requested PRIMARY OUTPUT TABLE and CRITICAL SECONDARY OUTPUT (failure
-modes) exactly. Operates on a HandState snapshot at the end of a turn.
+"""SIM-001 SOLO-002R — per-hand metric extraction after development, matching the requested
+PRIMARY OUTPUT TABLE and CRITICAL SECONDARY OUTPUT (failure modes).
+
+CORRECTNESS-REPAIR NOTE: this module previously checked "is X also affordable" via
+`_affordable_in_isolation()`, which compared a cost against `turn_start_mana`/`turn_start_colors`
+(the turn's FULL starting capacity) regardless of what the greedy policy had already spent -
+i.e. an approximation that could claim two costs were both affordable even when they'd need the
+same single source. Two different, correctly-scoped replacements are used now:
+
+- `_individually_affordable_from_turn_capacity()` - the renamed, EXPLICITLY-LABELED survivor of
+  that old check. Retained deliberately (per the correctness-repair instruction: "A metric may
+  retain an explicitly named individually_affordable diagnostic, but it must not be presented as
+  simultaneous availability") for single-card "was this affordable at all this turn, judged
+  against the turn's full capacity" questions - e.g. "Tymna castable" in the sense of the
+  original spec's "legally castable this turn," independent of whether the greedy policy
+  actually chose to cast it (something else may have simply outranked it in priority).
+- `is_currently_castable()` (from opening_hand_policy) - a REAL read-only payment search against
+  whatever is CURRENTLY still untapped, used for every "retained/remaining/on-top-of" question
+  (live interaction after an engine, an activation after casting a commander) where the honest
+  answer depends on what was actually spent already.
+- `can_pay_jointly()` (from opening_hand_policy) - a real multi-cost dry-run+rollback, used
+  wherever MULTIPLE not-yet-committed costs must be shown simultaneously payable (combo pieces
+  still sitting in hand, a protected deterministic win) - never approximated by checking each
+  cost independently against the same untouched pool.
 """
 from opening_hand_model import (
     COLORS, parse_cost, CRADLE, MANA_SOURCES, ACCELERATION, TUTORS,
@@ -8,28 +29,21 @@ from opening_hand_model import (
     MOX_FAMILY, TUTOR_TARGETS,
     load_deterministic_combos,
 )
+from opening_hand_policy import is_currently_castable, can_pay_jointly, _try_pay, _commit_payment, _rollback_payment
+
+THRASIOS_ACTIVATION_COST = "{4}"
+POD_ACTIVATION_COST = "{1}{G/P}"
+SURVIVAL_ACTIVATION_COST = "{G}"
 
 
 def _creature_count(state, cards):
-    return sum(
-        1 for p in state.nonland_perms
-        if p.name in COMMANDERS or "Creature" in cards[p.name]["type"]
-    )
+    return state.creature_count()
 
 
-def _castable_now(state, cards, name):
-    if name not in state.hand:
-        return False
-    gen, pips, x = parse_cost(cards[name]["mana_cost"])
-    if x > 0:
-        return False
-    from opening_hand_policy import _try_pay
-    return _try_pay(state, gen, pips, set()) is not None
-
-
-def _affordable_in_isolation(cost_str, turn_start_mana, turn_start_colors):
-    """Would this cost have been payable using the turn's FULL mana pool, independent of what
-    the greedy policy actually spent it on this turn? See HandState.turn_start_mana docstring."""
+def _individually_affordable_from_turn_capacity(cost_str, turn_start_mana, turn_start_colors):
+    """EXPLICIT diagnostic (not a simultaneity claim): would this cost have been payable using
+    the turn's FULL mana capacity in isolation, independent of what the greedy policy actually
+    spent it on. See module docstring."""
     gen, pips, x = parse_cost(cost_str)
     if x > 0:
         return False
@@ -52,13 +66,6 @@ def snapshot_metrics(state, cards, combos):
     m["all_wubg"] = set(COLORS) <= colors
 
     battlefield_names = {p.name for p in state.nonland_perms}
-    # engines ON BATTLEFIELD and (for creatures) not summoning sick this turn - "active" for our
-    # purposes means: an artifact/enchantment engine is active immediately; a creature engine
-    # (e.g. Deathrite Shaman as a value piece) is "deployed" even if summoning sick, since most
-    # deck engines here are noncreature (documented simplification: creature-engine "activity" is
-    # approximated as deployed=active, since none of this deck's ENGINES list are creatures with a
-    # sickness-gated activated ability except Deathrite Shaman, which this model doesn't give mana
-    # from anyway).
     active_engines = [n for n in battlefield_names if n in ENGINES]
     m["engines_active"] = sorted(active_engines)
     m["engine_count"] = len(active_engines)
@@ -66,134 +73,205 @@ def snapshot_metrics(state, cards, combos):
     m["premium_engine_active"] = any(n in PREMIUM_ONE_DROP_ENGINES for n in active_engines)
     m["two_plus_engines_active"] = len(active_engines) >= 2
 
-    # Cards relevant "this turn" = still in hand OR already cast this turn by the greedy policy -
-    # affordability is checked against the turn's FULL mana pool (turn_start_mana/colors), not
-    # post-hoc remaining hand, because the greedy policy may have already spent the mana that
-    # would have paid for a tutor/interaction card, removing it from hand (see
-    # HandState.turn_start_mana's docstring for the full explanation of why this matters).
+    # "Retained interaction" is inherently a residual question - given whatever the policy
+    # ACTUALLY did this turn, is there still enough real mana left to also cast an interaction
+    # card? Checked live against current remaining untapped sources (is_currently_castable),
+    # never against the turn's full starting capacity.
     turn_hand = set(state.hand) | {n for (t, n, c) in state.cast_log if t == state.turn}
-    interaction_candidates = [n for n in turn_hand if n in INTERACTION_CASTABLE]
-    affordable_interaction = [
-        n for n in interaction_candidates
-        if _affordable_in_isolation(cards[n]["mana_cost"], state.turn_start_mana, state.turn_start_colors)
-    ]
-    m["live_interaction"] = sorted(affordable_interaction)
-    m["has_live_interaction"] = len(affordable_interaction) > 0
-    # Approximation (documented): "engine deployed this game" AND "an interaction card was
-    # affordable from this turn's full mana pool in isolation" - not a proof both are
-    # simultaneously payable from one shared pool (that needs full joint-payment search, out of
-    # scope for this pass). Directionally correct, not exact.
+    interaction_candidates = sorted(n for n in turn_hand if n in INTERACTION_CASTABLE)
+    live_interaction = []
+    for n in interaction_candidates:
+        gen, pips, x = parse_cost(cards[n]["mana_cost"])
+        if x == 0 and is_currently_castable(state, gen, pips):
+            live_interaction.append(n)
+    m["live_interaction"] = live_interaction
+    m["has_live_interaction"] = len(live_interaction) > 0
+    # Now a TRUE joint statement, not an approximation: any_engine_active reflects a real sunk
+    # deployment (mana already spent for real), and has_live_interaction is checked against what
+    # is genuinely still untapped after that - their conjunction is a correct joint fact.
     m["engine_plus_interaction"] = m["any_engine_active"] and m["has_live_interaction"]
     m["development_plus_interaction"] = (total_mana >= 2 or m["any_engine_active"]) and m["has_live_interaction"]
 
-    tutor_candidates = [n for n in turn_hand if n in TUTORS]
-    tutor_affordable = [
-        n for n in tutor_candidates
-        if _affordable_in_isolation(cards[n]["mana_cost"], state.turn_start_mana, state.turn_start_colors)
-    ]
-    m["tutor_in_hand"] = sorted([n for n in state.hand if n in TUTORS])
-    m["tutor_available"] = len(m["tutor_in_hand"]) > 0
-    m["tutor_castable"] = len(tutor_affordable) > 0
-    # What a currently-castable tutor can presently access, not "every possible card" (category 8:
-    # "Do not count a tutor as equivalent to every possible card if mana, timing, card type, or
-    # board requirements prevent that target" - target-class breadth is per-card, see
-    # TUTOR_TARGETS; board/mana gating on the FETCHED card itself, e.g. "can it be cast once
-    # found," is out of scope for this pass).
+    tutor_candidates_in_hand = sorted(n for n in state.hand if n in TUTORS)
+    m["tutor_in_hand"] = tutor_candidates_in_hand
+    m["tutor_available"] = len(tutor_candidates_in_hand) > 0
+    tutor_live = []
+    for n in (set(tutor_candidates_in_hand) | {n for (t, n, c) in state.cast_log if t == state.turn and n in TUTORS}):
+        gen, pips, x = parse_cost(cards[n]["mana_cost"])
+        if x == 0 and is_currently_castable(state, gen, pips):
+            tutor_live.append(n)
+    m["tutor_castable"] = len(tutor_live) > 0  # live/retained: "ALSO affordable on top of everything else"
     tutor_target_tags = set()
-    for n in tutor_affordable:
+    for n in tutor_live:
         tutor_target_tags |= TUTOR_TARGETS.get(n, frozenset())
+    # NOTE: reachable target CLASS only - not a claim that the fetched card could ALSO be
+    # deployed this same turn (that would need a tutor-then-cast joint search, out of scope here;
+    # see the correctness-repair write-up's scope disclosure).
     m["tutor_targets_accessible"] = sorted(tutor_target_tags)
 
     for cname, spec in COMMANDERS.items():
         gen, pips, x = parse_cost(spec["cost"])
         on_bf = cname in battlefield_names
-        # Commanders live in the command zone, not the library/hand - castable whenever still in
-        # the command zone (not yet cast) and affordable from this turn's full mana pool. Once
-        # cast, "castable" is reported False (it's on the battlefield, not awaiting a cast).
-        castable = (cname in state.command_zone) and _affordable_in_isolation(spec["cost"], state.turn_start_mana, state.turn_start_colors)
-        m[f"{cname}_castable"] = castable
+        still_pending = cname in state.command_zone
+        # "Castable" = the original spec's "legally castable this turn" - a CAPACITY question
+        # (was the turn's mana, in total, enough), independent of whether the greedy policy's
+        # priority order chose to actually cast it. Deliberately the explicit
+        # individually_affordable diagnostic, not a simultaneity claim (see module docstring).
+        castable_capacity = still_pending and _individually_affordable_from_turn_capacity(
+            spec["cost"], state.turn_start_mana, state.turn_start_colors
+        )
+        m[f"{cname}_castable"] = castable_capacity
         m[f"{cname}_on_battlefield"] = on_bf
         if cname == "Tymna the Weaver":
-            m["tymna_creatures_for_attack"] = _creature_count(state, cards)
-            m["tymna_supported"] = on_bf and _creature_count(state, cards) >= 1
+            m["tymna_creatures_for_attack"] = state.creature_count()
+            m["tymna_supported"] = on_bf and state.creature_count() >= 1
         if cname == "Thrasios, Triton Hero":
-            remaining_after = max(0, total_mana - (gen + len(pips))) if castable else total_mana
-            m["thrasios_mana_after_cast"] = remaining_after
-            m["thrasios_activatable_soon"] = remaining_after >= 4 or on_bf
+            # "commander + activation uses shared mana correctly" (regression test #10): a REAL
+            # live check, since this asks about capacity actually remaining after a real cast.
+            act_gen, act_pips, _ = parse_cost(THRASIOS_ACTIVATION_COST)
+            m["thrasios_activation_now"] = on_bf and is_currently_castable(state, act_gen, act_pips)
+            # secondary, explicitly-approximate forward-looking projection (not primary) - kept
+            # only as a coarse "does next turn look plausible" diagnostic.
+            m["thrasios_activatable_soon_approx"] = m["thrasios_activation_now"] or (on_bf and total_mana >= 2)
 
-    cradle_on_bf = CRADLE in state.lands
+    cradle_on_bf = CRADLE in [l.name for l in state.lands]
     m["cradle_on_battlefield"] = cradle_on_bf
     m["cradle_in_hand"] = CRADLE in state.hand
-    creature_ct = _creature_count(state, cards)
+    creature_ct = state.creature_count()
     m["cradle_output_if_deployed"] = creature_ct if cradle_on_bf else 0
+    m["cradle_2plus"] = cradle_on_bf and creature_ct >= 2
     m["cradle_3plus"] = cradle_on_bf and creature_ct >= 3
+    m["cradle_5plus"] = cradle_on_bf and creature_ct >= 5
 
-    def _functional(name, sac_or_discard_available, activation_mana):
+    def _functional(name, activation_cost_str, sac_body_available):
         in_hand = name in state.hand
-        castable = in_hand and _castable_now(state, cards, name)
+        castable_capacity = in_hand and _individually_affordable_from_turn_capacity(
+            cards[name]["mana_cost"], state.turn_start_mana, state.turn_start_colors
+        )
         on_bf = name in battlefield_names
+        act_gen, act_pips, _ = parse_cost(activation_cost_str)
+        activation_mana_now = on_bf and is_currently_castable(state, act_gen, act_pips)
         return {
-            "in_hand": in_hand, "castable": castable, "on_battlefield": on_bf,
-            "usable_now": on_bf and sac_or_discard_available and activation_mana,
+            "in_hand": in_hand, "castable": castable_capacity, "on_battlefield": on_bf,
+            "activation_mana_available": activation_mana_now,
+            "usable_now": on_bf and sac_body_available and activation_mana_now,
         }
     pod_body_available = creature_ct >= 1
-    m["birthing_pod"] = _functional("Birthing Pod", pod_body_available, total_mana >= 2)
+    m["birthing_pod"] = _functional("Birthing Pod", POD_ACTIVATION_COST, pod_body_available)
     survival_discard_available = any(
         "Creature" in cards[c]["type"] for c in state.hand if c != "Survival of the Fittest"
     )
-    m["survival_of_the_fittest"] = _functional("Survival of the Fittest", survival_discard_available, total_mana >= 1)
+    m["survival_of_the_fittest"] = _functional("Survival of the Fittest", SURVIVAL_ACTIVATION_COST, survival_discard_available)
 
-    # Deliberately NOT "natural co-location" (the user's spec explicitly warns against measuring
-    # only whether the named cards were drawn together) - a card sitting in the graveyard or exile
-    # isn't castable, and a card sitting in hand that's unaffordable this turn isn't a live win
-    # either. "zero_step" requires every combo piece to be either already deployed on the
-    # battlefield, or in hand and individually affordable from this turn's full mana pool
-    # (approximation, documented: doesn't prove joint payability of multiple hand pieces from one
-    # shared pool - same tradeoff as engine_plus_interaction above). Pieces not seen at all need a
-    # tutor/draw; pieces seen in hand but presently uncastable need another turn's mana, not a
-    # tutor - both count as "missing" for the one/two-actions-away tiers, but are tracked
-    # separately so tutor-gated cases aren't conflated with mana-gated ones.
-    has_tutor = bool(tutor_affordable or tutor_candidates)
+    # Combo accessibility - a REAL joint check for hand-still-uncast pieces (not "natural
+    # co-location," and not independent per-piece isolation, which can silently double-count a
+    # single shared source). Pieces already on the battlefield are sunk (need no further mana);
+    # pieces still in hand are tentatively committed together via can_pay_jointly's underlying
+    # search-then-rollback, so a "zero_step" claim reflects a real simultaneous allocation.
+    battlefield_and_lands = battlefield_names | {l.name for l in state.lands}
+    has_tutor_live = len(tutor_live) > 0 or len(tutor_candidates_in_hand) > 0
     combo_status = {}
+    combo_protected = {}
     for combo in combos:
-        deployed = [c for c in combo["cards"] if c in battlefield_names]
-        in_hand = [c for c in combo["cards"] if c in state.hand and c not in battlefield_names]
-        unseen = [c for c in combo["cards"] if c not in battlefield_names and c not in state.hand]
-        hand_stuck = [
-            c for c in in_hand
-            if not _affordable_in_isolation(cards[c]["mana_cost"], state.turn_start_mana, state.turn_start_colors)
-        ]
+        in_hand = [c for c in combo["cards"] if c in state.hand and c not in battlefield_and_lands]
+        unseen = [c for c in combo["cards"] if c not in battlefield_and_lands and c not in state.hand]
+        has_x_piece = False
+        payable_costs = []
+        for c in in_hand:
+            gen, pips, x = parse_cost(cards[c]["mana_cost"])
+            if x > 0:
+                has_x_piece = True  # X-cost pieces not modeled by this greedy dev policy at all
+            else:
+                payable_costs.append((gen, pips))
+        if has_x_piece:
+            jointly_payable = False
+        elif payable_costs:
+            jointly_payable = can_pay_jointly(state, payable_costs)
+        else:
+            jointly_payable = True  # no in-hand pieces need casting (everything else is sunk/deployed)
+        # If the joint check fails we don't know exactly which piece(s) are the bottleneck (a
+        # real diagnosis would need its own backtracking search) - conservatively treat ALL
+        # in-hand pieces as "stuck" for the missing-count tiering below.
+        hand_stuck = [] if jointly_payable else list(in_hand)
         missing = len(unseen) + len(hand_stuck)
         if missing == 0:
             status = "zero_step"
-        elif missing == 1 and unseen and has_tutor:
+        elif missing == 1 and unseen and has_tutor_live:
             status = "one_action_away"
         elif missing == 1:
             status = "one_action_away_no_tutor"
-        elif missing == 2 and len(unseen) >= 1 and has_tutor:
+        elif missing == 2 and len(unseen) >= 1 and has_tutor_live:
             status = "two_actions_away"
         else:
             status = "not_close"
         combo_status[combo["id"]] = status
+
+        protected = False
+        if status == "zero_step" and payable_costs:
+            # "protected deterministic win states": while the combo pieces' mana is still
+            # tentatively committed, check whether an interaction card is ALSO jointly payable -
+            # a real joint check across combo assembly AND protection, not two separate isolated
+            # checks.
+            plan_list = []
+            all_ok = True
+            for gen, pips in payable_costs:
+                plan = _try_pay(state, gen, pips)
+                if plan is None:
+                    all_ok = False
+                    break
+                _commit_payment(state, plan)
+                plan_list.append(plan)
+            if all_ok:
+                for n in interaction_candidates:
+                    gen, pips, x = parse_cost(cards[n]["mana_cost"])
+                    if x == 0 and is_currently_castable(state, gen, pips):
+                        protected = True
+                        break
+            _rollback_payment(state, plan_list)
+        elif status == "zero_step" and not payable_costs:
+            # every piece already deployed - protection just needs a normal live interaction check
+            protected = m["has_live_interaction"]
+        combo_protected[combo["id"]] = protected
+
     m["combo_status"] = combo_status
+    m["combo_protected"] = combo_protected
     m["deterministic_win_available"] = any(v == "zero_step" for v in combo_status.values())
+    m["deterministic_win_protected"] = any(combo_protected.get(k) for k, v in combo_status.items() if v == "zero_step")
     m["one_action_from_verified_win"] = any(v.startswith("one_action_away") for v in combo_status.values())
     m["two_actions_from_verified_win"] = any(v == "two_actions_away" for v in combo_status.values())
 
     m["cards_in_hand"] = len(state.hand)
     persistent = [p.name for p in state.nonland_perms if not MANA_SOURCES.get(p.name, {}).get("one_shot")]
     m["persistent_nonland_permanents"] = len(persistent)
-    temp_used_this_snapshot = len(state.temp_mana_used_log)
-    m["temporary_resources_consumed"] = temp_used_this_snapshot
+    m["temporary_resources_consumed"] = len(state.temp_mana_used_log)
 
     return m
 
 
+def classify_failure_mode(m_t3, state, cards):
+    """Best-effort single dominant reason a hand failed to reach meaningful T3 development
+    ('meaningful' = mana_2plus AND (any_engine_active OR tutor_castable OR has_live_interaction)).
+    This composite is now explicitly a SECONDARY convenience metric, not the principal target -
+    see the redesigned separate primary-outcome table in run_opening_hand_census.py."""
+    meaningful = m_t3["mana_2plus"] and (m_t3["any_engine_active"] or m_t3["tutor_castable"] or m_t3["has_live_interaction"])
+    if meaningful:
+        return None
+    if m_t3["total_mana"] < 2:
+        return "insufficient_persistent_mana"
+    if not m_t3["all_wubg"] and m_t3["total_mana"] >= 3:
+        missing = set(COLORS) - set(m_t3["colors_available"])
+        return f"color_failure_missing_{''.join(sorted(missing))}"
+    if m_t3["has_live_interaction"] and not m_t3["any_engine_active"]:
+        return "interaction_only_no_engine"
+    if not m_t3["any_engine_active"] and not m_t3["tutor_available"]:
+        return "no_meaningful_t1_t2_development"
+    if m_t3["tutor_available"] and not m_t3["tutor_castable"]:
+        return "tutor_but_no_viable_sequencing"
+    return "no_meaningful_t1_t2_development"
+
+
 def classify_failure_reasons_detailed(m_t3, state, cards):
-    """Multi-label granular failure diagnostics (category 14's full requested taxonomy), unlike
-    classify_failure_mode's single dominant reason (kept separately for the primary failure_table
-    so that table's schema/history stays stable). A hand can carry more than one tag; percentages
-    in the aggregate report sum to more than 100% by design."""
+    """Multi-label granular failure diagnostics (category 14's full requested taxonomy)."""
     tags = []
     total_mana = m_t3["total_mana"]
     if total_mana < 2:
@@ -206,8 +284,8 @@ def classify_failure_reasons_detailed(m_t3, state, cards):
         tags.append("no_second_land")
         if any(n in MOX_FAMILY for n in battlefield_names):
             tags.append("mox_dependency")
-    cradle_present = CRADLE in state.hand or CRADLE in state.lands
-    if cradle_present and _creature_count(state, cards) == 0:
+    cradle_present = CRADLE in state.hand or CRADLE in [l.name for l in state.lands]
+    if cradle_present and state.creature_count() == 0:
         tags.append("no_creature_for_cradle")
     if "Chrome Mox" in state.hand and not any(
         h != "Chrome Mox" and "Land" not in cards[h]["type"] for h in state.hand
@@ -227,11 +305,8 @@ def classify_failure_reasons_detailed(m_t3, state, cards):
 
 
 def tag_archetype(m1, m2, m3, failure_mode_t3):
-    """Rule-based opening-hand archetype tags (category 15), evaluated on structural T1-T3
-    behavior. Multi-label - a hand can match more than one archetype. Deliberately NOT a
-    hard-coded exhaustive taxonomy claim: this is a starting rule set, not a data-derived
-    clustering (that would need a real clustering pass over the raw per-hand feature vectors,
-    scoped down for this run - see write-up for disclosure)."""
+    """Rule-based opening-hand archetype tags (category 15) - a starting taxonomy, not a
+    data-derived clustering (disclosed scope reduction, see write-up)."""
     tags = []
     if m3["any_engine_active"]:
         tags.append("engine_hand")
@@ -243,7 +318,7 @@ def tag_archetype(m1, m2, m3, failure_mode_t3):
         tags.append("creature_development_hand")
     if m3["temporary_resources_consumed"] >= 2:
         tags.append("burst_mana_hand")
-    if m2.get("tymna_supported") or m2.get("thrasios_activatable_soon"):
+    if m2.get("tymna_supported") or m2.get("thrasios_activation_now"):
         tags.append("commander_hand")
     if m3["deterministic_win_available"] or m3["one_action_from_verified_win"]:
         tags.append("combo_hand")
@@ -252,23 +327,3 @@ def tag_archetype(m1, m2, m3, failure_mode_t3):
     if not tags:
         tags.append("unclassified_hand")
     return tags
-
-
-def classify_failure_mode(m_t3, state, cards):
-    """Best-effort single dominant reason a hand failed to reach meaningful T3 development
-    ('meaningful' = mana_2plus AND (any_engine_active OR tutor_castable OR has_live_interaction))."""
-    meaningful = m_t3["mana_2plus"] and (m_t3["any_engine_active"] or m_t3["tutor_castable"] or m_t3["has_live_interaction"])
-    if meaningful:
-        return None
-    if m_t3["total_mana"] < 2:
-        return "insufficient_persistent_mana"
-    if not m_t3["all_wubg"] and m_t3["total_mana"] >= 3:
-        missing = set(COLORS) - set(m_t3["colors_available"])
-        return f"color_failure_missing_{''.join(sorted(missing))}"
-    if m_t3["has_live_interaction"] and not m_t3["any_engine_active"]:
-        return "interaction_only_no_engine"
-    if not m_t3["any_engine_active"] and not m_t3["tutor_available"]:
-        return "no_meaningful_t1_t2_development"
-    if m_t3["tutor_available"] and not m_t3["tutor_castable"]:
-        return "tutor_but_no_viable_sequencing"
-    return "no_meaningful_t1_t2_development"

@@ -1,7 +1,4 @@
 {
-  "status": "SUPERSEDED_PENDING_CORRECTNESS_RERUN",
-  "superseded_reason": "SIM-001 SOLO-002R correctness repair: the native simulator this run used did not mark mana sources tapped/spent for the remainder of a turn (a land, mana dork, Sol Ring, Mana Vault, Mox, etc. could be reused an unbounded number of times within one turn), Gaea's Cradle was modeled as a flat 1-mana land instead of {G} per creature controlled, several special lands (Gemstone Caverns, City of Traitors, Exotic Orchard, fetchlands) were not modeled per their real Oracle text, and several combination metrics (engine+interaction, combo zero-step, commander+activation) approximated simultaneous availability instead of proving it via a real joint payment search. All of these are fixed in the corrected rerun. This file is RETAINED FOR PROVENANCE ONLY - do not cite its numbers for primer claims or deckbuilding changes.",
-  "superseded_by": "results/solo_baseline/solo002r_part_e_paired_demo.json",
   "run_class": "DECK_BACKED_GOLDFISH",
   "evidence_type": "goldfish",
   "subject_deck_version": "tymna-thrasios-treefarm-v1",
@@ -34,32 +31,32 @@
     "ablation_justification": "Infrastructure demonstration of the paired-seed harness (Part E): Birthing Pod replaced with a synthetic basic Forest to test whether the harness correctly isolates a single card's effect via seed-matched paired reruns (sign test on per-hand outcome pairs), independent of sampling noise. Not a deckbuilding recommendation - see this file's module docstring."
   },
   "variant_a_rates": {
-    "mana_2plus_t1": 0.25956,
-    "any_engine_active_t3": 0.78974,
-    "meaningful_t3": 0.79726
+    "mana_2plus_t1": 0.13708,
+    "any_engine_active_t3": 0.74832,
+    "meaningful_t3": 0.23446
   },
   "variant_b_rates": {
-    "mana_2plus_t1": 0.26332,
-    "any_engine_active_t3": 0.7925,
-    "meaningful_t3": 0.80548
+    "mana_2plus_t1": 0.13908,
+    "any_engine_active_t3": 0.7514,
+    "meaningful_t3": 0.245
   },
   "paired_sign_test": {
     "mana_2plus_t1": {
-      "variant_a_only": 1,
-      "variant_b_only": 189,
-      "net": 188
+      "variant_a_only": 10,
+      "variant_b_only": 110,
+      "net": 100
     },
     "any_engine_active_t3": {
-      "variant_a_only": 114,
-      "variant_b_only": 252,
-      "net": 138
+      "variant_a_only": 107,
+      "variant_b_only": 261,
+      "net": 154
     },
     "meaningful_t3": {
-      "variant_a_only": 72,
-      "variant_b_only": 483,
-      "net": 411
+      "variant_a_only": 174,
+      "variant_b_only": 701,
+      "net": 527
     }
   },
-  "elapsed_seconds": 73.21364045143127,
+  "elapsed_seconds": 90.79477977752686,
   "note": "Infrastructure demonstration only - proves seed-matched paired reruns work and isolate a swap's effect via a sign test on per-hand outcome pairs, rather than reporting only two independent aggregate rates that could disagree by sampling luck alone. The specific swap (a functional, situational tutor-engine for a basic land) is not a deckbuilding recommendation."
 }

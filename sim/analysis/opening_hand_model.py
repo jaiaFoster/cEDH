@@ -78,21 +78,60 @@ def parse_cost(mana_cost_str):
 # ---- land / mana source model ------------------------------------------
 
 LAND_COLOR_SETS = {
+    # Plain single/multi-color-choice lands: 1 mana of ONE color from this set, per tap.
     "Bayou": {"B", "G"}, "Boseiju, Who Endures": {"G"}, "City of Brass": {"W", "U", "B", "G"},
-    "Command Tower": {"W", "U", "B", "G"}, "Exotic Orchard": {"W", "U", "B", "G"},
-    "Flooded Strand": {"U", "W"}, "Gaea's Cradle": {"G"}, "Mana Confluence": {"W", "U", "B", "G"},
-    "Marsh Flats": {"B", "W"}, "Minamo, School at Water's Edge": {"U"}, "Misty Rainforest": {"G", "U"},
-    "Otawara, Soaring City": {"U"}, "Polluted Delta": {"B", "U"}, "Savannah": {"G", "W"},
+    "Command Tower": {"W", "U", "B", "G"}, "Mana Confluence": {"W", "U", "B", "G"},
+    "Minamo, School at Water's Edge": {"U"}, "Otawara, Soaring City": {"U"}, "Savannah": {"G", "W"},
     "Scrubland": {"B", "W"}, "Shifting Woodland": {"G"}, "Starting Town": {"W", "U", "B", "G"},
     "Talon Gates of Madara": {"W", "U", "B", "G"}, "Tropical Island": {"G", "U"},
-    "Tundra": {"U", "W"}, "Underground Sea": {"B", "U"}, "Verdant Catacombs": {"B", "G"},
-    "Windswept Heath": {"G", "W"}, "Wooded Foothills": {"G"}, "Gemstone Caverns": {"W", "U", "B", "G"},
+    "Tundra": {"U", "W"}, "Underground Sea": {"B", "U"},
+    # Gaea's Cradle: this is what colors it CAN produce - the AMOUNT ({G} for each creature you
+    # control, real Oracle text) is dynamic and handled specially in opening_hand_policy.py's
+    # available_sources(), never a flat 1-mana entry.
+    "Gaea's Cradle": {"G"},
+    # Gemstone Caverns and Exotic Orchard are NOT flat any-color sources - see
+    # GEMSTONE_CAVERNS/EXOTIC_ORCHARD handling below and in opening_hand_policy.py. Fetchlands
+    # (Flooded Strand etc.) are not mana sources in their own right at all - see
+    # FETCH_LAND_TARGET_TYPES; they resolve immediately into a real fetched land, or (rarely, if
+    # no legal target remains) fizzle, when played.
 }
 GENERIC_LANDS = {"Ancient Tomb": 2, "City of Traitors": 2}
-FETCH_LANDS = {"Flooded Strand", "Marsh Flats", "Misty Rainforest", "Polluted Delta", "Verdant Catacombs", "Windswept Heath", "Wooded Foothills"}
+ANCIENT_TOMB_LIFE_LOSS = 2  # "This land deals 2 damage to you" on tap
+GEMSTONE_CAVERNS = "Gemstone Caverns"
+EXOTIC_ORCHARD = "Exotic Orchard"
+CITY_OF_TRAITORS = "City of Traitors"
 CRADLE = "Gaea's Cradle"
 
-# nonland mana sources: name -> dict(kind, colors|generic, is_creature, one_shot, requires)
+FETCH_LANDS = {"Flooded Strand", "Marsh Flats", "Misty Rainforest", "Polluted Delta", "Verdant Catacombs", "Windswept Heath", "Wooded Foothills"}
+
+# Real basic land types printed on each fetchland's two search targets (Oracle text, not the
+# fetch's "apparent" color pair) and on the deck's own lands that actually carry a basic type -
+# only these are legal fetch targets. This deck has zero true basic lands; the only fetchable
+# cards are the six ABUR duals below, each of which really does carry two basic land subtypes
+# (e.g. Bayou is "Land — Swamp Forest"). Computed once from data/cards_cache type_lines, not
+# assumed - see the correctness-repair commit for the verification query.
+FETCH_LAND_TARGET_TYPES = {
+    "Flooded Strand": frozenset({"Plains", "Island"}),
+    "Marsh Flats": frozenset({"Plains", "Swamp"}),
+    "Misty Rainforest": frozenset({"Forest", "Island"}),
+    "Polluted Delta": frozenset({"Island", "Swamp"}),
+    "Verdant Catacombs": frozenset({"Swamp", "Forest"}),
+    "Windswept Heath": frozenset({"Forest", "Plains"}),
+    "Wooded Foothills": frozenset({"Mountain", "Forest"}),
+}
+DUAL_LAND_BASIC_TYPES = {
+    "Bayou": frozenset({"Swamp", "Forest"}),
+    "Savannah": frozenset({"Forest", "Plains"}),
+    "Scrubland": frozenset({"Plains", "Swamp"}),
+    "Tropical Island": frozenset({"Forest", "Island"}),
+    "Tundra": frozenset({"Plains", "Island"}),
+    "Underground Sea": frozenset({"Island", "Swamp"}),
+}
+# maps color letter -> basic type name, for need_colors-aware fetch-target scoring
+BASIC_TYPE_COLOR = {"Plains": "W", "Island": "U", "Swamp": "B", "Forest": "G", "Mountain": "R"}
+
+# nonland mana sources: name -> dict(kind, colors|generic, is_creature, one_shot, requires,
+# never_untaps)
 MANA_SOURCES = {
     "Avacyn's Pilgrim": {"colors": {"W"}, "creature": True},
     "Birds of Paradise": {"colors": set(COLORS), "creature": True},
@@ -102,7 +141,7 @@ MANA_SOURCES = {
     "Noble Hierarch": {"colors": {"W", "U", "G"}, "creature": True},
     "Chrome Mox": {"colors": set(COLORS), "creature": False, "requires_imprint": True},
     "Lotus Petal": {"colors": set(COLORS), "creature": False, "one_shot": True},
-    "Mana Vault": {"generic": 3, "creature": False},
+    "Mana Vault": {"generic": 3, "creature": False, "never_untaps": True},
     "Mox Amber": {"colors": set(COLORS), "creature": False, "requires_legendary": True},
     "Mox Diamond": {"colors": set(COLORS), "creature": False, "requires_land_discard": True},
     "Sol Ring": {"generic": 2, "creature": False},

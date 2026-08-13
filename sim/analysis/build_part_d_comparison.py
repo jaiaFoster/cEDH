@@ -12,8 +12,8 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-IN_PATH = REPO_ROOT / "results" / "solo_baseline" / "solo002_mulligan_simulation.json"
-OUT_PATH = REPO_ROOT / "results" / "solo_baseline" / "solo002_part_d_policy_comparison.json"
+IN_PATH = REPO_ROOT / "results" / "solo_baseline" / "solo002r_mulligan_simulation.json"
+OUT_PATH = REPO_ROOT / "results" / "solo_baseline" / "solo002r_part_d_policy_comparison.json"
 
 
 def main():
@@ -31,21 +31,27 @@ def main():
             "tymna_castable_t3": pt["Tymna the Weaver_castable"]["3"],
             "tymna_supported_t3": pt["tymna_supported"]["3"],
             "thrasios_castable_t3": pt["Thrasios, Triton Hero_castable"]["3"],
-            "thrasios_activatable_soon_t3": pt["thrasios_activatable_soon"]["3"],
+            "thrasios_activation_now_t3": pt["thrasios_activation_now"]["3"],
             "tutor_available_t3": pt["tutor_available"]["3"],
             "tutor_castable_t3": pt["tutor_castable"]["3"],
             "one_action_from_verified_win_t3": pt["one_action_from_verified_win"]["3"],
             "deterministic_win_available_t3": pt["deterministic_win_available"]["3"],
-            "overall_meaningful_development_rate_t3": agg["overall_meaningful_development_rate_t3"],
+            "deterministic_win_protected_t3": pt["deterministic_win_protected"]["3"],
+            # secondary convenience metric only - per the redesigned success-metric instruction,
+            # NOT used to rank/declare a single "best" policy; see the separate columns above.
+            "secondary_meaningful_development_rate_t3": agg["overall_meaningful_development_rate_t3"],
             "top_3_failure_modes": list(agg["overall_failure_table"].items())[:3],
         }
     out = {
-        "run_class": "STATIC_ANALYSIS",
+        "run_class": "DECK_BACKED_GOLDFISH",
+        "evidence_type": "goldfish",
         "phase": "SIM_001_SOLO_002_PART_D",
         "source": str(IN_PATH.relative_to(REPO_ROOT)),
         "note": (
             "Policy E (seat-aware) is explicitly deferred to pod simulations per the user's own "
-            "spec and is not compared here."
+            "spec and is not compared here. Multi-objective by design: no single composite score "
+            "is computed or used to declare one policy universally best - compare the separate "
+            "columns per the tradeoff each represents."
         ),
         "comparison": rows,
     }
@@ -65,7 +71,7 @@ def main():
             f"{r['any_engine_active']['3']*100:.1f}",
             f"{r['development_plus_interaction']['3']*100:.1f}",
             f"{r['tutor_castable_t3']*100:.1f}",
-            f"{r['overall_meaningful_development_rate_t3']*100:.1f}",
+            f"{r['secondary_meaningful_development_rate_t3']*100:.1f}",
         ]))
 
 

@@ -1,0 +1,498 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_SOLO_002_PART_B",
+  "sample_count": 100000,
+  "seed": 42,
+  "on_play": true,
+  "elapsed_seconds": 55.34316873550415,
+  "note": "Features are computed on the raw 7-card hand only, before any land drop or cast - matching what a real mulligan decision can actually see. Lift = P(T3 outcome | feature present) - P(T3 outcome | feature absent), over the SAME keep-everything population as Part A (no mulliganing here - see run_mulligan_sim.py for Part C).",
+  "correlation_table": {
+    "land_count_2plus": {
+      "meaningful_t3": {
+        "p_given_feature": 0.3015096337413569,
+        "p_given_not_feature": 0.13762710064512704,
+        "lift": 0.16388253309622988,
+        "feature_prevalence": 0.62333
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.8906678645340349,
+        "p_given_not_feature": 0.513101653967664,
+        "lift": 0.37756621056637085,
+        "feature_prevalence": 0.62333
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.016524152535575057,
+        "p_given_not_feature": 0.006690206281360342,
+        "lift": 0.009833946254214715,
+        "feature_prevalence": 0.62333
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.026069658126514045,
+        "p_given_not_feature": 0.015504287572676348,
+        "lift": 0.010565370553837697,
+        "feature_prevalence": 0.62333
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3913176006288804,
+        "p_given_not_feature": 0.2533251918124618,
+        "lift": 0.13799240881641855,
+        "feature_prevalence": 0.62333
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.974299327803892,
+        "p_given_not_feature": 0.9934956327820108,
+        "lift": -0.01919630497811886,
+        "feature_prevalence": 0.62333
+      }
+    },
+    "land_count_3plus": {
+      "meaningful_t3": {
+        "p_given_feature": 0.3087909465862222,
+        "p_given_not_feature": 0.2111288793286444,
+        "lift": 0.09766206725757778,
+        "feature_prevalence": 0.29337
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.9427003442751474,
+        "p_given_not_feature": 0.6678035181070716,
+        "lift": 0.27489682616807576,
+        "feature_prevalence": 0.29337
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.015884378089102497,
+        "p_given_not_feature": 0.011547768988013529,
+        "lift": 0.004336609101088969,
+        "feature_prevalence": 0.29337
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.025360466305348196,
+        "p_given_not_feature": 0.020732207803235075,
+        "lift": 0.004628258502113122,
+        "feature_prevalence": 0.29337
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3852472986331254,
+        "p_given_not_feature": 0.3202807692851988,
+        "lift": 0.06496652934792663,
+        "feature_prevalence": 0.29337
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9731738078194772,
+        "p_given_not_feature": 0.9849992216577276,
+        "lift": -0.01182541383825042,
+        "feature_prevalence": 0.29337
+      }
+    },
+    "all_wubg_in_lands": {
+      "meaningful_t3": {
+        "p_given_feature": 0.26912198534107845,
+        "p_given_not_feature": 0.22540562284896973,
+        "lift": 0.043716362492108723,
+        "feature_prevalence": 0.32881
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.9196800583923846,
+        "p_given_not_feature": 0.6645659202312311,
+        "lift": 0.2551141381611536,
+        "feature_prevalence": 0.32881
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.018551747209634744,
+        "p_given_not_feature": 0.010012068117820587,
+        "lift": 0.008539679091814157,
+        "feature_prevalence": 0.32881
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.02709771600620419,
+        "p_given_not_feature": 0.01963676455251121,
+        "lift": 0.007460951453692979,
+        "feature_prevalence": 0.32881
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.37365043642224993,
+        "p_given_not_feature": 0.3225316229383632,
+        "lift": 0.05111881348388675,
+        "feature_prevalence": 0.32881
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9765822207353791,
+        "p_given_not_feature": 0.9839538729718857,
+        "lift": -0.007371652236506598,
+        "feature_prevalence": 0.32881
+      }
+    },
+    "has_cheap_engine": {
+      "meaningful_t3": {
+        "p_given_feature": 0.22609644337770018,
+        "p_given_not_feature": 0.2513568395791028,
+        "lift": -0.025260396201402635,
+        "feature_prevalence": 0.4583
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.7798603534802531,
+        "p_given_not_feature": 0.7218755768875762,
+        "lift": 0.05798477659267687,
+        "feature_prevalence": 0.4583
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.009622518001309185,
+        "p_given_not_feature": 0.015525198449326195,
+        "lift": -0.005902680448017009,
+        "feature_prevalence": 0.4583
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.018765001090988435,
+        "p_given_not_feature": 0.02490308288720694,
+        "lift": -0.006138081796218504,
+        "feature_prevalence": 0.4583
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3769801440104735,
+        "p_given_not_feature": 0.3074949233893299,
+        "lift": 0.0694852206211436,
+        "feature_prevalence": 0.4583
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.981016801221907,
+        "p_given_not_feature": 0.9819641868192727,
+        "lift": -0.0009473855973656242,
+        "feature_prevalence": 0.4583
+      }
+    },
+    "has_premium_one_drop": {
+      "meaningful_t3": {
+        "p_given_feature": 0.26721086469695876,
+        "p_given_not_feature": 0.2353726336803742,
+        "lift": 0.03183823101658456,
+        "feature_prevalence": 0.13843
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.8101567579281947,
+        "p_given_not_feature": 0.7385354643267523,
+        "lift": 0.07162129360144243,
+        "feature_prevalence": 0.13843
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.007440583688506827,
+        "p_given_not_feature": 0.013684320484696543,
+        "lift": -0.006243736796189716,
+        "feature_prevalence": 0.13843
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.02029906812107202,
+        "p_given_not_feature": 0.022377752242998247,
+        "lift": -0.002078684121926227,
+        "feature_prevalence": 0.13843
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.5287148739435094,
+        "p_given_not_feature": 0.3089127987279037,
+        "lift": 0.21980207521560563,
+        "feature_prevalence": 0.13843
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9742107924582821,
+        "p_given_not_feature": 0.9827059902271434,
+        "lift": -0.008495197768861318,
+        "feature_prevalence": 0.13843
+      }
+    },
+    "has_any_engine_card": {
+      "meaningful_t3": {
+        "p_given_feature": 0.21556797241871248,
+        "p_given_not_feature": 0.2895927601809955,
+        "lift": -0.07402478776228302,
+        "feature_prevalence": 0.67292
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.7550228853355525,
+        "p_given_not_feature": 0.7349272349272349,
+        "lift": 0.020095650408317622,
+        "feature_prevalence": 0.67292
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.00869345538845628,
+        "p_given_not_feature": 0.02130977130977131,
+        "lift": -0.01261631592131503,
+        "feature_prevalence": 0.67292
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.018442013909528623,
+        "p_given_not_feature": 0.0295952060657943,
+        "lift": -0.011153192156265677,
+        "feature_prevalence": 0.67292
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.35597099209415684,
+        "p_given_not_feature": 0.30512412865354044,
+        "lift": 0.0508468634406164,
+        "feature_prevalence": 0.67292
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9834898650656839,
+        "p_given_not_feature": 0.9774978598508011,
+        "lift": 0.005992005214882856,
+        "feature_prevalence": 0.67292
+      }
+    },
+    "has_tutor": {
+      "meaningful_t3": {
+        "p_given_feature": 0.20876661643815178,
+        "p_given_not_feature": 0.3028235222758014,
+        "lift": -0.09405690583764961,
+        "feature_prevalence": 0.67027
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.7149954495949393,
+        "p_given_not_feature": 0.8164558881509113,
+        "lift": -0.10146043855597198,
+        "feature_prevalence": 0.67027
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.01521774807167261,
+        "p_given_not_feature": 0.00794589512631547,
+        "lift": 0.00727185294535714,
+        "feature_prevalence": 0.67027
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.019380249750100706,
+        "p_given_not_feature": 0.027598338034149152,
+        "lift": -0.008218088284048446,
+        "feature_prevalence": 0.67027
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.31508198188789593,
+        "p_given_not_feature": 0.38865132077760595,
+        "lift": -0.07356933888971001,
+        "feature_prevalence": 0.67027
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9854536231667835,
+        "p_given_not_feature": 0.9735541200376066,
+        "lift": 0.01189950312917698,
+        "feature_prevalence": 0.67027
+      }
+    },
+    "has_interaction": {
+      "meaningful_t3": {
+        "p_given_feature": 0.22014359678480505,
+        "p_given_not_feature": 0.2854198524034306,
+        "lift": -0.06527625561862554,
+        "feature_prevalence": 0.69918
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.7124774736119455,
+        "p_given_not_feature": 0.8320590386277508,
+        "lift": -0.1195815650158053,
+        "feature_prevalence": 0.69918
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.011084413169713092,
+        "p_given_not_feature": 0.016853932584269662,
+        "lift": -0.00576951941455657,
+        "feature_prevalence": 0.69918
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.024328499098944478,
+        "p_given_not_feature": 0.016887175054850077,
+        "lift": 0.007441324044094401,
+        "feature_prevalence": 0.69918
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.31293801310106123,
+        "p_given_not_feature": 0.40070474037630477,
+        "lift": -0.08776672727524354,
+        "feature_prevalence": 0.69918
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9848250808089476,
+        "p_given_not_feature": 0.973871418123795,
+        "lift": 0.010953662685152632,
+        "feature_prevalence": 0.69918
+      }
+    },
+    "has_acceleration": {
+      "meaningful_t3": {
+        "p_given_feature": 0.2910731170461767,
+        "p_given_not_feature": 0.14653253304026825,
+        "lift": 0.14454058400590847,
+        "feature_prevalence": 0.64513
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.7588083022026568,
+        "p_given_not_feature": 0.729619297207428,
+        "lift": 0.029189004995228807,
+        "feature_prevalence": 0.64513
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.016833816440097345,
+        "p_given_not_feature": 0.0055231493222870345,
+        "lift": 0.01131066711781031,
+        "feature_prevalence": 0.64513
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.024119169779734318,
+        "p_given_not_feature": 0.018401104629864457,
+        "lift": 0.005718065149869861,
+        "feature_prevalence": 0.64513
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3570443166493575,
+        "p_given_not_feature": 0.3071547327190239,
+        "lift": 0.0498895839303336,
+        "feature_prevalence": 0.64513
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9722536543022336,
+        "p_given_not_feature": 0.9983937780032125,
+        "lift": -0.026140123700978846,
+        "feature_prevalence": 0.64513
+      }
+    },
+    "creature_count_2plus": {
+      "meaningful_t3": {
+        "p_given_feature": 0.22901614890719244,
+        "p_given_not_feature": 0.27600960488976206,
+        "lift": -0.046993455982569626,
+        "feature_prevalence": 0.77095
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.7192035799987029,
+        "p_given_not_feature": 0.8468893254747871,
+        "lift": -0.12768574547608424,
+        "feature_prevalence": 0.77095
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.010402749854076139,
+        "p_given_not_feature": 0.020956123117223315,
+        "lift": -0.010553373263147175,
+        "feature_prevalence": 0.77095
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.019651079836565277,
+        "p_given_not_feature": 0.03029906134031871,
+        "lift": -0.010647981503753432,
+        "feature_prevalence": 0.77095
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3532005966664505,
+        "p_given_not_feature": 0.2926871862038856,
+        "lift": 0.060513410462564865,
+        "feature_prevalence": 0.77095
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.986380439717232,
+        "p_given_not_feature": 0.9652041039074438,
+        "lift": 0.02117633580978817,
+        "feature_prevalence": 0.77095
+      }
+    },
+    "has_cradle_or_creature": {
+      "meaningful_t3": {
+        "p_given_feature": 0.23797017165369103,
+        "p_given_not_feature": 0.28264626018267097,
+        "lift": -0.044676088528979946,
+        "feature_prevalence": 0.95949
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.742852973975758,
+        "p_given_not_feature": 0.8810170328313996,
+        "lift": -0.13816405885564165,
+        "feature_prevalence": 0.95949
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.012329466695848836,
+        "p_given_not_feature": 0.024438410269069365,
+        "lift": -0.012108943573220529,
+        "feature_prevalence": 0.95949
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.021459316928785083,
+        "p_given_not_feature": 0.0370278943470748,
+        "lift": -0.015568577418289715,
+        "feature_prevalence": 0.95949
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3469343088515774,
+        "p_given_not_feature": 0.15946679832140212,
+        "lift": 0.18746751053017527,
+        "feature_prevalence": 0.95949
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9826470312353438,
+        "p_given_not_feature": 0.9550728215255493,
+        "lift": 0.027574209709794517,
+        "feature_prevalence": 0.95949
+      }
+    },
+    "nonland_count_5plus": {
+      "meaningful_t3": {
+        "p_given_feature": 0.2111288793286444,
+        "p_given_not_feature": 0.3087909465862222,
+        "lift": -0.09766206725757778,
+        "feature_prevalence": 0.70663
+      },
+      "any_engine_active_t3": {
+        "p_given_feature": 0.6678035181070716,
+        "p_given_not_feature": 0.9427003442751474,
+        "lift": -0.27489682616807576,
+        "feature_prevalence": 0.70663
+      },
+      "tutor_castable_t3": {
+        "p_given_feature": 0.011547768988013529,
+        "p_given_not_feature": 0.015884378089102497,
+        "lift": -0.004336609101088969,
+        "feature_prevalence": 0.70663
+      },
+      "has_live_interaction_t3": {
+        "p_given_feature": 0.020732207803235075,
+        "p_given_not_feature": 0.025360466305348196,
+        "lift": -0.004628258502113122,
+        "feature_prevalence": 0.70663
+      },
+      "combo_progress_t3": {
+        "p_given_feature": 0.3202807692851988,
+        "p_given_not_feature": 0.3852472986331254,
+        "lift": -0.06496652934792663,
+        "feature_prevalence": 0.70663
+      },
+      "cards_remaining_2plus_t3": {
+        "p_given_feature": 0.9849992216577276,
+        "p_given_not_feature": 0.9731738078194772,
+        "lift": 0.01182541383825042,
+        "feature_prevalence": 0.70663
+      }
+    }
+  },
+  "candidate_policy_quicklook": {
+    "A_engine_first": {
+      "keep_rate": 0.54452,
+      "meaningful_t3_rate_if_kept": 0.3199698817306986,
+      "meaningful_t3_rate_unfiltered": 0.23978
+    },
+    "B_agency_first": {
+      "keep_rate": 0.48186,
+      "meaningful_t3_rate_if_kept": 0.30855435188644004,
+      "meaningful_t3_rate_unfiltered": 0.23978
+    },
+    "C_speed_first": {
+      "keep_rate": 0.90052,
+      "meaningful_t3_rate_if_kept": 0.26038288988584374,
+      "meaningful_t3_rate_unfiltered": 0.23978
+    },
+    "D_tutor_inclusive": {
+      "keep_rate": 0.60072,
+      "meaningful_t3_rate_if_kept": 0.3050173125582634,
+      "meaningful_t3_rate_unfiltered": 0.23978
+    }
+  }
+}

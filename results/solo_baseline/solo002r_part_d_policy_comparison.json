@@ -1,0 +1,217 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "phase": "SIM_001_SOLO_002_PART_D",
+  "source": "results/solo_baseline/solo002r_mulligan_simulation.json",
+  "note": "Policy E (seat-aware) is explicitly deferred to pod simulations per the user's own spec and is not compared here. Multi-objective by design: no single composite score is computed or used to declare one policy universally best - compare the separate columns per the tradeoff each represents.",
+  "comparison": {
+    "A_engine_first": {
+      "keep_7_rate": 0.5402,
+      "avg_starting_hand_size": 6.1868,
+      "expected_card_disadvantage": 0.8132000000000001,
+      "avg_cards_remaining_t3": 3.42424,
+      "any_engine_active": {
+        "1": 0.23704,
+        "2": 0.6982,
+        "3": 0.86624
+      },
+      "development_plus_interaction": {
+        "1": 0.0158,
+        "2": 0.01472,
+        "3": 0.02392
+      },
+      "tymna_castable_t3": 0.24828,
+      "tymna_supported_t3": 0.4018,
+      "thrasios_castable_t3": 0.15416,
+      "thrasios_activation_now_t3": 0.04272,
+      "tutor_available_t3": 0.55896,
+      "tutor_castable_t3": 0.01904,
+      "one_action_from_verified_win_t3": 0.3792,
+      "deterministic_win_available_t3": 0.00316,
+      "deterministic_win_protected_t3": 0.0,
+      "secondary_meaningful_development_rate_t3": 0.30779999999999996,
+      "top_3_failure_modes": [
+        [
+          "insufficient_persistent_mana",
+          {
+            "count": 15525,
+            "pct_of_all_hands": 0.621,
+            "pct_of_failures": 0.8971395550418954
+          }
+        ],
+        [
+          "tutor_but_no_viable_sequencing",
+          {
+            "count": 650,
+            "pct_of_all_hands": 0.026,
+            "pct_of_failures": 0.037561398439757296
+          }
+        ],
+        [
+          "no_meaningful_t1_t2_development",
+          {
+            "count": 307,
+            "pct_of_all_hands": 0.01228,
+            "pct_of_failures": 0.01774053741693152
+          }
+        ]
+      ]
+    },
+    "B_agency_first": {
+      "keep_7_rate": 0.47996,
+      "avg_starting_hand_size": 5.99444,
+      "expected_card_disadvantage": 1.00556,
+      "avg_cards_remaining_t3": 3.36328,
+      "any_engine_active": {
+        "1": 0.22684,
+        "2": 0.67492,
+        "3": 0.84176
+      },
+      "development_plus_interaction": {
+        "1": 0.01736,
+        "2": 0.01444,
+        "3": 0.02316
+      },
+      "tymna_castable_t3": 0.23848,
+      "tymna_supported_t3": 0.37556,
+      "thrasios_castable_t3": 0.15436,
+      "thrasios_activation_now_t3": 0.03624,
+      "tutor_available_t3": 0.60532,
+      "tutor_castable_t3": 0.01836,
+      "one_action_from_verified_win_t3": 0.361,
+      "deterministic_win_available_t3": 0.00244,
+      "deterministic_win_protected_t3": 4e-05,
+      "secondary_meaningful_development_rate_t3": 0.28808,
+      "top_3_failure_modes": [
+        [
+          "insufficient_persistent_mana",
+          {
+            "count": 15833,
+            "pct_of_all_hands": 0.63332,
+            "pct_of_failures": 0.8895943364422969
+          }
+        ],
+        [
+          "tutor_but_no_viable_sequencing",
+          {
+            "count": 757,
+            "pct_of_all_hands": 0.03028,
+            "pct_of_failures": 0.04253286886166985
+          }
+        ],
+        [
+          "no_meaningful_t1_t2_development",
+          {
+            "count": 341,
+            "pct_of_all_hands": 0.01364,
+            "pct_of_failures": 0.019159456118665017
+          }
+        ]
+      ]
+    },
+    "C_speed_first": {
+      "keep_7_rate": 0.8992,
+      "avg_starting_hand_size": 6.88768,
+      "expected_card_disadvantage": 0.11232000000000042,
+      "avg_cards_remaining_t3": 4.3676,
+      "any_engine_active": {
+        "1": 0.19436,
+        "2": 0.60432,
+        "3": 0.78252
+      },
+      "development_plus_interaction": {
+        "1": 0.0192,
+        "2": 0.0134,
+        "3": 0.02036
+      },
+      "tymna_castable_t3": 0.23508,
+      "tymna_supported_t3": 0.33128,
+      "thrasios_castable_t3": 0.1558,
+      "thrasios_activation_now_t3": 0.03312,
+      "tutor_available_t3": 0.61104,
+      "tutor_castable_t3": 0.01568,
+      "one_action_from_verified_win_t3": 0.3498,
+      "deterministic_win_available_t3": 0.00308,
+      "deterministic_win_protected_t3": 0.0,
+      "secondary_meaningful_development_rate_t3": 0.26036000000000004,
+      "top_3_failure_modes": [
+        [
+          "insufficient_persistent_mana",
+          {
+            "count": 16010,
+            "pct_of_all_hands": 0.6404,
+            "pct_of_failures": 0.8658266183548754
+          }
+        ],
+        [
+          "tutor_but_no_viable_sequencing",
+          {
+            "count": 975,
+            "pct_of_all_hands": 0.039,
+            "pct_of_failures": 0.05272835433454113
+          }
+        ],
+        [
+          "no_meaningful_t1_t2_development",
+          {
+            "count": 416,
+            "pct_of_all_hands": 0.01664,
+            "pct_of_failures": 0.02249743118273755
+          }
+        ]
+      ]
+    },
+    "D_tutor_inclusive": {
+      "keep_7_rate": 0.59628,
+      "avg_starting_hand_size": 6.3402,
+      "expected_card_disadvantage": 0.6597999999999997,
+      "avg_cards_remaining_t3": 3.56192,
+      "any_engine_active": {
+        "1": 0.21796,
+        "2": 0.68652,
+        "3": 0.86936
+      },
+      "development_plus_interaction": {
+        "1": 0.01528,
+        "2": 0.01504,
+        "3": 0.02416
+      },
+      "tymna_castable_t3": 0.25708,
+      "tymna_supported_t3": 0.40216,
+      "thrasios_castable_t3": 0.15684,
+      "thrasios_activation_now_t3": 0.04048,
+      "tutor_available_t3": 0.57792,
+      "tutor_castable_t3": 0.01816,
+      "one_action_from_verified_win_t3": 0.37188,
+      "deterministic_win_available_t3": 0.00304,
+      "deterministic_win_protected_t3": 0.0,
+      "secondary_meaningful_development_rate_t3": 0.29888000000000003,
+      "top_3_failure_modes": [
+        [
+          "insufficient_persistent_mana",
+          {
+            "count": 15669,
+            "pct_of_all_hands": 0.62676,
+            "pct_of_failures": 0.8939411227749886
+          }
+        ],
+        [
+          "tutor_but_no_viable_sequencing",
+          {
+            "count": 724,
+            "pct_of_all_hands": 0.02896,
+            "pct_of_failures": 0.04130534002738476
+          }
+        ],
+        [
+          "no_meaningful_t1_t2_development",
+          {
+            "count": 324,
+            "pct_of_all_hands": 0.01296,
+            "pct_of_failures": 0.018484710178000914
+          }
+        ]
+      ]
+    }
+  }
+}

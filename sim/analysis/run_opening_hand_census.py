@@ -31,10 +31,28 @@ PRIMARY_METRICS = [
     "any_engine_active", "premium_engine_active", "two_plus_engines_active",
     "engine_plus_interaction", "development_plus_interaction",
     "Tymna the Weaver_castable", "tymna_supported",
-    "Thrasios, Triton Hero_castable", "thrasios_activatable_soon",
+    "Thrasios, Triton Hero_castable", "thrasios_activation_now",
     "tutor_available", "tutor_castable",
     "cradle_on_battlefield", "cradle_3plus",
-    "deterministic_win_available", "one_action_from_verified_win", "two_actions_from_verified_win",
+    "deterministic_win_available", "deterministic_win_protected",
+    "one_action_from_verified_win", "two_actions_from_verified_win",
+]
+
+# Redesigned success metrics (correctness-repair instruction: "Do not use one broad meaningful
+# T3 score as the principal target. Keep it only as a secondary convenience metric.") - these are
+# reported as SEPARATE headline outcomes, never collapsed into one composite label. Each maps to
+# an existing per-turn snapshot field; the turn it's read at is fixed by the outcome's own name.
+PRIMARY_OUTCOMES = [
+    ("t1_premium_engine", 1, "premium_engine_active"),
+    ("t1_2drop_engine", 1, "any_engine_active"),  # refined by t1_engine_class_breakdown below
+    ("t2_engine", 2, "any_engine_active"),
+    ("t2_engine_plus_interaction", 2, "engine_plus_interaction"),
+    ("t3_2plus_engines", 3, "two_plus_engines_active"),
+    ("t3_supported_tymna", 3, "tymna_supported"),
+    ("t3_thrasios_engine_active", 3, "Thrasios, Triton Hero_on_battlefield"),
+    ("t3_cradle_3plus", 3, "cradle_3plus"),
+    ("t3_tutor_convertible", 3, "tutor_castable"),
+    ("t3_deterministic_win_accessible", 3, "deterministic_win_available"),
 ]
 
 
@@ -185,11 +203,24 @@ def aggregate(results, turns=(1, 2, 3)):
         for combo, cnt in archetype_combo_counts.most_common(15)
     ]
 
+    # ---- redesigned primary outcomes: separate named metrics, no single composite headline ----
+    primary_outcomes = {}
+    for outcome_name, t, field in PRIMARY_OUTCOMES:
+        primary_outcomes[outcome_name] = sum(1 for r in results if r[t].get(field)) / n
+    # t1_2drop_engine needs the finer t1_engine_class breakdown, not just "any engine at T1"
+    primary_outcomes["t1_2drop_engine"] = t1_engine_class_breakdown.get("two_mana_engine", 0.0)
+    primary_outcomes["t3_pod_functional"] = sum(1 for r in results if r[3]["birthing_pod"]["usable_now"]) / n
+    primary_outcomes["t3_survival_functional"] = sum(1 for r in results if r[3]["survival_of_the_fittest"]["usable_now"]) / n
+    primary_outcomes["mean_hand_resources_remaining_t3"] = resource_efficiency_t3["mean_cards_remaining"]
+
     return {
         "sample_size": n,
+        "primary_outcomes": primary_outcomes,
         "primary_table": table,
         "failure_table": failure_table,
-        "meaningful_development_rate_t3": 1 - (total_failures / n),
+        "secondary_convenience_metrics": {
+            "meaningful_development_rate_t3": 1 - (total_failures / n),
+        },
         "engine_identity_by_turn": engine_identity_by_turn,
         "t1_engine_class_breakdown": t1_engine_class_breakdown,
         "t2_new_engine_by_card": t2_new_engine_by_card,
@@ -207,9 +238,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=10000)
     ap.add_argument("--seed", type=int, default=1)
-    ap.add_argument("--on-play", action="store_true", default=True)
+    ap.add_argument("--seat", choices=["play", "draw"], default="play",
+                     help="on-the-play (skips T1 draw) or on-the-draw (Gemstone Caverns-relevant baseline)")
     ap.add_argument("--out", default=str(REPO_ROOT / "results" / "solo_baseline" / "solo002_opening_hand_census.json"))
     args = ap.parse_args()
+    on_play = args.seat == "play"
 
     print_run_banner()
     payload, cards = load_deck_cards()
@@ -218,7 +251,7 @@ def main():
     rng = random.Random(args.seed)
 
     t0 = time.time()
-    results = [run_one_hand(names, rng, cards, combos, on_play=args.on_play) for _ in range(args.count)]
+    results = [run_one_hand(names, rng, cards, combos, on_play=on_play) for _ in range(args.count)]
     elapsed = time.time() - t0
 
     agg = aggregate(results)
@@ -227,7 +260,8 @@ def main():
         "phase": "SIM_001_SOLO_002_PART_A",
         "sample_count": args.count,
         "seed": args.seed,
-        "on_play": args.on_play,
+        "seat": args.seat,
+        "on_play": on_play,
         "elapsed_seconds": elapsed,
         "hands_per_second": args.count / elapsed if elapsed > 0 else None,
         "policy": "default_greedy",
@@ -237,7 +271,7 @@ def main():
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote {out_path} ({args.count} hands in {elapsed:.1f}s, {args.count/elapsed:.0f} hands/sec)")
-    print(json.dumps(agg["primary_table"], indent=2))
+    print(json.dumps(agg["primary_outcomes"], indent=2))
     print(json.dumps(agg["failure_table"], indent=2))
 
 

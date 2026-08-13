@@ -1,4 +1,7 @@
 {
+  "status": "SUPERSEDED_PENDING_CORRECTNESS_RERUN",
+  "superseded_reason": "SIM-001 SOLO-002R correctness repair: the native simulator this run used did not mark mana sources tapped/spent for the remainder of a turn (a land, mana dork, Sol Ring, Mana Vault, Mox, etc. could be reused an unbounded number of times within one turn), Gaea's Cradle was modeled as a flat 1-mana land instead of {G} per creature controlled, several special lands (Gemstone Caverns, City of Traitors, Exotic Orchard, fetchlands) were not modeled per their real Oracle text, and several combination metrics (engine+interaction, combo zero-step, commander+activation) approximated simultaneous availability instead of proving it via a real joint payment search. All of these are fixed in the corrected rerun. This file is RETAINED FOR PROVENANCE ONLY - do not cite its numbers for primer claims or deckbuilding changes.",
+  "superseded_by": "results/solo_baseline/solo002r_mulligan_simulation.json",
   "run_class": "DECK_BACKED_GOLDFISH",
   "evidence_type": "goldfish",
   "subject_deck_version": "tymna-thrasios-treefarm-v1",
