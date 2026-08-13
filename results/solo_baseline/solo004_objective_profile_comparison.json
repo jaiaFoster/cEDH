@@ -1,0 +1,324 @@
+{
+  "note": "Each profile is an explicit, disclosed weighted sum over OUTCOME fields (never opener features - see docstring for exact formulas/weights). Correlations here are opener-feature-vs-profile-score Pearson r, reported to show how emphasis shifts across profiles - not a claim that any one profile is correct.",
+  "profile_stats": {
+    "DEVELOPMENT_FIRST": {
+      "mean": 0.2256232000000204,
+      "top_correlated_opener_features": [
+        [
+          "opener__has_premium_one_drop_card",
+          0.5802724494960079
+        ],
+        [
+          "opener__has_tier_a_engine_card",
+          0.571376799109082
+        ],
+        [
+          "opener__interaction_only_hand",
+          -0.13835446375896024
+        ],
+        [
+          "opener__distinct_colors_potential",
+          0.13821164388293106
+        ],
+        [
+          "opener__interaction_density_2plus",
+          -0.12839781929713787
+        ],
+        [
+          "opener__has_any_interaction_card",
+          -0.11885144333010862
+        ],
+        [
+          "opener__t1_accel_executable_now",
+          0.0935922002174284
+        ],
+        [
+          "opener__has_tutor_card",
+          -0.07419572637837879
+        ]
+      ]
+    },
+    "AGENCY_FIRST": {
+      "mean": 0.1216045000001018,
+      "top_correlated_opener_features": [
+        [
+          "opener__distinct_colors_potential",
+          0.17826051348632618
+        ],
+        [
+          "opener__land_count",
+          0.13357904144471475
+        ],
+        [
+          "opener__has_tutor_card",
+          -0.12866159359558157
+        ],
+        [
+          "opener__accel_card_count",
+          0.09088180587340038
+        ],
+        [
+          "opener__has_any_accel_card",
+          0.08824575501270063
+        ],
+        [
+          "opener__t1_accel_executable_now",
+          0.08812674227847392
+        ],
+        [
+          "opener__has_sol_ring",
+          0.06884602550153049
+        ],
+        [
+          "opener__has_any_interaction_card",
+          0.065259301297337
+        ]
+      ]
+    },
+    "SPEED_FIRST": {
+      "mean": 0.09707499999999125,
+      "top_correlated_opener_features": [
+        [
+          "opener__has_premium_one_drop_card",
+          0.5449267032978952
+        ],
+        [
+          "opener__has_tier_a_engine_card",
+          0.46356507667049646
+        ],
+        [
+          "opener__t1_accel_executable_now",
+          0.23833058837610704
+        ],
+        [
+          "opener__interaction_only_hand",
+          -0.15520129691495257
+        ],
+        [
+          "opener__distinct_colors_potential",
+          0.126413946707329
+        ],
+        [
+          "opener__has_any_accel_card",
+          0.10695181542398054
+        ],
+        [
+          "opener__has_tutor_card",
+          -0.09951399385246823
+        ],
+        [
+          "opener__accel_card_count",
+          0.05253471495953934
+        ]
+      ]
+    },
+    "RESILIENCE_FIRST": {
+      "mean": 0.48815200000017817,
+      "top_correlated_opener_features": [
+        [
+          "opener__land_count",
+          0.43151764816698257
+        ],
+        [
+          "opener__distinct_colors_potential",
+          0.3856701791204648
+        ],
+        [
+          "opener__interaction_density_2plus",
+          -0.24537511051833116
+        ],
+        [
+          "opener__has_any_interaction_card",
+          -0.21254427635852227
+        ],
+        [
+          "opener__has_sol_ring",
+          0.14014741185790025
+        ],
+        [
+          "opener__has_tutor_card",
+          -0.1315182869572936
+        ],
+        [
+          "opener__has_premium_one_drop_card",
+          0.12141241462063115
+        ],
+        [
+          "opener__has_tier_a_engine_card",
+          0.1027495988055401
+        ]
+      ]
+    },
+    "BALANCED": {
+      "mean": 0.2331136749999488,
+      "top_correlated_opener_features": [
+        [
+          "opener__has_premium_one_drop_card",
+          0.4902434495268636
+        ],
+        [
+          "opener__has_tier_a_engine_card",
+          0.45362866800552737
+        ],
+        [
+          "opener__distinct_colors_potential",
+          0.26622740850417925
+        ],
+        [
+          "opener__land_count",
+          0.20246539684189852
+        ],
+        [
+          "opener__t1_accel_executable_now",
+          0.16666693602274704
+        ],
+        [
+          "opener__has_tutor_card",
+          -0.1395440395460659
+        ],
+        [
+          "opener__interaction_density_2plus",
+          -0.12599776605935417
+        ],
+        [
+          "opener__interaction_only_hand",
+          -0.12060250494564947
+        ]
+      ]
+    }
+  },
+  "feature_disagreement_across_profiles": [
+    {
+      "feature": "opener__has_premium_one_drop_card",
+      "spread": 0.5316532376873029,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.5802724494960079,
+        "AGENCY_FIRST": 0.04861921180870498,
+        "SPEED_FIRST": 0.5449267032978952,
+        "RESILIENCE_FIRST": 0.12141241462063115,
+        "BALANCED": 0.4902434495268636
+      }
+    },
+    {
+      "feature": "opener__has_tier_a_engine_card",
+      "spread": 0.5308869961021458,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.571376799109082,
+        "AGENCY_FIRST": 0.04048980300693621,
+        "SPEED_FIRST": 0.46356507667049646,
+        "RESILIENCE_FIRST": 0.1027495988055401,
+        "BALANCED": 0.45362866800552737
+      }
+    },
+    {
+      "feature": "opener__land_count",
+      "spread": 0.4057012458999479,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.06609111154097969,
+        "AGENCY_FIRST": 0.13357904144471475,
+        "SPEED_FIRST": 0.025816402267034712,
+        "RESILIENCE_FIRST": 0.43151764816698257,
+        "BALANCED": 0.20246539684189852
+      }
+    },
+    {
+      "feature": "opener__interaction_density_2plus",
+      "spread": 0.30383883022536723,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": -0.12839781929713787,
+        "AGENCY_FIRST": 0.05846371970703606,
+        "SPEED_FIRST": -0.030709587559524146,
+        "RESILIENCE_FIRST": -0.24537511051833116,
+        "BALANCED": -0.12599776605935417
+      }
+    },
+    {
+      "feature": "opener__has_any_interaction_card",
+      "spread": 0.2778035776558593,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": -0.11885144333010862,
+        "AGENCY_FIRST": 0.065259301297337,
+        "SPEED_FIRST": -0.018850293337949384,
+        "RESILIENCE_FIRST": -0.21254427635852227,
+        "BALANCED": -0.1063754627014416
+      }
+    },
+    {
+      "feature": "opener__distinct_colors_potential",
+      "spread": 0.2592562324131358,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.13821164388293106,
+        "AGENCY_FIRST": 0.17826051348632618,
+        "SPEED_FIRST": 0.126413946707329,
+        "RESILIENCE_FIRST": 0.3856701791204648,
+        "BALANCED": 0.26622740850417925
+      }
+    },
+    {
+      "feature": "opener__interaction_only_hand",
+      "spread": 0.16929160350244285,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": -0.13835446375896024,
+        "AGENCY_FIRST": 0.01409030658749027,
+        "SPEED_FIRST": -0.15520129691495257,
+        "RESILIENCE_FIRST": -0.039730149342775425,
+        "BALANCED": -0.12060250494564947
+      }
+    },
+    {
+      "feature": "opener__has_sol_ring",
+      "spread": 0.1629925379886091,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": -0.021155323963443575,
+        "AGENCY_FIRST": 0.06884602550153049,
+        "SPEED_FIRST": -0.022845126130708854,
+        "RESILIENCE_FIRST": 0.14014741185790025,
+        "BALANCED": 0.04305708713469856
+      }
+    },
+    {
+      "feature": "opener__t1_accel_executable_now",
+      "spread": 0.15120542066768994,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.0935922002174284,
+        "AGENCY_FIRST": 0.08812674227847392,
+        "SPEED_FIRST": 0.23833058837610704,
+        "RESILIENCE_FIRST": 0.08712516770841712,
+        "BALANCED": 0.16666693602274704
+      }
+    },
+    {
+      "feature": "opener__accel_card_count",
+      "spread": 0.08952495448717133,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.0013568513862290358,
+        "AGENCY_FIRST": 0.09088180587340038,
+        "SPEED_FIRST": 0.05253471495953934,
+        "RESILIENCE_FIRST": 0.08664451283419217,
+        "BALANCED": 0.06706966079021683
+      }
+    },
+    {
+      "feature": "opener__has_any_accel_card",
+      "spread": 0.07290176991140132,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": 0.03405004551257921,
+        "AGENCY_FIRST": 0.08824575501270063,
+        "SPEED_FIRST": 0.10695181542398054,
+        "RESILIENCE_FIRST": 0.08708794674705071,
+        "BALANCED": 0.09852398358189696
+      }
+    },
+    {
+      "feature": "opener__has_tutor_card",
+      "spread": 0.0653483131676871,
+      "by_profile": {
+        "DEVELOPMENT_FIRST": -0.07419572637837879,
+        "AGENCY_FIRST": -0.12866159359558157,
+        "SPEED_FIRST": -0.09951399385246823,
+        "RESILIENCE_FIRST": -0.1315182869572936,
+        "BALANCED": -0.1395440395460659
+      }
+    }
+  ]
+}
