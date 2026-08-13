@@ -1,0 +1,126 @@
+{
+  "n_hands": 15000,
+  "n_features": 64,
+  "feature_columns": [
+    "opener__land_count",
+    "opener__fetch_land_count",
+    "opener__utility_land_ancient_tomb",
+    "opener__utility_land_city_of_traitors",
+    "opener__utility_land_gemstone_caverns",
+    "opener__utility_land_cradle",
+    "opener__distinct_colors_direct",
+    "opener__distinct_colors_potential",
+    "opener__all_wubg_direct",
+    "opener__all_wubg_potential",
+    "opener__accel_card_count",
+    "opener__has_any_accel_card",
+    "opener__has_creature_accel_card",
+    "opener__has_noncreature_persistent_accel_card",
+    "opener__has_one_shot_accel_card",
+    "opener__has_mox_family_card",
+    "opener__has_sol_ring",
+    "opener__tutor_count",
+    "opener__has_tutor_card",
+    "opener__tutor_reaches_engine",
+    "opener__tutor_reaches_combo_piece",
+    "opener__tutor_reaches_interaction",
+    "opener__tutor_reaches_land_or_cradle",
+    "opener__tutor_cheap",
+    "opener__engine_count",
+    "opener__has_any_engine_card",
+    "opener__has_tier_a_engine_card",
+    "opener__has_tier_b_engine_card",
+    "opener__has_premium_one_drop_card",
+    "opener__has_cheap_engine_card",
+    "opener__interaction_count",
+    "opener__has_any_interaction_card",
+    "opener__interaction_only_hand",
+    "opener__interaction_density_2plus",
+    "opener__creature_count_in_hand",
+    "opener__has_commander_relevant_creature_2plus",
+    "opener__nonland_count",
+    "opener__cards_costing_3plus",
+    "opener__t1_land_played",
+    "opener__t1_mana_available_now",
+    "opener__t1_accel_executable_now",
+    "opener__t1_accel_creature_only",
+    "opener__t1_has_live_interaction",
+    "opener__t1_cards_in_hand_after",
+    "opener__t1_ceiling_mana_next_turn",
+    "opener__struct_1land_plus_executable_accel",
+    "opener__struct_1land_plus_accel_plus_engine",
+    "opener__struct_1land_plus_accel_plus_tutor",
+    "opener__struct_2land_plus_engine",
+    "opener__struct_2land_plus_t1_development",
+    "opener__struct_2land_plus_engine_plus_interaction",
+    "opener__struct_2land_plus_tutor",
+    "opener__struct_2land_interaction_only",
+    "opener__struct_3land_plus_engine",
+    "opener__struct_3land_plus_accel",
+    "opener__struct_3land_sufficient_business",
+    "opener__struct_4plusland_plus_premium_engine",
+    "opener__struct_fast_mana_no_payoff",
+    "opener__struct_engine_insufficient_colors",
+    "opener__struct_tutor_insufficient_mana",
+    "opener__struct_cradle_plus_creature_density",
+    "opener__struct_tymna_plus_attack_support",
+    "opener__struct_thrasios_plus_mana_infra",
+    "opener__has_cheap_tutor_cmc1"
+  ],
+  "keep_rate": 0.7245333333333334,
+  "target_definition": "trajectory_best__tier at hand size 7 clears mull005_hand_size_thresholds.json's cost=1.0 keep threshold",
+  "decision_tree_depth4": {
+    "cv_auc_mean": 0.8064471510197379,
+    "cv_auc_std": 0.007411295679515777,
+    "cv_accuracy_mean": 0.8151333333333334,
+    "cv_accuracy_std": 0.004773072618578306,
+    "rules_text": "|--- opener__distinct_colors_potential <= 0.50\n|   |--- opener__t1_accel_executable_now <= 0.50\n|   |   |--- opener__has_one_shot_accel_card <= 0.50\n|   |   |   |--- opener__accel_card_count <= 1.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__accel_card_count >  1.50\n|   |   |   |   |--- class: 0\n|   |   |--- opener__has_one_shot_accel_card >  0.50\n|   |   |   |--- class: 0\n|   |--- opener__t1_accel_executable_now >  0.50\n|   |   |--- opener__t1_cards_in_hand_after <= 4.50\n|   |   |   |--- opener__has_tier_a_engine_card <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__has_tier_a_engine_card >  0.50\n|   |   |   |   |--- class: 1\n|   |   |--- opener__t1_cards_in_hand_after >  4.50\n|   |   |   |--- class: 0\n|--- opener__distinct_colors_potential >  0.50\n|   |--- opener__nonland_count <= 5.50\n|   |   |--- opener__t1_ceiling_mana_next_turn <= 1.50\n|   |   |   |--- opener__has_cheap_engine_card <= 0.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- opener__has_cheap_engine_card >  0.50\n|   |   |   |   |--- class: 1\n|   |   |--- opener__t1_ceiling_mana_next_turn >  1.50\n|   |   |   |--- opener__distinct_colors_potential <= 2.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- opener__distinct_colors_potential >  2.50\n|   |   |   |   |--- class: 1\n|   |--- opener__nonland_count >  5.50\n|   |   |--- opener__t1_ceiling_mana_next_turn <= 1.50\n|   |   |   |--- opener__has_cheap_engine_card <= 0.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- opener__has_cheap_engine_card >  0.50\n|   |   |   |   |--- class: 1\n|   |   |--- opener__t1_ceiling_mana_next_turn >  1.50\n|   |   |   |--- opener__has_mox_family_card <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__has_mox_family_card >  0.50\n|   |   |   |   |--- class: 1\n",
+    "feature_importances": [
+      {
+        "feature": "opener__distinct_colors_potential",
+        "importance": 0.6569278428314077
+      },
+      {
+        "feature": "opener__t1_ceiling_mana_next_turn",
+        "importance": 0.09315966907754179
+      },
+      {
+        "feature": "opener__nonland_count",
+        "importance": 0.08374152387262378
+      },
+      {
+        "feature": "opener__t1_accel_executable_now",
+        "importance": 0.05119510728770499
+      },
+      {
+        "feature": "opener__has_mox_family_card",
+        "importance": 0.039035508497632446
+      },
+      {
+        "feature": "opener__has_cheap_engine_card",
+        "importance": 0.029699369100152053
+      },
+      {
+        "feature": "opener__t1_cards_in_hand_after",
+        "importance": 0.01989424602441162
+      },
+      {
+        "feature": "opener__has_one_shot_accel_card",
+        "importance": 0.012450999236849994
+      },
+      {
+        "feature": "opener__has_tier_a_engine_card",
+        "importance": 0.009933015259387987
+      },
+      {
+        "feature": "opener__accel_card_count",
+        "importance": 0.003962718812287646
+      }
+    ],
+    "holdout": {
+      "holdout_n": 3000,
+      "holdout_auc": 0.8125549917470614,
+      "holdout_accuracy": 0.819
+    }
+  }
+}

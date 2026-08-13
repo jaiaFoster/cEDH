@@ -46,7 +46,11 @@ TIER_RANK = {"S": 0, "A": 1, "B": 2, "C": 3, "D": 4, "F": 5}
 
 
 def _load_thresholds(assumed_cost="1.0"):
-    path = REPO_ROOT / "results" / "solo_baseline" / "mull005_hand_size_thresholds.json"
+    # MULL-005R: re-derived thresholds (assignment section 20) from the corrected engine - see
+    # derive_hand_size_trajectory_thresholds_r.py. TRAJECTORY_MACHINE is now TRAJECTORY_MACHINE_R
+    # by construction (same code, corrected inputs), matching how trajectory_search.py/
+    # trajectory_grading.py were corrected in place rather than duplicated this phase.
+    path = REPO_ROOT / "results" / "solo_baseline" / "mull005r_hand_size_thresholds.json"
     data = json.loads(path.read_text())
     table = data["keep_thresholds_by_assumed_mulligan_card_cost"][assumed_cost]
     return {int(size): row["keep_at_or_above_tier"] for size, row in table.items()}
