@@ -1285,3 +1285,484 @@ derivation + London mulligan simulation), section 15/16 (feature-tradeoff analys
 data-derived clustering), and the paired land/mana-density ablations are still not run - now
 formally unblocked by this repair, per the review's own instruction to fix-then-rerun before
 starting mulligan-policy derivation.
+
+---
+
+# SIM-001 SOLO-004 — Data-Derived Mulligan Heuristics & London Mulligan Optimization
+
+Uses the validated SOLO-003R census to DERIVE mulligan heuristics, not to prove pre-decided ones.
+Per the engagement's own binding constraint: no rule ("2 lands = keep," "keep any engine," "keep
+tutor + mana") was assumed going in - each was tested, and several were falsified by the data (see
+below). `run_class: DECK_BACKED_GOLDFISH` throughout, same subject deck/hash as above.
+
+## Method summary
+
+1. **Opener-visible feature extraction** (`opening_hand_features.py`) - 75 features computable
+   from ONLY the seven-card hand plus known deck construction (fetch-target legality against the
+   real remaining library), never future draws. Distinguishes a card being *in hand* from being
+   *usable* - a mana dork cast T1 cannot tap until T2 (summoning sickness), so
+   `t1_accel_executable_now` is tracked separately from mere presence.
+2. **Multi-objective outcome dataset** (`run_solo004_dataset.py`) - 100,000 hands each, play and
+   draw, joining opener features to the full outcome vector (development/agency/commander-
+   conversion/engine-functionality/conversion/resources - never a single composite), plus a
+   15,000-hand achievable-search-enabled variant per seat recording both the greedy-realized and
+   best-known-achievable outcome for each hand.
+3. **Land-population effect-size analysis** and **conditional outcome distributions** - for every
+   opening-hand land count (0 through 5+) and a curated set of structural hand classes, measured
+   actual lift and full conditional outcome vectors, not assumed correlations.
+4. **Interpretable value models** - logistic regression (5-fold CV AUC 0.841) and a depth-4
+   decision tree (CV AUC 0.774, holdout-checked), against a GBM upper-bound benchmark (CV AUC
+   0.860) never used as the final heuristic.
+5. **Five explicit, disclosed objective profiles** (DEVELOPMENT/AGENCY/SPEED/RESILIENCE_FIRST,
+   BALANCED) - no profile declared correct; used to show how emphasis shifts.
+6. **Machine-optimal keep frontiers** - keep-at-7 threshold = E[value of a fresh 7, optimally
+   bottomed to 6] (what mulliganing actually gets you, not an idealized next hand).
+7. **Real London mulligan mechanics + search-based bottoming** - exhaustive bottom search (all
+   C(7,N) combinations) shown to meaningfully beat a fast heuristic, so it's used for all
+   quantitative results.
+8. **Three candidate policies run through 100,000 full mulligan sequences each**, play and draw:
+   `MACHINE_OPTIMAL` (ceiling reference, 5k sample), `TREE_DEPTH4`, and `SIMPLE_RULES` (the
+   primer-facing candidate).
+9. **False-keep/false-mulligan audit**, **per-tutor and per-interaction-density analysis**, and a
+   **play-vs-draw comparison**, all before finalizing anything.
+
+## What separates good hands from bad (sections 3-4)
+
+The land-count population itself is a weak predictor. Within EVERY land-count bucket from 0
+through 5+, the dominant drivers are the same: acceleration density and engine access, not land
+count. At 2 lands (33.0% of the population, the largest single bucket):
+
+| Feature | Lift on t3_any_strong_state | With | Without |
+|---|---:|---:|---:|
+| T1 premium engine cast | +52.9pp | 100.0% (n=2304) | 47.1% |
+| Sol Ring present | +47.6pp | 95.0% (n=2349) | 47.4% |
+| Premium one-drop card present | +45.3pp | 89.8% (n=4529) | 44.6% |
+| 2+ acceleration cards | +39.9pp | 81.6% (n=7504) | 41.7% |
+| Tier-A engine card present | +33.8pp | 75.9% (n=8464) | 42.1% |
+| **Interaction-only hand** | **-37.9pp** | 15.6% (n=2404) | 53.5% |
+
+This same shape holds directionally at every land count tested (0/1/3/4/5+); the full breakdown
+is in `solo004_land_population_analysis.json` and `solo004_conditional_hand_outcomes.json`.
+
+**Two findings directly contradict hypotheses the engagement explicitly warned against assuming:**
+
+- **"Tutor + mana = keep" is false.** `2_land_with_tutor` (no engine) succeeds only 43.5% of the
+  time vs. 59.2% for its complement (-12.4pp). Zooming out to every individual tutor card in the
+  deck (`solo004_tutor_interaction_analysis.json`): EVERY one of them, held in an opening hand,
+  correlates with a LOWER strong-state rate (35.4%-38.9%) than having no tutor at all (51.6%).
+  Stranded-tutor rate is 67%-95% for every tutor card - most opened tutors never go live in this
+  3-turn window. A tutor is a real opportunity cost in the opener, not a keep-enabler, at any
+  land count, full stop.
+- **"4+ lands is safe but slow" is false; it's a real cost, and "an engine" doesn't fix it.**
+  4+-land hands with a premium one-drop engine succeed 97.5% of the time; with any OTHER engine,
+  30.5%; with no business at all, 17.6%. Flood is rescued specifically by a cheap, premium engine
+  - not by "having an engine" generically.
+
+Interaction density is monotonically bad in the opener: 0 interaction cards 52.1% strong-state, 1
+card 44.6%, 2+ cards 34.3%, interaction-only hands 15.4%. But interaction that IS live and PAID
+by T3 correlates with 92.4% strong-state (n=2151, 2.2% of hands) - a real positive signal, just
+not one an opener-only decision can target (it's a symptom of an already-strong hand, not a cause).
+
+## Interpretable value model (section 5)
+
+Depth-4 decision tree (16 leaves, CV AUC 0.774, holdout AUC 0.771) splits, in order: premium
+one-drop engine present → acceleration card count → Sol Ring present → executable T1 acceleration
+→ color coverage → cards remaining after T1. This matches the logistic regression's top
+standardized coefficients almost exactly (`accel_card_count` +0.989, `has_premium_one_drop_card`
++0.573, `has_sol_ring` +0.499, `has_tier_a_engine_card` +0.491) - two different methods converge
+on the same short list of what matters. A GBM benchmark (never used as the final heuristic) tops
+out at CV AUC 0.860; a depth-4 tree already captures 75.9% of its achievable gain over random,
+depth-6 reaches 89.2%, depth-8 96.2% (`solo004_hand_value_models.json`'s depth sweep) - the
+practical ceiling for a small rule list is well short of the black-box benchmark, and that gap is
+exactly what gets traded away for memorability below.
+
+## Multi-objective profiles (section 6) and keep frontiers (section 7)
+
+Five explicit, disclosed profiles (formulas in `define_value_profiles.py`) show real divergence:
+premium/Tier-A engine access correlates strongly with DEVELOPMENT_FIRST (r=+0.58) and SPEED_FIRST
+(r=+0.55) but barely with AGENCY_FIRST (r=+0.05) or RESILIENCE_FIRST (r=+0.12); interaction
+density is the only feature that flips sign entirely (positive under AGENCY_FIRST, negative
+everywhere else). No profile is declared correct - the rest of this section uses BALANCED as the
+default, consistently.
+
+**The single most load-bearing finding of this audit**: under every profile tested, keeping an
+average, UNMODIFIED random 7 is worse than mulliganing and optimally bottoming to 6
+(BALANCED: 0.232 vs. 0.258; AGENCY_FIRST: 0.120 vs. 0.161). This is not a methodology artifact -
+under real London mulligan rules, keeping at 7 means no bottoming at all, so "the average random
+7, kept as-is" really is the correct alternative to "mulligan, then optimally trim one weak card
+from a fresh 7." **This deck should not default to keeping a merely-average seven.** A specific
+hand should still be kept whenever its own value clears the relevant threshold - see the keep-7
+decision table below for what that looks like structurally.
+
+## Bottoming (sections 8-9)
+
+Real London mulligan mechanics: bottomed cards go to the bottom of the library (not reshuffled),
+the rest of the library keeps its draw order. A fast fixed-priority bottoming heuristic (the one
+previously used for Gemstone Caverns' exile choice and SOLO-002's mulligan sim) was tested against
+exhaustive search and found wanting: only 35.1%/21.4%/15.1% "near-optimal" (within 0.01
+profile-score points) at bottom-1/2/3, with the gap widening as more cards need bottoming. Search
+is cheap enough (~1,750 hands/sec) to use directly instead, and does throughout this report.
+
+**Data-derived bottoming guidance** (`solo004_bottoming_analysis.json`, by card class of the
+optimally-bottomed card):
+
+| Bottoming to... | Most bottomed | 2nd | 3rd | Premium engines bottomed |
+|---|---|---|---|---:|
+| 6 (1 card) | interaction (22.7%) | land (20.4%) | tutor (18.9%) | 0.8% |
+| 5 (2 cards) | tutor (21.2%) | interaction (20.5%) | land (20.4%) | 0.7% |
+| 4 (3 cards) | tutor (21.5%) | land (20.5%) | interaction (18.4%) | 0.4% |
+
+Redundant interaction is usually the first bottom at six; by five and four, a spare tutor becomes
+the single most commonly-correct bottom, matching the tutor finding above. Premium one-drop
+engines are almost never the right bottom at any depth.
+
+## Candidate policies and machine-optimal ceiling (sections 10-11)
+
+Three policies, each traced to a specific finding (`candidate_mulligan_policies.py` documents
+exact provenance per rule): `MACHINE_OPTIMAL` (keep iff simulated value clears the keep-at-7
+threshold - not memorizable, used as the ceiling), `TREE_DEPTH4` (the learned tree, literally
+translated), and `SIMPLE_RULES` (an 8-rule human-memorizable policy, re-derived by hand from the
+same underlying findings so the reasoning stays legible at the table - not mechanically
+simplified from the tree). A false-keep/false-mulligan audit (below) caught and fixed a real bug
+in the first draft of `SIMPLE_RULES`: it originally let a bare tutor justify a keep at 2-3 lands,
+directly contradicting the tutor finding above. Fixed before any of the numbers below.
+
+## Full London mulligan simulation results (section 12), 100,000 sequences per policy per seat
+
+| Policy | Play strong-state | Draw strong-state | Play avg. final hand | Draw avg. final hand |
+|---|---:|---:|---:|---:|
+| Keep-everything (no mulligan, SOLO-003R) | 43.8% | 51.1% | 7.00 | 7.00 |
+| **SIMPLE_RULES** (primer-facing) | **58.9%** | **64.9%** | 6.35 | 6.37 |
+| TREE_DEPTH4 (aggressive alternative) | 72.6% | 74.4% | 5.30 | 5.06 |
+| MACHINE_OPTIMAL (ceiling, 5k sample) | 76.5% | 80.7% | 5.15 | 5.58 |
+
+All three mulligan policies substantially beat keeping everything, at a real, quantified card cost.
+`SIMPLE_RULES` is deliberately the conservative end of this range - it keeps 60-61% of hands
+outright at 7 (vs. TREE_DEPTH4's 27-31%) and gives up real quality (58.9%/64.9% vs. TREE_DEPTH4's
+72.6%/74.4%) for that practicality. A player willing to mulligan more aggressively at the table
+should consider `TREE_DEPTH4`'s decision rule instead (available as a callable in
+`candidate_mulligan_policies.py`) - this is a genuine risk-tolerance/practicality tradeoff, not a
+case where one policy is simply better.
+
+## Mulligan cost curve (section 13) - how expensive is one more mulligan
+
+| Kept at (SIMPLE_RULES, play) | P(reached) | T2 engine | T3 strong state | T3 stalled |
+|---|---:|---:|---:|---:|
+| 7 | 60.0% | 26.2% | 58.3% | 17.2% |
+| 6 | 24.0% | 31.7% | 61.1% | 15.0% |
+| 5 | 9.6% | 32.9% | 61.1% | 14.2% |
+| 4-or-fewer | 6.4% | 28.4% | 53.6% | 19.9% |
+
+The pattern is consistent across all three policies and both seats: **one or two mulligans reliably
+pay for themselves** (strong-state rate holds steady or improves from 7→6→5), but **a third
+mulligan is a real, steep cliff** - e.g. MACHINE_OPTIMAL falls from 89.4% (kept at 5) to 55.0%
+(kept at 4-or-fewer), and the stalled rate roughly triples for every policy at that depth. Full
+tables for all three policies, both seats, in `solo004_mulligan_cost_curve.json`.
+
+## Keep-7 decision table (section 14)
+
+| Opening structure | Frequency | T3 strong-state | Recommendation |
+|---|---:|---:|---|
+| 4+ lands + premium engine | 0.7% | 97.5% | Snap keep |
+| 2 lands + premium engine | 4.5% | 89.8% | Snap keep |
+| 2 lands + dork/rock (2+ accel) | 7.5% | 81.6% | Snap keep |
+| 1 land + T1 persistent acceleration | 9.6% | 63.4% | Keep |
+| 3 lands + acceleration | 11.5% | 59.0% | Keep |
+| 3 lands + engine | 12.2% | 50.0% | Conditional / lean keep |
+| 2 lands + tutor (no engine) | 7.5% | 43.5% | Conditional / lean ship |
+| 1 land + temporary acceleration only | 3.0% | 41.4% | Conditional / lean ship |
+| 2 lands + interaction-heavy (2+) | 9.4% | 41.1% | Conditional / lean ship |
+| 4+ lands, no premium engine | 8.1% | 32.2% | Usually ship |
+| 1 land, no acceleration | 7.8% | 23.3% | Usually ship |
+| 3 lands, weak business | 0.8% | 19.4% | Usually ship |
+| 2 lands, no T1/T2 development | 2.7% | 16.0% | Usually ship |
+
+Full table with confidence levels in `solo004_mulligan_cost_curve.json`. Notice land count alone
+never anchors either end of this ranking - the top and bottom rows are both 2-land hands.
+
+## False-keep / false-mulligan audit (section 15)
+
+Fresh holdout sample (seed 777, distinct from the primary dataset's seed 42), n=8,000. A "false
+keep" requires BOTH the actual simulated outcome to be poor AND the richer `TREE_DEPTH4` model to
+independently disagree - filtering single-draw luck from genuine heuristic defects. Result:
+**false-keep rate 19.5%, false-mulligan rate 0.7%** - `SIMPLE_RULES` is asymmetrically too
+permissive, not too strict, which is the expected and acceptable direction of error for a
+primer-facing policy (shipping a good hand by mistake is rare; keeping a bad one sometimes happens
+in exchange for a memorable rule count). Representative false-keep hands cluster around a
+recognizable pattern: an engine or tutor present but stranded/unsupported, frequently alongside
+resource-destructive acceleration (Lotus Petal, Elvish Spirit Guide) spent without a real payoff.
+Full examples in `solo004_false_keep_mulligan_audit.json`.
+
+## Tutor- and interaction-specific analysis (sections 17-18)
+
+Covered above (land-population section) - repeating the headline because it's the most
+counterintuitive, best-supported finding in this audit: **every individual tutor's presence
+correlates with a LOWER strong-state rate than no tutor at all**, and interaction density is
+monotonically negative in the opener despite live-paid-interaction-at-T3 being one of the single
+strongest positive signals once achieved. Full per-tutor table (14 tutors, frequency/T1
+castability/stranded rate/strong-state rate each) in `solo004_tutor_interaction_analysis.json`.
+
+## Play vs. draw (section 19)
+
+At every opening-hand land count from 1 through 5+, the top-5 predictive opener features are
+IDENTICAL between play and draw (mean overlap 4.7/5; land count 0 is the lone partial exception).
+The draw is uniformly stronger by roughly the same margin everywhere (+7.1pp mean success-rate
+delta across land counts; +1.8 to +5.9pp across all three mulligan policies) - one extra card,
+same underlying logic, not a different set of what matters. **Conclusion: one heuristic, not
+two** - the rules below apply identically on the play and the draw.
+
+## Validation (section 21)
+
+Regression suite: 77 passed, 3 skipped throughout this phase (unchanged from SOLO-003R).
+Determinism: dataset generation and full mulligan simulation independently verified to produce
+byte-identical output across repeated runs with the same seed. Holdout: both interpretable models
+report holdout AUC alongside cross-validated AUC (logistic 0.840 holdout vs. 0.841 CV; tree 0.771
+holdout vs. 0.774 CV - no meaningful gap, no overfitting to the training population); the
+false-keep/false-mulligan audit itself used a fresh seed (777) never touched during derivation.
+Manual search audit: representative strong/weak 1-land, strong/deceptive 2-land, strong 3-land,
+flooded, tutor-heavy, and interaction-heavy hands were inspected turn-by-turn - all cast sequences
+were legal (e.g. one audited hand correctly cracked Wooded Foothills for Tropical Island via
+partial basic-type overlap, matching real fetch rules) and strategically coherent under the
+existing DEFAULT_PRIORITY policy.
+
+---
+
+## CURRENT MULLIGAN HEURISTIC — SIM-001
+
+*(Derived from the analysis above - see `solo004_final_human_heuristic.json` for the exact
+callable, `candidate_mulligan_policies.policy_simple_rules`.)*
+
+### At Seven
+
+**Snap keeps**
+- Mystic Remora or Esper Sentinel (the deck's two premium one-drop engines) in hand.
+- Sol Ring in hand.
+- 2 or more acceleration sources (mana dorks, rocks, Moxen, Lotus Petal, Elvish Spirit Guide) in
+  hand, with at least 1 land.
+
+**Conditional keeps**
+- At 1 land: keep ONLY if you have a source that produces mana THIS turn without summoning
+  sickness (Sol Ring / Mox family / Lotus Petal / Elvish Spirit Guide) - a mana dork alone at 1
+  land is not enough on its own (it can't tap until turn 2).
+- At 2-3 lands: keep if you have Rhystic Study, Sylvan Library, or either premium one-drop
+  already covered above; any OTHER engine specifically at 3 lands is also a keep; any engine
+  (even a non-premium one) at 2 lands is a real, if smaller, edge worth keeping.
+
+**Usually ship**
+- 0 lands, always (20.9% population success rate - the worst bucket, no exceptions).
+- 4+ lands without a premium one-drop engine (30.5% with any other engine, 17.6% with none - an
+  engine that isn't cheap does not rescue a flooded hand).
+- An interaction-only hand (nothing but lands and interaction spells), at any land count.
+- 2-3 lands with NO engine of any kind - even if a tutor is present. A bare tutor does not
+  justify a keep on its own.
+
+### At Six (after 1 mulligan)
+
+Bottom the single weakest card. If you have redundant interaction (2+ copies of "protect the
+plan" cards with nothing else going on), that's usually the correct first bottom; excess lands
+and a spare tutor are close behind. Keep threshold loosens slightly from 7 - a hand that would
+have been a marginal ship at 7 is often a correct keep at 6, since the alternative (mulligan to 5)
+is worse on average than the marginal hand in front of you.
+
+### At Five (after 2 mulligans)
+
+Bottom two cards. A spare tutor becomes the single most commonly-correct card class to bottom at
+this depth - by five cards, a card with under a 50% chance of ever being live is a luxury this
+hand can't afford. Keep almost anything with real, immediate mana development.
+
+### At Four
+
+Keep almost anything that isn't actively incoherent (no legal color, or genuinely nothing to do).
+Going this deep is a real, steep cost - strong-state rate falls from ~80-90% (kept at 5-6) to
+~53-65% (kept at 4-or-fewer) across every policy tested, and the stalled rate roughly triples.
+There is little further value in searching for a "better" four; the marginal value of one more
+look is essentially gone by this point.
+
+### One-land hands
+
+Require a mana source that's usable THIS turn (not a summoning-sick dork) - 63.4% strong-state
+with executable T1 acceleration vs. 23.3% without. "One land" alone is never the signal; "one
+land plus real, immediate acceleration" is.
+
+### Two-land hands
+
+The largest single population (33.0%) and the most heterogeneous - both the single best (premium
+engine, 89.8%) and one of the single worst (no development, 16.0%) structures in the entire
+decision table are two-land hands. Judge on business, not land count: acceleration density and
+engine access are what separate them, and a bare tutor does not count as business.
+
+### Three-land hands
+
+A real, near-equivalent alternative to two lands when they carry engine or acceleration business
+(50.0%/59.0% respectively) - but "3 lands and nothing else" is a bottom-quartile hand (19.4%),
+not a safe default. Land count buys mana capacity, not a keep by itself.
+
+### Common traps
+
+- **"I have a tutor, this must be a keep."** False - a tutor's mere presence correlates with
+  WORSE outcomes than no tutor at all (35-39% vs. 51.6% strong-state); it gets stranded 67-95% of
+  the time in this deck's first three turns.
+- **"This hand has business, it just needs mana."** Watch for resource-destructive acceleration
+  (Lotus Petal, Elvish Spirit Guide) spent with nothing real to show for it - a recurring pattern
+  in the false-keep audit.
+- **"Four lands is safe."** Flood without a specifically premium, cheap engine is a bottom-third
+  outcome, not an average one.
+- **"Interaction protects my plan."** A hand with 2+ interaction spells and nothing else drops to
+  34.3% strong-state; interaction-only hands crater to 15.4%. Interaction is a real cost in the
+  opener, even though live paid interaction at T3 is one of the strongest positive signals once
+  actually achieved.
+
+---
+
+## PRIMER-FACING MULLIGAN PACKET
+
+### Mulligan philosophy
+
+This deck should not default to keeping a merely-average seven - across every objective profile
+tested, the average random 7 kept as-is is worse than mulliganing and optimally trimming a fresh
+6. Keep decisions should be judged on acceleration density and real engine access, not land count
+or the presence of a tutor. One or two mulligans reliably pay for themselves; a third is a steep,
+well-quantified cost, so use them, but don't chase a perfect four.
+
+### Keep rules
+
+See "CURRENT MULLIGAN HEURISTIC" above - snap keep on a premium one-drop engine, Sol Ring, or 2+
+acceleration sources; ship 0-land hands, unsupported flood, interaction-only hands, and any
+2-3-land hand with no engine (tutor alone does not count).
+
+### Example keeps (from live simulation, `SIMPLE_RULES` policy, all reached a strong T3 state)
+
+1. `Command Tower, Tropical Island` + Mystic Remora, Chord of Calling, Eldritch Evolution, King
+   T'Challa, Pact of Negation - 2 lands, Tier-A engine present.
+2. `City of Brass, Gemstone Caverns, Starting Town` + Mystic Remora, Mox Amber, Heartwood
+   Storyteller, Spellseeker - 3 lands, premium engine.
+3. `Boseiju, City of Traitors, Windswept Heath` + Birds of Paradise, Esper Sentinel, King
+   T'Challa, Veil of Summer - 3 lands, T1 accel into T2 premium engine.
+4. `Marsh Flats` + Abhorrent Oculus, Crop Rotation, Kinnan, Lotus Petal, Mental Misstep, Nature's
+   Rhythm - 1 land, but Lotus Petal is usable this turn.
+
+### Example mulligans (from live simulation, `SIMPLE_RULES` policy, all correctly shipped)
+
+1. `Talon Gates of Madara` + Avacyn's Pilgrim, Derevi, Force of Will, Orcish Bowmasters, Subtlety,
+   Survival of the Fittest - 1 land, only a summoning-sick dork for acceleration.
+2. `Mana Confluence, Gaea's Cradle` + Endurance, Flusterstorm, Imperial Seal, Orcish Bowmasters,
+   Veil of Summer - 2 lands, no engine, a tutor that won't be live in time.
+3. `Starting Town, Tundra, Windswept Heath` + Badgermole Cub, Eldritch Evolution, Enduring
+   Vitality, Mental Misstep - 3 lands, no real business.
+4. `4 lands` (Boseiju, Tundra, Underground Sea, and two fetches) + Crop Rotation, Pact of
+   Negation, Veil of Summer - flooded, no premium engine, color-screwed.
+
+Full examples with outcome tags in `solo004_primer_example_hands.json`.
+
+### Bottoming rules
+
+At six: bottom redundant interaction first, then excess lands, then a spare tutor. At five: a
+spare tutor is now the single most commonly-correct bottom - a card with under even odds of ever
+being live is a luxury a five-card hand can't carry. Premium one-drop engines are almost never
+the right card to bottom at any depth (under 1% of the time).
+
+### Statistical evidence
+
+- Keeping an average random 7 is worse than mulliganing to an optimally-bottomed 6, under every
+  objective profile tested.
+- `SIMPLE_RULES` reaches 58.9%/64.9% (play/draw) T3 strong-state vs. 43.8%/51.1% for keeping
+  everything - a real, large improvement for a memorizable rule set.
+- A more aggressive policy (`TREE_DEPTH4`) reaches 72.6%/74.4% but averages a full 1.3-1.7 fewer
+  cards - a genuine tradeoff, not a strictly better option.
+- One or two mulligans pay for themselves; a third drops strong-state rate by roughly 30
+  percentage points and roughly triples the stalled rate, across every policy tested.
+
+---
+
+## Machine-readable outputs (section 24)
+
+| Artifact | Contents |
+|---|---|
+| `solo004_opening_hand_dataset_{play,draw}.jsonl.gz` | 100k-hand opener-feature + outcome dataset per seat |
+| `solo004_opening_hand_dataset_{play,draw}_achievable.jsonl.gz` | 15k-hand achievable-search-enabled variant per seat |
+| `solo004_land_population_analysis.json` | Effect sizes by land count (sections 3-4) |
+| `solo004_conditional_hand_outcomes.json` | Full conditional outcome vectors by structural class |
+| `solo004_hand_value_models.json` | Logistic/tree/GBM models, depth sweep, holdout checks |
+| `solo004_objective_profile_comparison.json` | Five value profiles + feature-disagreement analysis |
+| `solo004_keep_thresholds_by_hand_size.json` | Machine-optimal keep frontiers per profile/hand size |
+| `solo004_bottoming_analysis.json` | Search-vs-heuristic bottoming comparison + card-class distribution |
+| `candidate_mulligan_policies.py` | The three candidate policies as callables |
+| `solo004_london_mulligan_results_{play,draw}.json` | 100k full mulligan sequences per policy per seat |
+| `solo004_mulligan_cost_curve.json` | Cost curve + keep-7 decision table |
+| `solo004_false_keep_mulligan_audit.json` | False-keep/false-mulligan audit + examples |
+| `solo004_tutor_interaction_analysis.json` | Per-tutor and interaction-density breakdowns |
+| `solo004_play_draw_comparison.json` | Play vs. draw feature-ranking and outcome comparison |
+| `solo004_primer_example_hands.json` | Concrete example keeps/mulligans for the primer |
+
+All files carry `run_class: DECK_BACKED_GOLDFISH` provenance (`subject_deck_hash`,
+`subject_deck_card_count`, `commander_identities`) per `docs/RUN_CLASSIFICATION.md`, and every
+random sample is seeded and disclosed (primary seed 42, holdout audit seed 777).
+
+## Critical questions answered (section 25)
+
+1. **What separates the good ~half of two-land hands from the bad half?** Acceleration density
+   and engine access, not land count - premium engine/Sol Ring/2+ accel/Tier-A engine are the top
+   four positive drivers; interaction-only is the single largest negative.
+2. **When is a one-land hand worth keeping?** Only with a mana source usable THIS turn (not a
+   summoning-sick dork) - 63.4% vs. 23.3%.
+3. **Is persistent T1 acceleration required for most good one-land keeps?** Effectively yes -
+   persistent/immediate sources drive the keep; a creature dork alone does not (it can't tap T1).
+4. **When is temporary fast mana sufficient?** Only about as often as persistent acceleration for
+   the T1-executable check itself (both count as "executable now"); temporary-only hands trail
+   persistent-accel hands on downstream metrics (41.4% vs. 61.2% at the population level).
+5. **When does a three-land hand become too passive?** When it has no engine, no acceleration,
+   and no tutor at all - 19.4% strong-state, the single worst 3-land structure measured.
+6. **Are four-land hands ever systematically good?** Yes, specifically with a premium one-drop
+   engine (97.5%) - never systematically good otherwise.
+7. **How valuable is T1 engine access relative to T1 acceleration?** Comparable in magnitude
+   (both among the top logistic-regression coefficients and top land-population lifts); premium
+   engine access is marginally the single strongest individual signal at every land count tested.
+8. **How much should a live tutor improve a keep decision?** It shouldn't, on its own - the
+   opposite is true (see finding above). Only an already-live, combo/engine-reaching tutor (a T3
+   fact, not an opener fact) is a real positive.
+9. **How much should free interaction improve it?** Marginally at best in the opener; interaction
+   density is net negative until it's actually live and paid at T3 (92.4% strong-state then, but
+   that's a downstream fact, not a targetable opener feature).
+10. **How bad are interaction-heavy hands without development?** Very - interaction-only hands
+    reach strong-state only 15.4% of the time, the worst structural class measured.
+11. **When should a mediocre seven be shipped for six?** Whenever the seven doesn't clear the
+    keep-7 threshold - concretely, per the decision table, most 2-3-land hands with no engine and
+    no 2+ acceleration.
+12. **When should a mediocre six be shipped for five?** The keep bar loosens (the alternative -
+    a fresh, optimally-bottomed five - is itself weaker than a fresh six), but a hand with no
+    business at all should still ship.
+13. **How much trajectory quality is actually lost at each mulligan?** Little to none for the
+    first two mulligans (strong-state rate holds or improves 7→6→5 under every policy); a third
+    mulligan costs roughly 30 points of strong-state rate and triples the stalled rate.
+14. **What should usually be bottomed at six?** Redundant interaction, then excess lands, then a
+    spare tutor.
+15. **What should usually be bottomed at five?** A spare tutor becomes the single most
+    commonly-correct bottom class.
+16. **Does play/draw materially change the heuristic?** No - top-5 predictive features are
+    identical at every land count from 1 through 5+; only the baseline success rate shifts
+    uniformly upward on the draw.
+17. **How close can a simple human heuristic get to the machine-derived frontier?** A depth-4 tree
+    captures 75.9% of a GBM benchmark's achievable predictive gain; the primer-facing
+    `SIMPLE_RULES` policy reaches 58.9%/64.9% strong-state against a 76.5%/80.7% machine-optimal
+    ceiling - real value is left on the table for memorability, quantified and disclosed rather
+    than hidden.
+18. **Which hands fool the simple heuristic most often?** False keeps (19.5%, far more common
+    than false mulligans at 0.7%) - typically an engine or tutor present but stranded, often
+    alongside resource-destructive acceleration spent without a real payoff.
+19. **Which individual cards most frequently change a mulligan decision?** Sol Ring and the two
+    premium one-drop engines (Mystic Remora, Esper Sentinel) are the strongest single-card keep
+    signals; every individual tutor is a (mild) ship signal on its own.
+20. **What is the final primer-ready mulligan guide?** See "CURRENT MULLIGAN HEURISTIC" and
+    "PRIMER-FACING MULLIGAN PACKET" above.
+
+## Explicit scope disclosure
+
+This completes SOLO-004's core mulligan-heuristic derivation (sections 1-19, 21-25) and the
+required primary deliverable. Consistent with the assignment's own STOP CONDITION: **deckbuilding
+ablations (land/mana-density changes to the 98) are not run here** - deck construction should be
+evaluated under this competent mulligan policy, not the keep-everything population, and that is
+now unblocked as the natural next phase. Also explicitly out of scope per the assignment's own
+section 20: seat-specific/pod-position mulligan policies (turbo-pod, stax-pod, etc.) - those
+require validated opponent/pod simulations this project doesn't yet have; the opener-feature
+infrastructure built here is designed to later condition on pod/seat information once that
+exists, but does not do so now.

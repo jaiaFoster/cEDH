@@ -1,0 +1,31 @@
+{
+  "policy_name": "SIMPLE_RULES",
+  "description": "Primer-facing 8-rule human-memorizable keep/mulligan heuristic, derived from SOLO-004 sections 3-18 findings (not invented then justified). See candidate_mulligan_policies.py module docstring for exact provenance of every rule.",
+  "evaluated_top_to_bottom_first_match_decides": true,
+  "source_code": "def policy_simple_rules(feats):\n    \"\"\"SOLO-004 section 11's target: a small (<=8-rule), human-memorizable heuristic, distilled\n    from the SAME statistical findings the tree/logistic model surfaced (see module docstring for\n    exact provenance of each rule) - not simplified from the tree mechanically, but re-derived by\n    hand from the underlying findings so the reasons stay legible to a pilot at the table.\n\n    Evaluated top-to-bottom; first matching rule decides.\n    \"\"\"\n    premium = feats[\"has_premium_one_drop_card\"]\n    sol_ring = feats[\"has_sol_ring\"]\n    accel_ct = feats[\"accel_card_count\"]\n    tier_a = feats[\"has_tier_a_engine_card\"]\n    interaction_only = feats[\"interaction_only_hand\"]\n    land_ct = feats[\"land_count\"]\n    t1_accel_now = feats[\"t1_accel_executable_now\"]\n    has_engine = feats[\"has_any_engine_card\"]\n    # NOTE: has_tutor_card is deliberately NOT read as a keep signal anywhere below - see rule 4.\n\n    # 1. Snap keeps.\n    if premium:\n        return True\n    if sol_ring:\n        return True\n    if accel_ct >= 2 and land_ct >= 1:\n        return True\n\n    # 2. Land-count-conditioned rules (each grounded in its own land-bucket finding).\n    if land_ct == 0:\n        return False  # 20.9% population success rate - the worst bucket, no exception carved out\n    if land_ct == 1:\n        return t1_accel_now  # 63.4% with executable T1 accel vs 23.3% without\n    if land_ct >= 4:\n        return premium  # already False here since premium was checked above -> ship\n    # land_ct in {2, 3} from here on.\n\n    # 3. Usually-ship signal, checked before the generic engine keep below.\n    if interaction_only:\n        return False  # largest negative lift at every land count tested\n\n    # 4. Conditional keeps at 2-3 lands - engine-based ONLY. A bare tutor is deliberately NOT a\n    #    keep signal here: solo004_tutor_interaction_analysis.json found EVERY individual tutor\n    #    card's presence correlates with a LOWER strong-state rate (35.4-38.9%) than having no\n    #    tutor at all (51.6%) - most opened tutors never go live by T3 in this 3-turn window\n    #    (67-95% stranded), so a tutor is a real opportunity cost, not a keep-enabler, on its own.\n    if tier_a:\n        return True\n    if has_engine and land_ct == 3:\n        return True  # 3_land_with_engine: 50.0% vs 43.5% complement\n\n    # 5. \"Weak business\" at 2-3 lands (no engine, and not enough acceleration to have already\n    #    triggered rule 1) is a real, measured negative outcome - 3_land_weak_business succeeds\n    #    only 19.4% of the time (vs. 48.4% complement). A bare tutor does NOT rescue this case\n    #    (see rule 4's note) - land count alone, with nothing else going on including a tutor by\n    #    itself, is NOT a keep signal at 2 or 3 lands.\n    if not has_engine:\n        return False\n\n    # 6. The one remaining case: a non-Tier-A engine at 2 lands (has_engine true, tier_a false,\n    #    land_ct == 2) - 2_land_with_engine: 52.5% vs 47.2% complement, a real if modest positive.\n    return True\n",
+  "alternative_more_aggressive_policy": {
+    "policy_name": "TREE_DEPTH4",
+    "description": "Literal depth-4 decision tree translation - more aggressive (mulligans more, averages 1.3-1.7 fewer final cards), reaches meaningfully higher strong-state rate (72.6%/74.4% vs 58.9%/64.9% play/draw). A risk-tolerance tradeoff, not a strictly better policy.",
+    "source_code": "def policy_tree_depth4(feats):\n    \"\"\"Literal translation of the depth-4 decision tree's learned splits\n    (solo004_hand_value_models.json's rules_text) into a callable - the \"learned rule list\"\n    (Policy H5), not hand-simplified further. 16 leaves; captures ~76% of the GBM benchmark's\n    achievable AUC gain.\"\"\"\n    premium = feats[\"has_premium_one_drop_card\"]\n    accel_ct = feats[\"accel_card_count\"]\n    sol_ring = feats[\"has_sol_ring\"]\n    t1_accel_now = feats[\"t1_accel_executable_now\"]\n    colors_potential = feats[\"distinct_colors_potential\"]\n    colors_direct = feats[\"distinct_colors_direct\"]\n    cards_after = feats[\"t1_cards_in_hand_after\"]\n    nonland_ct = feats[\"nonland_count\"]\n    land_ct = feats[\"land_count\"]\n    t1_mana = feats[\"t1_mana_available_now\"]\n\n    if not premium:\n        if accel_ct <= 1:\n            if not sol_ring:\n                return t1_mana > 2\n            return t1_accel_now\n        else:\n            if cards_after <= 5:\n                return colors_potential > 0\n            else:\n                return False\n    else:\n        if colors_potential <= 0:\n            return False\n        else:\n            if cards_after <= 5:\n                return True\n            else:\n                return nonland_ct <= 5\n"
+  },
+  "performance_summary": {
+    "play": {
+      "strong_state_rate": 0.589,
+      "avg_final_hand_size": 6.35,
+      "false_keep_rate": 0.195,
+      "false_mulligan_rate": 0.007
+    },
+    "draw": {
+      "strong_state_rate": 0.649,
+      "avg_final_hand_size": 6.37
+    },
+    "keep_everything_baseline": {
+      "play": 0.438,
+      "draw": 0.511
+    },
+    "machine_optimal_ceiling": {
+      "play": 0.765,
+      "draw": 0.807
+    }
+  }
+}

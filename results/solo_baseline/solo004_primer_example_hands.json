@@ -1,0 +1,352 @@
+{
+  "example_keeps": [
+    {
+      "hand": [
+        "Chord of Calling",
+        "Command Tower",
+        "Eldritch Evolution",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mystic Remora",
+        "Pact of Negation",
+        "Tropical Island"
+      ],
+      "land_count": 2,
+      "strong_state": true,
+      "outcome_tags": [
+        "stranded_tutor"
+      ],
+      "family_tags": [
+        "t1_engine_hand"
+      ]
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Gemstone Caverns",
+        "Heartwood Storyteller",
+        "Mox Amber",
+        "Mystic Remora",
+        "Spellseeker",
+        "Starting Town"
+      ],
+      "land_count": 3,
+      "strong_state": true,
+      "outcome_tags": [
+        "stranded_tutor"
+      ],
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "t1_accel_to_t2_premium_engine",
+        "t1_engine_hand",
+        "commander_conversion_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Heartwood Storyteller",
+        "Mystic Remora",
+        "Savannah",
+        "Shifting Woodland",
+        "Smothering Tithe",
+        "Voice of Victory"
+      ],
+      "land_count": 2,
+      "strong_state": true,
+      "outcome_tags": [
+        "mana_shortfall"
+      ],
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Birds of Paradise",
+        "Boseiju, Who Endures",
+        "City of Traitors",
+        "Esper Sentinel",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Veil of Summer",
+        "Windswept Heath"
+      ],
+      "land_count": 3,
+      "strong_state": true,
+      "outcome_tags": [],
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "t1_fast_mana_to_t2_multiple_actions",
+        "t1_accel_to_t2_premium_engine",
+        "creature_board_supports_cradle_chord_infrastructure",
+        "commander_conversion_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Crop Rotation",
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Marsh Flats",
+        "Mental Misstep",
+        "Nature's Rhythm"
+      ],
+      "land_count": 1,
+      "strong_state": true,
+      "outcome_tags": [
+        "stranded_or_unsupported_engine"
+      ],
+      "family_tags": [
+        "t1_accel_to_t2_kinnan",
+        "t1_engine_hand",
+        "tutor_conversion_hand",
+        "interaction_heavy_slow_hand",
+        "strong_one_land_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Elves of Deep Shadow",
+        "Faerie Mastermind",
+        "Gaea's Cradle",
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Mental Misstep"
+      ],
+      "land_count": 1,
+      "strong_state": true,
+      "outcome_tags": [
+        "stranded_or_unsupported_engine",
+        "stranded_tutor"
+      ],
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "creature_board_supports_cradle_chord_infrastructure",
+        "creature_swarm_to_cradle",
+        "commander_conversion_hand",
+        "strong_one_land_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Archivist of Oghma",
+        "Birds of Paradise",
+        "Finale of Devastation",
+        "Force of Negation",
+        "Mana Confluence",
+        "Mox Amber",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 1,
+      "strong_state": true,
+      "outcome_tags": [
+        "stranded_or_unsupported_engine",
+        "stranded_tutor"
+      ],
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "t1_fast_mana_to_t2_multiple_actions",
+        "creature_board_supports_cradle_chord_infrastructure",
+        "strong_one_land_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Esper Sentinel",
+        "Finale of Devastation",
+        "Gaea's Cradle",
+        "Mental Misstep",
+        "Shang-Chi, Master of Kung Fu",
+        "Sowing Mycospawn",
+        "Starting Town"
+      ],
+      "land_count": 2,
+      "strong_state": true,
+      "outcome_tags": [
+        "stranded_tutor",
+        "mana_shortfall"
+      ],
+      "family_tags": [
+        "t1_engine_hand",
+        "commander_conversion_hand"
+      ]
+    }
+  ],
+  "example_mulligans": [
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Derevi, Empyrial Tactician",
+        "Force of Will",
+        "Orcish Bowmasters",
+        "Subtlety",
+        "Survival of the Fittest",
+        "Talon Gates of Madara"
+      ],
+      "land_count": 1,
+      "strong_state": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "mana_shortfall"
+      ],
+      "family_tags": [
+        "t1_dork_to_t2_survival"
+      ]
+    },
+    {
+      "hand": [
+        "Endurance",
+        "Flusterstorm",
+        "Gaea's Cradle",
+        "Imperial Seal",
+        "Mana Confluence",
+        "Orcish Bowmasters",
+        "Veil of Summer"
+      ],
+      "land_count": 2,
+      "strong_state": false,
+      "outcome_tags": [
+        "no_proactive_development",
+        "low_mana_capacity",
+        "mana_shortfall"
+      ],
+      "family_tags": [
+        "deceptive_two_land_hand",
+        "genuinely_nonfunctional_hand"
+      ]
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Delighted Halfling",
+        "Endurance",
+        "Enlightened Tutor",
+        "Finale of Devastation",
+        "Flare of Denial",
+        "Oboro Breezecaller"
+      ],
+      "land_count": 1,
+      "strong_state": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor"
+      ],
+      "family_tags": [
+        "t1_accel_to_t2_commander",
+        "creature_board_supports_cradle_chord_infrastructure",
+        "commander_conversion_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Eldritch Evolution",
+        "Enduring Vitality",
+        "Mental Misstep",
+        "Starting Town",
+        "Tundra",
+        "Windswept Heath"
+      ],
+      "land_count": 3,
+      "strong_state": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor"
+      ],
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Boseiju, Who Endures",
+        "Derevi, Empyrial Tactician",
+        "Eldritch Evolution",
+        "Gleaming Splendor",
+        "Misdirection",
+        "Shifting Woodland",
+        "Wooded Foothills"
+      ],
+      "land_count": 3,
+      "strong_state": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "color_failure"
+      ],
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Crop Rotation",
+        "Marsh Flats",
+        "Pact of Negation",
+        "Tundra",
+        "Underground Sea",
+        "Veil of Summer",
+        "Verdant Catacombs"
+      ],
+      "land_count": 4,
+      "strong_state": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "color_failure"
+      ],
+      "family_tags": [
+        "flooded_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Elves of Deep Shadow",
+        "Nature's Rhythm",
+        "Otawara, Soaring City",
+        "Polluted Delta",
+        "Sowing Mycospawn",
+        "Volatile Stormdrake",
+        "Wooded Foothills"
+      ],
+      "land_count": 3,
+      "strong_state": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine",
+        "stranded_tutor",
+        "color_failure",
+        "mana_shortfall"
+      ],
+      "family_tags": [
+        "unclassified_hand"
+      ]
+    },
+    {
+      "hand": [
+        "Archivist of Oghma",
+        "Endurance",
+        "Gleaming Splendor",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mox Diamond",
+        "Smothering Tithe",
+        "Voice of Victory"
+      ],
+      "land_count": 0,
+      "strong_state": false,
+      "outcome_tags": [
+        "no_proactive_development",
+        "low_mana_capacity",
+        "mana_shortfall"
+      ],
+      "family_tags": [
+        "genuinely_nonfunctional_hand"
+      ]
+    }
+  ]
+}
