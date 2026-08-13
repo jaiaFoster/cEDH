@@ -1,0 +1,25 @@
+{
+  "phase": "SIM_001_MULL_006_PROVENANCE",
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "mull005r_reference_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "mull005r_reference_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_matches_mull005r": true,
+  "git_commit": "3f3a1c3c273184afaaf541f5cda1c536cff339db",
+  "git_branch": "claude/cedh-simulation-research-k5afxg",
+  "oracle_rules_snapshot": [
+    "oracle-2026-08-12"
+  ],
+  "mull005r_policy_version": "trajectory_policies.py @ commit 8ba0e33 (TRAJECTORY_SIMPLE_R/TREE_R/MACHINE_R, mull005r_hand_size_thresholds.json)",
+  "mull006_policy_version": "in progress - this commit",
+  "mull005r_regression_gate_status": "OPEN_FOR_PRODUCTION_RERUN",
+  "note": "Every MULL-006 artifact must cite subject_deck_hash from this file. seeds/sample_sizes/seat/play-draw/pod assumptions/search limits/heuristic priors are recorded per-artifact in that artifact's own JSON (this file only fixes the DECK identity, which is shared across all of them) - see each artifact's own provenance block."
+}
