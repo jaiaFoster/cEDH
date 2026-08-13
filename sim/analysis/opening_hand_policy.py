@@ -24,7 +24,8 @@ from opening_hand_model import (
     FETCH_LAND_TARGET_TYPES, DUAL_LAND_BASIC_TYPES, BASIC_TYPE_COLOR,
     CRADLE, GEMSTONE_CAVERNS, EXOTIC_ORCHARD, CITY_OF_TRAITORS,
     MANA_SOURCES, ACCELERATION, TUTORS, INTERACTION_CASTABLE, ENGINES,
-    PREMIUM_ONE_DROP_ENGINES, COMMANDERS,
+    PREMIUM_ONE_DROP_ENGINES, COMMANDERS, PhyrexianPip, PHYREXIAN_LIFE_COST,
+    TUTOR_DESTINATION_HAND, TUTOR_DESTINATION_LIBRARY_TOP,
 )
 from interaction_model import resolve_interaction_cast, commit_interaction_cast
 
@@ -239,7 +240,18 @@ def _setup_gemstone_caverns(state):
     state.lands.append(LandInPlay(GEMSTONE_CAVERNS, 0, tapped=False, has_luck_counter=True))
 
 
+OCULUS_NAME = "Abhorrent Oculus"
+
+
 def _card_class(name, cards):
+    if name == OCULUS_NAME:
+        # MULL-005R (t1_t3_trajectory_audit.json OCULUS-001): real Oracle text is "As an
+        # ADDITIONAL cost to cast this spell, exile six cards from your graveyard" - a T1-T3
+        # opener never has 6 graveyard cards, so this is never a real hand-cast line in this
+        # deck. Previously this was accidentally true (Oculus fell into an unhandled "other"
+        # class with no priority bucket) rather than an explicit, tested rule - made explicit
+        # here so it stays correct even if ENGINES/TUTORS classification ever changes.
+        return "uncastable_from_hand"
     if name in COMMANDERS:
         return "commander"
     if name in PREMIUM_ONE_DROP_ENGINES:
@@ -357,6 +369,7 @@ def _try_pay(state, cost_generic, cost_pips):
     def capacity(ref, total):
         return total - used.get(id(ref), 0)
 
+    life_payments = 0  # count of Phyrexian pips paid via life instead of a color source
     remaining_pips = list(cost_pips)
     for pip in list(remaining_pips):
         need = pip if isinstance(pip, frozenset) else {pip}
@@ -368,7 +381,15 @@ def _try_pay(state, cost_generic, cost_pips):
                 remaining_pips.remove(pip)
                 break
         else:
-            return None
+            if isinstance(pip, PhyrexianPip):
+                # Real Oracle rule: pay PHYREXIAN_LIFE_COST life instead of the color. This
+                # model's life totals never approach a real danger zone in a T1-4 window (same
+                # documented philosophy already applied to Ancient Tomb/Mana Vault's life-loss
+                # abilities), so it is never treated as a further constraint on top of the cost.
+                life_payments += 1
+                remaining_pips.remove(pip)
+            else:
+                return None
     if remaining_pips:
         return None
 
@@ -385,7 +406,10 @@ def _try_pay(state, cost_generic, cost_pips):
         return None
 
     ref_by_id = {id(ref): ref for (ref, colors, count) in avail}
-    return [(ref_by_id[rid], units) for rid, units in used.items()]
+    plan = [(ref_by_id[rid], units) for rid, units in used.items()]
+    if life_payments:
+        plan.append(("__phyrexian_life__", life_payments))
+    return plan
 
 
 def _commit_payment(state, plan):
@@ -394,6 +418,9 @@ def _commit_payment(state, plan):
     permanent), so any unit not needed for this specific payment is simply not produced/tracked
     beyond this call, consistent with this model's turn-atomic (not phase-by-phase) mana pool."""
     for ref, units in plan:
+        if ref == "__phyrexian_life__":
+            state.life -= PHYREXIAN_LIFE_COST * units
+            continue
         if ref == "__esg_virtual__":
             if "Elvish Spirit Guide" in state.hand:
                 state.hand.remove("Elvish Spirit Guide")
@@ -421,6 +448,9 @@ def _rollback_payment(state, plans):
     joint-payability dry runs (can_pay_jointly), never by a real cast."""
     for plan in reversed(plans):
         for ref, units in plan:
+            if ref == "__phyrexian_life__":
+                state.life += PHYREXIAN_LIFE_COST * units
+                continue
             if ref == "__esg_virtual__":
                 if "Elvish Spirit Guide" in state.exile:
                     state.exile.remove("Elvish Spirit Guide")
@@ -478,15 +508,30 @@ def is_currently_castable(state, gen, pips):
 
 
 def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction=False,
-                  forced_land=None, forced_fetch_target=None, forced_tutor_target=None):
+                  forced_land=None, forced_fetch_target=None, forced_tutor_target=None,
+                  forced_pod_activation=None, forced_survival_activations=None,
+                  forced_battlefield_tutor=None, forced_land_tutor=None):
     """Mutates state for one turn: untap, draw, land drop, greedy casts. Returns actions taken.
     forced_land: if given (and present in hand), overrides the greedy land-choice heuristic.
     forced_fetch_target: if forced_land (or the greedily-chosen land) is a fetch, overrides which
     legal target it searches for. forced_tutor_target: if a tutor is cast this turn (whichever one
     the greedy priority loop selects) and this card is present in state.library, it is searched
-    up and added to hand - real resolution, not just a spent card. All three are used only by
-    bounded alternate-line search (achievable_search.py / trajectory_search.py), never by the
-    default policy_realized line, which leaves tutors unresolved exactly as before MULL-005."""
+    up and added to hand (or the top of the library, per real Oracle text - see
+    TUTOR_DESTINATION_LIBRARY_TOP) - real resolution, not just a spent card.
+
+    MULL-005R additions, all following the same inert-by-default pattern:
+    forced_pod_activation: (sac_name, target_name) tuple - attempts ONE Birthing Pod activation
+    after the main cast loop, if Pod is on the battlefield and untapped.
+    forced_survival_activations: list of (discard_name, target_name) tuples, tried in order,
+    each a separate Survival of the Fittest activation (repeatable per real Oracle text).
+    forced_battlefield_tutor: (tutor_name, target_name, sac_name_or_None) tuple - attempts to
+    cast one of Eldritch Evolution/Finale of Devastation/Nature's Rhythm/Chord of Calling for
+    exactly the X (or sacrifice) needed to find target_name onto the battlefield.
+    forced_land_tutor: (tutor_name, target_name) tuple - Crop Rotation's own land-target search.
+
+    All of these are used only by bounded alternate-line search (achievable_search.py /
+    trajectory_search.py), never by the default policy_realized line, which leaves them exactly
+    as inert as before MULL-005R when omitted."""
     state.turn += 1
     state.untap_all()
     actions = []
@@ -627,12 +672,54 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
                     # unchanged from every previously-committed SOLO-002 through SOLO-004 result.
                     # Only trajectory_search.py's bounded search ever passes a real target, to
                     # explore what a specific tutor could legally find for THIS hand.
+                    #
+                    # MULL-005R correctness fix: destination zone now respects real Oracle text
+                    # (see TUTOR_DESTINATION_LIBRARY_TOP's docstring in opening_hand_model.py) -
+                    # Vampiric Tutor/Imperial Seal/Enlightened Tutor go to the TOP of the library
+                    # (not accessible until drawn next turn), not into hand. c is guaranteed to be
+                    # in TUTOR_DESTINATION_HAND | TUTOR_DESTINATION_LIBRARY_TOP here (Birthing
+                    # Pod/Survival of the Fittest are activated abilities, never cast as instants/
+                    # sorceries, so cls != "tutor" can't apply to them at this point; the four
+                    # battlefield-destination search spells - Chord/Eldritch Evolution/Finale/
+                    # Nature's Rhythm - are X-cost and were already skipped above ('X spells not
+                    # modeled in this greedy dev policy') and are instead reached only through
+                    # _try_battlefield_tutor(), never through this generic tutor path; Crop
+                    # Rotation/Sowing Mycospawn are land tutors, similarly reached only through
+                    # the dedicated land-tutor path below).
                     state.library.remove(forced_tutor_target)
-                    state.hand.append(forced_tutor_target)
-                    actions.append(("tutor_fetch", forced_tutor_target))
+                    if c in TUTOR_DESTINATION_LIBRARY_TOP:
+                        state.library.insert(0, forced_tutor_target)
+                        actions.append(("tutor_to_library_top", forced_tutor_target))
+                    else:
+                        state.hand.append(forced_tutor_target)
+                        actions.append(("tutor_fetch", forced_tutor_target))
                 _commit_payment(state, plan)
                 actions.append(("cast", c, _card_class(c, cards)))
                 state.cast_log.append((state.turn, c, _card_class(c, cards)))
                 changed = True
                 break
+
+    # MULL-005R: Pod/Survival activations + battlefield-destination tutors, all inert unless
+    # explicitly forced - see module docstring and pod_and_battlefield_tutors.py.
+    if forced_battlefield_tutor is not None:
+        from pod_and_battlefield_tutors import try_battlefield_creature_tutor
+        tutor_name, target_name, sac_name = forced_battlefield_tutor
+        if try_battlefield_creature_tutor(state, cards, tutor_name, target_name, sac_name):
+            actions.append(("battlefield_tutor", tutor_name, target_name))
+    if forced_land_tutor is not None:
+        from pod_and_battlefield_tutors import try_battlefield_land_tutor
+        tutor_name, target_name = forced_land_tutor
+        if try_battlefield_land_tutor(state, cards, tutor_name, target_name):
+            actions.append(("battlefield_land_tutor", tutor_name, target_name))
+    if forced_pod_activation is not None:
+        from pod_and_battlefield_tutors import try_activate_pod
+        sac_name, target_name = forced_pod_activation
+        if try_activate_pod(state, cards, sac_name, target_name):
+            actions.append(("pod_activate", sac_name, target_name))
+    if forced_survival_activations:
+        from pod_and_battlefield_tutors import try_activate_survival
+        for discard_name, target_name in forced_survival_activations:
+            if try_activate_survival(state, cards, discard_name, target_name):
+                actions.append(("survival_activate", discard_name, target_name))
+
     return actions

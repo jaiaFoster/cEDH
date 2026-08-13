@@ -47,10 +47,26 @@ COLORS = "WUBG"
 
 # ---- mana cost parsing -----------------------------------------------
 
+PHYREXIAN_LIFE_COST = 2  # real Oracle rule: a Phyrexian mana symbol may be paid with 2 life instead
+
+
+class PhyrexianPip(frozenset):
+    """A pip payable either by one of its (usually single) colors OR by paying
+    PHYREXIAN_LIFE_COST life instead - real Oracle text for {G/P} etc. Subclasses frozenset
+    (not merely duck-typed) so every existing `isinstance(pip, frozenset)` call site in the
+    payment engine keeps working unchanged for the color-payment path; only _try_pay needs new
+    logic for the life-payment fallback. MULL-005R correctness fix: the prior parser silently
+    dropped the life-payment half of any {X/P} symbol, forcing color payment - this undercounted
+    real castability (e.g. Birthing Pod's {3}{G/P} cast cost and {1}{G/P} activation cost)
+    whenever the color was unavailable but life was not a constraint, which this project's own
+    documented philosophy already says should "never block a line" (see this module's docstring)."""
+
+
 def parse_cost(mana_cost_str):
-    """Returns (generic:int, pips:list[str|frozenset], x_count:int).
-    pips entries are single-color strings, or frozenset for hybrid/phyrexian
-    (treated as "any one of these, no extra cost distinction")."""
+    """Returns (generic:int, pips:list[str|frozenset|PhyrexianPip], x_count:int).
+    pips entries are single-color strings, frozenset for true hybrid (any ONE of these colors,
+    no life option - e.g. Deathrite Shaman's {B/G}), or PhyrexianPip for phyrexian mana (any ONE
+    of these colors, OR PHYREXIAN_LIFE_COST life - e.g. Birthing Pod's {G/P})."""
     if not mana_cost_str:
         return 0, [], 0
     tokens = re.findall(r"\{([^}]+)\}", mana_cost_str)
@@ -65,10 +81,13 @@ def parse_cost(mana_cost_str):
         elif t in COLORS:
             pips.append(t)
         elif "/" in t:
-            parts = [p for p in t.split("/") if p in COLORS]
+            raw_parts = t.split("/")
+            parts = [p for p in raw_parts if p in COLORS]
             if parts:
-                pips.append(frozenset(parts))
-            # {U/P} phyrexian-with-generic-color handled as that color pip
+                if "P" in raw_parts:
+                    pips.append(PhyrexianPip(parts))
+                else:
+                    pips.append(frozenset(parts))
         elif t == "C":
             generic += 1  # colorless pip treated as generic for our purposes
         # ignore S (snow) etc, none present
@@ -265,6 +284,18 @@ MOX_FAMILY = {"Chrome Mox", "Lotus Petal", "Mox Amber", "Mox Diamond", "Sol Ring
 # mana, land, cradle, engine, interaction, protection, combo_piece, creature. Approximate -
 # manual classification consistent with this project's established "heuristic classification,
 # acceptable for diagnostic purposes" standard (docs/VALIDATION_GATES.md Gate 1).
+# MULL-005R correctness fix (t1_t3_trajectory_audit.json, section 18's "top-of-library tutors
+# actually delay access until draw"): MULL-005 put every forced tutor target into HAND uniformly.
+# Real Oracle text: Vampiric Tutor/Imperial Seal/Enlightened Tutor put the found card on TOP OF
+# LIBRARY, not into hand - it is not actually accessible until drawn on a LATER turn, a real
+# delay this simulator must represent. Demonic Tutor, and the ETB-triggered searches on
+# Ranger-Captain of Eos / Spellseeker, genuinely do put the card into hand. Cards not listed here
+# either aren't hand/library-zone tutors (Birthing Pod/Survival of the Fittest are activated
+# abilities, handled separately - see pod_and_battlefield_tutors.py) or are battlefield-zone
+# search effects (see BATTLEFIELD_TUTOR_SPECS below).
+TUTOR_DESTINATION_HAND = {"Demonic Tutor", "Ranger-Captain of Eos", "Spellseeker"}
+TUTOR_DESTINATION_LIBRARY_TOP = {"Vampiric Tutor", "Imperial Seal", "Enlightened Tutor"}
+
 TUTOR_TARGETS = {
     "Demonic Tutor": frozenset({"mana", "land", "cradle", "engine", "interaction", "protection", "combo_piece", "creature"}),
     "Vampiric Tutor": frozenset({"mana", "land", "cradle", "engine", "interaction", "protection", "combo_piece", "creature"}),
