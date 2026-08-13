@@ -209,6 +209,110 @@
           "mean_cards_remaining_t3": 1.798901098901099
         }
       ]
+    },
+    "draw": {
+      "TREE_DEPTH4": [
+        {
+          "starting_hand": "Kept 7",
+          "probability_reached": 0.26722,
+          "t2_engine_rate": 0.3952922685427737,
+          "t3_strong_state_rate": 0.8385599880248484,
+          "t3_stalled_rate": 0.050482748297283137,
+          "mean_cards_remaining_t3": 3.3177905845370854
+        },
+        {
+          "starting_hand": "Kept 6",
+          "probability_reached": 0.19728,
+          "t2_engine_rate": 0.4519971613949716,
+          "t3_strong_state_rate": 0.8353102189781022,
+          "t3_stalled_rate": 0.033049472830494725,
+          "mean_cards_remaining_t3": 3.2039740470397406
+        },
+        {
+          "starting_hand": "Kept 5",
+          "probability_reached": 0.14542,
+          "t2_engine_rate": 0.4613533214138358,
+          "t3_strong_state_rate": 0.8258836473662495,
+          "t3_stalled_rate": 0.030394718745702105,
+          "mean_cards_remaining_t3": 2.780910466235731
+        },
+        {
+          "starting_hand": "Kept 4-or-fewer",
+          "probability_reached": 0.39008,
+          "t2_engine_rate": 0.31888330598851516,
+          "t3_strong_state_rate": 0.6035428630024611,
+          "t3_stalled_rate": 0.14279122231337163,
+          "mean_cards_remaining_t3": 2.2188269073010662
+        }
+      ],
+      "SIMPLE_RULES": [
+        {
+          "starting_hand": "Kept 7",
+          "probability_reached": 0.6346,
+          "t2_engine_rate": 0.2860699653324929,
+          "t3_strong_state_rate": 0.6312953041285849,
+          "t3_stalled_rate": 0.11391427670973842,
+          "mean_cards_remaining_t3": 3.8580838323353293
+        },
+        {
+          "starting_hand": "Kept 6",
+          "probability_reached": 0.23241,
+          "t2_engine_rate": 0.34439137730734476,
+          "t3_strong_state_rate": 0.661030076158513,
+          "t3_stalled_rate": 0.09801643647003142,
+          "mean_cards_remaining_t3": 3.638655823759735
+        },
+        {
+          "starting_hand": "Kept 5",
+          "probability_reached": 0.08437,
+          "t2_engine_rate": 0.35308759037572596,
+          "t3_strong_state_rate": 0.6667061751807515,
+          "t3_stalled_rate": 0.09256844850065189,
+          "mean_cards_remaining_t3": 3.1384378333530876
+        },
+        {
+          "starting_hand": "Kept 4-or-fewer",
+          "probability_reached": 0.04862,
+          "t2_engine_rate": 0.31571369806663924,
+          "t3_strong_state_rate": 0.6083916083916084,
+          "t3_stalled_rate": 0.1277252159605101,
+          "mean_cards_remaining_t3": 2.4296585767174004
+        }
+      ],
+      "MACHINE_OPTIMAL": [
+        {
+          "starting_hand": "Kept 7",
+          "probability_reached": 0.3716,
+          "t2_engine_rate": 0.5791173304628633,
+          "t3_strong_state_rate": 0.844994617868676,
+          "t3_stalled_rate": 0.0016146393972012918,
+          "mean_cards_remaining_t3": 3.573735199138859
+        },
+        {
+          "starting_hand": "Kept 6",
+          "probability_reached": 0.2354,
+          "t2_engine_rate": 0.5811384876805438,
+          "t3_strong_state_rate": 0.8785046728971962,
+          "t3_stalled_rate": 0.0,
+          "mean_cards_remaining_t3": 3.278674596431606
+        },
+        {
+          "starting_hand": "Kept 5",
+          "probability_reached": 0.1462,
+          "t2_engine_rate": 0.5841313269493844,
+          "t3_strong_state_rate": 0.8563611491108071,
+          "t3_stalled_rate": 0.005471956224350205,
+          "mean_cards_remaining_t3": 2.7879616963064295
+        },
+        {
+          "starting_hand": "Kept 4-or-fewer",
+          "probability_reached": 0.2468,
+          "t2_engine_rate": 0.40437601296596437,
+          "t3_strong_state_rate": 0.6515397082658023,
+          "t3_stalled_rate": 0.11588330632090761,
+          "mean_cards_remaining_t3": 2.2098865478119936
+        }
+      ]
     }
   }
 }
