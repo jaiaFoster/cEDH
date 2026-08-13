@@ -521,7 +521,16 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
         changed = False
         for cls in priority_order:
             if cls == "commander":
-                castable = list(state.command_zone)
+                # SOLO-003R: iterate in COMMANDERS' fixed declared order, not state.command_zone's
+                # raw set order. A bare set of strings iterates in an order that depends on
+                # Python's per-process string-hash seed (randomized by default, not fixed by
+                # random.Random(seed)) - so with two commanders both castable and only enough mana
+                # for one, "which commander wins the tie" was silently non-deterministic across
+                # process runs even with an identical seed, undermining the single-greedy-policy
+                # determinism this whole census methodology assumes. Discovered while validating
+                # SOLO-003R's rerun for reproducibility (two runs of unmodified code, same seed,
+                # produced a 9-percentage-point swing in Tymna's deployment rate).
+                castable = [c for c in COMMANDERS if c in state.command_zone]
             else:
                 castable = [c for c in state.hand if not _is_land(c, cards) and c != "Elvish Spirit Guide" and _card_class(c, cards) == cls]
             if not castable:

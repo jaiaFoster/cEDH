@@ -15,6 +15,10 @@ trajectory census is trusted:
 5. `total_mana`/`colors_available` in snapshot_metrics() report this turn's STARTING CAPACITY, not
    post-cast leftover, and `mana_shortfall` is only true when a desirable card was uncastable even
    against the turn's full capacity.
+6. Commander cast order (when both Tymna and Thrasios are castable but only one fits) is
+   deterministic, not dependent on Python's per-process string-hash seed - a real reproducibility
+   bug discovered while validating this rerun (identical seed, unmodified code, gave a
+   9-percentage-point swing in Tymna's population-wide deployment rate across two runs).
 """
 import random
 import sys
@@ -23,7 +27,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "sim" / "analysis"))
 
-from opening_hand_policy import HandState, LandInPlay, Perm  # noqa: E402
+from opening_hand_model import COMMANDERS  # noqa: E402
+from opening_hand_policy import HandState, LandInPlay, Perm, develop_turn  # noqa: E402
 from opening_hand_metrics import snapshot_metrics  # noqa: E402
 
 FAKE_CARDS = {
@@ -37,6 +42,10 @@ FAKE_CARDS = {
     "Tymna the Weaver": {
         "name": "Tymna the Weaver", "type": "Legendary Creature — Human Cleric",
         "mana_cost": "{1}{W}{B}", "cmc": 3,
+    },
+    "Thrasios, Triton Hero": {
+        "name": "Thrasios, Triton Hero", "type": "Legendary Creature — Merfolk Wizard",
+        "mana_cost": "{G}{U}", "cmc": 2,
     },
     "Grizzly Bears": {"name": "Grizzly Bears", "type": "Creature — Bear", "mana_cost": "{1}{G}", "cmc": 2},
     "Demonic Tutor": {"name": "Demonic Tutor", "type": "Sorcery", "mana_cost": "{1}{B}", "cmc": 2},
@@ -222,3 +231,24 @@ def test_mana_shortfall_ignores_uncastable_command_zone_commanders():
     assert m["mana_shortfall"] is False
     assert m["Tymna the Weaver_castable"] is False
     assert m["Thrasios, Triton Hero_castable"] is False
+
+
+# ---- 6. deterministic commander cast-order tie-break ----
+def test_commander_cast_order_is_deterministic_not_hash_order():
+    # 4 Command Towers (each: any ONE of W/U/B/G per tap) give exactly enough total mana (4) to
+    # cast Tymna ({1}{W}{B} = 3) OR Thrasios ({G}{U} = 2), but never both (3+2=5 > 4) - so exactly
+    # one commander ends up on the battlefield, and WHICH one is determined entirely by cast
+    # order. Before the fix, `castable = list(state.command_zone)` iterated a bare set of
+    # strings, whose order depends on Python's per-process string-hash seed - not fixed by
+    # random.Random(seed) - so this outcome was silently non-deterministic across process runs.
+    # The fix iterates COMMANDERS' fixed dict order instead, so Tymna (declared first) must win
+    # this tie every time, in every process, regardless of hash seed.
+    for _ in range(5):
+        state = _minimal_state(hand=[])
+        state.lands = [LandInPlay("Command Tower", 0) for _ in range(4)]
+        state.turn_start_mana = 4
+        state.turn_start_colors = {"W", "U", "B", "G"}
+        develop_turn(state, FAKE_CARDS, priority_order=["commander"])
+        on_bf = {p.name for p in state.nonland_perms}
+        assert on_bf == {"Tymna the Weaver"}, \
+            "Tymna (declared first in COMMANDERS) must deterministically win this tie"
