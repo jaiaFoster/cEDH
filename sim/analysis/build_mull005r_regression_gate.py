@@ -1,0 +1,228 @@
+"""SIM-001 MULL-005R section 27 — regression/gold-state validation gate.
+
+The assignment is explicit: "ANY failing prior correctness test BLOCKS the production rerun."
+This module is the single, explicit checklist of every correctness property that MUST hold before
+tasks #94+ (large-scale dataset regeneration, census reports, policy rebuild, London mulligan
+rerun, holdout validation) may begin. Each item names the exact test node ID(s) that prove it, and
+this script actually RUNS them (via pytest, in-process) rather than merely asserting in prose that
+they pass - a stale claim here would defeat the entire purpose of a gate.
+
+Two categories:
+  PRESERVED  - a SOLO-002R/SOLO-003R/MULL-005 correctness property that MULL-005R must not
+               regress (the assignment's explicit "preserve ALL SOLO-002R mana correctness fixes"
+               instruction, generalized to every prior phase's fixes still covered by a test).
+  NEW        - a MULL-005R correction/addition, first proven by a test written this phase.
+"""
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+GATE_ITEMS = [
+    # ---- PRESERVED: SOLO-002R mana-engine correctness (explicit assignment instruction) -------
+    {
+        "id": "GATE-01", "category": "PRESERVED",
+        "property": "Per-source tapped-state mana tracking (no double-spending a single land/rock across two casts in one turn)",
+        "tests": [
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_one_land_cannot_pay_two_one_mana_spells",
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_sol_ring_cannot_be_tapped_twice",
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_source_returns_after_untap_step",
+        ],
+    },
+    {
+        "id": "GATE-02", "category": "PRESERVED",
+        "property": "Gaea's Cradle produces G equal to CURRENT creature count at time of tap, not a flat/cached value",
+        "tests": ["rules_tests/regression/test_solo003r_metric_fixes.py::test_kinnan_does_not_double_gaeas_cradle"],
+    },
+    {
+        "id": "GATE-03", "category": "PRESERVED",
+        "property": "Mana Vault's real restriction (does not untap normally) is respected",
+        "tests": ["rules_tests/regression/test_opening_hand_mana_correctness.py::test_mana_vault_never_untaps"],
+    },
+    {
+        "id": "GATE-04", "category": "PRESERVED",
+        "property": "City of Traitors sacrifice-on-second-land-drop behavior is modeled, not treated as a plain generic land",
+        "tests": [
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_city_of_traitors_sacrifices_on_next_land",
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_city_of_traitors_full_turn_sequence",
+        ],
+    },
+    {
+        "id": "GATE-05", "category": "PRESERVED",
+        "property": "Gemstone Caverns luck-counter (on-play vs on-draw) opening-hand logic is correct",
+        "tests": [
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_gemstone_caverns_on_play_stays_in_hand",
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_gemstone_caverns_on_draw_takes_luck_counter_action",
+        ],
+    },
+    {
+        "id": "GATE-06", "category": "PRESERVED",
+        "property": "Fetchlands perform real library search against actual legal basic-type targets, not a hardcoded/simplified result",
+        "tests": [
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_fetchland_finds_a_real_legal_target_and_removes_it_from_the_library",
+            "rules_tests/regression/test_opening_hand_mana_correctness.py::test_fetchland_cannot_find_a_target_whose_types_dont_match",
+        ],
+    },
+    {
+        "id": "GATE-07", "category": "PRESERVED",
+        "property": "The six ABUR dual lands carry their real two basic land types (fetchable), and a fetch cannot find a target whose types don't match",
+        "tests": ["rules_tests/regression/test_opening_hand_mana_correctness.py::test_fetchland_cannot_find_a_target_whose_types_dont_match"],
+    },
+    {
+        "id": "GATE-08", "category": "PRESERVED",
+        "property": "Exotic Orchard produces zero mana in this solo/no-opponent model - disclosed assumption, not silently approximated as a real color source",
+        "tests": ["rules_tests/regression/test_opening_hand_mana_correctness.py::test_exotic_orchard_produces_no_mana_in_solo_model"],
+    },
+    {
+        "id": "GATE-09", "category": "PRESERVED",
+        "property": "Colored-mana restrictions (exact pip requirements) and Mox Amber's controls_legendary gate are enforced exactly, not approximated by generic-mana-only checks",
+        "tests": [
+            "rules_tests/regression/test_opening_hand_mana_correctness.py",
+            "rules_tests/regression/test_mull005r_grading_corrections.py::test_thrasios_enables_mox_amber_earns_tier_credit",
+        ],
+    },
+    {
+        "id": "GATE-10", "category": "PRESERVED",
+        "property": "Ancient Tomb burst-mana sequencing (2 generic, 2 life lost per tap) is modeled correctly",
+        "tests": ["rules_tests/regression/test_opening_hand_mana_correctness.py::test_ancient_tomb_produces_two_generic_mana_and_costs_two_life"],
+    },
+    # ---- NEW: MULL-005R engine/mana corrections -------------------------------------------
+    {
+        "id": "GATE-11", "category": "NEW",
+        "property": "Phyrexian mana ({X/P}) is payable via color OR a fixed life cost, distinct from true hybrid ({X/Y})",
+        "tests": ["rules_tests/regression/test_mull005r_phyrexian_mana.py"],
+    },
+    {
+        "id": "GATE-12", "category": "NEW",
+        "property": "Abhorrent Oculus is permanently uncastable from hand (additional-cost rule) and reachable only via the 5 verified battlefield-search routes",
+        "tests": ["rules_tests/regression/test_mull005r_pod_oculus_survival.py"],
+    },
+    {
+        "id": "GATE-13", "category": "NEW",
+        "property": "Birthing Pod's 'put onto the battlefield' search bypasses both mana cost and additional cost, is sorcery-speed only, and requires a real legal sacrifice body",
+        "tests": ["rules_tests/regression/test_mull005r_pod_oculus_survival.py"],
+    },
+    {
+        "id": "GATE-14", "category": "NEW",
+        "property": "Survival of the Fittest is state-aware (never scored 'present = online'; requires a discardable creature)",
+        "tests": ["rules_tests/regression/test_mull005r_pod_oculus_survival.py"],
+    },
+    {
+        "id": "GATE-15", "category": "NEW",
+        "property": "Smothering Tithe is promoted to ENGINE_TIER_A and credited on deployment alone, consistently with Rhystic Study/Mystic Remora/Esper Sentinel (TITHE-001)",
+        "tests": [
+            "rules_tests/regression/test_mull005r_grading_corrections.py",
+            "rules_tests/regression/test_mull005r_engine_realization.py::test_smothering_tithe_credited_on_deployment_alone_with_zero_opponent_simulation",
+        ],
+    },
+    {
+        "id": "GATE-16", "category": "NEW",
+        "property": "Tymna the Weaver receives zero positive tier credit anywhere in trajectory grading (CMDR-001, pilot directive)",
+        "tests": ["rules_tests/regression/test_mull005r_grading_corrections.py"],
+    },
+    {
+        "id": "GATE-17", "category": "NEW",
+        "property": "Thrasios is credited only for a concrete benefit (Mox Amber / free Fierce Guardianship / genuine immediate activation), never generic commander-castable (CMDR-002)",
+        "tests": ["rules_tests/regression/test_mull005r_grading_corrections.py"],
+    },
+    {
+        "id": "GATE-18", "category": "NEW",
+        "property": "Kinnan, Bonder Prodigy is never a standalone tier destination - purely a mana-doubling mechanism (KINNAN-001)",
+        "tests": ["rules_tests/regression/test_mull005r_grading_corrections.py"],
+    },
+    {
+        "id": "GATE-19", "category": "NEW",
+        "property": "Devoted Druid's real ceiling (2 mana/turn via the no-tap-symbol self-untap ability, once not summoning sick) is modeled",
+        "tests": ["rules_tests/regression/test_mull005r_devoted_druid.py"],
+    },
+    {
+        "id": "GATE-20", "category": "NEW",
+        "property": "Tutor destination zones are resolved correctly (hand vs library-top) rather than an unconditional hand-append",
+        "tests": ["rules_tests/regression/test_mull005r_tutor_destination_zones.py"],
+    },
+    {
+        "id": "GATE-21", "category": "NEW",
+        "property": "Bounded trajectory search covers 5 candidate families (hand/library-top tutor, Pod activation, Survival activation, battlefield creature tutor, battlefield land tutor), removing the 6-hand-target bottleneck",
+        "tests": ["rules_tests/regression/test_mull005r_trajectory_search_expansion.py"],
+    },
+    {
+        "id": "GATE-22", "category": "NEW",
+        "property": "Composite agency metrics (ENGINE_PLUS_LIVE_FREE_INTERACTION / ENGINE_PLUS_LIVE_PAID_INTERACTION) are gated on an actual real destination, never set from interaction alone (AGENCY-001)",
+        "tests": [
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_engine_plus_free_interaction_flag_true_when_both_present",
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_engine_plus_paid_interaction_flag_true_when_interaction_not_free",
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_no_destination_never_sets_either_composite_flag_even_with_interaction",
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_no_interaction_at_all_sets_neither_flag",
+        ],
+    },
+    {
+        "id": "GATE-23", "category": "NEW",
+        "property": "Verified combo proximity is an upside modifier gated on a real destination, never a standalone tier driver (COMBO-001)",
+        "tests": [
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_engine_plus_verified_combo_proximity_true_when_both_present",
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_verified_combo_proximity_without_a_real_destination_does_not_set_the_flag",
+            "rules_tests/regression/test_mull005r_composite_agency_metrics.py::test_no_combo_proximity_sets_the_flag_false",
+        ],
+    },
+    {
+        "id": "GATE-24", "category": "NEW",
+        "property": "The unconditional premium-one-drop snap-keep rule requires U/W color reachability, correcting MULL-005's measured 19.3% false-keep rate (PREMIUM-001)",
+        "tests": [
+            "rules_tests/regression/test_mull005_trajectory_policies.py::test_premium_one_drop_with_color_access_is_snap_keep",
+            "rules_tests/regression/test_mull005_trajectory_policies.py::test_premium_one_drop_without_color_access_is_not_unconditionally_kept",
+        ],
+    },
+    {
+        "id": "GATE-25", "category": "NEW",
+        "property": "Engine realization timing (deployment vs. actual value realization) is tracked per-engine, distinguishing opponent-triggered/proxy-credited Tier-A engines from support-gated Tier-C engines and structurally-inert cards (REALIZE-001/002)",
+        "tests": ["rules_tests/regression/test_mull005r_engine_realization.py"],
+    },
+]
+
+
+def _run_pytest(node_ids):
+    result = subprocess.run(
+        [sys.executable, "-m", "pytest", "-q", *node_ids],
+        cwd=str(REPO_ROOT), capture_output=True, text=True,
+    )
+    return result.returncode == 0, result.stdout[-2000:] + result.stderr[-2000:]
+
+
+def main():
+    results = []
+    all_pass = True
+    for item in GATE_ITEMS:
+        ok, output = _run_pytest(item["tests"])
+        all_pass = all_pass and ok
+        results.append({**item, "passed": ok})
+        print(f"{item['id']} [{item['category']}] {'PASS' if ok else 'FAIL'} - {item['property'][:70]}")
+        if not ok:
+            print(output)
+
+    # Final gate check: the ENTIRE regression suite, not just the cited node IDs, must pass -
+    # catches any interaction between items the individual node-ID runs above could miss.
+    full_ok, full_output = _run_pytest(["rules_tests/"])
+    all_pass = all_pass and full_ok
+    print(f"FULL SUITE: {'PASS' if full_ok else 'FAIL'}")
+    if not full_ok:
+        print(full_output)
+
+    out_json = REPO_ROOT / "results" / "solo_baseline" / "mull005r_regression_gate.json"
+    out_json.write_text(json.dumps({
+        "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+        "subject_deck_version": "tymna-thrasios-treefarm-v1",
+        "gate_item_count": len(GATE_ITEMS),
+        "all_gate_items_passed": all(r["passed"] for r in results),
+        "full_suite_passed": full_ok,
+        "gate_status": "OPEN_FOR_PRODUCTION_RERUN" if all_pass else "BLOCKED",
+        "items": results,
+    }, indent=2) + "\n", encoding="utf-8")
+    print(f"\nwrote {out_json}")
+    print(f"GATE STATUS: {'OPEN_FOR_PRODUCTION_RERUN' if all_pass else 'BLOCKED'}")
+    return 0 if all_pass else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

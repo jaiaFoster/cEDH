@@ -3,7 +3,7 @@
 Proves the mana-source tapped-state fix (a source can no longer be reused an unbounded number of
 times within a turn) and the joint-payment-search fix (combination metrics no longer approximate
 simultaneity by checking each cost independently against the same untouched pool). Per the
-correctness-repair instruction, these ten proofs are required before rerunning Part A at scale:
+correctness-repair instruction, these proofs are required before rerunning Part A at scale:
 
 1. one land cannot pay for two one-mana spells in the same turn
 2. Sol Ring cannot be tapped twice
@@ -15,6 +15,16 @@ correctness-repair instruction, these ten proofs are required before rerunning P
 8. engine + interaction only passes if both are jointly achievable
 9. two combo pieces only count zero-step if the entire validated line is jointly executable
 10. commander + activation uses shared mana correctly
+
+MULL-005R gate additions (t1_t3_trajectory_audit.json section 12 / assignment section 27 -
+"preserve ALL SOLO-002R mana correctness fixes... do not regress"; these four were part of the
+original SOLO-002R correctness repair but had no dedicated regression test until the MULL-005R
+regression-gate audit found the gap):
+
+11. Ancient Tomb produces 2 GENERIC mana per tap and costs 2 life, real burst-mana sequencing
+12. Exotic Orchard produces ZERO mana in this solo/no-opponent model (disclosed assumption, not silently approximated as a real color source)
+13. Fetchlands perform a REAL library search over the fetch's actual printed basic-type targets, removing the found land from the library and putting it onto the battlefield
+14. The fetched land carries its REAL two basic land subtypes (ABUR duals) - a fetch cannot find a target whose types don't intersect its own search types
 """
 import sys
 from pathlib import Path
@@ -24,10 +34,14 @@ sys.path.insert(0, str(REPO_ROOT / "sim" / "analysis"))
 
 import pytest  # noqa: E402
 
-from opening_hand_model import GEMSTONE_CAVERNS, CITY_OF_TRAITORS, load_deck_cards, load_deterministic_combos  # noqa: E402
+from opening_hand_model import (  # noqa: E402
+    GEMSTONE_CAVERNS, CITY_OF_TRAITORS, EXOTIC_ORCHARD, ANCIENT_TOMB_LIFE_LOSS,
+    DUAL_LAND_BASIC_TYPES, load_deck_cards, load_deterministic_combos,
+)
 from opening_hand_policy import (  # noqa: E402
     HandState, LandInPlay, Perm, develop_turn, is_currently_castable, can_pay_jointly,
-    _maybe_sacrifice_city_of_traitors, DEFAULT_PRIORITY,
+    _maybe_sacrifice_city_of_traitors, _try_pay, _commit_payment, _legal_fetch_targets,
+    _crack_fetch, DEFAULT_PRIORITY,
 )
 from opening_hand_metrics import snapshot_metrics  # noqa: E402
 
@@ -268,3 +282,66 @@ def test_thrasios_activation_uses_remaining_mana_correctly():
         "only 2 mana genuinely remains untapped - activation must reflect real remaining "
         "capacity, not the turn's original starting total"
     )
+
+
+# ---- 11. Ancient Tomb: 2 generic mana per tap, 2 life lost per tap ----
+def test_ancient_tomb_produces_two_generic_mana_and_costs_two_life():
+    payload, cards = load_deck_cards()
+    state = HandState([], [], on_play=True, rng=__import__("random").Random(1), cards=cards)
+    state.lands.append(LandInPlay("Ancient Tomb", 0))
+    life_before = state.life
+    plan = _try_pay(state, 2, [])
+    assert plan is not None, "a single untapped Ancient Tomb must cover a {2} generic cost alone"
+    _commit_payment(state, plan)
+    assert state.lands[0].tapped is True
+    assert state.life == life_before - ANCIENT_TOMB_LIFE_LOSS == life_before - 2
+
+    # a second, independent tap attempt this same turn must fail - Ancient Tomb doesn't produce
+    # mana twice any more than any other land does (SOLO-002R per-source tapped-state fix applies
+    # here identically).
+    assert _try_pay(state, 1, []) is None
+
+
+# ---- 12. Exotic Orchard: zero mana in this solo/no-opponent model (disclosed, not approximated) ----
+def test_exotic_orchard_produces_no_mana_in_solo_model():
+    payload, cards = load_deck_cards()
+    state = HandState([], [], on_play=True, rng=__import__("random").Random(1), cards=cards)
+    state.lands.append(LandInPlay(EXOTIC_ORCHARD, 0))
+    assert state.available_sources() == [], (
+        "Exotic Orchard's output is genuinely opponent-land-dependent ('a land an opponent "
+        "controls could produce') - this solo model has no opponent, so it must contribute "
+        "nothing, not a silently-assumed color."
+    )
+    # confirmed by an actual payment attempt too, not just available_sources() in isolation.
+    assert _try_pay(state, 1, []) is None
+
+
+# ---- 13/14. Fetchlands: real search over actual printed basic-type targets, real ABUR dual types ----
+def test_fetchland_finds_a_real_legal_target_and_removes_it_from_the_library():
+    payload, cards = load_deck_cards()
+    # Flooded Strand's real targets are Plains/Island lands - Tundra (Plains Island) qualifies.
+    library = ["Tundra"] + [n for n in cards if n not in ("Flooded Strand", "Tundra")][:30]
+    state = HandState(["Flooded Strand"], library, on_play=True, rng=__import__("random").Random(1), cards=cards)
+    assert "Tundra" in _legal_fetch_targets(state, "Flooded Strand")
+    life_before = state.life
+    _crack_fetch(state, "Flooded Strand", need_colors={"W"})
+    assert "Tundra" in [l.name for l in state.lands], "the real fetched land must land on the battlefield"
+    assert "Tundra" not in state.library, "the fetched card must be removed from the library, not duplicated"
+    assert "Flooded Strand" in state.graveyard, "the fetchland itself is sacrificed"
+    assert state.life == life_before - 1, "cracking a fetchland costs exactly 1 life"
+
+
+def test_fetchland_cannot_find_a_target_whose_types_dont_match():
+    payload, cards = load_deck_cards()
+    # Bayou is Swamp/Forest - not a legal Flooded Strand (Plains/Island) target, even if it's the
+    # only dual left in the library. This is the real-Oracle-text search restriction, not an
+    # assumed "any dual will do" simplification.
+    assert not (DUAL_LAND_BASIC_TYPES["Bayou"] & {"Plains", "Island"}), "sanity: Bayou really doesn't share a type with Flooded Strand's search"
+    library = ["Bayou"] + [n for n in cards if n not in ("Flooded Strand", "Bayou")][:30]
+    state = HandState(["Flooded Strand"], library, on_play=True, rng=__import__("random").Random(1), cards=cards)
+    assert "Bayou" not in _legal_fetch_targets(state, "Flooded Strand")
+    _crack_fetch(state, "Flooded Strand", need_colors={"W"})
+    # no legal target in this constructed library -> the fetch enters inert (tapped, unsacrificed)
+    # rather than illegally grabbing Bayou.
+    assert any(l.name == "Flooded Strand" and l.tapped for l in state.lands)
+    assert "Bayou" in state.library, "an illegal target must never be removed from the library"
