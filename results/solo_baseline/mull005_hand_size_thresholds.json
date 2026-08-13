@@ -1,0 +1,248 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_005_HAND_SIZE_THRESHOLDS",
+  "seat": "play",
+  "seed": 42,
+  "tier_value_scale": {
+    "S": 6.0,
+    "A": 4.5,
+    "B": 2.5,
+    "C": 1.0,
+    "D": 0.0,
+    "F": -1.5
+  },
+  "by_hand_size": {
+    "7": {
+      "hand_size": 7,
+      "sample_count": 4000,
+      "tier_distribution": {
+        "B": 0.0902,
+        "C": 0.371,
+        "A": 0.2253,
+        "F": 0.1693,
+        "D": 0.083,
+        "S": 0.0612
+      },
+      "mechanism_distribution_top10": {
+        "commander_engine": 0.3997,
+        "none": 0.2405,
+        "natural_engine": 0.151,
+        "dork_to_engine": 0.0605,
+        "rock_to_engine": 0.0375,
+        "commander_engine+interaction": 0.0305,
+        "tutor_to_engine": 0.0182,
+        "interaction_only": 0.0118,
+        "commander_engine+tutor_retained": 0.0097,
+        "natural_engine+interaction": 0.0085
+      },
+      "expected_tier_value": 1.7239
+    },
+    "6": {
+      "hand_size": 6,
+      "sample_count": 3000,
+      "tier_distribution": {
+        "B": 0.0833,
+        "C": 0.337,
+        "A": 0.2827,
+        "F": 0.1487,
+        "D": 0.0603,
+        "S": 0.088
+      },
+      "mechanism_distribution_top10": {
+        "commander_engine": 0.435,
+        "none": 0.1993,
+        "natural_engine": 0.1933,
+        "dork_to_engine": 0.038,
+        "rock_to_engine": 0.034,
+        "commander_engine+interaction": 0.0317,
+        "tutor_to_engine": 0.0197,
+        "interaction_only": 0.0097,
+        "natural_engine+interaction": 0.0097,
+        "commander_engine+tutor_retained": 0.0097
+      },
+      "expected_tier_value": 2.1223
+    },
+    "5": {
+      "hand_size": 5,
+      "sample_count": 1500,
+      "tier_distribution": {
+        "B": 0.0853,
+        "C": 0.3187,
+        "A": 0.3067,
+        "F": 0.14,
+        "D": 0.0573,
+        "S": 0.092
+      },
+      "mechanism_distribution_top10": {
+        "commander_engine": 0.454,
+        "natural_engine": 0.204,
+        "none": 0.19,
+        "rock_to_engine": 0.034,
+        "commander_engine+interaction": 0.0307,
+        "dork_to_engine": 0.0287,
+        "tutor_to_engine": 0.0133,
+        "commander_engine+tutor_retained": 0.0107,
+        "natural_engine+interaction": 0.0093,
+        "interaction_only": 0.0073
+      },
+      "expected_tier_value": 2.254
+    },
+    "4": {
+      "hand_size": 4,
+      "sample_count": 500,
+      "tier_distribution": {
+        "B": 0.076,
+        "C": 0.308,
+        "A": 0.34,
+        "F": 0.128,
+        "D": 0.054,
+        "S": 0.094
+      },
+      "mechanism_distribution_top10": {
+        "commander_engine": 0.478,
+        "natural_engine": 0.224,
+        "none": 0.17,
+        "commander_engine+interaction": 0.034,
+        "rock_to_engine": 0.03,
+        "dork_to_engine": 0.022,
+        "interaction_only": 0.012,
+        "tutor_to_engine": 0.008,
+        "natural_engine+interaction": 0.006,
+        "tutor_plus_accel_to_engine": 0.006
+      },
+      "expected_tier_value": 2.4
+    }
+  },
+  "keep_thresholds_by_assumed_mulligan_card_cost": {
+    "0.0": {
+      "7": {
+        "keep_at_or_above_tier": "B",
+        "ev_of_mulliganing_to_size": 6,
+        "ev_of_mulliganing_value_raw": 2.1223,
+        "ev_of_mulliganing_value_after_card_cost": 2.1223
+      },
+      "6": {
+        "keep_at_or_above_tier": "B",
+        "ev_of_mulliganing_to_size": 5,
+        "ev_of_mulliganing_value_raw": 2.254,
+        "ev_of_mulliganing_value_after_card_cost": 2.254
+      },
+      "5": {
+        "keep_at_or_above_tier": "B",
+        "ev_of_mulliganing_to_size": 4,
+        "ev_of_mulliganing_value_raw": 2.4,
+        "ev_of_mulliganing_value_after_card_cost": 2.4
+      },
+      "4": {
+        "keep_at_or_above_tier": null,
+        "note": "no EV computed for mulliganing below this size within 7/6/5/4 scope"
+      }
+    },
+    "0.5": {
+      "7": {
+        "keep_at_or_above_tier": "B",
+        "ev_of_mulliganing_to_size": 6,
+        "ev_of_mulliganing_value_raw": 2.1223,
+        "ev_of_mulliganing_value_after_card_cost": 1.6223
+      },
+      "6": {
+        "keep_at_or_above_tier": "B",
+        "ev_of_mulliganing_to_size": 5,
+        "ev_of_mulliganing_value_raw": 2.254,
+        "ev_of_mulliganing_value_after_card_cost": 1.254
+      },
+      "5": {
+        "keep_at_or_above_tier": "C",
+        "ev_of_mulliganing_to_size": 4,
+        "ev_of_mulliganing_value_raw": 2.4,
+        "ev_of_mulliganing_value_after_card_cost": 0.9
+      },
+      "4": {
+        "keep_at_or_above_tier": null,
+        "note": "no EV computed for mulliganing below this size within 7/6/5/4 scope"
+      }
+    },
+    "1.0": {
+      "7": {
+        "keep_at_or_above_tier": "B",
+        "ev_of_mulliganing_to_size": 6,
+        "ev_of_mulliganing_value_raw": 2.1223,
+        "ev_of_mulliganing_value_after_card_cost": 1.1223
+      },
+      "6": {
+        "keep_at_or_above_tier": "C",
+        "ev_of_mulliganing_to_size": 5,
+        "ev_of_mulliganing_value_raw": 2.254,
+        "ev_of_mulliganing_value_after_card_cost": 0.254
+      },
+      "5": {
+        "keep_at_or_above_tier": "D",
+        "ev_of_mulliganing_to_size": 4,
+        "ev_of_mulliganing_value_raw": 2.4,
+        "ev_of_mulliganing_value_after_card_cost": -0.6
+      },
+      "4": {
+        "keep_at_or_above_tier": null,
+        "note": "no EV computed for mulliganing below this size within 7/6/5/4 scope"
+      }
+    },
+    "1.5": {
+      "7": {
+        "keep_at_or_above_tier": "C",
+        "ev_of_mulliganing_to_size": 6,
+        "ev_of_mulliganing_value_raw": 2.1223,
+        "ev_of_mulliganing_value_after_card_cost": 0.6223
+      },
+      "6": {
+        "keep_at_or_above_tier": "D",
+        "ev_of_mulliganing_to_size": 5,
+        "ev_of_mulliganing_value_raw": 2.254,
+        "ev_of_mulliganing_value_after_card_cost": -0.746
+      },
+      "5": {
+        "keep_at_or_above_tier": "F",
+        "ev_of_mulliganing_to_size": 4,
+        "ev_of_mulliganing_value_raw": 2.4,
+        "ev_of_mulliganing_value_after_card_cost": -2.1
+      },
+      "4": {
+        "keep_at_or_above_tier": null,
+        "note": "no EV computed for mulliganing below this size within 7/6/5/4 scope"
+      }
+    },
+    "2.0": {
+      "7": {
+        "keep_at_or_above_tier": "C",
+        "ev_of_mulliganing_to_size": 6,
+        "ev_of_mulliganing_value_raw": 2.1223,
+        "ev_of_mulliganing_value_after_card_cost": 0.1223
+      },
+      "6": {
+        "keep_at_or_above_tier": "F",
+        "ev_of_mulliganing_to_size": 5,
+        "ev_of_mulliganing_value_raw": 2.254,
+        "ev_of_mulliganing_value_after_card_cost": -1.746
+      },
+      "5": {
+        "keep_at_or_above_tier": "F",
+        "ev_of_mulliganing_to_size": 4,
+        "ev_of_mulliganing_value_raw": 2.4,
+        "ev_of_mulliganing_value_after_card_cost": -3.6
+      },
+      "4": {
+        "keep_at_or_above_tier": null,
+        "note": "no EV computed for mulliganing below this size within 7/6/5/4 scope"
+      }
+    }
+  },
+  "note": "Grading uses the greedy DEFAULT_PRIORITY line only (not the bounded tutor-target search) - see module docstring for the tractability tradeoff. Thresholds are ordinal (computed on TIER_VALUE, a disclosed monotone scale, not fit to any target). The assumed-mulligan-card-cost sensitivity sweep exists because this simulator has no full-game/4-player data to derive a single real cost-of-mulligan from - see module docstring 'IMPORTANT LIMITATION'. cost=0.0 is the raw, uncorrected comparison and is expected to look mulligan-favorable; it is reported for transparency, not as guidance."
+}
