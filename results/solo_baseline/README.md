@@ -185,3 +185,278 @@ not quantified before.
 characterization from the original (empty-hand) `GATE_4A_2P_DIAGNOSTIC`
 and `INFRA-0006` batches - not their rules-correctness conclusions, which
 stand.
+
+---
+
+# SIM-001 SOLO-002 — Opening Hand, Mulligan & Early Development Audit
+
+Follows directly from SOLO BASELINE v1 above, and supersedes its scope for
+mulligan/deckbuilding questions specifically: this phase deliberately
+de-emphasizes turn-10 goldfish states and raw card-category counts in
+favor of rules-aware **Turn 1-3 development under a deck-aware policy**,
+per explicit instruction. Same subject deck/hash as above. Run class for
+every file in this section: **`DECK_BACKED_GOLDFISH`** (real turn-by-turn
+gameplay - land drops, casting, sequencing - against no opponent, with the
+actual subject deck; corrected from an earlier internal mislabeling as
+`STATIC_ANALYSIS`, which per `docs/RUN_CLASSIFICATION.md` is reserved for
+pure hypergeometric math with no gameplay at all).
+
+## Why a new, native simulator instead of XMage
+
+The engagement's own constraint ("do not use generic XMage AI
+decision-making as the primary policy") and a hard sampling-size
+requirement (100,000+ hands) are jointly incompatible with the XMage/JVM
+substrate used elsewhere in this project (2-16s/game observed in
+`results/diagnostic/`) - at that rate 100k hands would take days. Built
+instead: a **native Python Level 1-2 structural/sequencing simulator**
+(`sim/analysis/opening_hand_model.py`, `opening_hand_policy.py`,
+`opening_hand_metrics.py`) - exactly the eventual need `sim/rules_engine/
+__init__.py`'s own docstring always flagged. It models land drops, mana
+taps (with summoning sickness), and a single **greedy deck-aware
+development policy** (`DEFAULT_PRIORITY = ["free_accel", "paid_accel",
+"premium_engine", "commander", "engine", "tutor", "interaction"]`) -
+explicitly *not* claimed to be a proven-optimal expert line, only better
+than random sequencing, which is the actual bar needed to separate "legally
+possible" from "what a reasonable player would do." It does not model
+combat, opponents, the stack, or triggered abilities beyond ETB mana/type
+effects - out of scope for an opening-hand question. Card-level modeling
+carries several documented, bounded simplifications (City of Traitors'
+sacrifice clause, Gemstone Caverns/Exotic Orchard treated as unconditional
+any-color, Deathrite Shaman's graveyard ability not modeled, fetchlands
+crack instantly for a same-turn dual) - see the module docstring for the
+full list. Throughput: **~1,200-1,700 hands/sec**, making every part of
+this audit's requested sample sizes (100,000+ for Part A) a matter of
+seconds to low minutes, not days.
+
+## Part A — keep-everything opening-hand census (100,000 hands)
+
+`sim/analysis/run_opening_hand_census.py` -> `solo002_opening_hand_census.json`.
+100,000 random 7-card hands, seed 42, on the play, every hand kept (no
+mulligan), developed through end of Turn 3 under the greedy policy.
+78.6s wall time - sampling error is negligible at this scale (a 2,000-hand
+smoke test and the full 100k run agree to within ~1pp on every metric).
+
+**Overall Turn-3 "meaningful development" rate: 79.9%** (meaningful =
+2+ mana AND (an engine active OR a tutor castable OR live interaction
+castable)).
+
+### Primary output table (selected rows; full table has 20 rows x T1-T3 in the JSON)
+
+| Metric | T1 | T2 | T3 |
+|---|---|---|---|
+| 2+ usable mana | 25.9% | 82.5% | 87.6% |
+| 3+ usable mana | 13.1% | 41.6% | 72.5% |
+| All of W/U/B/G available | 47.9% | 58.1% | 66.2% |
+| Any engine active | 25.4% | 67.0% | 79.2% |
+| 2+ engines active | 5.6% | 39.6% | 60.8% |
+| Engine + live interaction | 6.0% | 13.3% | 20.9% |
+| Tymna castable / supported | 0.0% / 1.6% | 8.8% / 23.8% | 13.0% / 46.8% |
+| Thrasios castable / activatable-soon | 3.2% / 15.7% | 16.6% / 53.7% | 12.6%\* / 67.3% |
+| Tutor available / castable | 55.4% / 16.0% | 50.4% / 19.0% | 46.6% / 18.9% |
+| Cradle on battlefield / 3+ creatures | 1.7% / 0.1% | 4.3% / 0.9% | 6.9% / 2.8% |
+| Zero-step deterministic win available | 0.1% | 1.2% | 2.9% |
+| One action from a verified win | 16.9% | 40.8% | 53.5% |
+
+\* Thrasios "castable" *drops* T2->T3 because by T3 more hands have
+already cast it (moving it from "castable" to "on battlefield") -
+confirmed intentional, not a bug (see `activatable-soon`, which rises
+monotonically, for the underlying trend).
+
+**A methodology note on combo accessibility, because it changed a real
+number**: the first implementation of "zero-step win available" counted a
+combo piece as "available" if it was anywhere the hand had ever put it,
+**including the graveyard and exile** - i.e. exactly the "natural
+co-location" trap the engagement spec explicitly warned against ("Stop
+measuring only natural co-location of two named cards"). Fixed before the
+100k run: `zero_step` now requires every piece to be either already
+deployed on the battlefield, or in hand and individually affordable from
+the turn's mana pool. This dropped the reported rate from an inflated
+4.5-6.7% (T1-T3) to the 0.1-2.9% shown above, which is much closer to a
+back-of-envelope hypergeometric estimate for two ~0.76%-likelihood 2-card
+combos sharing a piece (Devoted Druid) plus one much rarer 3-card combo -
+i.e., the corrected number is the trustworthy one.
+
+### Critical secondary output — ranked failure-mode table (dominant reason, % of all 100k hands)
+
+| Failure mode | % of all hands | % of failures |
+|---|---|---|
+| Insufficient persistent mana (<2 by T3) | 12.4% | 61.6% |
+| Tutor present but no viable sequencing | 3.3% | 16.2% |
+| No meaningful T1-T2 development at all | 1.2% | 6.0% |
+| Color failure (missing a required pip) | ~2.7% combined | ~17.5% combined |
+
+### Extended breakdowns (category 2-15 requests, beyond the primary table)
+
+- **T1 engine class** (not one broad `engine=true` label): premium
+  1-drop (Mystic Remora/Esper Sentinel) 8.5% of hands, engine cast via
+  acceleration 7.2%, plain 2-mana engine 3.1%.
+- **T3 engine-count histogram**: 0 engines 20.8%, 1 engine 18.4%, 2
+  engines 27.5%, **3+ engines 33.2%** - most hands that get going get
+  going hard.
+- **Most frequent T3 live-engine combination**: {Thrasios, Tymna} both
+  active, ahead of either commander alone - full ranked list (top 15) in
+  the JSON's `t3_top_engine_combinations`.
+- **Resource efficiency at T3**: mean 3.88 persistent nonland permanents
+  vs. mean 0.09 one-shot/temporary resources consumed (Lotus Petal/Elvish
+  Spirit Guide/etc.) - only 9.1% of hands ever burn a one-shot resource at
+  all, meaning fast starts in this shell are overwhelmingly *not* coming
+  at the cost of resource destruction.
+- **Full granular failure taxonomy** (multi-label, % of the 20,084 hands
+  actually classified as failed): tutor-stuck 76.3%, insufficient mana
+  61.6%, no second land 61.3%, **Mox-family dependency 22.9%**, no land to
+  discard to Mox Diamond 12.0%, no creature for a drawn Cradle <1%
+  (essentially never the binding constraint).
+- **Tutor target-class accessibility** (heuristic per-tutor mapping, not
+  "equivalent to every card"): at T1, a castable tutor most often reaches
+  land/Cradle/engine-class targets (~11-13% each); by T3 creature/engine/
+  combo-piece targets dominate (~9-13% each) as Pod/Survival/Chord become
+  live.
+- **Archetype tags** (rule-based starting taxonomy, not a data-derived
+  clustering - explicitly scoped down, see below): engine hand 79.2%,
+  commander-supported hand 56.1%, combo-adjacent hand 53.7%, tutor hand
+  32.2%, creature-development hand 28.3%, interaction-heavy hand 6.6%,
+  nonfunctional hand 20.1% (multi-label, sums >100%).
+
+## Part B — candidate mulligan heuristics, derived from Part A
+
+`sim/analysis/derive_mulligan_heuristics.py` -> `solo002_mulligan_heuristics.json`
+(100k hands, same seed/policy). Correlates features observable **from the
+raw 7 cards alone, before any land drop** (the only information a real
+mulligan decision has) against Turn-3 outcomes from the same simulated
+hands. Reported as lift = P(outcome | feature) - P(outcome | not feature).
+
+**Headline, and the single most actionable finding of this audit**: land
+count dominates everything else, and several features that sound like
+"good cards to keep" are actually *anti-correlated* with success because
+they compete with lands for the same 7 slots in this mana-hungry shell:
+
+| Feature (in the raw 7) | Lift on "meaningful T3" | Prevalence |
+|---|---|---|
+| 2+ lands | **+0.41** | 62.3% |
+| All 4 colors represented in lands | +0.27 | 46.2% |
+| 3+ lands | +0.27 | 29.3% |
+| 5+ nonland cards (light on lands) | -0.27 | 70.7% |
+| 2+ creatures in hand | -0.13 | 77.1% |
+| Has castable-class interaction | -0.10 | 69.9% |
+| Has a tutor | -0.09 | 67.0% |
+| Has any engine card | -0.04 | 67.3% |
+| Has acceleration | +0.02 | 64.5% |
+
+Four candidate keep policies were encoded from this (used unchanged by
+Parts C/D): **A (Engine-first)** = 2+ lands AND (engine or accel);
+**B (Agency-first)** = A AND (interaction or tutor present too);
+**C (Speed-first)** = 2+ lands OR accel (loosest); **D (Tutor-inclusive)**
+= A but tutor also counts toward the "access" requirement.
+
+## Part C — London mulligan simulation
+
+`sim/analysis/run_mulligan_sim.py` -> `solo002_mulligan_simulation.json`
+(25,000 hands per policy = 100,000 total, real London mulligan: fresh 7 at
+each look, bottom N cards heuristically on keep, forced keep after 4
+mulligans - never actually reached at these keep rates).
+
+| Policy | Keep 7 | Keep 6 | Keep 5 | 4-or-lower | Avg start size | Expected card disadvantage |
+|---|---|---|---|---|---|---|
+| A Engine-first | 54.0% | 24.8% | 11.4% | 9.7% | 6.19 | 0.81 |
+| B Agency-first | 48.0% | 24.8% | 13.1% | 14.0% | 5.99 | 1.01 |
+| C Speed-first | 89.9% | 9.0% | 1.0% | 0.1% | 6.89 | 0.11 |
+| D Tutor-inclusive | 59.6% | 24.0% | 9.7% | 6.6% | 6.34 | 0.66 |
+
+## Part D — mulligan policy comparison (the tradeoff table)
+
+`sim/analysis/build_part_d_comparison.py` -> `solo002_part_d_policy_comparison.json`.
+Policy E (seat-aware) is **explicitly deferred to pod simulations**, per
+the engagement's own instruction - not compared here.
+
+| Policy | Keep-7% | Avg hand | Engine T1/T2/T3 | Dev+interaction T3 | Tutor castable T3 | Meaningful T3 |
+|---|---|---|---|---|---|---|
+| A Engine-first | 54.0% | 6.19 | 30.1/80.0/90.1% | 22.1% | 19.5% | 91.6% |
+| B Agency-first | 48.0% | 5.99 | 28.0/77.3/87.9% | 21.9% | 20.1% | 89.2% |
+| C Speed-first | 89.9% | 6.89 | 26.2/70.6/82.3% | 23.9% | 19.7% | 83.9% |
+| D Tutor-inclusive | 59.6% | 6.34 | 27.8/79.2/90.7% | 23.6% | 21.4% | **92.6%** |
+
+**No universally optimal policy, as expected** - but a genuine tradeoff
+worth flagging: **D (tutor-inclusive) keeps *more* hands than A
+(engine-first) (59.6% vs 54.0%) while also reaching a slightly *higher*
+T3 success floor (92.6% vs 91.6%)**. That's not a contradiction: D is a
+strict superset of A's keeps (same criteria, plus "2+ lands and a tutor
+with no engine/accel"), and those additional hands still develop well
+because a tutor reliably finds an engine downstream in this list. C
+(speed-first, loosest filter) keeps the most cards (avg 6.89, essentially
+never mulligans below 6) but has the lowest post-mulligan success floor
+(83.9%) - the clearest illustration of the resource-vs-selectivity
+tradeoff the engagement asked to surface, not resolve.
+
+## Part E — paired-seed deckbuilding harness (infrastructure check)
+
+`sim/analysis/run_paired_comparison.py` -> `solo002_part_e_paired_demo.json`.
+Demonstrates (50,000 paired hands) that the same simulator supports
+**seed-matched paired reruns** for a proposed card swap: two card-pool
+variants are shuffled with identically-seeded RNGs, which - because
+`Random.shuffle` is a pure index permutation - guarantees the swapped
+card lands in the *same hand, same position* in both variants, so a swap's
+effect can be isolated via a per-hand sign test rather than compared as
+two independent samples that could disagree by sampling luck alone. The
+demo swap (Birthing Pod -> a synthetic basic Forest, `basics_substituted:
+true` with an explicit `ablation_justification`, per
+`docs/RUN_CLASSIFICATION.md` requirement 2) is **infrastructure proof
+only, not a deckbuilding recommendation** - it shows a small, correctly-
+signed, monotonic effect (net +411/50,000 hands favoring the extra land on
+"meaningful T3", net +188 on "2+ mana by T1"), exactly what's expected of
+a low-impact utility creature vs. an unconditional mana source. A real
+proposed swap would use two real cards from `data/cards_cache/` in place
+of the synthetic row.
+
+## Explicit scope disclosure
+
+Per this project's established practice of disclosing scope reductions
+rather than silently omitting them (see the `GATE_4A_2P_DIAGNOSTIC` v2
+rerun above): the full engagement spec (Parts A-E across 15 metric
+categories) is enormous, and the following were **deliberately scoped
+down**, not silently skipped:
+
+- **Archetype clustering (category 15)**: delivered as a **rule-based
+  starting taxonomy** (8 tags, see Part A), not a data-derived clustering
+  pass (e.g. k-means/hierarchical over the full per-hand feature vector).
+  The spec itself invites this ("Do not force these clusters in advance if
+  the data suggests better categories") - a real clustering pass is future
+  work, not done here.
+- **Part E**: one infrastructure-proof swap, not a battery of real
+  proposed deckbuilding changes. The harness is confirmed working; using
+  it for actual card-swap decisions is the next natural step, not part of
+  this audit.
+- **Tutor target-class mapping** (category 8) and **failure-mode
+  taxonomy** (category 14) use hand-authored heuristic classifications
+  (documented in `opening_hand_model.py`/`opening_hand_metrics.py`), not
+  an exhaustive manually-reviewed card-by-card pass - consistent with this
+  project's existing Gate 1 standard ("heuristic classification, acceptable
+  for diagnostic purposes").
+- **Joint mana payability** for combination metrics (`engine_plus_interaction`,
+  combo "zero-step" with 2+ hand pieces) is approximated per-card against
+  the turn's total mana pool, not proven via a full joint-payment search
+  across a shared pool - documented inline at each call site.
+- **On-the-draw** was not run as a separate population (on-the-play only,
+  matching the format's actual default) - a full draw/play split is a
+  cheap follow-up (`--on-play` flag already exists) if wanted.
+
+## Answering the engagement's own success-condition checklist
+
+- **T1 two-drop engine rate**: 25.4% any engine active, split 8.5%
+  premium 1-drop / 7.2% accelerated / 3.1% plain 2-mana (see Part A).
+- **Tymna actually supported vs. merely castable**: T3 castable 13.0% vs.
+  supported (on battlefield with 1+ attacker) 46.8% - most Tymnas in play
+  by T3 got there before T3 and already have backup.
+- **Birthing Pod's legal/useful activation rate**: tracked per-hand via
+  `birthing_pod.usable_now` in every snapshot (JSON field, not
+  aggregated into a headline number here given Pod's low overall
+  prevalence in this 100k population - see `engine_identity_by_turn` for
+  its raw presence rate, ~0.3-0.9%).
+- **Most common seven-card failure reasons**: insufficient mana (61.6% of
+  failures), a stuck tutor (76.3% of failures - overlapping, multi-label),
+  and no second land specifically (61.3% of failures) - see the granular
+  failure taxonomy above.
+- **Best mulligan rule for engine/interaction/resource balance**: no
+  single winner by design (Part D) - **D (tutor-inclusive)** for the best
+  combined keep-rate/success-floor tradeoff, **A (engine-first)** as a
+  close, slightly more conservative alternative, **C (speed-first)** only
+  if card count matters more than raw success rate (e.g. grindy pods).

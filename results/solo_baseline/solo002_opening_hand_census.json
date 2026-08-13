@@ -1,0 +1,727 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_SOLO_002_PART_A",
+  "sample_count": 100000,
+  "seed": 42,
+  "on_play": true,
+  "elapsed_seconds": 78.58557033538818,
+  "hands_per_second": 1272.4982407485131,
+  "policy": "default_greedy",
+  "sample_size": 100000,
+  "primary_table": {
+    "mana_2plus": {
+      "1": 0.25925,
+      "2": 0.82537,
+      "3": 0.87625
+    },
+    "mana_3plus": {
+      "1": 0.13067,
+      "2": 0.41586,
+      "3": 0.72492
+    },
+    "mana_4plus": {
+      "1": 0.07069,
+      "2": 0.19322,
+      "3": 0.42084
+    },
+    "all_wubg": {
+      "1": 0.47852,
+      "2": 0.58111,
+      "3": 0.66209
+    },
+    "any_engine_active": {
+      "1": 0.25409,
+      "2": 0.6699,
+      "3": 0.79152
+    },
+    "premium_engine_active": {
+      "1": 0.08484,
+      "2": 0.11286,
+      "3": 0.13687
+    },
+    "two_plus_engines_active": {
+      "1": 0.05583,
+      "2": 0.39637,
+      "3": 0.60758
+    },
+    "engine_plus_interaction": {
+      "1": 0.06043,
+      "2": 0.13329,
+      "3": 0.2091
+    },
+    "development_plus_interaction": {
+      "1": 0.0871,
+      "2": 0.15825,
+      "3": 0.2274
+    },
+    "Tymna the Weaver_castable": {
+      "1": 0.0,
+      "2": 0.08768,
+      "3": 0.12955
+    },
+    "tymna_supported": {
+      "1": 0.01636,
+      "2": 0.23817,
+      "3": 0.4675
+    },
+    "Thrasios, Triton Hero_castable": {
+      "1": 0.03184,
+      "2": 0.16604,
+      "3": 0.12562
+    },
+    "thrasios_activatable_soon": {
+      "1": 0.15679,
+      "2": 0.53698,
+      "3": 0.67307
+    },
+    "tutor_available": {
+      "1": 0.55394,
+      "2": 0.50443,
+      "3": 0.46584
+    },
+    "tutor_castable": {
+      "1": 0.16027,
+      "2": 0.18985,
+      "3": 0.18861
+    },
+    "cradle_on_battlefield": {
+      "1": 0.01656,
+      "2": 0.04305,
+      "3": 0.06922
+    },
+    "cradle_3plus": {
+      "1": 0.00053,
+      "2": 0.00873,
+      "3": 0.02765
+    },
+    "deterministic_win_available": {
+      "1": 0.00099,
+      "2": 0.01219,
+      "3": 0.02945
+    },
+    "one_action_from_verified_win": {
+      "1": 0.16865,
+      "2": 0.40807,
+      "3": 0.5351
+    },
+    "two_actions_from_verified_win": {
+      "1": 0.66245,
+      "2": 0.62071,
+      "3": 0.57628
+    }
+  },
+  "failure_table": {
+    "insufficient_persistent_mana": {
+      "count": 12375,
+      "pct_of_all_hands": 0.12375,
+      "pct_of_failures": 0.6161621190997809
+    },
+    "tutor_but_no_viable_sequencing": {
+      "count": 3256,
+      "pct_of_all_hands": 0.03256,
+      "pct_of_failures": 0.16211909978092012
+    },
+    "no_meaningful_t1_t2_development": {
+      "count": 1205,
+      "pct_of_all_hands": 0.01205,
+      "pct_of_failures": 0.05999800836486756
+    },
+    "color_failure_missing_BUW": {
+      "count": 551,
+      "pct_of_all_hands": 0.00551,
+      "pct_of_failures": 0.027434773949412468
+    },
+    "color_failure_missing_UW": {
+      "count": 527,
+      "pct_of_all_hands": 0.00527,
+      "pct_of_failures": 0.026239792869946228
+    },
+    "color_failure_missing_BGUW": {
+      "count": 387,
+      "pct_of_all_hands": 0.00387,
+      "pct_of_failures": 0.019269069906393148
+    },
+    "color_failure_missing_BU": {
+      "count": 339,
+      "pct_of_all_hands": 0.00339,
+      "pct_of_failures": 0.016879107747460664
+    },
+    "color_failure_missing_GW": {
+      "count": 289,
+      "pct_of_all_hands": 0.00289,
+      "pct_of_failures": 0.014389563831905995
+    },
+    "color_failure_missing_BGW": {
+      "count": 273,
+      "pct_of_all_hands": 0.00273,
+      "pct_of_failures": 0.0135929097789285
+    },
+    "color_failure_missing_GU": {
+      "count": 252,
+      "pct_of_all_hands": 0.00252,
+      "pct_of_failures": 0.01254730133439554
+    },
+    "color_failure_missing_BG": {
+      "count": 179,
+      "pct_of_all_hands": 0.00179,
+      "pct_of_failures": 0.00891256721768572
+    },
+    "color_failure_missing_U": {
+      "count": 142,
+      "pct_of_all_hands": 0.00142,
+      "pct_of_failures": 0.0070703047201752635
+    },
+    "color_failure_missing_BW": {
+      "count": 140,
+      "pct_of_all_hands": 0.0014,
+      "pct_of_failures": 0.006970722963553077
+    },
+    "color_failure_missing_W": {
+      "count": 63,
+      "pct_of_all_hands": 0.00063,
+      "pct_of_failures": 0.003136825333598885
+    },
+    "color_failure_missing_G": {
+      "count": 56,
+      "pct_of_all_hands": 0.00056,
+      "pct_of_failures": 0.0027882891854212307
+    },
+    "color_failure_missing_B": {
+      "count": 38,
+      "pct_of_all_hands": 0.00038,
+      "pct_of_failures": 0.0018920533758215495
+    },
+    "color_failure_missing_GUW": {
+      "count": 8,
+      "pct_of_all_hands": 8e-05,
+      "pct_of_failures": 0.00039832702648874725
+    },
+    "color_failure_missing_BGU": {
+      "count": 4,
+      "pct_of_all_hands": 4e-05,
+      "pct_of_failures": 0.00019916351324437363
+    }
+  },
+  "meaningful_development_rate_t3": 0.79916,
+  "engine_identity_by_turn": {
+    "1": {
+      "Thrasios, Triton Hero": 0.09795,
+      "Deathrite Shaman": 0.05471,
+      "Mystic Remora": 0.04473,
+      "Esper Sentinel": 0.04206,
+      "Tymna the Weaver": 0.01636,
+      "Sylvan Library": 0.01181,
+      "Survival of the Fittest": 0.01138,
+      "Faerie Mastermind": 0.01035,
+      "Archivist of Oghma": 0.01027,
+      "Rhystic Study": 0.00534,
+      "Delney, Streetwise Lookout": 0.00528,
+      "Kinnan, Bonder Prodigy": 0.00434,
+      "Birthing Pod": 0.00298,
+      "Smothering Tithe": 0.00244,
+      "Runic Armasaur": 0.00077,
+      "Heartwood Storyteller": 0.00054
+    },
+    "2": {
+      "Thrasios, Triton Hero": 0.49019,
+      "Tymna the Weaver": 0.23817,
+      "Deathrite Shaman": 0.06863,
+      "Mystic Remora": 0.05975,
+      "Esper Sentinel": 0.05668,
+      "Sylvan Library": 0.05436,
+      "Survival of the Fittest": 0.05397,
+      "Faerie Mastermind": 0.05223,
+      "Archivist of Oghma": 0.05042,
+      "Kinnan, Bonder Prodigy": 0.03357,
+      "Rhystic Study": 0.0243,
+      "Delney, Streetwise Lookout": 0.02408,
+      "Runic Armasaur": 0.01732,
+      "Heartwood Storyteller": 0.01634,
+      "Birthing Pod": 0.0106,
+      "Smothering Tithe": 0.00987
+    },
+    "3": {
+      "Thrasios, Triton Hero": 0.61136,
+      "Tymna the Weaver": 0.4675,
+      "Deathrite Shaman": 0.08042,
+      "Mystic Remora": 0.07246,
+      "Esper Sentinel": 0.06949,
+      "Sylvan Library": 0.0691,
+      "Survival of the Fittest": 0.06815,
+      "Faerie Mastermind": 0.06563,
+      "Archivist of Oghma": 0.06405,
+      "Rhystic Study": 0.05451,
+      "Delney, Streetwise Lookout": 0.05291,
+      "Kinnan, Bonder Prodigy": 0.04776,
+      "Runic Armasaur": 0.04234,
+      "Heartwood Storyteller": 0.04223,
+      "Birthing Pod": 0.02897,
+      "Smothering Tithe": 0.02675
+    }
+  },
+  "t1_engine_class_breakdown": {
+    "premium_one_drop": 0.08484,
+    "accelerated_engine": 0.07238,
+    "two_mana_engine": 0.03088
+  },
+  "t2_new_engine_by_card": {
+    "Thrasios, Triton Hero": 0.39224,
+    "Tymna the Weaver": 0.22181,
+    "Survival of the Fittest": 0.04259,
+    "Sylvan Library": 0.04255,
+    "Faerie Mastermind": 0.04188,
+    "Archivist of Oghma": 0.04015,
+    "Kinnan, Bonder Prodigy": 0.02923,
+    "Rhystic Study": 0.01896,
+    "Delney, Streetwise Lookout": 0.0188,
+    "Runic Armasaur": 0.01655,
+    "Heartwood Storyteller": 0.0158,
+    "Mystic Remora": 0.01502,
+    "Esper Sentinel": 0.01462,
+    "Deathrite Shaman": 0.01392,
+    "Birthing Pod": 0.00762,
+    "Smothering Tithe": 0.00743
+  },
+  "t3_engine_count_histogram": {
+    "3+": 0.33242,
+    "2": 0.27516,
+    "0": 0.20848,
+    "1": 0.18394
+  },
+  "t3_top_engine_combinations": [
+    {
+      "engines": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 14068,
+      "pct_of_all_hands": 0.14068
+    },
+    {
+      "engines": [
+        "Thrasios, Triton Hero"
+      ],
+      "count": 7089,
+      "pct_of_all_hands": 0.07089
+    },
+    {
+      "engines": [
+        "Tymna the Weaver"
+      ],
+      "count": 2366,
+      "pct_of_all_hands": 0.02366
+    },
+    {
+      "engines": [
+        "Deathrite Shaman"
+      ],
+      "count": 1812,
+      "pct_of_all_hands": 0.01812
+    },
+    {
+      "engines": [
+        "Delney, Streetwise Lookout",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1360,
+      "pct_of_all_hands": 0.0136
+    },
+    {
+      "engines": [
+        "Faerie Mastermind",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1353,
+      "pct_of_all_hands": 0.01353
+    },
+    {
+      "engines": [
+        "Rhystic Study",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1348,
+      "pct_of_all_hands": 0.01348
+    },
+    {
+      "engines": [
+        "Archivist of Oghma",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1347,
+      "pct_of_all_hands": 0.01347
+    },
+    {
+      "engines": [
+        "Sylvan Library",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1339,
+      "pct_of_all_hands": 0.01339
+    },
+    {
+      "engines": [
+        "Mystic Remora",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1328,
+      "pct_of_all_hands": 0.01328
+    },
+    {
+      "engines": [
+        "Kinnan, Bonder Prodigy",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1320,
+      "pct_of_all_hands": 0.0132
+    },
+    {
+      "engines": [
+        "Survival of the Fittest",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1308,
+      "pct_of_all_hands": 0.01308
+    },
+    {
+      "engines": [
+        "Esper Sentinel",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1276,
+      "pct_of_all_hands": 0.01276
+    },
+    {
+      "engines": [
+        "Deathrite Shaman",
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "count": 1239,
+      "pct_of_all_hands": 0.01239
+    },
+    {
+      "engines": [
+        "Mystic Remora"
+      ],
+      "count": 1182,
+      "pct_of_all_hands": 0.01182
+    }
+  ],
+  "resource_efficiency_t3": {
+    "mean_persistent_nonland_permanents": 3.88321,
+    "mean_temporary_resources_consumed": 0.09085,
+    "mean_cards_remaining": 3.74107,
+    "pct_hands_with_any_temp_resource_used": 0.09085
+  },
+  "failure_reasons_detailed_table": {
+    "tutor_but_no_viable_sequencing": {
+      "count": 15332,
+      "pct_of_all_hands": 0.15332,
+      "pct_of_failed_hands": 0.7633937462656841
+    },
+    "insufficient_persistent_mana": {
+      "count": 12375,
+      "pct_of_all_hands": 0.12375,
+      "pct_of_failed_hands": 0.6161621190997809
+    },
+    "no_second_land": {
+      "count": 12305,
+      "pct_of_all_hands": 0.12305,
+      "pct_of_failed_hands": 0.6126767576180043
+    },
+    "mox_dependency": {
+      "count": 4593,
+      "pct_of_all_hands": 0.04593,
+      "pct_of_failed_hands": 0.22868950408285202
+    },
+    "no_meaningful_t1_t2_development": {
+      "count": 3654,
+      "pct_of_all_hands": 0.03654,
+      "pct_of_failed_hands": 0.18193586934873532
+    },
+    "no_land_for_mox_diamond": {
+      "count": 2410,
+      "pct_of_all_hands": 0.0241,
+      "pct_of_failed_hands": 0.11999601672973512
+    },
+    "interaction_only_no_engine": {
+      "count": 692,
+      "pct_of_all_hands": 0.00692,
+      "pct_of_failed_hands": 0.034455287791276636
+    },
+    "color_failure_missing_BUW": {
+      "count": 551,
+      "pct_of_all_hands": 0.00551,
+      "pct_of_failed_hands": 0.027434773949412468
+    },
+    "color_failure_missing_UW": {
+      "count": 527,
+      "pct_of_all_hands": 0.00527,
+      "pct_of_failed_hands": 0.026239792869946228
+    },
+    "no_creature_for_cradle": {
+      "count": 426,
+      "pct_of_all_hands": 0.00426,
+      "pct_of_failed_hands": 0.02121091416052579
+    },
+    "color_failure_missing_BGUW": {
+      "count": 387,
+      "pct_of_all_hands": 0.00387,
+      "pct_of_failed_hands": 0.019269069906393148
+    },
+    "color_failure_missing_BU": {
+      "count": 339,
+      "pct_of_all_hands": 0.00339,
+      "pct_of_failed_hands": 0.016879107747460664
+    },
+    "color_failure_missing_GW": {
+      "count": 289,
+      "pct_of_all_hands": 0.00289,
+      "pct_of_failed_hands": 0.014389563831905995
+    },
+    "color_failure_missing_BGW": {
+      "count": 273,
+      "pct_of_all_hands": 0.00273,
+      "pct_of_failed_hands": 0.0135929097789285
+    },
+    "color_failure_missing_GU": {
+      "count": 252,
+      "pct_of_all_hands": 0.00252,
+      "pct_of_failed_hands": 0.01254730133439554
+    },
+    "color_failure_missing_BG": {
+      "count": 179,
+      "pct_of_all_hands": 0.00179,
+      "pct_of_failed_hands": 0.00891256721768572
+    },
+    "color_failure_missing_U": {
+      "count": 142,
+      "pct_of_all_hands": 0.00142,
+      "pct_of_failed_hands": 0.0070703047201752635
+    },
+    "color_failure_missing_BW": {
+      "count": 140,
+      "pct_of_all_hands": 0.0014,
+      "pct_of_failed_hands": 0.006970722963553077
+    },
+    "color_failure_missing_W": {
+      "count": 63,
+      "pct_of_all_hands": 0.00063,
+      "pct_of_failed_hands": 0.003136825333598885
+    },
+    "color_failure_missing_G": {
+      "count": 56,
+      "pct_of_all_hands": 0.00056,
+      "pct_of_failed_hands": 0.0027882891854212307
+    },
+    "color_failure_missing_B": {
+      "count": 38,
+      "pct_of_all_hands": 0.00038,
+      "pct_of_failed_hands": 0.0018920533758215495
+    },
+    "color_failure_missing_GUW": {
+      "count": 8,
+      "pct_of_all_hands": 8e-05,
+      "pct_of_failed_hands": 0.00039832702648874725
+    },
+    "color_failure_missing_BGU": {
+      "count": 4,
+      "pct_of_all_hands": 4e-05,
+      "pct_of_failed_hands": 0.00019916351324437363
+    }
+  },
+  "tutor_target_rates_by_turn": {
+    "1": {
+      "cradle": 0.12307,
+      "land": 0.12307,
+      "engine": 0.11786,
+      "mana": 0.11467,
+      "combo_piece": 0.0822,
+      "creature": 0.0822,
+      "interaction": 0.07892,
+      "protection": 0.07892
+    },
+    "2": {
+      "creature": 0.14727,
+      "engine": 0.14146,
+      "combo_piece": 0.12945,
+      "protection": 0.09885,
+      "cradle": 0.08471,
+      "land": 0.08471,
+      "interaction": 0.07996,
+      "mana": 0.07752
+    },
+    "3": {
+      "creature": 0.13148,
+      "engine": 0.10955,
+      "combo_piece": 0.09883,
+      "protection": 0.09495,
+      "cradle": 0.0629,
+      "land": 0.0629,
+      "interaction": 0.0612,
+      "mana": 0.04601
+    }
+  },
+  "archetype_distribution": {
+    "engine_hand": 0.79152,
+    "commander_hand": 0.56141,
+    "combo_hand": 0.53657,
+    "tutor_hand": 0.32217,
+    "creature_development_hand": 0.28269,
+    "nonfunctional_hand": 0.20084,
+    "interaction_heavy_hand": 0.06599,
+    "unclassified_hand": 0.00815
+  },
+  "archetype_top_combinations": [
+    {
+      "tags": [
+        "nonfunctional_hand"
+      ],
+      "count": 12206,
+      "pct_of_all_hands": 0.12206
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "commander_hand",
+        "engine_hand"
+      ],
+      "count": 11741,
+      "pct_of_all_hands": 0.11741
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "commander_hand",
+        "creature_development_hand",
+        "engine_hand"
+      ],
+      "count": 9138,
+      "pct_of_all_hands": 0.09138
+    },
+    {
+      "tags": [
+        "commander_hand",
+        "engine_hand"
+      ],
+      "count": 7686,
+      "pct_of_all_hands": 0.07686
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "commander_hand",
+        "creature_development_hand",
+        "engine_hand",
+        "tutor_hand"
+      ],
+      "count": 6062,
+      "pct_of_all_hands": 0.06062
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "engine_hand"
+      ],
+      "count": 5960,
+      "pct_of_all_hands": 0.0596
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "commander_hand",
+        "engine_hand",
+        "tutor_hand"
+      ],
+      "count": 5726,
+      "pct_of_all_hands": 0.05726
+    },
+    {
+      "tags": [
+        "commander_hand",
+        "engine_hand",
+        "tutor_hand"
+      ],
+      "count": 4710,
+      "pct_of_all_hands": 0.0471
+    },
+    {
+      "tags": [
+        "engine_hand"
+      ],
+      "count": 4097,
+      "pct_of_all_hands": 0.04097
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "engine_hand",
+        "tutor_hand"
+      ],
+      "count": 3248,
+      "pct_of_all_hands": 0.03248
+    },
+    {
+      "tags": [
+        "combo_hand",
+        "creature_development_hand",
+        "engine_hand"
+      ],
+      "count": 2907,
+      "pct_of_all_hands": 0.02907
+    },
+    {
+      "tags": [
+        "commander_hand",
+        "creature_development_hand",
+        "engine_hand"
+      ],
+      "count": 2682,
+      "pct_of_all_hands": 0.02682
+    },
+    {
+      "tags": [
+        "commander_hand",
+        "creature_development_hand",
+        "engine_hand",
+        "tutor_hand"
+      ],
+      "count": 2570,
+      "pct_of_all_hands": 0.0257
+    },
+    {
+      "tags": [
+        "engine_hand",
+        "tutor_hand"
+      ],
+      "count": 2339,
+      "pct_of_all_hands": 0.02339
+    },
+    {
+      "tags": [
+        "nonfunctional_hand",
+        "tutor_hand"
+      ],
+      "count": 2045,
+      "pct_of_all_hands": 0.02045
+    }
+  ]
+}
