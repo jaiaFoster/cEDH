@@ -1,0 +1,159 @@
+{
+  "phase": "SIM_001_MULL_005R_PAIRED_COMPARISON",
+  "pairing_method": "identical seed=42/count=15000/seat=play/deck - row-for-row identical opening hands, verified by matching opener-visible land-count/color features",
+  "old_source": "results/solo_baseline/mull005_trajectory_dataset_play.jsonl.gz",
+  "new_source": "results/solo_baseline/mull005r_paired_dataset_play.jsonl.gz",
+  "old_keep_threshold_size7": "B",
+  "new_keep_threshold_size7": "C",
+  "sample_count": 15000,
+  "keep_decision_transitions": {
+    "kept_both": 6694,
+    "shipped_both": 3876,
+    "newly_kept_count": 4068,
+    "newly_kept_rate": 0.2712,
+    "newly_shipped_count": 362,
+    "newly_shipped_rate": 0.0241
+  },
+  "newly_kept_causes": {
+    "other": 1253,
+    "thrasios_concrete_benefit_understood": 1765,
+    "dork_to_engine_understood": 523,
+    "survival_understood": 130,
+    "oculus_understood": 188,
+    "expanded_tutor_search_understood": 24,
+    "tutor_to_mana_vault_to_engine_understood": 33,
+    "birthing_pod_generic_infra_credit_understood": 95,
+    "smothering_tithe_promoted": 57
+  },
+  "newly_shipped_causes": {
+    "commander_access_removed": 274,
+    "other": 69,
+    "acceleration_no_real_destination": 19
+  },
+  "fixed_threshold_comparison_tiers_SAB": {
+    "kept_both": 4574,
+    "shipped_both": 7178,
+    "newly_kept_count": 766,
+    "newly_kept_rate": 0.0511,
+    "newly_shipped_count": 2482,
+    "newly_shipped_rate": 0.1655,
+    "newly_kept_causes": {
+      "survival_understood": 109,
+      "other": 36,
+      "oculus_understood": 188,
+      "thrasios_concrete_benefit_understood": 249,
+      "expanded_tutor_search_understood": 22,
+      "tutor_to_mana_vault_to_engine_understood": 30,
+      "birthing_pod_generic_infra_credit_understood": 59,
+      "smothering_tithe_promoted": 19,
+      "dork_to_engine_understood": 54
+    },
+    "newly_shipped_causes": {
+      "commander_access_removed": 2024,
+      "acceleration_no_real_destination": 147,
+      "other": 311
+    }
+  },
+  "tier_transition_counts": {
+    "C->C": 3270,
+    "A->A": 2299,
+    "F->F": 2266,
+    "A->C": 1657,
+    "S->S": 920,
+    "D->D": 867,
+    "C->D": 659,
+    "A->B": 535,
+    "B->B": 514,
+    "B->C": 424,
+    "C->B": 404,
+    "C->A": 277,
+    "S->A": 225,
+    "B->D": 177,
+    "A->D": 149,
+    "B->A": 69,
+    "C->F": 55,
+    "S->C": 39,
+    "A->F": 36,
+    "D->B": 30,
+    "D->C": 24,
+    "D->A": 23,
+    "D->F": 21,
+    "F->B": 11,
+    "A->S": 8,
+    "F->D": 8,
+    "F->C": 8,
+    "C->S": 8,
+    "F->A": 7,
+    "D->S": 5
+  },
+  "smothering_tithe_tier_distribution_old": {
+    "C": 55
+  },
+  "smothering_tithe_tier_distribution_new": {
+    "C": 60,
+    "A": 24
+  },
+  "smothering_tithe_realization_timing_examples": [
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "dork_to_engine",
+      "new_mechanism": "dork_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine+interaction",
+      "new_mechanism": "rock_to_engine+paid_interaction"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "dork_to_engine",
+      "new_mechanism": "dork_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    },
+    {
+      "old_tier": "C",
+      "new_tier": "A",
+      "old_mechanism": "rock_to_engine",
+      "new_mechanism": "rock_to_engine"
+    }
+  ],
+  "note": "newly_kept_causes/newly_shipped_causes are single-cause, priority-ordered classifications of the trajectory_best__* fields on the NEW (newly_kept) or OLD (newly_shipped) row - see classify_newly_kept()/classify_newly_shipped(). IMPORTANT: keep_decision_transitions above uses EACH dataset's own derived keep_threshold_size7 (old=B, new=C, per task #96's own finding that greedy-only expected tier value dropped once commander credit was removed) - this conflates two distinct effects: (1) individual hands reaching a genuinely different best tier under corrected mechanics, and (2) the keep/ship LINE itself moving down. fixed_threshold_comparison_tiers_SAB holds the bar constant (tier in {S,A,B} counts as keep under BOTH old and new) to isolate effect (1) alone - use THIS block, not the threshold-relative one above, when citing 'X hands are newly kept because the model now understands Y'; the threshold-relative numbers answer a different, also real question ('how did the keep/mulligan LINE move'), not double-counted evidence of engine correctness. smothering_tithe_tier_distribution_{old,new} shows TITHE-001's realization-timing promotion directly: MULL-005 zeroed Tithe out of tier credit entirely (old distribution should show it essentially never as tier_engine, or only via generic fallback paths), MULL-005R credits it identically to Rhystic Study/Mystic Remora."
+}
