@@ -1,0 +1,7 @@
+# SIM-001 SOLO-004 — new dependencies introduced for the interpretable opening-hand value model
+# (logistic regression / decision tree / cross-validation) and the GBM upper-bound benchmark.
+# Every prior phase (SOLO-002 through SOLO-003R) used only the Python standard library - these
+# are additive, not a replacement for anything existing.
+scikit-learn==1.9.0
+numpy==2.4.6
+pandas==3.0.5

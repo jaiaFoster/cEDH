@@ -1,0 +1,531 @@
+{
+  "target": "out_t3__t3_any_strong_state",
+  "n_hands": 100000,
+  "n_features": 63,
+  "feature_columns": [
+    "opener__land_count",
+    "opener__fetch_land_count",
+    "opener__utility_land_ancient_tomb",
+    "opener__utility_land_city_of_traitors",
+    "opener__utility_land_gemstone_caverns",
+    "opener__utility_land_cradle",
+    "opener__distinct_colors_direct",
+    "opener__distinct_colors_potential",
+    "opener__all_wubg_direct",
+    "opener__all_wubg_potential",
+    "opener__accel_card_count",
+    "opener__has_any_accel_card",
+    "opener__has_creature_accel_card",
+    "opener__has_noncreature_persistent_accel_card",
+    "opener__has_one_shot_accel_card",
+    "opener__has_mox_family_card",
+    "opener__has_sol_ring",
+    "opener__tutor_count",
+    "opener__has_tutor_card",
+    "opener__tutor_reaches_engine",
+    "opener__tutor_reaches_combo_piece",
+    "opener__tutor_reaches_interaction",
+    "opener__tutor_reaches_land_or_cradle",
+    "opener__tutor_cheap",
+    "opener__engine_count",
+    "opener__has_any_engine_card",
+    "opener__has_tier_a_engine_card",
+    "opener__has_tier_b_engine_card",
+    "opener__has_premium_one_drop_card",
+    "opener__has_cheap_engine_card",
+    "opener__interaction_count",
+    "opener__has_any_interaction_card",
+    "opener__interaction_only_hand",
+    "opener__interaction_density_2plus",
+    "opener__creature_count_in_hand",
+    "opener__has_commander_relevant_creature_2plus",
+    "opener__nonland_count",
+    "opener__cards_costing_3plus",
+    "opener__t1_land_played",
+    "opener__t1_mana_available_now",
+    "opener__t1_accel_executable_now",
+    "opener__t1_accel_creature_only",
+    "opener__t1_has_live_interaction",
+    "opener__t1_cards_in_hand_after",
+    "opener__t1_ceiling_mana_next_turn",
+    "opener__struct_1land_plus_executable_accel",
+    "opener__struct_1land_plus_accel_plus_engine",
+    "opener__struct_1land_plus_accel_plus_tutor",
+    "opener__struct_2land_plus_engine",
+    "opener__struct_2land_plus_t1_development",
+    "opener__struct_2land_plus_engine_plus_interaction",
+    "opener__struct_2land_plus_tutor",
+    "opener__struct_2land_interaction_only",
+    "opener__struct_3land_plus_engine",
+    "opener__struct_3land_plus_accel",
+    "opener__struct_3land_sufficient_business",
+    "opener__struct_4plusland_plus_premium_engine",
+    "opener__struct_fast_mana_no_payoff",
+    "opener__struct_engine_insufficient_colors",
+    "opener__struct_tutor_insufficient_mana",
+    "opener__struct_cradle_plus_creature_density",
+    "opener__struct_tymna_plus_attack_support",
+    "opener__struct_thrasios_plus_mana_infra"
+  ],
+  "positive_rate": 0.43837,
+  "tree_depth_sweep_vs_gbm_ceiling": [
+    {
+      "max_depth": 2,
+      "cv_auc": 0.716770646417321,
+      "n_leaves": 4,
+      "pct_of_gbm_auc_gain_captured": 0.6014713719181307
+    },
+    {
+      "max_depth": 3,
+      "cv_auc": 0.7538430843628097,
+      "n_leaves": 8,
+      "pct_of_gbm_auc_gain_captured": 0.7043358993804667
+    },
+    {
+      "max_depth": 4,
+      "cv_auc": 0.7737190846122595,
+      "n_leaves": 16,
+      "pct_of_gbm_auc_gain_captured": 0.7594856409892384
+    },
+    {
+      "max_depth": 5,
+      "cv_auc": 0.8007559718314117,
+      "n_leaves": 30,
+      "pct_of_gbm_auc_gain_captured": 0.8345046249562478
+    },
+    {
+      "max_depth": 6,
+      "cv_auc": 0.8214662431522193,
+      "n_leaves": 47,
+      "pct_of_gbm_auc_gain_captured": 0.8919692102679586
+    },
+    {
+      "max_depth": 7,
+      "cv_auc": 0.8352845031663192,
+      "n_leaves": 71,
+      "pct_of_gbm_auc_gain_captured": 0.9303105998682898
+    },
+    {
+      "max_depth": 8,
+      "cv_auc": 0.8468583280161542,
+      "n_leaves": 113,
+      "pct_of_gbm_auc_gain_captured": 0.9624243773830216
+    }
+  ],
+  "logistic_regression": {
+    "cv_auc_mean": 0.8411486902316616,
+    "cv_auc_std": 0.0043054250077042356,
+    "cv_accuracy_mean": 0.7824500000000001,
+    "cv_accuracy_std": 0.0035166745655519555,
+    "standardized_coefficients": [
+      {
+        "feature": "opener__accel_card_count",
+        "coef": 0.9893848414857923
+      },
+      {
+        "feature": "opener__distinct_colors_potential",
+        "coef": 0.5979091907240921
+      },
+      {
+        "feature": "opener__has_premium_one_drop_card",
+        "coef": 0.5731173826179133
+      },
+      {
+        "feature": "opener__has_any_accel_card",
+        "coef": -0.5047471569082831
+      },
+      {
+        "feature": "opener__has_sol_ring",
+        "coef": 0.4990247731454019
+      },
+      {
+        "feature": "opener__has_tier_a_engine_card",
+        "coef": 0.4911682642082107
+      },
+      {
+        "feature": "opener__t1_accel_creature_only",
+        "coef": 0.46975760232326164
+      },
+      {
+        "feature": "opener__t1_accel_executable_now",
+        "coef": 0.2899536516540886
+      },
+      {
+        "feature": "opener__utility_land_ancient_tomb",
+        "coef": 0.26289151257827775
+      },
+      {
+        "feature": "opener__all_wubg_potential",
+        "coef": -0.2586681024413503
+      },
+      {
+        "feature": "opener__has_one_shot_accel_card",
+        "coef": -0.2565461918708054
+      },
+      {
+        "feature": "opener__struct_4plusland_plus_premium_engine",
+        "coef": 0.1916472333583058
+      },
+      {
+        "feature": "opener__utility_land_city_of_traitors",
+        "coef": 0.18881631521193676
+      },
+      {
+        "feature": "opener__has_mox_family_card",
+        "coef": 0.17312822935418049
+      },
+      {
+        "feature": "opener__distinct_colors_direct",
+        "coef": 0.1719227738661729
+      },
+      {
+        "feature": "opener__t1_land_played",
+        "coef": 0.1691687246205203
+      },
+      {
+        "feature": "opener__t1_ceiling_mana_next_turn",
+        "coef": 0.14449164055064503
+      },
+      {
+        "feature": "opener__t1_mana_available_now",
+        "coef": 0.14449164055064484
+      },
+      {
+        "feature": "opener__has_any_engine_card",
+        "coef": -0.14046891121409705
+      },
+      {
+        "feature": "opener__struct_tutor_insufficient_mana",
+        "coef": 0.14041667288476534
+      },
+      {
+        "feature": "opener__t1_cards_in_hand_after",
+        "coef": -0.13786987457255
+      },
+      {
+        "feature": "opener__t1_has_live_interaction",
+        "coef": -0.10871489733209767
+      },
+      {
+        "feature": "opener__struct_2land_plus_t1_development",
+        "coef": 0.10758764133420329
+      },
+      {
+        "feature": "opener__has_noncreature_persistent_accel_card",
+        "coef": -0.10376104135489184
+      },
+      {
+        "feature": "opener__struct_2land_plus_engine",
+        "coef": 0.10041647241432902
+      },
+      {
+        "feature": "opener__struct_thrasios_plus_mana_infra",
+        "coef": 0.09737093704158206
+      },
+      {
+        "feature": "opener__struct_1land_plus_accel_plus_tutor",
+        "coef": -0.09714799925291172
+      },
+      {
+        "feature": "opener__struct_cradle_plus_creature_density",
+        "coef": 0.08701070754367539
+      },
+      {
+        "feature": "opener__has_cheap_engine_card",
+        "coef": 0.08365913123397956
+      },
+      {
+        "feature": "opener__struct_3land_sufficient_business",
+        "coef": 0.07815697651433097
+      },
+      {
+        "feature": "opener__land_count",
+        "coef": -0.07525329853521981
+      },
+      {
+        "feature": "opener__nonland_count",
+        "coef": 0.07525329853521981
+      },
+      {
+        "feature": "opener__tutor_reaches_engine",
+        "coef": 0.07477197213926615
+      },
+      {
+        "feature": "opener__utility_land_cradle",
+        "coef": 0.07033105416544898
+      },
+      {
+        "feature": "opener__struct_3land_plus_engine",
+        "coef": 0.0698242126580878
+      },
+      {
+        "feature": "opener__interaction_only_hand",
+        "coef": -0.06918915070000227
+      },
+      {
+        "feature": "opener__fetch_land_count",
+        "coef": 0.06449326385415234
+      },
+      {
+        "feature": "opener__struct_1land_plus_executable_accel",
+        "coef": 0.06386106669343579
+      },
+      {
+        "feature": "opener__cards_costing_3plus",
+        "coef": -0.06346078325743582
+      },
+      {
+        "feature": "opener__all_wubg_direct",
+        "coef": -0.05789895335908527
+      },
+      {
+        "feature": "opener__tutor_reaches_combo_piece",
+        "coef": -0.05414871673365896
+      },
+      {
+        "feature": "opener__struct_engine_insufficient_colors",
+        "coef": -0.05321801119332168
+      },
+      {
+        "feature": "opener__struct_2land_plus_tutor",
+        "coef": 0.04589043344483687
+      },
+      {
+        "feature": "opener__has_commander_relevant_creature_2plus",
+        "coef": -0.045090349527565854
+      },
+      {
+        "feature": "opener__tutor_count",
+        "coef": -0.03992004082427698
+      },
+      {
+        "feature": "opener__has_tier_b_engine_card",
+        "coef": -0.03890630428114475
+      },
+      {
+        "feature": "opener__has_tutor_card",
+        "coef": -0.03800516507518555
+      },
+      {
+        "feature": "opener__tutor_reaches_interaction",
+        "coef": 0.03538312535401469
+      },
+      {
+        "feature": "opener__utility_land_gemstone_caverns",
+        "coef": 0.03314875738241222
+      },
+      {
+        "feature": "opener__creature_count_in_hand",
+        "coef": 0.03294056262687051
+      },
+      {
+        "feature": "opener__tutor_cheap",
+        "coef": -0.024833130353598895
+      },
+      {
+        "feature": "opener__has_creature_accel_card",
+        "coef": -0.022652708332718777
+      },
+      {
+        "feature": "opener__tutor_reaches_land_or_cradle",
+        "coef": -0.02230270507115122
+      },
+      {
+        "feature": "opener__struct_tymna_plus_attack_support",
+        "coef": -0.01972129838374408
+      },
+      {
+        "feature": "opener__interaction_density_2plus",
+        "coef": -0.015875039952512732
+      },
+      {
+        "feature": "opener__struct_1land_plus_accel_plus_engine",
+        "coef": -0.015159653409856259
+      },
+      {
+        "feature": "opener__struct_fast_mana_no_payoff",
+        "coef": -0.014802344359090166
+      },
+      {
+        "feature": "opener__struct_2land_interaction_only",
+        "coef": 0.01360273256080811
+      },
+      {
+        "feature": "opener__struct_3land_plus_accel",
+        "coef": 0.01299517451906907
+      },
+      {
+        "feature": "opener__engine_count",
+        "coef": 0.010177103599638956
+      },
+      {
+        "feature": "opener__has_any_interaction_card",
+        "coef": -0.004825638132256428
+      },
+      {
+        "feature": "opener__struct_2land_plus_engine_plus_interaction",
+        "coef": -0.0006206913274161199
+      },
+      {
+        "feature": "opener__interaction_count",
+        "coef": 0.0005202392412623848
+      }
+    ],
+    "holdout": {
+      "holdout_n": 20000,
+      "holdout_auc": 0.8403696879248559,
+      "holdout_accuracy": 0.78185
+    }
+  },
+  "decision_tree_depth4": {
+    "cv_auc_mean": 0.7733610416483762,
+    "cv_auc_std": 0.003153338273613355,
+    "cv_accuracy_mean": 0.7673099999999999,
+    "cv_accuracy_std": 0.003480718316669694,
+    "rules_text": "|--- opener__has_premium_one_drop_card <= 0.50\n|   |--- opener__accel_card_count <= 1.50\n|   |   |--- opener__has_sol_ring <= 0.50\n|   |   |   |--- opener__t1_mana_available_now <= 2.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__t1_mana_available_now >  2.50\n|   |   |   |   |--- class: 1\n|   |   |--- opener__has_sol_ring >  0.50\n|   |   |   |--- opener__t1_accel_executable_now <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__t1_accel_executable_now >  0.50\n|   |   |   |   |--- class: 1\n|   |--- opener__accel_card_count >  1.50\n|   |   |--- opener__t1_cards_in_hand_after <= 5.50\n|   |   |   |--- opener__distinct_colors_potential <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__distinct_colors_potential >  0.50\n|   |   |   |   |--- class: 1\n|   |   |--- opener__t1_cards_in_hand_after >  5.50\n|   |   |   |--- opener__land_count <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__land_count >  0.50\n|   |   |   |   |--- class: 0\n|--- opener__has_premium_one_drop_card >  0.50\n|   |--- opener__distinct_colors_potential <= 0.50\n|   |   |--- opener__t1_accel_executable_now <= 0.50\n|   |   |   |--- opener__has_mox_family_card <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- opener__has_mox_family_card >  0.50\n|   |   |   |   |--- class: 0\n|   |   |--- opener__t1_accel_executable_now >  0.50\n|   |   |   |--- opener__t1_ceiling_mana_next_turn <= 2.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- opener__t1_ceiling_mana_next_turn >  2.50\n|   |   |   |   |--- class: 1\n|   |--- opener__distinct_colors_potential >  0.50\n|   |   |--- opener__t1_cards_in_hand_after <= 5.50\n|   |   |   |--- opener__distinct_colors_direct <= 2.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- opener__distinct_colors_direct >  2.50\n|   |   |   |   |--- class: 1\n|   |   |--- opener__t1_cards_in_hand_after >  5.50\n|   |   |   |--- opener__nonland_count <= 5.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- opener__nonland_count >  5.50\n|   |   |   |   |--- class: 0\n",
+    "feature_importances": [
+      {
+        "feature": "opener__accel_card_count",
+        "importance": 0.32424912119945
+      },
+      {
+        "feature": "opener__has_premium_one_drop_card",
+        "importance": 0.2725891521781798
+      },
+      {
+        "feature": "opener__has_sol_ring",
+        "importance": 0.12829022437126217
+      },
+      {
+        "feature": "opener__distinct_colors_potential",
+        "importance": 0.09737026805901539
+      },
+      {
+        "feature": "opener__t1_cards_in_hand_after",
+        "importance": 0.08083184006207973
+      },
+      {
+        "feature": "opener__t1_mana_available_now",
+        "importance": 0.05550396559391665
+      },
+      {
+        "feature": "opener__t1_accel_executable_now",
+        "importance": 0.03257071708888741
+      },
+      {
+        "feature": "opener__distinct_colors_direct",
+        "importance": 0.00500186748489689
+      },
+      {
+        "feature": "opener__nonland_count",
+        "importance": 0.0018611703761366367
+      },
+      {
+        "feature": "opener__t1_ceiling_mana_next_turn",
+        "importance": 0.0010153216850765899
+      },
+      {
+        "feature": "opener__has_mox_family_card",
+        "importance": 0.00037041229107428385
+      },
+      {
+        "feature": "opener__land_count",
+        "importance": 0.00034593961002439056
+      }
+    ],
+    "holdout": {
+      "holdout_n": 20000,
+      "holdout_auc": 0.7709976321924829,
+      "holdout_accuracy": 0.7682
+    }
+  },
+  "gbm_upper_bound_benchmark": {
+    "cv_auc_mean": 0.860400605146053,
+    "cv_auc_std": 0.0034384878211831714,
+    "cv_accuracy_mean": 0.80183,
+    "cv_accuracy_std": 0.0024393851684389456,
+    "feature_importances": [
+      {
+        "feature": "opener__accel_card_count",
+        "importance": 0.18915441820273876
+      },
+      {
+        "feature": "opener__has_premium_one_drop_card",
+        "importance": 0.1561401147794408
+      },
+      {
+        "feature": "opener__has_tier_a_engine_card",
+        "importance": 0.10360465839228943
+      },
+      {
+        "feature": "opener__distinct_colors_potential",
+        "importance": 0.09602821237137339
+      },
+      {
+        "feature": "opener__t1_accel_creature_only",
+        "importance": 0.06777348748796062
+      },
+      {
+        "feature": "opener__has_sol_ring",
+        "importance": 0.05929773836750563
+      },
+      {
+        "feature": "opener__has_noncreature_persistent_accel_card",
+        "importance": 0.05558668080131541
+      },
+      {
+        "feature": "opener__t1_mana_available_now",
+        "importance": 0.04641903305926599
+      },
+      {
+        "feature": "opener__t1_cards_in_hand_after",
+        "importance": 0.0424419755636267
+      },
+      {
+        "feature": "opener__t1_ceiling_mana_next_turn",
+        "importance": 0.036249202566398686
+      },
+      {
+        "feature": "opener__t1_accel_executable_now",
+        "importance": 0.030341219627195794
+      },
+      {
+        "feature": "opener__nonland_count",
+        "importance": 0.02137601092859947
+      },
+      {
+        "feature": "opener__utility_land_ancient_tomb",
+        "importance": 0.016568313031981637
+      },
+      {
+        "feature": "opener__has_any_accel_card",
+        "importance": 0.015031155369019679
+      },
+      {
+        "feature": "opener__has_one_shot_accel_card",
+        "importance": 0.011053410676941901
+      },
+      {
+        "feature": "opener__land_count",
+        "importance": 0.010547485260730067
+      },
+      {
+        "feature": "opener__has_creature_accel_card",
+        "importance": 0.007326363001320305
+      },
+      {
+        "feature": "opener__utility_land_city_of_traitors",
+        "importance": 0.007084189576836214
+      },
+      {
+        "feature": "opener__has_cheap_engine_card",
+        "importance": 0.005810413864794543
+      },
+      {
+        "feature": "opener__utility_land_cradle",
+        "importance": 0.0038351208251063153
+      }
+    ],
+    "note": "UPPER-BOUND BENCHMARK ONLY - not used as the final human heuristic, per spec."
+  }
+}
