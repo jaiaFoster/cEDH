@@ -1,0 +1,62 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "sample_count": 3000,
+  "seed": 42,
+  "seat": "play",
+  "profiles": {
+    "DEVELOPMENT_FIRST": {
+      "baseline_kept_as_dealt_7": 0.21965666666666944,
+      "baseline_optimally_bottomed_6": 0.26166000000000567,
+      "baseline_optimally_bottomed_5": 0.2670233333333408,
+      "baseline_optimally_bottomed_4": 0.2596933333333404,
+      "keep_threshold_at_7": 0.26166000000000567,
+      "keep_threshold_at_6_after_bottoming": 0.2670233333333408,
+      "keep_threshold_at_5_after_bottoming": 0.2596933333333404
+    },
+    "AGENCY_FIRST": {
+      "baseline_kept_as_dealt_7": 0.12031666666666788,
+      "baseline_optimally_bottomed_6": 0.16053333333333655,
+      "baseline_optimally_bottomed_5": 0.18066666666667064,
+      "baseline_optimally_bottomed_4": 0.18138333333333773,
+      "keep_threshold_at_7": 0.16053333333333655,
+      "keep_threshold_at_6_after_bottoming": 0.18066666666667064,
+      "keep_threshold_at_5_after_bottoming": 0.18138333333333773
+    },
+    "SPEED_FIRST": {
+      "baseline_kept_as_dealt_7": 0.09541666666666529,
+      "baseline_optimally_bottomed_6": 0.1218999999999975,
+      "baseline_optimally_bottomed_5": 0.12726666666666384,
+      "baseline_optimally_bottomed_4": 0.12248333333333077,
+      "keep_threshold_at_7": 0.1218999999999975,
+      "keep_threshold_at_6_after_bottoming": 0.12726666666666384,
+      "keep_threshold_at_5_after_bottoming": 0.12248333333333077
+    },
+    "RESILIENCE_FIRST": {
+      "baseline_kept_as_dealt_7": 0.4914133333333257,
+      "baseline_optimally_bottomed_6": 0.5273266666666548,
+      "baseline_optimally_bottomed_5": 0.5282166666666528,
+      "baseline_optimally_bottomed_4": 0.5098533333333253,
+      "keep_threshold_at_7": 0.5273266666666548,
+      "keep_threshold_at_6_after_bottoming": 0.5282166666666528,
+      "keep_threshold_at_5_after_bottoming": 0.5098533333333253
+    },
+    "BALANCED": {
+      "baseline_kept_as_dealt_7": 0.2317008333333342,
+      "baseline_optimally_bottomed_6": 0.25798083333333327,
+      "baseline_optimally_bottomed_5": 0.2607883333333329,
+      "baseline_optimally_bottomed_4": 0.25069750000000085,
+      "keep_threshold_at_7": 0.25798083333333327,
+      "keep_threshold_at_6_after_bottoming": 0.2607883333333329,
+      "keep_threshold_at_5_after_bottoming": 0.25069750000000085
+    }
+  }
+}
