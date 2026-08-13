@@ -179,8 +179,15 @@ class HandState:
             if spec.get("requires_legendary") and not controls_legendary:
                 continue
             multiplier = 2 if kinnan_active else 1
+            # MULL-005R (t1_t3_trajectory_audit.json DORK-001): Devoted Druid's "put a -1/-1
+            # counter on this creature: untap this creature" ability has NO tap symbol, so once
+            # it's no longer summoning sick it can tap for G, untap itself via the counter, then
+            # tap again for a second G - a real 2-mana/turn ceiling, not the flat 1 a plain dork
+            # gets. Represented as one tuple with base_units=2 (not two separate tuples for the
+            # same ref, which would break the payment engine's per-ref capacity tracking).
+            base_units = 2 if spec.get("self_untap_creature") else 1
             if "colors" in spec:
-                out.append((perm, spec["colors"], 1 * multiplier))
+                out.append((perm, spec["colors"], base_units * multiplier))
             elif "generic" in spec:
                 out.append((perm, None, spec["generic"] * multiplier))
         # Elvish Spirit Guide: a zero-cost activated ability FROM HAND ("Exile this card from

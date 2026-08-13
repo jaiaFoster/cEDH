@@ -208,7 +208,7 @@ Every finding below is grounded in real Oracle text pulled from `data/cards_cach
 **Already represented in MULL-005:** False
 **MULL-005 mis-model/omission:** Not modeled at all.
 **Expected direction of bias:** Minor under-rating in narrow creature-heavy-mana hands; a niche 2-drop, low expected T1-T3 frequency.
-**Resolution:** Deferred (earthbend land-animation), disclosed. The creature-mana-amplifier half is a clean parallel to Kinnan's existing multiplier code and IS implemented (small, low-risk addition).
+**Resolution:** Deferred in full, disclosed - both earthbend AND the creature-mana amplifier. Investigated implementing the amplifier as a Kinnan-style parallel, but found a real correctness risk: unlike Kinnan's doubling (same colors, just more units - safely representable as one tuple with a higher count), Badgermole's bonus is a FIXED extra G regardless of the base source's own color(s) - a color-restricted dork like Elves of Deep Shadow (B only) plus Badgermole produces 1 B AND 1 separate G, not 2 units of {B,G} each independently payable as either color, which is what the existing single-tuple-per-source payment model would incorrectly allow. Correctly modeling this needs an independently-capacity-tracked bonus unit tied to the same atomic tap (so the bonus can never be produced without the base), which is a real, if small, engine change - not attempted this phase given the card's low expected T1-T3 frequency.
 
 ## DORK-004 — Enduring Vitality
 **Status:** CANDIDATE

@@ -166,7 +166,11 @@ MANA_SOURCES = {
     "Avacyn's Pilgrim": {"colors": {"W"}, "creature": True},
     "Birds of Paradise": {"colors": set(COLORS), "creature": True},
     "Delighted Halfling": {"generic": 1, "creature": True},
-    "Devoted Druid": {"colors": {"G"}, "creature": True},
+    # MULL-005R (t1_t3_trajectory_audit.json DORK-001): real Oracle text has a second ability
+    # ("Put a -1/-1 counter on this creature: Untap this creature.") with no tap symbol, so once
+    # no longer summoning sick, Druid can tap for G, untap itself, and tap again for a second G -
+    # a real 2-mana/turn source, not a flat 1. See opening_hand_policy.py's available_sources().
+    "Devoted Druid": {"colors": {"G"}, "creature": True, "self_untap_creature": True},
     "Elves of Deep Shadow": {"colors": {"B"}, "creature": True},
     "Noble Hierarch": {"colors": {"W", "U", "G"}, "creature": True},
     "Chrome Mox": {"colors": set(COLORS), "creature": False, "requires_imprint": True},
