@@ -1,7 +1,7 @@
 {
   "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
   "subject_deck_version": "tymna-thrasios-treefarm-v1",
-  "gate_item_count": 28,
+  "gate_item_count": 29,
   "all_gate_items_passed": true,
   "full_suite_passed": true,
   "gate_status": "OPEN_FOR_PRODUCTION_RERUN",
@@ -271,6 +271,15 @@
         "rules_tests/regression/test_mull005r_grading_corrections.py::test_engines_dict_no_longer_lists_either_commander",
         "rules_tests/regression/test_mull005r_grading_corrections.py::test_hand_with_only_a_commander_does_not_report_has_any_engine_card",
         "rules_tests/regression/test_mull005r_grading_corrections.py::test_battlefield_commander_alone_does_not_set_any_engine_active"
+      ],
+      "passed": true
+    },
+    {
+      "id": "GATE-29",
+      "category": "NEW",
+      "property": "The pod-conditioning overlay's hard SHIP floor holds for every named archetype (and their union) under the corrected trajectory architecture; RogSi/Tayam worked examples behave per their disclosed qualitative priors (assignment section 21)",
+      "tests": [
+        "rules_tests/regression/test_mull005r_pod_conditioning_overlay.py"
       ],
       "passed": true
     }

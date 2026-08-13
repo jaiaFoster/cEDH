@@ -201,6 +201,11 @@ GATE_ITEMS = [
             "rules_tests/regression/test_mull005r_grading_corrections.py::test_battlefield_commander_alone_does_not_set_any_engine_active",
         ],
     },
+    {
+        "id": "GATE-29", "category": "NEW",
+        "property": "The pod-conditioning overlay's hard SHIP floor holds for every named archetype (and their union) under the corrected trajectory architecture; RogSi/Tayam worked examples behave per their disclosed qualitative priors (assignment section 21)",
+        "tests": ["rules_tests/regression/test_mull005r_pod_conditioning_overlay.py"],
+    },
 ]
 
 
