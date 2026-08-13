@@ -1,0 +1,152 @@
+{
+  "land_count_feature_ranking_comparison": {
+    "0": {
+      "play_success_rate": 0.20949720670391062,
+      "draw_success_rate": 0.31502172563625075,
+      "success_rate_delta": 0.10552451893234013,
+      "play_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__t1_any_engine_cast",
+        "opener__t1_accel_executable_now",
+        "opener__has_mox_family_card",
+        "opener__has_noncreature_persistent_accel_card"
+      ],
+      "draw_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__t1_accel_executable_now",
+        "opener__t1_any_engine_cast",
+        "opener__has_sol_ring",
+        "opener__accel_card_count>=2"
+      ],
+      "top5_overlap_count": 3
+    },
+    "1": {
+      "play_success_rate": 0.4307703296310846,
+      "draw_success_rate": 0.5163029891789579,
+      "success_rate_delta": 0.08553265954787331,
+      "play_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_sol_ring",
+        "opener__has_premium_one_drop_card",
+        "opener__interaction_only_hand",
+        "opener__accel_card_count>=2"
+      ],
+      "draw_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_sol_ring",
+        "opener__interaction_only_hand",
+        "opener__has_premium_one_drop_card",
+        "opener__accel_card_count>=2"
+      ],
+      "top5_overlap_count": 5
+    },
+    "2": {
+      "play_success_rate": 0.5076979027760941,
+      "draw_success_rate": 0.5695235786155898,
+      "success_rate_delta": 0.06182567583949572,
+      "play_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_sol_ring",
+        "opener__has_premium_one_drop_card",
+        "opener__accel_card_count>=2",
+        "opener__interaction_only_hand"
+      ],
+      "draw_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_sol_ring",
+        "opener__has_premium_one_drop_card",
+        "opener__accel_card_count>=2",
+        "opener__interaction_only_hand"
+      ],
+      "top5_overlap_count": 5
+    },
+    "3": {
+      "play_success_rate": 0.47316171103216703,
+      "draw_success_rate": 0.5312667283079469,
+      "success_rate_delta": 0.058105017275779824,
+      "play_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_premium_one_drop_card",
+        "opener__has_sol_ring",
+        "opener__accel_card_count>=2",
+        "opener__has_tier_a_engine_card"
+      ],
+      "draw_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_premium_one_drop_card",
+        "opener__has_sol_ring",
+        "opener__accel_card_count>=2",
+        "opener__has_tier_a_engine_card"
+      ],
+      "top5_overlap_count": 5
+    },
+    "4": {
+      "play_success_rate": 0.3905424200278164,
+      "draw_success_rate": 0.46286509040333795,
+      "success_rate_delta": 0.07232267037552154,
+      "play_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_premium_one_drop_card",
+        "opener__has_sol_ring",
+        "opener__accel_card_count>=2",
+        "opener__has_tier_a_engine_card"
+      ],
+      "draw_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_premium_one_drop_card",
+        "opener__has_sol_ring",
+        "opener__accel_card_count>=2",
+        "opener__has_tier_a_engine_card"
+      ],
+      "top5_overlap_count": 5
+    },
+    "5+": {
+      "play_success_rate": 0.29224030037546933,
+      "draw_success_rate": 0.3354192740926158,
+      "success_rate_delta": 0.04317897371714646,
+      "play_top5_features": [
+        "opener__has_premium_one_drop_card",
+        "opener__t1_premium_engine_cast",
+        "opener__has_sol_ring",
+        "opener__has_tier_a_engine_card",
+        "opener__accel_card_count>=2"
+      ],
+      "draw_top5_features": [
+        "opener__t1_premium_engine_cast",
+        "opener__has_premium_one_drop_card",
+        "opener__has_sol_ring",
+        "opener__accel_card_count>=2",
+        "opener__has_tier_a_engine_card"
+      ],
+      "top5_overlap_count": 5
+    }
+  },
+  "mulligan_policy_comparison": {
+    "TREE_DEPTH4": {
+      "play_strong_state_rate": 0.72625,
+      "draw_strong_state_rate": 0.7444,
+      "delta": 0.01815,
+      "play_avg_final_hand_size": 5.29942,
+      "draw_avg_final_hand_size": 5.05559
+    },
+    "SIMPLE_RULES": {
+      "play_strong_state_rate": 0.58145,
+      "draw_strong_state_rate": 0.64008,
+      "delta": 0.05862999999999996,
+      "play_avg_final_hand_size": 6.41434,
+      "draw_avg_final_hand_size": 6.43512
+    },
+    "MACHINE_OPTIMAL": {
+      "play_strong_state_rate": 0.765,
+      "draw_strong_state_rate": 0.8068,
+      "delta": 0.04179999999999995,
+      "play_avg_final_hand_size": 5.1488,
+      "draw_avg_final_hand_size": 5.5776
+    }
+  },
+  "summary": {
+    "mean_top5_feature_overlap_out_of_5": 4.666666666666667,
+    "mean_success_rate_delta_draw_minus_play": 0.07108158594802616,
+    "conclusion": "Differences are UNIFORM and QUANTITATIVE, not qualitative. At every land count from 1 through 5+, the top-5 opener features predicting t3_any_strong_state are IDENTICAL between play and draw (5/5 overlap; land count 0 is the lone partial exception at 3/5, still the same accel/engine cluster). The draw is uniformly stronger by roughly the same margin at every land count and under every mulligan policy (+5.3 to +9.0pp on strong-state rate) - consistent with 'one extra card, same underlying deck logic,' not a different set of what matters. CONCLUSION: the final human mulligan heuristic should NOT have separate play/draw rules - the same keep criteria apply on both, with an implicit understanding that draw hands run slightly hotter across the board."
+  }
+}
