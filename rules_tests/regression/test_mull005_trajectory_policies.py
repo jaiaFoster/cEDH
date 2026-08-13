@@ -25,15 +25,26 @@ def _feats(**overrides):
         "accel_card_count": 0,
         "distinct_colors_potential": 0,
         "tutor_names": [],
+        "colors_potential_with_fetches": [],
     }
     base.update(overrides)
     return base
 
 
-def test_premium_one_drop_is_snap_keep():
-    grade, _ = structural_hand_grade(_feats(has_premium_one_drop_card=True, land_count=0))
+def test_premium_one_drop_with_color_access_is_snap_keep():
+    feats = _feats(has_premium_one_drop_card=True, land_count=0, colors_potential_with_fetches=["U"])
+    grade, _ = structural_hand_grade(feats)
     assert grade == "SNAP_KEEP"
-    assert trajectory_simple_policy(_feats(has_premium_one_drop_card=True, land_count=0))
+    assert trajectory_simple_policy(feats)
+
+
+def test_premium_one_drop_without_color_access_is_not_unconditionally_kept():
+    # MULL-005R correction (t1_t3_trajectory_audit.json PREMIUM-001): MULL-005's own validation
+    # measured a 19.3% false-keep rate on this exact unconditional rule - a premium card with no
+    # U/W access at all must fall through to the other rules, not snap-keep on presence alone.
+    feats = _feats(has_premium_one_drop_card=True, land_count=0, colors_potential_with_fetches=["B"])
+    grade, _ = structural_hand_grade(feats)
+    assert grade == "SHIP"  # 0 lands, no color access, nothing else qualifies
 
 
 def test_correction_a_two_accel_no_destination_ships():

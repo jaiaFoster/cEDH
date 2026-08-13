@@ -85,7 +85,18 @@ def structural_hand_grade(feats):
     the ~56-92% precision band measured against TRAJECTORY_MACHINE, see module-level validation
     note in the write-up), MARGINAL (borderline - land-floor cases with no other qualifying
     signal), SHIP (fails every keep test)."""
-    premium = feats["has_premium_one_drop_card"]
+    # MULL-005R correction (t1_t3_trajectory_audit.json PREMIUM-001): MULL-005's own validation
+    # measured a 19.3% (412/2,138) false-keep rate on the unconditional "premium one-drop in
+    # hand" rule - hands that still reach Tier D/F, almost entirely from missing color sources
+    # (Mystic Remora needs U, Esper Sentinel needs W). `feats` doesn't expose exactly WHICH
+    # premium card is in hand, so this checks "at least one of U/W is reachable" as the best
+    # available proxy from opener-visible features alone - a real, disclosed improvement over no
+    # check at all, though not as precise as knowing the exact card (a hand with Remora and only
+    # W would still incorrectly pass this check; the false-keep rate should still drop
+    # substantially since a meaningful share of the 412 hands had NEITHER color at all).
+    premium = feats["has_premium_one_drop_card"] and bool(
+        {"U", "W"} & set(feats.get("colors_potential_with_fetches", []))
+    )
     land_ct = feats["land_count"]
     t1_accel_now = feats["t1_accel_executable_now"]
     has_engine = feats["has_any_engine_card"]

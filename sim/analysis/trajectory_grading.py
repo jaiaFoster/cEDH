@@ -230,8 +230,21 @@ def _mechanism(state, cards, tier_engine, tier_turn):
 
 def _finish(tier, tier_engine, tier_turn, state, cards, m1, m2, m3):
     mechanism = _mechanism(state, cards, tier_engine, tier_turn)
+    # MULL-005R (t1_t3_trajectory_audit.json AGENCY-001, assignment section 9): distinguish FREE
+    # from PAID retained interaction rather than one generic "+interaction" suffix - a hand that
+    # kept a real destination AND still has Force of Will pitchable for free is a materially
+    # different, stronger state than one that kept the destination but only has interaction it
+    # would need to tap out for.
+    interaction_is_free = m3["has_live_interaction"] and m3["free_or_alt_cost_interaction_live"]
+    interaction_is_paid_only = m3["has_live_interaction"] and not m3["free_or_alt_cost_interaction_live"]
+    has_real_destination = tier not in ("D", "F") and mechanism != "none"
     if m3["has_live_interaction"]:
-        mechanism = mechanism + "+interaction" if mechanism != "none" else "interaction_only"
+        if mechanism == "none":
+            mechanism = "interaction_only"
+        elif interaction_is_free:
+            mechanism = mechanism + "+free_interaction"
+        else:
+            mechanism = mechanism + "+paid_interaction"
     tutor_still_live = m3["tutor_castable"]
     if tutor_still_live and "tutor" not in mechanism and mechanism not in ("none", "interaction_only"):
         mechanism = mechanism + "+tutor_retained"
@@ -246,6 +259,8 @@ def _finish(tier, tier_engine, tier_turn, state, cards, m1, m2, m3):
         "tutor_still_live_t3": tutor_still_live,
         "second_engine_potential": m3["two_plus_engines_active"],
         "commander_access": tier_engine == "Thrasios, Triton Hero",
+        "engine_plus_live_free_interaction": has_real_destination and interaction_is_free,
+        "engine_plus_live_paid_interaction": has_real_destination and interaction_is_paid_only,
     }
     return {
         "tier": tier, "tier_engine": tier_engine, "tier_turn": tier_turn,
