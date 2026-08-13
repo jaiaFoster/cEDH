@@ -9,12 +9,19 @@ interaction model (interaction_model.py).
 Structural model limitation, disclosed rather than silently absorbed into a misleadingly high
 "engine active" number: several Tier-C conditional engines trigger off OPPONENT actions this
 solo/no-opponent Level 1-2 model never simulates (Heartwood Storyteller, Runic Armasaur,
-Archivist of Oghma all key off "an opponent..."; Smothering Tithe off opponents making tokens;
-Delney needs a combat step, not modeled). These are classified TIER_C_STRUCTURALLY_INERT below -
-being on the battlefield is tracked (so a census can still report how often they're drawn/cast),
-but they never count as "supported"/productive in any trajectory metric. This is a genuine,
-disclosed finding about this deck's card choices in a solo-goldfish context, not a modeling gap
-to silently paper over.
+Archivist of Oghma all key off "an opponent..."; Delney needs a combat step, not modeled). These
+are classified TIER_C_STRUCTURALLY_INERT below - being on the battlefield is tracked (so a census
+can still report how often they're drawn/cast), but they never count as "supported"/productive in
+any trajectory metric. This is a genuine, disclosed finding about this deck's card choices in a
+solo-goldfish context, not a modeling gap to silently paper over.
+
+MULL-005R correction (t1_t3_trajectory_audit.json TITHE-001): Smothering Tithe was PREVIOUSLY
+listed here, but its "whenever an opponent draws" trigger is mechanically identical in
+opponent-dependence to Rhystic Study's "whenever an opponent casts a spell" - which is NOT
+zeroed out (it's in ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE and credited on deployment alone). That
+was an inconsistency, not a principled distinction - both are equally unmeasurable by this model
+and both are now credited identically as a disclosed proxy for real-game value, not a simulated
+fact. Smothering Tithe has been promoted into ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE instead.
 """
 from opening_hand_model import (
     COLORS, parse_cost, CRADLE, MANA_SOURCES, ACCELERATION, TUTORS, COMMANDERS,
@@ -25,7 +32,7 @@ from opening_hand_policy import is_currently_castable
 from interaction_model import interaction_is_live
 
 TIER_C_STRUCTURALLY_INERT = {
-    "Heartwood Storyteller", "Runic Armasaur", "Archivist of Oghma", "Smothering Tithe",
+    "Heartwood Storyteller", "Runic Armasaur", "Archivist of Oghma",
     "Delney, Streetwise Lookout",
 }
 TRAINING_GROUNDS_ACTIVATION_DISCOUNT = 2  # "costs {2} less... can't reduce below one mana"
@@ -41,11 +48,13 @@ def _opening_hand_land_count(state, cards):
 
 def _tier_c_supported(name, state, cards):
     """Whether a Tier-C conditional engine's real condition is actually satisfied right now.
-    See module docstring for which ones are structurally inert in a solo model."""
+    See module docstring for which ones are structurally inert in a solo model.
+
+    MULL-005R: Tymna the Weaver removed (t1_t3_trajectory_audit.json CMDR-001 - the pilot's
+    explicit directive is zero positive mulligan credit for Tymna, so it is no longer in
+    ENGINE_TIER_C_CONDITIONAL_VALUE at all and this function is never even asked about it)."""
     if name in TIER_C_STRUCTURALLY_INERT:
         return False
-    if name == "Tymna the Weaver":
-        return state.attack_eligible_creature_count() >= 1  # SOLO-003R: must respect summoning sickness
     if name == "Faerie Mastermind":
         # its own {3}{U} "each player draws a card" ability is the only solo-usable line
         return is_currently_castable(state, *parse_cost("{3}{U}")[:2])
@@ -56,17 +65,17 @@ def _tier_c_supported(name, state, cards):
 
 def _tier_b_supported(name, state, cards):
     """Whether a Tier-B high-leverage infrastructure engine's supporting board state is actually
-    present, not merely the card itself."""
+    present, not merely the card itself.
+
+    MULL-005R: Kinnan, Bonder Prodigy removed (t1_t3_trajectory_audit.json KINNAN-001 - it is a
+    mana-doubling MECHANISM, not a standalone destination, so it is no longer in
+    ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE at all and this function is never asked about it)."""
     if name == "Gaea's Cradle":
         return state.creature_count() >= 2  # meaningful creature count, not just "in play"
     if name == "Birthing Pod":
         return state.creature_count() >= 1  # a legal sacrifice body
     if name == "Survival of the Fittest":
         return any("Creature" in cards[c]["type"] for c in state.hand)  # a discardable creature
-    if name == "Kinnan, Bonder Prodigy":
-        return any(
-            MANA_SOURCES.get(p.name, {}).get("creature") for p in state.nonland_perms
-        )  # a mana dork on board for Kinnan to double
     if name == "Training Grounds":
         # only meaningfully reduces something in this deck if Thrasios (the only creature with a
         # modeled activated mana cost) is also on the battlefield.

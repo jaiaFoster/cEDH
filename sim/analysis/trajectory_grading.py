@@ -1,27 +1,43 @@
-"""SIM-001 MULL-005 sections 4-6 — trajectory tier grading + mechanism tagging + resource cost.
+"""SIM-001 MULL-005/MULL-005R sections 4-6 — trajectory tier grading + mechanism tagging + resource
+cost.
 
-Governing principle (the whole point of MULL-005): KEEP TRAJECTORIES, NOT RESOURCES. Mana,
-tutors, interaction, and acceleration are not reasons to keep a hand on their own - they matter
-only insofar as they create or protect a real engine trajectory. This module answers, for an
-ALREADY-SIMULATED T1-T3 line (from trajectory_search.py, which tries several - not just the
-single greedy line), three questions:
+Governing principle: KEEP TRAJECTORIES, NOT RESOURCES. Mana, tutors, interaction, and
+acceleration are not reasons to keep a hand on their own - they matter only insofar as they
+create or protect a real engine trajectory. This module answers, for an ALREADY-SIMULATED T1-T3
+line (from trajectory_search.py, which tries several - not just the single greedy line), three
+questions:
   1. What TIER of trajectory did this hand actually reach (S/A/B/C/D/F)?
-  2. What MECHANISM produced it (dork_to_engine, tutor_to_engine, natural_engine, ...)?
+  2. What MECHANISM produced it (dork_to_engine, tutor_to_engine, pod_to_engine, ...)?
   3. What did it COST (cards spent, mana consumed, resources retained)?
 
-Tiers (section 4), individually measured per engine - "measure them individually," never assume
-tier membership implies equal strength:
-  S - Premium T1 trajectory: a premium one-drop engine (Mystic Remora/Esper Sentinel) cast T1, or
-      an accelerated T1 cast of a Tier-A engine that wouldn't otherwise fit.
-  A - Premium T2 trajectory: a Tier-A engine (Rhystic Study/Sylvan Library, or a premium one-drop
-      not caught by S) online by T2, OR a genuinely productive commander online by T2 (Tymna with
-      real attack-eligible support, Thrasios actually able to activate, Kinnan with a real mana
-      dork to double).
-  B - Good T2 secondary-engine trajectory: a Tier-B/C engine (Archivist of Oghma, Runic Armasaur,
-      Heartwood Storyteller, Kinnan, Training Grounds, ...) online AND SUPPORTED by T2/T3, or a
-      supported Survival/Pod, or a productive commander online by T3 specifically (not T2).
-  C - T3-only or weakly supported: an engine exists but is unsupported, or only arrives T3, or a
-      commander is on the battlefield without real productivity.
+MULL-005R revisions (t1_t3_trajectory_audit.json - see CMDR-001/002, KINNAN-001, TITHE-001):
+  - Tymna the Weaver receives ZERO positive tier credit anywhere in this module, per the pilot's
+    explicit strategic directive - it is not a scored destination in this phase.
+  - Thrasios, Triton Hero is credited ONLY for a concrete, specific benefit (enabling Mox Amber,
+    turning Fierce Guardianship free, or genuine immediate {4}-activation productivity) - never
+    for generic "commander castable" or "commander on battlefield" alone.
+  - Kinnan, Bonder Prodigy is never a standalone tier destination - it is purely a mana-doubling
+    mechanism (already correctly modeled in opening_hand_policy.py's available_sources()) that
+    feeds whatever OTHER destination it accelerates.
+  - Smothering Tithe is now in ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE (promoted from being
+    zeroed out entirely - see opening_hand_model.py's own comment for the consistency rationale),
+    so it flows through the existing Tier-A path with no special-casing needed here.
+  - Abhorrent Oculus is a first-class premium destination once actually on the battlefield
+    (never merely in hand, which this project's engine already treats as permanently uncastable -
+    see opening_hand_policy.py's OCULUS_NAME handling), graded alongside the Tier-A engine set.
+
+Tiers, individually measured per engine - "measure them individually," never assume tier
+membership implies equal strength:
+  S - Premium T1 trajectory: a premium one-drop engine (Mystic Remora/Esper Sentinel) cast T1.
+  A - Premium T2 trajectory: a Tier-A engine (Rhystic Study/Sylvan Library/Smothering Tithe, or a
+      premium one-drop not caught by S) or Abhorrent Oculus online by T2, OR Thrasios providing a
+      concrete, specific benefit (Mox Amber enabled, Fierce Guardianship turned free, or genuine
+      immediate activation productivity) by T2.
+  B - Good T2-T3 secondary-engine trajectory: a Tier-B/C engine (Archivist of Oghma, Runic
+      Armasaur, Heartwood Storyteller, Training Grounds, ...) online AND SUPPORTED, a supported
+      Survival/Pod, Oculus online by T3, or Thrasios's concrete benefit arriving specifically by
+      T3 (not T2).
+  C - T3-only or weakly supported: an engine exists but is unsupported, or only arrives T3.
   D - No meaningful engine trajectory at all, but the hand isn't outright broken (mana/tutor/
       interaction present with no payoff, or a passive land-heavy hand).
   F - Mana/color/nonfunctional failure - real mana shortfall or color lockout prevented any
@@ -32,6 +48,7 @@ from opening_hand_model import (
     ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE, ENGINE_TIER_C_CONDITIONAL_VALUE,
     ACCELERATION, TUTORS, INTERACTION_CASTABLE, MOX_FAMILY,
 )
+from opening_hand_policy import OCULUS_NAME
 import trajectory_metrics as tm
 
 CREATURE_ACCEL = {n for n, spec in __import__("opening_hand_model").MANA_SOURCES.items() if spec.get("creature")}
@@ -40,11 +57,19 @@ PERSISTENT_NONCREATURE_ACCEL = set(ACCELERATION) - CREATURE_ACCEL - ONE_SHOT_ACC
 
 TIER_ORDER = ["S", "A", "B", "C", "D", "F"]
 
+# Cast-log classes that put a card onto the battlefield "for real" (used by _engine_online_turn) -
+# includes the MULL-005R battlefield-search mechanisms alongside the original cast classes.
+ONLINE_CLASSES = (
+    "commander", "engine", "premium_engine", "paid_accel", "free_accel",
+    "pod_found", "battlefield_tutor_found", "battlefield_land_tutor_found",
+)
+PREMIUM_DESTINATIONS = ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE | PREMIUM_ONE_DROP_ENGINES | {OCULUS_NAME}
+
 
 def _engine_online_turn(state, name):
     """First turn `name` appears on the battlefield (commander or nonland perm), or None."""
     for (t, n, c) in state.cast_log:
-        if n == name and c in ("commander", "engine", "premium_engine", "paid_accel", "free_accel"):
+        if n == name and c in ONLINE_CLASSES:
             return t
     return None
 
@@ -53,6 +78,45 @@ def _first_cast_turn(state, name):
     for (t, n, c) in state.cast_log:
         if n == name:
             return t
+    return None
+
+
+def _thrasios_concrete_benefit_turn(state, cards, snapshots):
+    """MULL-005R (CMDR-002): Thrasios is credited ONLY for a specific, concrete benefit - never
+    for generic commander presence. Returns the earliest turn (2 or 3) any of the three named
+    concrete benefits is real, or None. All three checks require Thrasios ON THE BATTLEFIELD by
+    that turn (already correctly required by the base engine for Mox Amber's `controls_legendary`
+    gate and Fierce Guardianship's `free_if_commander` gate - see t1_t3_trajectory_audit.json
+    CMDR-002 - this function only adds the SCORING distinction, not new legality)."""
+    thras_turn = _engine_online_turn(state, "Thrasios, Triton Hero")
+    if thras_turn is None:
+        return None
+    for turn in (2, 3):
+        if turn < thras_turn:
+            continue
+        snap = snapshots.get(turn)
+        if snap is None:
+            continue
+        battlefield_by_turn = {p.name for p in state.nonland_perms if p.entered_turn <= turn}
+        if "Thrasios, Triton Hero" not in battlefield_by_turn:
+            continue
+        # (1) enables Mox Amber - Amber is on the battlefield (only possible with a legendary
+        #     creature/PW already in play, per opening_hand_model.py's controls_legendary gate).
+        if "Mox Amber" in battlefield_by_turn:
+            return turn
+        # (2) turns Fierce Guardianship free/live - it's genuinely still in hand AND live via the
+        #     free-commander path (interaction_is_live checks nonland_perms for a commander, so
+        #     this is only true because Thrasios is actually on the battlefield, not merely
+        #     castable - see interaction_model.py's ALT_COST_SPECS "free_if_commander").
+        if "Fierce Guardianship" in state.hand:
+            from interaction_model import interaction_is_live
+            if interaction_is_live("Fierce Guardianship", state, cards):
+                return turn
+        # (3) genuine immediate {4}-activation productivity (Training Grounds discount included
+        #     automatically by thrasios_productivity's own cost check).
+        thras_prod = tm.thrasios_productivity(state, cards, snap)
+        if thras_prod["thrasios_activation_now"]:
+            return turn
     return None
 
 
@@ -65,8 +129,6 @@ def _t2_or_t3_supported_tier_b_or_c(state, cards, cast_by_turn):
         if name in battlefield_names and tm._tier_b_supported(name, state, cards):
             return name, _engine_online_turn(state, name)
     for name in ENGINE_TIER_C_CONDITIONAL_VALUE:
-        if name == "Tymna the Weaver":
-            continue  # commanders handled separately (productivity, not generic tier-C support)
         if name in battlefield_names and tm._tier_c_supported(name, state, cards):
             return name, _engine_online_turn(state, name)
     return None, None
@@ -77,9 +139,9 @@ def grade_trajectory(state, cards, m1, m2, m3):
     tier_turn (when it came online), mechanism, resource_cost."""
     battlefield_t1 = {n for (t, n, c) in state.cast_log if t == 1}
     battlefield_t2 = {n for (t, n, c) in state.cast_log if t <= 2}
+    snapshots = {1: m1, 2: m2, 3: m3}
 
-    thras = tm.thrasios_productivity(state, cards, m3)
-    tymna_tier = tm.tymna_attack_capacity(state, cards, _first_cast_turn(state, "Tymna the Weaver"))
+    thras_benefit_turn = _thrasios_concrete_benefit_turn(state, cards, snapshots)
 
     # ---- Tier S: premium one-drop cast T1 ----
     premium_t1 = battlefield_t1 & PREMIUM_ONE_DROP_ENGINES
@@ -87,40 +149,36 @@ def grade_trajectory(state, cards, m1, m2, m3):
         name = sorted(premium_t1)[0]
         return _finish("S", name, 1, state, cards, m1, m2, m3)
 
-    # ---- Tier A: a Tier-A engine (or premium not caught above) online by T2, or a genuinely
-    #      productive commander online by T2 ----
-    tier_a_t2 = (battlefield_t2 & ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE) | (battlefield_t2 & PREMIUM_ONE_DROP_ENGINES)
+    # ---- Tier A: a Tier-A engine/Oculus online by T2, or Thrasios's concrete benefit by T2 ----
+    tier_a_t2 = battlefield_t2 & PREMIUM_DESTINATIONS
     if tier_a_t2:
         name = sorted(tier_a_t2)[0]
         return _finish("A", name, _engine_online_turn(state, name), state, cards, m1, m2, m3)
-    if "Thrasios, Triton Hero" in battlefield_t2 and thras["thrasios_activation_now"] and m2 is not None:
-        # productive specifically by the T2 snapshot, not just eventually by T3
-        thras_t2 = tm.thrasios_productivity(state, cards, m2)
-        if thras_t2["thrasios_activation_now"]:
-            return _finish("A", "Thrasios, Triton Hero", 2, state, cards, m1, m2, m3)
-    if "Tymna the Weaver" in battlefield_t2 and m2 is not None and state.attack_eligible_creature_count() >= 1:
-        return _finish("A", "Tymna the Weaver", 2, state, cards, m1, m2, m3)
-    if "Kinnan, Bonder Prodigy" in battlefield_t2 and tm._tier_b_supported("Kinnan, Bonder Prodigy", state, cards):
-        return _finish("A", "Kinnan, Bonder Prodigy", 2, state, cards, m1, m2, m3)
+    if thras_benefit_turn == 2:
+        return _finish("A", "Thrasios, Triton Hero", 2, state, cards, m1, m2, m3)
 
-    # ---- Tier B: a supported Tier-B/C engine (secondary), or a productive commander, by T3 ----
+    # ---- Tier B: Oculus by T3, a supported Tier-B/C engine (secondary), or Thrasios's concrete
+    #      benefit specifically by T3 ----
+    # Oculus is checked FIRST: a generic "Pod is supported" check (ENGINE_TIER_B_HIGH_LEVERAGE_
+    # INFRASTRUCTURE's own creature_count()>=1 fodder check) would otherwise trivially pass
+    # merely because Oculus ITSELF is a creature now on the battlefield, incorrectly crediting
+    # idle Pod infrastructure over the premium destination Pod just found.
+    if OCULUS_NAME in {p.name for p in state.nonland_perms}:
+        return _finish("B", OCULUS_NAME, _engine_online_turn(state, OCULUS_NAME), state, cards, m1, m2, m3)
     name, turn = _t2_or_t3_supported_tier_b_or_c(state, cards, 3)
     if name:
         return _finish("B", name, turn, state, cards, m1, m2, m3)
-    if thras["thrasios_activation_now"]:
-        return _finish("B", "Thrasios, Triton Hero", _first_cast_turn(state, "Thrasios, Triton Hero"), state, cards, m1, m2, m3)
-    if tymna_tier["tymna_deployed"] and tymna_tier["tymna_attack_capacity_tier"] in ("attack_capacity_medium", "attack_capacity_high"):
-        return _finish("B", "Tymna the Weaver", _first_cast_turn(state, "Tymna the Weaver"), state, cards, m1, m2, m3)
+    if thras_benefit_turn == 3:
+        return _finish("B", "Thrasios, Triton Hero", 3, state, cards, m1, m2, m3)
 
-    # ---- Tier C: an engine exists but is unsupported / arrives late, or an unproductive commander ----
+    # ---- Tier C: an engine exists but is unsupported / arrives late ----
     any_engine_on_bf = {p.name for p in state.nonland_perms} & (
         ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE | ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE
         | ENGINE_TIER_C_CONDITIONAL_VALUE | PREMIUM_ONE_DROP_ENGINES
     )
-    if any_engine_on_bf or tymna_tier["tymna_deployed"] or thras["thrasios_on_battlefield"]:
-        name = sorted(any_engine_on_bf)[0] if any_engine_on_bf else (
-            "Tymna the Weaver" if tymna_tier["tymna_deployed"] else "Thrasios, Triton Hero"
-        )
+    thras_on_bf = "Thrasios, Triton Hero" in {p.name for p in state.nonland_perms}
+    if any_engine_on_bf or thras_on_bf:
+        name = sorted(any_engine_on_bf)[0] if any_engine_on_bf else "Thrasios, Triton Hero"
         return _finish("C", name, _first_cast_turn(state, name), state, cards, m1, m2, m3)
 
     # ---- Tier F vs D: genuine mana/color failure vs merely no engine found ----
@@ -132,10 +190,19 @@ def grade_trajectory(state, cards, m1, m2, m3):
 def _mechanism(state, cards, tier_engine, tier_turn):
     if tier_engine is None:
         return "none"
-    if tier_engine in ("Tymna the Weaver", "Thrasios, Triton Hero"):
+    if tier_engine == "Thrasios, Triton Hero":
         return "commander_engine"
     if tier_engine == CRADLE:
         return "cradle_development"
+
+    found_class = next((c for (t, n, c) in state.cast_log if n == tier_engine and t == tier_turn), None)
+    if found_class == "pod_found":
+        return "pod_to_engine" if tier_engine != OCULUS_NAME else "pod_to_oculus"
+    if found_class == "battlefield_tutor_found":
+        return "battlefield_tutor_to_engine" if tier_engine != OCULUS_NAME else "battlefield_tutor_to_oculus"
+    if found_class == "battlefield_land_tutor_found":
+        return "battlefield_land_tutor_to_engine"
+
     cast_before = [n for (t, n, c) in state.cast_log if t < (tier_turn or 99)]
     tutor_used = any(n in TUTORS for n in cast_before)
     accel_used = [n for n in cast_before if n in ACCELERATION]
@@ -158,8 +225,6 @@ def _mechanism(state, cards, tier_engine, tier_turn):
         return "rock_to_engine"
     if burst_accel:
         return "burst_mana_to_engine"
-    if tier_turn is not None and tier_turn == 1:
-        return "natural_engine"
     return "natural_engine"
 
 
@@ -180,7 +245,7 @@ def _finish(tier, tier_engine, tier_turn, state, cards, m1, m2, m3):
         "tutor_consumed": any(n in TUTORS for (t, n, c) in state.cast_log),
         "tutor_still_live_t3": tutor_still_live,
         "second_engine_potential": m3["two_plus_engines_active"],
-        "commander_access": tier_engine in ("Tymna the Weaver", "Thrasios, Triton Hero"),
+        "commander_access": tier_engine == "Thrasios, Triton Hero",
     }
     return {
         "tier": tier, "tier_engine": tier_engine, "tier_turn": tier_turn,

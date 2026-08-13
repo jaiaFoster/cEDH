@@ -219,28 +219,40 @@ PREMIUM_ONE_DROP_ENGINES = {"Mystic Remora", "Esper Sentinel"}
 # a card counts toward, it does not replace the existing ENGINES/TUTORS/ACCELERATION
 # classifications SOLO-002R already relies on.
 #
-# A. Primary early card-advantage engines - tracked INDIVIDUALLY by exact card, never collapsed
-#    into one interchangeable "engine" label (Remora/Sentinel/Rhystic/Sylvan are materially
-#    different: different mana cost, different color, different downside/upside shape).
+# A. Primary early card-advantage/value engines - tracked INDIVIDUALLY by exact card, never
+#    collapsed into one interchangeable "engine" label (Remora/Sentinel/Rhystic/Sylvan/Tithe are
+#    materially different: different mana cost, different color, different downside/upside
+#    shape). Smothering Tithe promoted here in MULL-005R (t1_t3_trajectory_audit.json TITHE-001):
+#    its "whenever an opponent draws" trigger is exactly as opponent-dependent as Rhystic Study's
+#    "whenever an opponent casts a spell" - both are 100% unmeasurable by this solo/no-opponent
+#    model, and both are credited on deployment alone as a disclosed proxy for real-game value
+#    (an assumption, not a simulated fact - see this module's own docstring's simplification
+#    list), never given separate treatment. Keeping Tithe zeroed while crediting Rhystic/Remora
+#    for the mechanically identical situation was an inconsistency, not a principled distinction.
 ENGINE_TIER_A_PRIMARY_CARD_ADVANTAGE = {
-    "Mystic Remora", "Esper Sentinel", "Rhystic Study", "Sylvan Library",
+    "Mystic Remora", "Esper Sentinel", "Rhystic Study", "Sylvan Library", "Smothering Tithe",
 }
 # B. High-leverage infrastructure engines - functionality is CONDITIONAL on supporting board
 #    state, not merely presence (Cradle needs creatures; Training Grounds needs a creature with
 #    a relevant activated ability - notably Thrasios's own {4} activation, reduced to {2} while
-#    Training Grounds is in play; Pod/Survival need a legal sacrifice/discard target).
+#    Training Grounds is in play; Pod/Survival need a legal sacrifice/discard target). Kinnan is
+#    NOT scored as a standalone destination here (MULL-005R correction - see KINNAN-001 in
+#    t1_t3_trajectory_audit.json): its mana-doubling is a mechanism that feeds whatever OTHER
+#    destination it accelerates, not a destination itself, so it is deliberately absent from
+#    every tier set - trajectory_grading.py never grants it independent tier credit.
 ENGINE_TIER_B_HIGH_LEVERAGE_INFRASTRUCTURE = {
-    "Survival of the Fittest", "Birthing Pod", "Kinnan, Bonder Prodigy",
-    "Gaea's Cradle", "Training Grounds",
+    "Survival of the Fittest", "Birthing Pod", "Gaea's Cradle", "Training Grounds",
 }
 # C. Conditional/contextual value engines - only actually productive when their specific
-#    condition is supported (Tymna needs an attacker; Faerie Mastermind/Heartwood
-#    Storyteller/Runic Armasaur/Archivist of Oghma/Delney trigger off specific board actions;
-#    Smothering Tithe/Deathrite Shaman are structurally near-dead in a solo/no-opponent,
-#    graveyard-ability-unmodeled context respectively - flagged, not silently dropped).
+#    condition is supported (Faerie Mastermind/Heartwood Storyteller/Runic Armasaur/Archivist of
+#    Oghma/Delney trigger off specific board actions; Deathrite Shaman is structurally near-dead
+#    in this graveyard-ability-unmodeled context - flagged, not silently dropped). Tymna the
+#    Weaver deliberately removed from this set in MULL-005R (t1_t3_trajectory_audit.json
+#    CMDR-001): the pilot's explicit strategic directive is that Tymna receives ZERO positive
+#    mulligan credit by default - it is not a scored engine/destination at all in this phase.
 ENGINE_TIER_C_CONDITIONAL_VALUE = {
-    "Tymna the Weaver", "Faerie Mastermind", "Heartwood Storyteller", "Runic Armasaur",
-    "Archivist of Oghma", "Delney, Streetwise Lookout", "Smothering Tithe", "Deathrite Shaman",
+    "Faerie Mastermind", "Heartwood Storyteller", "Runic Armasaur",
+    "Archivist of Oghma", "Delney, Streetwise Lookout", "Deathrite Shaman",
 }
 # D. Mana/development infrastructure - does NOT count as card-advantage merely by being present;
 #    contributes to trajectories by accelerating stronger subsequent actions instead.
