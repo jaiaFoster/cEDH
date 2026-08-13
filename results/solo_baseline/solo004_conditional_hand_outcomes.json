@@ -1,0 +1,838 @@
+{
+  "play": {
+    "1_land_with_t1_dork": {
+      "matches": {
+        "n": 9648,
+        "t2_engine_rate": 0.1956882255389718,
+        "t2_engine_plus_interaction_rate": 0.04477611940298507,
+        "t3_strong_state_rate": 0.6342247097844113,
+        "t3_strong_card_advantage_rate": 0.1958955223880597,
+        "t3_credible_win_pressure_rate": 0.03285655058043118,
+        "t3_stalled_rate": 0.26824212271973463,
+        "mana_shortfall_rate": 0.5576285240464345,
+        "mean_cards_remaining_t3": 3.604063018242123,
+        "mean_mana_capacity_t3": 3.1337064676616917
+      },
+      "complement_within_same_land_count": {
+        "n": 18353,
+        "t2_engine_rate": 0.16291614449953687,
+        "t2_engine_plus_interaction_rate": 0.03258322889990737,
+        "t3_strong_state_rate": 0.323816269819648,
+        "t3_strong_card_advantage_rate": 0.16302511850923554,
+        "t3_credible_win_pressure_rate": 0.029586443633193484,
+        "t3_stalled_rate": 0.5444341524546396,
+        "mana_shortfall_rate": 0.7618373018035198,
+        "mean_cards_remaining_t3": 4.669536315588732,
+        "mean_mana_capacity_t3": 2.111534898926606
+      }
+    },
+    "1_land_no_acceleration": {
+      "matches": {
+        "n": 7750,
+        "t2_engine_rate": 0.17238709677419356,
+        "t2_engine_plus_interaction_rate": 0.02167741935483871,
+        "t3_strong_state_rate": 0.2326451612903226,
+        "t3_strong_card_advantage_rate": 0.17251612903225808,
+        "t3_credible_win_pressure_rate": 0.021548387096774195,
+        "t3_stalled_rate": 0.6816774193548387,
+        "mana_shortfall_rate": 0.8828387096774194,
+        "mean_cards_remaining_t3": 4.902967741935484,
+        "mean_mana_capacity_t3": 1.6523870967741936
+      },
+      "complement_within_same_land_count": {
+        "n": 20251,
+        "t2_engine_rate": 0.17490494296577946,
+        "t2_engine_plus_interaction_rate": 0.04256579921979162,
+        "t3_strong_state_rate": 0.5065922670485408,
+        "t3_strong_card_advantage_rate": 0.17505308379833096,
+        "t3_credible_win_pressure_rate": 0.034220532319391636,
+        "t3_stalled_rate": 0.36032788504271396,
+        "mana_shortfall_rate": 0.6182410745148388,
+        "mean_cards_remaining_t3": 4.072589007950224,
+        "mean_mana_capacity_t3": 2.774233371191546
+      }
+    },
+    "1_land_persistent_accel_only": {
+      "matches": {
+        "n": 8876,
+        "t2_engine_rate": 0.17631816133393421,
+        "t2_engine_plus_interaction_rate": 0.04258675078864353,
+        "t3_strong_state_rate": 0.6123253717890942,
+        "t3_strong_card_advantage_rate": 0.17654348805768363,
+        "t3_credible_win_pressure_rate": 0.034249662009914375,
+        "t3_stalled_rate": 0.2952906714736368,
+        "mana_shortfall_rate": 0.5681613339342046,
+        "mean_cards_remaining_t3": 3.945583596214511,
+        "mean_mana_capacity_t3": 3.0998197386210005
+      },
+      "complement_within_same_land_count": {
+        "n": 19125,
+        "t2_engine_rate": 0.17322875816993463,
+        "t2_engine_plus_interaction_rate": 0.034091503267973854,
+        "t3_strong_state_rate": 0.3465098039215686,
+        "t3_strong_card_advantage_rate": 0.17333333333333334,
+        "t3_credible_win_pressure_rate": 0.0290718954248366,
+        "t3_stalled_rate": 0.5207320261437909,
+        "mana_shortfall_rate": 0.7487058823529412,
+        "mean_cards_remaining_t3": 4.4680261437908495,
+        "mean_mana_capacity_t3": 2.1685228758169934
+      }
+    },
+    "1_land_temporary_accel_only": {
+      "matches": {
+        "n": 3039,
+        "t2_engine_rate": 0.20598881210924647,
+        "t2_engine_plus_interaction_rate": 0.04113195129976966,
+        "t3_strong_state_rate": 0.41428101349128005,
+        "t3_strong_card_advantage_rate": 0.20598881210924647,
+        "t3_credible_win_pressure_rate": 0.031918394208621255,
+        "t3_stalled_rate": 0.44652846331029944,
+        "mana_shortfall_rate": 0.7064823955248437,
+        "mean_cards_remaining_t3": 3.861467588022376,
+        "mean_mana_capacity_t3": 2.3234616650213886
+      },
+      "complement_within_same_land_count": {
+        "n": 24962,
+        "t2_engine_rate": 0.17033891515102956,
+        "t2_engine_plus_interaction_rate": 0.036255107763800976,
+        "t3_strong_state_rate": 0.4327778222898806,
+        "t3_strong_card_advantage_rate": 0.17049915872125632,
+        "t3_credible_win_pressure_rate": 0.030566461020751542,
+        "t3_stalled_rate": 0.4496033971636888,
+        "mana_shortfall_rate": 0.6896482653633523,
+        "mean_cards_remaining_t3": 4.356101273936384,
+        "mean_mana_capacity_t3": 2.4808108324653473
+      }
+    },
+    "2_land_with_engine": {
+      "matches": {
+        "n": 22343,
+        "t2_engine_rate": 0.28527950588551226,
+        "t2_engine_plus_interaction_rate": 0.05719912276775724,
+        "t3_strong_state_rate": 0.5248176162556505,
+        "t3_strong_card_advantage_rate": 0.28630891106834355,
+        "t3_credible_win_pressure_rate": 0.04251890972564114,
+        "t3_stalled_rate": 0.17611779975831357,
+        "mana_shortfall_rate": 0.4730788166316072,
+        "mean_cards_remaining_t3": 3.4628742782974533,
+        "mean_mana_capacity_t3": 3.2987512867564783
+      },
+      "complement_within_same_land_count": {
+        "n": 10653,
+        "t2_engine_rate": 0.05059607622266028,
+        "t2_engine_plus_interaction_rate": 0.07500234675678212,
+        "t3_strong_state_rate": 0.4717919834788323,
+        "t3_strong_card_advantage_rate": 0.051065427579085707,
+        "t3_credible_win_pressure_rate": 0.03182202196564348,
+        "t3_stalled_rate": 0.17788416408523422,
+        "mana_shortfall_rate": 0.3510748146062142,
+        "mean_cards_remaining_t3": 3.1958133859006854,
+        "mean_mana_capacity_t3": 3.6173847742419976
+      }
+    },
+    "2_land_no_engine": {
+      "matches": {
+        "n": 10653,
+        "t2_engine_rate": 0.05059607622266028,
+        "t2_engine_plus_interaction_rate": 0.07500234675678212,
+        "t3_strong_state_rate": 0.4717919834788323,
+        "t3_strong_card_advantage_rate": 0.051065427579085707,
+        "t3_credible_win_pressure_rate": 0.03182202196564348,
+        "t3_stalled_rate": 0.17788416408523422,
+        "mana_shortfall_rate": 0.3510748146062142,
+        "mean_cards_remaining_t3": 3.1958133859006854,
+        "mean_mana_capacity_t3": 3.6173847742419976
+      },
+      "complement_within_same_land_count": {
+        "n": 22343,
+        "t2_engine_rate": 0.28527950588551226,
+        "t2_engine_plus_interaction_rate": 0.05719912276775724,
+        "t3_strong_state_rate": 0.5248176162556505,
+        "t3_strong_card_advantage_rate": 0.28630891106834355,
+        "t3_credible_win_pressure_rate": 0.04251890972564114,
+        "t3_stalled_rate": 0.17611779975831357,
+        "mana_shortfall_rate": 0.4730788166316072,
+        "mean_cards_remaining_t3": 3.4628742782974533,
+        "mean_mana_capacity_t3": 3.2987512867564783
+      }
+    },
+    "2_land_with_tutor": {
+      "matches": {
+        "n": 22277,
+        "t2_engine_rate": 0.19181218296898145,
+        "t2_engine_plus_interaction_rate": 0.059433496431296855,
+        "t3_strong_state_rate": 0.4672981101584594,
+        "t3_strong_card_advantage_rate": 0.19257530188086366,
+        "t3_credible_win_pressure_rate": 0.033846568209363916,
+        "t3_stalled_rate": 0.19594200296269695,
+        "mana_shortfall_rate": 0.4746150738429771,
+        "mean_cards_remaining_t3": 3.511873232481932,
+        "mean_mana_capacity_t3": 3.2946536786820486
+      },
+      "complement_within_same_land_count": {
+        "n": 10719,
+        "t2_engine_rate": 0.2462916316820599,
+        "t2_engine_plus_interaction_rate": 0.0702490904002239,
+        "t3_strong_state_rate": 0.591659669745312,
+        "t3_strong_card_advantage_rate": 0.2473178468140685,
+        "t3_credible_win_pressure_rate": 0.04991137232950835,
+        "t3_stalled_rate": 0.13667319712659762,
+        "mana_shortfall_rate": 0.348633268028734,
+        "mean_cards_remaining_t3": 3.095624591846254,
+        "mean_mana_capacity_t3": 3.6239388002612185
+      }
+    },
+    "2_land_interaction_only": {
+      "matches": {
+        "n": 2404,
+        "t2_engine_rate": 0.04409317803660566,
+        "t2_engine_plus_interaction_rate": 0.07029950083194675,
+        "t3_strong_state_rate": 0.15640599001663893,
+        "t3_strong_card_advantage_rate": 0.044509151414309486,
+        "t3_credible_win_pressure_rate": 0.014559068219633943,
+        "t3_stalled_rate": 0.401414309484193,
+        "mana_shortfall_rate": 0.5802828618968386,
+        "mean_cards_remaining_t3": 3.6572379367720464,
+        "mean_mana_capacity_t3": 2.584442595673877
+      },
+      "complement_within_same_land_count": {
+        "n": 30592,
+        "t2_engine_rate": 0.22250915271966526,
+        "t2_engine_plus_interaction_rate": 0.06236924686192469,
+        "t3_strong_state_rate": 0.5353033472803347,
+        "t3_strong_card_advantage_rate": 0.22339173640167365,
+        "t3_credible_win_pressure_rate": 0.04099110878661088,
+        "t3_stalled_rate": 0.15902850418410042,
+        "mana_shortfall_rate": 0.4221691945606695,
+        "mean_cards_remaining_t3": 3.3546025104602513,
+        "mean_mana_capacity_t3": 3.465840742677824
+      }
+    },
+    "2_land_with_t1_development": {
+      "matches": {
+        "n": 14478,
+        "t2_engine_rate": 0.28512225445503525,
+        "t2_engine_plus_interaction_rate": 0.06009117281392457,
+        "t3_strong_state_rate": 0.6690841276419395,
+        "t3_strong_card_advantage_rate": 0.28636552009946126,
+        "t3_credible_win_pressure_rate": 0.03992264124879127,
+        "t3_stalled_rate": 0.11016715015886172,
+        "mana_shortfall_rate": 0.3553667633651057,
+        "mean_cards_remaining_t3": 2.9001243265644425,
+        "mean_mana_capacity_t3": 3.70196159690565
+      },
+      "complement_within_same_land_count": {
+        "n": 18518,
+        "t2_engine_rate": 0.15039421103790906,
+        "t2_engine_plus_interaction_rate": 0.06517982503510099,
+        "t3_strong_state_rate": 0.3815206825791122,
+        "t3_strong_card_advantage_rate": 0.15093422615833244,
+        "t3_credible_win_pressure_rate": 0.03839507506210174,
+        "t3_stalled_rate": 0.22869640349929798,
+        "mana_shortfall_rate": 0.4949238578680203,
+        "mean_cards_remaining_t3": 3.749216978075386,
+        "mean_mana_capacity_t3": 3.1668106706987795
+      }
+    },
+    "3_land_with_engine": {
+      "matches": {
+        "n": 12159,
+        "t2_engine_rate": 0.29147133810346243,
+        "t2_engine_plus_interaction_rate": 0.0591331523974011,
+        "t3_strong_state_rate": 0.4996299037749815,
+        "t3_strong_card_advantage_rate": 0.29278723579241717,
+        "t3_credible_win_pressure_rate": 0.036433917262932804,
+        "t3_stalled_rate": 0.03947693066864051,
+        "mana_shortfall_rate": 0.3056172382597253,
+        "mean_cards_remaining_t3": 3.327987498971955,
+        "mean_mana_capacity_t3": 3.722345587630562
+      },
+      "complement_within_same_land_count": {
+        "n": 8390,
+        "t2_engine_rate": 0.06209773539928486,
+        "t2_engine_plus_interaction_rate": 0.0768772348033373,
+        "t3_strong_state_rate": 0.43480333730631704,
+        "t3_strong_card_advantage_rate": 0.06209773539928486,
+        "t3_credible_win_pressure_rate": 0.028486293206197853,
+        "t3_stalled_rate": 0.04612634088200238,
+        "mana_shortfall_rate": 0.22157330154946364,
+        "mean_cards_remaining_t3": 3.1195470798569724,
+        "mean_mana_capacity_t3": 4.040524433849821
+      }
+    },
+    "3_land_with_acceleration": {
+      "matches": {
+        "n": 11513,
+        "t2_engine_rate": 0.17962303483019196,
+        "t2_engine_plus_interaction_rate": 0.06245114218709285,
+        "t3_strong_state_rate": 0.590115521584296,
+        "t3_strong_card_advantage_rate": 0.1808390515069921,
+        "t3_credible_win_pressure_rate": 0.038565100321375834,
+        "t3_stalled_rate": 0.01806653348388778,
+        "mana_shortfall_rate": 0.16789715973247632,
+        "mean_cards_remaining_t3": 2.863979848866499,
+        "mean_mana_capacity_t3": 4.398071744983931
+      },
+      "complement_within_same_land_count": {
+        "n": 9036,
+        "t2_engine_rate": 0.22100486941124392,
+        "t2_engine_plus_interaction_rate": 0.07138114209827358,
+        "t3_strong_state_rate": 0.3241478530323152,
+        "t3_strong_card_advantage_rate": 0.22122620628596723,
+        "t3_credible_win_pressure_rate": 0.02633908809207614,
+        "t3_stalled_rate": 0.07293050022133687,
+        "mana_shortfall_rate": 0.4030544488711819,
+        "mean_cards_remaining_t3": 3.725652943780434,
+        "mean_mana_capacity_t3": 3.1568171757414785
+      }
+    },
+    "3_land_excellent_business": {
+      "matches": {
+        "n": 10217,
+        "t2_engine_rate": 0.19859058432025056,
+        "t2_engine_plus_interaction_rate": 0.07644122540863267,
+        "t3_strong_state_rate": 0.4146031124596261,
+        "t3_strong_card_advantage_rate": 0.19888421258686503,
+        "t3_credible_win_pressure_rate": 0.023588137418028777,
+        "t3_stalled_rate": 0.04981892923558775,
+        "mana_shortfall_rate": 0.3315063130077322,
+        "mean_cards_remaining_t3": 3.1040422824703926,
+        "mean_mana_capacity_t3": 3.6383478516198493
+      },
+      "complement_within_same_land_count": {
+        "n": 10332,
+        "t2_engine_rate": 0.19705768486256292,
+        "t2_engine_plus_interaction_rate": 0.056426635694928375,
+        "t3_strong_state_rate": 0.531068524970964,
+        "t3_strong_card_advantage_rate": 0.19831591173054589,
+        "t3_credible_win_pressure_rate": 0.042682926829268296,
+        "t3_stalled_rate": 0.03464963221060782,
+        "mana_shortfall_rate": 0.21176926054974834,
+        "mean_cards_remaining_t3": 3.380178087495161,
+        "mean_mana_capacity_t3": 4.063782423538521
+      }
+    },
+    "3_land_weak_business": {
+      "matches": {
+        "n": 782,
+        "t2_engine_rate": 0.05115089514066496,
+        "t2_engine_plus_interaction_rate": 0.10741687979539642,
+        "t3_strong_state_rate": 0.19437340153452684,
+        "t3_strong_card_advantage_rate": 0.05115089514066496,
+        "t3_credible_win_pressure_rate": 0.020460358056265986,
+        "t3_stalled_rate": 0.0959079283887468,
+        "mana_shortfall_rate": 0.2864450127877238,
+        "mean_cards_remaining_t3": 3.5115089514066495,
+        "mean_mana_capacity_t3": 3.163682864450128
+      },
+      "complement_within_same_land_count": {
+        "n": 19767,
+        "t2_engine_rate": 0.20362219861385136,
+        "t2_engine_plus_interaction_rate": 0.0647543886275105,
+        "t3_strong_state_rate": 0.4841908230889867,
+        "t3_strong_card_advantage_rate": 0.20443162847169524,
+        "t3_credible_win_pressure_rate": 0.03369251783275155,
+        "t3_stalled_rate": 0.04006677796327212,
+        "mana_shortfall_rate": 0.27070369808266304,
+        "mean_cards_remaining_t3": 3.2322557798350786,
+        "mean_mana_capacity_t3": 3.879496129913492
+      }
+    },
+    "4plus_land_premium_engine": {
+      "matches": {
+        "n": 684,
+        "t2_engine_rate": 0.9576023391812866,
+        "t2_engine_plus_interaction_rate": 0.059941520467836254,
+        "t3_strong_state_rate": 0.9751461988304093,
+        "t3_strong_card_advantage_rate": 0.9576023391812866,
+        "t3_credible_win_pressure_rate": 0.04532163742690058,
+        "t3_stalled_rate": 0.005847953216374269,
+        "mana_shortfall_rate": 0.21783625730994152,
+        "mean_cards_remaining_t3": 3.5497076023391814,
+        "mean_mana_capacity_t3": 3.6023391812865495
+      },
+      "complement_within_same_land_count": {
+        "n": 99316,
+        "t2_engine_rate": 0.17495670385436385,
+        "t2_engine_plus_interaction_rate": 0.05055580168351524,
+        "t3_strong_state_rate": 0.4346731644448025,
+        "t3_strong_card_advantage_rate": 0.1754601474082726,
+        "t3_credible_win_pressure_rate": 0.03103226066293447,
+        "t3_stalled_rate": 0.2704196705465383,
+        "mana_shortfall_rate": 0.5000503443553909,
+        "mean_cards_remaining_t3": 3.878629828023682,
+        "mean_mana_capacity_t3": 3.0366909662088686
+      }
+    },
+    "4plus_land_any_engine_no_premium": {
+      "matches": {
+        "n": 3476,
+        "t2_engine_rate": 0.13204833141542002,
+        "t2_engine_plus_interaction_rate": 0.05322209436133487,
+        "t3_strong_state_rate": 0.30466052934407367,
+        "t3_strong_card_advantage_rate": 0.13204833141542002,
+        "t3_credible_win_pressure_rate": 0.023014959723820484,
+        "t3_stalled_rate": 0.016973532796317605,
+        "mana_shortfall_rate": 0.26323360184119676,
+        "mean_cards_remaining_t3": 3.9758342922899885,
+        "mean_mana_capacity_t3": 3.5701956271576525
+      },
+      "complement_within_same_land_count": {
+        "n": 96524,
+        "t2_engine_rate": 0.1820479880651444,
+        "t2_engine_plus_interaction_rate": 0.0505262939786996,
+        "t3_strong_state_rate": 0.44318511458290166,
+        "t3_strong_card_advantage_rate": 0.18256599394969128,
+        "t3_credible_win_pressure_rate": 0.031422236956611824,
+        "t3_stalled_rate": 0.27767187435249263,
+        "mana_shortfall_rate": 0.506578674733745,
+        "mean_cards_remaining_t3": 3.872798474990676,
+        "mean_mana_capacity_t3": 3.0214868840910034
+      }
+    },
+    "4plus_land_no_business": {
+      "matches": {
+        "n": 948,
+        "t2_engine_rate": 0.056962025316455694,
+        "t2_engine_plus_interaction_rate": 0.07172995780590717,
+        "t3_strong_state_rate": 0.17616033755274263,
+        "t3_strong_card_advantage_rate": 0.056962025316455694,
+        "t3_credible_win_pressure_rate": 0.011603375527426161,
+        "t3_stalled_rate": 0.022151898734177215,
+        "mana_shortfall_rate": 0.27109704641350213,
+        "mean_cards_remaining_t3": 4.2858649789029535,
+        "mean_mana_capacity_t3": 3.2183544303797467
+      },
+      "complement_within_same_land_count": {
+        "n": 99052,
+        "t2_engine_rate": 0.18149053022654768,
+        "t2_engine_plus_interaction_rate": 0.05041796228243751,
+        "t3_strong_state_rate": 0.4408795380204337,
+        "t3_strong_card_advantage_rate": 0.18199531559181037,
+        "t3_credible_win_pressure_rate": 0.031316884060897304,
+        "t3_stalled_rate": 0.27096878407301217,
+        "mana_shortfall_rate": 0.5002927755118524,
+        "mean_cards_remaining_t3": 3.872460929612729,
+        "mean_mana_capacity_t3": 3.038858377417922
+      }
+    }
+  },
+  "draw": {
+    "1_land_with_t1_dork": {
+      "matches": {
+        "n": 11001,
+        "t2_engine_rate": 0.22561585310426324,
+        "t2_engine_plus_interaction_rate": 0.05635851286246705,
+        "t3_strong_state_rate": 0.6826652122534315,
+        "t3_strong_card_advantage_rate": 0.22625215889464595,
+        "t3_credible_win_pressure_rate": 0.04445050449959095,
+        "t3_stalled_rate": 0.20125443141532587,
+        "mana_shortfall_rate": 0.48550131806199437,
+        "mean_cards_remaining_t3": 3.828379238251068,
+        "mean_mana_capacity_t3": 3.4608671938914646
+      },
+      "complement_within_same_land_count": {
+        "n": 17000,
+        "t2_engine_rate": 0.20470588235294118,
+        "t2_engine_plus_interaction_rate": 0.04835294117647059,
+        "t3_strong_state_rate": 0.4086470588235294,
+        "t3_strong_card_advantage_rate": 0.20494117647058824,
+        "t3_credible_win_pressure_rate": 0.04229411764705882,
+        "t3_stalled_rate": 0.40741176470588236,
+        "mana_shortfall_rate": 0.6782941176470588,
+        "mean_cards_remaining_t3": 4.916352941176471,
+        "mean_mana_capacity_t3": 2.5141176470588236
+      }
+    },
+    "1_land_no_acceleration": {
+      "matches": {
+        "n": 7750,
+        "t2_engine_rate": 0.2216774193548387,
+        "t2_engine_plus_interaction_rate": 0.04309677419354839,
+        "t3_strong_state_rate": 0.3178064516129032,
+        "t3_strong_card_advantage_rate": 0.22193548387096773,
+        "t3_credible_win_pressure_rate": 0.032903225806451615,
+        "t3_stalled_rate": 0.520774193548387,
+        "mana_shortfall_rate": 0.8054193548387096,
+        "mean_cards_remaining_t3": 5.111741935483871,
+        "mean_mana_capacity_t3": 2.0252903225806453
+      },
+      "complement_within_same_land_count": {
+        "n": 20251,
+        "t2_engine_rate": 0.20956989778282553,
+        "t2_engine_plus_interaction_rate": 0.05471334748901289,
+        "t3_strong_state_rate": 0.5922670485408128,
+        "t3_strong_card_advantage_rate": 0.21001432028047998,
+        "t3_credible_win_pressure_rate": 0.04705940447385314,
+        "t3_stalled_rate": 0.25203693644758285,
+        "mana_shortfall_rate": 0.524912350007407,
+        "mean_cards_remaining_t3": 4.250555528122068,
+        "mean_mana_capacity_t3": 3.2154955310848847
+      }
+    },
+    "1_land_persistent_accel_only": {
+      "matches": {
+        "n": 8876,
+        "t2_engine_rate": 0.21248310049571878,
+        "t2_engine_plus_interaction_rate": 0.052613789995493467,
+        "t3_strong_state_rate": 0.6829652996845426,
+        "t3_strong_card_advantage_rate": 0.21304641730509238,
+        "t3_credible_win_pressure_rate": 0.04517800811176206,
+        "t3_stalled_rate": 0.21406038756196485,
+        "mana_shortfall_rate": 0.48490310950878773,
+        "mean_cards_remaining_t3": 4.0954258675078865,
+        "mean_mana_capacity_t3": 3.514871563767463
+      },
+      "complement_within_same_land_count": {
+        "n": 19125,
+        "t2_engine_rate": 0.21312418300653596,
+        "t2_engine_plus_interaction_rate": 0.050980392156862744,
+        "t3_strong_state_rate": 0.43895424836601304,
+        "t3_strong_card_advantage_rate": 0.21343790849673203,
+        "t3_credible_win_pressure_rate": 0.04219607843137255,
+        "t3_stalled_rate": 0.378562091503268,
+        "mana_shortfall_rate": 0.6571503267973856,
+        "mean_cards_remaining_t3": 4.6715294117647055,
+        "mean_mana_capacity_t3": 2.5942483660130717
+      }
+    },
+    "1_land_temporary_accel_only": {
+      "matches": {
+        "n": 3039,
+        "t2_engine_rate": 0.23560381704508063,
+        "t2_engine_plus_interaction_rate": 0.05561039815728858,
+        "t3_strong_state_rate": 0.4886475814412636,
+        "t3_strong_card_advantage_rate": 0.23593287265547877,
+        "t3_credible_win_pressure_rate": 0.044422507403751234,
+        "t3_stalled_rate": 0.326423165514972,
+        "mana_shortfall_rate": 0.6215860480421191,
+        "mean_cards_remaining_t3": 4.087199736755512,
+        "mean_mana_capacity_t3": 2.7268838433695293
+      },
+      "complement_within_same_land_count": {
+        "n": 24962,
+        "t2_engine_rate": 0.2101594423523756,
+        "t2_engine_plus_interaction_rate": 0.050997516224661484,
+        "t3_strong_state_rate": 0.5196698982453329,
+        "t3_strong_card_advantage_rate": 0.21056005127794247,
+        "t3_credible_win_pressure_rate": 0.04298533771332425,
+        "t3_stalled_rate": 0.32641615255187884,
+        "mana_shortfall_rate": 0.6002323531768288,
+        "mean_cards_remaining_t3": 4.537817482573511,
+        "mean_mana_capacity_t3": 2.9054562935662207
+      }
+    },
+    "2_land_with_engine": {
+      "matches": {
+        "n": 22343,
+        "t2_engine_rate": 0.31195452714496713,
+        "t2_engine_plus_interaction_rate": 0.06713512061943339,
+        "t3_strong_state_rate": 0.5846573871011055,
+        "t3_strong_card_advantage_rate": 0.3128049053394799,
+        "t3_credible_win_pressure_rate": 0.052812961553954256,
+        "t3_stalled_rate": 0.1104148950454281,
+        "mana_shortfall_rate": 0.39086067224634113,
+        "mean_cards_remaining_t3": 3.7985946381417,
+        "mean_mana_capacity_t3": 3.616389920780558
+      },
+      "complement_within_same_land_count": {
+        "n": 10653,
+        "t2_engine_rate": 0.08288744954472918,
+        "t2_engine_plus_interaction_rate": 0.07866328733690041,
+        "t3_strong_state_rate": 0.5377827841922463,
+        "t3_strong_card_advantage_rate": 0.08363841171500985,
+        "t3_credible_win_pressure_rate": 0.04064582746644138,
+        "t3_stalled_rate": 0.10954660658969305,
+        "mana_shortfall_rate": 0.2922181545104665,
+        "mean_cards_remaining_t3": 3.500891767577208,
+        "mean_mana_capacity_t3": 3.940767858819112
+      }
+    },
+    "2_land_no_engine": {
+      "matches": {
+        "n": 10653,
+        "t2_engine_rate": 0.08288744954472918,
+        "t2_engine_plus_interaction_rate": 0.07866328733690041,
+        "t3_strong_state_rate": 0.5377827841922463,
+        "t3_strong_card_advantage_rate": 0.08363841171500985,
+        "t3_credible_win_pressure_rate": 0.04064582746644138,
+        "t3_stalled_rate": 0.10954660658969305,
+        "mana_shortfall_rate": 0.2922181545104665,
+        "mean_cards_remaining_t3": 3.500891767577208,
+        "mean_mana_capacity_t3": 3.940767858819112
+      },
+      "complement_within_same_land_count": {
+        "n": 22343,
+        "t2_engine_rate": 0.31195452714496713,
+        "t2_engine_plus_interaction_rate": 0.06713512061943339,
+        "t3_strong_state_rate": 0.5846573871011055,
+        "t3_strong_card_advantage_rate": 0.3128049053394799,
+        "t3_credible_win_pressure_rate": 0.052812961553954256,
+        "t3_stalled_rate": 0.1104148950454281,
+        "mana_shortfall_rate": 0.39086067224634113,
+        "mean_cards_remaining_t3": 3.7985946381417,
+        "mean_mana_capacity_t3": 3.616389920780558
+      }
+    },
+    "2_land_with_tutor": {
+      "matches": {
+        "n": 22277,
+        "t2_engine_rate": 0.21910490640570993,
+        "t2_engine_plus_interaction_rate": 0.06652601337702563,
+        "t3_strong_state_rate": 0.5311307626700184,
+        "t3_strong_card_advantage_rate": 0.21964357857880326,
+        "t3_credible_win_pressure_rate": 0.043138663195223775,
+        "t3_stalled_rate": 0.12165013242357589,
+        "mana_shortfall_rate": 0.3939489159222517,
+        "mean_cards_remaining_t3": 3.846792656102707,
+        "mean_mana_capacity_t3": 3.6183058760156217
+      },
+      "complement_within_same_land_count": {
+        "n": 10719,
+        "t2_engine_rate": 0.2772646702117735,
+        "t2_engine_plus_interaction_rate": 0.07985819572721337,
+        "t3_strong_state_rate": 0.6493143017072488,
+        "t3_strong_card_advantage_rate": 0.27866405448269427,
+        "t3_credible_win_pressure_rate": 0.06082656964269055,
+        "t3_stalled_rate": 0.08620207108872097,
+        "mana_shortfall_rate": 0.28640731411512266,
+        "mean_cards_remaining_t3": 3.4025562086015486,
+        "mean_mana_capacity_t3": 3.934788692975091
+      }
+    },
+    "2_land_interaction_only": {
+      "matches": {
+        "n": 2404,
+        "t2_engine_rate": 0.06821963394342762,
+        "t2_engine_plus_interaction_rate": 0.09068219633943428,
+        "t3_strong_state_rate": 0.23876871880199668,
+        "t3_strong_card_advantage_rate": 0.06821963394342762,
+        "t3_credible_win_pressure_rate": 0.022462562396006656,
+        "t3_stalled_rate": 0.2545757071547421,
+        "mana_shortfall_rate": 0.49625623960066556,
+        "mean_cards_remaining_t3": 3.9841930116472546,
+        "mean_mana_capacity_t3": 2.901414309484193
+      },
+      "complement_within_same_land_count": {
+        "n": 30592,
+        "t2_engine_rate": 0.251340219665272,
+        "t2_engine_plus_interaction_rate": 0.06929916317991631,
+        "t3_strong_state_rate": 0.5955151673640168,
+        "t3_strong_card_advantage_rate": 0.2522228033472803,
+        "t3_credible_win_pressure_rate": 0.050961035564853555,
+        "t3_stalled_rate": 0.09878399581589958,
+        "mana_shortfall_rate": 0.3482282949790795,
+        "mean_cards_remaining_t3": 3.6803412656903767,
+        "mean_mana_capacity_t3": 3.7855321652719667
+      }
+    },
+    "2_land_with_t1_development": {
+      "matches": {
+        "n": 16261,
+        "t2_engine_rate": 0.3051472849148269,
+        "t2_engine_plus_interaction_rate": 0.0680769940348072,
+        "t3_strong_state_rate": 0.6974355820675235,
+        "t3_strong_card_advantage_rate": 0.3063157247401759,
+        "t3_credible_win_pressure_rate": 0.05079638398622471,
+        "t3_stalled_rate": 0.0741651804932046,
+        "mana_shortfall_rate": 0.3050857880819138,
+        "mean_cards_remaining_t3": 3.256564786913474,
+        "mean_mana_capacity_t3": 3.957136707459566
+      },
+      "complement_within_same_land_count": {
+        "n": 16735,
+        "t2_engine_rate": 0.17275171795637884,
+        "t2_engine_plus_interaction_rate": 0.07355841051688079,
+        "t3_strong_state_rate": 0.44523453839259036,
+        "t3_strong_card_advantage_rate": 0.17322975799223184,
+        "t3_credible_win_pressure_rate": 0.04702718852703914,
+        "t3_stalled_rate": 0.14508515088138632,
+        "mana_shortfall_rate": 0.41141320585599045,
+        "mean_cards_remaining_t3": 4.135763370182253,
+        "mean_mana_capacity_t3": 3.4917836868837764
+      }
+    },
+    "3_land_with_engine": {
+      "matches": {
+        "n": 12159,
+        "t2_engine_rate": 0.3173780738547578,
+        "t2_engine_plus_interaction_rate": 0.06546591002549552,
+        "t3_strong_state_rate": 0.5514433752775721,
+        "t3_strong_card_advantage_rate": 0.3186117279381528,
+        "t3_credible_win_pressure_rate": 0.04548071387449626,
+        "t3_stalled_rate": 0.022288017106669958,
+        "mana_shortfall_rate": 0.26523562792992844,
+        "mean_cards_remaining_t3": 3.744140143103874,
+        "mean_mana_capacity_t3": 3.9271321654741342
+      },
+      "complement_within_same_land_count": {
+        "n": 8390,
+        "t2_engine_rate": 0.09630512514898688,
+        "t2_engine_plus_interaction_rate": 0.07771156138259833,
+        "t3_strong_state_rate": 0.5020262216924911,
+        "t3_strong_card_advantage_rate": 0.0967818831942789,
+        "t3_credible_win_pressure_rate": 0.03504171632896305,
+        "t3_stalled_rate": 0.024791418355184745,
+        "mana_shortfall_rate": 0.19749702026221694,
+        "mean_cards_remaining_t3": 3.5123957091775924,
+        "mean_mana_capacity_t3": 4.244934445768773
+      }
+    },
+    "3_land_with_acceleration": {
+      "matches": {
+        "n": 11513,
+        "t2_engine_rate": 0.21123946842699556,
+        "t2_engine_plus_interaction_rate": 0.06392773386606444,
+        "t3_strong_state_rate": 0.644141405367845,
+        "t3_strong_card_advantage_rate": 0.21280291844002433,
+        "t3_credible_win_pressure_rate": 0.04542690871189091,
+        "t3_stalled_rate": 0.010423000086858335,
+        "mana_shortfall_rate": 0.1414922261791019,
+        "mean_cards_remaining_t3": 3.2691739772431165,
+        "mean_mana_capacity_t3": 4.5976721966472684
+      },
+      "complement_within_same_land_count": {
+        "n": 9036,
+        "t2_engine_rate": 0.24734395750332006,
+        "t2_engine_plus_interaction_rate": 0.0787959274015051,
+        "t3_strong_state_rate": 0.38745019920318724,
+        "t3_strong_card_advantage_rate": 0.2474546259406817,
+        "t3_credible_win_pressure_rate": 0.035856573705179286,
+        "t3_stalled_rate": 0.03972996901283754,
+        "mana_shortfall_rate": 0.36000442673749444,
+        "mean_cards_remaining_t3": 4.134130146082337,
+        "mean_mana_capacity_t3": 3.3678618857901728
+      }
+    },
+    "3_land_excellent_business": {
+      "matches": {
+        "n": 10217,
+        "t2_engine_rate": 0.22658314573749633,
+        "t2_engine_plus_interaction_rate": 0.08329255162963688,
+        "t3_strong_state_rate": 0.4770480571596359,
+        "t3_strong_card_advantage_rate": 0.22707252618185378,
+        "t3_credible_win_pressure_rate": 0.032299109327591266,
+        "t3_stalled_rate": 0.02632866790643046,
+        "mana_shortfall_rate": 0.2803171185279436,
+        "mean_cards_remaining_t3": 3.5186453949300187,
+        "mean_mana_capacity_t3": 3.860428697269257
+      },
+      "complement_within_same_land_count": {
+        "n": 10332,
+        "t2_engine_rate": 0.22764227642276422,
+        "t2_engine_plus_interaction_rate": 0.057781649245063876,
+        "t3_strong_state_rate": 0.5848819202477739,
+        "t3_strong_card_advantage_rate": 0.22899728997289973,
+        "t3_credible_win_pressure_rate": 0.050038714672861015,
+        "t3_stalled_rate": 0.02032520325203252,
+        "mana_shortfall_rate": 0.19531552458381726,
+        "mean_cards_remaining_t3": 3.7789392179636083,
+        "mean_mana_capacity_t3": 4.251161440185831
+      }
+    },
+    "3_land_weak_business": {
+      "matches": {
+        "n": 782,
+        "t2_engine_rate": 0.08567774936061381,
+        "t2_engine_plus_interaction_rate": 0.11253196930946291,
+        "t3_strong_state_rate": 0.2864450127877238,
+        "t3_strong_card_advantage_rate": 0.08567774936061381,
+        "t3_credible_win_pressure_rate": 0.026854219948849106,
+        "t3_stalled_rate": 0.049872122762148335,
+        "mana_shortfall_rate": 0.26854219948849106,
+        "mean_cards_remaining_t3": 3.898976982097187,
+        "mean_mana_capacity_t3": 3.374680306905371
+      },
+      "complement_within_same_land_count": {
+        "n": 19767,
+        "t2_engine_rate": 0.23271108413011585,
+        "t2_engine_plus_interaction_rate": 0.06880153791672991,
+        "t3_strong_state_rate": 0.5409520918702889,
+        "t3_strong_card_advantage_rate": 0.23367228208630547,
+        "t3_credible_win_pressure_rate": 0.04178681641119037,
+        "t3_stalled_rate": 0.022259321090706732,
+        "mana_shortfall_rate": 0.2363535184904133,
+        "mean_cards_remaining_t3": 3.6396519451611273,
+        "mean_mana_capacity_t3": 4.083877169019072
+      }
+    },
+    "4plus_land_premium_engine": {
+      "matches": {
+        "n": 684,
+        "t2_engine_rate": 0.9634502923976608,
+        "t2_engine_plus_interaction_rate": 0.05847953216374269,
+        "t3_strong_state_rate": 0.97953216374269,
+        "t3_strong_card_advantage_rate": 0.9634502923976608,
+        "t3_credible_win_pressure_rate": 0.05847953216374269,
+        "t3_stalled_rate": 0.0014619883040935672,
+        "mana_shortfall_rate": 0.1783625730994152,
+        "mean_cards_remaining_t3": 3.926900584795322,
+        "mean_mana_capacity_t3": 3.8026315789473686
+      },
+      "complement_within_same_land_count": {
+        "n": 99316,
+        "t2_engine_rate": 0.20853638890007653,
+        "t2_engine_plus_interaction_rate": 0.06020178017640662,
+        "t3_strong_state_rate": 0.5075214466953966,
+        "t3_strong_card_advantage_rate": 0.20923114100447057,
+        "t3_credible_win_pressure_rate": 0.04104071851464014,
+        "t3_stalled_rate": 0.1960811953763744,
+        "mana_shortfall_rate": 0.43561963832615086,
+        "mean_cards_remaining_t3": 4.167274155221716,
+        "mean_mana_capacity_t3": 3.371541342784647
+      }
+    },
+    "4plus_land_any_engine_no_premium": {
+      "matches": {
+        "n": 3476,
+        "t2_engine_rate": 0.16973532796317606,
+        "t2_engine_plus_interaction_rate": 0.06357882623705409,
+        "t3_strong_state_rate": 0.3803222094361335,
+        "t3_strong_card_advantage_rate": 0.1720368239355581,
+        "t3_credible_win_pressure_rate": 0.031070195627157654,
+        "t3_stalled_rate": 0.01093210586881473,
+        "mana_shortfall_rate": 0.24108170310701957,
+        "mean_cards_remaining_t3": 4.322209436133487,
+        "mean_mana_capacity_t3": 3.8178941311852705
+      },
+      "complement_within_same_land_count": {
+        "n": 96524,
+        "t2_engine_rate": 0.2152832456176702,
+        "t2_engine_plus_interaction_rate": 0.060067962372052544,
+        "t3_strong_state_rate": 0.515446935477187,
+        "t3_strong_card_advantage_rate": 0.21591521279681739,
+        "t3_credible_win_pressure_rate": 0.04152335170527537,
+        "t3_stalled_rate": 0.20136960755874186,
+        "mana_shortfall_rate": 0.44080228751398615,
+        "mean_cards_remaining_t3": 4.15999129750114,
+        "mean_mana_capacity_t3": 3.3585222328125646
+      }
+    },
+    "4plus_land_no_business": {
+      "matches": {
+        "n": 948,
+        "t2_engine_rate": 0.0981012658227848,
+        "t2_engine_plus_interaction_rate": 0.0970464135021097,
+        "t3_strong_state_rate": 0.270042194092827,
+        "t3_strong_card_advantage_rate": 0.0981012658227848,
+        "t3_credible_win_pressure_rate": 0.014767932489451477,
+        "t3_stalled_rate": 0.008438818565400843,
+        "mana_shortfall_rate": 0.24367088607594936,
+        "mean_cards_remaining_t3": 4.6234177215189876,
+        "mean_mana_capacity_t3": 3.476793248945148
+      },
+      "complement_within_same_land_count": {
+        "n": 99052,
+        "t2_engine_rate": 0.21480636433388522,
+        "t2_engine_plus_interaction_rate": 0.05983725719823931,
+        "t3_strong_state_rate": 0.5130537495456932,
+        "t3_strong_card_advantage_rate": 0.21550296813794775,
+        "t3_credible_win_pressure_rate": 0.041412591366151115,
+        "t3_stalled_rate": 0.19653313411137585,
+        "mana_shortfall_rate": 0.43568024875822803,
+        "mean_cards_remaining_t3": 4.161248637079514,
+        "mean_mana_capacity_t3": 3.373510883172475
+      }
+    }
+  }
+}
