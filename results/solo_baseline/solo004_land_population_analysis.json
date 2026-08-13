@@ -1,0 +1,3944 @@
+{
+  "success_field_used": "out_t3__t3_any_strong_state",
+  "note": "Effect size = P(success|feature) - P(success|not feature) within each land-count population. p_value is an informational two-proportion z-test, not a pre-registered hypothesis test. All features are opener-visible (see opening_hand_features.py).",
+  "play": {
+    "0": {
+      "n": 9666,
+      "pct_of_population": 0.09666,
+      "overall_success_rate": 0.20949720670391062,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.8035545272899358,
+          "success_rate_with": 1.0,
+          "n_with": 157,
+          "success_rate_without": 0.19644547271006416,
+          "n_without": 9509,
+          "p_value": 5.578074430390094e-133
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.3946646592456954,
+          "success_rate_with": 0.5901162790697675,
+          "n_with": 344,
+          "success_rate_without": 0.19545161982407208,
+          "n_without": 9322,
+          "p_value": 7.890922769748025e-70
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.30712105509189336,
+          "success_rate_with": 0.43057607090103395,
+          "n_with": 2708,
+          "success_rate_without": 0.12345501580914056,
+          "n_without": 6958,
+          "p_value": 1.9472484759435788e-243
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.24813222971830812,
+          "success_rate_with": 0.32660658307210033,
+          "n_with": 5104,
+          "success_rate_without": 0.0784743533537922,
+          "n_without": 4562,
+          "p_value": 8.972455177394232e-197
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.23618187244965813,
+          "success_rate_with": 0.3485038974101081,
+          "n_with": 3977,
+          "success_rate_without": 0.11232202496044999,
+          "n_without": 5689,
+          "p_value": 1.7796947288108953e-173
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.2339130093766016,
+          "success_rate_with": 0.42298578199052134,
+          "n_with": 844,
+          "success_rate_without": 0.18907277261391975,
+          "n_without": 8822,
+          "p_value": 2.711278016960266e-57
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.22923081292961425,
+          "success_rate_with": 0.35344827586206895,
+          "n_with": 3596,
+          "success_rate_without": 0.1242174629324547,
+          "n_without": 6070,
+          "p_value": 7.660169434987145e-158
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.22871622987183846,
+          "success_rate_with": 0.39536167863059085,
+          "n_with": 1811,
+          "success_rate_without": 0.1666454487587524,
+          "n_without": 7855,
+          "p_value": 4.1920029098051243e-103
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.20221617591906874,
+          "success_rate_with": 0.37382661512976256,
+          "n_with": 1811,
+          "success_rate_without": 0.17161043921069383,
+          "n_without": 7855,
+          "p_value": 5.156302515620813e-81
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.19317489666121335,
+          "success_rate_with": 0.02181818181818182,
+          "n_with": 275,
+          "success_rate_without": 0.21499307847939517,
+          "n_without": 9391,
+          "p_value": 8.556565868221777e-15
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.1169455800933552,
+          "success_rate_with": 0.28649303452453057,
+          "n_with": 3302,
+          "success_rate_without": 0.16954745443117536,
+          "n_without": 6364,
+          "p_value": 6.126224123845236e-41
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.10809541058037492,
+          "success_rate_with": 0.3146067415730337,
+          "n_with": 267,
+          "success_rate_without": 0.20651133099265878,
+          "n_without": 9399,
+          "p_value": 1.8692870612899258e-05
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.08790813827087901,
+          "success_rate_with": 0.15844027640671274,
+          "n_with": 4052,
+          "success_rate_without": 0.24634841467759175,
+          "n_without": 5614,
+          "p_value": 1.0744037663087373e-25
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.07508808560615945,
+          "success_rate_with": 0.1620253164556962,
+          "n_with": 3555,
+          "success_rate_without": 0.23711340206185566,
+          "n_without": 6111,
+          "p_value": 2.181778089483587e-18
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.0729196090324796,
+          "success_rate_with": 0.17058562555456966,
+          "n_with": 4508,
+          "success_rate_without": 0.24350523458704926,
+          "n_without": 5158,
+          "p_value": 1.5162522002173824e-18
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.0729196090324796,
+          "success_rate_with": 0.17058562555456966,
+          "n_with": 4508,
+          "success_rate_without": 0.24350523458704926,
+          "n_without": 5158,
+          "p_value": 1.5162522002173824e-18
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.07222493425799925,
+          "success_rate_with": 0.19689184108284247,
+          "n_with": 7979,
+          "success_rate_without": 0.2691167753408417,
+          "n_without": 1687,
+          "p_value": 3.5198262790335045e-11
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.07179186732250006,
+          "success_rate_with": 0.20490716180371352,
+          "n_with": 9048,
+          "success_rate_without": 0.2766990291262136,
+          "n_without": 618,
+          "p_value": 2.2046948542260764e-05
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.07179186732250006,
+          "success_rate_with": 0.20490716180371352,
+          "n_with": 9048,
+          "success_rate_without": 0.2766990291262136,
+          "n_without": 618,
+          "p_value": 2.2046948542260764e-05
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.07166627064204459,
+          "success_rate_with": 0.17900234107689536,
+          "n_with": 5553,
+          "success_rate_without": 0.25066861171893995,
+          "n_without": 4113,
+          "p_value": 1.124819735175743e-17
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.06632893846004209,
+          "success_rate_with": 0.19599948045200674,
+          "n_with": 7699,
+          "success_rate_without": 0.26232841891204883,
+          "n_without": 1967,
+          "p_value": 1.1077595896914073e-10
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.05657443180707719,
+          "success_rate_with": 0.17958287596048297,
+          "n_with": 4555,
+          "success_rate_without": 0.23615730776756017,
+          "n_without": 5111,
+          "p_value": 8.937601950461889e-12
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.0491485607455695,
+          "success_rate_with": 0.19341943419434193,
+          "n_with": 6504,
+          "success_rate_without": 0.24256799493991144,
+          "n_without": 3162,
+          "p_value": 2.5356820022296043e-08
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.048850392087553096,
+          "success_rate_with": 0.19152070715338027,
+          "n_with": 6109,
+          "success_rate_without": 0.24037109924093336,
+          "n_without": 3557,
+          "p_value": 1.2588861800242003e-08
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.04205026673266238,
+          "success_rate_with": 0.1685823754789272,
+          "n_with": 261,
+          "success_rate_without": 0.2106326422115896,
+          "n_without": 9405,
+          "p_value": 0.09962775191979327
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.03936807720861171,
+          "success_rate_with": 0.22595555555555555,
+          "n_with": 5625,
+          "success_rate_without": 0.18658747834694384,
+          "n_without": 4041,
+          "p_value": 2.715825585160214e-06
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.03805997170252379,
+          "success_rate_with": 0.1819543242231374,
+          "n_with": 2671,
+          "success_rate_without": 0.22001429592566119,
+          "n_without": 6995,
+          "p_value": 3.9253698254264486e-05
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.019734409450159973,
+          "success_rate_with": 0.21981357034467808,
+          "n_with": 4613,
+          "success_rate_without": 0.2000791608945181,
+          "n_without": 5053,
+          "p_value": 0.01724852787194811
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.016944309597736268,
+          "success_rate_with": 0.2193612280267393,
+          "n_with": 4039,
+          "success_rate_without": 0.20241691842900303,
+          "n_without": 5627,
+          "p_value": 0.04348783555983011
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.005146077817409528,
+          "success_rate_with": 0.21052631578947367,
+          "n_with": 7733,
+          "success_rate_without": 0.20538023797206414,
+          "n_without": 1933,
+          "p_value": 0.6189907493186321
+        }
+      ]
+    },
+    "1": {
+      "n": 28001,
+      "pct_of_population": 0.28001,
+      "overall_success_rate": 0.4307703296310846,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.6041619285876734,
+          "success_rate_with": 1.0,
+          "n_with": 1619,
+          "success_rate_without": 0.3958380714123266,
+          "n_without": 26382,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.5381475589719952,
+          "success_rate_with": 0.9240994854202401,
+          "n_with": 2332,
+          "success_rate_without": 0.38595192644824494,
+          "n_without": 25669,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.3781563360918229,
+          "success_rate_with": 0.7472623740692071,
+          "n_with": 4566,
+          "success_rate_without": 0.3691060379773842,
+          "n_without": 23435,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.3545004370247089,
+          "success_rate_with": 0.09172809172809172,
+          "n_with": 1221,
+          "success_rate_without": 0.4462285287528006,
+          "n_without": 26780,
+          "p_value": 3.5762281578299416e-132
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.34346926966675884,
+          "success_rate_with": 0.670859041290935,
+          "n_with": 8428,
+          "success_rate_without": 0.32738977162417615,
+          "n_without": 19573,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.31040843996476325,
+          "success_rate_with": 0.6342247097844113,
+          "n_with": 9648,
+          "success_rate_without": 0.323816269819648,
+          "n_without": 18353,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.29423165068790796,
+          "success_rate_with": 0.6164343786295006,
+          "n_with": 10332,
+          "success_rate_without": 0.3222027279415926,
+          "n_without": 17669,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.26741249885682655,
+          "success_rate_with": 0.5704883703537507,
+          "n_with": 13371,
+          "success_rate_without": 0.3030758714969241,
+          "n_without": 14630,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.2623619664718256,
+          "success_rate_with": 0.6131147540983607,
+          "n_with": 8540,
+          "success_rate_without": 0.3507527876265351,
+          "n_without": 19461,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.21326152223944345,
+          "success_rate_with": 0.2367168913560666,
+          "n_with": 2522,
+          "success_rate_without": 0.44997841359551005,
+          "n_without": 25479,
+          "p_value": 1.4426925975342656e-94
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.181695618450333,
+          "success_rate_with": 0.5797619047619048,
+          "n_with": 5040,
+          "success_rate_without": 0.3980662863115718,
+          "n_without": 22961,
+          "p_value": 5.0490559799748246e-123
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.1631325315404747,
+          "success_rate_with": 0.565629507521121,
+          "n_with": 4853,
+          "success_rate_without": 0.40249697598064627,
+          "n_without": 23148,
+          "p_value": 1.0801701997167091e-96
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": -0.16146970171700026,
+          "success_rate_with": 0.27514792899408286,
+          "n_with": 1014,
+          "success_rate_without": 0.4366176307110831,
+          "n_without": 26987,
+          "p_value": 2.1145110938779536e-24
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.15486600421606345,
+          "success_rate_with": 0.34542561654733495,
+          "n_with": 12570,
+          "success_rate_without": 0.5002916207633984,
+          "n_without": 15431,
+          "p_value": 2.290761330145924e-149
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.14163312012788776,
+          "success_rate_with": 0.5121255349500713,
+          "n_with": 11917,
+          "success_rate_without": 0.37049241482218354,
+          "n_without": 16084,
+          "p_value": 8.429578449663747e-124
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": -0.12931242623928618,
+          "success_rate_with": 0.3062977099236641,
+          "n_with": 1048,
+          "success_rate_without": 0.4356101361629503,
+          "n_without": 26953,
+          "p_value": 1.0937939691144373e-16
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.12599802017727463,
+          "success_rate_with": 0.401935812531839,
+          "n_with": 21593,
+          "success_rate_without": 0.5279338327091136,
+          "n_without": 6408,
+          "p_value": 1.4995830739104157e-71
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.12398751384971685,
+          "success_rate_with": 0.35338274420372484,
+          "n_with": 10524,
+          "success_rate_without": 0.4773702580534417,
+          "n_without": 17477,
+          "p_value": 1.4796576451679362e-91
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.12398751384971685,
+          "success_rate_with": 0.35338274420372484,
+          "n_with": 10524,
+          "success_rate_without": 0.4773702580534417,
+          "n_without": 17477,
+          "p_value": 1.4796576451679362e-91
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.11717510146002191,
+          "success_rate_with": 0.3472860514221836,
+          "n_with": 8051,
+          "success_rate_without": 0.4644611528822055,
+          "n_without": 19950,
+          "p_value": 7.990526357373397e-72
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.10759543233704644,
+          "success_rate_with": 0.35927187566531826,
+          "n_with": 9394,
+          "success_rate_without": 0.4668673080023647,
+          "n_without": 18607,
+          "p_value": 4.6603317507693657e-66
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": 0.10093901717876558,
+          "success_rate_with": 0.4867966931535436,
+          "n_with": 12459,
+          "success_rate_without": 0.38585767597477805,
+          "n_without": 15542,
+          "p_value": 1.8853507714806732e-64
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.10023431992981285,
+          "success_rate_with": 0.4789061426411983,
+          "n_with": 14554,
+          "success_rate_without": 0.37867182271138544,
+          "n_without": 13447,
+          "p_value": 3.066283595237713e-64
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": 0.09614423331082922,
+          "success_rate_with": 0.5092143549951503,
+          "n_with": 5155,
+          "success_rate_without": 0.4130701216843211,
+          "n_without": 22846,
+          "p_value": 2.3414751037553556e-36
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": 0.09614423331082922,
+          "success_rate_with": 0.5092143549951503,
+          "n_with": 5155,
+          "success_rate_without": 0.4130701216843211,
+          "n_without": 22846,
+          "p_value": 2.3414751037553556e-36
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.09517715862892745,
+          "success_rate_with": 0.4065791993870906,
+          "n_with": 20884,
+          "success_rate_without": 0.501756358016018,
+          "n_without": 7117,
+          "p_value": 1.4851169051733805e-44
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.07615995305455714,
+          "success_rate_with": 0.40125940178415254,
+          "n_with": 17151,
+          "success_rate_without": 0.4774193548387097,
+          "n_without": 10850,
+          "p_value": 4.6175251931127244e-36
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.07277388638979237,
+          "success_rate_with": 0.37488457987072943,
+          "n_with": 6498,
+          "success_rate_without": 0.4476584662605218,
+          "n_without": 21503,
+          "p_value": 3.009014682403497e-25
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.07158772153200438,
+          "success_rate_with": 0.40014977533699453,
+          "n_with": 16024,
+          "success_rate_without": 0.4717374968689989,
+          "n_without": 11977,
+          "p_value": 5.187530360207101e-33
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.06802516613039983,
+          "success_rate_with": 0.4878754171301446,
+          "n_with": 4495,
+          "success_rate_without": 0.41985025099974477,
+          "n_without": 23506,
+          "p_value": 3.211612763758983e-17
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.06642094159984185,
+          "success_rate_with": 0.392477652217912,
+          "n_with": 11858,
+          "success_rate_without": 0.45889859381775383,
+          "n_without": 16143,
+          "p_value": 1.3957267319594916e-28
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.06383024897089712,
+          "success_rate_with": 0.49224806201550386,
+          "n_with": 1032,
+          "success_rate_without": 0.42841781304460674,
+          "n_without": 26969,
+          "p_value": 4.825492186447689e-05
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.0510422950554017,
+          "success_rate_with": 0.4645919339472849,
+          "n_with": 9447,
+          "success_rate_without": 0.4135496388918832,
+          "n_without": 18554,
+          "p_value": 3.4817569643080993e-16
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": -0.038142860906153986,
+          "success_rate_with": 0.39410681399631675,
+          "n_with": 1086,
+          "success_rate_without": 0.43224967490247074,
+          "n_without": 26915,
+          "p_value": 0.01282123528172812
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.03323333083286667,
+          "success_rate_with": 0.4392017993013351,
+          "n_with": 20897,
+          "success_rate_without": 0.40596846846846846,
+          "n_without": 7104,
+          "p_value": 1.0255061991403446e-06
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.032989527661530293,
+          "success_rate_with": 0.42674692914666884,
+          "n_with": 24586,
+          "success_rate_without": 0.45973645680819913,
+          "n_without": 3415,
+          "p_value": 0.0002642280192251269
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.032989527661530293,
+          "success_rate_with": 0.42674692914666884,
+          "n_with": 24586,
+          "success_rate_without": 0.45973645680819913,
+          "n_without": 3415,
+          "p_value": 0.0002642280192251269
+        }
+      ]
+    },
+    "2": {
+      "n": 32996,
+      "pct_of_population": 0.32996,
+      "overall_success_rate": 0.5076979027760941,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.5292584386810895,
+          "success_rate_with": 1.0,
+          "n_with": 2304,
+          "success_rate_without": 0.4707415613189105,
+          "n_without": 30692,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.4759511288008387,
+          "success_rate_with": 0.9497658578118349,
+          "n_with": 2349,
+          "success_rate_without": 0.4738147290109962,
+          "n_without": 30647,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.45264297266167813,
+          "success_rate_with": 0.8982115257231177,
+          "n_with": 4529,
+          "success_rate_without": 0.44556855306143955,
+          "n_without": 28467,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.39918297040051365,
+          "success_rate_with": 0.8160980810234542,
+          "n_with": 7504,
+          "success_rate_without": 0.4169151106229405,
+          "n_without": 25492,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.3788973572636958,
+          "success_rate_with": 0.15640599001663893,
+          "n_with": 2404,
+          "success_rate_without": 0.5353033472803347,
+          "n_without": 30592,
+          "p_value": 2.2392296033192853e-280
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.3375013330838746,
+          "success_rate_with": 0.758624763705104,
+          "n_with": 8464,
+          "success_rate_without": 0.4211234306212294,
+          "n_without": 24532,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.3132328823634617,
+          "success_rate_with": 0.722003646483063,
+          "n_with": 10421,
+          "success_rate_without": 0.40877076411960134,
+          "n_without": 22575,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.25303281374317593,
+          "success_rate_with": 0.6551648990265873,
+          "n_with": 13766,
+          "success_rate_without": 0.4021320852834113,
+          "n_without": 19230,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.24681865083131477,
+          "success_rate_with": 0.6672668038408779,
+          "n_with": 11664,
+          "success_rate_without": 0.4204481530095631,
+          "n_without": 21332,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.2367875454333651,
+          "success_rate_with": 0.29649368863955117,
+          "n_with": 3565,
+          "success_rate_without": 0.5332812340729163,
+          "n_without": 29431,
+          "p_value": 3.796602864671978e-157
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.20301436079473856,
+          "success_rate_with": 0.6359447004608295,
+          "n_with": 12152,
+          "success_rate_without": 0.43293033966609096,
+          "n_without": 20844,
+          "p_value": 2.974839427295396e-277
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.17500322635850735,
+          "success_rate_with": 0.3849898580121704,
+          "n_with": 9860,
+          "success_rate_without": 0.5599930843706777,
+          "n_without": 23136,
+          "p_value": 3.0320895719070714e-186
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.1507082441735712,
+          "success_rate_with": 0.39443834613977313,
+          "n_with": 8199,
+          "success_rate_without": 0.5451465903133443,
+          "n_without": 24797,
+          "p_value": 8.695532936345984e-124
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.14015621675296125,
+          "success_rate_with": 0.6374388254486134,
+          "n_with": 2452,
+          "success_rate_without": 0.49728260869565216,
+          "n_without": 30544,
+          "p_value": 1.0883161881356122e-40
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.135688822956262,
+          "success_rate_with": 0.4106439595529537,
+          "n_with": 9395,
+          "success_rate_without": 0.5463327825092157,
+          "n_without": 23601,
+          "p_value": 1.1559955403672774e-109
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.135688822956262,
+          "success_rate_with": 0.4106439595529537,
+          "n_with": 9395,
+          "success_rate_without": 0.5463327825092157,
+          "n_without": 23601,
+          "p_value": 1.1559955403672774e-109
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.13039983090407375,
+          "success_rate_with": 0.5782488114104596,
+          "n_with": 15144,
+          "success_rate_without": 0.44784898050638583,
+          "n_without": 17852,
+          "p_value": 3.059707009415484e-123
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.12996312449343755,
+          "success_rate_with": 0.6121221468229487,
+          "n_with": 6484,
+          "success_rate_without": 0.4821590223295112,
+          "n_without": 26512,
+          "p_value": 1.5019359928677689e-78
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.12890334621016214,
+          "success_rate_with": 0.40733643580618667,
+          "n_with": 7306,
+          "success_rate_without": 0.5362397820163488,
+          "n_without": 25690,
+          "p_value": 3.1325571652964904e-84
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.12436155958685263,
+          "success_rate_with": 0.4672981101584594,
+          "n_with": 22277,
+          "success_rate_without": 0.591659669745312,
+          "n_without": 10719,
+          "p_value": 2.1712357324828705e-99
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.12214168170812462,
+          "success_rate_with": 0.6022544283413849,
+          "n_with": 7452,
+          "success_rate_without": 0.48011274663326026,
+          "n_without": 25544,
+          "p_value": 7.228885789464776e-77
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.1167333823906978,
+          "success_rate_with": 0.4731335572203565,
+          "n_with": 23226,
+          "success_rate_without": 0.5898669396110543,
+          "n_without": 9770,
+          "p_value": 1.5732947117844691e-83
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.09829130586534796,
+          "success_rate_with": 0.462475442043222,
+          "n_with": 17815,
+          "success_rate_without": 0.56076674790857,
+          "n_without": 15181,
+          "p_value": 7.123843899734967e-71
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.09679309715372464,
+          "success_rate_with": 0.45928081984112545,
+          "n_with": 16491,
+          "success_rate_without": 0.5560739169948501,
+          "n_without": 16505,
+          "p_value": 3.246479884510381e-69
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.08884961653884632,
+          "success_rate_with": 0.4511503834611537,
+          "n_with": 11996,
+          "success_rate_without": 0.54,
+          "n_without": 21000,
+          "p_value": 2.2193538906254422e-54
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": 0.08717581351153547,
+          "success_rate_with": 0.5884034299714169,
+          "n_with": 2449,
+          "success_rate_without": 0.5012276164598815,
+          "n_without": 30547,
+          "p_value": 1.0167071661154419e-16
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.07997980920106013,
+          "success_rate_with": 0.4433596776693011,
+          "n_with": 6453,
+          "success_rate_without": 0.5233394868703612,
+          "n_without": 26543,
+          "p_value": 9.732014545845281e-31
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.07183525840580685,
+          "success_rate_with": 0.5613196270619173,
+          "n_with": 8366,
+          "success_rate_without": 0.48948436865611045,
+          "n_without": 24630,
+          "p_value": 7.019761818999846e-30
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": -0.06921619533429024,
+          "success_rate_with": 0.44357495881383857,
+          "n_with": 2428,
+          "success_rate_without": 0.5127911541481288,
+          "n_without": 30568,
+          "p_value": 5.160346000806644e-11
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": 0.06414408204309169,
+          "success_rate_with": 0.526136701969291,
+          "n_with": 23511,
+          "success_rate_without": 0.4619926199261993,
+          "n_without": 9485,
+          "p_value": 5.200375884383306e-26
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.05302563277681821,
+          "success_rate_with": 0.5248176162556505,
+          "n_with": 22343,
+          "success_rate_without": 0.4717919834788323,
+          "n_without": 10653,
+          "p_value": 2.0925345147794403e-19
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": 0.04252689209628513,
+          "success_rate_with": 0.5350936967632027,
+          "n_with": 11740,
+          "success_rate_without": 0.4925668046669176,
+          "n_without": 21256,
+          "p_value": 1.3869546295035916e-13
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": 0.02892458652048996,
+          "success_rate_with": 0.5243788931051765,
+          "n_with": 13967,
+          "success_rate_without": 0.49545430658468653,
+          "n_without": 19029,
+          "p_value": 2.0747515944124542e-07
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.020643436948272753,
+          "success_rate_with": 0.5034842542172804,
+          "n_with": 26261,
+          "success_rate_without": 0.5241276911655531,
+          "n_without": 6735,
+          "p_value": 0.0025017223326770687
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.020643436948272753,
+          "success_rate_with": 0.5034842542172804,
+          "n_with": 26261,
+          "success_rate_without": 0.5241276911655531,
+          "n_without": 6735,
+          "p_value": 0.0025017223326770687
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.019335159413982228,
+          "success_rate_with": 0.5243767924112067,
+          "n_with": 4533,
+          "success_rate_without": 0.5050416329972245,
+          "n_without": 28463,
+          "p_value": 0.015588060377326525
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.013792337739576888,
+          "success_rate_with": 0.5204799338022342,
+          "n_with": 2417,
+          "success_rate_without": 0.5066875960626573,
+          "n_without": 30579,
+          "p_value": 0.19165943709646502
+        }
+      ]
+    },
+    "3": {
+      "n": 20549,
+      "pct_of_population": 0.20549,
+      "overall_success_rate": 0.47316171103216703,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.5641773932982438,
+          "success_rate_with": 1.0,
+          "n_with": 1360,
+          "success_rate_without": 0.4358226067017562,
+          "n_without": 19189,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.5368780022400294,
+          "success_rate_with": 0.9511762094984465,
+          "n_with": 2253,
+          "success_rate_without": 0.41429820725841715,
+          "n_without": 18296,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.5070567991653456,
+          "success_rate_with": 0.9519650655021834,
+          "n_with": 1145,
+          "success_rate_without": 0.4449082663368378,
+          "n_without": 19404,
+          "p_value": 1.685228589434921e-244
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.41041741228695855,
+          "success_rate_with": 0.8209050350541747,
+          "n_with": 3138,
+          "success_rate_without": 0.4104876227672161,
+          "n_without": 17411,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.40441570275355365,
+          "success_rate_with": 0.7918292403029608,
+          "n_with": 4357,
+          "success_rate_without": 0.3874135375494071,
+          "n_without": 16192,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.3208856394257058,
+          "success_rate_with": 0.18986289987536353,
+          "n_with": 2407,
+          "success_rate_without": 0.5107485393010693,
+          "n_without": 18142,
+          "p_value": 6.651195532069674e-193
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.3160144221697537,
+          "success_rate_with": 0.7079310997539277,
+          "n_with": 5283,
+          "success_rate_without": 0.391916677584174,
+          "n_without": 15266,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.24405341436181105,
+          "success_rate_with": 0.6331402740500071,
+          "n_with": 7079,
+          "success_rate_without": 0.389086859688196,
+          "n_without": 13470,
+          "p_value": 4.151638465663297e-243
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.24019366177976142,
+          "success_rate_with": 0.6435146443514644,
+          "n_with": 5975,
+          "success_rate_without": 0.403320982571703,
+          "n_without": 14574,
+          "p_value": 2.733277154236328e-215
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.23521092767620344,
+          "success_rate_with": 0.2639683238011439,
+          "n_with": 2273,
+          "success_rate_without": 0.4991792514773473,
+          "n_without": 18276,
+          "p_value": 1.411241373094717e-99
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.1990637331281908,
+          "success_rate_with": 0.61168,
+          "n_with": 6250,
+          "success_rate_without": 0.4126162668718092,
+          "n_without": 14299,
+          "p_value": 2.283823943653572e-152
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.1837595340894868,
+          "success_rate_with": 0.31997660134542266,
+          "n_with": 3419,
+          "success_rate_without": 0.5037361354349095,
+          "n_without": 17130,
+          "p_value": 5.902342046830175e-86
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.1758024557493692,
+          "success_rate_with": 0.6116460339293902,
+          "n_with": 4362,
+          "success_rate_without": 0.435843578180021,
+          "n_without": 16187,
+          "p_value": 1.197736609202674e-94
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.15266647831627728,
+          "success_rate_with": 0.3469215631149845,
+          "n_with": 3557,
+          "success_rate_without": 0.4995880414312618,
+          "n_without": 16992,
+          "p_value": 9.214421399410417e-62
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.14890402869910835,
+          "success_rate_with": 0.564392511622063,
+          "n_with": 7959,
+          "success_rate_without": 0.4154884829229547,
+          "n_without": 12590,
+          "p_value": 2.5064009670240876e-96
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.13900444173334653,
+          "success_rate_with": 0.5857912285201333,
+          "n_with": 3899,
+          "success_rate_without": 0.4467867867867868,
+          "n_without": 16650,
+          "p_value": 3.399708708423551e-55
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.13073095616376174,
+          "success_rate_with": 0.5892857142857143,
+          "n_with": 2296,
+          "success_rate_without": 0.45855475812195257,
+          "n_without": 18253,
+          "p_value": 2.9069820215253903e-32
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.1295327268580696,
+          "success_rate_with": 0.3684210526315789,
+          "n_with": 3933,
+          "success_rate_without": 0.49795377948964853,
+          "n_without": 16616,
+          "p_value": 1.788648972781461e-48
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.1295327268580696,
+          "success_rate_with": 0.3684210526315789,
+          "n_with": 3933,
+          "success_rate_without": 0.49795377948964853,
+          "n_without": 16616,
+          "p_value": 1.788648972781461e-48
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.12756773195247345,
+          "success_rate_with": 0.3648387096774194,
+          "n_with": 3100,
+          "success_rate_without": 0.49240644162989283,
+          "n_without": 17449,
+          "p_value": 2.9259397290342622e-39
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.1217009653063082,
+          "success_rate_with": 0.4271973725367532,
+          "n_with": 12788,
+          "success_rate_without": 0.5488983378430614,
+          "n_without": 7761,
+          "p_value": 2.2782772367865242e-64
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.1130622288994807,
+          "success_rate_with": 0.42736790446589235,
+          "n_with": 12226,
+          "success_rate_without": 0.540430133365373,
+          "n_without": 8323,
+          "p_value": 3.603325355277847e-57
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.10904323979693087,
+          "success_rate_with": 0.4106511574866005,
+          "n_with": 8769,
+          "success_rate_without": 0.5196943972835314,
+          "n_without": 11780,
+          "p_value": 4.389356162078572e-54
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.10664263074006491,
+          "success_rate_with": 0.41594035493016907,
+          "n_with": 9523,
+          "success_rate_without": 0.522582985670234,
+          "n_without": 11026,
+          "p_value": 1.2455829178396754e-52
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": 0.09851932339459063,
+          "success_rate_with": 0.5606060606060606,
+          "n_with": 2310,
+          "success_rate_without": 0.4620867372114699,
+          "n_without": 18239,
+          "p_value": 4.075907935782826e-19
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.09349141075939205,
+          "success_rate_with": 0.3946569520340012,
+          "n_with": 3294,
+          "success_rate_without": 0.48814836279339324,
+          "n_without": 17255,
+          "p_value": 6.985612423244478e-23
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.08600470073503791,
+          "success_rate_with": 0.5443502824858757,
+          "n_with": 3540,
+          "success_rate_without": 0.4583455817508378,
+          "n_without": 17009,
+          "p_value": 1.1153408145984064e-20
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.0793076525217663,
+          "success_rate_with": 0.4179987212276215,
+          "n_with": 6256,
+          "success_rate_without": 0.4973063737493878,
+          "n_without": 14293,
+          "p_value": 1.08803807420002e-25
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.06482656646866447,
+          "success_rate_with": 0.4996299037749815,
+          "n_with": 12159,
+          "success_rate_without": 0.43480333730631704,
+          "n_without": 8390,
+          "p_value": 5.779452434516319e-20
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.055206879146919186,
+          "success_rate_with": 0.5223613595706619,
+          "n_with": 2236,
+          "success_rate_without": 0.4671544804237427,
+          "n_without": 18313,
+          "p_value": 7.976486559388001e-07
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.027771946340216402,
+          "success_rate_with": 0.4636404028436019,
+          "n_with": 13504,
+          "success_rate_without": 0.4914123491838183,
+          "n_without": 7045,
+          "p_value": 0.00015385225263801395
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.027771946340216402,
+          "success_rate_with": 0.4636404028436019,
+          "n_with": 13504,
+          "success_rate_without": 0.4914123491838183,
+          "n_without": 7045,
+          "p_value": 0.00015385225263801395
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": -0.022446570209798344,
+          "success_rate_with": 0.4645507658297805,
+          "n_with": 12666,
+          "success_rate_without": 0.48699733603957884,
+          "n_without": 7883,
+          "p_value": 0.0017253546379792455
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": -0.01871876412700013,
+          "success_rate_with": 0.4565499351491569,
+          "n_with": 2313,
+          "success_rate_without": 0.47526869927615706,
+          "n_without": 18236,
+          "p_value": 0.08939468557035188
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": 0.01404400965484165,
+          "success_rate_with": 0.4750548399797514,
+          "n_with": 17779,
+          "success_rate_without": 0.46101083032490975,
+          "n_without": 2770,
+          "p_value": 0.16850056262329727
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": -0.011523426646437074,
+          "success_rate_with": 0.46735934130562634,
+          "n_with": 10202,
+          "success_rate_without": 0.4788827679520634,
+          "n_without": 10347,
+          "p_value": 0.09808324588892858
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": -0.002167846515101546,
+          "success_rate_with": 0.4712340799297321,
+          "n_with": 2277,
+          "success_rate_without": 0.47340192644483364,
+          "n_without": 18272,
+          "p_value": 0.8451010452261635
+        }
+      ]
+    },
+    "4": {
+      "n": 7190,
+      "pct_of_population": 0.0719,
+      "overall_success_rate": 0.3905424200278164,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.6478415138971023,
+          "success_rate_with": 1.0,
+          "n_with": 426,
+          "success_rate_without": 0.3521584861028977,
+          "n_without": 6764,
+          "p_value": 1.0655565370790643e-155
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.6326990527457756,
+          "success_rate_with": 0.9712351945854484,
+          "n_with": 591,
+          "success_rate_without": 0.3385361418396727,
+          "n_without": 6599,
+          "p_value": 2.119910307660629e-200
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.62235310858312,
+          "success_rate_with": 0.9867549668874173,
+          "n_with": 302,
+          "success_rate_without": 0.36440185830429733,
+          "n_without": 6888,
+          "p_value": 2.1500362676337483e-104
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.47226267465544436,
+          "success_rate_with": 0.8224755700325733,
+          "n_with": 614,
+          "success_rate_without": 0.35021289537712896,
+          "n_without": 6576,
+          "p_value": 1.8883648777132404e-116
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.4223002776746078,
+          "success_rate_with": 0.7438297872340426,
+          "n_with": 1175,
+          "success_rate_without": 0.32152950955943477,
+          "n_without": 6015,
+          "p_value": 3.449495565692884e-162
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.3390406333823925,
+          "success_rate_with": 0.6603131381892444,
+          "n_with": 1469,
+          "success_rate_without": 0.32127250480685193,
+          "n_without": 5721,
+          "p_value": 8.867172267444597e-125
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.2674191686678468,
+          "success_rate_with": 0.5953654188948306,
+          "n_with": 1683,
+          "success_rate_without": 0.3279462502269838,
+          "n_without": 5507,
+          "p_value": 3.2093549095194284e-86
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.2638731448264261,
+          "success_rate_with": 0.5811623246492986,
+          "n_with": 1996,
+          "success_rate_without": 0.3172891798228725,
+          "n_without": 5194,
+          "p_value": 9.8730331399097e-94
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.24810793940705061,
+          "success_rate_with": 0.18173836698858647,
+          "n_with": 1139,
+          "success_rate_without": 0.4298463063956371,
+          "n_without": 6051,
+          "p_value": 7.419738021290032e-56
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.22849568915419205,
+          "success_rate_with": 0.5749279538904899,
+          "n_with": 1388,
+          "success_rate_without": 0.34643226473629785,
+          "n_without": 5802,
+          "p_value": 2.263025116718455e-55
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.22326146111700892,
+          "success_rate_with": 0.18926553672316385,
+          "n_with": 708,
+          "success_rate_without": 0.41252699784017277,
+          "n_without": 6482,
+          "p_value": 6.4562319283259826e-31
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.21238207010744473,
+          "success_rate_with": 0.19012345679012346,
+          "n_with": 405,
+          "success_rate_without": 0.4025055268975682,
+          "n_without": 6785,
+          "p_value": 1.7333372430392925e-17
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.19561730118568033,
+          "success_rate_with": 0.5406698564593302,
+          "n_with": 1672,
+          "success_rate_without": 0.34505255527364986,
+          "n_without": 5518,
+          "p_value": 8.82862346476281e-47
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.19415589595328464,
+          "success_rate_with": 0.2152080344332855,
+          "n_with": 697,
+          "success_rate_without": 0.40936393038657015,
+          "n_without": 6493,
+          "p_value": 1.7848412292571237e-23
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.15856913728430344,
+          "success_rate_with": 0.4997764863656683,
+          "n_with": 2237,
+          "success_rate_without": 0.34120734908136485,
+          "n_without": 4953,
+          "p_value": 2.778600874190019e-37
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.14326373054922198,
+          "success_rate_with": 0.26282051282051283,
+          "n_with": 780,
+          "success_rate_without": 0.4060842433697348,
+          "n_without": 6410,
+          "p_value": 9.664928862921137e-15
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.14326373054922198,
+          "success_rate_with": 0.26282051282051283,
+          "n_with": 780,
+          "success_rate_without": 0.4060842433697348,
+          "n_without": 6410,
+          "p_value": 9.664928862921137e-15
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.14212916337156778,
+          "success_rate_with": 0.5093062605752962,
+          "n_with": 1182,
+          "success_rate_without": 0.3671770972037284,
+          "n_without": 6008,
+          "p_value": 5.4058718718655135e-20
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.1319706206276079,
+          "success_rate_with": 0.3213450292397661,
+          "n_with": 3420,
+          "success_rate_without": 0.453315649867374,
+          "n_without": 3770,
+          "p_value": 2.2226071264371115e-30
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.10695454679705074,
+          "success_rate_with": 0.3221450617283951,
+          "n_with": 2592,
+          "success_rate_without": 0.4290996085254458,
+          "n_without": 4598,
+          "p_value": 4.438233416789332e-19
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.10119798198849905,
+          "success_rate_with": 0.32302549101546174,
+          "n_with": 2393,
+          "success_rate_without": 0.4242234730039608,
+          "n_without": 4797,
+          "p_value": 1.1502041576308179e-16
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.0971157582922289,
+          "success_rate_with": 0.3159159159159159,
+          "n_with": 1665,
+          "success_rate_without": 0.4130316742081448,
+          "n_without": 5525,
+          "p_value": 1.0776441432823029e-12
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.09532709283409341,
+          "success_rate_with": 0.30482758620689654,
+          "n_with": 725,
+          "success_rate_without": 0.40015467904098995,
+          "n_without": 6465,
+          "p_value": 6.074384000691388e-07
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.09414969843660959,
+          "success_rate_with": 0.3082039911308204,
+          "n_with": 902,
+          "success_rate_without": 0.40235368956743,
+          "n_without": 6288,
+          "p_value": 5.9562063441541015e-08
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.07998189616213414,
+          "success_rate_with": 0.462882096069869,
+          "n_with": 687,
+          "success_rate_without": 0.3829001999077349,
+          "n_without": 6503,
+          "p_value": 4.3783815700963884e-05
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.07707884015087552,
+          "success_rate_with": 0.35373968591961674,
+          "n_with": 3757,
+          "success_rate_without": 0.43081852607049226,
+          "n_without": 3433,
+          "p_value": 2.2092021482965577e-11
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.07686925700383046,
+          "success_rate_with": 0.4558011049723757,
+          "n_with": 1086,
+          "success_rate_without": 0.37893184796854523,
+          "n_without": 6104,
+          "p_value": 1.7171451605597676e-06
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.06547022069179886,
+          "success_rate_with": 0.4461966604823748,
+          "n_with": 1078,
+          "success_rate_without": 0.3807264397905759,
+          "n_without": 6112,
+          "p_value": 4.858656482837842e-05
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.05991935563742967,
+          "success_rate_with": 0.4204104270660011,
+          "n_with": 3606,
+          "success_rate_without": 0.36049107142857145,
+          "n_without": 3584,
+          "p_value": 1.9184218188045043e-07
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": 0.045035304501323925,
+          "success_rate_with": 0.429126213592233,
+          "n_with": 1030,
+          "success_rate_without": 0.3840909090909091,
+          "n_without": 6160,
+          "p_value": 0.006103779061465777
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.03964408156436938,
+          "success_rate_with": 0.36936398925052255,
+          "n_with": 3349,
+          "success_rate_without": 0.40900807081489193,
+          "n_without": 3841,
+          "p_value": 0.0005880536069983423
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.03964408156436938,
+          "success_rate_with": 0.36936398925052255,
+          "n_with": 3349,
+          "success_rate_without": 0.40900807081489193,
+          "n_without": 3841,
+          "p_value": 0.0005880536069983423
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": -0.037943809541787166,
+          "success_rate_with": 0.38194569322064376,
+          "n_with": 5561,
+          "success_rate_without": 0.4198895027624309,
+          "n_without": 1629,
+          "p_value": 0.00576906385406388
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": -0.03272934176563308,
+          "success_rate_with": 0.3887170422742672,
+          "n_with": 6789,
+          "success_rate_without": 0.42144638403990026,
+          "n_without": 401,
+          "p_value": 0.19175825352640272
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": -0.027778882163067176,
+          "success_rate_with": 0.38026925623482677,
+          "n_with": 4531,
+          "success_rate_without": 0.40804813839789394,
+          "n_without": 2659,
+          "p_value": 0.019765136160062976
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.019389787717002338,
+          "success_rate_with": 0.40822784810126583,
+          "n_with": 632,
+          "success_rate_without": 0.3888380603842635,
+          "n_without": 6558,
+          "p_value": 0.33997397021255954
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.016237359510027694,
+          "success_rate_with": 0.40444015444015446,
+          "n_with": 1036,
+          "success_rate_without": 0.38820279493012677,
+          "n_without": 6154,
+          "p_value": 0.32165206155869164
+        }
+      ]
+    },
+    "5+": {
+      "n": 1598,
+      "pct_of_population": 0.01598,
+      "overall_success_rate": 0.29224030037546933,
+      "effect_sizes": [
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.7514950166112957,
+          "success_rate_with": 1.0,
+          "n_with": 93,
+          "success_rate_without": 0.24850498338870433,
+          "n_without": 1505,
+          "p_value": 6.028612615593388e-54
+        },
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.746042216358839,
+          "success_rate_with": 1.0,
+          "n_with": 82,
+          "success_rate_without": 0.25395778364116095,
+          "n_without": 1516,
+          "p_value": 1.9206352887034261e-47
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.7072856221792392,
+          "success_rate_with": 0.9787234042553191,
+          "n_with": 47,
+          "success_rate_without": 0.27143778207607994,
+          "n_without": 1551,
+          "p_value": 8.29317935562493e-26
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.5390963027704615,
+          "success_rate_with": 0.770949720670391,
+          "n_with": 179,
+          "success_rate_without": 0.23185341789992953,
+          "n_without": 1419,
+          "p_value": 1.6904056424899705e-50
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.5275682704811444,
+          "success_rate_with": 0.8,
+          "n_with": 60,
+          "success_rate_without": 0.27243172951885564,
+          "n_without": 1538,
+          "p_value": 1.194946388273264e-18
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.3410806174957118,
+          "success_rate_with": 0.5863636363636363,
+          "n_with": 220,
+          "success_rate_without": 0.24528301886792453,
+          "n_without": 1378,
+          "p_value": 5.167176901002712e-25
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.3344218209757972,
+          "success_rate_with": 0.5789473684210527,
+          "n_with": 228,
+          "success_rate_without": 0.24452554744525548,
+          "n_without": 1370,
+          "p_value": 8.613650451361818e-25
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.27157802964254574,
+          "success_rate_with": 0.5135135135135135,
+          "n_with": 296,
+          "success_rate_without": 0.24193548387096775,
+          "n_without": 1302,
+          "p_value": 1.8010148680137292e-20
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.26751632177337964,
+          "success_rate_with": 0.5180722891566265,
+          "n_with": 249,
+          "success_rate_without": 0.25055596738324687,
+          "n_without": 1349,
+          "p_value": 1.4871302355405917e-17
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.259960475394559,
+          "success_rate_with": 0.5016077170418006,
+          "n_with": 311,
+          "success_rate_without": 0.24164724164724163,
+          "n_without": 1287,
+          "p_value": 1.4776932895346271e-19
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.2168224472386039,
+          "success_rate_with": 0.12209302325581395,
+          "n_with": 344,
+          "success_rate_without": 0.33891547049441784,
+          "n_without": 1254,
+          "p_value": 4.7617637214608864e-15
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.21537634408602152,
+          "success_rate_with": 0.08333333333333333,
+          "n_with": 48,
+          "success_rate_without": 0.29870967741935484,
+          "n_without": 1550,
+          "p_value": 0.0012320981859891284
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.21032518065591993,
+          "success_rate_with": 0.08928571428571429,
+          "n_with": 56,
+          "success_rate_without": 0.29961089494163423,
+          "n_without": 1542,
+          "p_value": 0.0006748779114104867
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.21032518065591993,
+          "success_rate_with": 0.08928571428571429,
+          "n_with": 56,
+          "success_rate_without": 0.29961089494163423,
+          "n_without": 1542,
+          "p_value": 0.0006748779114104867
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.17690299097958534,
+          "success_rate_with": 0.449438202247191,
+          "n_with": 178,
+          "success_rate_without": 0.27253521126760566,
+          "n_without": 1420,
+          "p_value": 9.980761389997956e-07
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.15828884377271474,
+          "success_rate_with": 0.42735042735042733,
+          "n_with": 234,
+          "success_rate_without": 0.2690615835777126,
+          "n_without": 1364,
+          "p_value": 8.705169668827432e-07
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.1516706854363707,
+          "success_rate_with": 0.19001919385796545,
+          "n_with": 521,
+          "success_rate_without": 0.34168987929433614,
+          "n_without": 1077,
+          "p_value": 4.12462182189036e-10
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.1488913394931532,
+          "success_rate_with": 0.17922077922077922,
+          "n_with": 385,
+          "success_rate_without": 0.3281121187139324,
+          "n_without": 1213,
+          "p_value": 2.1852190557144392e-08
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.1421655172413793,
+          "success_rate_with": 0.1810344827586207,
+          "n_with": 348,
+          "success_rate_without": 0.3232,
+          "n_without": 1250,
+          "p_value": 2.5029573091144735e-07
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": -0.13478555523283958,
+          "success_rate_with": 0.28945686900958467,
+          "n_with": 1565,
+          "success_rate_without": 0.42424242424242425,
+          "n_without": 33,
+          "p_value": 0.09202133713645953
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.13289278946567631,
+          "success_rate_with": 0.37906137184115524,
+          "n_with": 554,
+          "success_rate_without": 0.24616858237547892,
+          "n_without": 1044,
+          "p_value": 2.711552358235359e-08
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.130970754582078,
+          "success_rate_with": 0.17266187050359713,
+          "n_with": 139,
+          "success_rate_without": 0.3036326250856751,
+          "n_without": 1459,
+          "p_value": 0.0011777977716448437
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.10876960346806067,
+          "success_rate_with": 0.22260869565217392,
+          "n_with": 575,
+          "success_rate_without": 0.3313782991202346,
+          "n_without": 1023,
+          "p_value": 4.462798335651859e-06
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.10876308305725763,
+          "success_rate_with": 0.19130434782608696,
+          "n_with": 115,
+          "success_rate_without": 0.3000674308833446,
+          "n_without": 1483,
+          "p_value": 0.013489257937288158
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.10205654560493271,
+          "success_rate_with": 0.20512820512820512,
+          "n_with": 234,
+          "success_rate_without": 0.30718475073313783,
+          "n_without": 1364,
+          "p_value": 0.0015169235579324343
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.09034930586654721,
+          "success_rate_with": 0.3793103448275862,
+          "n_with": 58,
+          "success_rate_without": 0.288961038961039,
+          "n_without": 1540,
+          "p_value": 0.13747918610578552
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": -0.07038288288288291,
+          "success_rate_with": 0.28378378378378377,
+          "n_with": 1406,
+          "success_rate_without": 0.3541666666666667,
+          "n_without": 192,
+          "p_value": 0.04427807877572814
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": 0.06844322812643261,
+          "success_rate_with": 0.345821325648415,
+          "n_with": 347,
+          "success_rate_without": 0.2773780975219824,
+          "n_without": 1251,
+          "p_value": 0.013123338918137295
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": 0.06844322812643261,
+          "success_rate_with": 0.345821325648415,
+          "n_with": 347,
+          "success_rate_without": 0.2773780975219824,
+          "n_without": 1251,
+          "p_value": 0.013123338918137295
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.05575178667772296,
+          "success_rate_with": 0.33797909407665505,
+          "n_with": 287,
+          "success_rate_without": 0.2822273073989321,
+          "n_without": 1311,
+          "p_value": 0.05996547751373616
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": -0.04756107842673574,
+          "success_rate_with": 0.280067283431455,
+          "n_with": 1189,
+          "success_rate_without": 0.3276283618581907,
+          "n_without": 409,
+          "p_value": 0.06810250248178748
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.04337296345222369,
+          "success_rate_with": 0.3333333333333333,
+          "n_with": 84,
+          "success_rate_without": 0.2899603698811096,
+          "n_without": 1514,
+          "p_value": 0.3948882543375961
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": -0.02685426437380578,
+          "success_rate_with": 0.27017543859649124,
+          "n_with": 285,
+          "success_rate_without": 0.297029702970297,
+          "n_without": 1313,
+          "p_value": 0.36621805283017356
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.025242937125941167,
+          "success_rate_with": 0.2682926829268293,
+          "n_with": 82,
+          "success_rate_without": 0.29353562005277045,
+          "n_without": 1516,
+          "p_value": 0.6244539589326585
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.013233687493219182,
+          "success_rate_with": 0.30293159609120524,
+          "n_with": 307,
+          "success_rate_without": 0.28969790859798605,
+          "n_without": 1291,
+          "p_value": 0.6467657507964043
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.0018877151799687186,
+          "success_rate_with": 0.29375,
+          "n_with": 320,
+          "success_rate_without": 0.2918622848200313,
+          "n_without": 1278,
+          "p_value": 0.9470584634172725
+        }
+      ]
+    }
+  },
+  "draw": {
+    "0": {
+      "n": 9666,
+      "pct_of_population": 0.09666,
+      "overall_success_rate": 0.31502172563625075,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.7085072231139646,
+          "success_rate_with": 1.0,
+          "n_with": 321,
+          "success_rate_without": 0.2914927768860353,
+          "n_without": 9345,
+          "p_value": 5.035311671763419e-159
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.3469787722751797,
+          "success_rate_with": 0.5466998754669987,
+          "n_with": 3212,
+          "success_rate_without": 0.19972110319181902,
+          "n_without": 6454,
+          "p_value": 3.356458009195206e-262
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.3251195210885152,
+          "success_rate_with": 0.6132665832290363,
+          "n_with": 799,
+          "success_rate_without": 0.28814706214052105,
+          "n_without": 8867,
+          "p_value": 4.551396098402244e-80
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.30782828581282684,
+          "success_rate_with": 0.5959715639810427,
+          "n_with": 844,
+          "success_rate_without": 0.28814327816821583,
+          "n_without": 8822,
+          "p_value": 1.5198868503200878e-75
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.28039282160482176,
+          "success_rate_with": 0.4911012235817575,
+          "n_with": 3596,
+          "success_rate_without": 0.21070840197693574,
+          "n_without": 6070,
+          "p_value": 6.049202381867579e-181
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.27860372726035854,
+          "success_rate_with": 0.446512539184953,
+          "n_with": 5104,
+          "success_rate_without": 0.16790881192459448,
+          "n_without": 4562,
+          "p_value": 1.8680092656042038e-190
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.271846739140957,
+          "success_rate_with": 0.05090909090909091,
+          "n_with": 275,
+          "success_rate_without": 0.32275583005004793,
+          "n_without": 9391,
+          "p_value": 1.1150189459629892e-21
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.2632375126921794,
+          "success_rate_with": 0.46995222529544883,
+          "n_with": 3977,
+          "success_rate_without": 0.20671471260326946,
+          "n_without": 5689,
+          "p_value": 1.7453226556794988e-165
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.2591636325643408,
+          "success_rate_with": 0.552896725440806,
+          "n_with": 794,
+          "success_rate_without": 0.29373309287646526,
+          "n_without": 8872,
+          "p_value": 2.909208599067818e-51
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.23476034601475315,
+          "success_rate_with": 0.5057979017117614,
+          "n_with": 1811,
+          "success_rate_without": 0.27103755569700827,
+          "n_without": 7855,
+          "p_value": 9.813189550473166e-84
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.20758080349909197,
+          "success_rate_with": 0.48371065709552735,
+          "n_with": 1811,
+          "success_rate_without": 0.2761298535964354,
+          "n_without": 7855,
+          "p_value": 7.08658836969907e-66
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.1383613763214569,
+          "success_rate_with": 0.4061175045427014,
+          "n_with": 3302,
+          "success_rate_without": 0.2677561282212445,
+          "n_without": 6364,
+          "p_value": 7.500670062916285e-44
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.10278709582064754,
+          "success_rate_with": 0.25469571750563486,
+          "n_with": 3993,
+          "success_rate_without": 0.3574828133262824,
+          "n_without": 5673,
+          "p_value": 8.959911288156976e-27
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.09734407294548308,
+          "success_rate_with": 0.2980323348790575,
+          "n_with": 7979,
+          "success_rate_without": 0.3953764078245406,
+          "n_without": 1687,
+          "p_value": 5.280454689096051e-15
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.09451038943997386,
+          "success_rate_with": 0.2748064109490366,
+          "n_with": 5553,
+          "success_rate_without": 0.36931680038901044,
+          "n_without": 4113,
+          "p_value": 4.606137063800026e-23
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.09198112461055796,
+          "success_rate_with": 0.26159921026653504,
+          "n_with": 4052,
+          "success_rate_without": 0.353580334877093,
+          "n_without": 5614,
+          "p_value": 7.550309034411796e-22
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.07911411739035568,
+          "success_rate_with": 0.24,
+          "n_with": 500,
+          "success_rate_without": 0.31911411739035567,
+          "n_without": 9166,
+          "p_value": 0.0002085006032264131
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.07321248373921785,
+          "success_rate_with": 0.2759538598047915,
+          "n_with": 4508,
+          "success_rate_without": 0.3491663435440093,
+          "n_without": 5158,
+          "p_value": 1.0745306021749919e-14
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.07321248373921785,
+          "success_rate_with": 0.2759538598047915,
+          "n_with": 4508,
+          "success_rate_without": 0.3491663435440093,
+          "n_without": 5158,
+          "p_value": 1.0745306021749919e-14
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.07171168810638556,
+          "success_rate_with": 0.30042862709442786,
+          "n_with": 7699,
+          "success_rate_without": 0.3721403152008134,
+          "n_without": 1967,
+          "p_value": 9.93151843174702e-10
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.06668267159352997,
+          "success_rate_with": 0.34988077173206156,
+          "n_with": 4613,
+          "success_rate_without": 0.2831981001385316,
+          "n_without": 5053,
+          "p_value": 1.797922533278947e-12
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.05809578402279497,
+          "success_rate_with": 0.2843029637760702,
+          "n_with": 4555,
+          "success_rate_without": 0.3423987477988652,
+          "n_without": 5111,
+          "p_value": 8.369467230936804e-10
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.05729447474740401,
+          "success_rate_with": 0.29627921279212793,
+          "n_with": 6504,
+          "success_rate_without": 0.35357368753953194,
+          "n_without": 3162,
+          "p_value": 1.2762912471220276e-08
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.05625647241636372,
+          "success_rate_with": 0.29431985595023735,
+          "n_with": 6109,
+          "success_rate_without": 0.3505763283666011,
+          "n_without": 3557,
+          "p_value": 9.353372720206882e-09
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.05485731254639942,
+          "success_rate_with": 0.33795555555555556,
+          "n_with": 5625,
+          "success_rate_without": 0.28309824300915615,
+          "n_without": 4041,
+          "p_value": 1.0237329627132102e-08
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.04574573109262142,
+          "success_rate_with": 0.2819168850617746,
+          "n_with": 2671,
+          "success_rate_without": 0.327662616154396,
+          "n_without": 6995,
+          "p_value": 1.4936991659891483e-05
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.03339149133424324,
+          "success_rate_with": 0.3128868258178603,
+          "n_with": 9048,
+          "success_rate_without": 0.34627831715210355,
+          "n_without": 618,
+          "p_value": 0.08382383855132938
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.03339149133424324,
+          "success_rate_with": 0.3128868258178603,
+          "n_with": 9048,
+          "success_rate_without": 0.34627831715210355,
+          "n_without": 618,
+          "p_value": 0.08382383855132938
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.013025788679444206,
+          "success_rate_with": 0.32260460510027233,
+          "n_with": 4039,
+          "success_rate_without": 0.30957881642082813,
+          "n_without": 5627,
+          "p_value": 0.17392064809463234
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.0070723698844699645,
+          "success_rate_with": 0.31643605327815855,
+          "n_with": 7733,
+          "success_rate_without": 0.3093636833936886,
+          "n_without": 1933,
+          "p_value": 0.5493604588298272
+        }
+      ]
+    },
+    "1": {
+      "n": 28001,
+      "pct_of_population": 0.28001,
+      "overall_success_rate": 0.5163029891789579,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.5201628389277211,
+          "success_rate_with": 1.0,
+          "n_with": 1963,
+          "success_rate_without": 0.479837161072279,
+          "n_without": 26038,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.454667606012338,
+          "success_rate_with": 0.9331046312178388,
+          "n_with": 2332,
+          "success_rate_without": 0.4784370252055008,
+          "n_without": 25669,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.36258034801724126,
+          "success_rate_with": 0.16953316953316952,
+          "n_with": 1221,
+          "success_rate_without": 0.5321135175504108,
+          "n_without": 26780,
+          "p_value": 1.0479737150563087e-135
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.361528551072897,
+          "success_rate_with": 0.8188786684187472,
+          "n_with": 4566,
+          "success_rate_without": 0.45735011734585024,
+          "n_without": 23435,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.32991203073129105,
+          "success_rate_with": 0.7469150450878026,
+          "n_with": 8428,
+          "success_rate_without": 0.41700301435651155,
+          "n_without": 19573,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.27401815342990204,
+          "success_rate_with": 0.6826652122534315,
+          "n_with": 11001,
+          "success_rate_without": 0.4086470588235294,
+          "n_without": 17000,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.2700395595637917,
+          "success_rate_with": 0.6867015098722415,
+          "n_with": 10332,
+          "success_rate_without": 0.4166619503084498,
+          "n_without": 17669,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.26211785247068936,
+          "success_rate_with": 0.6984777517564403,
+          "n_with": 8540,
+          "success_rate_without": 0.436359899285751,
+          "n_without": 19461,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.23997841606688713,
+          "success_rate_with": 0.6416872335651783,
+          "n_with": 13371,
+          "success_rate_without": 0.4017088174982912,
+          "n_without": 14630,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.21306272155234335,
+          "success_rate_with": 0.3249034070951879,
+          "n_with": 2847,
+          "success_rate_without": 0.5379661286475312,
+          "n_without": 25154,
+          "p_value": 4.1301613213419483e-103
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.1636495459340268,
+          "success_rate_with": 0.6103046068641437,
+          "n_with": 11917,
+          "success_rate_without": 0.44665506093011687,
+          "n_without": 16084,
+          "p_value": 1.165831563314616e-161
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.1526380743634526,
+          "success_rate_with": 0.6374006221914967,
+          "n_with": 5786,
+          "success_rate_without": 0.4847625478280441,
+          "n_without": 22215,
+          "p_value": 3.903417611782614e-95
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.14709162099024026,
+          "success_rate_with": 0.43524264120922834,
+          "n_with": 12570,
+          "success_rate_without": 0.5823342621994686,
+          "n_without": 15431,
+          "p_value": 1.5596593762917936e-132
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.1272067146641575,
+          "success_rate_with": 0.43690611934625617,
+          "n_with": 10524,
+          "success_rate_without": 0.5641128340104137,
+          "n_without": 17477,
+          "p_value": 1.4636794329273556e-94
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.1272067146641575,
+          "success_rate_with": 0.43690611934625617,
+          "n_with": 10524,
+          "success_rate_without": 0.5641128340104137,
+          "n_without": 17477,
+          "p_value": 1.4636794329273556e-94
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": -0.12640310635356677,
+          "success_rate_with": 0.39447731755424065,
+          "n_with": 1014,
+          "success_rate_without": 0.5208804239078074,
+          "n_without": 26987,
+          "p_value": 2.630304403867508e-15
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.12152708578223864,
+          "success_rate_with": 0.4884916408095216,
+          "n_with": 21593,
+          "success_rate_without": 0.6100187265917603,
+          "n_without": 6408,
+          "p_value": 1.621409765719246e-65
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.12052165159015105,
+          "success_rate_with": 0.4362708621239503,
+          "n_with": 9407,
+          "success_rate_without": 0.5567925137141013,
+          "n_without": 18594,
+          "p_value": 5.299839260811595e-81
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.11577533079361912,
+          "success_rate_with": 0.6077498300475866,
+          "n_with": 5884,
+          "success_rate_without": 0.4919744992539675,
+          "n_without": 22117,
+          "p_value": 3.4266108860115185e-56
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.10206774187498874,
+          "success_rate_with": 0.4484777517564403,
+          "n_with": 9394,
+          "success_rate_without": 0.550545493631429,
+          "n_without": 18607,
+          "p_value": 1.3990747387941612e-58
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.09825381981259207,
+          "success_rate_with": 0.5634877009756768,
+          "n_with": 14554,
+          "success_rate_without": 0.46523388116308473,
+          "n_without": 13447,
+          "p_value": 1.0361535545065392e-60
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.09575320616464322,
+          "success_rate_with": 0.6085271317829457,
+          "n_with": 1032,
+          "success_rate_without": 0.5127739256183025,
+          "n_without": 26969,
+          "p_value": 1.532813115666956e-09
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.09127066988820154,
+          "success_rate_with": 0.4931047692013024,
+          "n_with": 20884,
+          "success_rate_without": 0.584375439089504,
+          "n_without": 7117,
+          "p_value": 2.1245840158671082e-40
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": 0.07857564343668522,
+          "success_rate_with": 0.5599165262059556,
+          "n_with": 12459,
+          "success_rate_without": 0.48134088276927034,
+          "n_without": 15542,
+          "p_value": 4.547642505124929e-39
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.07826213731273346,
+          "success_rate_with": 0.4859774940236721,
+          "n_with": 17151,
+          "success_rate_without": 0.5642396313364055,
+          "n_without": 10850,
+          "p_value": 2.509469874132962e-37
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.0782279189417372,
+          "success_rate_with": 0.5916030534351145,
+          "n_with": 1048,
+          "success_rate_without": 0.5133751344933773,
+          "n_without": 26953,
+          "p_value": 6.630853175190519e-07
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": 0.07738018646844935,
+          "success_rate_with": 0.5794374393792434,
+          "n_with": 5155,
+          "success_rate_without": 0.5020572529107941,
+          "n_without": 22846,
+          "p_value": 9.955888849748372e-24
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": 0.07738018646844935,
+          "success_rate_with": 0.5794374393792434,
+          "n_with": 5155,
+          "success_rate_without": 0.5020572529107941,
+          "n_without": 22846,
+          "p_value": 9.955888849748372e-24
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.07531915681624929,
+          "success_rate_with": 0.4840863704443335,
+          "n_with": 16024,
+          "success_rate_without": 0.5594055272605828,
+          "n_without": 11977,
+          "p_value": 9.863529621416405e-36
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.07092845970929468,
+          "success_rate_with": 0.46183441058787317,
+          "n_with": 6498,
+          "success_rate_without": 0.5327628702971678,
+          "n_without": 21503,
+          "p_value": 1.169918526598667e-23
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": -0.06773291129669862,
+          "success_rate_with": 0.45119705340699817,
+          "n_with": 1086,
+          "success_rate_without": 0.5189299647036968,
+          "n_without": 26915,
+          "p_value": 1.1916386734475787e-05
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.0633851366383098,
+          "success_rate_with": 0.4797604992410187,
+          "n_with": 11858,
+          "success_rate_without": 0.5431456358793285,
+          "n_without": 16143,
+          "p_value": 9.891797967428637e-26
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.05226510221942249,
+          "success_rate_with": 0.5601779755283649,
+          "n_with": 4495,
+          "success_rate_without": 0.5079128733089424,
+          "n_without": 23506,
+          "p_value": 1.3229218175696784e-10
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.050239224022130935,
+          "success_rate_with": 0.5495924632158358,
+          "n_with": 9447,
+          "success_rate_without": 0.49935323919370483,
+          "n_without": 18554,
+          "p_value": 1.806568539935071e-15
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.03787790054135104,
+          "success_rate_with": 0.5259128104512609,
+          "n_with": 20897,
+          "success_rate_without": 0.4880349099099099,
+          "n_without": 7104,
+          "p_value": 3.411028337773635e-08
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.020285193671028212,
+          "success_rate_with": 0.5138290083787521,
+          "n_with": 24586,
+          "success_rate_without": 0.5341142020497803,
+          "n_without": 3415,
+          "p_value": 0.026231957928069993
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.020285193671028212,
+          "success_rate_with": 0.5138290083787521,
+          "n_with": 24586,
+          "success_rate_without": 0.5341142020497803,
+          "n_without": 3415,
+          "p_value": 0.026231957928069993
+        }
+      ]
+    },
+    "2": {
+      "n": 32996,
+      "pct_of_population": 0.32996,
+      "overall_success_rate": 0.5695235786155898,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.4674982720600336,
+          "success_rate_with": 1.0,
+          "n_with": 2613,
+          "success_rate_without": 0.5325017279399664,
+          "n_without": 30383,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.4190118981156262,
+          "success_rate_with": 0.9587058322690507,
+          "n_with": 2349,
+          "success_rate_without": 0.5396939341534245,
+          "n_without": 30647,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.41527535848316943,
+          "success_rate_with": 0.9277986310443807,
+          "n_with": 4529,
+          "success_rate_without": 0.5125232725612112,
+          "n_without": 28467,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.3571057201941694,
+          "success_rate_with": 0.8454157782515992,
+          "n_with": 7504,
+          "success_rate_without": 0.4883100580574298,
+          "n_without": 25492,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.3567464485620201,
+          "success_rate_with": 0.23876871880199668,
+          "n_with": 2404,
+          "success_rate_without": 0.5955151673640168,
+          "n_without": 30592,
+          "p_value": 1.3400277102156658e-253
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.30678511566390504,
+          "success_rate_with": 0.7976134215500945,
+          "n_with": 8464,
+          "success_rate_without": 0.4908283058861895,
+          "n_without": 24532,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.27181708117064496,
+          "success_rate_with": 0.7554937146147203,
+          "n_with": 10421,
+          "success_rate_without": 0.4836766334440753,
+          "n_without": 22575,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.22540753167913102,
+          "success_rate_with": 0.7070251787379546,
+          "n_with": 12868,
+          "success_rate_without": 0.48161764705882354,
+          "n_without": 20128,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.22022052509582585,
+          "success_rate_with": 0.3753522931078657,
+          "n_with": 3903,
+          "success_rate_without": 0.5955728182036916,
+          "n_without": 29093,
+          "p_value": 4.6167969523500465e-150
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.21886863328666517,
+          "success_rate_with": 0.697079761731803,
+          "n_with": 13766,
+          "success_rate_without": 0.4782111284451378,
+          "n_without": 19230,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.20010868852527364,
+          "success_rate_with": 0.6959348255431205,
+          "n_with": 12152,
+          "success_rate_without": 0.49582613701784684,
+          "n_without": 20844,
+          "p_value": 1.2216478889928457e-274
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.16655626909513271,
+          "success_rate_with": 0.45273833671399594,
+          "n_with": 9860,
+          "success_rate_without": 0.6192946058091287,
+          "n_without": 23136,
+          "p_value": 3.834950093525378e-172
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.13495095482059039,
+          "success_rate_with": 0.4681058665690938,
+          "n_with": 8199,
+          "success_rate_without": 0.6030568213896842,
+          "n_without": 24797,
+          "p_value": 1.5150464013495738e-101
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.13020085163691852,
+          "success_rate_with": 0.6900489396411092,
+          "n_with": 2452,
+          "success_rate_without": 0.5598480880041907,
+          "n_without": 30544,
+          "p_value": 5.258221529738801e-36
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.11967197579822902,
+          "success_rate_with": 0.48188405797101447,
+          "n_with": 8832,
+          "success_rate_without": 0.6015560337692435,
+          "n_without": 24164,
+          "p_value": 3.7029209585632025e-84
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.11962437469365717,
+          "success_rate_with": 0.6342445853143159,
+          "n_with": 15144,
+          "success_rate_without": 0.5146202106206588,
+          "n_without": 17852,
+          "p_value": 5.1648747116165235e-106
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.11818353903723045,
+          "success_rate_with": 0.5311307626700184,
+          "n_with": 22277,
+          "success_rate_without": 0.6493143017072488,
+          "n_without": 10719,
+          "p_value": 1.1633229251834696e-91
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.11766073992363596,
+          "success_rate_with": 0.48536455561468866,
+          "n_with": 9395,
+          "success_rate_without": 0.6030252955383246,
+          "n_without": 23601,
+          "p_value": 1.6298745636552338e-84
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.11766073992363596,
+          "success_rate_with": 0.48536455561468866,
+          "n_with": 9395,
+          "success_rate_without": 0.6030252955383246,
+          "n_without": 23601,
+          "p_value": 1.6298745636552338e-84
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.11152296740946144,
+          "success_rate_with": 0.6563226247436774,
+          "n_with": 7315,
+          "success_rate_without": 0.544799657334216,
+          "n_without": 25681,
+          "p_value": 8.97237506449071e-65
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.1045136388903799,
+          "success_rate_with": 0.5385774562989752,
+          "n_with": 23226,
+          "success_rate_without": 0.6430910951893551,
+          "n_without": 9770,
+          "p_value": 1.3270659778715111e-68
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.09224287201994064,
+          "success_rate_with": 0.5270839180465899,
+          "n_with": 17815,
+          "success_rate_without": 0.6193267900665306,
+          "n_without": 15181,
+          "p_value": 7.989738893112525e-64
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.09128542496195269,
+          "success_rate_with": 0.523861500212237,
+          "n_with": 16491,
+          "success_rate_without": 0.6151469251741897,
+          "n_without": 16505,
+          "p_value": 6.213703412006677e-63
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.08291108147160164,
+          "success_rate_with": 0.516755585195065,
+          "n_with": 11996,
+          "success_rate_without": 0.5996666666666667,
+          "n_without": 21000,
+          "p_value": 1.776859578955185e-48
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.08033384608784744,
+          "success_rate_with": 0.6287660163915503,
+          "n_with": 8663,
+          "success_rate_without": 0.5484321703037028,
+          "n_without": 24333,
+          "p_value": 1.8607950065304414e-38
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": 0.07420357517470055,
+          "success_rate_with": 0.6382196815026542,
+          "n_with": 2449,
+          "success_rate_without": 0.5640161063279536,
+          "n_without": 30547,
+          "p_value": 9.622986480204571e-13
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.06802854607372322,
+          "success_rate_with": 0.5147993181465985,
+          "n_with": 6453,
+          "success_rate_without": 0.5828278642203217,
+          "n_without": 26543,
+          "p_value": 4.209839703286918e-23
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.05962779376221583,
+          "success_rate_with": 0.6140329906765479,
+          "n_with": 8366,
+          "success_rate_without": 0.5544051969143321,
+          "n_without": 24630,
+          "p_value": 1.7905566909959097e-21
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.04687460290885914,
+          "success_rate_with": 0.5846573871011055,
+          "n_with": 22343,
+          "success_rate_without": 0.5377827841922463,
+          "n_without": 10653,
+          "p_value": 8.947174612095746e-16
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.03413534045981104,
+          "success_rate_with": 0.6011584609019446,
+          "n_with": 2417,
+          "success_rate_without": 0.5670231204421335,
+          "n_without": 30579,
+          "p_value": 0.0011030984639095788
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": 0.03120998533487407,
+          "success_rate_with": 0.5784951724724597,
+          "n_with": 23511,
+          "success_rate_without": 0.5472851871375857,
+          "n_without": 9485,
+          "p_value": 2.1967113517213263e-07
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.02987403351029405,
+          "success_rate_with": 0.5971993410214168,
+          "n_with": 2428,
+          "success_rate_without": 0.5673253075111228,
+          "n_without": 30568,
+          "p_value": 0.0042166971722049475
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": 0.02390527352453331,
+          "success_rate_with": 0.5849233390119251,
+          "n_with": 11740,
+          "success_rate_without": 0.5610180654873917,
+          "n_without": 21256,
+          "p_value": 2.685375911006928e-05
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.0164566289492184,
+          "success_rate_with": 0.5837193911317009,
+          "n_with": 4533,
+          "success_rate_without": 0.5672627621824825,
+          "n_without": 28463,
+          "p_value": 0.037679688577772714
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": 0.010610267003884899,
+          "success_rate_with": 0.5756425860957972,
+          "n_with": 13967,
+          "success_rate_without": 0.5650323190919123,
+          "n_without": 19029,
+          "p_value": 0.05445481163531373
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.010308917955602293,
+          "success_rate_with": 0.5674193671223488,
+          "n_with": 26261,
+          "success_rate_without": 0.577728285077951,
+          "n_without": 6735,
+          "p_value": 0.12742863655775521
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.010308917955602293,
+          "success_rate_with": 0.5674193671223488,
+          "n_with": 26261,
+          "success_rate_without": 0.577728285077951,
+          "n_without": 6735,
+          "p_value": 0.12742863655775521
+        }
+      ]
+    },
+    "3": {
+      "n": 20549,
+      "pct_of_population": 0.20549,
+      "overall_success_rate": 0.5312667283079469,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.5088488562523112,
+          "success_rate_with": 1.0,
+          "n_with": 1620,
+          "success_rate_without": 0.49115114374768876,
+          "n_without": 18929,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.4870716273749367,
+          "success_rate_with": 0.9649356413670661,
+          "n_with": 2253,
+          "success_rate_without": 0.4778640139921294,
+          "n_without": 18296,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.4612463643655159,
+          "success_rate_with": 0.9668122270742358,
+          "n_with": 1145,
+          "success_rate_without": 0.5055658627087198,
+          "n_without": 19404,
+          "p_value": 6.895785509553642e-203
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.37343325478032524,
+          "success_rate_with": 0.8476736775015934,
+          "n_with": 3138,
+          "success_rate_without": 0.47424042272126815,
+          "n_without": 17411,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.36271579183831204,
+          "success_rate_with": 0.8170759697039247,
+          "n_with": 4357,
+          "success_rate_without": 0.45436017786561267,
+          "n_without": 16192,
+          "p_value": 0.0
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.2968198256133571,
+          "success_rate_with": 0.2692147901952638,
+          "n_with": 2407,
+          "success_rate_without": 0.5660346158086209,
+          "n_without": 18142,
+          "p_value": 1.6074090587165236e-165
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.2828994836198829,
+          "success_rate_with": 0.7414347908385387,
+          "n_with": 5283,
+          "success_rate_without": 0.4585353072186558,
+          "n_without": 15266,
+          "p_value": 2.812229817284163e-276
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.22721087970866055,
+          "success_rate_with": 0.33085808580858084,
+          "n_with": 2424,
+          "success_rate_without": 0.5580689655172414,
+          "n_without": 18125,
+          "p_value": 2.133618842323627e-98
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.2250973940523297,
+          "success_rate_with": 0.6814923189465983,
+          "n_with": 6835,
+          "success_rate_without": 0.45639492489426864,
+          "n_without": 13714,
+          "p_value": 7.484351568827071e-204
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.22307959812542988,
+          "success_rate_with": 0.6774968215849696,
+          "n_with": 7079,
+          "success_rate_without": 0.4544172234595397,
+          "n_without": 13470,
+          "p_value": 1.1288813998100235e-203
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.1955787565564025,
+          "success_rate_with": 0.66736,
+          "n_with": 6250,
+          "success_rate_without": 0.47178124344359745,
+          "n_without": 14299,
+          "p_value": 2.6710958629890715e-147
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.17732512604693357,
+          "success_rate_with": 0.3834454518865165,
+          "n_with": 3419,
+          "success_rate_without": 0.5607705779334501,
+          "n_without": 17130,
+          "p_value": 2.9776288113762483e-80
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.14099796983958313,
+          "success_rate_with": 0.4146752881641833,
+          "n_with": 3557,
+          "success_rate_without": 0.5556732580037664,
+          "n_without": 16992,
+          "p_value": 5.313945840567396e-53
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.1326094486826399,
+          "success_rate_with": 0.6125141349415756,
+          "n_with": 7959,
+          "success_rate_without": 0.4799046862589357,
+          "n_without": 12590,
+          "p_value": 7.191934027756842e-77
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.1253088314265388,
+          "success_rate_with": 0.6224325772459368,
+          "n_with": 5599,
+          "success_rate_without": 0.497123745819398,
+          "n_without": 14950,
+          "p_value": 8.324095563534275e-58
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.12061481473538288,
+          "success_rate_with": 0.4337899543378995,
+          "n_with": 3942,
+          "success_rate_without": 0.5544047690732824,
+          "n_without": 16607,
+          "p_value": 2.241374618756952e-42
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.11956601837042413,
+          "success_rate_with": 0.6250564334085779,
+          "n_with": 4430,
+          "success_rate_without": 0.5054904150381537,
+          "n_without": 16119,
+          "p_value": 2.694082802263374e-45
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.11617745099947469,
+          "success_rate_with": 0.4373251970505975,
+          "n_with": 3933,
+          "success_rate_without": 0.5535026480500722,
+          "n_without": 16616,
+          "p_value": 2.245254030509021e-39
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.11617745099947469,
+          "success_rate_with": 0.4373251970505975,
+          "n_with": 3933,
+          "success_rate_without": 0.5535026480500722,
+          "n_without": 16616,
+          "p_value": 2.245254030509021e-39
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.11415108767261395,
+          "success_rate_with": 0.48503189923114676,
+          "n_with": 12226,
+          "success_rate_without": 0.5991829869037607,
+          "n_without": 8323,
+          "p_value": 2.6734309044556817e-58
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.10435956755217712,
+          "success_rate_with": 0.47527039798382864,
+          "n_with": 9523,
+          "success_rate_without": 0.5796299655360058,
+          "n_without": 11026,
+          "p_value": 1.5798552888159877e-50
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.10357728190893173,
+          "success_rate_with": 0.47188961113011746,
+          "n_with": 8769,
+          "success_rate_without": 0.5754668930390492,
+          "n_without": 11780,
+          "p_value": 5.068826953788495e-49
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.10142001522897243,
+          "success_rate_with": 0.4929621520175164,
+          "n_with": 12788,
+          "success_rate_without": 0.5943821672464888,
+          "n_without": 7761,
+          "p_value": 2.6876866702748253e-45
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.09718821458588922,
+          "success_rate_with": 0.617595818815331,
+          "n_with": 2296,
+          "success_rate_without": 0.5204076042294418,
+          "n_without": 18253,
+          "p_value": 1.4262849104932156e-18
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.08284643781698231,
+          "success_rate_with": 0.605098389982111,
+          "n_with": 2236,
+          "success_rate_without": 0.5222519521651287,
+          "n_without": 18313,
+          "p_value": 1.253807919726989e-13
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.07953535286358743,
+          "success_rate_with": 0.4644808743169399,
+          "n_with": 3294,
+          "success_rate_without": 0.5440162271805273,
+          "n_without": 17255,
+          "p_value": 5.188848240470188e-17
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.07804483907580534,
+          "success_rate_with": 0.47698209718670076,
+          "n_with": 6256,
+          "success_rate_without": 0.5550269362625061,
+          "n_without": 14293,
+          "p_value": 5.923978018227129e-25
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.07518899100609078,
+          "success_rate_with": 0.593502824858757,
+          "n_with": 3540,
+          "success_rate_without": 0.5183138338526663,
+          "n_without": 17009,
+          "p_value": 3.4611331074991826e-16
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": 0.07207344805349081,
+          "success_rate_with": 0.5952380952380952,
+          "n_with": 2310,
+          "success_rate_without": 0.5231646471846044,
+          "n_without": 18239,
+          "p_value": 6.158386503389514e-11
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.06439489094655304,
+          "success_rate_with": 0.5884133160397752,
+          "n_with": 2313,
+          "success_rate_without": 0.5240184250932222,
+          "n_without": 18236,
+          "p_value": 5.02286773198354e-09
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.04941715358508103,
+          "success_rate_with": 0.5514433752775721,
+          "n_with": 12159,
+          "success_rate_without": 0.5020262216924911,
+          "n_without": 8390,
+          "p_value": 3.0071094292911446e-12
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": -0.029847001101034776,
+          "success_rate_with": 0.5198168324648665,
+          "n_with": 12666,
+          "success_rate_without": 0.5496638335659013,
+          "n_without": 7883,
+          "p_value": 3.056844267738018e-05
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.025320416062617146,
+          "success_rate_with": 0.5225859004739336,
+          "n_with": 13504,
+          "success_rate_without": 0.5479063165365508,
+          "n_without": 7045,
+          "p_value": 0.0005555104793519849
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.025320416062617146,
+          "success_rate_with": 0.5225859004739336,
+          "n_with": 13504,
+          "success_rate_without": 0.5479063165365508,
+          "n_without": 7045,
+          "p_value": 0.0005555104793519849
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": -0.020631357149037743,
+          "success_rate_with": 0.5208782591648696,
+          "n_with": 10202,
+          "success_rate_without": 0.5415096163139074,
+          "n_without": 10347,
+          "p_value": 0.0030444403111043925
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.010522927054755327,
+          "success_rate_with": 0.5406236275801494,
+          "n_with": 2277,
+          "success_rate_without": 0.530100700525394,
+          "n_without": 18272,
+          "p_value": 0.3426980073231002
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": -0.008508354581308497,
+          "success_rate_with": 0.5301198042634568,
+          "n_with": 17779,
+          "success_rate_without": 0.5386281588447653,
+          "n_without": 2770,
+          "p_value": 0.40389295152426546
+        }
+      ]
+    },
+    "4": {
+      "n": 7190,
+      "pct_of_population": 0.0719,
+      "overall_success_rate": 0.46286509040333795,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.5782302739931127,
+          "success_rate_with": 1.0,
+          "n_with": 511,
+          "success_rate_without": 0.4217697260068873,
+          "n_without": 6679,
+          "p_value": 7.587432341387171e-141
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.559429991058995,
+          "success_rate_with": 0.9763113367174281,
+          "n_with": 591,
+          "success_rate_without": 0.4168813456584331,
+          "n_without": 6599,
+          "p_value": 1.6484909551766916e-150
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.546859496504142,
+          "success_rate_with": 0.9867549668874173,
+          "n_with": 302,
+          "success_rate_without": 0.43989547038327526,
+          "n_without": 6888,
+          "p_value": 1.1526149931100688e-77
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.40209091197286356,
+          "success_rate_with": 0.8306188925081434,
+          "n_with": 614,
+          "success_rate_without": 0.4285279805352798,
+          "n_without": 6576,
+          "p_value": 2.0929494349702358e-81
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.3918020551458234,
+          "success_rate_with": 0.7906382978723404,
+          "n_with": 1175,
+          "success_rate_without": 0.398836242726517,
+          "n_without": 6015,
+          "p_value": 5.199863061327372e-134
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.2738133272030279,
+          "success_rate_with": 0.6807351940095303,
+          "n_with": 1469,
+          "success_rate_without": 0.4069218668065024,
+          "n_without": 5721,
+          "p_value": 1.221191295389602e-78
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.23621544346072054,
+          "success_rate_with": 0.25253807106598986,
+          "n_with": 788,
+          "success_rate_without": 0.4887535145267104,
+          "n_without": 6402,
+          "p_value": 4.045105548761038e-36
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.23541855144443213,
+          "success_rate_with": 0.6326021934197408,
+          "n_with": 2006,
+          "success_rate_without": 0.39718364197530864,
+          "n_without": 5184,
+          "p_value": 4.3213512074128113e-72
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.22033261613423738,
+          "success_rate_with": 0.2774363476733977,
+          "n_with": 1139,
+          "success_rate_without": 0.4977689638076351,
+          "n_without": 6051,
+          "p_value": 1.3169315612989527e-42
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.2102242606120983,
+          "success_rate_with": 0.6147294589178357,
+          "n_with": 1996,
+          "success_rate_without": 0.4045051983057374,
+          "n_without": 5194,
+          "p_value": 1.0949566750376621e-57
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.1933389810814889,
+          "success_rate_with": 0.611244019138756,
+          "n_with": 1672,
+          "success_rate_without": 0.41790503805726714,
+          "n_without": 5518,
+          "p_value": 7.30693331454113e-44
+        },
+        {
+          "feature": "opener__cards_costing_3plus>=3",
+          "lift": -0.18174440714357198,
+          "success_rate_with": 0.291358024691358,
+          "n_with": 405,
+          "success_rate_without": 0.47310243183493,
+          "n_without": 6785,
+          "p_value": 1.0352084773684422e-12
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.1646196179485644,
+          "success_rate_with": 0.31420373027259685,
+          "n_with": 697,
+          "success_rate_without": 0.47882334822116124,
+          "n_without": 6493,
+          "p_value": 1.2011676844077947e-16
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.15816464143413755,
+          "success_rate_with": 0.5774079677256682,
+          "n_with": 1983,
+          "success_rate_without": 0.4192433262915306,
+          "n_without": 5207,
+          "p_value": 2.7648466675432764e-33
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.1509210268973591,
+          "success_rate_with": 0.5668305766651766,
+          "n_with": 2237,
+          "success_rate_without": 0.41590954976781747,
+          "n_without": 4953,
+          "p_value": 1.471001687352538e-32
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.1389114630829219,
+          "success_rate_with": 0.5745738636363636,
+          "n_with": 1408,
+          "success_rate_without": 0.43566240055344174,
+          "n_without": 5782,
+          "p_value": 6.95471598621066e-21
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.13606573906029445,
+          "success_rate_with": 0.3915204678362573,
+          "n_with": 3420,
+          "success_rate_without": 0.5275862068965518,
+          "n_without": 3770,
+          "p_value": 6.902011143344325e-31
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.11556221712217812,
+          "success_rate_with": 0.5617760617760618,
+          "n_with": 1036,
+          "success_rate_without": 0.44621384465388364,
+          "n_without": 6154,
+          "p_value": 5.146981226724695e-12
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.1122184887395496,
+          "success_rate_with": 0.3628205128205128,
+          "n_with": 780,
+          "success_rate_without": 0.4750390015600624,
+          "n_without": 6410,
+          "p_value": 2.9417217103473696e-09
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.1122184887395496,
+          "success_rate_with": 0.3628205128205128,
+          "n_with": 780,
+          "success_rate_without": 0.4750390015600624,
+          "n_without": 6410,
+          "p_value": 2.9417217103473696e-09
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.10783556591969673,
+          "success_rate_with": 0.3939043209876543,
+          "n_with": 2592,
+          "success_rate_without": 0.501739886907351,
+          "n_without": 4598,
+          "p_value": 1.3082194775740263e-18
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.10625146079163389,
+          "success_rate_with": 0.3919765984120351,
+          "n_with": 2393,
+          "success_rate_without": 0.49822805920366897,
+          "n_without": 4797,
+          "p_value": 1.6734968783222306e-17
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.10292335255783208,
+          "success_rate_with": 0.37384140061791965,
+          "n_with": 971,
+          "success_rate_without": 0.47676475317575173,
+          "n_without": 6219,
+          "p_value": 2.2033858138970914e-09
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.08884431943255472,
+          "success_rate_with": 0.3945945945945946,
+          "n_with": 1665,
+          "success_rate_without": 0.48343891402714934,
+          "n_without": 5525,
+          "p_value": 1.8491115426616727e-10
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.08684158189604102,
+          "success_rate_with": 0.3869179600886918,
+          "n_with": 902,
+          "success_rate_without": 0.4737595419847328,
+          "n_without": 6288,
+          "p_value": 1.0000251545526891e-06
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.0735759120115313,
+          "success_rate_with": 0.42773489486292254,
+          "n_with": 3757,
+          "success_rate_without": 0.5013108068744538,
+          "n_without": 3433,
+          "p_value": 4.11217793036184e-10
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": 0.060053400227296994,
+          "success_rate_with": 0.5139146567717996,
+          "n_with": 1078,
+          "success_rate_without": 0.4538612565445026,
+          "n_without": 6112,
+          "p_value": 0.0002664527632317525
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.054588181767714405,
+          "success_rate_with": 0.509208103130755,
+          "n_with": 1086,
+          "success_rate_without": 0.45461992136304064,
+          "n_without": 6104,
+          "p_value": 0.0008867182328315352
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.05391343049282943,
+          "success_rate_with": 0.4897393233499723,
+          "n_with": 3606,
+          "success_rate_without": 0.43582589285714285,
+          "n_without": 3584,
+          "p_value": 4.5579870634391396e-06
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.04830017989681612,
+          "success_rate_with": 0.5065502183406113,
+          "n_with": 687,
+          "success_rate_without": 0.4582500384437952,
+          "n_without": 6503,
+          "p_value": 0.01575118817324613
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": -0.04285391476573952,
+          "success_rate_with": 0.4531559072109333,
+          "n_with": 5561,
+          "success_rate_without": 0.4960098219766728,
+          "n_without": 1629,
+          "p_value": 0.0022833719309532773
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": -0.038007793889851926,
+          "success_rate_with": 0.46074532331713064,
+          "n_with": 6789,
+          "success_rate_without": 0.49875311720698257,
+          "n_without": 401,
+          "p_value": 0.1380079581168557
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": -0.03361229039447944,
+          "success_rate_with": 0.44490892803822035,
+          "n_with": 3349,
+          "success_rate_without": 0.4785212184326998,
+          "n_without": 3841,
+          "p_value": 0.004353945452646661
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": -0.03361229039447944,
+          "success_rate_with": 0.44490892803822035,
+          "n_with": 3349,
+          "success_rate_without": 0.4785212184326998,
+          "n_without": 3841,
+          "p_value": 0.004353945452646661
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": -0.03356410881903438,
+          "success_rate_with": 0.45045243875524166,
+          "n_with": 4531,
+          "success_rate_without": 0.48401654757427603,
+          "n_without": 2659,
+          "p_value": 0.005860528182598346
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": 0.016147081074265546,
+          "success_rate_with": 0.4766990291262136,
+          "n_with": 1030,
+          "success_rate_without": 0.46055194805194805,
+          "n_without": 6160,
+          "p_value": 0.33605564145851946
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.007753116302052554,
+          "success_rate_with": 0.4699367088607595,
+          "n_with": 632,
+          "success_rate_without": 0.46218359255870695,
+          "n_without": 6558,
+          "p_value": 0.7089064939499823
+        }
+      ]
+    },
+    "5+": {
+      "n": 1598,
+      "pct_of_population": 0.01598,
+      "overall_success_rate": 0.3354192740926158,
+      "effect_sizes": [
+        {
+          "feature": "opener__t1_premium_engine_cast",
+          "lift": 0.7084723148765844,
+          "success_rate_with": 1.0,
+          "n_with": 99,
+          "success_rate_without": 0.2915276851234156,
+          "n_without": 1499,
+          "p_value": 2.1504940674112957e-47
+        },
+        {
+          "feature": "opener__has_premium_one_drop_card",
+          "lift": 0.7056478405315615,
+          "success_rate_with": 1.0,
+          "n_with": 93,
+          "success_rate_without": 0.2943521594684385,
+          "n_without": 1505,
+          "p_value": 1.8571446313036763e-44
+        },
+        {
+          "feature": "opener__has_sol_ring",
+          "lift": 0.6627981947130883,
+          "success_rate_with": 0.9787234042553191,
+          "n_with": 47,
+          "success_rate_without": 0.3159252095422308,
+          "n_without": 1551,
+          "p_value": 2.5050527927407328e-21
+        },
+        {
+          "feature": "opener__accel_card_count>=2",
+          "lift": 0.5173385348938015,
+          "success_rate_with": 0.8333333333333334,
+          "n_with": 60,
+          "success_rate_without": 0.3159947984395319,
+          "n_without": 1538,
+          "p_value": 8.313460937453462e-17
+        },
+        {
+          "feature": "opener__has_tier_a_engine_card",
+          "lift": 0.44643131326254615,
+          "success_rate_with": 0.7318435754189944,
+          "n_with": 179,
+          "success_rate_without": 0.2854122621564482,
+          "n_without": 1419,
+          "p_value": 9.189435378697037e-33
+        },
+        {
+          "feature": "opener__has_noncreature_persistent_accel_card",
+          "lift": 0.3331772001583322,
+          "success_rate_with": 0.6227272727272727,
+          "n_with": 220,
+          "success_rate_without": 0.2895500725689405,
+          "n_without": 1378,
+          "p_value": 2.4839806296073246e-22
+        },
+        {
+          "feature": "opener__t1_accel_executable_now",
+          "lift": 0.2749594914620467,
+          "success_rate_with": 0.5492957746478874,
+          "n_with": 355,
+          "success_rate_without": 0.2743362831858407,
+          "n_without": 1243,
+          "p_value": 3.758736722438281e-22
+        },
+        {
+          "feature": "opener__interaction_density_2plus",
+          "lift": -0.2735779136557347,
+          "success_rate_with": 0.07142857142857142,
+          "n_with": 56,
+          "success_rate_without": 0.3450064850843061,
+          "n_without": 1542,
+          "p_value": 2.0486361693976944e-05
+        },
+        {
+          "feature": "opener__interaction_count>=2",
+          "lift": -0.2735779136557347,
+          "success_rate_with": 0.07142857142857142,
+          "n_with": 56,
+          "success_rate_without": 0.3450064850843061,
+          "n_without": 1542,
+          "p_value": 2.0486361693976944e-05
+        },
+        {
+          "feature": "opener__has_mox_family_card",
+          "lift": 0.26833976833976836,
+          "success_rate_with": 0.5540540540540541,
+          "n_with": 296,
+          "success_rate_without": 0.2857142857142857,
+          "n_without": 1302,
+          "p_value": 1.0816731588408413e-18
+        },
+        {
+          "feature": "opener__t1_any_engine_cast",
+          "lift": 0.25794492778772504,
+          "success_rate_with": 0.5463917525773195,
+          "n_with": 291,
+          "success_rate_without": 0.2884468247895945,
+          "n_without": 1307,
+          "p_value": 3.498500320678121e-17
+        },
+        {
+          "feature": "opener__interaction_only_hand",
+          "lift": -0.20146229739252994,
+          "success_rate_with": 0.17732558139534885,
+          "n_with": 344,
+          "success_rate_without": 0.3787878787878788,
+          "n_without": 1254,
+          "p_value": 2.370159243488407e-12
+        },
+        {
+          "feature": "opener__has_cheap_engine_card",
+          "lift": 0.19836255206030123,
+          "success_rate_with": 0.49517684887459806,
+          "n_with": 311,
+          "success_rate_without": 0.29681429681429683,
+          "n_without": 1287,
+          "p_value": 2.945832899317633e-11
+        },
+        {
+          "feature": "opener__has_creature_accel_card",
+          "lift": 0.18280196506002955,
+          "success_rate_with": 0.49145299145299143,
+          "n_with": 234,
+          "success_rate_without": 0.3086510263929619,
+          "n_without": 1364,
+          "p_value": 4.45186793595795e-08
+        },
+        {
+          "feature": "opener__t1_any_tutor_cast",
+          "lift": -0.14506585061182503,
+          "success_rate_with": 0.20496894409937888,
+          "n_with": 161,
+          "success_rate_without": 0.3500347947112039,
+          "n_without": 1437,
+          "p_value": 0.00021815653124700207
+        },
+        {
+          "feature": "opener__has_tutor_card",
+          "lift": -0.12460502889771652,
+          "success_rate_with": 0.2514395393474088,
+          "n_with": 521,
+          "success_rate_without": 0.37604456824512533,
+          "n_without": 1077,
+          "p_value": 7.596726915347073e-07
+        },
+        {
+          "feature": "opener__tutor_reaches_engine",
+          "lift": -0.11338636631299451,
+          "success_rate_with": 0.24935064935064935,
+          "n_with": 385,
+          "success_rate_without": 0.36273701566364386,
+          "n_without": 1213,
+          "p_value": 4.0345315239382674e-05
+        },
+        {
+          "feature": "opener__has_any_engine_card",
+          "lift": 0.11100737236676489,
+          "success_rate_with": 0.40794223826714804,
+          "n_with": 554,
+          "success_rate_without": 0.29693486590038315,
+          "n_without": 1044,
+          "p_value": 7.712312347804119e-06
+        },
+        {
+          "feature": "opener__tutor_count>=2",
+          "lift": -0.10954301075268816,
+          "success_rate_with": 0.22916666666666666,
+          "n_with": 48,
+          "success_rate_without": 0.3387096774193548,
+          "n_without": 1550,
+          "p_value": 0.11339325220717056
+        },
+        {
+          "feature": "opener__tutor_reaches_combo_piece",
+          "lift": -0.10920000000000002,
+          "success_rate_with": 0.25,
+          "n_with": 348,
+          "success_rate_without": 0.3592,
+          "n_without": 1250,
+          "p_value": 0.0001356197840132864
+        },
+        {
+          "feature": "opener__has_tier_b_engine_card",
+          "lift": -0.0990706265208596,
+          "success_rate_with": 0.24347826086956523,
+          "n_with": 115,
+          "success_rate_without": 0.3425488873904248,
+          "n_without": 1483,
+          "p_value": 0.030178114014121862
+        },
+        {
+          "feature": "opener__has_any_interaction_card",
+          "lift": -0.09471885758000764,
+          "success_rate_with": 0.2747826086956522,
+          "n_with": 575,
+          "success_rate_without": 0.36950146627565983,
+          "n_without": 1023,
+          "p_value": 0.00011858378771485172
+        },
+        {
+          "feature": "opener__t1_has_live_interaction",
+          "lift": -0.08842305037957215,
+          "success_rate_with": 0.25396825396825395,
+          "n_with": 126,
+          "success_rate_without": 0.3423913043478261,
+          "n_without": 1472,
+          "p_value": 0.04362647978757884
+        },
+        {
+          "feature": "opener__t1_accel_creature_only",
+          "lift": 0.08550942785465732,
+          "success_rate_with": 0.4088888888888889,
+          "n_with": 225,
+          "success_rate_without": 0.3233794610342316,
+          "n_without": 1373,
+          "p_value": 0.01179678896710957
+        },
+        {
+          "feature": "opener__engine_count>=2",
+          "lift": 0.08132557098074339,
+          "success_rate_with": 0.41379310344827586,
+          "n_with": 58,
+          "success_rate_without": 0.33246753246753247,
+          "n_without": 1540,
+          "p_value": 0.19781890467485863
+        },
+        {
+          "feature": "opener__tutor_cheap",
+          "lift": -0.0775434243176179,
+          "success_rate_with": 0.2692307692307692,
+          "n_with": 234,
+          "success_rate_without": 0.3467741935483871,
+          "n_without": 1364,
+          "p_value": 0.020278571769808577
+        },
+        {
+          "feature": "opener__distinct_colors_direct>=3",
+          "lift": -0.050905346135609264,
+          "success_rate_with": 0.32930298719772405,
+          "n_with": 1406,
+          "success_rate_without": 0.3802083333333333,
+          "n_without": 192,
+          "p_value": 0.16110578496488082
+        },
+        {
+          "feature": "opener__utility_land_ancient_tomb",
+          "lift": 0.03709698424215363,
+          "success_rate_with": 0.36585365853658536,
+          "n_with": 287,
+          "success_rate_without": 0.3287566742944317,
+          "n_without": 1311,
+          "p_value": 0.2279488482146212
+        },
+        {
+          "feature": "opener__utility_land_gemstone_caverns",
+          "lift": 0.03639327138268694,
+          "success_rate_with": 0.36482084690553745,
+          "n_with": 307,
+          "success_rate_without": 0.3284275755228505,
+          "n_without": 1291,
+          "p_value": 0.22477072523688751
+        },
+        {
+          "feature": "opener__all_wubg_direct",
+          "lift": -0.03553354815227605,
+          "success_rate_with": 0.3263246425567704,
+          "n_with": 1189,
+          "success_rate_without": 0.36185819070904646,
+          "n_without": 409,
+          "p_value": 0.18921334316690988
+        },
+        {
+          "feature": "opener__has_one_shot_accel_card",
+          "lift": 0.03549411838711708,
+          "success_rate_with": 0.36904761904761907,
+          "n_with": 84,
+          "success_rate_without": 0.333553500660502,
+          "n_without": 1514,
+          "p_value": 0.502436851275462
+        },
+        {
+          "feature": "opener__has_commander_relevant_creature_2plus",
+          "lift": 0.03537458217863748,
+          "success_rate_with": 0.3631123919308357,
+          "n_with": 347,
+          "success_rate_without": 0.32773780975219824,
+          "n_without": 1251,
+          "p_value": 0.21687126392367725
+        },
+        {
+          "feature": "opener__creature_count_in_hand>=2",
+          "lift": 0.03537458217863748,
+          "success_rate_with": 0.3631123919308357,
+          "n_with": 347,
+          "success_rate_without": 0.32773780975219824,
+          "n_without": 1251,
+          "p_value": 0.21687126392367725
+        },
+        {
+          "feature": "opener__all_wubg_potential",
+          "lift": 0.033071933391422226,
+          "success_rate_with": 0.33610223642172526,
+          "n_with": 1565,
+          "success_rate_without": 0.30303030303030304,
+          "n_without": 33,
+          "p_value": 0.6904718149082738
+        },
+        {
+          "feature": "opener__utility_land_cradle",
+          "lift": -0.032565532081377135,
+          "success_rate_with": 0.309375,
+          "n_with": 320,
+          "success_rate_without": 0.34194053208137715,
+          "n_without": 1278,
+          "p_value": 0.2698431860882347
+        },
+        {
+          "feature": "opener__utility_land_city_of_traitors",
+          "lift": -0.006809101962827857,
+          "success_rate_with": 0.3298245614035088,
+          "n_with": 285,
+          "success_rate_without": 0.33663366336633666,
+          "n_without": 1313,
+          "p_value": 0.8253315588165431
+        }
+      ]
+    }
+  }
+}
