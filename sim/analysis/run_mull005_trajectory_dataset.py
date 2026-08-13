@@ -40,9 +40,8 @@ def _flatten_grade(prefix, grade):
         f"{prefix}__mechanism": grade["mechanism"],
     }
     out.update({f"{prefix}__cost_{k}": v for k, v in grade["resource_cost"].items()})
-    if "forced_tutor_target" in grade:
-        out[f"{prefix}__forced_tutor_target"] = grade["forced_tutor_target"]
-        out[f"{prefix}__priority_variant"] = grade["priority_variant"]
+    if "search_label" in grade:
+        out[f"{prefix}__search_label"] = grade["search_label"]
     return out
 
 

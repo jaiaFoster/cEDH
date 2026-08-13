@@ -249,6 +249,21 @@ def _setup_gemstone_caverns(state):
 
 OCULUS_NAME = "Abhorrent Oculus"
 
+# MULL-005R (pod_and_battlefield_tutors.py): these five cards do NOTHING useful if cast through
+# the generic priority-class loop's normal payment path - Eldritch Evolution/Crop Rotation have
+# fixed (non-X) mana costs, so unlike Finale/Nature's Rhythm/Chord (real {X} symbols, already
+# skipped by the "X spells not modeled" check below) they would otherwise be silently cast for a
+# real card+mana cost with NO search performed and no additional cost (sacrifice) applied,
+# BEFORE develop_turn's dedicated forced_battlefield_tutor/forced_land_tutor step ever runs -
+# permanently consuming the card so the real mechanic can never fire that turn. All five are
+# reachable ONLY through their dedicated forced_* mechanic (see pod_and_battlefield_tutors.py),
+# exactly like Birthing Pod/Survival of the Fittest's ACTIVATIONS are forced-only (though casting
+# Pod/Survival THEMSELVES is normal - they're real permanents with standalone value once in play,
+# unlike these five one-shot search spells).
+BATTLEFIELD_SEARCH_ONLY = {
+    "Eldritch Evolution", "Finale of Devastation", "Nature's Rhythm", "Chord of Calling", "Crop Rotation",
+}
+
 
 def _card_class(name, cards):
     if name == OCULUS_NAME:
@@ -258,6 +273,8 @@ def _card_class(name, cards):
         # deck. Previously this was accidentally true (Oculus fell into an unhandled "other"
         # class with no priority bucket) rather than an explicit, tested rule - made explicit
         # here so it stays correct even if ENGINES/TUTORS classification ever changes.
+        return "uncastable_from_hand"
+    if name in BATTLEFIELD_SEARCH_ONLY:
         return "uncastable_from_hand"
     if name in COMMANDERS:
         return "commander"

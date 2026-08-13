@@ -38,7 +38,7 @@ def test_greedy_fizzles_but_bounded_search_finds_tutor_to_engine_line():
     assert best["tier"] == "C", best
     assert best["tier_engine"] == "Rhystic Study"
     assert best["mechanism"] == "tutor_to_engine"
-    assert best["forced_tutor_target"] == "Rhystic Study"
+    assert best["search_label"] == "tutor:Rhystic Study:DEFAULT_PRIORITY"
     assert tried > 1, "search should have tried more than just the greedy line"
 
 
@@ -46,8 +46,7 @@ def test_greedy_result_is_always_default_priority_no_forced_target():
     hand = ["Demonic Tutor", "Underground Sea", "Underground Sea"]
     library = ["Filler Land"] * 5 + ["Rhystic Study"] + ["Filler Land"] * 14
     greedy, best, tried = find_best_trajectory(hand, library, True, FAKE_CARDS, [])
-    assert greedy["forced_tutor_target"] is None
-    assert greedy["priority_variant"] == "DEFAULT_PRIORITY"
+    assert greedy["search_label"] == "greedy"
 
 
 def test_no_tutor_in_hand_only_tries_the_greedy_line():
