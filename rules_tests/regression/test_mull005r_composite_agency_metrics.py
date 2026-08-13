@@ -24,13 +24,15 @@ class _FakeState:
 BASE_M3 = {
     "total_mana": 5, "cards_in_hand": 1, "tutor_castable": False,
     "two_plus_engines_active": False,
+    "deterministic_win_available": False, "one_action_from_verified_win": False,
 }
 
 
-def _m3(has_live_interaction, free_or_alt_cost_interaction_live):
+def _m3(has_live_interaction, free_or_alt_cost_interaction_live, **combo_overrides):
     m = dict(BASE_M3)
     m["has_live_interaction"] = has_live_interaction
     m["free_or_alt_cost_interaction_live"] = free_or_alt_cost_interaction_live
+    m.update(combo_overrides)
     return m
 
 
@@ -71,3 +73,32 @@ def test_no_interaction_at_all_sets_neither_flag():
     assert result["resource_cost"]["engine_plus_live_free_interaction"] is False
     assert result["resource_cost"]["engine_plus_live_paid_interaction"] is False
     assert "interaction" not in result["mechanism"]
+
+
+def test_engine_plus_verified_combo_proximity_true_when_both_present():
+    # COMBO-001 / assignment section 11: verified combo proximity is an upside modifier ON TOP OF
+    # a real destination, sourced only from the existing deterministic_win_available /
+    # one_action_from_verified_win flags (themselves backed by the verified-combo registry).
+    state = _FakeState()
+    m3 = _m3(has_live_interaction=False, free_or_alt_cost_interaction_live=False,
+              one_action_from_verified_win=True)
+    result = _finish("A", "Rhystic Study", 2, state, {}, m3, m3, m3)
+    assert result["resource_cost"]["engine_plus_verified_combo_proximity"] is True
+
+
+def test_verified_combo_proximity_without_a_real_destination_does_not_set_the_flag():
+    # A D/F-tier hand (no mechanism) must not be credited "engine + combo proximity" - there is no
+    # engine. Combo proximity alone is never the primary keep destination.
+    state = _FakeState()
+    state.cast_log = []
+    m3 = _m3(has_live_interaction=False, free_or_alt_cost_interaction_live=False,
+              deterministic_win_available=True)
+    result = _finish("D", None, None, state, {}, m3, m3, m3)
+    assert result["resource_cost"]["engine_plus_verified_combo_proximity"] is False
+
+
+def test_no_combo_proximity_sets_the_flag_false():
+    state = _FakeState()
+    m3 = _m3(has_live_interaction=False, free_or_alt_cost_interaction_live=False)
+    result = _finish("A", "Rhystic Study", 2, state, {}, m3, m3, m3)
+    assert result["resource_cost"]["engine_plus_verified_combo_proximity"] is False

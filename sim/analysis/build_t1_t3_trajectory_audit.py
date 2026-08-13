@@ -562,11 +562,11 @@ FINDINGS = [
         ),
         "legal_prerequisites": "N/A",
         "earliest_relevant_turn": None,
-        "status": "CANDIDATE",
+        "status": "VERIFIED",
         "already_represented_in_mull005": False,
-        "mull005_mismodel_or_omission": "combo_proximity metrics (trajectory_metrics.py's existing combo-adjacent tags) already exist from SOLO-003R and are reused unchanged; no new verified combo was found this phase among the assignment's named example cards.",
-        "expected_direction_of_bias": "None - this audit did not discover a new deterministic combo to add.",
-        "resolution": "Reuse existing verified-combo infrastructure (interactions/verified/) as the sole source of truth for combo-proximity credit; no new speculative combo lines added.",
+        "mull005_mismodel_or_omission": "combo_proximity metrics (trajectory_metrics.py's existing combo-adjacent tags) already exist from SOLO-003R and are reused unchanged; no new verified combo was found this phase among the assignment's named example cards. MULL-005's trajectory_grading.py never surfaced combo proximity as a scored signal at all (neither primary nor modifier) - assignment section 11 requires it be a real, disclosed UPSIDE MODIFIER, not silently absent.",
+        "expected_direction_of_bias": "None on tier assignment (grade_trajectory never reads either flag, so combo proximity cannot promote a hand to a higher tier by itself) - only adds visibility into which already-tiered hands additionally have verified combo proximity.",
+        "resolution": "Reuse existing verified-combo infrastructure (interactions/verified/, deterministic_win_available / one_action_from_verified_win) as the sole source of truth for combo-proximity credit; no new speculative combo lines added. Wired into trajectory_grading.py's _finish() as a new resource_cost flag, engine_plus_verified_combo_proximity = has_real_destination and (deterministic_win_available or one_action_from_verified_win) - deliberately gated on already having a real destination (has_real_destination, same gate used by ENGINE_PLUS_LIVE_FREE_INTERACTION/PAID_INTERACTION) so combo proximity is additive upside on a real trajectory, never a standalone keep destination or a tier driver on its own. 3 regression tests added in test_mull005r_composite_agency_metrics.py.",
     },
 ]
 

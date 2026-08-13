@@ -238,6 +238,14 @@ def _finish(tier, tier_engine, tier_turn, state, cards, m1, m2, m3):
     interaction_is_free = m3["has_live_interaction"] and m3["free_or_alt_cost_interaction_live"]
     interaction_is_paid_only = m3["has_live_interaction"] and not m3["free_or_alt_cost_interaction_live"]
     has_real_destination = tier not in ("D", "F") and mechanism != "none"
+    # MULL-005R (t1_t3_trajectory_audit.json COMBO-001, assignment section 11): verified combo
+    # proximity is an UPSIDE MODIFIER on top of a real destination, never a destination or tier
+    # driver on its own - grade_trajectory() above never reads either flag, so a hand cannot reach
+    # a higher tier from combo proximity alone. Sourced entirely from the existing verified-combo
+    # registry (interactions/verified/, deterministic_win_available / one_action_from_verified_win
+    # in opening_hand_metrics.snapshot_metrics) - no new speculative combo line was added this
+    # phase (COMBO-001 checked the assignment's five named example cards and found none).
+    verified_combo_proximity = m3["deterministic_win_available"] or m3["one_action_from_verified_win"]
     if m3["has_live_interaction"]:
         if mechanism == "none":
             mechanism = "interaction_only"
@@ -261,6 +269,7 @@ def _finish(tier, tier_engine, tier_turn, state, cards, m1, m2, m3):
         "commander_access": tier_engine == "Thrasios, Triton Hero",
         "engine_plus_live_free_interaction": has_real_destination and interaction_is_free,
         "engine_plus_live_paid_interaction": has_real_destination and interaction_is_paid_only,
+        "engine_plus_verified_combo_proximity": has_real_destination and verified_combo_proximity,
     }
     return {
         "tier": tier, "tier_engine": tier_engine, "tier_turn": tier_turn,

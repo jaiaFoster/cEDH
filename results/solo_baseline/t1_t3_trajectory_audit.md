@@ -2,7 +2,7 @@
 
 Subject: `tymna-thrasios-treefarm-v1` (deck_hash `4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a`), matches the frozen 98 used throughout SOLO-002 through MULL-005 - no discrepancy found, per section 0.
 
-Findings: 25 total — VERIFIED: 17, REJECTED: 1, CANDIDATE: 7
+Findings: 25 total — VERIFIED: 18, REJECTED: 1, CANDIDATE: 6
 
 Every finding below is grounded in real Oracle text pulled from `data/cards_cache/oracle-2026-08-12` for this exact deck (see `t1_t3_trajectory_audit.json` for the structured version). Status legend: VERIFIED (confirmed, either a real correction or confirmed-already-correct), CANDIDATE (mechanically real, deferred as low-T1-T3-frequency, disclosed), BLOCKED (unreachable given this simulator's scope), REJECTED (investigated, not material).
 
@@ -295,14 +295,14 @@ Every finding below is grounded in real Oracle text pulled from `data/cards_cach
 **Resolution:** SNAP_KEEP rule for a premium one-drop now additionally requires the source producing its own color to already be present/reachable (color-coherence check) - see structural_hand_grade_r() below.
 
 ## COMBO-001 — Devoted Druid, Swift Reconfiguration, Hazel's Brewmaster, Enduring Vitality, Training Grounds, Shang-Chi, Master of Kung Fu
-**Status:** CANDIDATE
+**Status:** VERIFIED
 
 **Mechanic:** None of these five form a VERIFIED deterministic combo among only these cards within a T1-T3 window per this project's existing interactions/verified/ registry - checked against load_deterministic_combos() (INT-*.json files with conditional=False). This audit does not invent new combo lines; it only checks what's already verified.
 
 **Legal prerequisites:** N/A
 **Earliest relevant turn:** None
 **Already represented in MULL-005:** False
-**MULL-005 mis-model/omission:** combo_proximity metrics (trajectory_metrics.py's existing combo-adjacent tags) already exist from SOLO-003R and are reused unchanged; no new verified combo was found this phase among the assignment's named example cards.
-**Expected direction of bias:** None - this audit did not discover a new deterministic combo to add.
-**Resolution:** Reuse existing verified-combo infrastructure (interactions/verified/) as the sole source of truth for combo-proximity credit; no new speculative combo lines added.
+**MULL-005 mis-model/omission:** combo_proximity metrics (trajectory_metrics.py's existing combo-adjacent tags) already exist from SOLO-003R and are reused unchanged; no new verified combo was found this phase among the assignment's named example cards. MULL-005's trajectory_grading.py never surfaced combo proximity as a scored signal at all (neither primary nor modifier) - assignment section 11 requires it be a real, disclosed UPSIDE MODIFIER, not silently absent.
+**Expected direction of bias:** None on tier assignment (grade_trajectory never reads either flag, so combo proximity cannot promote a hand to a higher tier by itself) - only adds visibility into which already-tiered hands additionally have verified combo proximity.
+**Resolution:** Reuse existing verified-combo infrastructure (interactions/verified/, deterministic_win_available / one_action_from_verified_win) as the sole source of truth for combo-proximity credit; no new speculative combo lines added. Wired into trajectory_grading.py's _finish() as a new resource_cost flag, engine_plus_verified_combo_proximity = has_real_destination and (deterministic_win_available or one_action_from_verified_win) - deliberately gated on already having a real destination (has_real_destination, same gate used by ENGINE_PLUS_LIVE_FREE_INTERACTION/PAID_INTERACTION) so combo proximity is additive upside on a real trajectory, never a standalone keep destination or a tier driver on its own. 3 regression tests added in test_mull005r_composite_agency_metrics.py.
 
