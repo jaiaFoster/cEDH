@@ -753,6 +753,22 @@ for provenance, not deleted.
 
 # SIM-001 SOLO-003 — Early-Game Trajectory & Mulligan Quality Audit (Part A: Trajectory Census)
 
+> **⚠️ STATUS: `SUPERSEDED_PENDING_CORRECTNESS_RERUN`.** Review of this section's commit found
+> three semantic bugs: (1) `total_mana` in the failure classifier and the `t3_any_strong_state`
+> headline was computed from post-cast LEFTOVER mana, not the turn's starting capacity, so a hand
+> that spent its whole turn productively could still be labeled `insufficient_mana`; (2) combo
+> proximity conflated a genuine tutor-backed or mana-backed "one action from a win" with a
+> topdeck-dependent one, and counted a merely-in-hand (not castable) tutor as "live," inflating
+> `credible_win_pressure`; (3) Tymna's attack-capacity metric counted summoning-sick creatures
+> (including a same-turn Tymna) as able to attack. **Every number below that depends on
+> `total_mana`, combo-proximity tiering, or Tymna's attack capacity is invalidated** - this
+> includes the headline 56.7% two-land strong-state rate, the 33.7% credible-win-pressure figure,
+> the 64.9% insufficient-mana figure, and the 36.0% genuinely-nonfunctional-hand figure. The
+> corrected rerun, with all three bugs fixed, Kinnan's mana-doubling trigger implemented, and a
+> newly-discovered commander cast-order non-determinism bug also fixed, is in the
+> **"SIM-001 SOLO-003R"** section below. This section and its `solo003_*.json` files are retained
+> for provenance only, per standing instruction not to delete superseded work.
+
 Builds on SOLO-002R's corrected mana/rules engine. Per the engagement's own central correction:
 **this section does not use "any engine active" or "Tymna supported" as headline success
 measures.** Every finding below is built from `sim/analysis/trajectory_metrics.py`'s velocity/
@@ -1018,3 +1034,254 @@ phase rather than silently skipped:
 All trajectory-census and achievable-search files carry `run_class: DECK_BACKED_GOLDFISH`
 provenance (`subject_deck_hash`, `subject_deck_card_count`, `commander_identities`) per
 `docs/RUN_CLASSIFICATION.md`. Regression suite: 63 passed, 3 skipped (pre-existing, unrelated).
+
+---
+
+# SIM-001 SOLO-003R — Metric Repair & Corrected Trajectory Census
+
+A targeted repair pass on SOLO-003 Part A, in direct response to a code review of that section's
+commit. The review found three real semantic bugs (two of them contaminating headline findings),
+requested a **surgical metric repair, not another redesign**, plus implementing Kinnan's
+mana-doubling trigger before any land-density conclusions, then rerunning the census before
+starting mulligan-policy derivation. This section is exactly that: the four fixes, a
+fifth fix discovered while validating the rerun, and the corrected 200,000-hand-plus census.
+`run_class: DECK_BACKED_GOLDFISH` throughout, same subject deck/hash as above.
+
+## What was actually wrong
+
+**1. Mana capacity vs. utilization vs. shortfall, conflated into one number.**
+`snapshot_metrics()`'s `total_mana` was `state.total_mana_value()` - LEFTOVER mana, queried
+*after* `develop_turn()` had already spent the turn's mana on real casts - not the turn's
+starting capacity. A hand that goldfished T1 dork → T2 engine → T3 commander, spending nearly
+every mana it had on genuinely productive actions, could finish T3 with 0-1 untapped mana and get
+labeled `insufficient_mana`. That is mana *utilization*, not a mana *failure*. Worse, this same
+leftover value silently fed `t3_strong_mana_state` (and therefore `t3_any_strong_state`, the
+metric behind the disputed 56.7% two-land headline), `t3_stalled`,
+`tutor_plus_resources_to_deploy`, `no_proactive_development`, `color_failure`,
+`interaction_heavy_slow_hand`, `genuinely_nonfunctional_hand`, and SOLO-002R's own
+`classify_failure_mode` - not just the one outcome tag the review quoted. Fixing only that one
+tag would have left the two-land headline sitting on the same flawed value it was raised to
+re-validate, so the fix went to the root: `snapshot_metrics()` now reads `state.turn_start_mana`/
+`state.turn_start_colors` (captured right after the land drop, before any casting - exactly the
+capacity quantity the surrounding code's own comments already described wanting, but never
+actually used) for `total_mana`/`colors_available`. The old leftover value is preserved,
+explicitly named, as `mana_remaining_unused`/`colors_remaining_unused`, for anything that
+specifically wants it. A genuinely new third concept was added: `mana_shortfall` - true only when
+a desirable card actually in hand (a tutor, an engine of any tier, or an interaction spell) was
+uncastable even against the turn's *full* capacity spent on nothing else. Only this third
+quantity is real evidence of a mana bottleneck; capacity and utilization are not. (An early
+version of this check also treated a still-uncast commander sitting in the command zone as
+"desirable" - dropped after testing showed it fires on nearly every hand that hasn't assembled
+all four commander colors by T1-T3, which is normal and not a bottleneck finding; commander
+affordability is already tracked exactly by its own dedicated `{name}_castable` field.)
+`classify_trajectory_failure`'s tags are renamed accordingly: `insufficient_mana`/
+`insufficient_persistent_mana` (leftover-based) are replaced by `low_mana_capacity`
+(capacity-based) and `mana_shortfall` (the real bottleneck signal).
+
+**2. Combo proximity inflated "credible win pressure."** Two bugs stacked here. First,
+`has_tutor_live` counted a tutor merely *sitting in hand* (`tutor_candidates_in_hand`) as
+equivalent to a tutor that was actually *castable* (`tutor_live`) - exactly the live-vs-present
+distinction this project has enforced everywhere else, defeated by one stray `or`. Second, the
+single `one_action_away` tier collapsed three different situations into one label, and
+`one_action_from_verified_win` (feeding "credible win pressure") counted all of them: a missing
+piece already seen and only blocked by mana (a real, execution-dependent-only-on-mana signal); a
+missing, unseen piece a *live, combo-reaching* tutor could fetch this turn (a real, concrete
+action); and a missing, unseen piece with no such tutor, requiring a natural topdeck of the exact
+card (a much weaker signal). All three were reported as "one action away." Fixed by splitting into
+`one_mana_step_from_win` / `one_tutor_step_from_win` / `one_draw_step_from_win`, requiring a
+counted tutor's own target-class reach to actually include `combo_piece` (a land-only tutor like
+Sowing Mycospawn cannot fetch a creature combo piece and must not be treated as if it could), and
+redefining `one_action_from_verified_win` to exclude the draw-dependent case entirely.
+
+**3. Tymna's attack capacity ignored summoning sickness.** `tymna_attack_capacity()` said it
+measured "creatures able to attack" but called `state.creature_count()`, which deliberately
+includes summoning-sick creatures (correct for its other uses - Gaea's Cradle's per-creature mana
+output, Birthing Pod/Survival of the Fittest sacrifice-fodder legality - none of which care about
+attack eligibility). A same-turn Tymna, or a same-turn creature next to an older Tymna, was being
+counted as an active attacker. Fixed with a new `HandState.attack_eligible_creature_count()`
+(controlled continuously since the start of the turn - this decklist has no haste effects, so
+`entered_turn != state.turn` is the complete legality check), wired into
+`tymna_attack_capacity()`, `_tier_c_supported()`'s Tymna branch, and the
+`tymna_supported`/`tymna_creatures_for_attack` fields SOLO-003's own `commander_conversion_hand`
+family tag depends on. `creature_count()` itself is unchanged - still correct for the uses that
+don't care about sickness.
+
+**4. Kinnan, Bonder Prodigy's mana-doubling trigger, implemented.** Real Oracle text: "Whenever
+you tap a nonland permanent for mana, add one mana of any type that permanent produced" - a
+triggered ability with no cost or summoning-sickness check on Kinnan herself, only requiring
+Kinnan on the battlefield. Now modeled in `available_sources()` by doubling a nonland mana
+permanent's per-tap count while keeping its color set, explicitly excluding lands (Gaea's Cradle
+is a land, untouched) and Elvish Spirit Guide (never a permanent - a zero-cost hand ability). This
+was flagged as a prerequisite for trusting any land-density conclusion, since Kinnan being present
+but its mana-doubling absent would have made "the deck needs more mana" a conclusion drawn from a
+model that doesn't know one of the deck's own primary mana engines is under-producing.
+
+**5. A newly-discovered non-determinism bug, found while validating this rerun.** Running the
+*unmodified* pre-fix code twice with the identical `--seed 42` produced substantially different
+results (Tymna's population-wide deployment rate swung from 60.5% to 70.0% across two runs of the
+same code). Root cause: `develop_turn()`'s commander-casting branch built its candidate list via
+`list(state.command_zone)` - iterating a bare Python `set` of strings, whose iteration order
+depends on the interpreter's per-process string-hash seed (randomized by default; not fixed by
+`random.Random(seed)`). When both commanders were castable but the turn's mana could only pay for
+one, which one won the tie was silently process-dependent. This predates the current repair pass
+and affects every prior census's commander-adjacent numbers, not just this one. Fixed by iterating
+`COMMANDERS`' fixed declared order instead of the raw set; verified reproducible across 5+
+consecutive same-seed reruns before and after. Devoted Druid's second-tap untap ability remains
+un-modeled, as before - flagged by the review as a caution for mana-density conclusions specifically,
+not one of the required fixes, and left out of this surgical pass.
+
+All five fixes are covered by 14 new regression tests in
+`rules_tests/regression/test_solo003r_metric_fixes.py` (77 total regression tests pass, up from
+63).
+
+## Corrected numbers
+
+**Scale**: 100,000 hands on the play + 100,000 hands on the draw (keep-everything), seed 42,
+~72-74s each (~1,360-1,400 hands/sec). Achievable-search supplement: 15,000 hands, seed 42, on
+the play, ~59s (avg. 21.7 lines explored/hand).
+
+### A. Trajectory table (T1 → T2 → T3), corrected
+
+| Metric | On the play | On the draw | (was, SOLO-003) |
+|---|---|---|---|
+| T1: any Tier-A engine cast | 6.3% | 7.7%* | 6.3% / 7.1% |
+| T1: engine deployed (any tier) | 18.6% | 23.2% | 18.6% |
+| T3: strong card-advantage state | 18.1% | 21.4% | 18.1% / 21.4% |
+| T3: strong mana state | 25.3%\*\* | 30.3%\*\* | 7.4% / 7.7% |
+| T3: strong conversion state | 1.0% | 1.3% | 1.0% / 1.3% |
+| T3: strong interaction state | 5.5% | 6.8% | 5.5% / 6.7% |
+| T3: strong optionality (2+ at once) | 7.1% | 9.8% | 2.5% / 3.4% |
+| **T3: credible win pressure** | **3.1%** | **4.1%** | **33.7% / 38.5%** |
+| **T3: any strong state** | **43.8%** | **51.1%** | **49.9% / 55.6%** |
+| T3: stalled | 26.9% | 19.5% | 45.3% / 39.9% |
+
+\* T1 numbers are structurally unaffected by the capacity/shortfall or combo fixes and match the
+prior census within noise (Tymna/commander-adjacent T1 numbers can still shift slightly - see fix
+#5). \*\* `t3_strong_mana_state` rose because it now checks real starting capacity
+(`total_mana >= land_count + 2`) instead of leftover mana that was mechanically suppressed by
+whatever the hand had already cast - the metric now measures what it always claimed to measure.
+
+**Credible win pressure and strong-mana-state both moved in the direction the review predicted**:
+win pressure collapsed from a hugely inflated 33.7%/38.5% to a real 3.1%/4.1% once the
+draw-dependent case was excluded, and strong-mana-state rose because it's no longer artificially
+suppressed by productive spending. **T3: any strong state fell from 49.9%/55.6% to 43.8%/51.1%**
+- net lower, because the credible-win-pressure collapse outweighs the strong-mana-state rise.
+
+### B. Failure taxonomy, corrected
+
+| Outcome tag | On the play (was) |
+|---|---|
+| `stranded_tutor` | 60.2% (60.2%) |
+| `stranded_or_unsupported_engine` | 56.3% (56.3%) |
+| **`mana_shortfall`** (real bottleneck evidence - replaces `insufficient_mana`) | **49.8%** (was 64.9% as `insufficient_mana`) |
+| `development_but_no_compounding_value` | 40.0% (18.2%) |
+| `color_failure` | 18.5% (12.8%) |
+| `no_proactive_development` | 18.4% (55.7%) |
+| **`low_mana_capacity`** (capacity-based, replaces the old leftover check) | **15.8%** |
+| `resource_destructive_acceleration_no_payoff` | 7.6% (6.5%) |
+| `flooded_action_light` | 1.3% (1.3%) |
+
+Causal diagnosis: `mana_shortfall` 49.8% (was `insufficient_persistent_mana` 64.9%,
+tautologically matching the old outcome tag), `no_second_land` 24.9%. **Mana shortfall is still
+this deck's single largest causal tag - the finding survives, at a materially lower and now
+methodologically defensible rate** (49.8% vs. the old 64.9%, and now backed by an actual
+"a desirable card was uncastable even at full capacity" check rather than a leftover-mana proxy).
+`no_proactive_development` fell sharply (55.7% → 18.4%) because it previously double-triggered off
+the same leftover-mana confusion at T1/T2; it's now measuring real early inaction.
+
+### C. Land-count stratification, corrected - the central finding survives
+
+| Opening-hand lands | % of population | T3 strong-state (play) | (was) | T3 strong-state (draw) | (was) |
+|---|---|---|---|---|---|
+| 0 | 9.7% | 20.9% | 23.5% | 31.5% | 33.0% |
+| 1 | 28.0% | 43.1% | 47.0% | 51.6% | 53.9% |
+| **2** | **33.0%** | **50.8%** | **56.7%** | **57.0%** | **60.6%** |
+| 3 | 20.5% | 47.3% | 55.0% | 53.1% | 59.9% |
+| 4 | 7.2% | 39.1% | 51.3% | 46.3% | 58.3% |
+| 5+ | 1.6% | 29.2% | 47.5% | 33.5% | 52.1% |
+
+**The review's own suspicion was right: the shape of the curve survives, even though every
+absolute number is lower.** Two lands is still the peak (50.8% play / 57.0% draw), three is still
+the closest near-equivalent (47.3%/53.1%), and the decline from 3→4→5+ is still monotonic in both
+directions. The magnitude of the peak is smaller than the old 56.7%/60.6% (unsurprising - a chunk
+of the old number was the now-removed draw-dependent combo-pressure inflation), but **"two lands,
+three as an acceptable near-equivalent, four or more as a real cost" is unchanged as a
+conclusion.** One-land-with-T1-acceleration is still a real, large effect: 60.9% strong-state rate
+with T1 acceleration vs. 22.5% without - if anything a *wider* gap than the old 56.0%/36.6%.
+
+### D. Two-land audit, corrected
+
+Overall strong-state rate 50.8% (was 56.7%); **49.2% of two-land hands are still "deceptive"**
+(was 43.3% - deceptive-hand share rose because the strong-state bar dropped along with the
+combo-pressure fix). Full color coverage: 55.4% strong-state with full color vs. 42.7% color-screwed
+- a real, larger gap than the old census found (57.4% vs. 56.5%, "barely moves the needle") - color
+completeness matters more for two-land hands than the buggy version suggested, since it's no
+longer being drowned out by inflated combo-pressure noise. Engine online by T2: 69.3% (69.3%,
+unchanged - this metric never depended on the buggy fields).
+
+### E. Tymna and Thrasios, corrected
+
+Tymna: `not_deployed` 60.3%, `attack_capacity_medium` 18.3%, `attack_capacity_low` 19.5%,
+`attack_capacity_high` 1.9% (was 16.9%/4.8%/18.0% respectively - `attack_capacity_low` rose
+sharply and `attack_capacity_high` fell sharply, exactly as expected once summoning-sick
+creatures stopped counting as attackers). `commander_conversion_hand` (a commander online with
+real, sickness-respecting productivity) fell from 41.1% to 37.0% for the same reason. Thrasios
+productivity: 2.8% play / 3.5% draw (was 2.7%/2.7%) - materially unchanged, since Thrasios's own
+`{4}` activation check never depended on the buggy fields.
+
+### F. Achievable-search supplement, corrected (15,000 hands)
+
+| Target | policy_realized | best_known_achievable | gap | (old gap) |
+|---|---|---|---|---|
+| T1 premium engine | 6.1% | 6.7% | 0.6pp | 0.6pp |
+| T1 any meaningful development | 25.3% | 31.2% | 5.9pp | 6.0pp |
+| T2 engine | 56.4% | 61.8% | 5.3pp | 5.3pp |
+| T3 Tymna supported | 35.3% | 44.8% | 9.6pp | 8.7pp |
+| T3 Thrasios activation | 2.7% | 4.7% | 2.0pp | 2.0pp |
+| T3 deterministic win | 0.3% | 0.9% | 0.6pp | 0.6pp |
+
+Gaps are essentially unchanged from the old census (this search targets rules-state facts -
+engine/commander/combo presence - that were never built on the buggy leftover-mana or
+combo-proximity fields), confirming the sequencing-matters finding is independent of the metric
+repair: the greedy policy remains a reasonable, not-wildly-suboptimal heuristic, and a hand should
+not be written off as incapable purely because this one policy chose a different legal line.
+
+## What this changes about the practical findings
+
+- **"Mana remains this deck's dominant structural bottleneck" survives, at a corrected,
+  defensible magnitude.** `mana_shortfall` (49.8%, the real "a desirable card failed specifically
+  because mana generation was insufficient" signal) is still the largest single outcome/causal
+  tag, materially lower than the old 64.9% but built on an actual bottleneck check now instead of
+  a leftover-mana proxy that any productive turn would trip. Kinnan's mana-doubling is now
+  modeled, so this conclusion no longer rests on a model that's blind to one of the deck's own
+  central mana engines.
+- **"Two lands is empirically the peak, three a near-equivalent, four+ a real cost" survives
+  unchanged as a conclusion**, at corrected magnitudes (50.8%/57.0% peak vs. the old 56.7%/60.6%).
+  This was the review's own stated expectation, and it held.
+- **"One land plus real T1 acceleration is close to an average two-land keep" survives and is
+  slightly stronger** (60.9% vs. 22.5%, a 38.4-point gap, vs. the old 56.0%/36.6%, a 19.4-point
+  gap).
+- **"33.7% credible win pressure" and "56.7% two-land strong-state rate" are retracted as stated.**
+  The corrected figures are 3.1% and 50.8% respectively - both real numbers now, not artifacts,
+  but neither should be cited at their old magnitude going forward.
+- **"64.9% insufficient mana" and "36.0% genuinely nonfunctional" are retracted as stated.** The
+  corrected figures are `mana_shortfall` 49.8% and `genuinely_nonfunctional_hand` 14.1%
+  respectively (down sharply, since that tag's `total_mana < 2` check was previously almost never
+  false under the old leftover semantics - most hands spend below 2 mana leftover at some point
+  even when doing well).
+- **A new, disclosed reproducibility caveat**: every prior census run (SOLO-002/002R/003, not
+  just this one) was subject to the commander cast-order non-determinism described in fix #5.
+  Metrics that never route through a commander-casting tie (land-count population shares, T1
+  engine/acceleration rates, the mana/combo fixes themselves) are unaffected. Metrics sensitive to
+  which commander wins a tied cast (Tymna's exact tier split, `commander_conversion_hand`'s exact
+  rate) carry additional historical uncertainty in the pre-SOLO-003R files beyond what's disclosed
+  above - not something this repair pass re-litigates for already-superseded sections, but worth
+  knowing before treating any single historical number as more precise than it was.
+
+## Scope note
+
+This remains a **surgical metric repair**, not a new phase. Part B/C (mulligan-heuristic
+derivation + London mulligan simulation), section 15/16 (feature-tradeoff analysis and
+data-derived clustering), and the paired land/mana-density ablations are still not run - now
+formally unblocked by this repair, per the review's own instruction to fix-then-rerun before
+starting mulligan-policy derivation.
