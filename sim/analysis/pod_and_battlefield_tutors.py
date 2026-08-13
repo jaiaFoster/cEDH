@@ -101,6 +101,14 @@ def try_activate_survival(state, cards, discard_name, target_name):
     plan = _try_pay(state, gen, pips)
     if plan is None:
         return False
+    # Elvish Spirit Guide is a real Creature (type line "Creature — Elf Spirit"), so it's a legal
+    # Survival discard target by card type - but it is ALSO this engine's only hand-based mana
+    # source ("Exile this card from your hand: Add {G}."). A payment plan that pays this
+    # activation's own {G} cost by exiling discard_name itself is illegal: the card would already
+    # be gone from hand by the time the discard cost needs to be paid, so it can't fund its own
+    # discard. Reject rather than double-remove it from state.hand.
+    if discard_name == "Elvish Spirit Guide" and any(ref == "__esg_virtual__" for ref, _ in plan):
+        return False
     _commit_payment(state, plan)
     state.hand.remove(discard_name)
     state.graveyard.append(discard_name)

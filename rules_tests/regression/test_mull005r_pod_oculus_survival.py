@@ -31,6 +31,7 @@ FAKE_CARDS = {
     "Faerie Mastermind": {"name": "Faerie Mastermind", "type": "Creature — Faerie Rogue", "mana_cost": "{1}{U}", "cmc": 2},
     "Crop Rotation": {"name": "Crop Rotation", "type": "Instant", "mana_cost": "{G}", "cmc": 1},
     "Gaea's Cradle": {"name": "Gaea's Cradle", "type": "Legendary Land", "mana_cost": "", "cmc": 0},
+    "Elvish Spirit Guide": {"name": "Elvish Spirit Guide", "type": "Creature — Elf Spirit", "mana_cost": "{2}{G}", "cmc": 0},
     "Filler Land": {"name": "Filler Land", "type": "Land", "mana_cost": "", "cmc": 0},
 }
 
@@ -153,6 +154,35 @@ def test_survival_requires_a_discardable_creature_card():
     state.lands.append(LandInPlay("Tropical Island", 1, tapped=False))
     state.nonland_perms.append(Perm("Survival of the Fittest", 1, False))
     assert not try_activate_survival(state, FAKE_CARDS, "Badgermole Cub", "Faerie Mastermind")
+
+
+def test_survival_cannot_discard_elvish_spirit_guide_when_esg_is_the_only_green_source():
+    # Regression for a real crash found running the corrected engine at scale (MULL-005R dataset
+    # generation, seed=1005): Elvish Spirit Guide is a real Creature (type line "Creature — Elf
+    # Spirit"), so it passes Survival's "discardable creature" type check - but it is ALSO this
+    # engine's only hand-based mana source ("Exile this card from your hand: Add {G}."). With no
+    # other green source, paying Survival's {G} activation cost would have to exile ESG for mana,
+    # after which state.hand.remove(discard_name) crashed trying to remove it a second time. The
+    # fix rejects this specific combination rather than double-removing the card.
+    state = _state(["Elvish Spirit Guide"], ["Faerie Mastermind"] + ["Filler Land"] * 10, 2)
+    # deliberately NO green land/dork on the battlefield - ESG is the only way to produce {G}.
+    state.nonland_perms.append(Perm("Survival of the Fittest", 1, False))
+    assert not try_activate_survival(state, FAKE_CARDS, "Elvish Spirit Guide", "Faerie Mastermind")
+    assert "Elvish Spirit Guide" in state.hand, "a rejected activation must not have mutated state at all"
+    assert "Faerie Mastermind" in state.library
+
+
+def test_survival_can_discard_a_different_creature_while_paying_with_esg():
+    # The conflict is specific to discarding ESG itself while ALSO needing ESG for mana - paying
+    # with ESG while discarding a DIFFERENT creature is perfectly legal and must still work.
+    state = _state(["Elvish Spirit Guide", "Badgermole Cub"], ["Faerie Mastermind"] + ["Filler Land"] * 10, 2)
+    state.nonland_perms.append(Perm("Survival of the Fittest", 1, False))
+    ok = try_activate_survival(state, FAKE_CARDS, "Badgermole Cub", "Faerie Mastermind")
+    assert ok
+    assert "Faerie Mastermind" in state.hand
+    assert "Badgermole Cub" in state.graveyard
+    assert "Elvish Spirit Guide" in state.exile, "ESG funded the activation's mana cost"
+    assert "Elvish Spirit Guide" not in state.hand
 
 
 def test_survival_repeatable_in_same_turn_via_develop_turn():
