@@ -104,8 +104,8 @@ def policy_simple_rules(feats):
     interaction_only = feats["interaction_only_hand"]
     land_ct = feats["land_count"]
     t1_accel_now = feats["t1_accel_executable_now"]
-    has_tutor = feats["has_tutor_card"]
     has_engine = feats["has_any_engine_card"]
+    # NOTE: has_tutor_card is deliberately NOT read as a keep signal anywhere below - see rule 4.
 
     # 1. Snap keeps.
     if premium:
@@ -124,33 +124,30 @@ def policy_simple_rules(feats):
         return premium  # already False here since premium was checked above -> ship
     # land_ct in {2, 3} from here on.
 
-    # 3. Usually-ship signal, checked before the generic engine/tutor keep below.
+    # 3. Usually-ship signal, checked before the generic engine keep below.
     if interaction_only:
         return False  # largest negative lift at every land count tested
 
-    # 4. Conditional keeps at 2-3 lands.
+    # 4. Conditional keeps at 2-3 lands - engine-based ONLY. A bare tutor is deliberately NOT a
+    #    keep signal here: solo004_tutor_interaction_analysis.json found EVERY individual tutor
+    #    card's presence correlates with a LOWER strong-state rate (35.4-38.9%) than having no
+    #    tutor at all (51.6%) - most opened tutors never go live by T3 in this 3-turn window
+    #    (67-95% stranded), so a tutor is a real opportunity cost, not a keep-enabler, on its own.
     if tier_a:
         return True
     if has_engine and land_ct == 3:
         return True  # 3_land_with_engine: 50.0% vs 43.5% complement
-    if has_tutor and land_ct == 3:
-        return True  # tutor is negative specifically AT 2 LANDS, not at 3 - see below
 
-    # 5. Tutor at exactly 2 lands is a documented NEGATIVE signal on its own - do not let a bare
-    #    tutor rescue an otherwise-thin 2-land hand.
-    if has_tutor and land_ct == 2 and not has_engine:
+    # 5. "Weak business" at 2-3 lands (no engine, and not enough acceleration to have already
+    #    triggered rule 1) is a real, measured negative outcome - 3_land_weak_business succeeds
+    #    only 19.4% of the time (vs. 48.4% complement). A bare tutor does NOT rescue this case
+    #    (see rule 4's note) - land count alone, with nothing else going on including a tutor by
+    #    itself, is NOT a keep signal at 2 or 3 lands.
+    if not has_engine:
         return False
 
-    # 6. "Weak business" at 2-3 lands (no engine, no tutor, and not enough acceleration to have
-    #    already triggered rule 1) is a real, measured negative outcome - 3_land_weak_business
-    #    succeeds only 19.4% of the time (vs. 48.4% complement) - land count alone, with nothing
-    #    else going on, is NOT a keep signal at 2 or 3 lands.
-    if not has_engine and not has_tutor:
-        return False
-
-    # 7. Any remaining engine/tutor presence at 2-3 lands not already resolved above (e.g. a
-    #    non-Tier-A engine at 2 lands, or a tutor alongside an engine) - the land-population
-    #    analysis's has_any_engine_card / has_tutor_card lifts are net positive at this point.
+    # 6. The one remaining case: a non-Tier-A engine at 2 lands (has_engine true, tier_a false,
+    #    land_ct == 2) - 2_land_with_engine: 52.5% vs 47.2% complement, a real if modest positive.
     return True
 
 

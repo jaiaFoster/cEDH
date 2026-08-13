@@ -14,8 +14,8 @@
   "seed": 777,
   "seat": "play",
   "note": "False keep = SIMPLE_RULES keeps, actual outcome was NOT strong-state, AND TREE_DEPTH4 independently would have shipped it. False mulligan = SIMPLE_RULES ships, actual outcome WAS strong-state, AND TREE_DEPTH4 independently would have kept it. Requiring both signals filters single-draw luck/unluck from genuine heuristic defects.",
-  "false_keep_rate": 0.20875,
-  "false_mulligan_rate": 0.005125,
+  "false_keep_rate": 0.19525,
+  "false_mulligan_rate": 0.007,
   "false_keep_examples": [
     {
       "hand": [
@@ -81,28 +81,6 @@
         "development_but_no_compounding_value",
         "stranded_or_unsupported_engine",
         "stranded_tutor",
-        "resource_destructive_acceleration_no_payoff"
-      ]
-    },
-    {
-      "hand": [
-        "Elvish Spirit Guide",
-        "Gemstone Caverns",
-        "Imperial Seal",
-        "Mana Confluence",
-        "Marsh Flats",
-        "Pact of Negation",
-        "Shang-Chi, Master of Kung Fu"
-      ],
-      "land_count": 3,
-      "simple_rules_decision": "KEEP",
-      "tree_depth4_decision": "MULLIGAN",
-      "actual_t3_any_strong_state": false,
-      "actual_t3_stalled": false,
-      "actual_mana_shortfall": false,
-      "outcome_tags": [
-        "development_but_no_compounding_value",
-        "stranded_or_unsupported_engine",
         "resource_destructive_acceleration_no_payoff"
       ]
     },
@@ -179,27 +157,6 @@
     },
     {
       "hand": [
-        "Command Tower",
-        "Crop Rotation",
-        "Derevi, Empyrial Tactician",
-        "Elves of Deep Shadow",
-        "Minamo, School at Water's Edge",
-        "Starting Town",
-        "Training Grounds"
-      ],
-      "land_count": 3,
-      "simple_rules_decision": "KEEP",
-      "tree_depth4_decision": "MULLIGAN",
-      "actual_t3_any_strong_state": false,
-      "actual_t3_stalled": false,
-      "actual_mana_shortfall": false,
-      "outcome_tags": [
-        "development_but_no_compounding_value",
-        "stranded_or_unsupported_engine"
-      ]
-    },
-    {
-      "hand": [
         "City of Traitors",
         "Fierce Guardianship",
         "Finale of Devastation",
@@ -242,6 +199,50 @@
         "stranded_or_unsupported_engine",
         "resource_destructive_acceleration_no_payoff",
         "mana_shortfall"
+      ]
+    },
+    {
+      "hand": [
+        "Enlightened Tutor",
+        "Gleaming Splendor",
+        "Mox Amber",
+        "Ranger-Captain of Eos",
+        "Swift Reconfiguration",
+        "Volatile Stormdrake",
+        "Windswept Heath"
+      ],
+      "land_count": 1,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": true,
+      "actual_mana_shortfall": true,
+      "outcome_tags": [
+        "no_proactive_development",
+        "stranded_tutor",
+        "low_mana_capacity",
+        "mana_shortfall"
+      ]
+    },
+    {
+      "hand": [
+        "Colossal Skyturtle",
+        "Fierce Guardianship",
+        "Kinnan, Bonder Prodigy",
+        "Misdirection",
+        "Otawara, Soaring City",
+        "Scrubland",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 2,
+      "simple_rules_decision": "KEEP",
+      "tree_depth4_decision": "MULLIGAN",
+      "actual_t3_any_strong_state": false,
+      "actual_t3_stalled": false,
+      "actual_mana_shortfall": false,
+      "outcome_tags": [
+        "development_but_no_compounding_value",
+        "stranded_or_unsupported_engine"
       ]
     }
   ],
@@ -400,33 +401,35 @@
     },
     {
       "hand": [
-        "Chord of Calling",
-        "Gemstone Caverns",
-        "King T'Challa // Black Panther, Hope Enduring",
+        "Crop Rotation",
         "Mana Vault",
-        "Misdirection",
-        "Misty Rainforest",
-        "Pact of Negation"
+        "Polluted Delta",
+        "Savannah",
+        "Starting Town",
+        "Subtlety",
+        "Volatile Stormdrake"
       ],
-      "land_count": 2,
+      "land_count": 3,
       "simple_rules_decision": "MULLIGAN",
       "tree_depth4_decision": "KEEP",
       "actual_t3_any_strong_state": true,
       "family_tags": [
-        "unclassified_hand"
+        "t1_accel_to_t2_commander",
+        "tutor_conversion_hand",
+        "commander_conversion_hand"
       ]
     },
     {
       "hand": [
-        "Abhorrent Oculus",
-        "Command Tower",
-        "Exotic Orchard",
-        "Flusterstorm",
-        "Gilded Drake",
+        "Boseiju, Who Endures",
+        "Eldritch Evolution",
+        "Flare of Denial",
         "Mana Vault",
-        "Silence"
+        "Pact of Negation",
+        "Savannah",
+        "Verdant Catacombs"
       ],
-      "land_count": 2,
+      "land_count": 3,
       "simple_rules_decision": "MULLIGAN",
       "tree_depth4_decision": "KEEP",
       "actual_t3_any_strong_state": true,
