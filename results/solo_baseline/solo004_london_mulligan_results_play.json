@@ -1,0 +1,165 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_SOLO_004_LONDON_MULLIGAN",
+  "seed": 42,
+  "seat": "play",
+  "policies": {
+    "TREE_DEPTH4": {
+      "sample_size": 100000,
+      "mulligan_distribution": {
+        "3+": 0.32187,
+        "0": 0.31311,
+        "1": 0.21691,
+        "2": 0.14811
+      },
+      "avg_final_hand_size": 5.29942,
+      "expected_card_disadvantage": 1.7005800000000004,
+      "overall_t3_strong_state_rate": 0.72625,
+      "overall_t3_stalled_rate": 0.10406,
+      "overall_mana_shortfall_rate": 0.26614,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.31311,
+          "t3_strong_state_rate": 0.8224585608891444,
+          "t3_stalled_rate": 0.07195554278049247,
+          "t2_engine_rate": 0.35881958417169685,
+          "mana_shortfall_rate": 0.33885854811408134,
+          "mean_cards_remaining_t3": 3.13024176806873
+        },
+        "1": {
+          "pct_of_population": 0.21691,
+          "t3_strong_state_rate": 0.8122723710294593,
+          "t3_stalled_rate": 0.04909870453183348,
+          "t2_engine_rate": 0.41565626296620717,
+          "mana_shortfall_rate": 0.25010372965746164,
+          "mean_cards_remaining_t3": 2.967359734452077
+        },
+        "2": {
+          "pct_of_population": 0.14811,
+          "t3_strong_state_rate": 0.794747147390453,
+          "t3_stalled_rate": 0.04685706569441631,
+          "t2_engine_rate": 0.4288029167510634,
+          "mana_shortfall_rate": 0.20383498750928364,
+          "mean_cards_remaining_t3": 2.4734319087164947
+        },
+        "3+": {
+          "pct_of_population": 0.32187,
+          "t3_strong_state_rate": 0.543169602634604,
+          "t3_stalled_rate": 0.19865162953987633,
+          "t2_engine_rate": 0.28788020008077797,
+          "mana_shortfall_rate": 0.23487743498928138,
+          "mean_cards_remaining_t3": 1.8866933855283188
+        }
+      },
+      "elapsed_seconds": 800.0805613994598
+    },
+    "SIMPLE_RULES": {
+      "sample_size": 100000,
+      "mulligan_distribution": {
+        "0": 0.62589,
+        "1": 0.23446,
+        "3+": 0.05226,
+        "2": 0.08739
+      },
+      "avg_final_hand_size": 6.41434,
+      "expected_card_disadvantage": 0.5856599999999998,
+      "overall_t3_strong_state_rate": 0.58145,
+      "overall_t3_stalled_rate": 0.15972,
+      "overall_mana_shortfall_rate": 0.38199,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.62589,
+          "t3_strong_state_rate": 0.5741424211922223,
+          "t3_stalled_rate": 0.16619533783891738,
+          "t2_engine_rate": 0.25381456805508956,
+          "mana_shortfall_rate": 0.43694578919618465,
+          "mean_cards_remaining_t3": 3.5432104682931507
+        },
+        "1": {
+          "pct_of_population": 0.23446,
+          "t3_strong_state_rate": 0.6024908299923227,
+          "t3_stalled_rate": 0.144161050925531,
+          "t2_engine_rate": 0.30798430435895247,
+          "mana_shortfall_rate": 0.3161733344706986,
+          "mean_cards_remaining_t3": 3.3078563507634566
+        },
+        "2": {
+          "pct_of_population": 0.08739,
+          "t3_strong_state_rate": 0.6048746996223824,
+          "t3_stalled_rate": 0.13605675706602585,
+          "t2_engine_rate": 0.32028836251287335,
+          "mana_shortfall_rate": 0.251745050921158,
+          "mean_cards_remaining_t3": 2.7643895182515164
+        },
+        "3+": {
+          "pct_of_population": 0.05226,
+          "t3_strong_state_rate": 0.535399923459625,
+          "t3_stalled_rate": 0.19154228855721392,
+          "t2_engine_rate": 0.27784156142365096,
+          "mana_shortfall_rate": 0.23689246077305778,
+          "mean_cards_remaining_t3": 2.0686949866054345
+        }
+      },
+      "elapsed_seconds": 340.6234233379364
+    },
+    "MACHINE_OPTIMAL": {
+      "sample_size": 5000,
+      "mulligan_distribution": {
+        "3+": 0.364,
+        "0": 0.2838,
+        "1": 0.209,
+        "2": 0.1432
+      },
+      "avg_final_hand_size": 5.1488,
+      "expected_card_disadvantage": 1.8512000000000004,
+      "overall_t3_strong_state_rate": 0.765,
+      "overall_t3_stalled_rate": 0.072,
+      "overall_mana_shortfall_rate": 0.2576,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.2838,
+          "t3_strong_state_rate": 0.875968992248062,
+          "t3_stalled_rate": 0.0014094432699083862,
+          "t2_engine_rate": 0.634954193093728,
+          "mana_shortfall_rate": 0.34178999295278367,
+          "mean_cards_remaining_t3": 3.2501761804087383
+        },
+        "1": {
+          "pct_of_population": 0.209,
+          "t3_strong_state_rate": 0.9004784688995215,
+          "t3_stalled_rate": 0.0009569377990430622,
+          "t2_engine_rate": 0.6507177033492823,
+          "mana_shortfall_rate": 0.22296650717703348,
+          "mean_cards_remaining_t3": 2.895693779904306
+        },
+        "2": {
+          "pct_of_population": 0.1432,
+          "t3_strong_state_rate": 0.8938547486033519,
+          "t3_stalled_rate": 0.0013966480446927375,
+          "t2_engine_rate": 0.6396648044692738,
+          "mana_shortfall_rate": 0.1871508379888268,
+          "mean_cards_remaining_t3": 2.2472067039106145
+        },
+        "3+": {
+          "pct_of_population": 0.364,
+          "t3_strong_state_rate": 0.55,
+          "t3_stalled_rate": 0.1956043956043956,
+          "t2_engine_rate": 0.34395604395604396,
+          "mana_shortfall_rate": 0.23956043956043957,
+          "mean_cards_remaining_t3": 1.798901098901099
+        }
+      },
+      "elapsed_seconds": 46.396459341049194
+    },
+    "KEEP_EVERYTHING_BASELINE_NOTE": "See solo003r_trajectory_census_{play,draw}.json: t3_any_strong_state = 0.438 (play) / 0.511 (draw), avg_hand_size = 7.0 always, expected_card_disadvantage = 0."
+  }
+}
