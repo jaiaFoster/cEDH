@@ -13,6 +13,8 @@ sys.path.insert(0, str(REPO_ROOT / "sim" / "analysis"))
 
 from opening_hand_policy import HandState, Perm, LandInPlay, develop_turn, DEFAULT_PRIORITY  # noqa: E402
 from opening_hand_metrics import snapshot_metrics  # noqa: E402
+from opening_hand_features import extract_opener_features  # noqa: E402
+from opening_hand_model import ENGINES  # noqa: E402
 from trajectory_grading import grade_trajectory  # noqa: E402
 
 FAKE_CARDS = {
@@ -32,6 +34,8 @@ FAKE_CARDS = {
     "Birthing Pod": {"name": "Birthing Pod", "type": "Artifact", "mana_cost": "{3}{G/P}", "cmc": 4},
     "Devoted Druid": {"name": "Devoted Druid", "type": "Creature — Elf Druid", "mana_cost": "{1}{G}", "cmc": 2},
     "Filler Land": {"name": "Filler Land", "type": "Land", "mana_cost": "", "cmc": 0},
+    "Tymna the Weaver": {"name": "Tymna the Weaver", "type": "Legendary Creature — Human Monk", "mana_cost": "{1}{W}{B}", "cmc": 3},
+    "Force of Will": {"name": "Force of Will", "type": "Instant", "mana_cost": "{3}{U}{U}", "cmc": 5},
 }
 
 
@@ -119,6 +123,38 @@ def test_thrasios_enables_mox_amber_earns_tier_credit():
     g = grade_trajectory(state, FAKE_CARDS, snaps[1], snaps[2], snaps[3])
     assert g["tier_engine"] == "Thrasios, Triton Hero"
     assert g["tier"] in ("A", "B")
+
+
+def test_engines_dict_no_longer_lists_either_commander():
+    # CMDR-003 (t1_t3_trajectory_audit.json): the broader SOLO-003-era ENGINES dict (feeding
+    # opener feature extraction and snapshot metrics, NOT the trajectory-tier grading already
+    # fixed by CMDR-001/002) still listed Tymna the Weaver / Thrasios, Triton Hero as
+    # "commander_engine" - silently undermining the zero-credit directive one layer down.
+    assert "Tymna the Weaver" not in ENGINES
+    assert "Thrasios, Triton Hero" not in ENGINES
+
+
+def test_hand_with_only_a_commander_does_not_report_has_any_engine_card():
+    hand = ["Tymna the Weaver", "Underground Sea", "Underground Sea", "Scrubland",
+            "Force of Will", "Filler Land", "Filler Land"]
+    library = ["Filler Land"] * 20
+    feats = extract_opener_features(hand, library, True, FAKE_CARDS)
+    assert feats["has_any_engine_card"] is False
+    assert feats["engine_count"] == 0
+
+
+def test_battlefield_commander_alone_does_not_set_any_engine_active():
+    # opening_hand_metrics.snapshot_metrics's any_engine_active/engine_count/two_plus_engines_
+    # active must not count a cast commander as an "active engine" - these feed trajectory_
+    # metrics.py's family/failure/composite tags (t1_engine_deployed, stranded_or_unsupported_
+    # engine, multi_engine_plus_interaction, ...), all of which are downstream of CMDR-001.
+    state = HandState(["Tymna the Weaver"], ["Filler Land"] * 20, on_play=True,
+                       rng=random.Random(0), cards=FAKE_CARDS)
+    state.nonland_perms.append(Perm("Tymna the Weaver", 1, is_creature=True))
+    m = snapshot_metrics(state, FAKE_CARDS, [])
+    assert m["any_engine_active"] is False
+    assert m["engine_count"] == 0
+    assert m["two_plus_engines_active"] is False
 
 
 def test_creature_discarded_to_survival_is_not_credited_as_a_battlefield_engine():

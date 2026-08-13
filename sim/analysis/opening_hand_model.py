@@ -211,8 +211,19 @@ ENGINES = {
     "Heartwood Storyteller": "card_advantage", "Archivist of Oghma": "card_advantage",
     "Survival of the Fittest": "tutor_engine", "Birthing Pod": "tutor_engine",
     "Delney, Streetwise Lookout": "doubler", "Deathrite Shaman": "mana_gy",
-    "Gaea's Cradle": "mana_engine", "Tymna the Weaver": "commander_engine",
-    "Thrasios, Triton Hero": "commander_engine",
+    "Gaea's Cradle": "mana_engine",
+    # MULL-005R (t1_t3_trajectory_audit.json CMDR-003): Tymna the Weaver and Thrasios, Triton
+    # Hero were previously listed here as "commander_engine" - a leftover from before CMDR-001/
+    # CMDR-002 zeroed out generic commander mulligan credit in trajectory grading. This broader
+    # ENGINES dict feeds opener feature extraction (opening_hand_features.py's has_any_engine_
+    # card/engine_count) and snapshot metrics (opening_hand_metrics.py's any_engine_active/
+    # two_plus_engines_active), used by structural_hand_grade()/TRAJECTORY_SIMPLE_R, the fitted
+    # TRAJECTORY_TREE_R, and trajectory_metrics.py's family/failure/composite tags - none of which
+    # were touched when the ENGINE_TIER_* sets were corrected, so a hand with Tymna or Thrasios
+    # and NO real engine card was still silently counted as "has an engine" throughout those
+    # layers, directly undermining CMDR-001's zero-credit directive. Removed; both commanders
+    # remain fully tracked via the separate COMMANDERS set and CMDR-002's concrete-benefit gating
+    # wherever that is the actually-intended check.
 }
 PREMIUM_ONE_DROP_ENGINES = {"Mystic Remora", "Esper Sentinel"}
 

@@ -5,8 +5,8 @@
   "seat": "play",
   "note": "destination_family is a single best-match classification per hand (mutually exclusive, assignment section 16) using trajectory_best__* fields; search_label_prefix_distribution shows how often each of the 5 bounded-search families (greedy/tutor/pod/survival/battlefield_tutor/land_tutor) actually won as best-known trajectory in this sample - the Pod-activation family never won outright in this 15,000-hand sample (0 occurrences), a real, disclosed rarity finding, not a bug: Pod's OWN board presence + a sac creature already earns Tier B/C credit via the generic support check before an explicit activation is even attempted, and Pod's {1}{G/P} activation on top of its own {3}{G/P} cast is genuinely mana-heavy for a T1-T3 window.",
   "search_label_prefix_distribution": {
-    "greedy": 12730,
-    "tutor": 1947,
+    "greedy": 12729,
+    "tutor": 1948,
     "battlefield_tutor": 282,
     "land_tutor": 40,
     "survival": 1
@@ -38,7 +38,7 @@
       "destination_family": "t2_other_premium_resource_engine",
       "count": 1841,
       "frequency": 0.1227,
-      "strong_state_rate": 0.6312,
+      "strong_state_rate": 0.6306,
       "keep_at_7_rate": 1.0,
       "keep_at_6_rate": 1.0,
       "tier_distribution": {
@@ -49,7 +49,7 @@
       "destination_family": "secondary_engine",
       "count": 5484,
       "frequency": 0.3656,
-      "strong_state_rate": 0.4136,
+      "strong_state_rate": 0.4132,
       "keep_at_7_rate": 1.0,
       "keep_at_6_rate": 1.0,
       "tier_distribution": {
@@ -106,7 +106,7 @@
       "destination_family": "exceptional_composite_state",
       "count": 822,
       "frequency": 0.0548,
-      "strong_state_rate": 0.8637,
+      "strong_state_rate": 0.8589,
       "keep_at_7_rate": 1.0,
       "keep_at_6_rate": 1.0,
       "tier_distribution": {

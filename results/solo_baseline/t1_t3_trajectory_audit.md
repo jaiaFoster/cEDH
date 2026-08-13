@@ -2,7 +2,7 @@
 
 Subject: `tymna-thrasios-treefarm-v1` (deck_hash `4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a`), matches the frozen 98 used throughout SOLO-002 through MULL-005 - no discrepancy found, per section 0.
 
-Findings: 25 total — VERIFIED: 18, REJECTED: 1, CANDIDATE: 6
+Findings: 26 total — VERIFIED: 19, REJECTED: 1, CANDIDATE: 6
 
 Every finding below is grounded in real Oracle text pulled from `data/cards_cache/oracle-2026-08-12` for this exact deck (see `t1_t3_trajectory_audit.json` for the structured version). Status legend: VERIFIED (confirmed, either a real correction or confirmed-already-correct), CANDIDATE (mechanically real, deferred as low-T1-T3-frequency, disclosed), BLOCKED (unreachable given this simulator's scope), REJECTED (investigated, not material).
 
@@ -257,6 +257,18 @@ Every finding below is grounded in real Oracle text pulled from `data/cards_cach
 **MULL-005 mis-model/omission:** The base engine's gating was already correct; the trajectory GRADER never specifically checked for this composite (Thrasios-enables-Amber / Thrasios-enables-free-Fierce-Guardianship) - it only credited generic Thrasios productivity/activation.
 **Expected direction of bias:** MULL-005 under-recognized these two SPECIFIC concrete Thrasios benefits as distinguished positive signals (though it did not over-credit them either, since they weren't credited at all).
 **Resolution:** Added explicit THRASIOS_ENABLES_MOX_AMBER / THRASIOS_ENABLES_FREE_INTERACTION composite checks; generic 'commander castable' credit removed.
+
+## CMDR-003 — Tymna the Weaver, Thrasios, Triton Hero
+**Status:** VERIFIED
+
+**Mechanic:** opening_hand_model.py has TWO separate card-classification structures: the newer ENGINE_TIER_A/B/C_* sets (corrected by CMDR-001/CMDR-002/TITHE-001/KINNAN-001 this phase) that trajectory_grading.grade_trajectory() reads directly, and an OLDER, broader ENGINES dict (SOLO-003 era) that feeds a DIFFERENT layer - opener feature extraction (opening_hand_features.py's has_any_engine_card/engine_count) and per-turn snapshot metrics (opening_hand_metrics.py's any_engine_active/engine_count/two_plus_engines_active). ENGINES still listed both commanders as 'commander_engine'. grade_trajectory() itself was unaffected (it never reads ENGINES), but every OTHER consumer of has_any_engine_card/any_engine_active was - concretely: trajectory_policies.structural_hand_grade()'s rule 2 ('acceleration with an engine destination already in hand' -> SNAP_KEEP) could fire off Tymna or Thrasios alone with zero real engine card in hand, and trajectory_metrics.py's t1_metrics/compounding_state_metrics/classify_trajectory_failure/trajectory_family_tags all read the same contaminated fields (t1_engine_deployed, stranded_or_unsupported_engine, multi_engine_plus_interaction, t1_engine_hand, ...).
+
+**Legal prerequisites:** N/A - a classification-layer omission, not a legality question.
+**Earliest relevant turn:** None
+**Already represented in MULL-005:** False
+**MULL-005 mis-model/omission:** CMDR-001/CMDR-002 corrected trajectory_grading.py's tier-decision layer but never audited the older, separately-maintained ENGINES dict that opener feature extraction and snapshot metrics still depend on - a real, previously-undiscovered gap in this same phase's own commander-credit correction, found while building the pod-conditioning overlay (task requiring has_any_engine_card to be trustworthy).
+**Expected direction of bias:** Inflates has_any_engine_card/any_engine_active/engine_count (and everything derived from them) whenever a hand/battlefield contains Tymna and/or Thrasios with no other real engine - a residual, narrower reappearance of exactly the bias CMDR-001/002 were meant to eliminate.
+**Resolution:** Removed Tymna the Weaver and Thrasios, Triton Hero from ENGINES (Kinnan, Bonder Prodigy deliberately left in - it is a real, castable, ongoing-value permanent, not a commander; KINNAN-001 only concerns its TIER-destination status, not this coarser presence flag). Both commanders remain fully tracked via COMMANDERS and CMDR-002's concrete-benefit gating wherever that is the intended check. 3 new regression tests confirm ENGINES no longer contains either commander and that a commander-only hand/battlefield does not set has_any_engine_card/any_engine_active. Downstream dataset/census/tree-fit/London-mulligan artifacts regenerated.
 
 ## KINNAN-001 — Kinnan, Bonder Prodigy
 **Status:** VERIFIED

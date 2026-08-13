@@ -192,6 +192,15 @@ GATE_ITEMS = [
         "property": "grade_trajectory's battlefield_t1/battlefield_t2 Tier S/A checks are filtered to ONLINE_CLASSES - a creature discarded to Survival or otherwise consumed as fodder never earns tier credit as if it were cast",
         "tests": ["rules_tests/regression/test_mull005r_grading_corrections.py::test_creature_discarded_to_survival_is_not_credited_as_a_battlefield_engine"],
     },
+    {
+        "id": "GATE-28", "category": "NEW",
+        "property": "ENGINES (opener feature extraction / snapshot metrics) no longer lists either commander - has_any_engine_card/any_engine_active are never satisfied by Tymna or Thrasios alone (CMDR-003)",
+        "tests": [
+            "rules_tests/regression/test_mull005r_grading_corrections.py::test_engines_dict_no_longer_lists_either_commander",
+            "rules_tests/regression/test_mull005r_grading_corrections.py::test_hand_with_only_a_commander_does_not_report_has_any_engine_card",
+            "rules_tests/regression/test_mull005r_grading_corrections.py::test_battlefield_commander_alone_does_not_set_any_engine_active",
+        ],
+    },
 ]
 
 
