@@ -1,0 +1,1373 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_005_EXAMPLES",
+  "snap_keeps": [
+    {
+      "hand": [
+        "Birds of Paradise",
+        "City of Traitors",
+        "Esper Sentinel",
+        "Exotic Orchard",
+        "Mindbreak Trap",
+        "Ranger-Captain of Eos",
+        "Sowing Mycospawn"
+      ],
+      "land_count": 2,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "trajectory_best_tier": "F",
+      "trajectory_best_mechanism": "none",
+      "trajectory_best_tier_engine": null,
+      "trajectory_best_tier_turn": null,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Delighted Halfling",
+        "Esper Sentinel",
+        "Gleaming Splendor",
+        "Smothering Tithe",
+        "Spellseeker",
+        "Vampiric Tutor",
+        "Voice of Victory"
+      ],
+      "land_count": 0,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "dork_to_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Elves of Deep Shadow",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Ranger-Captain of Eos",
+        "Training Grounds",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 1,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Boseiju, Who Endures",
+        "Chord of Calling",
+        "Delney, Streetwise Lookout",
+        "Esper Sentinel",
+        "Finale of Devastation",
+        "Minamo, School at Water's Edge",
+        "Orcish Bowmasters"
+      ],
+      "land_count": 2,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "natural_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Crop Rotation",
+        "Eldritch Evolution",
+        "Gleaming Splendor",
+        "Lotus Petal",
+        "Marsh Flats",
+        "Smothering Tithe",
+        "Veil of Summer"
+      ],
+      "land_count": 1,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "trajectory_best_tier": "S",
+      "trajectory_best_mechanism": "natural_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 1,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Crop Rotation",
+        "Minamo, School at Water's Edge",
+        "Mox Amber",
+        "Runic Armasaur",
+        "Survival of the Fittest",
+        "Wooded Foothills"
+      ],
+      "land_count": 2,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "tutor_plus_accel_to_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Fierce Guardianship",
+        "Marsh Flats",
+        "Misty Rainforest",
+        "Oboro Breezecaller",
+        "Scrubland",
+        "Sylvan Library"
+      ],
+      "land_count": 3,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "Tier-A engine card (Rhystic Study/Sylvan Library) online by T2",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "natural_engine+interaction",
+      "trajectory_best_tier_engine": "Sylvan Library",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Elvish Spirit Guide",
+        "Fierce Guardianship",
+        "Mox Amber",
+        "Shang-Chi, Master of Kung Fu",
+        "Survival of the Fittest",
+        "Vampiric Tutor"
+      ],
+      "land_count": 0,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "rock_to_engine+interaction",
+      "trajectory_best_tier_engine": "Deathrite Shaman",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Heartwood Storyteller",
+        "Mana Confluence",
+        "Minamo, School at Water's Edge",
+        "Oboro Breezecaller",
+        "Otawara, Soaring City",
+        "Talon Gates of Madara",
+        "Wooded Foothills"
+      ],
+      "land_count": 5,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "4+ lands with a real engine",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Delighted Halfling",
+        "Enduring Vitality",
+        "Kinnan, Bonder Prodigy",
+        "Mana Vault",
+        "Oboro Breezecaller",
+        "Subtlety",
+        "Tundra"
+      ],
+      "land_count": 1,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    }
+  ],
+  "conditional_keeps": [
+    {
+      "hand": [
+        "Gilded Drake",
+        "Mana Confluence",
+        "Otawara, Soaring City",
+        "Sowing Mycospawn",
+        "Spellseeker",
+        "Talon Gates of Madara",
+        "Tundra"
+      ],
+      "land_count": 4,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "4+ lands, commander colors plausible, no card engine",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Thrasios, Triton Hero",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Command Tower",
+        "Force of Negation",
+        "Minamo, School at Water's Edge",
+        "Sol Ring",
+        "Swan Song",
+        "Voice of Victory"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration fuels a plausible T2 commander line",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Thrasios, Triton Hero",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Flooded Strand",
+        "Force of Negation",
+        "Mental Misstep",
+        "Minamo, School at Water's Edge",
+        "Veil of Summer"
+      ],
+      "land_count": 3,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "natural_engine",
+      "trajectory_best_tier_engine": "Deathrite Shaman",
+      "trajectory_best_tier_turn": 1,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Delney, Streetwise Lookout",
+        "Misdirection",
+        "Orcish Bowmasters",
+        "Scrubland",
+        "Shang-Chi, Master of Kung Fu",
+        "Windswept Heath"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "trajectory_best_tier": "F",
+      "trajectory_best_mechanism": "none",
+      "trajectory_best_tier_engine": null,
+      "trajectory_best_tier_turn": null,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Boseiju, Who Endures",
+        "Enduring Vitality",
+        "Imperial Seal",
+        "Savannah",
+        "Training Grounds",
+        "Tundra"
+      ],
+      "land_count": 3,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "trajectory_best_tier": "B",
+      "trajectory_best_mechanism": "dork_to_engine",
+      "trajectory_best_tier_engine": "Birthing Pod",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Command Tower",
+        "Mental Misstep",
+        "Polluted Delta",
+        "Ranger-Captain of Eos",
+        "Runic Armasaur",
+        "Subtlety"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Crop Rotation",
+        "Elvish Spirit Guide",
+        "Exotic Orchard",
+        "Mindbreak Trap",
+        "Misdirection",
+        "Misty Rainforest",
+        "Ranger-Captain of Eos"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "CMC1 tutor at 2-3 lands - ~25-27% direct T2-engine conversion",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Crop Rotation",
+        "Finale of Devastation",
+        "Flooded Strand",
+        "Force of Negation",
+        "Force of Will",
+        "Swift Reconfiguration"
+      ],
+      "land_count": 1,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "dork_to_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Deathrite Shaman",
+        "Demonic Tutor",
+        "Enduring Vitality",
+        "Flare of Denial",
+        "Nature's Rhythm",
+        "Windswept Heath",
+        "Wooded Foothills"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "trajectory_best_tier": "B",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Colossal Skyturtle",
+        "Crop Rotation",
+        "Derevi, Empyrial Tactician",
+        "Gilded Drake",
+        "Sol Ring",
+        "Tropical Island",
+        "Underground Sea"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "rock_to_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": true
+    }
+  ],
+  "mulligans": [
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Enlightened Tutor",
+        "Force of Negation",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Marsh Flats",
+        "Misdirection",
+        "Pact of Negation"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "tutor_to_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Finale of Devastation",
+        "Force of Will",
+        "Minamo, School at Water's Edge",
+        "Rhystic Study",
+        "Shang-Chi, Master of Kung Fu",
+        "Swan Song",
+        "Veil of Summer"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Thrasios, Triton Hero",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Ancient Tomb",
+        "Chord of Calling",
+        "Derevi, Empyrial Tactician",
+        "Devoted Druid",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Vampiric Tutor"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "D",
+      "trajectory_best_mechanism": "none",
+      "trajectory_best_tier_engine": null,
+      "trajectory_best_tier_turn": null,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Eldritch Evolution",
+        "Endurance",
+        "Gilded Drake",
+        "Minamo, School at Water's Edge",
+        "Noble Hierarch",
+        "Oboro Breezecaller",
+        "Rhystic Study"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Chord of Calling",
+        "Command Tower",
+        "Gleaming Splendor",
+        "Swan Song",
+        "Swift Reconfiguration",
+        "Veil of Summer",
+        "Windswept Heath"
+      ],
+      "land_count": 2,
+      "structural_grade": "SHIP",
+      "structural_reason": "interaction-only hand - largest negative lift measured at every land count",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "natural_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Devoted Druid",
+        "Flusterstorm",
+        "Gleaming Splendor",
+        "Heartwood Storyteller",
+        "Swan Song",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 0,
+      "structural_grade": "SHIP",
+      "structural_reason": "0 lands",
+      "trajectory_best_tier": "F",
+      "trajectory_best_mechanism": "none",
+      "trajectory_best_tier_engine": null,
+      "trajectory_best_tier_turn": null,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Commandeer",
+        "Enduring Vitality",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Sowing Mycospawn",
+        "Survival of the Fittest",
+        "Sylvan Library",
+        "Underground Sea"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "natural_engine",
+      "trajectory_best_tier_engine": "Sylvan Library",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Archivist of Oghma",
+        "Badgermole Cub",
+        "Clever Impersonator",
+        "Force of Will",
+        "Rhystic Study",
+        "Subtlety",
+        "Sylvan Library"
+      ],
+      "land_count": 0,
+      "structural_grade": "SHIP",
+      "structural_reason": "0 lands",
+      "trajectory_best_tier": "F",
+      "trajectory_best_mechanism": "none",
+      "trajectory_best_tier_engine": null,
+      "trajectory_best_tier_turn": null,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Endurance",
+        "Enduring Vitality",
+        "Force of Negation",
+        "Mindbreak Trap",
+        "Silence",
+        "Smothering Tithe",
+        "Talon Gates of Madara"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "C",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Thrasios, Triton Hero",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": false
+    },
+    {
+      "hand": [
+        "Colossal Skyturtle",
+        "Eldritch Evolution",
+        "Hazel's Brewmaster",
+        "Shifting Woodland",
+        "Silence",
+        "Sol Ring",
+        "Spellseeker"
+      ],
+      "land_count": 1,
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "trajectory_best_tier": "D",
+      "trajectory_best_mechanism": "none",
+      "trajectory_best_tier_engine": null,
+      "trajectory_best_tier_turn": null,
+      "solo004_simple_rules_keep": true,
+      "trajectory_simple_keep": false
+    }
+  ],
+  "misleading_hands": [
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Elves of Deep Shadow",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Ranger-Captain of Eos",
+        "Training Grounds",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 1,
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Boseiju, Who Endures",
+        "Enduring Vitality",
+        "Imperial Seal",
+        "Savannah",
+        "Training Grounds",
+        "Tundra"
+      ],
+      "land_count": 3,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "trajectory_best_tier": "B",
+      "trajectory_best_mechanism": "dork_to_engine",
+      "trajectory_best_tier_engine": "Birthing Pod",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Crop Rotation",
+        "Elvish Spirit Guide",
+        "Exotic Orchard",
+        "Mindbreak Trap",
+        "Misdirection",
+        "Misty Rainforest",
+        "Ranger-Captain of Eos"
+      ],
+      "land_count": 2,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "CMC1 tutor at 2-3 lands - ~25-27% direct T2-engine conversion",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Crop Rotation",
+        "Finale of Devastation",
+        "Flooded Strand",
+        "Force of Negation",
+        "Force of Will",
+        "Swift Reconfiguration"
+      ],
+      "land_count": 1,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration + CMC1 tutor able to fetch an engine",
+      "trajectory_best_tier": "A",
+      "trajectory_best_mechanism": "dork_to_engine",
+      "trajectory_best_tier_engine": "Esper Sentinel",
+      "trajectory_best_tier_turn": 2,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Clever Impersonator",
+        "Exotic Orchard",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Minamo, School at Water's Edge",
+        "Misty Rainforest",
+        "Swift Reconfiguration"
+      ],
+      "land_count": 3,
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration fuels a plausible T2 commander line",
+      "trajectory_best_tier": "B",
+      "trajectory_best_mechanism": "commander_engine",
+      "trajectory_best_tier_engine": "Tymna the Weaver",
+      "trajectory_best_tier_turn": 3,
+      "solo004_simple_rules_keep": false,
+      "trajectory_simple_keep": true
+    }
+  ],
+  "pod_conditioned_examples": [
+    {
+      "hand": [
+        "Birds of Paradise",
+        "City of Traitors",
+        "Esper Sentinel",
+        "Exotic Orchard",
+        "Mindbreak Trap",
+        "Ranger-Captain of Eos",
+        "Sowing Mycospawn"
+      ],
+      "land_count": 2,
+      "pod": [
+        "RogSi"
+      ],
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "RogSi"
+      ],
+      "pod_modifier_total": 5,
+      "pod_modifier_breakdown": {
+        "RogSi": {
+          "shift": 5,
+          "categories_present": [
+            "any_live_interaction",
+            "card_advantage_engine",
+            "free_or_cheap_interaction",
+            "proactive_early_development",
+            "raw_speed_low_curve",
+            "redundancy_resilience",
+            "tutor_flexibility"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Delighted Halfling",
+        "Esper Sentinel",
+        "Gleaming Splendor",
+        "Smothering Tithe",
+        "Spellseeker",
+        "Vampiric Tutor",
+        "Voice of Victory"
+      ],
+      "land_count": 0,
+      "pod": [
+        "Kinnan"
+      ],
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Kinnan"
+      ],
+      "pod_modifier_total": 2,
+      "pod_modifier_breakdown": {
+        "Kinnan": {
+          "shift": 2,
+          "categories_present": [
+            "proactive_early_development",
+            "raw_speed_low_curve"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Elves of Deep Shadow",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Ranger-Captain of Eos",
+        "Training Grounds",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 1,
+      "pod": [
+        "Blue Farm"
+      ],
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Blue Farm"
+      ],
+      "pod_modifier_total": 2,
+      "pod_modifier_breakdown": {
+        "Blue Farm": {
+          "shift": 2,
+          "categories_present": [
+            "card_advantage_engine"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Gilded Drake",
+        "Mana Confluence",
+        "Otawara, Soaring City",
+        "Sowing Mycospawn",
+        "Spellseeker",
+        "Talon Gates of Madara",
+        "Tundra"
+      ],
+      "land_count": 4,
+      "pod": [
+        "Sisay"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "4+ lands, commander colors plausible, no card engine",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Sisay"
+      ],
+      "pod_modifier_total": 0,
+      "pod_modifier_breakdown": {
+        "Sisay": {
+          "shift": 0,
+          "categories_present": []
+        }
+      },
+      "pod_adjusted_grade": "CONDITIONAL_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Command Tower",
+        "Force of Negation",
+        "Minamo, School at Water's Edge",
+        "Sol Ring",
+        "Swan Song",
+        "Voice of Victory"
+      ],
+      "land_count": 2,
+      "pod": [
+        "Tayam"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration fuels a plausible T2 commander line",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Tayam"
+      ],
+      "pod_modifier_total": 0,
+      "pod_modifier_breakdown": {
+        "Tayam": {
+          "shift": 0,
+          "categories_present": []
+        }
+      },
+      "pod_adjusted_grade": "CONDITIONAL_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Flooded Strand",
+        "Force of Negation",
+        "Mental Misstep",
+        "Minamo, School at Water's Edge",
+        "Veil of Summer"
+      ],
+      "land_count": 3,
+      "pod": [
+        "Tivit"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Tivit"
+      ],
+      "pod_modifier_total": 2,
+      "pod_modifier_breakdown": {
+        "Tivit": {
+          "shift": 2,
+          "categories_present": [
+            "any_live_interaction",
+            "card_advantage_engine"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Delney, Streetwise Lookout",
+        "Misdirection",
+        "Orcish Bowmasters",
+        "Scrubland",
+        "Shang-Chi, Master of Kung Fu",
+        "Windswept Heath"
+      ],
+      "land_count": 2,
+      "pod": [
+        "Etali"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Etali"
+      ],
+      "pod_modifier_total": 2,
+      "pod_modifier_breakdown": {
+        "Etali": {
+          "shift": 2,
+          "categories_present": [
+            "proactive_early_development"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Enlightened Tutor",
+        "Force of Negation",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Marsh Flats",
+        "Misdirection",
+        "Pact of Negation"
+      ],
+      "land_count": 1,
+      "pod": [
+        "stax_heavy"
+      ],
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "stax_heavy"
+      ],
+      "pod_modifier_total": 1,
+      "pod_modifier_breakdown": {
+        "stax_heavy": {
+          "shift": 1,
+          "categories_present": [
+            "tutor_flexibility"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SHIP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Finale of Devastation",
+        "Force of Will",
+        "Minamo, School at Water's Edge",
+        "Rhystic Study",
+        "Shang-Chi, Master of Kung Fu",
+        "Swan Song",
+        "Veil of Summer"
+      ],
+      "land_count": 1,
+      "pod": [
+        "Rog/Thras Tree Farm"
+      ],
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Rog/Thras Tree Farm"
+      ],
+      "pod_modifier_total": 3,
+      "pod_modifier_breakdown": {
+        "Rog/Thras Tree Farm": {
+          "shift": 3,
+          "categories_present": [
+            "card_advantage_engine",
+            "proactive_early_development"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SHIP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Birds of Paradise",
+        "City of Traitors",
+        "Esper Sentinel",
+        "Exotic Orchard",
+        "Mindbreak Trap",
+        "Ranger-Captain of Eos",
+        "Sowing Mycospawn"
+      ],
+      "land_count": 2,
+      "pod": [
+        "midrange_grind"
+      ],
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "midrange_grind"
+      ],
+      "pod_modifier_total": 2,
+      "pod_modifier_breakdown": {
+        "midrange_grind": {
+          "shift": 2,
+          "categories_present": [
+            "card_advantage_engine",
+            "redundancy_resilience"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Delighted Halfling",
+        "Esper Sentinel",
+        "Gleaming Splendor",
+        "Smothering Tithe",
+        "Spellseeker",
+        "Vampiric Tutor",
+        "Voice of Victory"
+      ],
+      "land_count": 0,
+      "pod": [
+        "Kinnan",
+        "RogSi",
+        "Tayam"
+      ],
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "premium one-drop engine (Mystic Remora/Esper Sentinel) - Tier S trajectory",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Kinnan",
+        "RogSi",
+        "Tayam"
+      ],
+      "pod_modifier_total": 5,
+      "pod_modifier_breakdown": {
+        "Kinnan": {
+          "shift": 2,
+          "categories_present": [
+            "proactive_early_development",
+            "raw_speed_low_curve"
+          ]
+        },
+        "RogSi": {
+          "shift": 2,
+          "categories_present": [
+            "card_advantage_engine",
+            "proactive_early_development",
+            "raw_speed_low_curve",
+            "redundancy_resilience",
+            "tutor_flexibility"
+          ]
+        },
+        "Tayam": {
+          "shift": 1,
+          "categories_present": [
+            "redundancy_resilience"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Elves of Deep Shadow",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Ranger-Captain of Eos",
+        "Training Grounds",
+        "Volatile Stormdrake"
+      ],
+      "land_count": 1,
+      "pod": [
+        "RogSi",
+        "Sisay"
+      ],
+      "structural_grade": "SNAP_KEEP",
+      "structural_reason": "acceleration with an engine destination already in hand (rock/dork_to_engine)",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "RogSi",
+        "Sisay"
+      ],
+      "pod_modifier_total": 0,
+      "pod_modifier_breakdown": {
+        "RogSi": {
+          "shift": 0,
+          "categories_present": [
+            "card_advantage_engine",
+            "proactive_early_development",
+            "redundancy_resilience",
+            "tutor_flexibility"
+          ]
+        },
+        "Sisay": {
+          "shift": 0,
+          "categories_present": []
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Gilded Drake",
+        "Mana Confluence",
+        "Otawara, Soaring City",
+        "Sowing Mycospawn",
+        "Spellseeker",
+        "Talon Gates of Madara",
+        "Tundra"
+      ],
+      "land_count": 4,
+      "pod": [
+        "Blue Farm",
+        "stax_heavy"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "4+ lands, commander colors plausible, no card engine",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Blue Farm",
+        "stax_heavy"
+      ],
+      "pod_modifier_total": 4,
+      "pod_modifier_breakdown": {
+        "Blue Farm": {
+          "shift": 1,
+          "categories_present": [
+            "mana_resilience"
+          ]
+        },
+        "stax_heavy": {
+          "shift": 3,
+          "categories_present": [
+            "mana_resilience",
+            "tutor_flexibility"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Command Tower",
+        "Force of Negation",
+        "Minamo, School at Water's Edge",
+        "Sol Ring",
+        "Swan Song",
+        "Voice of Victory"
+      ],
+      "land_count": 2,
+      "pod": [
+        "Rog/Thras Tree Farm",
+        "Etali"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "acceleration fuels a plausible T2 commander line",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Rog/Thras Tree Farm",
+        "Etali"
+      ],
+      "pod_modifier_total": 4,
+      "pod_modifier_breakdown": {
+        "Rog/Thras Tree Farm": {
+          "shift": 1,
+          "categories_present": [
+            "proactive_early_development",
+            "raw_speed_low_curve"
+          ]
+        },
+        "Etali": {
+          "shift": 3,
+          "categories_present": [
+            "proactive_early_development",
+            "raw_speed_low_curve"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "City of Brass",
+        "Deathrite Shaman",
+        "Flooded Strand",
+        "Force of Negation",
+        "Mental Misstep",
+        "Minamo, School at Water's Edge",
+        "Veil of Summer"
+      ],
+      "land_count": 3,
+      "pod": [
+        "Tivit",
+        "midrange_grind"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Tivit",
+        "midrange_grind"
+      ],
+      "pod_modifier_total": 3,
+      "pod_modifier_breakdown": {
+        "Tivit": {
+          "shift": 2,
+          "categories_present": [
+            "any_live_interaction",
+            "card_advantage_engine"
+          ]
+        },
+        "midrange_grind": {
+          "shift": 1,
+          "categories_present": [
+            "card_advantage_engine"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Delney, Streetwise Lookout",
+        "Misdirection",
+        "Orcish Bowmasters",
+        "Scrubland",
+        "Shang-Chi, Master of Kung Fu",
+        "Windswept Heath"
+      ],
+      "land_count": 2,
+      "pod": [
+        "RogSi",
+        "Kinnan",
+        "Sisay"
+      ],
+      "structural_grade": "CONDITIONAL_KEEP",
+      "structural_reason": "an engine card present at 2-3 lands",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "RogSi",
+        "Kinnan",
+        "Sisay"
+      ],
+      "pod_modifier_total": 8,
+      "pod_modifier_breakdown": {
+        "RogSi": {
+          "shift": 3,
+          "categories_present": [
+            "any_live_interaction",
+            "card_advantage_engine",
+            "free_or_cheap_interaction",
+            "proactive_early_development"
+          ]
+        },
+        "Kinnan": {
+          "shift": 2,
+          "categories_present": [
+            "any_live_interaction",
+            "proactive_early_development"
+          ]
+        },
+        "Sisay": {
+          "shift": 3,
+          "categories_present": [
+            "any_live_interaction",
+            "free_or_cheap_interaction"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SNAP_KEEP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Enlightened Tutor",
+        "Force of Negation",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Marsh Flats",
+        "Misdirection",
+        "Pact of Negation"
+      ],
+      "land_count": 1,
+      "pod": [
+        "Tayam",
+        "Tivit",
+        "Blue Farm"
+      ],
+      "structural_grade": "SHIP",
+      "structural_reason": "1 land with no qualifying executable acceleration",
+      "structural_confidence": "SIMULATED",
+      "pod_archetypes": [
+        "Tayam",
+        "Tivit",
+        "Blue Farm"
+      ],
+      "pod_modifier_total": 0,
+      "pod_modifier_breakdown": {
+        "Tayam": {
+          "shift": 0,
+          "categories_present": []
+        },
+        "Tivit": {
+          "shift": 1,
+          "categories_present": [
+            "any_live_interaction"
+          ]
+        },
+        "Blue Farm": {
+          "shift": -1,
+          "categories_present": [
+            "free_or_cheap_interaction"
+          ]
+        }
+      },
+      "pod_adjusted_grade": "SHIP",
+      "pod_confidence": "STRATEGIC_PRIOR_UNVALIDATED"
+    }
+  ],
+  "counts": {
+    "snap_keeps": 10,
+    "conditional_keeps": 10,
+    "mulligans": 10,
+    "misleading_hands": 5,
+    "pod_conditioned_examples": 17
+  }
+}
