@@ -1,0 +1,56 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_TRAJECTORY_RECOVERY_ANALYSIS",
+  "sample_count": 6000,
+  "seed": 6005,
+  "seat": "play",
+  "hands_with_tracked_trajectory": 4575,
+  "recovery_profile_by_resilience_class": {
+    "RECOVERABLE": {
+      "sample_count": 3335,
+      "had_second_best_destination_realized": 147,
+      "had_weak_in_hand_fallback_only": 2605,
+      "had_neither_fallback": 583,
+      "interaction_remains_count": 1392,
+      "interaction_remains_rate": 0.4174,
+      "avg_time_until_next_development": 2.984
+    },
+    "FRAGILE": {
+      "sample_count": 717,
+      "had_second_best_destination_realized": 0,
+      "had_weak_in_hand_fallback_only": 370,
+      "had_neither_fallback": 347,
+      "interaction_remains_count": 229,
+      "interaction_remains_rate": 0.3194,
+      "avg_time_until_next_development": 3.192
+    },
+    "ROBUST": {
+      "sample_count": 198,
+      "had_second_best_destination_realized": 198,
+      "had_weak_in_hand_fallback_only": 0,
+      "had_neither_fallback": 0,
+      "interaction_remains_count": 95,
+      "interaction_remains_rate": 0.4798,
+      "avg_time_until_next_development": 0.0
+    },
+    "ALL_IN": {
+      "sample_count": 325,
+      "had_second_best_destination_realized": 13,
+      "had_weak_in_hand_fallback_only": 109,
+      "had_neither_fallback": 203,
+      "interaction_remains_count": 0,
+      "interaction_remains_rate": 0.0,
+      "avg_time_until_next_development": 2.82
+    }
+  },
+  "note": "time_until_next_development is 0 when a second destination is ALREADY realized on the battlefield (parallel, not sequential recovery), tier_turn+1 when only an in-hand fallback exists (earliest it could be cast), or omitted from the average when no known path to further development exists at all (collapsed hands)."
+}
