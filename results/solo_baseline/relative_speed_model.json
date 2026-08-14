@@ -1,0 +1,399 @@
+{
+  "phase": "SIM_001_MULL_006_RELATIVE_SPEED_MODEL",
+  "evidence_type": "PILOT_SUPPLIED_STRATEGIC_PRIOR",
+  "speed_order_fastest_first": [
+    "S",
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "speed_rank": {
+    "S": 0,
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4
+  },
+  "expected_deployment_turn": {
+    "Mystic Remora": 1,
+    "Esper Sentinel": 1,
+    "Rhystic Study": 2,
+    "Faerie Mastermind": 2,
+    "Archivist of Oghma": 2,
+    "Sylvan Library": 2,
+    "Heartwood Storyteller": 2,
+    "Runic Armasaur": 2,
+    "Survival of the Fittest": 2,
+    "Smothering Tithe": 3,
+    "Birthing Pod": 3
+  },
+  "extrapolated_entries": [
+    "Survival of the Fittest"
+  ],
+  "classification_formula": {
+    "description": "diff = actual_turn - expected_deployment_turn(engine)",
+    "diff_le_-2": "S (EXTREMELY ACCELERATED)",
+    "diff_eq_-1": "A (AHEAD OF CURVE)",
+    "diff_eq_0": "B (ON TIME / EXPECTED)",
+    "diff_eq_+1": "C (BEHIND CURVE)",
+    "diff_ge_+2": "D (SUBSTANTIALLY LATE)"
+  },
+  "back_derivation_note": "expected_deployment_turn is explicitly NOT printed mana value (assignment section 4: 'Smothering Tithe and Pod should NOT be evaluated purely from printed mana value... expected deployment is deck-specific'). Every entry except Survival of the Fittest is algebraically back-derived to exactly reproduce a worked example given verbatim in the assignment text (T1/T2 Pod -> S/A, T1/T2 Tithe -> S/A, T1/T2 of the six mid engines -> A/B, T1/T2 Remora+Sentinel -> B/C, a T3 two-drop engine -> C). Survival of the Fittest is not one of the given worked examples; its expected_deployment_turn=2 is an EXTRAPOLATED prior matched to the CMC-2 mid-engine class it shares with Sylvan Library and Faerie Mastermind, disclosed as extrapolated rather than pilot-verbatim.",
+  "abhorrent_oculus_excluded": "Abhorrent Oculus deliberately has no expected_deployment_turn entry - per assignment section 3 it is a separate premier destination, never scored on this engine-speed scale (same exclusion as engine_strength_prior.json).",
+  "note": "This is a PILOT-SUPPLIED STRATEGIC PRIOR (an initialization point), not a conclusion. Section 5/6 (strength_speed_sensitivity.json, task #106) tests this prior against real simulated trajectory outcomes and may recommend boundary adjustments - do not cite this artifact alone as validating the S/A/B/C/D thresholds.",
+  "worked_examples_reproduced": [
+    {
+      "engine": "Mystic Remora",
+      "expected_deployment_turn": 1,
+      "actual_turn": 1,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Mystic Remora",
+      "expected_deployment_turn": 1,
+      "actual_turn": 2,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Mystic Remora",
+      "expected_deployment_turn": 1,
+      "actual_turn": 3,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Esper Sentinel",
+      "expected_deployment_turn": 1,
+      "actual_turn": 1,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Esper Sentinel",
+      "expected_deployment_turn": 1,
+      "actual_turn": 2,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Esper Sentinel",
+      "expected_deployment_turn": 1,
+      "actual_turn": 3,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Rhystic Study",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Rhystic Study",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Rhystic Study",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Rhystic Study",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Faerie Mastermind",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Faerie Mastermind",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Faerie Mastermind",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Faerie Mastermind",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Archivist of Oghma",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Archivist of Oghma",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Archivist of Oghma",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Archivist of Oghma",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Sylvan Library",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Sylvan Library",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Sylvan Library",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Sylvan Library",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Heartwood Storyteller",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Heartwood Storyteller",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Heartwood Storyteller",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Heartwood Storyteller",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Runic Armasaur",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Runic Armasaur",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Runic Armasaur",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Runic Armasaur",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Survival of the Fittest",
+      "expected_deployment_turn": 2,
+      "actual_turn": 1,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": true
+    },
+    {
+      "engine": "Survival of the Fittest",
+      "expected_deployment_turn": 2,
+      "actual_turn": 2,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": true
+    },
+    {
+      "engine": "Survival of the Fittest",
+      "expected_deployment_turn": 2,
+      "actual_turn": 3,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": true
+    },
+    {
+      "engine": "Survival of the Fittest",
+      "expected_deployment_turn": 2,
+      "actual_turn": 4,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": true
+    },
+    {
+      "engine": "Smothering Tithe",
+      "expected_deployment_turn": 3,
+      "actual_turn": 1,
+      "diff": -2,
+      "relative_speed": "S",
+      "extrapolated": false
+    },
+    {
+      "engine": "Smothering Tithe",
+      "expected_deployment_turn": 3,
+      "actual_turn": 2,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Smothering Tithe",
+      "expected_deployment_turn": 3,
+      "actual_turn": 3,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Smothering Tithe",
+      "expected_deployment_turn": 3,
+      "actual_turn": 4,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Smothering Tithe",
+      "expected_deployment_turn": 3,
+      "actual_turn": 5,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    },
+    {
+      "engine": "Birthing Pod",
+      "expected_deployment_turn": 3,
+      "actual_turn": 1,
+      "diff": -2,
+      "relative_speed": "S",
+      "extrapolated": false
+    },
+    {
+      "engine": "Birthing Pod",
+      "expected_deployment_turn": 3,
+      "actual_turn": 2,
+      "diff": -1,
+      "relative_speed": "A",
+      "extrapolated": false
+    },
+    {
+      "engine": "Birthing Pod",
+      "expected_deployment_turn": 3,
+      "actual_turn": 3,
+      "diff": 0,
+      "relative_speed": "B",
+      "extrapolated": false
+    },
+    {
+      "engine": "Birthing Pod",
+      "expected_deployment_turn": 3,
+      "actual_turn": 4,
+      "diff": 1,
+      "relative_speed": "C",
+      "extrapolated": false
+    },
+    {
+      "engine": "Birthing Pod",
+      "expected_deployment_turn": 3,
+      "actual_turn": 5,
+      "diff": 2,
+      "relative_speed": "D",
+      "extrapolated": false
+    }
+  ]
+}
