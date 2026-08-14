@@ -1,0 +1,312 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_CONTEXTUAL_LONDON_MULLIGAN",
+  "seed": 6010,
+  "seat": "play",
+  "sample_size_per_architecture": 2000,
+  "reused_size_thresholds_note": "Per-size keep thresholds (C@7, D@6, D@5, keep-everything@4) are REUSED from mull005r_hand_size_thresholds.json (assumed-mulligan-card-cost=1.0), not re-derived for the new contextual grade scale - a full re-derivation via the same EV-sweep methodology is disclosed as future work in the final report's Next Research section.",
+  "harness_fix_note": "Fixes a real gap in the prior harness (run_mull005_london_mulligan_sim.py): its keep_policy was never told how many mulligans had already been taken, so its size-specific threshold table was computed but never actually wired into the mulligan-sequence keep decision (hand_size was always 7, every attempt). This module's simulate_one_contextual_sequence() explicitly threads mulligan depth through to the policy, so the RESULTING hand size determines which threshold applies - the assignment's own section 21 instruction to evaluate 7/6/5/4 independently requires this.",
+  "policies": {
+    "gated": {
+      "sample_size": 2000,
+      "mulligan_distribution": {
+        "0": 0.5335,
+        "1": 0.395,
+        "2": 0.0615,
+        "3+": 0.01
+      },
+      "avg_final_hand_size": 6.452,
+      "expected_card_disadvantage": 0.548,
+      "tier_distribution": {
+        "F": 0.031,
+        "A": 0.198,
+        "C": 0.452,
+        "D": 0.1125,
+        "B": 0.101,
+        "S": 0.1055
+      },
+      "fraction_tier_S_or_A": 0.3035,
+      "fraction_tier_D_or_F": 0.1435,
+      "mean_tier_value": 2.639,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.5335,
+          "tier_distribution": {
+            "F": 0.04217432052483599,
+            "A": 0.2099343955014058,
+            "C": 0.41799437675726336,
+            "D": 0.1134020618556701,
+            "B": 0.11152764761012184,
+            "S": 0.1049671977507029
+          },
+          "mean_tier_value": 2.6485473289597
+        },
+        "1": {
+          "pct_of_population": 0.395,
+          "tier_distribution": {
+            "A": 0.16962025316455695,
+            "C": 0.5050632911392405,
+            "F": 0.0189873417721519,
+            "B": 0.09367088607594937,
+            "D": 0.11265822784810127,
+            "S": 0.1
+          },
+          "mean_tier_value": 2.5822784810126582
+        },
+        "2": {
+          "pct_of_population": 0.0615,
+          "tier_distribution": {
+            "A": 0.2682926829268293,
+            "C": 0.43089430894308944,
+            "D": 0.10569105691056911,
+            "S": 0.13008130081300814,
+            "B": 0.056910569105691054,
+            "F": 0.008130081300813009
+          },
+          "mean_tier_value": 2.861788617886179
+        },
+        "3+": {
+          "pct_of_population": 0.01,
+          "tier_distribution": {
+            "S": 0.2,
+            "D": 0.1,
+            "C": 0.3,
+            "B": 0.1,
+            "A": 0.25,
+            "F": 0.05
+          },
+          "mean_tier_value": 3.0
+        }
+      },
+      "elapsed_seconds": 23.56806969642639
+    },
+    "lexicographic": {
+      "sample_size": 2000,
+      "mulligan_distribution": {
+        "0": 0.524,
+        "1": 0.403,
+        "2": 0.063,
+        "3+": 0.01
+      },
+      "avg_final_hand_size": 6.441,
+      "expected_card_disadvantage": 0.5590000000000002,
+      "tier_distribution": {
+        "F": 0.031,
+        "A": 0.198,
+        "C": 0.449,
+        "D": 0.1125,
+        "B": 0.102,
+        "S": 0.1075
+      },
+      "fraction_tier_S_or_A": 0.3055,
+      "fraction_tier_D_or_F": 0.1435,
+      "mean_tier_value": 2.646,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.524,
+          "tier_distribution": {
+            "F": 0.04198473282442748,
+            "A": 0.21183206106870228,
+            "C": 0.4112595419847328,
+            "B": 0.11354961832061068,
+            "D": 0.11354961832061068,
+            "S": 0.10782442748091603
+          },
+          "mean_tier_value": 2.6631679389312977
+        },
+        "1": {
+          "pct_of_population": 0.403,
+          "tier_distribution": {
+            "A": 0.1687344913151365,
+            "C": 0.5037220843672456,
+            "D": 0.11290322580645161,
+            "F": 0.019851116625310174,
+            "B": 0.09429280397022333,
+            "S": 0.10049627791563276
+          },
+          "mean_tier_value": 2.5806451612903225
+        },
+        "2": {
+          "pct_of_population": 0.063,
+          "tier_distribution": {
+            "A": 0.2619047619047619,
+            "C": 0.4365079365079365,
+            "D": 0.10317460317460317,
+            "S": 0.1349206349206349,
+            "B": 0.05555555555555555,
+            "F": 0.007936507936507936
+          },
+          "mean_tier_value": 2.865079365079365
+        },
+        "3+": {
+          "pct_of_population": 0.01,
+          "tier_distribution": {
+            "S": 0.2,
+            "D": 0.1,
+            "C": 0.3,
+            "B": 0.1,
+            "A": 0.25,
+            "F": 0.05
+          },
+          "mean_tier_value": 3.0
+        }
+      },
+      "elapsed_seconds": 23.55690908432007
+    },
+    "tree": {
+      "sample_size": 2000,
+      "mulligan_distribution": {
+        "0": 0.517,
+        "1": 0.4005,
+        "2": 0.069,
+        "3+": 0.0135
+      },
+      "avg_final_hand_size": 6.421,
+      "expected_card_disadvantage": 0.5789999999999997,
+      "tier_distribution": {
+        "F": 0.0305,
+        "A": 0.201,
+        "C": 0.444,
+        "D": 0.1115,
+        "B": 0.102,
+        "S": 0.111
+      },
+      "fraction_tier_S_or_A": 0.312,
+      "fraction_tier_D_or_F": 0.142,
+      "mean_tier_value": 2.6645,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.517,
+          "tier_distribution": {
+            "F": 0.0425531914893617,
+            "A": 0.21179883945841393,
+            "C": 0.40425531914893614,
+            "B": 0.11605415860735009,
+            "D": 0.11315280464216634,
+            "S": 0.11218568665377177
+          },
+          "mean_tier_value": 2.6779497098646035
+        },
+        "1": {
+          "pct_of_population": 0.4005,
+          "tier_distribution": {
+            "A": 0.1735330836454432,
+            "C": 0.4968789013732834,
+            "D": 0.11235955056179775,
+            "F": 0.018726591760299626,
+            "B": 0.09488139825218476,
+            "S": 0.10362047440699126
+          },
+          "mean_tier_value": 2.602996254681648
+        },
+        "2": {
+          "pct_of_population": 0.069,
+          "tier_distribution": {
+            "A": 0.2753623188405797,
+            "C": 0.4492753623188406,
+            "D": 0.10144927536231885,
+            "S": 0.12318840579710146,
+            "B": 0.043478260869565216,
+            "F": 0.007246376811594203
+          },
+          "mean_tier_value": 2.847826086956522
+        },
+        "3+": {
+          "pct_of_population": 0.0135,
+          "tier_distribution": {
+            "S": 0.2222222222222222,
+            "D": 0.07407407407407407,
+            "C": 0.37037037037037035,
+            "B": 0.07407407407407407,
+            "A": 0.2222222222222222,
+            "F": 0.037037037037037035
+          },
+          "mean_tier_value": 3.037037037037037
+        }
+      },
+      "elapsed_seconds": 23.93755292892456
+    },
+    "weighted": {
+      "sample_size": 2000,
+      "mulligan_distribution": {
+        "0": 0.497,
+        "1": 0.3165,
+        "2": 0.123,
+        "3+": 0.0635
+      },
+      "avg_final_hand_size": 6.247,
+      "expected_card_disadvantage": 0.7530000000000001,
+      "tier_distribution": {
+        "F": 0.0385,
+        "A": 0.2045,
+        "C": 0.3965,
+        "D": 0.117,
+        "B": 0.112,
+        "S": 0.1315
+      },
+      "fraction_tier_S_or_A": 0.336,
+      "fraction_tier_D_or_F": 0.1555,
+      "mean_tier_value": 2.7215,
+      "by_mulligan_count": {
+        "0": {
+          "pct_of_population": 0.497,
+          "tier_distribution": {
+            "F": 0.03722334004024145,
+            "A": 0.1981891348088531,
+            "C": 0.42354124748490946,
+            "B": 0.12072434607645875,
+            "D": 0.10865191146881288,
+            "S": 0.11167002012072434
+          },
+          "mean_tier_value": 2.6690140845070425
+        },
+        "1": {
+          "pct_of_population": 0.3165,
+          "tier_distribution": {
+            "A": 0.20537124802527645,
+            "D": 0.12954186413902052,
+            "F": 0.022116903633491312,
+            "B": 0.10426540284360189,
+            "S": 0.14691943127962084,
+            "C": 0.39178515007898895
+          },
+          "mean_tier_value": 2.7819905213270144
+        },
+        "2": {
+          "pct_of_population": 0.123,
+          "tier_distribution": {
+            "C": 0.32926829268292684,
+            "A": 0.25609756097560976,
+            "S": 0.16666666666666666,
+            "D": 0.12601626016260162,
+            "B": 0.0975609756097561,
+            "F": 0.024390243902439025
+          },
+          "mean_tier_value": 2.934959349593496
+        },
+        "3+": {
+          "pct_of_population": 0.0635,
+          "tier_distribution": {
+            "A": 0.14960629921259844,
+            "S": 0.14173228346456693,
+            "C": 0.33858267716535434,
+            "D": 0.10236220472440945,
+            "F": 0.15748031496062992,
+            "B": 0.11023622047244094
+          },
+          "mean_tier_value": 2.4173228346456694
+        }
+      },
+      "elapsed_seconds": 27.445732831954956
+    }
+  }
+}

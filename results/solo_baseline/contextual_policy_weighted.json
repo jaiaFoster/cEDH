@@ -1,0 +1,96 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "MODEL_DERIVED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_CONTEXTUAL_POLICY_WEIGHTED",
+  "architecture": "weighted",
+  "per_size_keep_threshold": {
+    "7": "C",
+    "6": "D",
+    "5": "D",
+    "4": null
+  },
+  "seat_assumed": 1,
+  "archetype_assumed": null,
+  "london_mulligan_results": {
+    "sample_size": 2000,
+    "mulligan_distribution": {
+      "0": 0.497,
+      "1": 0.3165,
+      "2": 0.123,
+      "3+": 0.0635
+    },
+    "avg_final_hand_size": 6.247,
+    "expected_card_disadvantage": 0.7530000000000001,
+    "tier_distribution": {
+      "F": 0.0385,
+      "A": 0.2045,
+      "C": 0.3965,
+      "D": 0.117,
+      "B": 0.112,
+      "S": 0.1315
+    },
+    "fraction_tier_S_or_A": 0.336,
+    "fraction_tier_D_or_F": 0.1555,
+    "mean_tier_value": 2.7215,
+    "by_mulligan_count": {
+      "0": {
+        "pct_of_population": 0.497,
+        "tier_distribution": {
+          "F": 0.03722334004024145,
+          "A": 0.1981891348088531,
+          "C": 0.42354124748490946,
+          "B": 0.12072434607645875,
+          "D": 0.10865191146881288,
+          "S": 0.11167002012072434
+        },
+        "mean_tier_value": 2.6690140845070425
+      },
+      "1": {
+        "pct_of_population": 0.3165,
+        "tier_distribution": {
+          "A": 0.20537124802527645,
+          "D": 0.12954186413902052,
+          "F": 0.022116903633491312,
+          "B": 0.10426540284360189,
+          "S": 0.14691943127962084,
+          "C": 0.39178515007898895
+        },
+        "mean_tier_value": 2.7819905213270144
+      },
+      "2": {
+        "pct_of_population": 0.123,
+        "tier_distribution": {
+          "C": 0.32926829268292684,
+          "A": 0.25609756097560976,
+          "S": 0.16666666666666666,
+          "D": 0.12601626016260162,
+          "B": 0.0975609756097561,
+          "F": 0.024390243902439025
+        },
+        "mean_tier_value": 2.934959349593496
+      },
+      "3+": {
+        "pct_of_population": 0.0635,
+        "tier_distribution": {
+          "A": 0.14960629921259844,
+          "S": 0.14173228346456693,
+          "C": 0.33858267716535434,
+          "D": 0.10236220472440945,
+          "F": 0.15748031496062992,
+          "B": 0.11023622047244094
+        },
+        "mean_tier_value": 2.4173228346456694
+      }
+    },
+    "elapsed_seconds": 27.445732831954956
+  },
+  "note": "Policy: keep iff the weighted architecture's contextual grade for the resulting hand (7 - mulligans already taken) is at or better than that hand size's reused threshold. See run_contextual_london_mulligan_sim.py for the full keep-decision logic and contextual_valuation_models.py for the architecture itself. Not asserted correct relative to the other three architectures - see contextual_london_results.json for the head-to-head comparison."
+}
