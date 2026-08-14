@@ -1,0 +1,711 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_DRAW_DEPENDENCE_ANALYSIS",
+  "sample_count": 6000,
+  "seed": 6004,
+  "seat": "play",
+  "hands_with_tracked_trajectory": 4545,
+  "overall_classification_distribution": {
+    "BROAD_OUTS": 437,
+    "SELF_CONTAINED": 2208,
+    "EXACT_OR_NEAR_EXACT": 1900
+  },
+  "overall_classification_rate": {
+    "BROAD_OUTS": 0.0961,
+    "SELF_CONTAINED": 0.4858,
+    "EXACT_OR_NEAR_EXACT": 0.418
+  },
+  "hands_with_at_least_one_dependency": 2337,
+  "hands_with_at_least_one_dependency_rate": 0.5142,
+  "hands_with_overlapping_dependency_classes": 298,
+  "narrow_outs_prevalence_finding": "NARROW_OUTS occurred in 0 of 4545 examined hands. Given this project's outs convention (a land dependency counts EVERY remaining land in the deck as an out - see draw_dependence_model.py's docstring), and this deck's land density (~35-38 lands in a 99-card singleton deck), land dependencies land almost exclusively in BROAD_OUTS (commonly 30%+ of the remaining library) while engine-card dependencies are always EXACT_OR_NEAR_EXACT (singleton, outs_count=1) - there is essentially no middle ground under this convention. This is a genuine, disclosed finding about this specific deck's land density, not a bug: NARROW_OUTS may be rare or absent here even though the category itself is a legitimate general classification.",
+  "classification_by_engine": {
+    "Runic Armasaur": {
+      "BROAD_OUTS": 10,
+      "SELF_CONTAINED": 28,
+      "EXACT_OR_NEAR_EXACT": 9
+    },
+    "Faerie Mastermind": {
+      "SELF_CONTAINED": 75,
+      "BROAD_OUTS": 15,
+      "EXACT_OR_NEAR_EXACT": 20
+    },
+    "Sylvan Library": {
+      "SELF_CONTAINED": 146,
+      "BROAD_OUTS": 39,
+      "EXACT_OR_NEAR_EXACT": 38
+    },
+    "Thrasios, Triton Hero": {
+      "EXACT_OR_NEAR_EXACT": 1519,
+      "BROAD_OUTS": 40,
+      "SELF_CONTAINED": 118
+    },
+    "Esper Sentinel": {
+      "SELF_CONTAINED": 709,
+      "BROAD_OUTS": 78,
+      "EXACT_OR_NEAR_EXACT": 64
+    },
+    "Mystic Remora": {
+      "SELF_CONTAINED": 325,
+      "EXACT_OR_NEAR_EXACT": 72,
+      "BROAD_OUTS": 29
+    },
+    "Deathrite Shaman": {
+      "SELF_CONTAINED": 206,
+      "BROAD_OUTS": 32,
+      "EXACT_OR_NEAR_EXACT": 35
+    },
+    "Archivist of Oghma": {
+      "SELF_CONTAINED": 103,
+      "EXACT_OR_NEAR_EXACT": 35,
+      "BROAD_OUTS": 31
+    },
+    "Survival of the Fittest": {
+      "SELF_CONTAINED": 198,
+      "BROAD_OUTS": 60,
+      "EXACT_OR_NEAR_EXACT": 37
+    },
+    "Abhorrent Oculus": {
+      "BROAD_OUTS": 21,
+      "SELF_CONTAINED": 75
+    },
+    "Birthing Pod": {
+      "EXACT_OR_NEAR_EXACT": 16,
+      "SELF_CONTAINED": 102,
+      "BROAD_OUTS": 30
+    },
+    "Rhystic Study": {
+      "SELF_CONTAINED": 40,
+      "BROAD_OUTS": 14,
+      "EXACT_OR_NEAR_EXACT": 20
+    },
+    "Delney, Streetwise Lookout": {
+      "SELF_CONTAINED": 31,
+      "EXACT_OR_NEAR_EXACT": 16,
+      "BROAD_OUTS": 15
+    },
+    "Smothering Tithe": {
+      "BROAD_OUTS": 10,
+      "SELF_CONTAINED": 31,
+      "EXACT_OR_NEAR_EXACT": 13
+    },
+    "Heartwood Storyteller": {
+      "SELF_CONTAINED": 21,
+      "BROAD_OUTS": 13,
+      "EXACT_OR_NEAR_EXACT": 6
+    }
+  },
+  "classification_by_deployment_turn": {
+    "3": {
+      "BROAD_OUTS": 311,
+      "SELF_CONTAINED": 475,
+      "EXACT_OR_NEAR_EXACT": 734
+    },
+    "2": {
+      "SELF_CONTAINED": 1004,
+      "EXACT_OR_NEAR_EXACT": 1007,
+      "BROAD_OUTS": 126
+    },
+    "1": {
+      "EXACT_OR_NEAR_EXACT": 159,
+      "SELF_CONTAINED": 729
+    }
+  },
+  "tutor_vs_natural_draw_note": "SELF_CONTAINED includes hands whose engine card and every supporting land came directly from the opening hand, AND hands where a missing card was found via a hand-held tutor/fetch/Pod-style search (contingent only on a legal target existing, not on a favorable random draw) - see draw_dependence_model.py's docstring on 'whether a tutor draw counts differently from natural resource completion'. Only genuine top-of-library draws appear in 'dependencies' at all.",
+  "example_hands_by_classification": {
+    "BROAD_OUTS": [
+      {
+        "hand": [
+          "Clever Impersonator",
+          "Elvish Spirit Guide",
+          "Flare of Denial",
+          "Hazel's Brewmaster",
+          "Runic Armasaur",
+          "Shifting Woodland",
+          "Sowing Mycospawn"
+        ],
+        "tier_engine": "Runic Armasaur",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "Savannah",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.4921,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Delney, Streetwise Lookout",
+          "Mox Diamond",
+          "Oboro Breezecaller",
+          "Otawara, Soaring City",
+          "Savannah",
+          "Sylvan Library",
+          "Volatile Stormdrake"
+        ],
+        "tier_engine": "Sylvan Library",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "City of Traitors",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 25,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.2747,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Birds of Paradise",
+          "City of Brass",
+          "Derevi, Empyrial Tactician",
+          "Fierce Guardianship",
+          "Gilded Drake",
+          "Swift Reconfiguration",
+          "Training Grounds"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "Minamo, School at Water's Edge",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.2857,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Chord of Calling",
+          "Clever Impersonator",
+          "Delighted Halfling",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Kinnan, Bonder Prodigy",
+          "Mox Amber",
+          "Starting Town"
+        ],
+        "tier_engine": "Abhorrent Oculus",
+        "tier_turn": 3,
+        "legacy_tier": "B",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "Savannah",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.2857,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Birds of Paradise",
+          "Deathrite Shaman",
+          "Derevi, Empyrial Tactician",
+          "Mox Amber",
+          "Nature's Rhythm",
+          "Ranger-Captain of Eos",
+          "Tundra"
+        ],
+        "tier_engine": "Deathrite Shaman",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "Bayou",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.2857,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Chord of Calling",
+          "Gilded Drake",
+          "Mox Amber",
+          "Sowing Mycospawn",
+          "Spellseeker",
+          "Survival of the Fittest",
+          "Underground Sea"
+        ],
+        "tier_engine": "Birthing Pod",
+        "tier_turn": 3,
+        "legacy_tier": "B",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "Ancient Tomb",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.4921,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Command Tower",
+          "Elvish Spirit Guide",
+          "Orcish Bowmasters",
+          "Ranger-Captain of Eos",
+          "Scrubland",
+          "Tropical Island",
+          "Tundra"
+        ],
+        "tier_engine": "Esper Sentinel",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "Bayou",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 23,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.4437,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Demonic Tutor",
+          "Derevi, Empyrial Tactician",
+          "Devoted Druid",
+          "Faerie Mastermind",
+          "Oboro Breezecaller",
+          "Savannah",
+          "Tropical Island"
+        ],
+        "tier_engine": "Faerie Mastermind",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "supporting_land",
+            "card": "City of Traitors",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 25,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.4762,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      }
+    ],
+    "SELF_CONTAINED": [
+      {
+        "hand": [
+          "Birthing Pod",
+          "Command Tower",
+          "Delighted Halfling",
+          "Enduring Vitality",
+          "Faerie Mastermind",
+          "Mystic Remora",
+          "Veil of Summer"
+        ],
+        "tier_engine": "Faerie Mastermind",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Ancient Tomb",
+          "Archivist of Oghma",
+          "Bayou",
+          "Endurance",
+          "Flusterstorm",
+          "Mindbreak Trap",
+          "Vampiric Tutor"
+        ],
+        "tier_engine": "Sylvan Library",
+        "tier_turn": 2,
+        "legacy_tier": "A",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Birds of Paradise",
+          "Elvish Spirit Guide",
+          "Minamo, School at Water's Edge",
+          "Rhystic Study",
+          "Scrubland",
+          "Swan Song",
+          "Vampiric Tutor"
+        ],
+        "tier_engine": "Esper Sentinel",
+        "tier_turn": 2,
+        "legacy_tier": "A",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Colossal Skyturtle",
+          "Esper Sentinel",
+          "Mental Misstep",
+          "Minamo, School at Water's Edge",
+          "Polluted Delta",
+          "Rhystic Study",
+          "Talon Gates of Madara"
+        ],
+        "tier_engine": "Esper Sentinel",
+        "tier_turn": 1,
+        "legacy_tier": "S",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Commandeer",
+          "Derevi, Empyrial Tactician",
+          "Enduring Vitality",
+          "Force of Will",
+          "Misty Rainforest",
+          "Mystic Remora",
+          "Survival of the Fittest"
+        ],
+        "tier_engine": "Mystic Remora",
+        "tier_turn": 1,
+        "legacy_tier": "S",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Marsh Flats",
+          "Rhystic Study",
+          "Scrubland",
+          "Shifting Woodland",
+          "Smothering Tithe",
+          "Sylvan Library",
+          "Wooded Foothills"
+        ],
+        "tier_engine": "Sylvan Library",
+        "tier_turn": 2,
+        "legacy_tier": "A",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Birds of Paradise",
+          "Deathrite Shaman",
+          "Flooded Strand",
+          "Misty Rainforest",
+          "Orcish Bowmasters",
+          "Runic Armasaur",
+          "Sol Ring"
+        ],
+        "tier_engine": "Deathrite Shaman",
+        "tier_turn": 2,
+        "legacy_tier": "C",
+        "dependencies": []
+      },
+      {
+        "hand": [
+          "Archivist of Oghma",
+          "City of Brass",
+          "Elvish Spirit Guide",
+          "Marsh Flats",
+          "Oboro Breezecaller",
+          "Subtlety",
+          "Tundra"
+        ],
+        "tier_engine": "Archivist of Oghma",
+        "tier_turn": 1,
+        "legacy_tier": "C",
+        "dependencies": []
+      }
+    ],
+    "EXACT_OR_NEAR_EXACT": [
+      {
+        "hand": [
+          "Chrome Mox",
+          "Eldritch Evolution",
+          "Enduring Vitality",
+          "Kinnan, Bonder Prodigy",
+          "Mental Misstep",
+          "Ranger-Captain of Eos",
+          "Tundra"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 1,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 1,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 0,
+            "probability_of_success_by_turn": 0.0,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Kinnan, Bonder Prodigy",
+          "Minamo, School at Water's Edge",
+          "Misty Rainforest",
+          "Polluted Delta",
+          "Shang-Chi, Master of Kung Fu",
+          "Sowing Mycospawn",
+          "Training Grounds"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 2,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.011,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Badgermole Cub",
+          "Derevi, Empyrial Tactician",
+          "Minamo, School at Water's Edge",
+          "Mox Amber",
+          "Nature's Rhythm",
+          "Voice of Victory",
+          "Windswept Heath"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 2,
+        "legacy_tier": "A",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.011,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Avacyn's Pilgrim",
+          "Finale of Devastation",
+          "Mana Confluence",
+          "Nature's Rhythm",
+          "Ranger-Captain of Eos",
+          "Runic Armasaur",
+          "Talon Gates of Madara"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.022,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Elvish Spirit Guide",
+          "Endurance",
+          "Gilded Drake",
+          "Lotus Petal",
+          "Savannah",
+          "Veil of Summer",
+          "Volatile Stormdrake"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 3,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.022,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          },
+          {
+            "slot": "supporting_land",
+            "card": "Mana Confluence",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.4921,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Abhorrent Oculus",
+          "Birds of Paradise",
+          "Elvish Spirit Guide",
+          "Heartwood Storyteller",
+          "Mana Vault",
+          "Otawara, Soaring City",
+          "Underground Sea"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 3,
+        "legacy_tier": "B",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 3,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 2,
+            "probability_of_success_by_turn": 0.022,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Chrome Mox",
+          "Enlightened Tutor",
+          "Orcish Bowmasters",
+          "Polluted Delta",
+          "Smothering Tithe",
+          "Starting Town",
+          "Swift Reconfiguration"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 1,
+        "legacy_tier": "C",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 1,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 0,
+            "probability_of_success_by_turn": 0.0,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          }
+        ]
+      },
+      {
+        "hand": [
+          "Chrome Mox",
+          "Deathrite Shaman",
+          "Demonic Tutor",
+          "Mana Vault",
+          "Mox Amber",
+          "Pact of Negation",
+          "Tropical Island"
+        ],
+        "tier_engine": "Thrasios, Triton Hero",
+        "tier_turn": 2,
+        "legacy_tier": "A",
+        "dependencies": [
+          {
+            "slot": "engine_card",
+            "card": "Thrasios, Triton Hero",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 1,
+            "outs_type": "singleton_exact_card",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.011,
+            "classification": "EXACT_OR_NEAR_EXACT"
+          },
+          {
+            "slot": "supporting_land",
+            "card": "Scrubland",
+            "turn": 2,
+            "source": "natural_draw",
+            "outs_count": 26,
+            "outs_type": "any_land",
+            "draws_available_by_turn": 1,
+            "probability_of_success_by_turn": 0.2857,
+            "classification": "BROAD_OUTS"
+          }
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Tutor attribution is a disclosed heuristic proxy (any hand-cast tutor spell before the dependency turn is assumed to have found the missing card) - it cannot always correctly attribute which specific tutor found which specific card in a hand with multiple simultaneous tutors.",
+    "Fetch attribution similarly does not verify target-type matching when a hand holds multiple simultaneous fetchlands.",
+    "This only classifies the SINGLE best trajectory the bounded search already found - it does not evaluate draw dependence for every legal alternative line."
+  ]
+}

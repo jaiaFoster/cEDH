@@ -1,0 +1,51 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "RULES_VERIFIED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_OUTS_ANALYSIS",
+  "method_note": "outs_count and probability_of_success_by_turn are exact combinatorics (hypergeometric P(at least one out in k draws without replacement)), not fabricated or fitted - see draw_dependence_model.hypergeometric_at_least_one(). Computed over the PRE-HOC remaining library (deck minus opening hand only), never conditioned on what this one simulated shuffle happened to draw in other, independent slots.",
+  "sample_count": 6000,
+  "seed": 6004,
+  "seat": "play",
+  "dependency_slots_examined": 2698,
+  "dependency_type_distribution": {
+    "supporting_land": 798,
+    "engine_card": 1900
+  },
+  "outs_count_stats_by_slot_type": {
+    "supporting_land": {
+      "count": 798,
+      "min": 23,
+      "max": 27,
+      "avg": 25.4549
+    },
+    "engine_card": {
+      "count": 1900,
+      "min": 1,
+      "max": 1,
+      "avg": 1.0
+    }
+  },
+  "probability_of_success_stats_by_slot_type": {
+    "supporting_land": {
+      "count": 798,
+      "min": 0.0,
+      "max": 0.5077,
+      "avg": 0.3623
+    },
+    "engine_card": {
+      "count": 1900,
+      "min": 0.0,
+      "max": 0.022,
+      "avg": 0.0143
+    }
+  },
+  "engine_card_slots_are_always_exact": "Every 'engine_card' dependency slot has outs_count == 1 by construction - this deck is singleton, so a naturally-drawn engine card always has exactly one remaining copy in the library. This module does not attempt to find broader functional substitutes for a missing engine card (deferred, disclosed BOUNDED_SEARCH_LOWER_BOUND limitation)."
+}
