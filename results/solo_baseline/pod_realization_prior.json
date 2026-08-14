@@ -1,0 +1,283 @@
+{
+  "phase": "SIM_001_MULL_006_POD_REALIZATION_PRIOR",
+  "evidence_type": "STRATEGIC_PRIOR_UNVALIDATED",
+  "note": "EVERY value in this artifact is STRATEGIC_PRIOR_UNVALIDATED and stays that way until real multiplayer simulation/tournament calibration exists. No exact multiplayer trigger rate is fabricated anywhere in this artifact - only ordinal VERY_HIGH/HIGH/MODERATE/LOW/UNKNOWN labels, per the assignment's explicit instruction. This is a separate, ADDITIVE modifier layer - it does not rewrite engine_strength_prior.py's intrinsic strength table, and pod_archetypes.py (MULL-005's existing archetype work) is reused, not modified.",
+  "realization_order_best_first": [
+    "VERY_HIGH",
+    "HIGH",
+    "MODERATE",
+    "LOW",
+    "UNKNOWN"
+  ],
+  "tracked_engines": [
+    "Archivist of Oghma",
+    "Esper Sentinel",
+    "Faerie Mastermind",
+    "Heartwood Storyteller",
+    "Mystic Remora",
+    "Rhystic Study",
+    "Runic Armasaur",
+    "Smothering Tithe"
+  ],
+  "engine_driver_dimension": {
+    "Rhystic Study": "noncreature_spell_density",
+    "Mystic Remora": "noncreature_spell_density",
+    "Esper Sentinel": "noncreature_spell_density",
+    "Faerie Mastermind": "second_draw_density",
+    "Archivist of Oghma": "tutor_search_density",
+    "Heartwood Storyteller": "noncreature_spell_density",
+    "Runic Armasaur": "creature_density",
+    "Smothering Tithe": "land_drop_reliability"
+  },
+  "tax_gated_engines": [
+    "Esper Sentinel",
+    "Mystic Remora",
+    "Rhystic Study",
+    "Smothering Tithe"
+  ],
+  "tax_gated_engines_note": "Rhystic Study, Mystic Remora, Esper Sentinel, and Smothering Tithe all have a real 'unless that player pays {N}' clause - a high-tax-payment-ability archetype denies realization even when the driver dimension itself is high, so these four are additionally penalized by tax_payment_ability. Faerie Mastermind, Archivist of Oghma, Heartwood Storyteller, and Runic Armasaur have no such clause and are not penalized.",
+  "archetype_behavior_profiles": {
+    "RogSi": {
+      "noncreature_spell_density": 2,
+      "tutor_search_density": 2,
+      "creature_density": 0,
+      "second_draw_density": 0,
+      "tax_payment_ability": 0,
+      "land_drop_reliability": 2
+    },
+    "Kinnan": {
+      "noncreature_spell_density": 1,
+      "tutor_search_density": 1,
+      "creature_density": 2,
+      "second_draw_density": 0,
+      "tax_payment_ability": 2,
+      "land_drop_reliability": 2
+    },
+    "Rog/Thras Tree Farm": {
+      "noncreature_spell_density": 1,
+      "tutor_search_density": 1,
+      "creature_density": 2,
+      "second_draw_density": 1,
+      "tax_payment_ability": 1,
+      "land_drop_reliability": 2
+    },
+    "Blue Farm": {
+      "noncreature_spell_density": 2,
+      "tutor_search_density": 1,
+      "creature_density": 0,
+      "second_draw_density": 2,
+      "tax_payment_ability": 2,
+      "land_drop_reliability": 2
+    },
+    "Sisay": {
+      "noncreature_spell_density": 1,
+      "tutor_search_density": 2,
+      "creature_density": 1,
+      "second_draw_density": 0,
+      "tax_payment_ability": 1,
+      "land_drop_reliability": 2
+    },
+    "Tayam": {
+      "noncreature_spell_density": 1,
+      "tutor_search_density": 0,
+      "creature_density": 2,
+      "second_draw_density": 1,
+      "tax_payment_ability": 1,
+      "land_drop_reliability": 2
+    },
+    "Tivit": {
+      "noncreature_spell_density": 2,
+      "tutor_search_density": 1,
+      "creature_density": 1,
+      "second_draw_density": 1,
+      "tax_payment_ability": 2,
+      "land_drop_reliability": 2
+    },
+    "Etali": {
+      "noncreature_spell_density": 1,
+      "tutor_search_density": 0,
+      "creature_density": 1,
+      "second_draw_density": 0,
+      "tax_payment_ability": 2,
+      "land_drop_reliability": 2
+    },
+    "stax_heavy": {
+      "noncreature_spell_density": 2,
+      "tutor_search_density": 1,
+      "creature_density": 0,
+      "second_draw_density": 0,
+      "tax_payment_ability": 0,
+      "land_drop_reliability": 1
+    },
+    "midrange_grind": {
+      "noncreature_spell_density": 1,
+      "tutor_search_density": 1,
+      "creature_density": 1,
+      "second_draw_density": 1,
+      "tax_payment_ability": 1,
+      "land_drop_reliability": 2
+    }
+  },
+  "archetype_behavior_profile_note": "Each archetype's density values (LOW=0/MODERATE=1/HIGH=2) are hand-derived FROM pod_archetypes.ARCHETYPES's existing primary_resource_axis/interaction_demand/speed descriptions (already an established MULL-005 strategic prior, not new invention) - see pod_realization_model.py's module docstring for the per-archetype reasoning.",
+  "engine_x_archetype_realization_table": {
+    "Rhystic Study": {
+      "RogSi": "VERY_HIGH",
+      "Kinnan": "LOW",
+      "Rog/Thras Tree Farm": "MODERATE",
+      "Blue Farm": "MODERATE",
+      "Sisay": "MODERATE",
+      "Tayam": "MODERATE",
+      "Tivit": "MODERATE",
+      "Etali": "LOW",
+      "stax_heavy": "VERY_HIGH",
+      "midrange_grind": "MODERATE"
+    },
+    "Mystic Remora": {
+      "RogSi": "VERY_HIGH",
+      "Kinnan": "LOW",
+      "Rog/Thras Tree Farm": "MODERATE",
+      "Blue Farm": "MODERATE",
+      "Sisay": "MODERATE",
+      "Tayam": "MODERATE",
+      "Tivit": "MODERATE",
+      "Etali": "LOW",
+      "stax_heavy": "VERY_HIGH",
+      "midrange_grind": "MODERATE"
+    },
+    "Esper Sentinel": {
+      "RogSi": "VERY_HIGH",
+      "Kinnan": "LOW",
+      "Rog/Thras Tree Farm": "MODERATE",
+      "Blue Farm": "MODERATE",
+      "Sisay": "MODERATE",
+      "Tayam": "MODERATE",
+      "Tivit": "MODERATE",
+      "Etali": "LOW",
+      "stax_heavy": "VERY_HIGH",
+      "midrange_grind": "MODERATE"
+    },
+    "Faerie Mastermind": {
+      "RogSi": "LOW",
+      "Kinnan": "LOW",
+      "Rog/Thras Tree Farm": "MODERATE",
+      "Blue Farm": "HIGH",
+      "Sisay": "LOW",
+      "Tayam": "MODERATE",
+      "Tivit": "MODERATE",
+      "Etali": "LOW",
+      "stax_heavy": "LOW",
+      "midrange_grind": "MODERATE"
+    },
+    "Archivist of Oghma": {
+      "RogSi": "HIGH",
+      "Kinnan": "MODERATE",
+      "Rog/Thras Tree Farm": "MODERATE",
+      "Blue Farm": "MODERATE",
+      "Sisay": "HIGH",
+      "Tayam": "LOW",
+      "Tivit": "MODERATE",
+      "Etali": "LOW",
+      "stax_heavy": "MODERATE",
+      "midrange_grind": "MODERATE"
+    },
+    "Heartwood Storyteller": {
+      "RogSi": "HIGH",
+      "Kinnan": "MODERATE",
+      "Rog/Thras Tree Farm": "MODERATE",
+      "Blue Farm": "HIGH",
+      "Sisay": "MODERATE",
+      "Tayam": "MODERATE",
+      "Tivit": "HIGH",
+      "Etali": "MODERATE",
+      "stax_heavy": "HIGH",
+      "midrange_grind": "MODERATE"
+    },
+    "Runic Armasaur": {
+      "RogSi": "LOW",
+      "Kinnan": "HIGH",
+      "Rog/Thras Tree Farm": "HIGH",
+      "Blue Farm": "LOW",
+      "Sisay": "MODERATE",
+      "Tayam": "HIGH",
+      "Tivit": "MODERATE",
+      "Etali": "MODERATE",
+      "stax_heavy": "LOW",
+      "midrange_grind": "MODERATE"
+    },
+    "Smothering Tithe": {
+      "RogSi": "VERY_HIGH",
+      "Kinnan": "MODERATE",
+      "Rog/Thras Tree Farm": "HIGH",
+      "Blue Farm": "MODERATE",
+      "Sisay": "HIGH",
+      "Tayam": "HIGH",
+      "Tivit": "MODERATE",
+      "Etali": "MODERATE",
+      "stax_heavy": "HIGH",
+      "midrange_grind": "HIGH"
+    }
+  },
+  "archetype_source_descriptions": {
+    "RogSi": {
+      "speed": "very_fast",
+      "primary_resource_axis": "low curve + fast mana + cheap tutors, minimal grind",
+      "interaction_demand": "high - needs cheap/free interaction to survive to your own turns"
+    },
+    "Kinnan": {
+      "speed": "fast_to_medium",
+      "primary_resource_axis": "mana-doubling into a big X payoff (Walking Ballista/Kinnan combo lines)",
+      "interaction_demand": "medium-high - needs an answer to the mana engine itself, not just the payoff"
+    },
+    "Rog/Thras Tree Farm": {
+      "speed": "medium",
+      "primary_resource_axis": "creature/mana-engine value (Gaea's Cradle style), grindy and resilient - a mirror of this deck's own archetype",
+      "interaction_demand": "medium - the matchup is decided by engine tempo more than raw interaction density"
+    },
+    "Blue Farm": {
+      "speed": "slow",
+      "primary_resource_axis": "card-advantage/tax value (Rhystic Study, Smothering Tithe, wraths) - classic control grind",
+      "interaction_demand": "low-to-medium early, high late - the game is decided by who out-values whom, not who acts first"
+    },
+    "Sisay": {
+      "speed": "fast_to_medium",
+      "primary_resource_axis": "legendary tutor-toolbox chain (Sisay, Weatherlight Captain assembling a combo via successive tutors)",
+      "interaction_demand": "high - the combo resolves in one big turn once Sisay is live, so interaction must be timed to that turn"
+    },
+    "Tayam": {
+      "speed": "medium",
+      "primary_resource_axis": "graveyard recursion / aristocrats value-combo (Tayam, Luminous Enigma)",
+      "interaction_demand": "medium - centered on disrupting a recursive loop rather than a single spell"
+    },
+    "Tivit": {
+      "speed": "medium",
+      "primary_resource_axis": "blink/extra-turn value-combo (Tivit, Seller of Secrets), grindy card-advantage engine into a combo finish",
+      "interaction_demand": "medium-high, particularly around extra-turn or blink trigger windows"
+    },
+    "Etali": {
+      "speed": "medium_slow",
+      "primary_resource_axis": "big-mana ramp/cascade value (Etali, Primal Conqueror) - Temur midrange grind with a large top end",
+      "interaction_demand": "medium - mostly about answering their top-end threats before they compound"
+    },
+    "stax_heavy": {
+      "speed": "slow_by_design",
+      "primary_resource_axis": "resource denial - taxes, mana/land destruction, effects that punish multi-piece plans",
+      "interaction_demand": "low toward opponents, high toward the stax pieces themselves"
+    },
+    "midrange_grind": {
+      "speed": "medium",
+      "primary_resource_axis": "generic average cEDH pod - some interaction, some engines, no extreme skew",
+      "interaction_demand": "medium"
+    }
+  },
+  "example_relationships": {
+    "runic_armasaur_favors_creature_heavy_pods": "Kinnan/Rog-Thras-Tree-Farm/Tayam (creature_density=HIGH) realize HIGH; RogSi/Blue Farm/stax_heavy (creature_density=LOW) realize LOW - Armasaur punishes creatures entering the battlefield, so it is essentially dead against spell-heavy control/combo pods.",
+    "archivist_favors_tutor_dense_pods": "RogSi/Sisay (tutor_search_density=HIGH) realize HIGH; Tayam/Etali (tutor_search_density=LOW) realize LOW - Archivist triggers on library searches specifically.",
+    "tax_gated_engines_punished_by_mana_rich_pods": "Rhystic Study/Mystic Remora/Esper Sentinel/Smothering Tithe all realize LOWER against Kinnan/Blue Farm/Etali/Tivit (tax_payment_ability=HIGH) than against RogSi/stax_heavy (tax_payment_ability=LOW), even when noncreature spell density is comparable or higher - a mana-rich pod can simply pay through the tax."
+  },
+  "limitations": [
+    "This model has NOT been validated against any real multiplayer data - it is a structural, disclosed strategic prior only.",
+    "Heartwood Storyteller's driver dimension (noncreature_spell_density, treated as a proxy for single-target-spell density) is a coarser characterization than its real Oracle trigger condition - see pod_realization_model.py's docstring.",
+    "Archetype behavior profiles are hand-authored ordinal judgments, not measured spell/tutor/creature counts from any real decklist or game log.",
+    "The tax-payment penalty model is linear and uniform across all four tax-gated engines - real per-card tax amounts ({1} for Rhystic, an escalating {X} for Remora, {X}=power for Sentinel, {2} for Tithe) are not separately modeled."
+  ]
+}
