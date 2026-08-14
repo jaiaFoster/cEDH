@@ -2406,3 +2406,368 @@ mana curve? (3) would a land-count floor on the premium-one-drop SNAP_KEEP rule 
 holdout audit surfaced 1-land hands still unconditionally snap-keeping) measurably improve
 TRAJECTORY_SIMPLE_R's precision without materially hurting recall? (4) full 4-player pod-conditioned
 matchup simulation remains this project's largest genuinely unaddressed question.
+
+---
+
+# SIM-001 MULL-006 — Contextual Trajectory Valuation, Resilience & Mulligan Calibration
+
+Subject: same as above (`tymna-thrasios-treefarm-v1`,
+`4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a`), confirmed unchanged from
+MULL-005R (`mull006_provenance.json`, `subject_matches_mull005r: true`). Predecessor: MULL-005R.
+Regression gate: `mull006_regression_gate.json`, `full_suite_passed: true`,
+`gate_status: OPEN_FOR_PRODUCTION_RERUN` (389 tests collected, 386 passed, 3 pre-existing skips,
+199 of the passing tests are new this phase across 19 test files).
+
+## 1. Executive Summary
+
+MULL-005R answered "what can this hand legally do?" MULL-006 asked the harder question: "how GOOD
+is the best legal trajectory in the context of an actual cEDH mulligan decision?" It built eight
+new, independently-testable contextual dimensions (engine strength, relative deployment speed,
+seat-adjusted timing, draw dependence/outs, trajectory fragility/recovery, pod-trigger realization,
+relevant agency, and expanded engine-realization timing), assembled them into a multi-dimensional
+trajectory object, and compared FOUR different ways of combining them (weighted, lexicographic,
+gated, tree) rather than assuming any one formula was correct from the start.
+
+**What changed from MULL-005R**: every trajectory now carries a CONTEXTUAL grade in addition to its
+legacy tier — a grade that can differ from the legacy tier for reasons the model can explain (draw
+dependence, resilience, seat exposure, pod realization). A real, pre-existing gap in the fetch-target
+search was fixed (task #103) before any of this contextual work began, exactly as the assignment
+required. A real gap in the London mulligan harness was also found and fixed mid-phase (task #117):
+mulligan depth was never actually wired into the keep decision in the pre-existing simulation loop,
+so every attempt was silently evaluated against the size-7 bar regardless of how many mulligans had
+already been taken.
+
+**Which previous conclusions survived**: the four primary destination families (resource engine,
+early Oculus, functional Pod, functional Survival), the "acceleration is a means not a destination"
+rule, the Tymna/Thrasios commander policy, and the FAERIE MASTERMIND CORRECTION's premise (passive
+alone is the engine) all survive unchanged and are now load-bearing parts of the contextual model.
+
+**Which reversed or were substantially qualified**: MULL-005R's Mastermind Tier-C activation
+requirement is explicitly overridden for STRENGTH purposes (by direct instruction, not a new
+finding) — but the contextual holdout validation (task #119) found this correction cannot be
+validated against the (deliberately unmodified) legacy grader, since the two systems are designed to
+diverge exactly here. More importantly, an UNPLANNED finding dominates this phase's disagreement
+data: the gated architecture's `DRAW_DEPENDENCE_PROBABILITY_GATE_THRESHOLD=0.2` fires on 98.1% of
+its 696 disagreements with the legacy grader (`contextual_holdout_validation.json`) — a strategic-
+prior/threshold-tuning finding, not a rules failure, but a genuine reason not to treat the current
+gated architecture's exact threshold as final. This is flagged, not silently fixed.
+
+## 2. Correctness
+
+**Fetch branching** (task #103, section 2 — required to be fixed FIRST): a 6th bounded-search
+family now branches one fetchland's target per candidate, reusing the pre-existing but previously
+unwired `forced_fetch_target` plumbing. `fetch_branching_validation.json`: 41.3% of sampled hands
+had at least one fetch-target candidate; 8.28% of ALL sampled hands changed their best-known
+trajectory as a result (20.0% among hands with a fetch candidate); 3.34% changed their mulligan
+decision outright. Verified against the exact real-world failure case surfaced at the end of
+MULL-005R (Wooded Foothills → Tropical Island reaching Tier S Mystic Remora where the greedy line
+reached Tier F).
+
+**Bugs discovered and fixed this phase**: (1) `engine_strength()`'s first draft returned a strength
+label for any tracked card sitting in HAND, never checking battlefield presence — caught by its own
+regression test (`test_mastermind_not_on_battlefield_returns_none`), fixed by adding an explicit
+`on_battlefield` check. (2) `contextual_valuation_models.py`'s first draft built seat-timing and pod-
+realization fields onto every trajectory object but never wired them into any of the four valuation
+architectures — caught immediately by task #114's own smoke test (0 seat/pod flips across 200 real
+hands, which should have been near-impossible), fixed by adding seat-exposure and pod-realization
+gates to all four architectures. (3) A cosmetic ordering mismatch between
+`DISAGREEMENT_CAUSES_ORDER` and the gated model's actual gate-check order was found and corrected
+during task #119's own regression-test authoring.
+
+**Regression status**: `mull006_regression_gate.json` — full suite green, all 9 assignment-named new-
+mechanic test categories present with real coverage (fetch-target branching, engine-strength/speed
+separation, Mastermind passive-engine, seat-order, draw-outs, one-land-trajectory, counterfactual-
+removal/recovery, interaction-relevance, pod-realization-provenance).
+
+## 3. Strength × Speed
+
+`engine_strength_prior.json` and `relative_speed_model.json` establish the two axes independently
+(PILOT_SUPPLIED_STRATEGIC_PRIOR, back-derived to exactly reproduce every worked example the
+assignment itself gave). `strength_speed_matrix.json` combines them into the given 4×4 (+ a
+disclosed extrapolated LATE column) matrix:
+
+| strength \ speed | EXTREME | AHEAD | ON-TIME | BEHIND | LATE (extrapolated) |
+|---|---|---|---|---|---|
+| S | S+ | S | A | B | B- |
+| A | S | A+ | A / B+ (ambiguous) | C+ | C |
+| B | A+ | A | B | C | D |
+| C | A | B+ | B- / C+ (ambiguous) | D | F |
+
+`strength_speed_sensitivity.json` tested this against 2373/6000 real hands whose best trajectory
+used a tracked engine: the A/ON-TIME ambiguous cell resolves to its PRIMARY grade ("A") 9× better
+than the alternate (5.46% vs 0.62% band-match rate against the independent legacy grader, n=641);
+the C/ON-TIME cell favors the ALTERNATE resolution but on only 5 samples — too few to trust.
+**Boundary sensitivity finding**: shifting `expected_deployment_turn` by ±1 turn flips the speed
+label for 85-100% of real samples for most engines — the classification is a sharp step function
+over a narrow T1-T3 range and is NOT robust to a 1-turn prior error, independent of whether the
+CURRENT values are correct.
+
+Answering the report's own numbered questions directly: **(1)** yes — separating strength from speed
+is what lets a T1 Mastermind (A+) clearly outrank a T2 Esper Sentinel (C+) even though Sentinel's
+raw strength (A-) is comparable, a distinction a single conflated score could not make. **(2)** the
+matrix table above; empirically, S-EXTREME/S-AHEAD and A-EXTREME cells behave like real S/A
+trajectories in the sampled data (`top_25_contextual_trajectories.json`'s top ranks are exclusively
+T1/T2 functional Pod and Smothering Tithe). **(5)** T1 Mastermind grades A+ on the new matrix, but
+this specific comparison could NOT be validated against the legacy grader in `strength_speed_
+sensitivity.json` (avg legacy rank 3.0 for T1 Mastermind vs 1.0 for T2 Remora, n=7 vs 133) — by
+design, since the legacy grader still enforces the pre-correction activation requirement MULL-006
+explicitly overrides. Whether T1 Mastermind's real value matches this prior remains
+STRATEGIC_PRIOR_UNVALIDATED pending real multiplayer data. **(6)** T2 Remora/Sentinel are downgraded
+from S/A (their intrinsic strength) to C+ (BEHIND-column penalty) — a full 5+ band drop from being
+merely "cast one turn late."
+
+## 4. Top 25 Contextual Trajectories
+
+`top_25_contextual_trajectories.json` (3000 real hands sampled, gated architecture, seat 1,
+`midrange_grind` reference archetype) is dominated by T1/T2 functional Birthing Pod and T1/T2
+Smothering Tithe, both grading S+ at EVERY hand size (7 through 4) — fully self-contained, robust
+trajectories with a real second destination or fodder, that don't degrade even under aggressive
+bottoming. **(3)** T2 Tithe is confirmed among the deck's best realistic starts — it appears
+repeatedly in the top 25 and the matrix places T2 Tithe at S (AHEAD column, S-strength row).
+**(4)** functional early Pod is Tithe-level or better: both share the S intrinsic strength band and
+both appear at the very top of the ranked list; Pod additionally shows up with richer SECONDARY
+PLAN diversity (Survival of the Fittest, Esper Sentinel, Chord of Calling as realized fallbacks in
+the table's rows 21-25) since its own mechanism (find another creature) naturally chains.
+
+## 5. Seat Effects
+
+`seat_adjusted_trajectory_census.json` establishes the exact game-structure arithmetic
+(`opponent_turns_before(N, seat) = 3(N-1) + (seat-1)`) and the disclosed action-window convention.
+Two structural findings: (a) the raw exposure delta between Seat 1 and Seat 4 is a CONSTANT 3 turns
+for any deployment turn, but its RELATIVE severity shrinks as deployment turn increases (T1: 0→3,
+infinite relative increase; T3: 6→9, only 50%) — T1 trajectories are the most seat-sensitive in
+relative terms even though every trajectory shares the same absolute swing; (b) "value generated
+before our next turn" is seat-INVARIANT — seat changes exposure magnitude, never the underlying
+yes/no of whether realization structurally precedes our own next turn.
+
+`seat_pod_matrix.json` (4000 real hands, gated architecture): **(7)** the most seat-sensitive
+tracked engines are Esper Sentinel (59 flip-contributing hands), Thrasios (53), and Deathrite Shaman
+(34) — notably the two tax-gated, opponent-triggered engines dominate, consistent with the seat-
+exposure gate's interaction with FRAGILE/ALL_IN resilience. **(8)** seat alone changes the mulligan
+decision for **9.09%** of tracked-destination hands (278/3057) — real, but secondary to draw
+dependence in overall impact.
+
+## 6. Draw Dependence / Outs
+
+`draw_dependence_analysis.json` (4545/6000 real hands with a tracked trajectory): **48.58%**
+SELF_CONTAINED, **9.61%** BROAD_OUTS, **41.80%** EXACT_OR_NEAR_EXACT, **0%** NARROW_OUTS observed —
+a genuine, disclosed finding about this deck's land density (~27.5%), not a bug: land dependencies
+land almost exclusively BROAD (avg 25.45 outs of the ~92-card remaining pool per `outs_analysis.
+json`) while engine-card dependencies are always EXACT (singleton, outs_count=1 always), leaving
+little room for a genuine middle category. **(10)** answering directly: **41.8%** of advertised T2+
+trajectories in this sample are actually draw-dependent (not counting hand-tutor/fetch-sourced
+lines, which are correctly excluded as SELF_CONTAINED). **(12)** the outs threshold distinguishing
+reasonable speculation from a bad gamble, as implemented in the gated architecture, is
+`probability_of_trajectory < 0.2` combined with NARROW/EXACT classification — but the holdout
+validation (section 12 below) suggests this specific threshold may be too strict for the ROUTINE
+"engine card was a natural draw" case, since that case's probability is essentially ALWAYS below
+0.2 by construction (singleton copy).
+
+`one_land_hand_audit.json`: **(11)** genuinely self-contained one-land + dork + T2-engine hands
+are real but a minority of one-land openers — 134/1660 (8.1%) at hand size 7, with a **100%** keep
+rate at every hand size once found; one-land hands are NOT rare in this deck (27.67% at size 7
+rising to 42.20% at size 4, tracking its land density). Keep rate declines slightly from Seat 1/2
+(47.2%) to Seat 3/4 (43.6%) even at hand size 7.
+
+## 7. Fragility / Recovery
+
+`trajectory_fragility_analysis.json` (4575 real hands): **72.9%** RECOVERABLE, **15.7%** FRAGILE,
+**4.3%** ROBUST, **7.1%** ALL_IN. `trajectory_recovery_analysis.json` shows resilience classes are
+clearly differentiated: ROBUST hands have a second destination ALREADY realized 100% of the time
+(by construction) and 0-turn recovery; ALL_IN hands have **0%** live interaction remaining and a
+2.82-turn average time to next development for the minority that have ANY known path forward at
+all. **(15)** yes — resilience materially changes decisions: it is one of only two dimensions
+(alongside draw dependence) with its own hard gate in the gated architecture, and the disclosed
+finding that `creatures_sacrificed` is 0 across the ENTIRE sample (even when Birthing Pod itself is
+`tier_engine`) revealed that Pod's own tier credit is earned via infrastructure-readiness, not an
+already-executed exchange — a genuine, non-obvious consequence of how the legacy grader credits Pod.
+
+`fragility_stress_test.json` (20000 hands, 13 named families): **(13)** the most fragile-by-name
+families are the rare ones with small samples (T1 Archivist n=37, 2.7% strong-secondary rate; T1
+Mastermind n=22, 9.1% strong-secondary); **(14)** T1/T2 Remora and Sentinel retain the strongest
+recovery plans among common families (~18-19% strong-secondary-trajectory rate), consistent with
+being drawn into hands that already carry other resources rather than being the hand's sole plan.
+
+## 8. Pod Realization
+
+`pod_realization_prior.json` (STRATEGIC_PRIOR_UNVALIDATED throughout, no fabricated trigger rates):
+the 8×10 engine×archetype matrix is rule-derived from `pod_archetypes.py`'s existing archetype
+descriptions, not invented fresh. **(16)** the greatest pod-realization variance belongs to the four
+tax-gated engines (Rhystic Study, Mystic Remora, Esper Sentinel, Smothering Tithe), which swing from
+VERY_HIGH (RogSi/stax_heavy, low tax-payment ability) to LOW (Kinnan/Etali, high tax-payment
+ability) — a wider spread than the non-gated engines, since they're penalized on TWO axes
+(trigger-density AND ability to pay through the tax) rather than one.
+
+## 9. Relevant Agency
+
+`relevant_agency_analysis.json`: this deck's interaction suite is majority stack/counter-based with
+NO dedicated creature-removal or activation-disruption card — relevant agency against Kinnan/Sisay-
+style creature-centric pods is structurally capped even when live agency is high. **(17)** live
+interaction becomes irrelevant interaction whenever the opposing pod's threat axes don't intersect
+the card's tags — concretely demonstrated by disagreement example F (a real hand whose one live
+interaction card counts as relevant against RogSi but not Tayam). **(18)** relevant agency DOES
+upgrade a marginal but coherent hand under all four architectures (the final agency-bonus step,
+gated behind "no earlier downgrade gate fired"). **(19)** interaction does NOT ever rescue a
+destination-less hand: the boundary check found 681/6000 D/F-tier hands still had live interaction
+(136 had 2+), and every single one remained a mulligan — confirmed by construction, since the
+contextual model never lets agency scores participate in tier grading at all.
+
+## 10. Destination-Specific Findings
+
+**Smothering Tithe**: S intrinsic strength; T1→S+, T2→S on the matrix; VERY_HIGH pod realization
+against RogSi/stax_heavy, MODERATE against Kinnan/Blue Farm/Tivit/Etali — the tax-payment penalty
+produces real spread even though land drops are near-universal. Appears repeatedly at the top of the
+top-25 table.
+
+**Birthing Pod**: S intrinsic strength ONLY when functional (deployed + fodder + payable activation
+— disclosed as not verifying the found target is a genuine upgrade). T1→S+, T2→S. `creatures_
+sacrificed` is 0 across the entire sampled population even when Pod itself is `tier_engine` — a
+disclosed, non-bug finding about how the legacy grader credits Pod's own tier (infrastructure-ready,
+not already-used).
+
+**Abhorrent Oculus**: kept as a separate premier destination throughout, never folded into the
+engine-strength ranking (no `expected_deployment_turn` entry, no pod-realization entry). Appears in
+145/6000 sampled hands as the fragility-stress "early Oculus" family, 12.4% strong-secondary rate.
+
+**Rhystic Study**: A+ intrinsic strength; T1 mid-engine curve (AHEAD at T1, ON-TIME at T2). VERY_HIGH
+pod realization against RogSi/stax_heavy; the fetch-branching fix's own worked regression example
+was specifically a Mystic Remora line, not Rhystic, but Rhystic shares the identical tax-gated
+realization profile.
+
+**Faerie Mastermind**: A intrinsic strength via the FAERIE MASTERMIND CORRECTION (passive trigger
+alone, no activation requirement — but deployment is still required, confirmed by regression test).
+LOW pod realization against RogSi/Kinnan/Sisay/Etali/stax_heavy, HIGH only against Blue Farm (a
+draw-heavy control archetype whose opponents' own second-draw effects feed Mastermind's trigger).
+
+**Mystic Remora**: A intrinsic strength; T1→B (ON-TIME), T2→C (BEHIND) — the assignment's own named
+"T2 Remora should not receive premium-speed credit" example, confirmed. VERY_HIGH pod realization
+against RogSi/stax_heavy, LOW against Kinnan/Etali.
+
+**Esper Sentinel**: A- intrinsic strength; same T1/T2 timing profile and pod-realization pattern as
+Remora (both tax-gated, noncreature-spell-driven). The single most seat- AND pod-sensitive tracked
+engine in the entire sample (59 seat-flip-contributing hands, 49 pod-flip-contributing hands).
+
+**Archivist of Oghma**: A- intrinsic strength; driven by tutor-search density, so realization is
+HIGH against RogSi/Sisay (tutor-dense archetypes) and LOW against Tayam/Etali (tutor-light).
+
+**Sylvan Library**: B+ intrinsic strength; the sole OWN_NEXT_DRAW_STEP realization class among
+tracked engines — never realizes before our own next turn regardless of seat, and the pod
+realization modifier structurally does not apply to it at all (not opponent-behavior-dependent).
+
+**Survival of the Fittest**: B intrinsic strength ONLY when functional (deployed + creature fuel in
+hand + payable {G} activation); its `expected_deployment_turn=2` is the one EXTRAPOLATED (not
+back-derived) entry in `relative_speed_model.json`, disclosed as such.
+
+**Heartwood Storyteller**: B- intrinsic strength; its driver dimension (noncreature-spell density)
+is disclosed as a coarser proxy than its real single-target-spell-specific Oracle trigger.
+
+**Runic Armasaur**: C+/B- boundary intrinsic strength (the one entry not cleanly in either band);
+the only tracked engine whose realization driver is creature density rather than spell/tutor/draw
+density — HIGH against Kinnan/Rog-Thras-Tree-Farm/Tayam (creature-heavy pods), LOW against RogSi/
+Blue Farm/stax_heavy (spell-heavy pods).
+
+## 11. London Mulligan Results
+
+`contextual_london_results.json` (2000 sequences × 4 architectures, seed 6010) — **(21)/(22)/(23)/
+(24)** answered together via the reused per-size thresholds (C@7, D@6, D@5, keep-everything@4,
+carried over from `mull005r_hand_size_thresholds.json`, NOT re-derived on the new scale this phase —
+see limitations): at 7, demand a contextual grade of C or better (a real, mostly self-contained,
+on-time-or-better destination); at 6, D or better becomes acceptable (real secondary engines and
+somewhat fragile lines); at 5, the SAME D-or-better bar applies but the population choosing from it
+is weaker, so proportionally more hands clear it; at 4, keep essentially anything with a legal
+destination — MULL-005R's own economics already found no threshold clears a 5th mulligan's cost.
+gated/lexicographic/tree behave similarly (mean tier value 2.64-2.66, 1-1.4% reach 3+ mulligans);
+**weighted** mulligans substantially more (6.35% reach 3+ mulligans) because it COMPOUNDS multiple
+simultaneous penalties rather than applying one bounded step, trading final hand size (avg 6.25 vs
+~6.42-6.45) for quality (mean tier value 2.72, S/A rate 33.6% vs 30-31% for the other three) — a
+genuine, disclosed architecture-sensitivity finding, not a claim that weighted is "correct."
+
+## 12. Contextual Disagreement Hands
+
+`contextual_disagreement_examples.json` produced all 7 required examples (A-G) from real simulated
+hands: A confirmed T1 Mastermind (A+) outranking T2 Sentinel (C+) on real data; B and E were reused
+directly from `seat_pod_matrix.json`'s own validated real flips; C found a real hand whose "T2
+Rhystic Study" was not actually in the opening 7 at all; D found two real hands reaching the SAME
+destination (Esper Sentinel) with opposite resilience (ROBUST with 4 cards + a realized second
+destination vs ALL_IN with 0 cards and a fully collapsed hand); F found a real hand whose live
+interaction registers relevant against RogSi but not Tayam; G found a real hand whose contextual
+grade (D) fails the size-7 bar but clears the size-6/5 bar with no bottoming needed at all.
+
+`contextual_holdout_validation.json` (3000 fresh-seed hands, seed 9002, unused by any prior
+artifact): **76.8%** agreement between the contextual (gated) and legacy machine decisions,
+**23.2%** disagreement, entirely one-directional (contextual only ever mulligans MORE than legacy,
+never the reverse, under the current gate design). **98.1%** of all 696 disagreements (683) trace to
+ONE mechanism: the draw-dependence gate firing on essentially every "engine card was a natural
+draw" hand regardless of the underlying engine's strength, since that case's hypergeometric
+probability is always below the 0.2 threshold by construction (singleton copy in a large remaining
+library). Flagged explicitly as a threshold-tuning candidate, not silently corrected, per the
+assignment's own "do not assume these exact gates are correct."
+
+## 13. Primer Decision Tree
+
+`primer_mulligan_decision_tree_v1.md` — 5 questions (DESTINATION / TIMING / IS-IT-ALREADY-THERE /
+IF-ANSWERED-AM-I-DONE / GOOD-ENOUGH-FOR-DEPTH), not the assignment's illustrative 7. Seat and pod are
+folded into a single "fine-tuning" note rather than kept as full branches, since their measured flip
+rates (9.1%/4.1%) are real but secondary to the four dominant factors. **(25)** the compact
+heuristic: no destination is an automatic mulligan with no exceptions; timing is judged relative to
+each engine's OWN curve, never raw turn number; a hand that "has an engine" only because a topdeck
+happened to provide it should be discounted hard (the single most common trap this phase's data
+surfaced); a trajectory that collapses entirely if answered needs an exceptional (S+/S) destination
+to justify keeping; and the bar for all of the above loosens — but does not disappear — as mulligan
+depth increases.
+
+## 14. Primer Example-Hand Packet
+
+`primer_mulligan_packet_v4.md` — 50 real hands (10 each: snap keeps, normal keeps, conditional
+keeps, mulligans, deceptive hands), all 16 required fields per hand, seat and pod archetype cycled
+for variety. Deceptive hands split into two real sub-types found organically: TRAP hands (5+ cards
+remaining or 2+ live interaction, but grade D/F — no real destination underneath) and HIDDEN GEM
+hands (2 or fewer cards remaining, but grade S+/S/A+/A — the destination alone carries the hand).
+The TRAP examples organically reproduced section 12's draw-dependence-gate finding (Thrasios/
+EXACT_OR_NEAR_EXACT hands recurring as "deceptive" D-grade mulligans) without being cherry-picked
+for it. A "Similar Hands, One Variable Changed" appendix reuses the real B/E/G disagreement
+examples directly.
+
+## 15. Limitations
+
+- **The gated architecture's specific thresholds are not validated, only tested for internal
+  consistency.** The dominant holdout finding (section 12) is a live, disclosed candidate for
+  re-tuning, not a settled conclusion.
+- **Per-size contextual keep thresholds (C@7/D@6/D@5/keep-everything@4) are REUSED from MULL-005R's
+  legacy-scale derivation, not re-derived for the new 11-band contextual scale.** A full EV-sweep
+  re-derivation using the same methodology MULL-005R used is the single largest piece of disclosed
+  future work from this phase.
+- **Only one of the four valuation architectures (gated) was used for the seat×pod matrix, top-25
+  table, one-land audit, and disagreement examples**, for tractability — the other three exist,
+  are tested, and diverge measurably (section 11), but were not run through every downstream
+  artifact.
+- **Pod realization values remain STRATEGIC_PRIOR_UNVALIDATED** — no real multiplayer simulation or
+  tournament data exists in this project to calibrate against; every number in `pod_realization_
+  prior.json` is a disclosed, rule-derived judgment, not a measurement.
+- **draw_dependence_model's outs-counting is a disclosed simplification**: land outs count EVERY
+  remaining land regardless of color-fixing quality; engine-card outs never search for broader
+  functional substitutes (only the exact singleton).
+- **This phase does not model a real opponent's actual behavior, removal suite, or likelihood of
+  disruption** — fragility/recovery work measures CONSEQUENCE IF ANSWERED, never a probability of
+  being answered. Relevant-agency threat-axis tags are hand-derived from Oracle text and
+  pod_archetypes.py's existing descriptions, not measured from real games.
+- **Hand-size sampling for the one-land audit approximates smaller hand sizes by drawing N cards
+  directly, not by modeling the real London-mulligan bottoming decision** from a 7-card draw.
+
+## 16. Recommended Next Research
+
+1. **Re-derive per-size contextual keep thresholds** via the same EV-sweep methodology MULL-005R
+   used for the legacy scale, replacing the reused C@7/D@6/D@5 placeholders.
+2. **Re-examine the draw-dependence gate's threshold** (currently 0.2) given the dominant holdout
+   finding — likely candidates: raise the threshold, or treat "engine card is a natural draw" and
+   "supporting land is a natural draw" as separately-thresholded cases rather than one shared rule.
+3. **Run all four architectures (not just gated) through the seat×pod matrix, top-25 table, and
+   disagreement examples**, to see whether the architecture choice changes which specific hands/
+   engines are flagged as most seat- or pod-sensitive, not just the aggregate flip rates already
+   measured in section 11.
+4. **Extend the bounded fetch-target search to the FULL joint combination** across multiple
+   simultaneous fetches in one hand (currently only one fetch's target branches per candidate) —
+   disclosed as a still-standing BOUNDED_SEARCH_LOWER_BOUND limitation from task #103.
+5. **Real 4-player pod-conditioned matchup simulation** remains this project's largest genuinely
+   unaddressed question, and the only way to move any of section 8's pod-realization values or
+   section 9's relevant-agency threat-axis tags out of STRATEGIC_PRIOR_UNVALIDATED status.
