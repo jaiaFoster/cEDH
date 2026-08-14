@@ -1,0 +1,190 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_CONTEXTUAL_DISAGREEMENT_EXAMPLES",
+  "seed": 6012,
+  "seat": "play",
+  "note": "Every example is drawn from REAL simulated hands (either freshly sampled in this script's own targeted search loops, or reused directly from seat_pod_matrix.json's already-validated real examples for B and E) - none are fabricated.",
+  "examples": {
+    "A": {
+      "label": "A. STRENGTH x SPEED - T1 Mastermind vs T2 Remora-type",
+      "t1_mastermind_hand": [
+        "Chrome Mox",
+        "Exotic Orchard",
+        "Faerie Mastermind",
+        "Force of Will",
+        "Oboro Breezecaller",
+        "Scrubland",
+        "Volatile Stormdrake"
+      ],
+      "t1_mastermind_base_grade": "A+",
+      "t2_remora_type_hand": [
+        "Birthing Pod",
+        "Esper Sentinel",
+        "Flare of Denial",
+        "Gemstone Caverns",
+        "Noble Hierarch",
+        "Shifting Woodland",
+        "Smothering Tithe"
+      ],
+      "t2_remora_type_tier_engine": "Esper Sentinel",
+      "t2_remora_type_base_grade": "C+",
+      "t1_mastermind_outranks": true,
+      "finding": "T1 Mastermind grades A+ (rank 2); T2 Esper Sentinel grades C+ (rank 7) - the assignment's own named relationship, confirmed on real simulated hands."
+    },
+    "B": {
+      "label": "B. SEAT - same hand changes decision because of seat",
+      "hand": [
+        "Ancient Tomb",
+        "Deathrite Shaman",
+        "Devoted Druid",
+        "Flusterstorm",
+        "Mox Diamond",
+        "Noble Hierarch",
+        "Verdant Catacombs"
+      ],
+      "tier_engine": "Deathrite Shaman",
+      "tier_turn": 1,
+      "decisions_by_seat": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      },
+      "source": "seat_pod_matrix.json (task #114) - reused, already a real validated example",
+      "finding": "The exact same 7-card hand, same trajectory (Deathrite Shaman turn 1), decides differently purely as a function of seat: {'1': 'KEEP', '2': 'KEEP', '3': 'MULLIGAN', '4': 'MULLIGAN'}."
+    },
+    "C": {
+      "label": "C. DRAW DEPENDENCE - apparent T2 engine but requires a topdeck",
+      "hand": [
+        "Archivist of Oghma",
+        "Boseiju, Who Endures",
+        "Chord of Calling",
+        "City of Traitors",
+        "Demonic Tutor",
+        "Misty Rainforest",
+        "Rhystic Study"
+      ],
+      "tier_engine": "Thrasios, Triton Hero",
+      "tier_turn": 2,
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT",
+      "dependency_detail": [
+        {
+          "slot": "engine_card",
+          "card": "Thrasios, Triton Hero",
+          "turn": 2,
+          "source": "natural_draw",
+          "outs_count": 1,
+          "outs_type": "singleton_exact_card",
+          "draws_available_by_turn": 1,
+          "probability_of_success_by_turn": 0.011,
+          "classification": "EXACT_OR_NEAR_EXACT"
+        }
+      ],
+      "finding": "Thrasios, Triton Hero is NOT in the opening hand - it must be drawn naturally by turn 2. The hand LOOKS like a coherent T2 engine line only because the search found it in this particular shuffle; a human evaluating the opening 7 alone would see no engine at all."
+    },
+    "D": {
+      "label": "D. FRAGILITY - same destination, one ROBUST one ALL_IN",
+      "tier_engine": "Esper Sentinel",
+      "robust_hand": [
+        "Bayou",
+        "Elvish Spirit Guide",
+        "Gilded Drake",
+        "Mindbreak Trap",
+        "Nature's Rhythm",
+        "Polluted Delta",
+        "Sol Ring"
+      ],
+      "robust_cards_remaining": 4,
+      "robust_second_best": "Runic Armasaur",
+      "all_in_hand": [
+        "Abhorrent Oculus",
+        "Boseiju, Who Endures",
+        "Demonic Tutor",
+        "Esper Sentinel",
+        "Marsh Flats",
+        "Misdirection",
+        "Tropical Island"
+      ],
+      "all_in_cards_remaining": 0,
+      "all_in_hand_collapses": true,
+      "finding": "Both hands reach Esper Sentinel as their best trajectory, but the ROBUST hand retains 4 cards with a realized second destination (Runic Armasaur), while the ALL_IN hand retains only 0 cards with no fallback - the SAME destination name is not the same trajectory quality."
+    },
+    "E": {
+      "label": "E. POD REALIZATION - same engine changes desirability against different pods",
+      "hand": [
+        "Flare of Denial",
+        "Mental Misstep",
+        "Mox Amber",
+        "Swan Song",
+        "Tundra",
+        "Vampiric Tutor",
+        "Volatile Stormdrake"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "decisions_by_archetype": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      },
+      "source": "seat_pod_matrix.json (task #114) - reused, already a real validated example",
+      "finding": "The exact same hand and seat, same trajectory (Esper Sentinel turn 2), decides differently purely as a function of pod archetype: {'Blue Farm': 'KEEP', 'Etali': 'MULLIGAN', 'Kinnan': 'MULLIGAN', 'Rog/Thras Tree Farm': 'KEEP', 'RogSi': 'KEEP', 'Sisay': 'KEEP', 'Tayam': 'KEEP', 'Tivit': 'KEEP', 'midrange_grind': 'KEEP', 'stax_heavy': 'KEEP'}."
+    },
+    "F": {
+      "label": "F. RELEVANT AGENCY - same engine trajectory, different interaction relevance",
+      "hand": [
+        "Chrome Mox",
+        "Enlightened Tutor",
+        "Kinnan, Bonder Prodigy",
+        "Marsh Flats",
+        "Mental Misstep",
+        "Shang-Chi, Master of Kung Fu",
+        "Volatile Stormdrake"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "live_agency_score": 1,
+      "relevant_agency_vs_rogsi": 1,
+      "relevant_agency_vs_tayam": 0,
+      "live_cards": [
+        "Mental Misstep"
+      ],
+      "finding": "This hand's 1 live interaction card(s) count as relevant against RogSi (1) but not equally against Tayam (0) - the same trajectory, the same live interaction, a different relevant-agency score purely because the opposing pod's threat axes differ."
+    },
+    "G": {
+      "label": "G. MULLIGAN DEPTH - mull at 7, keep at 6 or 5",
+      "hand": [
+        "Ancient Tomb",
+        "Devoted Druid",
+        "Mana Vault",
+        "Mystic Remora",
+        "Oboro Breezecaller",
+        "Starting Town",
+        "Underground Sea"
+      ],
+      "tier_engine": null,
+      "contextual_grade": "D",
+      "keep_at_7": false,
+      "keep_at_6": true,
+      "keep_at_5": true,
+      "finding": "Contextual grade D fails the size-7 keep bar (C) but clears the looser size-6/size-5 bars (D) - the SAME hand is a mulligan at 7 and a keep at 6 or 5, purely because the demanded standard loosens with mulligan depth."
+    }
+  },
+  "missing_examples": []
+}
