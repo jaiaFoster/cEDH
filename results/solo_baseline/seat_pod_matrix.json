@@ -1,0 +1,527 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_SEAT_POD_MATRIX",
+  "reference_architecture": "gated",
+  "reference_architecture_note": "Uses contextual_valuation_models.gated_model as the SINGLE reference architecture, not because it is asserted correct - task #113 declined to assert any of the four architectures correct - but because this matrix needs one fixed grading rule to make 'the same hand's recommendation changed' well-defined. Task #117 compares all four.",
+  "keep_threshold": "contextual grade at or better than C (reused from mull005r_hand_size_thresholds.json's hand-size-7 tier-C threshold, mapped onto the shared GRADE_ORDER scale - not re-derived for the new contextual grades; that re-derivation is task #117's).",
+  "sample_count": 4000,
+  "seed": 6007,
+  "seat_assumption_for_sampling": "play",
+  "hands_with_tracked_destination": 3057,
+  "seats_evaluated": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "archetypes_evaluated": [
+    "Blue Farm",
+    "Etali",
+    "Kinnan",
+    "Rog/Thras Tree Farm",
+    "RogSi",
+    "Sisay",
+    "Tayam",
+    "Tivit",
+    "midrange_grind",
+    "stax_heavy"
+  ],
+  "seat_flip_hands_count": 278,
+  "seat_flip_hands_rate": 0.0909,
+  "seat_flip_count_by_archetype": {
+    "Blue Farm": 266,
+    "Etali": 251,
+    "Kinnan": 251,
+    "Rog/Thras Tree Farm": 266,
+    "RogSi": 266,
+    "Sisay": 266,
+    "Tayam": 266,
+    "Tivit": 266,
+    "midrange_grind": 266,
+    "stax_heavy": 266
+  },
+  "pod_flip_hands_count": 124,
+  "pod_flip_hands_rate": 0.0406,
+  "pod_flip_count_by_seat": {
+    "1": 112,
+    "2": 112,
+    "3": 97,
+    "4": 97
+  },
+  "most_seat_sensitive_engines": {
+    "Esper Sentinel": 59,
+    "Thrasios, Triton Hero": 53,
+    "Deathrite Shaman": 34,
+    "Survival of the Fittest": 21,
+    "Mystic Remora": 18,
+    "Archivist of Oghma": 17,
+    "Sylvan Library": 15,
+    "Abhorrent Oculus": 14,
+    "Delney, Streetwise Lookout": 13,
+    "Faerie Mastermind": 10
+  },
+  "most_pod_sensitive_engines": {
+    "Esper Sentinel": 49,
+    "Mystic Remora": 32,
+    "Archivist of Oghma": 20,
+    "Faerie Mastermind": 18,
+    "Rhystic Study": 5
+  },
+  "seat_flip_examples_same_seven_same_trajectory_different_seat": [
+    {
+      "hand": [
+        "Ancient Tomb",
+        "Deathrite Shaman",
+        "Devoted Druid",
+        "Flusterstorm",
+        "Mox Diamond",
+        "Noble Hierarch",
+        "Verdant Catacombs"
+      ],
+      "tier_engine": "Deathrite Shaman",
+      "tier_turn": 1,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Archivist of Oghma",
+        "Chrome Mox",
+        "City of Traitors",
+        "Endurance",
+        "Gaea's Cradle",
+        "Lotus Petal",
+        "Misty Rainforest"
+      ],
+      "tier_engine": "Archivist of Oghma",
+      "tier_turn": 3,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Exotic Orchard",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Mox Diamond",
+        "Scrubland",
+        "Subtlety"
+      ],
+      "tier_engine": "Rhystic Study",
+      "tier_turn": 3,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Clever Impersonator",
+        "Deathrite Shaman",
+        "Endurance",
+        "Faerie Mastermind",
+        "Finale of Devastation",
+        "Scrubland",
+        "Subtlety"
+      ],
+      "tier_engine": "Deathrite Shaman",
+      "tier_turn": 1,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Chrome Mox",
+        "Rhystic Study",
+        "Subtlety",
+        "Sylvan Library",
+        "Talon Gates of Madara",
+        "Tropical Island",
+        "Underground Sea"
+      ],
+      "tier_engine": "Smothering Tithe",
+      "tier_turn": 3,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Commandeer",
+        "Delighted Halfling",
+        "Esper Sentinel",
+        "Otawara, Soaring City",
+        "Rhystic Study",
+        "Spellseeker"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 3,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Elves of Deep Shadow",
+        "Flooded Strand",
+        "Force of Will",
+        "Gemstone Caverns",
+        "Lotus Petal",
+        "Marsh Flats",
+        "Mox Amber"
+      ],
+      "tier_engine": "Thrasios, Triton Hero",
+      "tier_turn": 2,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Chrome Mox",
+        "Elvish Spirit Guide",
+        "Mox Amber",
+        "Oboro Breezecaller",
+        "Polluted Delta",
+        "Sowing Mycospawn",
+        "Starting Town"
+      ],
+      "tier_engine": "Thrasios, Triton Hero",
+      "tier_turn": 2,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Deathrite Shaman",
+        "Derevi, Empyrial Tactician",
+        "Rhystic Study",
+        "Savannah",
+        "Underground Sea",
+        "Volatile Stormdrake"
+      ],
+      "tier_engine": "Archivist of Oghma",
+      "tier_turn": 3,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Deathrite Shaman",
+        "Delighted Halfling",
+        "Kinnan, Bonder Prodigy",
+        "Misdirection",
+        "Rhystic Study",
+        "Shang-Chi, Master of Kung Fu",
+        "Subtlety"
+      ],
+      "tier_engine": "Deathrite Shaman",
+      "tier_turn": 3,
+      "decisions_by_seat_for_first_flipping_archetype": {
+        "1": "KEEP",
+        "2": "KEEP",
+        "3": "MULLIGAN",
+        "4": "MULLIGAN"
+      }
+    }
+  ],
+  "pod_flip_examples_same_seven_same_seat_different_pod": [
+    {
+      "hand": [
+        "Flare of Denial",
+        "Mental Misstep",
+        "Mox Amber",
+        "Swan Song",
+        "Tundra",
+        "Vampiric Tutor",
+        "Volatile Stormdrake"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Colossal Skyturtle",
+        "Enlightened Tutor",
+        "Flare of Denial",
+        "Gilded Drake",
+        "Rhystic Study",
+        "Swift Reconfiguration"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Exotic Orchard",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Mox Diamond",
+        "Scrubland",
+        "Subtlety"
+      ],
+      "tier_engine": "Rhystic Study",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Flooded Strand",
+        "Gaea's Cradle",
+        "Gilded Drake",
+        "Smothering Tithe",
+        "Spellseeker",
+        "Survival of the Fittest"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 2,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Badgermole Cub",
+        "Gemstone Caverns",
+        "Gleaming Splendor",
+        "Minamo, School at Water's Edge",
+        "Noble Hierarch",
+        "Spellseeker",
+        "Swift Reconfiguration"
+      ],
+      "tier_engine": "Faerie Mastermind",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "MULLIGAN",
+        "Sisay": "MULLIGAN",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "MULLIGAN"
+      }
+    },
+    {
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Commandeer",
+        "Delighted Halfling",
+        "Esper Sentinel",
+        "Otawara, Soaring City",
+        "Rhystic Study",
+        "Spellseeker"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Deathrite Shaman",
+        "Derevi, Empyrial Tactician",
+        "Rhystic Study",
+        "Savannah",
+        "Underground Sea",
+        "Volatile Stormdrake"
+      ],
+      "tier_engine": "Archivist of Oghma",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "KEEP",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "MULLIGAN",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Bayou",
+        "Commandeer",
+        "Heartwood Storyteller",
+        "Marsh Flats",
+        "Sol Ring",
+        "Swift Reconfiguration",
+        "Verdant Catacombs"
+      ],
+      "tier_engine": "Rhystic Study",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Abhorrent Oculus",
+        "Deathrite Shaman",
+        "Derevi, Empyrial Tactician",
+        "Endurance",
+        "Esper Sentinel",
+        "Subtlety",
+        "Voice of Victory"
+      ],
+      "tier_engine": "Esper Sentinel",
+      "tier_turn": 3,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    },
+    {
+      "hand": [
+        "Chrome Mox",
+        "Gilded Drake",
+        "Lotus Petal",
+        "Mana Confluence",
+        "Mox Amber",
+        "Otawara, Soaring City",
+        "Shifting Woodland"
+      ],
+      "tier_engine": "Mystic Remora",
+      "tier_turn": 2,
+      "decisions_by_archetype_for_first_flipping_seat": {
+        "Blue Farm": "KEEP",
+        "Etali": "MULLIGAN",
+        "Kinnan": "MULLIGAN",
+        "Rog/Thras Tree Farm": "KEEP",
+        "RogSi": "KEEP",
+        "Sisay": "KEEP",
+        "Tayam": "KEEP",
+        "Tivit": "KEEP",
+        "midrange_grind": "KEEP",
+        "stax_heavy": "KEEP"
+      }
+    }
+  ],
+  "limitations": [
+    "Uses one reference architecture (gated) and one reused threshold - the flip RATES reported here are specific to that combination, not an architecture-independent fact about the deck. Task #117's full four-architecture comparison may show different flip rates.",
+    "Only hands with a tracked destination (tier_engine not None) are examined - the gated model's no-destination ceiling makes seat/pod structurally unable to flip a destination-less hand's decision, so those hands are excluded rather than padding the denominator with guaranteed non-flips."
+  ]
+}

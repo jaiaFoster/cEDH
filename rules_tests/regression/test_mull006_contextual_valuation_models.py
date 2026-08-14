@@ -118,3 +118,38 @@ def test_exceptional_grades_set_matches_matrix_top_band():
 
 def test_provenance_label_is_model_derived():
     assert VALUATION_PROVENANCE == "MODEL_DERIVED"
+
+
+def test_seat_can_change_the_grade_when_resilience_is_fragile():
+    # Section 6/18's own point: seat must be able to actually change a recommendation, not just
+    # appear as an unused field on the trajectory object.
+    seat1 = _obj(resilience_class="FRAGILE", seat=1)
+    seat4 = _obj(resilience_class="FRAGILE", seat=4)
+    for model in (weighted_model, lexicographic_model, gated_model, tree_model):
+        assert GRADE_RANK[model(seat4)] >= GRADE_RANK[model(seat1)], model.__name__
+
+
+def test_seat_does_not_change_grade_when_resilience_is_robust():
+    # The seat-exposure gates only fire for FRAGILE/ALL_IN resilience - a ROBUST trajectory's
+    # grade should not swing with seat under gated/lexicographic/tree (weighted still applies its
+    # small continuous per-turn penalty everywhere, by design - see module docstring).
+    seat1 = _obj(resilience_class="ROBUST", seat=1)
+    seat4 = _obj(resilience_class="ROBUST", seat=4)
+    for model in (lexicographic_model, gated_model, tree_model):
+        assert model(seat4) == model(seat1), model.__name__
+
+
+def test_low_pod_realization_can_downgrade_a_non_self_contained_trajectory():
+    moderate = _obj(pod_realization_modifier="MODERATE", draw_dependence_class="BROAD_OUTS")
+    low = _obj(pod_realization_modifier="LOW", draw_dependence_class="BROAD_OUTS")
+    for model in (weighted_model, lexicographic_model, gated_model, tree_model):
+        assert GRADE_RANK[model(low)] >= GRADE_RANK[model(moderate)], model.__name__
+
+
+def test_low_pod_realization_does_not_downgrade_a_self_contained_trajectory():
+    # A self-contained trajectory doesn't depend on the pod realizing anything further - the
+    # pod-realization gate is scoped to non-self-contained trajectories only.
+    moderate = _obj(pod_realization_modifier="MODERATE", draw_dependence_class="SELF_CONTAINED")
+    low = _obj(pod_realization_modifier="LOW", draw_dependence_class="SELF_CONTAINED")
+    for model in (lexicographic_model, gated_model, tree_model):
+        assert model(low) == model(moderate), model.__name__
