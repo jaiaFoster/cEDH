@@ -1,0 +1,183 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_SEAT_ADJUSTED_TRAJECTORY_CENSUS",
+  "timing_model_evidence_type": "MODEL_DERIVED",
+  "sample_count": 6000,
+  "seed": 6003,
+  "seat_assumption_for_sampling": "play",
+  "keep_tier_threshold_size7": "C",
+  "hands_with_tracked_engine_as_best_trajectory": 2409,
+  "per_seat_exposure_and_realization_stats": {
+    "1": {
+      "sample_count": 2409,
+      "avg_opponent_turns_before_deployment": 3.234,
+      "avg_opponent_turns_before_first_possible_realization": 4.251,
+      "realized_before_our_next_turn_count": 2161,
+      "realized_before_our_next_turn_rate": 0.8971
+    },
+    "2": {
+      "sample_count": 2409,
+      "avg_opponent_turns_before_deployment": 4.234,
+      "avg_opponent_turns_before_first_possible_realization": 5.251,
+      "realized_before_our_next_turn_count": 2161,
+      "realized_before_our_next_turn_rate": 0.8971
+    },
+    "3": {
+      "sample_count": 2409,
+      "avg_opponent_turns_before_deployment": 5.234,
+      "avg_opponent_turns_before_first_possible_realization": 6.251,
+      "realized_before_our_next_turn_count": 2161,
+      "realized_before_our_next_turn_rate": 0.8971
+    },
+    "4": {
+      "sample_count": 2409,
+      "avg_opponent_turns_before_deployment": 6.234,
+      "avg_opponent_turns_before_first_possible_realization": 7.251,
+      "realized_before_our_next_turn_count": 2161,
+      "realized_before_our_next_turn_rate": 0.8971
+    }
+  },
+  "excess_exposure_turns_by_seat_relative_to_seat1": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3
+  },
+  "relative_seat_severity_by_deployment_turn": {
+    "T1": {
+      "seat1_opponent_turns_before_deployment": 0,
+      "seat4_opponent_turns_before_deployment": 3,
+      "absolute_delta": 3,
+      "relative_increase": "INFINITE (seat1 baseline is zero)"
+    },
+    "T2": {
+      "seat1_opponent_turns_before_deployment": 3,
+      "seat4_opponent_turns_before_deployment": 6,
+      "absolute_delta": 3,
+      "relative_increase": 1.0
+    },
+    "T3": {
+      "seat1_opponent_turns_before_deployment": 6,
+      "seat4_opponent_turns_before_deployment": 9,
+      "absolute_delta": 3,
+      "relative_increase": 0.5
+    }
+  },
+  "relative_severity_finding": "The ABSOLUTE opponent-turn exposure delta between Seat 1 and Seat 4 is exactly 3 for ANY deployment turn (structural, not trajectory-specific - see seat_timing_model.py). But the RELATIVE severity of that delta shrinks as deployment turn increases: a T1 trajectory goes from 0 (seat1) to 3 (seat4) opponent turns of exposure before deployment - an infinite relative increase from a zero baseline - while a T3 trajectory only goes from 6 to 9, a 50% relative increase. T1 trajectories are therefore the MOST seat-sensitive in relative terms, even though every trajectory shares the same absolute 3-turn swing.",
+  "value_generated_before_our_next_turn_is_seat_invariant": "realized_before_our_next_turn_rate is identical across all 4 seats (see per-seat stats above) - this yes/no property depends only on REALIZATION_TIMING_CLASS (engine identity), never on seat. Seat changes the MAGNITUDE of exposure (how many opponent turns/windows), not whether realization structurally precedes our own next turn.",
+  "seat_exposure_probe_rule": {
+    "description": "PROBE RULE FOR MEASUREMENT ONLY - explicitly NOT a production contextual policy. Downgrades a KEEP to MULLIGAN only for trajectories sitting EXACTLY at the hand-size-7 keep/mulligan boundary tier, only when excess_exposure_turns(seat) = (seat - 1) >= 2 (Seat 3 or Seat 4 relative to the Seat-1 reference). The full contextual policy comparison (weighted/lexicographic/gated/tree) is reserved for task #117, per assignment section 17.",
+    "marginal_hands_examined": 666,
+    "keep_to_mull_flips_caused_solely_by_seat": 1332,
+    "mull_to_keep_flips_caused_solely_by_seat": 0,
+    "keep_to_mull_flip_rate_among_marginal_hands": 0.6667,
+    "example_flips": [
+      {
+        "engine": "Archivist of Oghma",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 3,
+        "excess_exposure_turns": 2,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Archivist of Oghma",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 4,
+        "excess_exposure_turns": 3,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Faerie Mastermind",
+        "deployment_turn": 2,
+        "legacy_tier": "C",
+        "seat": 3,
+        "excess_exposure_turns": 2,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Faerie Mastermind",
+        "deployment_turn": 2,
+        "legacy_tier": "C",
+        "seat": 4,
+        "excess_exposure_turns": 3,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Archivist of Oghma",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 3,
+        "excess_exposure_turns": 2,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Archivist of Oghma",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 4,
+        "excess_exposure_turns": 3,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Esper Sentinel",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 3,
+        "excess_exposure_turns": 2,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Esper Sentinel",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 4,
+        "excess_exposure_turns": 3,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Rhystic Study",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 3,
+        "excess_exposure_turns": 2,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      },
+      {
+        "engine": "Rhystic Study",
+        "deployment_turn": 3,
+        "legacy_tier": "C",
+        "seat": 4,
+        "excess_exposure_turns": 3,
+        "decision_before_probe": "KEEP",
+        "decision_after_probe": "MULLIGAN"
+      }
+    ],
+    "note": "mull_to_keep_flips is structurally always 0 under this probe - it is a one-directional downgrade-only rule (higher seat number can only ever look WORSE, never better, in raw opponent-turn-exposure terms), so no MULL->KEEP direction exists for this particular probe. Reported explicitly rather than omitted."
+  },
+  "most_seat_sensitive_trajectory_classes": "By realization_timing_class: OWN_NEXT_DRAW_STEP (Sylvan Library) is the most seat-compounding class - its realization exposure (opponent_turns_before_first_possible_realization) is opponent_turns_before_deployment + 3, so the seat-1-vs-seat-4 delta at REALIZATION time is still exactly 3, same as at deployment, meaning Library never gets to 'catch up' the way an IMMEDIATE_OPPONENT_TURN engine's very next opponent turn can. OWN_TURN_DEPENDENT (functional Pod/Survival) is the least seat-sensitive for realization specifically, since realization is pinned to deployment turn itself regardless of what opponents do (though DEPLOYMENT exposure is identical to every other class).",
+  "limitations": [
+    "The probe rule only tests ONE narrow, disclosed measurement heuristic - it is not the final contextual policy and should not be cited as a production recommendation.",
+    "opponent_action_windows_before_* uses a disclosed, non-measured convention (2 windows per opponent turn) - treat those specific counts as illustrative, not calibrated.",
+    "This solo goldfish engine cannot model an opponent's actual timing of removal/disruption during those extra opponent turns - it only counts the STRUCTURAL number of turns/windows that exist, not whether anything happens in them (that is the fragility/recovery work, task #109)."
+  ]
+}
