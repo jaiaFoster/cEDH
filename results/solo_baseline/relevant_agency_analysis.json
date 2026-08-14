@@ -1,0 +1,387 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "MODEL_DERIVED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_RELEVANT_AGENCY_ANALYSIS",
+  "sample_count": 6000,
+  "seed": 6006,
+  "seat": "play",
+  "archetypes_evaluated": [
+    "Blue Farm",
+    "Etali",
+    "Kinnan",
+    "Rog/Thras Tree Farm",
+    "RogSi",
+    "Sisay",
+    "Tayam",
+    "Tivit",
+    "midrange_grind",
+    "stax_heavy"
+  ],
+  "given_archetypes": [
+    "Kinnan",
+    "RogSi",
+    "Sisay",
+    "Tayam",
+    "Tivit"
+  ],
+  "extrapolated_archetypes": [
+    "Blue Farm",
+    "Etali",
+    "Rog/Thras Tree Farm",
+    "midrange_grind",
+    "stax_heavy"
+  ],
+  "live_agency_score_distribution": {
+    "1": 1766,
+    "0": 3870,
+    "2": 327,
+    "3": 34,
+    "5": 1,
+    "6": 1,
+    "4": 1
+  },
+  "relevant_agency_score_distribution_by_archetype": {
+    "Blue Farm": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    },
+    "Etali": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    },
+    "Kinnan": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    },
+    "Rog/Thras Tree Farm": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    },
+    "RogSi": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    },
+    "Sisay": {
+      "0": 6000
+    },
+    "Tayam": {
+      "1": 351,
+      "0": 5649
+    },
+    "Tivit": {
+      "0": 6000
+    },
+    "midrange_grind": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    },
+    "stax_heavy": {
+      "0": 4138,
+      "2": 266,
+      "1": 1570,
+      "3": 23,
+      "5": 1,
+      "6": 1,
+      "4": 1
+    }
+  },
+  "live_agency_avg_by_legacy_tier": {
+    "C": 0.429,
+    "A": 0.319,
+    "S": 0.349,
+    "B": 0.317,
+    "D": 0.543,
+    "F": 0.585
+  },
+  "relevant_agency_avg_by_legacy_tier_and_archetype": {
+    "C": {
+      "Blue Farm": 0.369,
+      "Etali": 0.369,
+      "Kinnan": 0.369,
+      "Rog/Thras Tree Farm": 0.369,
+      "RogSi": 0.369,
+      "Sisay": 0.0,
+      "Tayam": 0.06,
+      "Tivit": 0.0,
+      "midrange_grind": 0.369,
+      "stax_heavy": 0.369
+    },
+    "A": {
+      "Blue Farm": 0.274,
+      "Etali": 0.274,
+      "Kinnan": 0.274,
+      "Rog/Thras Tree Farm": 0.274,
+      "RogSi": 0.274,
+      "Sisay": 0.0,
+      "Tayam": 0.045,
+      "Tivit": 0.0,
+      "midrange_grind": 0.274,
+      "stax_heavy": 0.274
+    },
+    "S": {
+      "Blue Farm": 0.302,
+      "Etali": 0.302,
+      "Kinnan": 0.302,
+      "Rog/Thras Tree Farm": 0.302,
+      "RogSi": 0.302,
+      "Sisay": 0.0,
+      "Tayam": 0.047,
+      "Tivit": 0.0,
+      "midrange_grind": 0.302,
+      "stax_heavy": 0.302
+    },
+    "B": {
+      "Blue Farm": 0.277,
+      "Etali": 0.277,
+      "Kinnan": 0.277,
+      "Rog/Thras Tree Farm": 0.277,
+      "RogSi": 0.277,
+      "Sisay": 0.0,
+      "Tayam": 0.04,
+      "Tivit": 0.0,
+      "midrange_grind": 0.277,
+      "stax_heavy": 0.277
+    },
+    "D": {
+      "Blue Farm": 0.474,
+      "Etali": 0.474,
+      "Kinnan": 0.474,
+      "Rog/Thras Tree Farm": 0.474,
+      "RogSi": 0.474,
+      "Sisay": 0.0,
+      "Tayam": 0.068,
+      "Tivit": 0.0,
+      "midrange_grind": 0.474,
+      "stax_heavy": 0.474
+    },
+    "F": {
+      "Blue Farm": 0.5,
+      "Etali": 0.5,
+      "Kinnan": 0.5,
+      "Rog/Thras Tree Farm": 0.5,
+      "RogSi": 0.5,
+      "Sisay": 0.0,
+      "Tayam": 0.085,
+      "Tivit": 0.0,
+      "midrange_grind": 0.5,
+      "stax_heavy": 0.5
+    }
+  },
+  "boundary_rule_check": {
+    "description": "The assignment's explicit boundary: pod relevance may UPGRADE a coherent marginal hand, but must NOT rescue 'mana + interaction + no destination' into a premium keep. This module never touches trajectory_grading.py's tier at all - it only REPORTS agency scores alongside whatever tier a hand already has, so no hand's tier can change based on its agency score by construction. The counts below confirm this empirically: D/F-tier hands (no destination) with real live interaction still show tier D/F, regardless of how high their agency score is.",
+    "d_or_f_tier_hands_with_at_least_one_live_interaction_card": 681,
+    "d_or_f_tier_hands_with_live_agency_score_2plus": 136,
+    "example_no_destination_high_agency_hands_still_tier_d_or_f": [
+      {
+        "hand": [
+          "Colossal Skyturtle",
+          "Mindbreak Trap",
+          "Misdirection",
+          "Pact of Negation",
+          "Rhystic Study",
+          "Smothering Tithe",
+          "Training Grounds"
+        ],
+        "legacy_tier": "F",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Pact of Negation",
+          "Misdirection"
+        ]
+      },
+      {
+        "hand": [
+          "Derevi, Empyrial Tactician",
+          "Gemstone Caverns",
+          "Mana Vault",
+          "Mental Misstep",
+          "Pact of Negation",
+          "Training Grounds",
+          "Volatile Stormdrake"
+        ],
+        "legacy_tier": "D",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Pact of Negation",
+          "Mental Misstep"
+        ]
+      },
+      {
+        "hand": [
+          "Birds of Paradise",
+          "Command Tower",
+          "Exotic Orchard",
+          "Gilded Drake",
+          "Mental Misstep",
+          "Misdirection",
+          "Scrubland"
+        ],
+        "legacy_tier": "D",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Mental Misstep",
+          "Misdirection"
+        ]
+      },
+      {
+        "hand": [
+          "Colossal Skyturtle",
+          "Force of Will",
+          "Gemstone Caverns",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Mental Misstep",
+          "Nature's Rhythm",
+          "Scrubland"
+        ],
+        "legacy_tier": "F",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Mental Misstep",
+          "Force of Will"
+        ]
+      },
+      {
+        "hand": [
+          "Avacyn's Pilgrim",
+          "Birds of Paradise",
+          "City of Traitors",
+          "Kinnan, Bonder Prodigy",
+          "Mental Misstep",
+          "Pact of Negation",
+          "Silence"
+        ],
+        "legacy_tier": "F",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Pact of Negation",
+          "Mental Misstep"
+        ]
+      },
+      {
+        "hand": [
+          "Avacyn's Pilgrim",
+          "City of Brass",
+          "Elves of Deep Shadow",
+          "Marsh Flats",
+          "Misdirection",
+          "Orcish Bowmasters",
+          "Subtlety"
+        ],
+        "legacy_tier": "D",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Subtlety",
+          "Misdirection"
+        ]
+      },
+      {
+        "hand": [
+          "City of Brass",
+          "Delighted Halfling",
+          "Force of Will",
+          "Imperial Seal",
+          "Mana Vault",
+          "Mental Misstep",
+          "Volatile Stormdrake"
+        ],
+        "legacy_tier": "D",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Force of Will",
+          "Mental Misstep"
+        ]
+      },
+      {
+        "hand": [
+          "Commandeer",
+          "Eldritch Evolution",
+          "Kinnan, Bonder Prodigy",
+          "Mental Misstep",
+          "Pact of Negation",
+          "Savannah",
+          "Voice of Victory"
+        ],
+        "legacy_tier": "F",
+        "live_agency_score": 3,
+        "live_cards": [
+          "Pact of Negation",
+          "Commandeer",
+          "Mental Misstep"
+        ]
+      },
+      {
+        "hand": [
+          "Commandeer",
+          "Devoted Druid",
+          "Force of Will",
+          "King T'Challa // Black Panther, Hope Enduring",
+          "Oboro Breezecaller",
+          "Ranger-Captain of Eos",
+          "Spellseeker"
+        ],
+        "legacy_tier": "F",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Commandeer",
+          "Force of Will"
+        ]
+      },
+      {
+        "hand": [
+          "Colossal Skyturtle",
+          "Demonic Tutor",
+          "Fierce Guardianship",
+          "Finale of Devastation",
+          "Force of Will",
+          "Sowing Mycospawn",
+          "Subtlety"
+        ],
+        "legacy_tier": "F",
+        "live_agency_score": 2,
+        "live_cards": [
+          "Subtlety",
+          "Force of Will"
+        ]
+      }
+    ]
+  },
+  "note": "relevant_agency_score is a MODEL_DERIVED report, not itself a keep/mulligan decision - combining it correctly with destination-first trajectory grading (respecting the boundary above) is deferred to task #117's contextual policy comparison."
+}
