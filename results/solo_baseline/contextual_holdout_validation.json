@@ -1,0 +1,3663 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_CONTEXTUAL_HOLDOUT_VALIDATION",
+  "sample_count": 3000,
+  "seed": 9002,
+  "seat": "play",
+  "keep_tier_threshold_size7": "C",
+  "reference_seat_for_contextual_grade": 1,
+  "reference_archetype_for_contextual_grade": "midrange_grind",
+  "method_note": "Neither side is ground truth. The legacy machine decision (trajectory_grading's own tier, already validated in MULL-005R) and the contextual decision (gated architecture, task #113/#117) are compared on a FRESH holdout seed unused by any prior artifact - disagreements are EXPECTED since the contextual model intentionally adds dimensions the legacy grader never considered (draw dependence, resilience, seat exposure, pod realization, relevant agency). This validation classifies every disagreement by WHICH new dimension caused it, to confirm disagreements are attributable to a real, intentional mechanism, not noise or a bug.",
+  "major_finding_draw_dependence_gate_overbreadth": "The large majority of disagreements trace to ONE mechanism: draw_dependence_model's EXACT_OR_NEAR_EXACT classification always assigns outs_count=1 (singleton copy) for an engine card reached via a natural top-of-library draw (never tutored, never in hand) - see draw_dependence_model.py. With this deck's remaining-library size, that singleton's hypergeometric probability is ALWAYS well under gated_model's DRAW_DEPENDENCE_PROBABILITY_GATE_THRESHOLD=0.2, so the gate fires on essentially EVERY hand whose legacy tier came from 'drew the engine naturally,' downgrading it one grade step REGARDLESS of the underlying engine's actual strength (Thrasios and Deathrite Shaman both appear repeatedly in the disagreement examples below purely because they are untracked-by-engine_strength_prior destinations reached this way, not because either is a weak destination). This is a real, disclosed CONSEQUENCE of the gated architecture's specific threshold choice, not a bug - but it suggests 0.2 may be set too high for a gate meant to catch genuinely narrow, speculative lines rather than the routine case of 'the winning engine happened to be drawn rather than opened.' Flagged as a concrete candidate for the threshold re-derivation work disclosed in task #117 and the final report's Next Research section - the assignment's own instruction is 'do not assume these exact gates are correct.'",
+  "agreement_counts": {
+    "both_keep": 1614,
+    "both_mulligan": 690,
+    "contextual_keeps_legacy_mulligans": 0,
+    "contextual_mulligans_legacy_keeps": 696
+  },
+  "agreement_rate": 0.768,
+  "total_disagreements": 696,
+  "disagreement_rate": 0.232,
+  "disagreement_cause_counts": {
+    "draw_dependence_gate": {
+      "contextual_keeps_legacy_mulligans": 0,
+      "contextual_mulligans_legacy_keeps": 683
+    },
+    "all_in_resilience_gate": {
+      "contextual_keeps_legacy_mulligans": 0,
+      "contextual_mulligans_legacy_keeps": 0
+    },
+    "seat_exposure_gate": {
+      "contextual_keeps_legacy_mulligans": 0,
+      "contextual_mulligans_legacy_keeps": 0
+    },
+    "pod_realization_gate": {
+      "contextual_keeps_legacy_mulligans": 0,
+      "contextual_mulligans_legacy_keeps": 0
+    },
+    "agency_upgrade": {
+      "contextual_keeps_legacy_mulligans": 0,
+      "contextual_mulligans_legacy_keeps": 0
+    },
+    "unclassified": {
+      "contextual_keeps_legacy_mulligans": 0,
+      "contextual_mulligans_legacy_keeps": 13
+    }
+  },
+  "unclassified_disagreement_rate": 0.0187,
+  "sample_disagreements_capped_200": [
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Marsh Flats",
+        "Mindbreak Trap",
+        "Starting Town",
+        "Vampiric Tutor",
+        "Veil of Summer",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Delighted Halfling",
+        "Devoted Druid",
+        "Gaea's Cradle",
+        "Hazel's Brewmaster",
+        "Otawara, Soaring City",
+        "Starting Town"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Commandeer",
+        "Elves of Deep Shadow",
+        "Endurance",
+        "Finale of Devastation",
+        "Mana Confluence",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Flusterstorm",
+        "Misty Rainforest",
+        "Polluted Delta",
+        "Ranger-Captain of Eos",
+        "Sowing Mycospawn",
+        "Swan Song"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "City of Brass",
+        "Command Tower",
+        "Minamo, School at Water's Edge",
+        "Otawara, Soaring City",
+        "Pact of Negation",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Esper Sentinel",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Flooded Strand",
+        "Force of Negation",
+        "Marsh Flats",
+        "Misty Rainforest",
+        "Runic Armasaur",
+        "Spellseeker",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Birthing Pod",
+        "Boseiju, Who Endures",
+        "Derevi, Empyrial Tactician",
+        "Flusterstorm",
+        "Gilded Drake",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Eldritch Evolution",
+        "Imperial Seal",
+        "Mental Misstep",
+        "Minamo, School at Water's Edge",
+        "Shifting Woodland",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Enduring Vitality",
+        "Gemstone Caverns",
+        "Mana Confluence",
+        "Runic Armasaur",
+        "Swan Song",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Clever Impersonator",
+        "Exotic Orchard",
+        "Flare of Denial",
+        "Sol Ring",
+        "Tropical Island",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "Bayou",
+        "City of Traitors",
+        "Eldritch Evolution",
+        "Mindbreak Trap",
+        "Oboro Breezecaller",
+        "Runic Armasaur",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "SELF_CONTAINED"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "City of Traitors",
+        "Crop Rotation",
+        "Force of Negation",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Lotus Petal",
+        "Runic Armasaur"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Mystic Remora",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Flare of Denial",
+        "Misty Rainforest",
+        "Mox Diamond",
+        "Sowing Mycospawn",
+        "Swan Song",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Chrome Mox",
+        "Eldritch Evolution",
+        "Heartwood Storyteller",
+        "Oboro Breezecaller",
+        "Pact of Negation",
+        "Silence"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Gilded Drake",
+        "Hazel's Brewmaster",
+        "Mana Confluence",
+        "Orcish Bowmasters",
+        "Tundra",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Exotic Orchard",
+        "Marsh Flats",
+        "Misdirection",
+        "Oboro Breezecaller",
+        "Scrubland",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Orcish Bowmasters",
+        "Ranger-Captain of Eos",
+        "Starting Town",
+        "Subtlety",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Chord of Calling",
+        "Elvish Spirit Guide",
+        "Hazel's Brewmaster",
+        "Nature's Rhythm",
+        "Otawara, Soaring City",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Command Tower",
+        "Force of Negation",
+        "Heartwood Storyteller",
+        "Marsh Flats",
+        "Mental Misstep",
+        "Otawara, Soaring City"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Commandeer",
+        "Enduring Vitality",
+        "Finale of Devastation",
+        "Marsh Flats",
+        "Tropical Island",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Devoted Druid",
+        "Faerie Mastermind",
+        "Fierce Guardianship",
+        "Mana Vault",
+        "Polluted Delta",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Endurance",
+        "Exotic Orchard",
+        "Misty Rainforest",
+        "Shifting Woodland",
+        "Sol Ring",
+        "Swift Reconfiguration",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Colossal Skyturtle",
+        "Commandeer",
+        "Demonic Tutor",
+        "Endurance",
+        "Flare of Denial",
+        "Misdirection",
+        "Savannah"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Esper Sentinel",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Clever Impersonator",
+        "Command Tower",
+        "Enlightened Tutor",
+        "Noble Hierarch",
+        "Shang-Chi, Master of Kung Fu",
+        "Vampiric Tutor"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Command Tower",
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Marsh Flats",
+        "Noble Hierarch",
+        "Subtlety"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Colossal Skyturtle",
+        "Force of Will",
+        "Mana Confluence",
+        "Pact of Negation",
+        "Shang-Chi, Master of Kung Fu",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Eldritch Evolution",
+        "Enlightened Tutor",
+        "Flusterstorm",
+        "Marsh Flats",
+        "Scrubland",
+        "Sol Ring",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Colossal Skyturtle",
+        "Fierce Guardianship",
+        "Polluted Delta",
+        "Shang-Chi, Master of Kung Fu",
+        "Swift Reconfiguration",
+        "Underground Sea",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Endurance",
+        "Flooded Strand",
+        "Gemstone Caverns",
+        "Rhystic Study",
+        "Swan Song",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Crop Rotation",
+        "Elves of Deep Shadow",
+        "Endurance",
+        "Faerie Mastermind",
+        "Hazel's Brewmaster",
+        "Marsh Flats",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Chord of Calling",
+        "Elvish Spirit Guide",
+        "Gilded Drake",
+        "Heartwood Storyteller",
+        "Sol Ring",
+        "Spellseeker"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Esper Sentinel",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Endurance",
+        "Gemstone Caverns",
+        "Minamo, School at Water's Edge",
+        "Misdirection",
+        "Savannah",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Devoted Druid",
+        "Enduring Vitality",
+        "Flare of Denial",
+        "Marsh Flats",
+        "Nature's Rhythm",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Heartwood Storyteller",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Commandeer",
+        "Endurance",
+        "Flare of Denial",
+        "Gemstone Caverns",
+        "Mystic Remora",
+        "Shifting Woodland",
+        "Silence"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Elves of Deep Shadow",
+        "Enduring Vitality",
+        "Heartwood Storyteller",
+        "Marsh Flats",
+        "Scrubland",
+        "Shang-Chi, Master of Kung Fu",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Boseiju, Who Endures",
+        "Gleaming Splendor",
+        "Misty Rainforest",
+        "Oboro Breezecaller",
+        "Training Grounds",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Delighted Halfling",
+        "Eldritch Evolution",
+        "Flooded Strand",
+        "Force of Negation",
+        "Orcish Bowmasters",
+        "Scrubland",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Delney, Streetwise Lookout",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Eldritch Evolution",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Misty Rainforest",
+        "Tundra",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Chrome Mox",
+        "Colossal Skyturtle",
+        "Gilded Drake",
+        "Mana Confluence",
+        "Silence",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Commandeer",
+        "Endurance",
+        "Flusterstorm",
+        "Force of Will",
+        "Otawara, Soaring City",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Eldritch Evolution",
+        "Otawara, Soaring City",
+        "Rhystic Study",
+        "Scrubland",
+        "Silence",
+        "Voice of Victory",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Eldritch Evolution",
+        "Enduring Vitality",
+        "Rhystic Study",
+        "Spellseeker",
+        "Tundra",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Flare of Denial",
+        "Misdirection",
+        "Runic Armasaur",
+        "Shifting Woodland",
+        "Sowing Mycospawn",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Deathrite Shaman",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Fierce Guardianship",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Otawara, Soaring City",
+        "Pact of Negation",
+        "Verdant Catacombs",
+        "Windswept Heath",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Elvish Spirit Guide",
+        "Marsh Flats",
+        "Pact of Negation",
+        "Polluted Delta",
+        "Shang-Chi, Master of Kung Fu",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Command Tower",
+        "Nature's Rhythm",
+        "Oboro Breezecaller",
+        "Smothering Tithe",
+        "Sowing Mycospawn",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Flooded Strand",
+        "Hazel's Brewmaster",
+        "Mental Misstep",
+        "Pact of Negation",
+        "Shifting Woodland",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Deathrite Shaman",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Exotic Orchard",
+        "Mana Vault",
+        "Misty Rainforest",
+        "Orcish Bowmasters",
+        "Underground Sea",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Exotic Orchard",
+        "Gemstone Caverns",
+        "Gleaming Splendor",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Lotus Petal",
+        "Pact of Negation",
+        "Polluted Delta"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Colossal Skyturtle",
+        "Commandeer",
+        "Gleaming Splendor",
+        "Mana Confluence",
+        "Savannah",
+        "Underground Sea",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Hazel's Brewmaster",
+        "Mindbreak Trap",
+        "Runic Armasaur",
+        "Silence",
+        "Voice of Victory",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Clever Impersonator",
+        "Flare of Denial",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Polluted Delta",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Esper Sentinel",
+        "Flusterstorm",
+        "Force of Will",
+        "Rhystic Study",
+        "Swan Song",
+        "Swift Reconfiguration",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Endurance",
+        "Exotic Orchard",
+        "Misty Rainforest",
+        "Pact of Negation",
+        "Sowing Mycospawn",
+        "Starting Town"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Flare of Denial",
+        "Force of Will",
+        "Gaea's Cradle",
+        "Marsh Flats",
+        "Silence",
+        "Subtlety",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Delney, Streetwise Lookout",
+        "Derevi, Empyrial Tactician",
+        "Elvish Spirit Guide",
+        "Marsh Flats",
+        "Scrubland",
+        "Smothering Tithe"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Force of Negation",
+        "Mental Misstep",
+        "Misdirection",
+        "Misty Rainforest",
+        "Savannah",
+        "Tundra",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Chord of Calling",
+        "Delney, Streetwise Lookout",
+        "Marsh Flats",
+        "Noble Hierarch",
+        "Polluted Delta",
+        "Sylvan Library"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Devoted Druid",
+        "Endurance",
+        "Flooded Strand",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Smothering Tithe",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Mystic Remora",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Flooded Strand",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Shifting Woodland",
+        "Tropical Island",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Crop Rotation",
+        "Flare of Denial",
+        "Flooded Strand",
+        "Gemstone Caverns",
+        "Rhystic Study",
+        "Swift Reconfiguration"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Derevi, Empyrial Tactician",
+        "Faerie Mastermind",
+        "Finale of Devastation",
+        "Misdirection",
+        "Ranger-Captain of Eos",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Kinnan, Bonder Prodigy",
+        "Pact of Negation",
+        "Shifting Woodland",
+        "Sowing Mycospawn",
+        "Veil of Summer",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Clever Impersonator",
+        "Flusterstorm",
+        "Gilded Drake",
+        "Mox Diamond",
+        "Orcish Bowmasters",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "City of Brass",
+        "City of Traitors",
+        "Gemstone Caverns",
+        "Marsh Flats",
+        "Savannah",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Eldritch Evolution",
+        "Exotic Orchard",
+        "Oboro Breezecaller",
+        "Orcish Bowmasters",
+        "Shang-Chi, Master of Kung Fu",
+        "Starting Town",
+        "Sylvan Library"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Force of Will",
+        "Heartwood Storyteller",
+        "Marsh Flats",
+        "Misty Rainforest",
+        "Sowing Mycospawn",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Mana Vault",
+        "Mox Diamond",
+        "Nature's Rhythm",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Delighted Halfling",
+        "Flooded Strand",
+        "Gilded Drake",
+        "Hazel's Brewmaster",
+        "Oboro Breezecaller",
+        "Subtlety",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Esper Sentinel",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Colossal Skyturtle",
+        "Enduring Vitality",
+        "Flare of Denial",
+        "Mindbreak Trap",
+        "Sylvan Library",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Commandeer",
+        "Exotic Orchard",
+        "Force of Negation",
+        "Noble Hierarch",
+        "Tropical Island",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Commandeer",
+        "Enduring Vitality",
+        "Marsh Flats",
+        "Orcish Bowmasters",
+        "Rhystic Study",
+        "Starting Town",
+        "Swift Reconfiguration"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Boseiju, Who Endures",
+        "Elves of Deep Shadow",
+        "Flooded Strand",
+        "Oboro Breezecaller",
+        "Pact of Negation",
+        "Smothering Tithe"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Archivist of Oghma",
+        "Chord of Calling",
+        "City of Brass",
+        "Gilded Drake",
+        "Polluted Delta",
+        "Ranger-Captain of Eos"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Devoted Druid",
+        "Elves of Deep Shadow",
+        "Mental Misstep",
+        "Noble Hierarch",
+        "Oboro Breezecaller",
+        "Otawara, Soaring City",
+        "Training Grounds"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Deathrite Shaman",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Commandeer",
+        "Flusterstorm",
+        "Force of Will",
+        "Scrubland",
+        "Talon Gates of Madara",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Force of Will",
+        "Hazel's Brewmaster",
+        "Heartwood Storyteller",
+        "Mana Confluence",
+        "Oboro Breezecaller",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Finale of Devastation",
+        "Imperial Seal",
+        "Oboro Breezecaller",
+        "Rhystic Study",
+        "Tundra",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Gilded Drake",
+        "Lotus Petal",
+        "Mindbreak Trap",
+        "Noble Hierarch",
+        "Savannah",
+        "Scrubland"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Force of Will",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Marsh Flats",
+        "Otawara, Soaring City",
+        "Smothering Tithe",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Bayou",
+        "Birthing Pod",
+        "Kinnan, Bonder Prodigy",
+        "Minamo, School at Water's Edge",
+        "Swift Reconfiguration",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "City of Brass",
+        "Colossal Skyturtle",
+        "Noble Hierarch",
+        "Otawara, Soaring City",
+        "Shifting Woodland",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "Abhorrent Oculus",
+        "Derevi, Empyrial Tactician",
+        "Elves of Deep Shadow",
+        "Gemstone Caverns",
+        "Imperial Seal",
+        "Savannah",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "SELF_CONTAINED"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Command Tower",
+        "Derevi, Empyrial Tactician",
+        "Mana Confluence",
+        "Scrubland",
+        "Swift Reconfiguration",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Mental Misstep",
+        "Misty Rainforest",
+        "Noble Hierarch",
+        "Savannah",
+        "Scrubland",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Bayou",
+        "City of Traitors",
+        "Derevi, Empyrial Tactician",
+        "Fierce Guardianship",
+        "Flooded Strand",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Archivist of Oghma",
+        "Finale of Devastation",
+        "Hazel's Brewmaster",
+        "Mana Vault",
+        "Starting Town",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Chrome Mox",
+        "Command Tower",
+        "Elves of Deep Shadow",
+        "Flooded Strand",
+        "Marsh Flats",
+        "Swift Reconfiguration"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Chord of Calling",
+        "Commandeer",
+        "Gleaming Splendor",
+        "Runic Armasaur",
+        "Survival of the Fittest",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Delighted Halfling",
+        "Exotic Orchard",
+        "Fierce Guardianship",
+        "Flooded Strand",
+        "Noble Hierarch",
+        "Swift Reconfiguration"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Clever Impersonator",
+        "Colossal Skyturtle",
+        "Elvish Spirit Guide",
+        "Flare of Denial",
+        "Mana Confluence",
+        "Starting Town"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Flooded Strand",
+        "Kinnan, Bonder Prodigy",
+        "Pact of Negation",
+        "Scrubland",
+        "Smothering Tithe",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Faerie Mastermind",
+        "Gilded Drake",
+        "Ranger-Captain of Eos",
+        "Shang-Chi, Master of Kung Fu",
+        "Shifting Woodland",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Commandeer",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Scrubland",
+        "Survival of the Fittest",
+        "Swift Reconfiguration",
+        "Tundra",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Crop Rotation",
+        "Gilded Drake",
+        "Marsh Flats",
+        "Spellseeker",
+        "Survival of the Fittest",
+        "Vampiric Tutor"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Marsh Flats",
+        "Smothering Tithe",
+        "Tropical Island",
+        "Tundra",
+        "Underground Sea",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Demonic Tutor",
+        "Endurance",
+        "Faerie Mastermind",
+        "Ranger-Captain of Eos",
+        "Subtlety",
+        "Sylvan Library"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Delney, Streetwise Lookout",
+        "Fierce Guardianship",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mental Misstep",
+        "Mindbreak Trap",
+        "Misty Rainforest"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Elves of Deep Shadow",
+        "Hazel's Brewmaster",
+        "Kinnan, Bonder Prodigy",
+        "Marsh Flats",
+        "Starting Town",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Delney, Streetwise Lookout",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Force of Will",
+        "Gleaming Splendor",
+        "Mana Confluence",
+        "Misty Rainforest",
+        "Underground Sea",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Clever Impersonator",
+        "Endurance",
+        "Force of Will",
+        "Mana Confluence",
+        "Otawara, Soaring City",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "City of Brass",
+        "Endurance",
+        "Gaea's Cradle",
+        "Pact of Negation",
+        "Runic Armasaur",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Bayou",
+        "Marsh Flats",
+        "Sowing Mycospawn",
+        "Swan Song",
+        "Tropical Island",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Derevi, Empyrial Tactician",
+        "Eldritch Evolution",
+        "Gleaming Splendor",
+        "Misdirection",
+        "Misty Rainforest",
+        "Polluted Delta",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "City of Brass",
+        "Devoted Druid",
+        "Force of Negation",
+        "Mana Vault",
+        "Nature's Rhythm",
+        "Subtlety"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Command Tower",
+        "Delighted Halfling",
+        "Flare of Denial",
+        "Gaea's Cradle",
+        "Scrubland",
+        "Shifting Woodland"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Demonic Tutor",
+        "Fierce Guardianship",
+        "Force of Negation",
+        "Imperial Seal",
+        "Lotus Petal",
+        "Survival of the Fittest",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Gaea's Cradle",
+        "Polluted Delta",
+        "Ranger-Captain of Eos",
+        "Rhystic Study",
+        "Savannah",
+        "Subtlety",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Deathrite Shaman",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Exotic Orchard",
+        "Mental Misstep",
+        "Swan Song",
+        "Tropical Island",
+        "Veil of Summer",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Birthing Pod",
+        "Boseiju, Who Endures",
+        "Lotus Petal",
+        "Savannah",
+        "Sowing Mycospawn",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Heartwood Storyteller",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "Ancient Tomb",
+        "Badgermole Cub",
+        "Lotus Petal",
+        "Marsh Flats",
+        "Oboro Breezecaller",
+        "Runic Armasaur",
+        "Spellseeker"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "SELF_CONTAINED"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Chrome Mox",
+        "Faerie Mastermind",
+        "Runic Armasaur",
+        "Tropical Island",
+        "Underground Sea",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "SELF_CONTAINED"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Flooded Strand",
+        "Hazel's Brewmaster",
+        "Swan Song",
+        "Swift Reconfiguration",
+        "Windswept Heath",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Crop Rotation",
+        "Delighted Halfling",
+        "Kinnan, Bonder Prodigy",
+        "Noble Hierarch",
+        "Smothering Tithe",
+        "Volatile Stormdrake",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Fierce Guardianship",
+        "Heartwood Storyteller",
+        "Mana Vault",
+        "Swift Reconfiguration",
+        "Underground Sea",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Boseiju, Who Endures",
+        "Force of Negation",
+        "Mana Confluence",
+        "Subtlety",
+        "Swift Reconfiguration",
+        "Training Grounds"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Delney, Streetwise Lookout",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Devoted Druid",
+        "Force of Will",
+        "Mox Diamond",
+        "Scrubland",
+        "Spellseeker",
+        "Talon Gates of Madara",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Commandeer",
+        "Crop Rotation",
+        "Eldritch Evolution",
+        "Flusterstorm",
+        "Force of Negation",
+        "Lotus Petal",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Flare of Denial",
+        "Force of Will",
+        "Mana Vault",
+        "Mindbreak Trap",
+        "Nature's Rhythm",
+        "Tropical Island",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Enduring Vitality",
+        "Kinnan, Bonder Prodigy",
+        "Lotus Petal",
+        "Orcish Bowmasters",
+        "Otawara, Soaring City",
+        "Training Grounds"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "Delighted Halfling",
+        "Gaea's Cradle",
+        "Marsh Flats",
+        "Otawara, Soaring City",
+        "Rhystic Study",
+        "Runic Armasaur",
+        "Sylvan Library"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "SELF_CONTAINED"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Boseiju, Who Endures",
+        "Orcish Bowmasters",
+        "Runic Armasaur",
+        "Spellseeker",
+        "Swift Reconfiguration",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Flare of Denial",
+        "Gilded Drake",
+        "Minamo, School at Water's Edge",
+        "Mindbreak Trap",
+        "Ranger-Captain of Eos",
+        "Scrubland"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Colossal Skyturtle",
+        "Gleaming Splendor",
+        "Lotus Petal",
+        "Polluted Delta",
+        "Shifting Woodland",
+        "Training Grounds"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Gleaming Splendor",
+        "Lotus Petal",
+        "Mana Confluence",
+        "Mana Vault",
+        "Shifting Woodland",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Birthing Pod",
+        "City of Brass",
+        "Enduring Vitality",
+        "Faerie Mastermind",
+        "Flare of Denial",
+        "Flooded Strand"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Mystic Remora",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Boseiju, Who Endures",
+        "Commandeer",
+        "Gaea's Cradle",
+        "Gleaming Splendor",
+        "Mindbreak Trap",
+        "Training Grounds",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Force of Will",
+        "Gleaming Splendor",
+        "Shifting Woodland",
+        "Silence",
+        "Talon Gates of Madara",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "City of Traitors",
+        "Gleaming Splendor",
+        "Misdirection",
+        "Oboro Breezecaller",
+        "Sowing Mycospawn",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Colossal Skyturtle",
+        "Fierce Guardianship",
+        "Hazel's Brewmaster",
+        "Otawara, Soaring City",
+        "Runic Armasaur",
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Command Tower",
+        "Faerie Mastermind",
+        "Force of Will",
+        "Gemstone Caverns",
+        "Gilded Drake",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Esper Sentinel",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Colossal Skyturtle",
+        "Commandeer",
+        "Gaea's Cradle",
+        "Mana Vault",
+        "Silence",
+        "Training Grounds",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Demonic Tutor",
+        "Faerie Mastermind",
+        "Imperial Seal",
+        "Mental Misstep",
+        "Savannah",
+        "Sol Ring",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Demonic Tutor",
+        "Fierce Guardianship",
+        "Flooded Strand",
+        "Nature's Rhythm",
+        "Spellseeker",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Esper Sentinel",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Elves of Deep Shadow",
+        "Marsh Flats",
+        "Minamo, School at Water's Edge",
+        "Misty Rainforest",
+        "Nature's Rhythm",
+        "Smothering Tithe"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Fierce Guardianship",
+        "Force of Negation",
+        "Noble Hierarch",
+        "Shifting Woodland",
+        "Spellseeker",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Gilded Drake",
+        "Otawara, Soaring City",
+        "Savannah",
+        "Swift Reconfiguration",
+        "Voice of Victory",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Delney, Streetwise Lookout",
+        "Force of Negation",
+        "Savannah",
+        "Silence",
+        "Underground Sea",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Elvish Spirit Guide",
+        "Gaea's Cradle",
+        "Mana Confluence",
+        "Smothering Tithe",
+        "Swift Reconfiguration",
+        "Talon Gates of Madara",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Gemstone Caverns",
+        "Mental Misstep",
+        "Misdirection",
+        "Polluted Delta",
+        "Sol Ring",
+        "Talon Gates of Madara",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Birds of Paradise",
+        "Command Tower",
+        "Finale of Devastation",
+        "Flooded Strand",
+        "Oboro Breezecaller",
+        "Silence"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Hazel's Brewmaster",
+        "Marsh Flats",
+        "Mental Misstep",
+        "Misty Rainforest",
+        "Polluted Delta",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Bayou",
+        "City of Traitors",
+        "Elvish Spirit Guide",
+        "Mana Confluence",
+        "Misty Rainforest",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Gleaming Splendor",
+        "Heartwood Storyteller",
+        "Mental Misstep",
+        "Misty Rainforest",
+        "Polluted Delta",
+        "Scrubland",
+        "Silence"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Command Tower",
+        "Devoted Druid",
+        "Gleaming Splendor",
+        "Training Grounds",
+        "Tropical Island",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "Crop Rotation",
+        "Delney, Streetwise Lookout",
+        "Endurance",
+        "Lotus Petal",
+        "Tundra",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Avacyn's Pilgrim",
+        "Misdirection",
+        "Mystic Remora",
+        "Talon Gates of Madara",
+        "Veil of Summer",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Exotic Orchard",
+        "Gaea's Cradle",
+        "Nature's Rhythm",
+        "Orcish Bowmasters",
+        "Rhystic Study",
+        "Shifting Woodland",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Bayou",
+        "Boseiju, Who Endures",
+        "Commandeer",
+        "Endurance",
+        "Exotic Orchard",
+        "Force of Negation"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Faerie Mastermind",
+        "Flare of Denial",
+        "Minamo, School at Water's Edge",
+        "Mox Diamond",
+        "Starting Town",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "City of Traitors",
+        "Enduring Vitality",
+        "Exotic Orchard",
+        "Runic Armasaur",
+        "Savannah",
+        "Swan Song",
+        "Training Grounds"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "BROAD_OUTS"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Chrome Mox",
+        "Fierce Guardianship",
+        "Force of Negation",
+        "Gilded Drake",
+        "Lotus Petal",
+        "Savannah"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Colossal Skyturtle",
+        "Derevi, Empyrial Tactician",
+        "Force of Negation",
+        "Scrubland",
+        "Veil of Summer",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Elves of Deep Shadow",
+        "Finale of Devastation",
+        "Flare of Denial",
+        "Force of Negation",
+        "Marsh Flats",
+        "Minamo, School at Water's Edge"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Gaea's Cradle",
+        "Gleaming Splendor",
+        "Oboro Breezecaller",
+        "Orcish Bowmasters",
+        "Runic Armasaur",
+        "Shifting Woodland"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Eldritch Evolution",
+        "Flooded Strand",
+        "Gilded Drake",
+        "Misty Rainforest",
+        "Rhystic Study",
+        "Training Grounds",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Birds of Paradise",
+        "Chrome Mox",
+        "Elves of Deep Shadow",
+        "Flare of Denial",
+        "Heartwood Storyteller",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chrome Mox",
+        "Clever Impersonator",
+        "Enduring Vitality",
+        "Faerie Mastermind",
+        "Lotus Petal",
+        "Polluted Delta",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Deathrite Shaman",
+      "resilience_class": "ROBUST",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Fierce Guardianship",
+        "Lotus Petal",
+        "Mox Diamond",
+        "Savannah",
+        "Swift Reconfiguration",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Enduring Vitality",
+        "Gilded Drake",
+        "Mana Vault",
+        "Mox Diamond",
+        "Shifting Woodland",
+        "Underground Sea",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Crop Rotation",
+        "Flusterstorm",
+        "Gemstone Caverns",
+        "Lotus Petal",
+        "Otawara, Soaring City",
+        "Pact of Negation",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Deathrite Shaman",
+        "Lotus Petal",
+        "Nature's Rhythm",
+        "Otawara, Soaring City",
+        "Silence",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Avacyn's Pilgrim",
+        "City of Brass",
+        "Derevi, Empyrial Tactician",
+        "Gilded Drake",
+        "Otawara, Soaring City",
+        "Rhystic Study",
+        "Smothering Tithe"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Chord of Calling",
+        "Clever Impersonator",
+        "Flusterstorm",
+        "Mox Diamond",
+        "Shang-Chi, Master of Kung Fu",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Chord of Calling",
+        "Gilded Drake",
+        "Ranger-Captain of Eos",
+        "Rhystic Study",
+        "Savannah",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "unclassified",
+      "hand": [
+        "Bayou",
+        "Devoted Druid",
+        "Pact of Negation",
+        "Polluted Delta",
+        "Runic Armasaur",
+        "Savannah",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Runic Armasaur",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "SELF_CONTAINED"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Heartwood Storyteller",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Lotus Petal",
+        "Mana Confluence",
+        "Oboro Breezecaller",
+        "Runic Armasaur"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birds of Paradise",
+        "Boseiju, Who Endures",
+        "Enlightened Tutor",
+        "Finale of Devastation",
+        "Gleaming Splendor",
+        "Sol Ring",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Flare of Denial",
+        "Flooded Strand",
+        "Hazel's Brewmaster",
+        "Mental Misstep",
+        "Otawara, Soaring City",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Crop Rotation",
+        "Gaea's Cradle",
+        "Minamo, School at Water's Edge",
+        "Otawara, Soaring City",
+        "Sol Ring",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Finale of Devastation",
+        "Force of Negation",
+        "Kinnan, Bonder Prodigy",
+        "Minamo, School at Water's Edge",
+        "Misty Rainforest",
+        "Oboro Breezecaller",
+        "Orcish Bowmasters"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Archivist of Oghma",
+        "Derevi, Empyrial Tactician",
+        "Flare of Denial",
+        "Flooded Strand",
+        "Savannah",
+        "Sowing Mycospawn",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Command Tower",
+        "Flare of Denial",
+        "Flooded Strand",
+        "Mana Confluence",
+        "Misdirection",
+        "Mox Amber"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Delney, Streetwise Lookout",
+        "Elvish Spirit Guide",
+        "Flooded Strand",
+        "Kinnan, Bonder Prodigy",
+        "Shang-Chi, Master of Kung Fu",
+        "Training Grounds",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Crop Rotation",
+        "Heartwood Storyteller",
+        "Kinnan, Bonder Prodigy",
+        "Marsh Flats",
+        "Mox Diamond",
+        "Pact of Negation"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Enduring Vitality",
+        "Finale of Devastation",
+        "Flare of Denial",
+        "Gilded Drake",
+        "Mana Vault",
+        "Survival of the Fittest",
+        "Swift Reconfiguration"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Badgermole Cub",
+        "Flooded Strand",
+        "Mana Vault",
+        "Marsh Flats",
+        "Spellseeker",
+        "Veil of Summer",
+        "Volatile Stormdrake"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Ancient Tomb",
+        "Flusterstorm",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Kinnan, Bonder Prodigy",
+        "Silence",
+        "Volatile Stormdrake",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Eldritch Evolution",
+        "Flooded Strand",
+        "Gleaming Splendor",
+        "Mana Vault",
+        "Orcish Bowmasters",
+        "Verdant Catacombs",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Chord of Calling",
+        "Commandeer",
+        "Mindbreak Trap",
+        "Ranger-Captain of Eos",
+        "Scrubland",
+        "Tropical Island",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Finale of Devastation",
+        "Force of Negation",
+        "Gemstone Caverns",
+        "Gleaming Splendor",
+        "Mental Misstep",
+        "Tundra"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Gemstone Caverns",
+        "Mana Vault",
+        "Nature's Rhythm",
+        "Savannah",
+        "Shang-Chi, Master of Kung Fu",
+        "Training Grounds"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Deathrite Shaman",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Enduring Vitality",
+        "Gemstone Caverns",
+        "Gleaming Splendor",
+        "Mana Vault",
+        "Spellseeker",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Chrome Mox",
+        "Commandeer",
+        "Force of Negation",
+        "Nature's Rhythm",
+        "Savannah",
+        "Veil of Summer"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Gemstone Caverns",
+        "Hazel's Brewmaster",
+        "Runic Armasaur",
+        "Shang-Chi, Master of Kung Fu",
+        "Starting Town",
+        "Swift Reconfiguration",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Flusterstorm",
+        "Oboro Breezecaller",
+        "Sowing Mycospawn",
+        "Talon Gates of Madara",
+        "Veil of Summer",
+        "Voice of Victory"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Enduring Vitality",
+        "Mental Misstep",
+        "Misdirection",
+        "Misty Rainforest",
+        "Otawara, Soaring City",
+        "Sol Ring",
+        "Sowing Mycospawn"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "FRAGILE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Force of Negation",
+        "Oboro Breezecaller",
+        "Sol Ring",
+        "Starting Town",
+        "Underground Sea",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Command Tower",
+        "Exotic Orchard",
+        "King T'Challa // Black Panther, Hope Enduring",
+        "Mana Confluence",
+        "Mindbreak Trap",
+        "Misdirection",
+        "Pact of Negation"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Exotic Orchard",
+        "Fierce Guardianship",
+        "Gemstone Caverns",
+        "Kinnan, Bonder Prodigy",
+        "Mana Confluence",
+        "Misty Rainforest"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Bayou",
+        "Colossal Skyturtle",
+        "Enduring Vitality",
+        "Exotic Orchard",
+        "Gemstone Caverns",
+        "Mindbreak Trap",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Gilded Drake",
+        "Heartwood Storyteller",
+        "Kinnan, Bonder Prodigy",
+        "Minamo, School at Water's Edge",
+        "Orcish Bowmasters",
+        "Tundra",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Traitors",
+        "Enduring Vitality",
+        "Flusterstorm",
+        "Polluted Delta",
+        "Runic Armasaur",
+        "Scrubland",
+        "Tropical Island"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Colossal Skyturtle",
+        "Faerie Mastermind",
+        "Mana Confluence",
+        "Pact of Negation",
+        "Scrubland",
+        "Swan Song",
+        "Training Grounds"
+      ],
+      "legacy_tier": "B",
+      "contextual_grade": "D",
+      "tier_engine": "Survival of the Fittest",
+      "resilience_class": "ROBUST",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Clever Impersonator",
+        "Colossal Skyturtle",
+        "Elvish Spirit Guide",
+        "Force of Will",
+        "Heartwood Storyteller",
+        "Tropical Island",
+        "Vampiric Tutor"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Elves of Deep Shadow",
+        "Elvish Spirit Guide",
+        "Mox Diamond",
+        "Silence",
+        "Smothering Tithe",
+        "Tundra",
+        "Verdant Catacombs"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Fierce Guardianship",
+        "Gemstone Caverns",
+        "Ranger-Captain of Eos",
+        "Runic Armasaur",
+        "Sowing Mycospawn",
+        "Talon Gates of Madara"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Abhorrent Oculus",
+        "Birds of Paradise",
+        "Chrome Mox",
+        "Elvish Spirit Guide",
+        "Gemstone Caverns",
+        "Otawara, Soaring City",
+        "Windswept Heath"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Sylvan Library",
+      "resilience_class": "ALL_IN",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "Birthing Pod",
+        "Hazel's Brewmaster",
+        "Ranger-Captain of Eos",
+        "Silence",
+        "Starting Town",
+        "Swift Reconfiguration",
+        "Underground Sea"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    },
+    {
+      "type": "contextual_mulligans_legacy_keeps",
+      "cause": "draw_dependence_gate",
+      "hand": [
+        "City of Brass",
+        "Derevi, Empyrial Tactician",
+        "Mana Confluence",
+        "Orcish Bowmasters",
+        "Ranger-Captain of Eos",
+        "Voice of Victory",
+        "Wooded Foothills"
+      ],
+      "legacy_tier": "C",
+      "contextual_grade": "D",
+      "tier_engine": "Thrasios, Triton Hero",
+      "resilience_class": "RECOVERABLE",
+      "draw_dependence_class": "EXACT_OR_NEAR_EXACT"
+    }
+  ],
+  "limitations": [
+    "seat is fixed at 1 for this validation - the seat_exposure_gate cause can never fire here by construction (excess_exposure_turns is always 0 at seat 1); seat-driven disagreements are already validated separately in seat_pod_matrix.json (task #114).",
+    "Uses only the gated architecture, not all four - a full four-architecture holdout comparison would multiply this artifact's size fourfold for limited added insight given the architectures already diverge as characterized in contextual_valuation_models.py's own regression tests and contextual_london_results.json."
+  ]
+}
