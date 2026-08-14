@@ -1,0 +1,330 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "SIMULATION_MEASURED",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_001_MULL_006_STRENGTH_SPEED_SENSITIVITY",
+  "sample_count": 6000,
+  "seed": 6002,
+  "seat": "play",
+  "legacy_tier_distribution_all_hands": {
+    "C": 2301,
+    "F": 836,
+    "B": 629,
+    "A": 1208,
+    "D": 567,
+    "S": 459
+  },
+  "hands_with_tracked_engine_as_best_trajectory": 2373,
+  "hands_with_tracked_engine_rate": 0.3955,
+  "per_cell_coverage_and_agreement": [
+    {
+      "strength_row": "A",
+      "speed_column": "AHEAD",
+      "sample_count": 22,
+      "legacy_tier_distribution": {
+        "C": 19,
+        "A": 3
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "A",
+      "primary_match_rate": 0.1364,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "A",
+      "speed_column": "BEHIND",
+      "sample_count": 791,
+      "legacy_tier_distribution": {
+        "A": 640,
+        "C": 151
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "C",
+      "primary_match_rate": 0.1909,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "A",
+      "speed_column": "LATE",
+      "sample_count": 181,
+      "legacy_tier_distribution": {
+        "C": 181
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "C",
+      "primary_match_rate": 1.0,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "A",
+      "speed_column": "ON-TIME",
+      "sample_count": 641,
+      "legacy_tier_distribution": {
+        "C": 143,
+        "S": 459,
+        "A": 35,
+        "B": 4
+      },
+      "matrix_ambiguous": true,
+      "primary_predicted_legacy_band": "A",
+      "primary_match_rate": 0.0546,
+      "alternate_predicted_legacy_band": "B",
+      "alternate_match_rate": 0.0062
+    },
+    {
+      "strength_row": "B",
+      "speed_column": "AHEAD",
+      "sample_count": 43,
+      "legacy_tier_distribution": {
+        "A": 25,
+        "B": 18
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "A",
+      "primary_match_rate": 0.5814,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "B",
+      "speed_column": "BEHIND",
+      "sample_count": 250,
+      "legacy_tier_distribution": {
+        "B": 146,
+        "C": 104
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "C",
+      "primary_match_rate": 0.416,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "B",
+      "speed_column": "ON-TIME",
+      "sample_count": 238,
+      "legacy_tier_distribution": {
+        "B": 91,
+        "A": 124,
+        "C": 23
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "B",
+      "primary_match_rate": 0.3824,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "C",
+      "speed_column": "BEHIND",
+      "sample_count": 21,
+      "legacy_tier_distribution": {
+        "C": 21
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "D",
+      "primary_match_rate": 0.0,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "C",
+      "speed_column": "ON-TIME",
+      "sample_count": 5,
+      "legacy_tier_distribution": {
+        "C": 5
+      },
+      "matrix_ambiguous": true,
+      "primary_predicted_legacy_band": "B",
+      "primary_match_rate": 0.0,
+      "alternate_predicted_legacy_band": "C",
+      "alternate_match_rate": 1.0
+    },
+    {
+      "strength_row": "S",
+      "speed_column": "AHEAD",
+      "sample_count": 49,
+      "legacy_tier_distribution": {
+        "B": 26,
+        "C": 9,
+        "A": 14
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "S",
+      "primary_match_rate": 0.0,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "S",
+      "speed_column": "EXTREME",
+      "sample_count": 15,
+      "legacy_tier_distribution": {
+        "B": 11,
+        "C": 4
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "S",
+      "primary_match_rate": 0.0,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    },
+    {
+      "strength_row": "S",
+      "speed_column": "ON-TIME",
+      "sample_count": 117,
+      "legacy_tier_distribution": {
+        "C": 39,
+        "B": 78
+      },
+      "matrix_ambiguous": false,
+      "primary_predicted_legacy_band": "A",
+      "primary_match_rate": 0.0,
+      "alternate_predicted_legacy_band": null,
+      "alternate_match_rate": null
+    }
+  ],
+  "ambiguous_cell_recommendations": [
+    {
+      "strength_row": "A",
+      "speed_column": "ON-TIME",
+      "sample_count": 641,
+      "primary_match_rate": 0.0546,
+      "alternate_match_rate": 0.0062,
+      "recommendation": "PRIMARY_RESOLUTION_BETTER_MATCHES_OBSERVED_LEGACY_TIER"
+    },
+    {
+      "strength_row": "C",
+      "speed_column": "ON-TIME",
+      "sample_count": 5,
+      "primary_match_rate": 0.0,
+      "alternate_match_rate": 1.0,
+      "recommendation": "ALTERNATE_RESOLUTION_BETTER_MATCHES_OBSERVED_LEGACY_TIER"
+    }
+  ],
+  "boundary_sensitivity_expected_deployment_turn_shift": [
+    {
+      "engine": "Archivist of Oghma",
+      "sample_count": 143,
+      "flips_on_shift_minus1": 143,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 143,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Birthing Pod",
+      "sample_count": 139,
+      "flips_on_shift_minus1": 139,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 124,
+      "flips_on_shift_plus1_rate": 0.8921
+    },
+    {
+      "engine": "Esper Sentinel",
+      "sample_count": 843,
+      "flips_on_shift_minus1": 721,
+      "flips_on_shift_minus1_rate": 0.8553,
+      "flips_on_shift_plus1": 843,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Faerie Mastermind",
+      "sample_count": 130,
+      "flips_on_shift_minus1": 130,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 130,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Heartwood Storyteller",
+      "sample_count": 48,
+      "flips_on_shift_minus1": 48,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 48,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Mystic Remora",
+      "sample_count": 437,
+      "flips_on_shift_minus1": 378,
+      "flips_on_shift_minus1_rate": 0.865,
+      "flips_on_shift_plus1": 437,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Rhystic Study",
+      "sample_count": 82,
+      "flips_on_shift_minus1": 82,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 82,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Runic Armasaur",
+      "sample_count": 26,
+      "flips_on_shift_minus1": 26,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 26,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Smothering Tithe",
+      "sample_count": 42,
+      "flips_on_shift_minus1": 42,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 42,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Survival of the Fittest",
+      "sample_count": 277,
+      "flips_on_shift_minus1": 277,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 277,
+      "flips_on_shift_plus1_rate": 1.0
+    },
+    {
+      "engine": "Sylvan Library",
+      "sample_count": 206,
+      "flips_on_shift_minus1": 206,
+      "flips_on_shift_minus1_rate": 1.0,
+      "flips_on_shift_plus1": 206,
+      "flips_on_shift_plus1_rate": 1.0
+    }
+  ],
+  "boundary_sensitivity_finding": "Flip rates are near 100% for most engines under EITHER a +1 or -1 shift to their expected_deployment_turn prior. This is an artifact of the classification being a sharp step function over a narrow, discrete turn range (T1-T3): almost every real sampled deployment turn sits exactly at or one turn from its own expected_turn (a hand that deploys an engine 3+ turns later than expected rarely wins the best-trajectory search in the first place, so the tail is thin), so shifting the boundary by a single turn relabels nearly the entire sample. This means the S/A/B/C/D speed labels are NOT robust to a 1-turn error in the expected_deployment_turn prior - a genuine finding worth carrying into the final report, distinct from whether the prior's CURRENT values are themselves correct.",
+  "named_relationship_checks_against_real_sampled_legacy_tiers": {
+    "t1_mastermind_vs_t2_remora": {
+      "t1_mastermind_avg_legacy_tier_rank": 3.0,
+      "t1_mastermind_sample_count": 7,
+      "t2_remora_avg_legacy_tier_rank": 1.0,
+      "t2_remora_sample_count": 133,
+      "t1_mastermind_outranks_t2_remora_in_real_data": false,
+      "caveat": "This specific comparison is EXPECTED to disagree with the legacy grader, and that disagreement is not evidence against the new matrix. The legacy grade_trajectory() tier for Mastermind was deliberately left untouched by MULL-006 (see engine_strength_prior.py's FAERIE MASTERMIND CORRECTION docstring) - it still requires Mastermind's {3}{U} activation to be payable before granting ANY tier credit, the exact rule MULL-006 explicitly overrides for engine-strength purposes. So a T1 Mastermind hand with no activation support scores low on the (intentionally unmodified) legacy scale while scoring high on the new strength+speed matrix - this cross-check cannot validate the correction itself, only flag that the two systems diverge exactly where the assignment told them to. T2 Remora, by contrast, is one of PREMIUM_ONE_DROP_ENGINES in the legacy grader and needs no activation, so it still scores well there. Whether T1 Mastermind actually outranks T2 Remora in practice remains STRATEGIC_PRIOR_UNVALIDATED pending real multiplayer data."
+    },
+    "t2_tithe_exceptional": {
+      "avg_legacy_tier_rank": 1.0,
+      "sample_count": 14
+    },
+    "t2_pod_exceptional": {
+      "avg_legacy_tier_rank": 2.257142857142857,
+      "sample_count": 35
+    }
+  },
+  "method_note": "Comparison target is trajectory_grading.grade_trajectory()'s own S/A/B/C/D/F tier - a pre-existing, independently-derived MULL-005R rule set that does NOT consult engine_strength_prior.py or relative_speed_model.py. 'primary_match_rate'/'alternate_match_rate' compare the new matrix's predicted legacy-band (grade_to_legacy_band() collapses the finer matrix grade to a single legacy letter) against what the independent legacy grader actually assigned to the SAME real simulated trajectory. This is a genuine empirical cross-check, not circular - the two grading systems were built independently and use different logic.",
+  "limitations": [
+    "Sample coverage is uneven across cells - some (strength_row, speed_column) combinations occur rarely among best-trajectory outcomes (e.g. LATE-column and EXTREME-column cells for the weaker strength rows), so their match-rate estimates carry wide uncertainty; see per-cell sample_count before trusting a match rate.",
+    "grade_to_legacy_band() is a coarse many-to-one collapse (11 fine-grained matrix grades down to 6 legacy letters) - agreement at the collapsed-band level does not prove the matrix's finer distinctions (S+ vs S, B+ vs B vs B-) are individually correct, only that the coarse band is defensible.",
+    "This only tests the matrix in isolation (strength x speed alone) - later MULL-006 dimensions (seat, draw dependence, fragility, pod realization, relevant agency) are not yet folded in, so this is a necessary but not sufficient validation of the eventual CONTEXTUAL trajectory grade."
+  ]
+}
