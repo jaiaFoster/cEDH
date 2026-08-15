@@ -1,0 +1,539 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-manaaudit002-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "MANA_AUDIT_002_SECTIONS_E_F",
+  "method_note": "Every config uses the SAME methodology: run_opening_hand_census's keep-everything T1-3 census (D-style metrics) plus run_contextual_london_mulligan_sim's gated_model contextual London mulligan simulation (E-style metrics, the same single reference architecture seat_pod_matrix.json already used project-wide for one-fixed-rule comparisons). Land-count configs (J/K/L) deliberately change total deck size via a neutral proxy land rather than swapping a specific nonland - see module docstring.",
+  "gated_model_note": "gated_model is used as Section E/F's single mulligan-decision architecture, not because MULL-006 declared it correct (task #113 explicitly declined to assert any of its four architectures correct) - reused here for exactly the reason seat_pod_matrix.json already reused it: comparing many configs needs one fixed grading rule so 'the same hand's recommendation changed' is well-defined.",
+  "configs": {
+    "A_CURRENT_27": {
+      "description": "Baseline - the exact current 98-card list, unchanged.",
+      "land_count": 27,
+      "deck_size": 98,
+      "not_a_legal_98_card_list": false,
+      "added_cards": [],
+      "removed_cards": [],
+      "opening_hand_land_count_distribution": {
+        "0": 0.09612917370533651,
+        "1": 0.2795140589278246,
+        "2": 0.33033479691470186,
+        "3": 0.20543208763352103,
+        "4+": 0.08858988281861599
+      },
+      "census_sample_size": 200,
+      "census_elapsed_seconds": 0.13158202171325684,
+      "primary_outcomes": {
+        "t1_premium_engine": 0.07,
+        "t1_2drop_engine": 0.025,
+        "t2_engine": 0.21,
+        "t2_engine_plus_interaction": 0.015,
+        "t3_2plus_engines": 0.055,
+        "t3_supported_tymna": 0.31,
+        "t3_thrasios_engine_active": 0.41,
+        "t3_cradle_3plus": 0.035,
+        "t3_tutor_convertible": 0.035,
+        "t3_deterministic_win_accessible": 0.0,
+        "t3_pod_functional": 0.0,
+        "t3_survival_functional": 0.01,
+        "mean_hand_resources_remaining_t3": 3.82
+      },
+      "primary_table": {
+        "mana_2plus": {
+          "1": 0.055,
+          "2": 0.77,
+          "3": 0.86
+        },
+        "mana_3plus": {
+          "1": 0.0,
+          "2": 0.375,
+          "3": 0.665
+        },
+        "mana_4plus": {
+          "1": 0.0,
+          "2": 0.1,
+          "3": 0.325
+        },
+        "all_wubg": {
+          "1": 0.27,
+          "2": 0.43,
+          "3": 0.535
+        },
+        "any_engine_active": {
+          "1": 0.1,
+          "2": 0.21,
+          "3": 0.39
+        },
+        "premium_engine_active": {
+          "1": 0.07,
+          "2": 0.11,
+          "3": 0.135
+        },
+        "two_plus_engines_active": {
+          "1": 0.0,
+          "2": 0.005,
+          "3": 0.055
+        },
+        "engine_plus_interaction": {
+          "1": 0.035,
+          "2": 0.015,
+          "3": 0.035
+        },
+        "development_plus_interaction": {
+          "1": 0.065,
+          "2": 0.055,
+          "3": 0.06
+        },
+        "Tymna the Weaver_castable": {
+          "1": 0.0,
+          "2": 0.1,
+          "3": 0.12
+        },
+        "tymna_supported": {
+          "1": 0.0,
+          "2": 0.125,
+          "3": 0.31
+        },
+        "Thrasios, Triton Hero_castable": {
+          "1": 0.01,
+          "2": 0.305,
+          "3": 0.28
+        },
+        "thrasios_activation_now": {
+          "1": 0.0,
+          "2": 0.005,
+          "3": 0.045
+        },
+        "tutor_available": {
+          "1": 0.625,
+          "2": 0.635,
+          "3": 0.63
+        },
+        "tutor_castable": {
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.035
+        },
+        "cradle_on_battlefield": {
+          "1": 0.045,
+          "2": 0.075,
+          "3": 0.12
+        },
+        "cradle_3plus": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.035
+        },
+        "deterministic_win_available": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "deterministic_win_protected": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "one_action_from_verified_win": {
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0.03
+        },
+        "two_actions_from_verified_win": {
+          "1": 0.0,
+          "2": 0.005,
+          "3": 0.01
+        }
+      },
+      "failure_table": {
+        "tutor_but_no_viable_sequencing": {
+          "count": 37,
+          "pct_of_all_hands": 0.185,
+          "pct_of_failures": 0.31896551724137934
+        },
+        "no_meaningful_t1_t2_development": {
+          "count": 32,
+          "pct_of_all_hands": 0.16,
+          "pct_of_failures": 0.27586206896551724
+        },
+        "insufficient_persistent_mana": {
+          "count": 28,
+          "pct_of_all_hands": 0.14,
+          "pct_of_failures": 0.2413793103448276
+        },
+        "color_failure_missing_W": {
+          "count": 6,
+          "pct_of_all_hands": 0.03,
+          "pct_of_failures": 0.05172413793103448
+        },
+        "color_failure_missing_B": {
+          "count": 2,
+          "pct_of_all_hands": 0.01,
+          "pct_of_failures": 0.017241379310344827
+        },
+        "color_failure_missing_U": {
+          "count": 2,
+          "pct_of_all_hands": 0.01,
+          "pct_of_failures": 0.017241379310344827
+        },
+        "color_failure_missing_UW": {
+          "count": 2,
+          "pct_of_all_hands": 0.01,
+          "pct_of_failures": 0.017241379310344827
+        },
+        "color_failure_missing_BGW": {
+          "count": 2,
+          "pct_of_all_hands": 0.01,
+          "pct_of_failures": 0.017241379310344827
+        },
+        "color_failure_missing_G": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.008620689655172414
+        },
+        "color_failure_missing_BUW": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.008620689655172414
+        },
+        "color_failure_missing_BGUW": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.008620689655172414
+        },
+        "color_failure_missing_BW": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.008620689655172414
+        },
+        "color_failure_missing_BU": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.008620689655172414
+        }
+      },
+      "mulligan_sample_size": 150,
+      "mulligan_elapsed_seconds": 1.980870246887207,
+      "mulligan_gated_model": {
+        "sample_size": 150,
+        "mulligan_distribution": {
+          "2": 0.06666666666666667,
+          "1": 0.35333333333333333,
+          "0": 0.5733333333333334,
+          "3+": 0.006666666666666667
+        },
+        "avg_final_hand_size": 6.493333333333333,
+        "expected_card_disadvantage": 0.5066666666666668,
+        "tier_distribution": {
+          "B": 0.15333333333333332,
+          "C": 0.41333333333333333,
+          "A": 0.17333333333333334,
+          "S": 0.09333333333333334,
+          "D": 0.11333333333333333,
+          "F": 0.05333333333333334
+        },
+        "fraction_tier_S_or_A": 0.26666666666666666,
+        "fraction_tier_D_or_F": 0.16666666666666666,
+        "mean_tier_value": 2.56,
+        "by_mulligan_count": {
+          "0": {
+            "pct_of_population": 0.5733333333333334,
+            "tier_distribution": {
+              "A": 0.1744186046511628,
+              "C": 0.3953488372093023,
+              "S": 0.11627906976744186,
+              "B": 0.1744186046511628,
+              "D": 0.10465116279069768,
+              "F": 0.03488372093023256
+            },
+            "mean_tier_value": 2.697674418604651
+          },
+          "1": {
+            "pct_of_population": 0.35333333333333333,
+            "tier_distribution": {
+              "C": 0.4528301886792453,
+              "A": 0.18867924528301888,
+              "D": 0.1320754716981132,
+              "B": 0.1320754716981132,
+              "S": 0.05660377358490566,
+              "F": 0.03773584905660377
+            },
+            "mean_tier_value": 2.4716981132075473
+          },
+          "2": {
+            "pct_of_population": 0.06666666666666667,
+            "tier_distribution": {
+              "B": 0.1,
+              "S": 0.1,
+              "C": 0.3,
+              "F": 0.3,
+              "A": 0.1,
+              "D": 0.1
+            },
+            "mean_tier_value": 1.9
+          },
+          "3+": {
+            "pct_of_population": 0.006666666666666667,
+            "tier_distribution": {
+              "C": 1.0
+            },
+            "mean_tier_value": 2.0
+          }
+        }
+      }
+    },
+    "O_FASTMANA_NEITHER": {
+      "description": "Both fast-mana lands removed, no backfill.",
+      "land_count": 25,
+      "deck_size": 96,
+      "not_a_legal_98_card_list": true,
+      "added_cards": [],
+      "removed_cards": [
+        "Ancient Tomb",
+        "City of Traitors"
+      ],
+      "opening_hand_land_count_distribution": {
+        "0": 0.11157557084773247,
+        "1": 0.300395767666972,
+        "2": 0.3277044738185149,
+        "3": 0.1874926093986528,
+        "4+": 0.07283157826812778
+      },
+      "census_sample_size": 200,
+      "census_elapsed_seconds": 0.1287374496459961,
+      "primary_outcomes": {
+        "t1_premium_engine": 0.07,
+        "t1_2drop_engine": 0.025,
+        "t2_engine": 0.24,
+        "t2_engine_plus_interaction": 0.015,
+        "t3_2plus_engines": 0.04,
+        "t3_supported_tymna": 0.33,
+        "t3_thrasios_engine_active": 0.405,
+        "t3_cradle_3plus": 0.005,
+        "t3_tutor_convertible": 0.035,
+        "t3_deterministic_win_accessible": 0.01,
+        "t3_pod_functional": 0.0,
+        "t3_survival_functional": 0.005,
+        "mean_hand_resources_remaining_t3": 4.07
+      },
+      "primary_table": {
+        "mana_2plus": {
+          "1": 0.035,
+          "2": 0.735,
+          "3": 0.835
+        },
+        "mana_3plus": {
+          "1": 0.0,
+          "2": 0.305,
+          "3": 0.595
+        },
+        "mana_4plus": {
+          "1": 0.0,
+          "2": 0.13,
+          "3": 0.3
+        },
+        "all_wubg": {
+          "1": 0.27,
+          "2": 0.435,
+          "3": 0.585
+        },
+        "any_engine_active": {
+          "1": 0.105,
+          "2": 0.24,
+          "3": 0.38
+        },
+        "premium_engine_active": {
+          "1": 0.07,
+          "2": 0.125,
+          "3": 0.15
+        },
+        "two_plus_engines_active": {
+          "1": 0.0,
+          "2": 0.01,
+          "3": 0.04
+        },
+        "engine_plus_interaction": {
+          "1": 0.01,
+          "2": 0.015,
+          "3": 0.015
+        },
+        "development_plus_interaction": {
+          "1": 0.02,
+          "2": 0.06,
+          "3": 0.075
+        },
+        "Tymna the Weaver_castable": {
+          "1": 0.0,
+          "2": 0.09,
+          "3": 0.125
+        },
+        "tymna_supported": {
+          "1": 0.0,
+          "2": 0.11,
+          "3": 0.33
+        },
+        "Thrasios, Triton Hero_castable": {
+          "1": 0.02,
+          "2": 0.3,
+          "3": 0.275
+        },
+        "thrasios_activation_now": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.04
+        },
+        "tutor_available": {
+          "1": 0.65,
+          "2": 0.655,
+          "3": 0.68
+        },
+        "tutor_castable": {
+          "1": 0.02,
+          "2": 0.045,
+          "3": 0.035
+        },
+        "cradle_on_battlefield": {
+          "1": 0.01,
+          "2": 0.035,
+          "3": 0.06
+        },
+        "cradle_3plus": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.005
+        },
+        "deterministic_win_available": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.01
+        },
+        "deterministic_win_protected": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "one_action_from_verified_win": {
+          "1": 0.0,
+          "2": 0.04,
+          "3": 0.04
+        },
+        "two_actions_from_verified_win": {
+          "1": 0.0,
+          "2": 0.01,
+          "3": 0.01
+        }
+      },
+      "failure_table": {
+        "tutor_but_no_viable_sequencing": {
+          "count": 42,
+          "pct_of_all_hands": 0.21,
+          "pct_of_failures": 0.3853211009174312
+        },
+        "insufficient_persistent_mana": {
+          "count": 33,
+          "pct_of_all_hands": 0.165,
+          "pct_of_failures": 0.30275229357798167
+        },
+        "no_meaningful_t1_t2_development": {
+          "count": 27,
+          "pct_of_all_hands": 0.135,
+          "pct_of_failures": 0.24770642201834864
+        },
+        "color_failure_missing_B": {
+          "count": 3,
+          "pct_of_all_hands": 0.015,
+          "pct_of_failures": 0.027522935779816515
+        },
+        "color_failure_missing_GW": {
+          "count": 2,
+          "pct_of_all_hands": 0.01,
+          "pct_of_failures": 0.01834862385321101
+        },
+        "color_failure_missing_BUW": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.009174311926605505
+        },
+        "color_failure_missing_G": {
+          "count": 1,
+          "pct_of_all_hands": 0.005,
+          "pct_of_failures": 0.009174311926605505
+        }
+      },
+      "mulligan_sample_size": 150,
+      "mulligan_elapsed_seconds": 2.359642505645752,
+      "mulligan_gated_model": {
+        "sample_size": 150,
+        "mulligan_distribution": {
+          "1": 0.35333333333333333,
+          "0": 0.5333333333333333,
+          "2": 0.09333333333333334,
+          "3+": 0.02
+        },
+        "avg_final_hand_size": 6.4,
+        "expected_card_disadvantage": 0.5999999999999996,
+        "tier_distribution": {
+          "B": 0.17333333333333334,
+          "C": 0.5,
+          "A": 0.16666666666666666,
+          "D": 0.06,
+          "S": 0.07333333333333333,
+          "F": 0.02666666666666667
+        },
+        "fraction_tier_S_or_A": 0.24,
+        "fraction_tier_D_or_F": 0.08666666666666667,
+        "mean_tier_value": 2.6133333333333333,
+        "by_mulligan_count": {
+          "0": {
+            "pct_of_population": 0.5333333333333333,
+            "tier_distribution": {
+              "C": 0.4625,
+              "B": 0.2,
+              "A": 0.1625,
+              "D": 0.075,
+              "F": 0.025,
+              "S": 0.075
+            },
+            "mean_tier_value": 2.625
+          },
+          "1": {
+            "pct_of_population": 0.35333333333333333,
+            "tier_distribution": {
+              "B": 0.09433962264150944,
+              "C": 0.5849056603773585,
+              "A": 0.1509433962264151,
+              "D": 0.05660377358490566,
+              "F": 0.03773584905660377,
+              "S": 0.07547169811320754
+            },
+            "mean_tier_value": 2.490566037735849
+          },
+          "2": {
+            "pct_of_population": 0.09333333333333334,
+            "tier_distribution": {
+              "C": 0.35714285714285715,
+              "S": 0.07142857142857142,
+              "B": 0.2857142857142857,
+              "A": 0.2857142857142857
+            },
+            "mean_tier_value": 3.0714285714285716
+          },
+          "3+": {
+            "pct_of_population": 0.02,
+            "tier_distribution": {
+              "C": 0.6666666666666666,
+              "B": 0.3333333333333333
+            },
+            "mean_tier_value": 2.3333333333333335
+          }
+        }
+      }
+    }
+  }
+}
