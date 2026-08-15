@@ -113,7 +113,7 @@ LAND_COLOR_SETS = {
     "Command Tower": {"W", "U", "B", "G"}, "Mana Confluence": {"W", "U", "B", "G"},
     "Minamo, School at Water's Edge": {"U"}, "Otawara, Soaring City": {"U"}, "Savannah": {"G", "W"},
     "Scrubland": {"B", "W"}, "Shifting Woodland": {"G"}, "Starting Town": {"W", "U", "B", "G"},
-    "Talon Gates of Madara": {"W", "U", "B", "G"}, "Tropical Island": {"G", "U"},
+    "Tropical Island": {"G", "U"},
     "Tundra": {"U", "W"}, "Underground Sea": {"B", "U"},
     # Gaea's Cradle: this is what colors it CAN produce - the AMOUNT ({G} for each creature you
     # control, real Oracle text) is dynamic and handled specially in opening_hand_policy.py's
@@ -125,7 +125,17 @@ LAND_COLOR_SETS = {
     # FETCH_LAND_TARGET_TYPES; they resolve immediately into a real fetched land, or (rarely, if
     # no legal target remains) fizzle, when played.
 }
-GENERIC_LANDS = {"Ancient Tomb": 2, "City of Traitors": 2}
+GENERIC_LANDS = {
+    "Ancient Tomb": 2, "City of Traitors": 2,
+    # MANA-AUDIT-002 fix: real Oracle text is '{T}: Add {C}.' plus an ALTERNATIVE '{1}, {T}: Add
+    # one mana of any color.' - only one tap ability per land per turn, so this is guaranteed
+    # colorless only; the optional pay-{1}-for-any-color conversion is a real but costly mode
+    # this shared payment engine does not model (see build_mana_audit002_inventory.py's
+    # SPECIAL_CASES['TALON_GATES_OF_MADARA'] for the full disclosure). Previously misclassified
+    # as a flat free 1-mana WUBG source in LAND_COLOR_SETS, which overstated its color-fixing
+    # value - this is the corrected, conservative (undercounts only) treatment.
+    "Talon Gates of Madara": 1,
+}
 ANCIENT_TOMB_LIFE_LOSS = 2  # "This land deals 2 damage to you" on tap
 GEMSTONE_CAVERNS = "Gemstone Caverns"
 EXOTIC_ORCHARD = "Exotic Orchard"
@@ -358,7 +368,19 @@ def load_deck_cards():
         card = cards_by_id[c["scryfall_id"]]
         rows[c["name"]] = {
             "name": c["name"], "type": card.get("type_line", ""), "text": card.get("oracle_text", "") or "",
-            "mana_cost": card.get("mana_cost") or "", "cmc": card.get("cmc") or 0,
+            # MANA-AUDIT-002 fix: the cards_cache schema stores mana value as "mana_value", not
+            # "cmc" - this line always read a nonexistent "cmc" key and silently fell back to 0
+            # for EVERY card. Found while building Section C's color-demand-by-turn table (every
+            # card, including 5cmc Force of Will, was landing in the "turn <=3" bucket). Real
+            # impact beyond this module: pod_and_battlefield_tutors.py and trajectory_search.py's
+            # Birthing Pod/Survival of the Fittest/battlefield-tutor sacrifice-mana-value-matching
+            # families (2/3/4) compare cards[x]["cmc"] to cards[y]["cmc"]+1/+2 - with both sides
+            # always 0, those comparisons were always False, so those three search families never
+            # found a candidate in any MULL-005R/MULL-006 run. Filed as a new coverage-backlog
+            # item (re-running the affected historical trajectory datasets is out of this
+            # mana-focused audit's scope) rather than silently left as-is or silently expanded
+            # into an unbounded rerun of unrelated prior work.
+            "mana_cost": card.get("mana_cost") or "", "cmc": card.get("mana_value") or 0,
         }
     return payload, rows
 

@@ -1,0 +1,285 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-manaaudit002-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "MANA_AUDIT_002_SECTION_D",
+  "section": "D_baseline_metrics_current_27_lands",
+  "config_name": "A_CURRENT_27",
+  "sample_count": 30000,
+  "seed": 42002,
+  "elapsed_seconds": 24.33543109893799,
+  "opening_hand_land_count_distribution_exact_hypergeometric": {
+    "0": 0.09612917370533651,
+    "1": 0.2795140589278246,
+    "2": 0.33033479691470186,
+    "3": 0.20543208763352103,
+    "4+": 0.08858988281861599
+  },
+  "opening_hand_land_count_distribution_exact_full": {
+    "0": 0.09612917370533651,
+    "1": 0.2795140589278246,
+    "2": 0.33033479691470186,
+    "3": 0.20543208763352103,
+    "4": 0.0725054426941839,
+    "5": 0.01450108853883678,
+    "6": 0.0015191616564495674,
+    "7": 6.418992914575637e-05
+  },
+  "primary_outcomes": {
+    "t1_premium_engine": 0.05603333333333333,
+    "t1_2drop_engine": 0.0304,
+    "t2_engine": 0.23623333333333332,
+    "t2_engine_plus_interaction": 0.009866666666666666,
+    "t3_2plus_engines": 0.05756666666666667,
+    "t3_supported_tymna": 0.32866666666666666,
+    "t3_thrasios_engine_active": 0.4362333333333333,
+    "t3_cradle_3plus": 0.013033333333333333,
+    "t3_tutor_convertible": 0.05003333333333333,
+    "t3_deterministic_win_accessible": 0.0029333333333333334,
+    "t3_pod_functional": 0.0036,
+    "t3_survival_functional": 0.011566666666666666,
+    "mean_hand_resources_remaining_t3": 3.935433333333333
+  },
+  "primary_table": {
+    "mana_2plus": {
+      "1": 0.0852,
+      "2": 0.7833666666666667,
+      "3": 0.8417666666666667
+    },
+    "mana_3plus": {
+      "1": 0.0025,
+      "2": 0.37493333333333334,
+      "3": 0.6569
+    },
+    "mana_4plus": {
+      "1": 0.0,
+      "2": 0.1362,
+      "3": 0.36273333333333335
+    },
+    "all_wubg": {
+      "1": 0.26106666666666667,
+      "2": 0.43216666666666664,
+      "3": 0.5314
+    },
+    "any_engine_active": {
+      "1": 0.10136666666666666,
+      "2": 0.23623333333333332,
+      "3": 0.39053333333333334
+    },
+    "premium_engine_active": {
+      "1": 0.05603333333333333,
+      "2": 0.0998,
+      "3": 0.1247
+    },
+    "two_plus_engines_active": {
+      "1": 0.0010333333333333334,
+      "2": 0.016833333333333332,
+      "3": 0.05756666666666667
+    },
+    "engine_plus_interaction": {
+      "1": 0.016366666666666668,
+      "2": 0.009866666666666666,
+      "3": 0.022266666666666667
+    },
+    "development_plus_interaction": {
+      "1": 0.0339,
+      "2": 0.05026666666666667,
+      "3": 0.05843333333333333
+    },
+    "Tymna the Weaver_castable": {
+      "1": 0.0,
+      "2": 0.10423333333333333,
+      "3": 0.12496666666666667
+    },
+    "tymna_supported": {
+      "1": 0.0,
+      "2": 0.12323333333333333,
+      "3": 0.32866666666666666
+    },
+    "Thrasios, Triton Hero_castable": {
+      "1": 0.024866666666666665,
+      "2": 0.3166,
+      "3": 0.2315
+    },
+    "thrasios_activation_now": {
+      "1": 0.0,
+      "2": 0.0018666666666666666,
+      "3": 0.03136666666666667
+    },
+    "tutor_available": {
+      "1": 0.6157,
+      "2": 0.6311666666666667,
+      "3": 0.6343666666666666
+    },
+    "tutor_castable": {
+      "1": 0.02036666666666667,
+      "2": 0.0309,
+      "3": 0.05003333333333333
+    },
+    "cradle_on_battlefield": {
+      "1": 0.01806666666666667,
+      "2": 0.04446666666666667,
+      "3": 0.07063333333333334
+    },
+    "cradle_3plus": {
+      "1": 0.0,
+      "2": 0.0011333333333333334,
+      "3": 0.013033333333333333
+    },
+    "deterministic_win_available": {
+      "1": 0.0,
+      "2": 0.0007,
+      "3": 0.0029333333333333334
+    },
+    "deterministic_win_protected": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 3.3333333333333335e-05
+    },
+    "one_action_from_verified_win": {
+      "1": 0.003266666666666667,
+      "2": 0.0162,
+      "3": 0.032233333333333336
+    },
+    "two_actions_from_verified_win": {
+      "1": 0.0003333333333333333,
+      "2": 0.004666666666666667,
+      "3": 0.012933333333333333
+    }
+  },
+  "failure_table": {
+    "tutor_but_no_viable_sequencing": {
+      "count": 5661,
+      "pct_of_all_hands": 0.1887,
+      "pct_of_failures": 0.33116883116883117
+    },
+    "insufficient_persistent_mana": {
+      "count": 4747,
+      "pct_of_all_hands": 0.15823333333333334,
+      "pct_of_failures": 0.2776997776997777
+    },
+    "no_meaningful_t1_t2_development": {
+      "count": 3778,
+      "pct_of_all_hands": 0.12593333333333334,
+      "pct_of_failures": 0.22101322101322102
+    },
+    "color_failure_missing_B": {
+      "count": 548,
+      "pct_of_all_hands": 0.018266666666666667,
+      "pct_of_failures": 0.03205803205803206
+    },
+    "color_failure_missing_U": {
+      "count": 464,
+      "pct_of_all_hands": 0.015466666666666667,
+      "pct_of_failures": 0.027144027144027146
+    },
+    "color_failure_missing_W": {
+      "count": 406,
+      "pct_of_all_hands": 0.013533333333333333,
+      "pct_of_failures": 0.02375102375102375
+    },
+    "color_failure_missing_UW": {
+      "count": 270,
+      "pct_of_all_hands": 0.009,
+      "pct_of_failures": 0.015795015795015795
+    },
+    "color_failure_missing_BW": {
+      "count": 222,
+      "pct_of_all_hands": 0.0074,
+      "pct_of_failures": 0.012987012987012988
+    },
+    "color_failure_missing_BU": {
+      "count": 209,
+      "pct_of_all_hands": 0.006966666666666667,
+      "pct_of_failures": 0.012226512226512226
+    },
+    "color_failure_missing_BGUW": {
+      "count": 199,
+      "pct_of_all_hands": 0.006633333333333333,
+      "pct_of_failures": 0.011641511641511641
+    },
+    "color_failure_missing_BUW": {
+      "count": 148,
+      "pct_of_all_hands": 0.004933333333333333,
+      "pct_of_failures": 0.008658008658008658
+    },
+    "color_failure_missing_BGW": {
+      "count": 141,
+      "pct_of_all_hands": 0.0047,
+      "pct_of_failures": 0.008248508248508249
+    },
+    "color_failure_missing_G": {
+      "count": 102,
+      "pct_of_all_hands": 0.0034,
+      "pct_of_failures": 0.005967005967005967
+    },
+    "color_failure_missing_GW": {
+      "count": 71,
+      "pct_of_all_hands": 0.0023666666666666667,
+      "pct_of_failures": 0.0041535041535041535
+    },
+    "color_failure_missing_BG": {
+      "count": 69,
+      "pct_of_all_hands": 0.0023,
+      "pct_of_failures": 0.0040365040365040366
+    },
+    "color_failure_missing_GU": {
+      "count": 46,
+      "pct_of_all_hands": 0.0015333333333333334,
+      "pct_of_failures": 0.002691002691002691
+    },
+    "color_failure_missing_GUW": {
+      "count": 9,
+      "pct_of_all_hands": 0.0003,
+      "pct_of_failures": 0.0005265005265005265
+    },
+    "color_failure_missing_BGU": {
+      "count": 4,
+      "pct_of_all_hands": 0.00013333333333333334,
+      "pct_of_failures": 0.000234000234000234
+    }
+  },
+  "one_land_hand_outcomes": {
+    "sample_size": 3000,
+    "usable_acceleration_rate": 0.5113333333333333,
+    "genuine_failure_rate_by_t3": 0.637,
+    "genuine_failure_rate_given_no_t1_acceleration": 0.7551159618008185,
+    "genuine_failure_rate_given_used_t1_acceleration": 0.5241199478487614
+  },
+  "mox_diamond_chrome_mox_deathrite_functional_rates": {
+    "note": "Fraction of hands where the card is actually CAST (not merely drawn/kept) by T3 under the deck-aware greedy policy - a CASTING-reliability rate, not (for Deathrite Shaman specifically) a MANA-ABILITY-usage rate. Section B's special-case finding already established Deathrite's mana ability is structurally dead in this exact 98-card list (zero basic land cards to exile) - the rate below is Deathrite's rate of being cast as a 1/2 creature body only, included for completeness of the section D dork-reliability table, not as evidence its mana ability ever functions.",
+    "rates": {
+      "Chrome Mox": 0.08225,
+      "Mox Diamond": 0.050375,
+      "Deathrite Shaman": 0.06475
+    }
+  },
+  "resource_accessible_vs_realized_by_policy": {
+    "1": {
+      "mean_resource_accessible": 0.9749,
+      "mean_realized_by_policy": 0.35786666666666667,
+      "mean_capacity_left_unused": 0.6170333333333333,
+      "pct_hands_with_unused_capacity": 0.4231333333333333
+    },
+    "2": {
+      "mean_resource_accessible": 2.2887333333333335,
+      "mean_realized_by_policy": 1.3602,
+      "mean_capacity_left_unused": 0.9285333333333333,
+      "pct_hands_with_unused_capacity": 0.516
+    },
+    "3": {
+      "mean_resource_accessible": 3.071833333333333,
+      "mean_realized_by_policy": 1.7304,
+      "mean_capacity_left_unused": 1.3414333333333333,
+      "pct_hands_with_unused_capacity": 0.6402
+    }
+  },
+  "resource_accessible_vs_realized_note": "RESOURCE ACCESSIBLE = mean total_mana capacity this turn (right after the land drop, before any spell decisions) - the primary mana-audit metric per the assignment. REALIZED-BY-POLICY = capacity minus what's left untapped after this project's own validated T1-3 greedy policy finishes its turn (this project's line-level equivalent of 'actual resource use', standing in for a generic XMage AI per assignment section H's own instruction to prefer the validated lightweight state model over expensive XMage runs). A gap here is a POLICY realization gap (the greedy line didn't spend everything available), not proof the mana base itself is short - kept explicitly distinct from mana INSUFFICIENCY, which mana_2plus/3plus/all_wubg failures measure."
+}

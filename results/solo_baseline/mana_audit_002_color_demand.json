@@ -1,0 +1,693 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "MANA_AUDIT_002_SECTION_C",
+  "section": "C_color_demand_analysis_by_turn",
+  "method_note": "Turn assignment is NOT raw CMC-across-the-whole-98. It uses relative_speed_model.json's measured expected_deployment_turn (MULL-006, own-curve timing) for the 11 engines it scores, and CMC (capped at 3, this audit's horizon) for every other card - commanders, tutors, interaction, dorks - since those don't have a separately-measured 'own curve' artifact and CMC is their real minimum legal cast turn absent acceleration (a defensible floor, not an overstatement: acceleration-enabled EARLIER casts are already captured by Section D/F's real T1-T3 simulation, this table is about baseline color PRESSURE, not the fastest possible line).",
+  "t1_single_color_demand": [
+    {
+      "colors": [
+        "G"
+      ],
+      "count": 7
+    },
+    {
+      "colors": [
+        "W"
+      ],
+      "count": 4
+    },
+    {
+      "colors": [
+        "U"
+      ],
+      "count": 4
+    },
+    {
+      "colors": [
+        "B"
+      ],
+      "count": 2
+    }
+  ],
+  "t2_single_color_demand": [
+    {
+      "colors": [
+        "G"
+      ],
+      "count": 11
+    },
+    {
+      "colors": [
+        "U"
+      ],
+      "count": 7
+    },
+    {
+      "colors": [
+        "W"
+      ],
+      "count": 3
+    },
+    {
+      "colors": [
+        "B"
+      ],
+      "count": 2
+    }
+  ],
+  "t3_single_color_demand": [
+    {
+      "colors": [
+        "U"
+      ],
+      "count": 7
+    },
+    {
+      "colors": [
+        "G"
+      ],
+      "count": 6
+    },
+    {
+      "colors": [
+        "W"
+      ],
+      "count": 6
+    },
+    {
+      "colors": [
+        "B"
+      ],
+      "count": 1
+    }
+  ],
+  "t1_multicolor_combos_required_same_spell": [],
+  "t2_multicolor_combos_required_same_spell": [
+    {
+      "colors": [
+        "Gx2"
+      ],
+      "count": 4
+    },
+    {
+      "colors": [
+        "G",
+        "U"
+      ],
+      "count": 2
+    }
+  ],
+  "t3_multicolor_combos_required_same_spell": [
+    {
+      "colors": [
+        "Gx2"
+      ],
+      "count": 3
+    },
+    {
+      "colors": [
+        "Ux2"
+      ],
+      "count": 3
+    },
+    {
+      "colors": [
+        "Wx2"
+      ],
+      "count": 2
+    },
+    {
+      "colors": [
+        "Gx3"
+      ],
+      "count": 1
+    },
+    {
+      "colors": [
+        "G",
+        "U",
+        "W"
+      ],
+      "count": 1
+    },
+    {
+      "colors": [
+        "U",
+        "W"
+      ],
+      "count": 1
+    },
+    {
+      "colors": [
+        "B",
+        "W"
+      ],
+      "count": 1
+    }
+  ],
+  "t1_cards": [
+    {
+      "name": "Avacyn's Pilgrim",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Birds of Paradise",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Chrome Mox",
+      "mana_cost": "{0}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Crop Rotation",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Deathrite Shaman",
+      "mana_cost": "{B/G}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Delighted Halfling",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Elves of Deep Shadow",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Enlightened Tutor",
+      "mana_cost": "{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Esper Sentinel",
+      "mana_cost": "{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Flusterstorm",
+      "mana_cost": "{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Imperial Seal",
+      "mana_cost": "{B}",
+      "fixed_pips": {
+        "B": 1
+      }
+    },
+    {
+      "name": "Lotus Petal",
+      "mana_cost": "{0}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Mana Vault",
+      "mana_cost": "{1}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Mental Misstep",
+      "mana_cost": "{U/P}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Mox Amber",
+      "mana_cost": "{0}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Mox Diamond",
+      "mana_cost": "{0}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Mystic Remora",
+      "mana_cost": "{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Noble Hierarch",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Pact of Negation",
+      "mana_cost": "{0}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Silence",
+      "mana_cost": "{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Sol Ring",
+      "mana_cost": "{1}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Swan Song",
+      "mana_cost": "{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Swift Reconfiguration",
+      "mana_cost": "{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Training Grounds",
+      "mana_cost": "{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Vampiric Tutor",
+      "mana_cost": "{B}",
+      "fixed_pips": {
+        "B": 1
+      }
+    },
+    {
+      "name": "Veil of Summer",
+      "mana_cost": "{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    }
+  ],
+  "t2_cards": [
+    {
+      "name": "Archivist of Oghma",
+      "mana_cost": "{1}{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Badgermole Cub",
+      "mana_cost": "{1}{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Demonic Tutor",
+      "mana_cost": "{1}{B}",
+      "fixed_pips": {
+        "B": 1
+      }
+    },
+    {
+      "name": "Devoted Druid",
+      "mana_cost": "{1}{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Faerie Mastermind",
+      "mana_cost": "{1}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Finale of Devastation",
+      "mana_cost": "{X}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Gilded Drake",
+      "mana_cost": "{1}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Gleaming Splendor",
+      "mana_cost": "{1}{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Heartwood Storyteller",
+      "mana_cost": "{1}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Kinnan, Bonder Prodigy",
+      "mana_cost": "{G}{U}",
+      "fixed_pips": {
+        "G": 1,
+        "U": 1
+      }
+    },
+    {
+      "name": "Nature's Rhythm",
+      "mana_cost": "{X}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Oboro Breezecaller",
+      "mana_cost": "{1}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Orcish Bowmasters",
+      "mana_cost": "{1}{B}",
+      "fixed_pips": {
+        "B": 1
+      }
+    },
+    {
+      "name": "Rhystic Study",
+      "mana_cost": "{2}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Runic Armasaur",
+      "mana_cost": "{1}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Shang-Chi, Master of Kung Fu",
+      "mana_cost": "{1}{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Survival of the Fittest",
+      "mana_cost": "{1}{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Sylvan Library",
+      "mana_cost": "{1}{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Thrasios, Triton Hero",
+      "mana_cost": "{G}{U}",
+      "fixed_pips": {
+        "G": 1,
+        "U": 1
+      }
+    },
+    {
+      "name": "Voice of Victory",
+      "mana_cost": "{1}{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Volatile Stormdrake",
+      "mana_cost": "{1}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    }
+  ],
+  "t3_cards": [
+    {
+      "name": "Abhorrent Oculus",
+      "mana_cost": "{2}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Birthing Pod",
+      "mana_cost": "{3}{G/P}",
+      "fixed_pips": {}
+    },
+    {
+      "name": "Chord of Calling",
+      "mana_cost": "{X}{G}{G}{G}",
+      "fixed_pips": {
+        "G": 3
+      }
+    },
+    {
+      "name": "Delney, Streetwise Lookout",
+      "mana_cost": "{2}{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Derevi, Empyrial Tactician",
+      "mana_cost": "{G}{W}{U}",
+      "fixed_pips": {
+        "G": 1,
+        "W": 1,
+        "U": 1
+      }
+    },
+    {
+      "name": "Eldritch Evolution",
+      "mana_cost": "{1}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Elvish Spirit Guide",
+      "mana_cost": "{2}{G}",
+      "fixed_pips": {
+        "G": 1
+      }
+    },
+    {
+      "name": "Endurance",
+      "mana_cost": "{1}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Enduring Vitality",
+      "mana_cost": "{1}{G}{G}",
+      "fixed_pips": {
+        "G": 2
+      }
+    },
+    {
+      "name": "Fierce Guardianship",
+      "mana_cost": "{2}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Flare of Denial",
+      "mana_cost": "{1}{U}{U}",
+      "fixed_pips": {
+        "U": 2
+      }
+    },
+    {
+      "name": "Force of Negation",
+      "mana_cost": "{1}{U}{U}",
+      "fixed_pips": {
+        "U": 2
+      }
+    },
+    {
+      "name": "King T'Challa // Black Panther, Hope Enduring",
+      "mana_cost": "{1}{W}{U} // {4}{W}{U}",
+      "fixed_pips": {
+        "W": 2,
+        "U": 2
+      }
+    },
+    {
+      "name": "Ranger-Captain of Eos",
+      "mana_cost": "{1}{W}{W}",
+      "fixed_pips": {
+        "W": 2
+      }
+    },
+    {
+      "name": "Smothering Tithe",
+      "mana_cost": "{3}{W}",
+      "fixed_pips": {
+        "W": 1
+      }
+    },
+    {
+      "name": "Spellseeker",
+      "mana_cost": "{2}{U}",
+      "fixed_pips": {
+        "U": 1
+      }
+    },
+    {
+      "name": "Tymna the Weaver",
+      "mana_cost": "{1}{W}{B}",
+      "fixed_pips": {
+        "W": 1,
+        "B": 1
+      }
+    }
+  ],
+  "flexible_hybrid_hurexian_pip_cards_by_turn": {
+    "1": [
+      {
+        "name": "Deathrite Shaman",
+        "mana_cost": "{B/G}",
+        "flexible_options": [
+          [
+            "B",
+            "G"
+          ]
+        ]
+      },
+      {
+        "name": "Mental Misstep",
+        "mana_cost": "{U/P}",
+        "flexible_options": [
+          [
+            "U"
+          ]
+        ]
+      }
+    ],
+    "2": [],
+    "3": [
+      {
+        "name": "Birthing Pod",
+        "mana_cost": "{3}{G/P}",
+        "flexible_options": [
+          [
+            "G"
+          ]
+        ]
+      }
+    ]
+  },
+  "out_of_t1_t3_horizon_cards": [
+    {
+      "name": "Clever Impersonator",
+      "mana_cost": "{2}{U}{U}",
+      "cmc": 4.0
+    },
+    {
+      "name": "Colossal Skyturtle",
+      "mana_cost": "{4}{G}{G}{U}",
+      "cmc": 7.0
+    },
+    {
+      "name": "Commandeer",
+      "mana_cost": "{5}{U}{U}",
+      "cmc": 7.0
+    },
+    {
+      "name": "Force of Will",
+      "mana_cost": "{3}{U}{U}",
+      "cmc": 5.0
+    },
+    {
+      "name": "Hazel's Brewmaster",
+      "mana_cost": "{3}{B}",
+      "cmc": 4.0
+    },
+    {
+      "name": "Mindbreak Trap",
+      "mana_cost": "{2}{U}{U}",
+      "cmc": 4.0
+    },
+    {
+      "name": "Misdirection",
+      "mana_cost": "{3}{U}{U}",
+      "cmc": 5.0
+    },
+    {
+      "name": "Sowing Mycospawn",
+      "mana_cost": "{3}{G}",
+      "cmc": 4.0
+    },
+    {
+      "name": "Subtlety",
+      "mana_cost": "{2}{U}{U}",
+      "cmc": 4.0
+    }
+  ],
+  "t3_assignment_named_examples_present_in_this_98": {
+    "Tymna the Weaver": true,
+    "Derevi, Empyrial Tactician": true,
+    "Nature's Rhythm": true,
+    "Chord of Calling": true,
+    "Rhystic Study": true,
+    "Birthing Pod": true
+  },
+  "t3_assignment_named_examples_note": "Grand Abolisher is NOT in this 98-card list (the assignment's own illustrative example set includes cards from a generic template, not every one of which is necessarily in THIS exact decklist) - omitted rather than fabricated. Every other named T3 example (Tymna, Derevi, Nature's Rhythm, Chord of Calling, Rhystic Study, Birthing Pod) IS present and is covered above.",
+  "headline_findings": {
+    "t1_color_pressure": "G leads (7 cards: Avacyn's Pilgrim/Birds/Elves of Deep Shadow/Noble Hierarch dorks, Deathrite, Crop Rotation, Veil of Summer), W and U roughly tied (4 each: Esper Sentinel/Enlightened Tutor/Silence/Swift Reconfiguration for W; Mystic Remora/Flusterstorm/Swan Song/Mental Misstep for U), B is weakest at T1 (2: Imperial Seal, Vampiric Tutor) - matches the deck's G-dork-heavy, W/U-cheap-interaction-heavy, B-lightest identity even before any land composition question is asked. No same-spell multicolor T1 requirement exists at all (every T1 card needs at most one color).",
+    "t2_color_pressure": "G is by far the heaviest T2 color (11 cards, including 4 with a DOUBLE-G requirement: Finale of Devastation, Heartwood Storyteller, Nature's Rhythm, Runic Armasaur), U is second (7, including Rhystic Study/Faerie Mastermind), W is light (3), B lightest (2). Thrasios (GU) lands here and directly reinforces the G/U demand; Tymna (cmc 3, {1}{W}{B}) does NOT land at T2 - she is a real 3-mana cast, not the 2-mana cast a surface read of 'WB commander' suggests.",
+    "t3_color_pressure": "U becomes the single heaviest color at T3 (7 cards, 3 of them double-U: Flare of Denial, Force of Negation, plus the pitch-cast-eligible Fierce Guardianship counted at its hardcast value), G and W tie for second (6 each, including a rare TRIPLE-G requirement - Chord of Calling {X}{G}{G}{G} - and 2 double-W cards), B stays lightest (1: only Tymna's single B pip, inside a WB requirement). Tymna's real cast turn is T3 on curve, not T2 - a materially different color-pressure picture than treating her as an early 2-drop."
+  }
+}

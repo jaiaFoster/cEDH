@@ -1,0 +1,61 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "MANA_AUDIT_002_SECTION_I",
+  "section": "I_external_sanity_check",
+  "status": "DESCRIPTIVE_ONLY_NOT_NORMATIVE",
+  "network_access_note": "WebFetch was attempted against api.scryfall.com, gatherer.wizards.com, www.mtgassist.com, edhrec.com, cedhstats.org, and topdeck.gg during this task - ALL returned EGRESS_BLOCKED from this environment's network proxy (consistent with the project's pre-existing ENV-0001/coverage_backlog disclosure that this environment's egress policy has repeatedly changed and cannot be assumed stable run-to-run). Findings below come from WebSearch's own search-engine-summarized result excerpts (title + short summary of each linked page), NOT a raw fetch of any full decklist - a materially weaker evidence tier than the card-by-card ingestion SIM-0001/SIM-0002 originally used for the frozen subject deck itself.",
+  "current_deck_construction": {
+    "land_count": 27,
+    "fetch_count": 7,
+    "rainbow_or_near_rainbow_count": 5,
+    "colorless_utility_count": 4,
+    "ancient_tomb": true,
+    "city_of_traitors": true,
+    "gaeas_cradle": true,
+    "gemstone_caverns": true
+  },
+  "search_findings": [
+    {
+      "finding": "A recent (2026) Archidekt-hosted 'TnT cEDH 2026 | Tymna Thrasios v4.21/v4.22' primer-style list was reported (via WebSearch summary) to run 28 lands - one land above this project's current 27.",
+      "confidence": "low-moderate (search-engine summary of a page excerpt, not independently opened)",
+      "source_title": "TnT cEDH 2026 | Tymna Thrasios v4.21/v4.22 - Archidekt",
+      "source_url": "https://archidekt.com/decks/1727139"
+    },
+    {
+      "finding": "General (non-Tymna-specific) cEDH land-count guidance found via search: 'for heavy-ramp decks with 10+ rocks and mana dorks, 33-34 lands', with a broader Commander-format baseline cited around 35-38 for less-optimized decks. This project's subject deck (27 lands, ~13 nonland acceleration pieces: 6 dorks + Sol Ring/Mana Vault/Chrome Mox/Mox Diamond/Mox Amber/Lotus Petal/Elvish Spirit Guide) sits well below even the low end of this generic guidance - consistent with a genuinely acceleration-dense build, not an outlier low-land mistake, though the generic guidance is not itself Tymna/Thrasios-specific or cEDH-competitive-specific.",
+      "confidence": "low (generic blog guidance, not tournament-sampled)",
+      "source_title": "Best Lands in MTG Commander (2026) - Fixing, Utility, and How Many to Run",
+      "source_url": "https://gamertagmythras.com/blog/magic-the-gathering/best-lands-commander-mtg"
+    },
+    {
+      "finding": "Multiple real Moxfield-hosted Tymna/Thrasios cEDH lists were found by title (dated 2025-2026, including a 'cedh 2025 edition' list and several 'TnT'/'Tree Farm' variants), but WebSearch's summary could not extract their exact land/fetch counts from page excerpts alone - direct fetches of moxfield.com were not attempted (moxfield.com is separately documented as blocked by Moxfield's own Cloudflare bot-wall in coverage_backlog SIM-0001, independent of this environment's proxy).",
+      "confidence": "low (titles/existence confirmed, contents not)",
+      "source_titles": [
+        "Tree Farm [cEDH] // Commander (Tymna the Weaver and Thrasios, Triton Hero)",
+        "CEDH Thrasios's Tree Farm // Commander",
+        "cedh 2025 edition - Commander (Thrasios, Triton Hero / Tymna the Weaver)"
+      ]
+    },
+    {
+      "finding": "A CHUDS-team (the assignment's own named example of a creature-heavy Tree-Farm-style playgroup) tournament decklist link was found ('[CHUDS] Lucas Bird's Deck', a Diamond-tier Tabernacle tournament entry on topdeck.gg) but the page itself could not be fetched (topdeck.gg EGRESS_BLOCKED) - its land/fetch/Cradle/Tomb composition could not be confirmed beyond its existence.",
+      "confidence": "very low (link found, contents unconfirmed)",
+      "source_title": "[CHUDS] Lucas Bird's Deck - Cedh | Tabernacle | DIAMOND Tournament",
+      "source_url": "https://topdeck.gg/deck/cedh-tabernacle-platinum-tournament/fz0vV5P8WRPVBOJlLlXHFs3lPV33"
+    }
+  ],
+  "descriptive_comparison_summary": {
+    "land_count": "The one concrete comparable data point found (28 lands, a 2026 TnT primer list) is 1 land above this deck's current 27 - directionally consistent with, not contradicting, Section F's own land-count experiments (see mana_audit_002_configs.json configs J/K/L) rather than a separate claim on its own. Not enough independently-verified comparable lists were reachable to state a real sample mean or distribution - this is ONE data point, not a census.",
+    "fetch_rainbow_colorless_utility": "Could not be confirmed at the needed granularity from any reachable source this task. No comparison is drawn for these dimensions beyond what Sections A/B/F already establish about THIS deck's own construction.",
+    "notable_lands_not_played": "Not determinable from the sources actually reached this task - would require a real card-by-card comparable-list pull, which network access did not permit. Not fabricated; left as an open item rather than guessed."
+  },
+  "honest_limitation": "Section I's evidentiary bar in this run is materially weaker than every other section of this audit (A-H are exact combinatorics, Monte Carlo simulation against the real engine, or direct oracle-text verification). This section should be read as a single low-confidence directional data point (27 vs a comparable 28), not a validated external benchmark. If network access to Moxfield/TopDeck/EDHREC/cedhstats is restored in a future session, this section should be rebuilt from real decklist pulls rather than edited in place with unverifiable claims."
+}
