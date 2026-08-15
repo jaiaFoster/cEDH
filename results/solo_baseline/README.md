@@ -2771,3 +2771,34 @@ examples directly.
 5. **Real 4-player pod-conditioned matchup simulation** remains this project's largest genuinely
    unaddressed question, and the only way to move any of section 8's pod-realization values or
    section 9's relevant-agency threat-axis tags out of STRATEGIC_PRIOR_UNVALIDATED status.
+
+---
+
+# SIM-001 MANA-AUDIT-002 — Mana-Base Decision Analysis
+
+Full report: `results/solo_baseline/mana_audit_002_report.md`. Machine-readable artifacts:
+`mana_audit_002_inventory.json` (A/B), `mana_audit_002_color_demand.json` (C),
+`mana_audit_002_baseline.json` (D), `mana_audit_002_configs.json` (E/F, 20 counterfactual
+configs), `mana_audit_002_pareto.json` (G), `mana_audit_002_external_sanity.json` (I).
+
+Subject: new task-scoped frozen snapshot `tymna-thrasios-treefarm-manaaudit002-v1`
+(content-identical to `tymna-thrasios-treefarm-v1`, independently recomputed hash, per the
+assignment's own no-silent-reuse instruction). Reused MULL-005R/006's T1-3 engine and mulligan
+machinery unchanged; no XMage runs. Found and fixed two correctness bugs along the way: Talon
+Gates of Madara was modeled as a flat free rainbow land (real text is colorless-guaranteed,
+colored mode costs an extra generic mana); `load_deck_cards()` read a nonexistent `cmc` cache key,
+silently zeroing every card's mana value (fixed, filed as coverage-backlog `SIM-0018` — also
+means Birthing Pod/Survival/battlefield-tutor sac-mv-matching search families, previously
+silently non-functional, now work correctly; re-running MULL-005R/006's own historical datasets
+with the fix is disclosed as follow-up, not done here). Confirmed Deathrite Shaman's mana ability
+is structurally dead in this exact list (zero real basic land cards to exile).
+
+**Headline recommendation:** adopt **+Scalding Tarn, −Talon Gates of Madara** (unchanged land
+count) — the only tested configuration that improves both engine-deployment speed AND both
+mulligan-quality metrics simultaneously versus the current 27-land baseline. The current 27-land
+configuration is itself Pareto non-dominated (no tested alternative beats it on speed,
+consistency, AND resilience/utility at once) — 27 is defensible, not wrong, and 28 lands is a
+small, real, optional upgrade if a card can be found to cut for it. Full GAIN/COST reasoning per
+recommendation, all 20 counterfactual configs' exact deltas, and confidence caveats (notably:
+every external decklist-comparison source was network-egress-blocked, so Section I is low-
+confidence) are in the full report.

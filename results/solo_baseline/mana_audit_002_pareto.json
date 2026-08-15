@@ -1,0 +1,589 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "MANA_AUDIT_002_SECTION_G",
+  "section": "G_pareto_analysis",
+  "axis_definitions": {
+    "speed": "mean(T1 premium-engine rate, T2 engine rate, T3 2+-engines rate) - all from the SAME census run's primary_outcomes as every other section.",
+    "consistency": "mean(mulligan S-or-A keep-tier rate, 1 - mulligan D-or-F rate, 1 - mana/color failure rate) - all from the SAME gated_model London mulligan sim + census failure_table used everywhere else.",
+    "resilience_utility": "mean(fraction of the 5 named utility lands [Shifting Woodland, Talon Gates, Minamo, Boseiju, Otawara] still in the 98/97/96-card pool, fetch-count-normalized-to-10) - a STRUCTURAL presence measure, not a simulated probability, since real utility value (phasing, Channel abilities, Root Maze) is not itself simulated by this project's T1-3 mana engine (see Section B's own utility-vs-mana-quality separation).",
+    "no_single_score_note": "Each axis is reported AND its raw components are reported - no single number ranks configs; Pareto dominance uses all 3 axes jointly, per the assignment's explicit instruction."
+  },
+  "points": {
+    "A_CURRENT_27": {
+      "description": "Baseline - the exact current 98-card list, unchanged.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11727777777777777,
+      "speed_components": {
+        "t1_premium_engine": 0.059333333333333335,
+        "t2_engine": 0.23716666666666666,
+        "t3_2plus_engines": 0.05533333333333333
+      },
+      "consistency": 0.63,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.28933333333333333,
+        "mulligan_not_D_or_F_rate": 0.857,
+        "not_mana_or_color_failure_rate": 0.7436666666666667
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS": {
+      "description": "+8th fetch (Scalding Tarn), -City of Traitors.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.1151388888888889,
+      "speed_components": {
+        "t1_premium_engine": 0.058083333333333334,
+        "t2_engine": 0.23158333333333334,
+        "t3_2plus_engines": 0.05575
+      },
+      "consistency": 0.6426944444444445,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.297,
+        "mulligan_not_D_or_F_rate": 0.8783333333333333,
+        "not_mana_or_color_failure_rate": 0.75275
+      },
+      "resilience_utility": 0.9,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 8,
+        "fetch_ratio_of_10": 0.8
+      }
+    },
+    "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES": {
+      "description": "+8th fetch (Scalding Tarn), -Talon Gates of Madara.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11861111111111111,
+      "speed_components": {
+        "t1_premium_engine": 0.059583333333333335,
+        "t2_engine": 0.2405,
+        "t3_2plus_engines": 0.05575
+      },
+      "consistency": 0.6445555555555555,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.303,
+        "mulligan_not_D_or_F_rate": 0.88,
+        "not_mana_or_color_failure_rate": 0.7506666666666666
+      },
+      "resilience_utility": 0.8,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 8,
+        "fetch_ratio_of_10": 0.8
+      }
+    },
+    "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND": {
+      "description": "+8th fetch (Scalding Tarn), -Shifting Woodland.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11716666666666666,
+      "speed_components": {
+        "t1_premium_engine": 0.060083333333333336,
+        "t2_engine": 0.23691666666666666,
+        "t3_2plus_engines": 0.0545
+      },
+      "consistency": 0.6465,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.31333333333333335,
+        "mulligan_not_D_or_F_rate": 0.8813333333333333,
+        "not_mana_or_color_failure_rate": 0.7448333333333335
+      },
+      "resilience_utility": 0.8,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 8,
+        "fetch_ratio_of_10": 0.8
+      }
+    },
+    "E_PLUS_ARID_MESA_MINUS_CITY_OF_TRAITORS": {
+      "description": "+Arid Mesa (W/R fetch, reaches Savannah/Scrubland/Tundra via its W half only), -City of Traitors.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11522222222222221,
+      "speed_components": {
+        "t1_premium_engine": 0.057666666666666665,
+        "t2_engine": 0.23183333333333334,
+        "t3_2plus_engines": 0.05616666666666666
+      },
+      "consistency": 0.6383333333333333,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.2936666666666667,
+        "mulligan_not_D_or_F_rate": 0.8696666666666667,
+        "not_mana_or_color_failure_rate": 0.7516666666666666
+      },
+      "resilience_utility": 0.9,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 8,
+        "fetch_ratio_of_10": 0.8
+      }
+    },
+    "F_PLUS_BLOODSTAINED_MIRE_MINUS_TALON_GATES": {
+      "description": "+Bloodstained Mire (B/R fetch, reaches Bayou/Scrubland/Underground Sea via its B half only), -Talon Gates of Madara.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11649999999999999,
+      "speed_components": {
+        "t1_premium_engine": 0.058083333333333334,
+        "t2_engine": 0.23741666666666666,
+        "t3_2plus_engines": 0.054
+      },
+      "consistency": 0.6394444444444445,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.29833333333333334,
+        "mulligan_not_D_or_F_rate": 0.871,
+        "not_mana_or_color_failure_rate": 0.7490000000000001
+      },
+      "resilience_utility": 0.8,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 8,
+        "fetch_ratio_of_10": 0.8
+      }
+    },
+    "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS": {
+      "description": "+Gemstone Mine (3-use rainbow, modeled as flat rainbow within the T1-3 horizon), -City of Traitors.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11572222222222223,
+      "speed_components": {
+        "t1_premium_engine": 0.059583333333333335,
+        "t2_engine": 0.23166666666666666,
+        "t3_2plus_engines": 0.05591666666666667
+      },
+      "consistency": 0.6434722222222222,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.2966666666666667,
+        "mulligan_not_D_or_F_rate": 0.8723333333333333,
+        "not_mana_or_color_failure_rate": 0.7614166666666666
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES": {
+      "description": "+Tarnished Citadel (rainbow-for-3-life, like City of Brass/Mana Confluence but pricier), -Talon Gates of Madara.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11930555555555557,
+      "speed_components": {
+        "t1_premium_engine": 0.06125,
+        "t2_engine": 0.24083333333333334,
+        "t3_2plus_engines": 0.05583333333333333
+      },
+      "consistency": 0.6463055555555556,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.30366666666666664,
+        "mulligan_not_D_or_F_rate": 0.8766666666666667,
+        "not_mana_or_color_failure_rate": 0.7585833333333333
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND": {
+      "description": "+Forbidden Orchard (free rainbow, real downside - opponent token every tap - NOT modeled in this solo/no-opponent engine, qualitative-only), -Shifting Woodland.",
+      "land_count": 27,
+      "deck_size": 98,
+      "speed": 0.11758333333333333,
+      "speed_components": {
+        "t1_premium_engine": 0.06158333333333333,
+        "t2_engine": 0.23708333333333334,
+        "t3_2plus_engines": 0.05408333333333333
+      },
+      "consistency": 0.6466111111111111,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.31066666666666665,
+        "mulligan_not_D_or_F_rate": 0.877,
+        "not_mana_or_color_failure_rate": 0.7521666666666667
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "J_LAND_COUNT_26": {
+      "description": "26 lands: -1 land (Talon Gates, the weakest single land per Section B's own finding), no backfill. Deck size drops to 97 - an isolation of land count's pure marginal cost, not a legal list.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11544444444444445,
+      "speed_components": {
+        "t1_premium_engine": 0.057166666666666664,
+        "t2_engine": 0.23591666666666666,
+        "t3_2plus_engines": 0.05325
+      },
+      "consistency": 0.6404444444444445,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.309,
+        "mulligan_not_D_or_F_rate": 0.864,
+        "not_mana_or_color_failure_rate": 0.7483333333333334
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "K_LAND_COUNT_28": {
+      "description": "28 lands: +1 neutral rainbow proxy land, no nonland cut. Deck size rises to 99 - isolates land count's pure marginal benefit from any specific nonland-cut choice, per the assignment's own instruction; not a legal 98-card list.",
+      "land_count": 28,
+      "deck_size": 99,
+      "speed": 0.11536111111111112,
+      "speed_components": {
+        "t1_premium_engine": 0.059,
+        "t2_engine": 0.23083333333333333,
+        "t3_2plus_engines": 0.05625
+      },
+      "consistency": 0.63875,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.28633333333333333,
+        "mulligan_not_D_or_F_rate": 0.8716666666666667,
+        "not_mana_or_color_failure_rate": 0.7582500000000001
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "L_LAND_COUNT_29": {
+      "description": "29 lands: +2 neutral rainbow proxy lands, no nonland cut. Deck size rises to 100 - same pure-marginal isolation as K.",
+      "land_count": 29,
+      "deck_size": 100,
+      "speed": 0.11694444444444445,
+      "speed_components": {
+        "t1_premium_engine": 0.06233333333333333,
+        "t2_engine": 0.23366666666666666,
+        "t3_2plus_engines": 0.05483333333333333
+      },
+      "consistency": 0.6464722222222222,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.2926666666666667,
+        "mulligan_not_D_or_F_rate": 0.8673333333333333,
+        "not_mana_or_color_failure_rate": 0.7794166666666666
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "M_FASTMANA_TOMB_ONLY": {
+      "description": "Ancient Tomb kept, City of Traitors removed, no backfill.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11061111111111112,
+      "speed_components": {
+        "t1_premium_engine": 0.055,
+        "t2_engine": 0.22858333333333333,
+        "t3_2plus_engines": 0.04825
+      },
+      "consistency": 0.64225,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.30733333333333335,
+        "mulligan_not_D_or_F_rate": 0.874,
+        "not_mana_or_color_failure_rate": 0.7454166666666666
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "N_FASTMANA_CITY_ONLY": {
+      "description": "City of Traitors kept, Ancient Tomb removed, no backfill.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11136111111111112,
+      "speed_components": {
+        "t1_premium_engine": 0.05391666666666667,
+        "t2_engine": 0.22991666666666666,
+        "t3_2plus_engines": 0.05025
+      },
+      "consistency": 0.6383888888888889,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.29833333333333334,
+        "mulligan_not_D_or_F_rate": 0.8673333333333333,
+        "not_mana_or_color_failure_rate": 0.7495
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "O_FASTMANA_NEITHER": {
+      "description": "Both fast-mana lands removed, no backfill.",
+      "land_count": 25,
+      "deck_size": 96,
+      "speed": 0.11188888888888888,
+      "speed_components": {
+        "t1_premium_engine": 0.05508333333333333,
+        "t2_engine": 0.2295,
+        "t3_2plus_engines": 0.051083333333333335
+      },
+      "consistency": 0.6358055555555556,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.296,
+        "mulligan_not_D_or_F_rate": 0.874,
+        "not_mana_or_color_failure_rate": 0.7374166666666667
+      },
+      "resilience_utility": 0.85,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 1.0,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "P_ABLATE_SHIFTING_WOODLAND": {
+      "description": "Shifting Woodland removed.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11416666666666665,
+      "speed_components": {
+        "t1_premium_engine": 0.057416666666666664,
+        "t2_engine": 0.2355,
+        "t3_2plus_engines": 0.04958333333333333
+      },
+      "consistency": 0.6382500000000001,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.30566666666666664,
+        "mulligan_not_D_or_F_rate": 0.8616666666666667,
+        "not_mana_or_color_failure_rate": 0.7474166666666667
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "Q_ABLATE_TALON_GATES": {
+      "description": "Talon Gates of Madara removed.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11544444444444445,
+      "speed_components": {
+        "t1_premium_engine": 0.057166666666666664,
+        "t2_engine": 0.23591666666666666,
+        "t3_2plus_engines": 0.05325
+      },
+      "consistency": 0.6404444444444445,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.309,
+        "mulligan_not_D_or_F_rate": 0.864,
+        "not_mana_or_color_failure_rate": 0.7483333333333334
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "R_ABLATE_MINAMO": {
+      "description": "Minamo removed.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11597222222222221,
+      "speed_components": {
+        "t1_premium_engine": 0.05683333333333333,
+        "t2_engine": 0.23466666666666666,
+        "t3_2plus_engines": 0.056416666666666664
+      },
+      "consistency": 0.6293055555555557,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.296,
+        "mulligan_not_D_or_F_rate": 0.8506666666666667,
+        "not_mana_or_color_failure_rate": 0.7412500000000001
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "S_ABLATE_BOSEIJU": {
+      "description": "Boseiju removed.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.10994444444444444,
+      "speed_components": {
+        "t1_premium_engine": 0.05425,
+        "t2_engine": 0.2275,
+        "t3_2plus_engines": 0.04808333333333333
+      },
+      "consistency": 0.6379444444444445,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.30866666666666664,
+        "mulligan_not_D_or_F_rate": 0.8643333333333334,
+        "not_mana_or_color_failure_rate": 0.7408333333333335
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    },
+    "T_ABLATE_OTAWARA": {
+      "description": "Otawara removed.",
+      "land_count": 26,
+      "deck_size": 97,
+      "speed": 0.11561111111111111,
+      "speed_components": {
+        "t1_premium_engine": 0.057416666666666664,
+        "t2_engine": 0.23775,
+        "t3_2plus_engines": 0.051666666666666666
+      },
+      "consistency": 0.6345833333333334,
+      "consistency_components": {
+        "mulligan_S_or_A_rate": 0.30833333333333335,
+        "mulligan_not_D_or_F_rate": 0.8533333333333333,
+        "not_mana_or_color_failure_rate": 0.7420833333333333
+      },
+      "resilience_utility": 0.75,
+      "resilience_utility_components": {
+        "utility_lands_preserved_fraction": 0.8,
+        "fetch_count_now": 7,
+        "fetch_ratio_of_10": 0.7
+      }
+    }
+  },
+  "strictly_dominated_configs": {
+    "F_PLUS_BLOODSTAINED_MIRE_MINUS_TALON_GATES": [
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "L_LAND_COUNT_29"
+    ],
+    "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS": [
+      "L_LAND_COUNT_29"
+    ],
+    "J_LAND_COUNT_26": [
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+      "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+      "L_LAND_COUNT_29"
+    ],
+    "K_LAND_COUNT_28": [
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "L_LAND_COUNT_29"
+    ],
+    "M_FASTMANA_TOMB_ONLY": [
+      "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "L_LAND_COUNT_29"
+    ],
+    "N_FASTMANA_CITY_ONLY": [
+      "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "K_LAND_COUNT_28",
+      "L_LAND_COUNT_29"
+    ],
+    "O_FASTMANA_NEITHER": [
+      "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS",
+      "E_PLUS_ARID_MESA_MINUS_CITY_OF_TRAITORS",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "K_LAND_COUNT_28",
+      "L_LAND_COUNT_29"
+    ],
+    "P_ABLATE_SHIFTING_WOODLAND": [
+      "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS",
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "E_PLUS_ARID_MESA_MINUS_CITY_OF_TRAITORS",
+      "F_PLUS_BLOODSTAINED_MIRE_MINUS_TALON_GATES",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+      "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+      "J_LAND_COUNT_26",
+      "K_LAND_COUNT_28",
+      "L_LAND_COUNT_29",
+      "Q_ABLATE_TALON_GATES"
+    ],
+    "Q_ABLATE_TALON_GATES": [
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+      "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+      "L_LAND_COUNT_29"
+    ],
+    "R_ABLATE_MINAMO": [
+      "A_CURRENT_27",
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "F_PLUS_BLOODSTAINED_MIRE_MINUS_TALON_GATES",
+      "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+      "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+      "L_LAND_COUNT_29"
+    ],
+    "S_ABLATE_BOSEIJU": [
+      "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS",
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "E_PLUS_ARID_MESA_MINUS_CITY_OF_TRAITORS",
+      "F_PLUS_BLOODSTAINED_MIRE_MINUS_TALON_GATES",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+      "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+      "J_LAND_COUNT_26",
+      "K_LAND_COUNT_28",
+      "L_LAND_COUNT_29",
+      "M_FASTMANA_TOMB_ONLY",
+      "N_FASTMANA_CITY_ONLY",
+      "P_ABLATE_SHIFTING_WOODLAND",
+      "Q_ABLATE_TALON_GATES"
+    ],
+    "T_ABLATE_OTAWARA": [
+      "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+      "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+      "F_PLUS_BLOODSTAINED_MIRE_MINUS_TALON_GATES",
+      "G_RAINBOW_GEMSTONE_MINE_MINUS_CITY_OF_TRAITORS",
+      "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+      "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+      "L_LAND_COUNT_29"
+    ]
+  },
+  "non_dominated_configs": [
+    "A_CURRENT_27",
+    "B_PLUS_SCALDING_TARN_MINUS_CITY_OF_TRAITORS",
+    "C_PLUS_SCALDING_TARN_MINUS_TALON_GATES",
+    "D_PLUS_SCALDING_TARN_MINUS_SHIFTING_WOODLAND",
+    "E_PLUS_ARID_MESA_MINUS_CITY_OF_TRAITORS",
+    "H_RAINBOW_TARNISHED_CITADEL_MINUS_TALON_GATES",
+    "I_RAINBOW_FORBIDDEN_ORCHARD_MINUS_SHIFTING_WOODLAND",
+    "L_LAND_COUNT_29"
+  ]
+}
