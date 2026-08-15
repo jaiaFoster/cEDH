@@ -32,3 +32,25 @@ def test_only_land_count_configs_change_deck_size():
     for name, spec in CONFIGS.items():
         if spec["deck_size"] != 98:
             assert name[0] in ("J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"), name
+
+
+def test_run_config_mulligan_sim_actually_uses_the_variant_card_pool_not_the_full_shared_pool():
+    """Regression for a real bug this task found: run_policy() derives its own draw pool via
+    list(cards.keys()) internally, so passing the full shared cards_pool (rather than a dict
+    restricted to the variant's own card names) made every config's mulligan sim silently draw
+    from every variant's cards at once - every config came back byte-identical on the first run.
+    """
+    import random
+    from build_mana_audit002_configs import run_config
+
+    seed = 999
+    baseline = run_config("A_CURRENT_27", CONFIGS["A_CURRENT_27"], BASE_NAMES, CARDS_POOL, 60, 40, seed)
+    ablated = run_config("O_FASTMANA_NEITHER", CONFIGS["O_FASTMANA_NEITHER"], BASE_NAMES, CARDS_POOL, 60, 40, seed)
+    # Different card pools drawing from the SAME seed must not collapse to identical mulligan
+    # stats - if they do, the draw pool isn't actually varying by config again.
+    assert (
+        baseline["mulligan_gated_model"]["mulligan_distribution"]
+        != ablated["mulligan_gated_model"]["mulligan_distribution"]
+        or baseline["mulligan_gated_model"]["tier_distribution"]
+        != ablated["mulligan_gated_model"]["tier_distribution"]
+    )

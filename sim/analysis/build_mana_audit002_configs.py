@@ -113,15 +113,23 @@ def run_config(name, spec, base_names, cards_pool, census_n, mull_n, seed):
     land_ct = sum(1 for n in variant_names if "Land" in cards_pool[n]["type"])
     assert land_ct == spec["land_count"], (name, land_ct, spec["land_count"])
 
+    # run_policy() (unlike run_one_hand()) derives its own draw pool internally via
+    # list(cards.keys()) rather than taking an explicit names list - passing the full shared
+    # cards_pool here would silently draw from EVERY variant's cards at once regardless of this
+    # config's actual add/remove list. Restricting to exactly this variant's cards fixes both
+    # call sites identically and is the real, minimal correctness fix (caught because every
+    # config's mulligan-sim numbers came back byte-identical on the first run).
+    variant_cards = {n: cards_pool[n] for n in variant_names}
+
     combos = load_deterministic_combos()
     rng = random.Random(seed)
     t0 = time.time()
-    census_results = [run_one_hand(variant_names, rng, cards_pool, combos, on_play=True) for _ in range(census_n)]
+    census_results = [run_one_hand(variant_names, rng, variant_cards, combos, on_play=True) for _ in range(census_n)]
     census_elapsed = time.time() - t0
     census_agg = census_aggregate(census_results)
 
     policy = make_contextual_keep_policy("gated")
-    mull_results, mull_elapsed = run_policy(policy, mull_n, seed + 1, "play", cards_pool, combos)
+    mull_results, mull_elapsed = run_policy(policy, mull_n, seed + 1, "play", variant_cards, combos)
     mull_agg = mull_aggregate(mull_results)
 
     land_dist = exact_hypergeometric_land_distribution(spec["deck_size"], spec["land_count"], hand_size=7)
