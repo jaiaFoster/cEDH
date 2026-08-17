@@ -1,0 +1,68 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_004_ABLATION_CENSUS",
+  "note": "Reuses E1's exact census methodology for B4-B7 (each = B3 minus one addition, 97 cards) - directly comparable to B3_FULL_PACKAGE and B0_BASELINE's own census figures already in deckbuild004_e1_early_cost.json.",
+  "census_by_variant": {
+    "B4_NO_NEOFORM": {
+      "T1_premium_engine": 0.059866666666666665,
+      "T2_any_engine": 0.248,
+      "T2_autonomous_engine": 0.2028,
+      "T2_engine_plus_interaction_retained": 0.010733333333333333,
+      "T2_engine_plus_persistent_mana_remaining": 0.1016,
+      "T3_two_plus_engines": 0.0624,
+      "T1_functional_mana": 0.08946666666666667,
+      "T2_functional_mana": 0.7788,
+      "T3_functional_mana": 0.8387333333333333,
+      "color_failure_rate_T3": 0.4663333333333333,
+      "mean_final_hand_size_T3": 4.0682
+    },
+    "B5_NO_SPEAKER": {
+      "T1_premium_engine": 0.059866666666666665,
+      "T2_any_engine": 0.24293333333333333,
+      "T2_autonomous_engine": 0.19733333333333333,
+      "T2_engine_plus_interaction_retained": 0.010866666666666667,
+      "T2_engine_plus_persistent_mana_remaining": 0.1014,
+      "T3_two_plus_engines": 0.056933333333333336,
+      "T1_functional_mana": 0.08926666666666666,
+      "T2_functional_mana": 0.7789333333333334,
+      "T3_functional_mana": 0.8387333333333333,
+      "color_failure_rate_T3": 0.4660666666666667,
+      "mean_final_hand_size_T3": 4.074
+    },
+    "B6_NO_TALION": {
+      "T1_premium_engine": 0.06026666666666667,
+      "T2_any_engine": 0.2482,
+      "T2_autonomous_engine": 0.20306666666666667,
+      "T2_engine_plus_interaction_retained": 0.0106,
+      "T2_engine_plus_persistent_mana_remaining": 0.1014,
+      "T3_two_plus_engines": 0.06246666666666666,
+      "T1_functional_mana": 0.08926666666666666,
+      "T2_functional_mana": 0.7784666666666666,
+      "T3_functional_mana": 0.8388,
+      "color_failure_rate_T3": 0.46726666666666666,
+      "mean_final_hand_size_T3": 4.0674
+    },
+    "B7_NO_SEEDBORN": {
+      "T1_premium_engine": 0.0598,
+      "T2_any_engine": 0.2474,
+      "T2_autonomous_engine": 0.20213333333333333,
+      "T2_engine_plus_interaction_retained": 0.010666666666666666,
+      "T2_engine_plus_persistent_mana_remaining": 0.1014,
+      "T3_two_plus_engines": 0.06213333333333333,
+      "T1_functional_mana": 0.08946666666666667,
+      "T2_functional_mana": 0.7788,
+      "T3_functional_mana": 0.8387333333333333,
+      "color_failure_rate_T3": 0.4659333333333333,
+      "mean_final_hand_size_T3": 4.062733333333333
+    }
+  }
+}

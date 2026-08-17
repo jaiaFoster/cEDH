@@ -1,0 +1,283 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_004_E4_POD_RUNGS_SCOPED",
+  "scope_note": "One representative sacrifice per rung (see RUNGS), every legal target in the variant's real library, NOT the assignment's full frequency-weighted exhaustive census across every possible sacrifice - deferred, see final report.",
+  "results": {
+    "1_to_2": {
+      "sacrifice": "Avacyn's Pilgrim",
+      "B0_BASELINE": {
+        "dead_end": false,
+        "targets_tried": 11,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Archivist of Oghma",
+            "Badgermole Cub",
+            "Devoted Druid",
+            "Faerie Mastermind",
+            "Gilded Drake"
+          ]
+        }
+      },
+      "B3_FULL_PACKAGE": {
+        "dead_end": false,
+        "targets_tried": 11,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Archivist of Oghma",
+            "Badgermole Cub",
+            "Devoted Druid",
+            "Faerie Mastermind",
+            "Gilded Drake"
+          ]
+        }
+      },
+      "B6_NO_TALION": {
+        "dead_end": false,
+        "targets_tried": 11,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Archivist of Oghma",
+            "Badgermole Cub",
+            "Devoted Druid",
+            "Faerie Mastermind",
+            "Gilded Drake"
+          ]
+        }
+      },
+      "B7_NO_SEEDBORN": {
+        "dead_end": false,
+        "targets_tried": 11,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Archivist of Oghma",
+            "Badgermole Cub",
+            "Devoted Druid",
+            "Faerie Mastermind",
+            "Gilded Drake"
+          ]
+        }
+      }
+    },
+    "2_to_3": {
+      "sacrifice": "Devoted Druid",
+      "B0_BASELINE": {
+        "dead_end": false,
+        "targets_tried": 11,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Abhorrent Oculus",
+            "Delney, Streetwise Lookout",
+            "Derevi, Empyrial Tactician",
+            "Elvish Spirit Guide",
+            "Endurance"
+          ]
+        }
+      },
+      "B3_FULL_PACKAGE": {
+        "dead_end": false,
+        "targets_tried": 10,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Abhorrent Oculus",
+            "Delney, Streetwise Lookout",
+            "Derevi, Empyrial Tactician",
+            "Elvish Spirit Guide",
+            "Endurance"
+          ]
+        }
+      },
+      "B6_NO_TALION": {
+        "dead_end": false,
+        "targets_tried": 10,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Abhorrent Oculus",
+            "Delney, Streetwise Lookout",
+            "Derevi, Empyrial Tactician",
+            "Elvish Spirit Guide",
+            "Endurance"
+          ]
+        }
+      },
+      "B7_NO_SEEDBORN": {
+        "dead_end": false,
+        "targets_tried": 10,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Abhorrent Oculus",
+            "Delney, Streetwise Lookout",
+            "Derevi, Empyrial Tactician",
+            "Elvish Spirit Guide",
+            "Endurance"
+          ]
+        }
+      }
+    },
+    "3_to_4": {
+      "sacrifice": "Derevi, Empyrial Tactician",
+      "B0_BASELINE": {
+        "dead_end": false,
+        "targets_tried": 4,
+        "class_distribution": {
+          "immediate_win": 0.25,
+          "engine_upgrade": 0.75
+        },
+        "example_targets_by_class": {
+          "immediate_win": [
+            "Clever Impersonator"
+          ],
+          "engine_upgrade": [
+            "Hazel's Brewmaster",
+            "Sowing Mycospawn",
+            "Subtlety"
+          ]
+        }
+      },
+      "B3_FULL_PACKAGE": {
+        "dead_end": false,
+        "targets_tried": 5,
+        "class_distribution": {
+          "immediate_win": 0.2,
+          "engine_upgrade": 0.8
+        },
+        "example_targets_by_class": {
+          "immediate_win": [
+            "Clever Impersonator"
+          ],
+          "engine_upgrade": [
+            "Hazel's Brewmaster",
+            "Sowing Mycospawn",
+            "Subtlety",
+            "Talion, the Kindly Lord"
+          ]
+        }
+      },
+      "B6_NO_TALION": {
+        "dead_end": false,
+        "targets_tried": 4,
+        "class_distribution": {
+          "immediate_win": 0.25,
+          "engine_upgrade": 0.75
+        },
+        "example_targets_by_class": {
+          "immediate_win": [
+            "Clever Impersonator"
+          ],
+          "engine_upgrade": [
+            "Hazel's Brewmaster",
+            "Sowing Mycospawn",
+            "Subtlety"
+          ]
+        }
+      },
+      "B7_NO_SEEDBORN": {
+        "dead_end": false,
+        "targets_tried": 5,
+        "class_distribution": {
+          "immediate_win": 0.2,
+          "engine_upgrade": 0.8
+        },
+        "example_targets_by_class": {
+          "immediate_win": [
+            "Clever Impersonator"
+          ],
+          "engine_upgrade": [
+            "Hazel's Brewmaster",
+            "Sowing Mycospawn",
+            "Subtlety",
+            "Talion, the Kindly Lord"
+          ]
+        }
+      }
+    },
+    "4_to_5": {
+      "sacrifice": "Hazel's Brewmaster",
+      "B0_BASELINE": {
+        "dead_end": true,
+        "targets_tried": 0,
+        "class_distribution": {},
+        "example_targets_by_class": {}
+      },
+      "B3_FULL_PACKAGE": {
+        "dead_end": false,
+        "targets_tried": 1,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Seedborn Muse"
+          ]
+        }
+      },
+      "B6_NO_TALION": {
+        "dead_end": false,
+        "targets_tried": 1,
+        "class_distribution": {
+          "engine_upgrade": 1.0
+        },
+        "example_targets_by_class": {
+          "engine_upgrade": [
+            "Seedborn Muse"
+          ]
+        }
+      },
+      "B7_NO_SEEDBORN": {
+        "dead_end": true,
+        "targets_tried": 0,
+        "class_distribution": {},
+        "example_targets_by_class": {}
+      }
+    }
+  },
+  "talion_seedborn_rung_summary": {
+    "talion_appears_as_legal_target_B3": true,
+    "talion_rung_B3_class_distribution": {
+      "immediate_win": 0.2,
+      "engine_upgrade": 0.8
+    },
+    "talion_rung_B0_class_distribution": {
+      "immediate_win": 0.25,
+      "engine_upgrade": 0.75
+    },
+    "seedborn_appears_as_legal_target_B3": true,
+    "seedborn_rung_B3_class_distribution": {
+      "engine_upgrade": 1.0
+    },
+    "seedborn_rung_B0_class_distribution": {},
+    "note": "'Appears as a legal target' only confirms Pod CAN find it at this rung - it says nothing about whether landing on Talion/Seedborn specifically was the BEST available target that turn (a real creature-selection question the greedy Pod target choice - not modeled here, this census enumerates ALL legal targets, not which one a pilot would actually pick) - and, per this task's standing disclosure, says NOTHING about Seedborn's real value even once resolved (that value requires opponent turns this solo engine cannot simulate)."
+  }
+}
