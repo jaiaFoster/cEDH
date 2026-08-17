@@ -534,7 +534,8 @@ def is_currently_castable(state, gen, pips):
 def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction=False,
                   forced_land=None, forced_fetch_target=None, forced_tutor_target=None,
                   forced_pod_activation=None, forced_survival_activations=None,
-                  forced_battlefield_tutor=None, forced_land_tutor=None):
+                  forced_battlefield_tutor=None, forced_land_tutor=None,
+                  forced_formidable_speaker_choice=None, forced_formidable_speaker_untaps=None):
     """Mutates state for one turn: untap, draw, land drop, greedy casts. Returns actions taken.
     forced_land: if given (and present in hand), overrides the greedy land-choice heuristic.
     forced_fetch_target: if forced_land (or the greedily-chosen land) is a fetch, overrides which
@@ -552,6 +553,14 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
     cast one of Eldritch Evolution/Finale of Devastation/Nature's Rhythm/Chord of Calling for
     exactly the X (or sacrifice) needed to find target_name onto the battlefield.
     forced_land_tutor: (tutor_name, target_name) tuple - Crop Rotation's own land-target search.
+
+    SIM-DECKBUILD-004 additions, same inert-by-default pattern:
+    forced_formidable_speaker_choice: (discard_name, target_name) tuple - if Formidable Speaker
+    is cast THIS turn, discards discard_name from hand and searches target_name (any creature)
+    into hand, per its real ETB text. Only fires the turn Speaker itself is cast (a real Oracle
+    rule - "when this creature enters"), checked via cast_log.
+    forced_formidable_speaker_untaps: list of permanent names to untap via Speaker's own {1},T
+    ability (once per untapped Speaker present), tried in order, each funded independently.
 
     All of these are used only by bounded alternate-line search (achievable_search.py /
     trajectory_search.py), never by the default policy_realized line, which leaves them exactly
@@ -745,5 +754,55 @@ def develop_turn(state, cards, priority_order=DEFAULT_PRIORITY, hold_interaction
         for discard_name, target_name in forced_survival_activations:
             if try_activate_survival(state, cards, discard_name, target_name):
                 actions.append(("survival_activate", discard_name, target_name))
+
+    # SIM-DECKBUILD-004: Formidable Speaker's ETB discard-then-tutor-to-hand (real Oracle text:
+    # "When this creature enters, you may discard a card. If you do, search your library for a
+    # creature card, reveal it, put it into your hand, then shuffle.") - only legal the turn
+    # Speaker itself was actually cast this turn (checked via cast_log, not merely "on battlefield"
+    # - a real rules requirement, since this is an ETB trigger, not an activated ability).
+    if forced_formidable_speaker_choice is not None:
+        discard_name, target_name = forced_formidable_speaker_choice
+        speaker_cast_this_turn = any(
+            t == state.turn and name == "Formidable Speaker" for (t, name, cls) in state.cast_log
+        )
+        if (speaker_cast_this_turn and discard_name in state.hand and discard_name != "Formidable Speaker"
+                and target_name in state.library and "Creature" in cards[target_name]["type"]):
+            state.hand.remove(discard_name)
+            state.graveyard.append(discard_name)
+            state.library.remove(target_name)
+            state.hand.append(target_name)
+            actions.append(("formidable_speaker_etb", discard_name, target_name))
+
+    # Formidable Speaker's repeatable {1}, T: untap another target permanent - modeled as a real
+    # payment (funded by _try_pay/_commit_payment like any other activated ability), one attempt
+    # per requested target, each independently checked for legality (Speaker itself must be an
+    # untapped, non-sick permanent; "another" excludes untapping itself).
+    if forced_formidable_speaker_untaps:
+        for target_name in forced_formidable_speaker_untaps:
+            speaker_perm = next(
+                (p for p in state.nonland_perms
+                 if p.name == "Formidable Speaker" and not p.tapped and p.entered_turn != state.turn),
+                None,
+            )
+            if speaker_perm is None:
+                break
+            gen, pips, x = parse_cost("{1}")
+            plan = _try_pay(state, gen, pips)
+            if plan is None:
+                break
+            target_land = next((l for l in state.lands if l.name == target_name and l.tapped), None)
+            target_perm = next(
+                (p for p in state.nonland_perms if p.name == target_name and p.tapped and p is not speaker_perm),
+                None,
+            )
+            if target_land is None and target_perm is None:
+                break
+            _commit_payment(state, plan)
+            speaker_perm.tapped = True
+            if target_land is not None:
+                target_land.tapped = False
+            else:
+                target_perm.tapped = False
+            actions.append(("formidable_speaker_untap", target_name))
 
     return actions

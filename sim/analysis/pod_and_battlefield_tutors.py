@@ -137,13 +137,20 @@ def try_battlefield_creature_tutor(state, cards, tutor_name, target_name, sac_na
 
     sac_perm = None
     if spec["sac_required"]:
-        # Eldritch Evolution: X = 2 + sacrificed creature's mv, and a T1-T3 search always wants
-        # the highest legal target, so the search itself picks the sac creature that makes this
-        # equality exact rather than exploring "X or less" targets below the ceiling.
+        # Eldritch Evolution: X = 2 + sacrificed creature's mv (mv_offset default, backward
+        # compatible). SIM-DECKBUILD-004's Neoform is the same mechanism shape with a real,
+        # different offset (+1, exact per its own Oracle text, not "X or less") - generalized here
+        # via an explicit mv_offset so this one function serves both cards correctly, rather than
+        # hardcoding Eldritch Evolution's own number. A T1-3 search always wants the highest legal
+        # target, so the search itself picks the sac creature that makes this equality exact
+        # rather than exploring "X or less" targets below the ceiling (true for both cards' real
+        # text: Eldritch Evolution's is an explicit "or less"; Neoform's is already an exact
+        # match, so this collapsing is a no-op for Neoform, not an approximation).
         if sac_name is None:
             return False
+        mv_offset = spec.get("mv_offset", 2)
         sac_perm = next((p for p in state.nonland_perms if p.name == sac_name and "Creature" in cards[p.name]["type"]), None)
-        if sac_perm is None or target_mv != cards[sac_name]["cmc"] + 2:
+        if sac_perm is None or target_mv != cards[sac_name]["cmc"] + mv_offset:
             return False
     elif spec["x_based"]:
         # X = target's own mv exactly, for the same reason - never overpay past the target found.

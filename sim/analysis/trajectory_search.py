@@ -156,8 +156,12 @@ def _candidate_configs(hand, library, cards):
             if target not in library or target not in cards:
                 continue
             if spec["sac_required"]:
+                # SIM-DECKBUILD-004: mv_offset generalizes this beyond Eldritch Evolution's own
+                # hardcoded +2 (see pod_and_battlefield_tutors.py's matching generalization) -
+                # Neoform's real text is +1, not +2.
+                mv_offset = spec.get("mv_offset", 2)
                 for sac in creatures_in_hand:
-                    if cards[target]["cmc"] == cards[sac]["cmc"] + 2:
+                    if cards[target]["cmc"] == cards[sac]["cmc"] + mv_offset:
                         yield (f"battlefield_tutor:{tutor_name}->{target}(sac {sac})", {
                             "forced_battlefield_tutor": (tutor_name, target, sac),
                         })
