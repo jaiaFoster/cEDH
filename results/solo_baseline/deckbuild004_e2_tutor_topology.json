@@ -1,0 +1,1160 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_004_E2_TUTOR_TOPOLOGY",
+  "priority": "HIGHEST",
+  "scope_note": "Bounded to 2-3 representative instances per family and 4 detectable targets - see module docstring for the full disclosure. This is a BOUNDED_SEARCH_LOWER_BOUND, matching this project's established trajectory_search.py convention, not an exhaustive claim.",
+  "targets_not_measured": {
+    "infinite_mana": "No separate detector distinct from deterministic_win_available in this pass - this deck's verified deterministic combos are already the infinite-mana/win lines load_deterministic_combos() tracks; a mana-only (non-winning) infinite loop would need its own detector, not built here.",
+    "Ranger_Captain_protected_win": "Ranger-Captain of Eos IS in this list, but its real ability (exile opponents' MV<=1 hand cards) is a disruption effect with no natural-opponent model to test protection against in this solo engine - not separately detected.",
+    "Grand_Abolisher_protected_win": "Grand Abolisher is NOT in this 98-card list - target inapplicable, not fabricated.",
+    "overwhelming_Seedborn_state": "Seedborn Muse's real trigger (untap on OTHER players' untap steps) cannot occur in ANY solo simulation at any turn count - architecturally invisible here, not merely unmeasured (see deckbuild004_cards.py's own disclosure)."
+  },
+  "results": {
+    "Birthing_Pod": {
+      "Pod + expendable MV1 (Birds of Paradise)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        }
+      },
+      "Pod + Devoted Druid (MV2)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Delney, Streetwise Lookout",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        }
+      },
+      "Pod + Derevi (MV3)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": 2,
+            "tutor_steps": 0,
+            "activation": "pod"
+          }
+        }
+      }
+    },
+    "Survival": {
+      "Survival + arbitrary expendable creature (MV1 in hand)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        }
+      },
+      "Survival + Devoted Druid (MV2) in hand": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": true
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 1,
+            "tutor_steps": 0,
+            "activation": "survival_to_hand_then_cast_if_affordable"
+          }
+        }
+      }
+    },
+    "Neoform": {
+      "Neoform + MV1 creature (Birds of Paradise)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        }
+      },
+      "Neoform + MV3 creature (Derevi)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Neoform"
+          }
+        }
+      }
+    },
+    "Eldritch_Evolution": {
+      "Evolution + MV2 creature (Devoted Druid)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Clever Impersonator",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        }
+      },
+      "Evolution + MV3 creature (Derevi)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Seedborn Muse",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Seedborn Muse",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Seedborn Muse",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Seedborn Muse",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Eldritch Evolution"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        }
+      }
+    },
+    "Formidable_Speaker": {
+      "Speaker ETB + arbitrary discardable creature": {
+        "B0_BASELINE": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 3,
+            "tutor_steps": 1,
+            "activation": "speaker_etb_to_hand"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 3,
+            "tutor_steps": 1,
+            "activation": "speaker_etb_to_hand"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 3,
+            "tutor_steps": 1,
+            "activation": "speaker_etb_to_hand"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": null,
+          "path": null,
+          "note": "mechanism's enabling card not present in this variant"
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 3,
+            "tutor_steps": 1,
+            "activation": "speaker_etb_to_hand"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": 3,
+            "tutor_steps": 1,
+            "activation": "speaker_etb_to_hand"
+          }
+        }
+      }
+    },
+    "Chord": {
+      "Chord X2 (2 creatures on board)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": false,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Archivist of Oghma",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        }
+      },
+      "Chord X4 (4 creatures on board)": {
+        "B0_BASELINE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B2_CONVERSION_SWAP": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B3_FULL_PACKAGE": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B4_NO_NEOFORM": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B5_NO_SPEAKER": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B6_NO_TALION": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        },
+        "B7_NO_SEEDBORN": {
+          "reachable_outcomes": {
+            "deterministic_win_available": true,
+            "deterministic_win_protected": false,
+            "thrasios_activation_now": false,
+            "two_plus_engines_active": false
+          },
+          "path": {
+            "target": "Hazel's Brewmaster",
+            "mana_required": null,
+            "tutor_steps": 1,
+            "activation": "Chord of Calling"
+          }
+        }
+      }
+    }
+  },
+  "states_newly_reaching_target_B3_vs_B0": {
+    "deterministic_win_available": [],
+    "deterministic_win_protected": [],
+    "thrasios_activation_now": [],
+    "two_plus_engines_active": []
+  }
+}
