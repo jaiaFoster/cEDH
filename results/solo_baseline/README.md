@@ -2802,3 +2802,27 @@ small, real, optional upgrade if a card can be found to cut for it. Full GAIN/CO
 recommendation, all 20 counterfactual configs' exact deltas, and confidence caveats (notably:
 every external decklist-comparison source was network-egress-blocked, so Section I is low-
 confidence) are in the full report.
+
+---
+
+# SIM-DECKBUILD-004 — Four-Card Conversion Package Audit
+
+Full report: `results/solo_baseline/deckbuild004_report.md`. Machine-readable artifacts:
+`deckbuild004_phase0_reactive_screen.json`, `deckbuild004_e1_early_cost.json`,
+`deckbuild004_e2_tutor_topology.json`, `deckbuild004_e4_pod_rungs.json`,
+`deckbuild004_ablation_census.json`.
+
+Question: does adding Neoform, Formidable Speaker, Talion the Kindly Lord, and Seedborn Muse
+(cutting Heartwood Storyteller, King T'Challa, Elves of Deep Shadow, and one reactive interaction
+slot) improve conversion enough to justify the cost? **Verdict: ADOPT_PARTIAL_PACKAGE** — adopt
+the reactive-slot cut (Commandeer → Formidable Speaker, the only candidate with a clear >1pp
+margin) and the Elves → Neoform swap (measured cost: +0.14pp T2-engine probability, "trivial"
+band — Neoform costs essentially nothing measurable). Talion and Seedborn Muse are marked
+**INCONCLUSIVE_NEEDS_POD_VALIDATION**: both showed real, verified structural contributions (a
+bounded tutor-topology graph search confirmed Seedborn Muse resolves a Birthing Pod rung — 4→5 —
+that is a complete, programmatically-confirmed dead end in the current 98-card baseline; Talion
+widens an already-functional rung), but both cards' actual triggers (an opponent casting a spell;
+untapping during another player's turn) cannot occur in this project's solo/no-opponent T1-3
+engine at any turn count — a structural, not merely low-confidence, limitation. E3 (full
+stratified post-fight conversion) and E5/E6 (late-draw quality, engine-behavior tagging) were not
+built this pass; disclosed explicitly, not silently skipped — see the full report's section 9.
