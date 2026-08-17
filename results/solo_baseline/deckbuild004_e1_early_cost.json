@@ -1,0 +1,220 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_004_E1_EARLY_COST",
+  "operational_definitions_note": "T2_autonomous_engine excludes Kinnan/Deathrite Shaman/Gaea's Cradle (mana tools in this project's ENGINES taxonomy, not independent card-advantage/tax value engines). color_failure_rate = 1 - all_wubg at T3. Both disclosed, not asserted as the assignment's own unstated intent.",
+  "paired_seed_note": "'Paired' = same RNG seed drives both variants' draws (this project's established convention, e.g. MANA-AUDIT-002's config comparisons) - NOT a literal same-7-cards-except-swapped guarantee, since the two variants' underlying card lists differ (a shuffle of a different list, even with the same seed, does not necessarily deal the same 7 cards).",
+  "census_by_variant": {
+    "B0_BASELINE": {
+      "T1_premium_engine": 0.08,
+      "T2_any_engine": 0.27,
+      "T2_autonomous_engine": 0.235,
+      "T2_engine_plus_interaction_retained": 0.005,
+      "T2_engine_plus_persistent_mana_remaining": 0.105,
+      "T3_two_plus_engines": 0.04,
+      "T1_functional_mana": 0.08,
+      "T2_functional_mana": 0.74,
+      "T3_functional_mana": 0.8,
+      "color_failure_rate_T3": 0.46,
+      "mean_final_hand_size_T3": 3.82,
+      "keep_rate_7": 0.54,
+      "keep_rate_6": 0.8913043478260869,
+      "keep_rate_5": 0.6,
+      "average_final_hand_size": 6.49
+    },
+    "B1_ENGINE_SWAP": {
+      "T1_premium_engine": 0.04,
+      "T2_any_engine": 0.235,
+      "T2_autonomous_engine": 0.18,
+      "T2_engine_plus_interaction_retained": 0.005,
+      "T2_engine_plus_persistent_mana_remaining": 0.07,
+      "T3_two_plus_engines": 0.045,
+      "T1_functional_mana": 0.08,
+      "T2_functional_mana": 0.745,
+      "T3_functional_mana": 0.805,
+      "color_failure_rate_T3": 0.455,
+      "mean_final_hand_size_T3": 4.0,
+      "keep_rate_7": 0.53,
+      "keep_rate_6": 0.8936170212765957,
+      "keep_rate_5": 0.8,
+      "average_final_hand_size": 6.48
+    },
+    "B2_CONVERSION_SWAP": {
+      "T1_premium_engine": 0.055,
+      "T2_any_engine": 0.28,
+      "T2_autonomous_engine": 0.205,
+      "T2_engine_plus_interaction_retained": 0.005,
+      "T2_engine_plus_persistent_mana_remaining": 0.08,
+      "T3_two_plus_engines": 0.045,
+      "T1_functional_mana": 0.085,
+      "T2_functional_mana": 0.76,
+      "T3_functional_mana": 0.81,
+      "color_failure_rate_T3": 0.51,
+      "mean_final_hand_size_T3": 4.14,
+      "keep_rate_7": 0.48,
+      "keep_rate_6": 0.8461538461538461,
+      "keep_rate_5": 1.0,
+      "average_final_hand_size": 6.4
+    },
+    "B3_FULL_PACKAGE": {
+      "T1_premium_engine": 0.04,
+      "T2_any_engine": 0.22,
+      "T2_autonomous_engine": 0.165,
+      "T2_engine_plus_interaction_retained": 0.02,
+      "T2_engine_plus_persistent_mana_remaining": 0.12,
+      "T3_two_plus_engines": 0.06,
+      "T1_functional_mana": 0.095,
+      "T2_functional_mana": 0.74,
+      "T3_functional_mana": 0.805,
+      "color_failure_rate_T3": 0.545,
+      "mean_final_hand_size_T3": 4.245,
+      "keep_rate_7": 0.39,
+      "keep_rate_6": 0.7868852459016393,
+      "keep_rate_5": 0.8461538461538461,
+      "average_final_hand_size": 6.26
+    },
+    "SIX_DORKS_VS_FIVE": {
+      "T1_premium_engine": 0.055,
+      "T2_any_engine": 0.235,
+      "T2_autonomous_engine": 0.19,
+      "T2_engine_plus_interaction_retained": 0.01,
+      "T2_engine_plus_persistent_mana_remaining": 0.09,
+      "T3_two_plus_engines": 0.055,
+      "T1_functional_mana": 0.085,
+      "T2_functional_mana": 0.8,
+      "T3_functional_mana": 0.85,
+      "color_failure_rate_T3": 0.47,
+      "mean_final_hand_size_T3": 4.1,
+      "keep_rate_7": 0.43,
+      "keep_rate_6": 0.8070175438596491,
+      "keep_rate_5": 1.0,
+      "average_final_hand_size": 6.32
+    }
+  },
+  "primary_comparisons": {
+    "B0_BASELINE_vs_B1_ENGINE_SWAP": {
+      "census_delta": {
+        "T1_premium_engine": -0.04,
+        "T2_any_engine": -0.03500000000000003,
+        "T2_autonomous_engine": -0.05499999999999999,
+        "T2_engine_plus_interaction_retained": 0.0,
+        "T2_engine_plus_persistent_mana_remaining": -0.03499999999999999,
+        "T3_two_plus_engines": 0.0049999999999999975,
+        "T1_functional_mana": 0.0,
+        "T2_functional_mana": 0.0050000000000000044,
+        "T3_functional_mana": 0.0050000000000000044,
+        "color_failure_rate_T3": -0.0050000000000000044,
+        "mean_final_hand_size_T3": 0.18000000000000016,
+        "keep_rate_7": -0.010000000000000009,
+        "keep_rate_6": 0.0023126734505087843,
+        "keep_rate_5": 0.20000000000000007,
+        "average_final_hand_size": -0.009999999999999787
+      },
+      "flip_metrics": {
+        "sample_size": 100,
+        "keep_A_ship_B_rate": 0.28,
+        "ship_A_keep_B_rate": 0.14,
+        "both_agree_rate": 0.58,
+        "mean_engine_turn_delta_B_minus_A": 0.38095238095238093,
+        "pct_hands_engine_only_reachable_in_B": 0.12,
+        "note": "A is the first-named variant, B the second - e.g. for (B0, SIX_DORKS_VS_FIVE): keep_A_ship_B_rate = 'keep_to_mull_flip_due_to_Elves_loss' rate; ship_A_keep_B_rate = 'mull_to_keep_flip_due_to_Neoform_gain' rate; a positive mean_engine_turn_delta_B_minus_A = B's engine arrives LATER on average."
+      }
+    },
+    "B0_BASELINE_vs_B2_CONVERSION_SWAP": {
+      "census_delta": {
+        "T1_premium_engine": -0.025,
+        "T2_any_engine": 0.010000000000000009,
+        "T2_autonomous_engine": -0.03,
+        "T2_engine_plus_interaction_retained": 0.0,
+        "T2_engine_plus_persistent_mana_remaining": -0.024999999999999994,
+        "T3_two_plus_engines": 0.0049999999999999975,
+        "T1_functional_mana": 0.0050000000000000044,
+        "T2_functional_mana": 0.020000000000000018,
+        "T3_functional_mana": 0.010000000000000009,
+        "color_failure_rate_T3": 0.04999999999999999,
+        "mean_final_hand_size_T3": 0.31999999999999984,
+        "keep_rate_7": -0.06000000000000005,
+        "keep_rate_6": -0.04515050167224077,
+        "keep_rate_5": 0.4,
+        "average_final_hand_size": -0.08999999999999986
+      },
+      "flip_metrics": {
+        "sample_size": 100,
+        "keep_A_ship_B_rate": 0.3,
+        "ship_A_keep_B_rate": 0.2,
+        "both_agree_rate": 0.5,
+        "mean_engine_turn_delta_B_minus_A": 0.45454545454545453,
+        "pct_hands_engine_only_reachable_in_B": 0.21,
+        "note": "A is the first-named variant, B the second - e.g. for (B0, SIX_DORKS_VS_FIVE): keep_A_ship_B_rate = 'keep_to_mull_flip_due_to_Elves_loss' rate; ship_A_keep_B_rate = 'mull_to_keep_flip_due_to_Neoform_gain' rate; a positive mean_engine_turn_delta_B_minus_A = B's engine arrives LATER on average."
+      }
+    },
+    "B0_BASELINE_vs_B3_FULL_PACKAGE": {
+      "census_delta": {
+        "T1_premium_engine": -0.04,
+        "T2_any_engine": -0.05000000000000002,
+        "T2_autonomous_engine": -0.06999999999999998,
+        "T2_engine_plus_interaction_retained": 0.015,
+        "T2_engine_plus_persistent_mana_remaining": 0.015,
+        "T3_two_plus_engines": 0.019999999999999997,
+        "T1_functional_mana": 0.015,
+        "T2_functional_mana": 0.0,
+        "T3_functional_mana": 0.0050000000000000044,
+        "color_failure_rate_T3": 0.08500000000000002,
+        "mean_final_hand_size_T3": 0.42500000000000027,
+        "keep_rate_7": -0.15000000000000002,
+        "keep_rate_6": -0.10441910192444759,
+        "keep_rate_5": 0.24615384615384617,
+        "average_final_hand_size": -0.23000000000000043
+      },
+      "flip_metrics": {
+        "sample_size": 100,
+        "keep_A_ship_B_rate": 0.28,
+        "ship_A_keep_B_rate": 0.2,
+        "both_agree_rate": 0.52,
+        "mean_engine_turn_delta_B_minus_A": 0.2631578947368421,
+        "pct_hands_engine_only_reachable_in_B": 0.27,
+        "note": "A is the first-named variant, B the second - e.g. for (B0, SIX_DORKS_VS_FIVE): keep_A_ship_B_rate = 'keep_to_mull_flip_due_to_Elves_loss' rate; ship_A_keep_B_rate = 'mull_to_keep_flip_due_to_Neoform_gain' rate; a positive mean_engine_turn_delta_B_minus_A = B's engine arrives LATER on average."
+      }
+    }
+  },
+  "special_comparison_six_dorks_vs_five": {
+    "census_delta": {
+      "T1_premium_engine": -0.025,
+      "T2_any_engine": -0.03500000000000003,
+      "T2_autonomous_engine": -0.044999999999999984,
+      "T2_engine_plus_interaction_retained": 0.005,
+      "T2_engine_plus_persistent_mana_remaining": -0.015,
+      "T3_two_plus_engines": 0.015,
+      "T1_functional_mana": 0.0050000000000000044,
+      "T2_functional_mana": 0.06000000000000005,
+      "T3_functional_mana": 0.04999999999999993,
+      "color_failure_rate_T3": 0.009999999999999953,
+      "mean_final_hand_size_T3": 0.2799999999999998,
+      "keep_rate_7": -0.11000000000000004,
+      "keep_rate_6": -0.08428680396643784,
+      "keep_rate_5": 0.4,
+      "average_final_hand_size": -0.16999999999999993
+    },
+    "flip_metrics": {
+      "sample_size": 100,
+      "keep_A_ship_B_rate": 0.22,
+      "ship_A_keep_B_rate": 0.21,
+      "both_agree_rate": 0.57,
+      "mean_engine_turn_delta_B_minus_A": -0.18181818181818182,
+      "pct_hands_engine_only_reachable_in_B": 0.26,
+      "note": "A is the first-named variant, B the second - e.g. for (B0, SIX_DORKS_VS_FIVE): keep_A_ship_B_rate = 'keep_to_mull_flip_due_to_Elves_loss' rate; ship_A_keep_B_rate = 'mull_to_keep_flip_due_to_Neoform_gain' rate; a positive mean_engine_turn_delta_B_minus_A = B's engine arrives LATER on average."
+    }
+  },
+  "required_key_number": {
+    "exact_pp_change_T2_engine_probability_Elves_to_Neoform": -3.500000000000003,
+    "interpretation_band": "severe"
+  }
+}
