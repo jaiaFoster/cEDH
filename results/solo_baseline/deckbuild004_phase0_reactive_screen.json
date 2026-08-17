@@ -1,0 +1,318 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-v1",
+  "subject_deck_hash": "4edee0fc60768fcd759a2e9fd3c34277d9d37c0d6a27a663ea7beff76b05e20a",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Tymna the Weaver",
+    "Thrasios, Triton Hero"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_004_PHASE_0_REACTIVE_SCREEN",
+  "note": "Every variant here differs from baseline by exactly -1 reactive card +1 Formidable Speaker (deck size stays 98), except the informational-only An Offer You Can't Refuse row (deck size 100, +2, no removal - see module docstring).",
+  "baseline": {
+    "deck_size": 98,
+    "added": [],
+    "removed": [],
+    "census_sample_size": 15000,
+    "interaction_metrics": {
+      "free_interaction_in_opening_7": 0.5439333333333334,
+      "t1_any_live_interaction": 0.22473333333333334,
+      "t1_free_live_interaction": 0.16826666666666668,
+      "t1_Force_of_Will_pitch_live": 0.024733333333333333,
+      "t1_Force_of_Negation_pitch_live": 0.0,
+      "t1_Misdirection_pitch_live": 0.022066666666666665,
+      "t1_Commandeer_pitch_live": 0.001,
+      "t1_flare_of_denial_live": 0.0,
+      "t2_any_live_interaction": 0.059666666666666666,
+      "t2_free_live_interaction": 0.04293333333333333,
+      "t2_Force_of_Will_pitch_live": 0.0029333333333333334,
+      "t2_Force_of_Negation_pitch_live": 0.0,
+      "t2_Misdirection_pitch_live": 0.0030666666666666668,
+      "t2_Commandeer_pitch_live": 0.0003333333333333333,
+      "t2_flare_of_denial_live": 0.0,
+      "t3_any_live_interaction": 0.06806666666666666,
+      "t3_free_live_interaction": 0.045066666666666665,
+      "t3_Force_of_Will_pitch_live": 0.0034666666666666665,
+      "t3_Force_of_Negation_pitch_live": 0.0,
+      "t3_Misdirection_pitch_live": 0.0034666666666666665,
+      "t3_Commandeer_pitch_live": 0.0002666666666666667,
+      "t3_flare_of_denial_live": 6.666666666666667e-05,
+      "mean_t3_blue_pitch_fuel_count": 1.5102666666666666
+    },
+    "premium_keep_rate_at_7": 0.51425,
+    "mulligan_S_or_A_rate": 0.2965,
+    "mulligan_D_or_F_rate": 0.1445,
+    "mulligan_distribution": {
+      "0": 0.51425,
+      "1": 0.4135,
+      "2": 0.059,
+      "3+": 0.01325
+    }
+  },
+  "candidates": {
+    "SUBTLETY": {
+      "deck_size": 98,
+      "added": [
+        "Formidable Speaker"
+      ],
+      "removed": [
+        "Subtlety"
+      ],
+      "census_sample_size": 15000,
+      "interaction_metrics": {
+        "free_interaction_in_opening_7": 0.5066666666666667,
+        "t1_any_live_interaction": 0.2078,
+        "t1_free_live_interaction": 0.14973333333333333,
+        "t1_Force_of_Will_pitch_live": 0.025266666666666666,
+        "t1_Force_of_Negation_pitch_live": 0.0,
+        "t1_Misdirection_pitch_live": 0.021666666666666667,
+        "t1_Commandeer_pitch_live": 0.0009333333333333333,
+        "t1_flare_of_denial_live": 0.0,
+        "t2_any_live_interaction": 0.05946666666666667,
+        "t2_free_live_interaction": 0.041666666666666664,
+        "t2_Force_of_Will_pitch_live": 0.0033333333333333335,
+        "t2_Force_of_Negation_pitch_live": 0.0,
+        "t2_Misdirection_pitch_live": 0.0032,
+        "t2_Commandeer_pitch_live": 0.0005333333333333334,
+        "t2_flare_of_denial_live": 0.0,
+        "t3_any_live_interaction": 0.06326666666666667,
+        "t3_free_live_interaction": 0.042,
+        "t3_Force_of_Will_pitch_live": 0.0034,
+        "t3_Force_of_Negation_pitch_live": 0.0,
+        "t3_Misdirection_pitch_live": 0.0037333333333333333,
+        "t3_Commandeer_pitch_live": 0.0003333333333333333,
+        "t3_flare_of_denial_live": 0.0,
+        "mean_t3_blue_pitch_fuel_count": 1.5512666666666666
+      },
+      "premium_keep_rate_at_7": 0.5155,
+      "mulligan_S_or_A_rate": 0.299,
+      "mulligan_D_or_F_rate": 0.1455,
+      "mulligan_distribution": {
+        "1": 0.40425,
+        "0": 0.5155,
+        "2": 0.06575,
+        "3+": 0.0145
+      }
+    },
+    "MISDIRECTION": {
+      "deck_size": 98,
+      "added": [
+        "Formidable Speaker"
+      ],
+      "removed": [
+        "Misdirection"
+      ],
+      "census_sample_size": 15000,
+      "interaction_metrics": {
+        "free_interaction_in_opening_7": 0.5087333333333334,
+        "t1_any_live_interaction": 0.20993333333333333,
+        "t1_free_live_interaction": 0.1524,
+        "t1_Force_of_Will_pitch_live": 0.026,
+        "t1_Force_of_Negation_pitch_live": 0.0,
+        "t1_Misdirection_pitch_live": 0.0,
+        "t1_Commandeer_pitch_live": 0.0014,
+        "t1_flare_of_denial_live": 0.0,
+        "t2_any_live_interaction": 0.06193333333333333,
+        "t2_free_live_interaction": 0.0438,
+        "t2_Force_of_Will_pitch_live": 0.003533333333333333,
+        "t2_Force_of_Negation_pitch_live": 0.0,
+        "t2_Misdirection_pitch_live": 0.0,
+        "t2_Commandeer_pitch_live": 0.0006,
+        "t2_flare_of_denial_live": 0.0,
+        "t3_any_live_interaction": 0.06266666666666666,
+        "t3_free_live_interaction": 0.0418,
+        "t3_Force_of_Will_pitch_live": 0.0032,
+        "t3_Force_of_Negation_pitch_live": 0.0,
+        "t3_Misdirection_pitch_live": 0.0,
+        "t3_Commandeer_pitch_live": 6.666666666666667e-05,
+        "t3_flare_of_denial_live": 0.0,
+        "mean_t3_blue_pitch_fuel_count": 1.538
+      },
+      "premium_keep_rate_at_7": 0.52,
+      "mulligan_S_or_A_rate": 0.29425,
+      "mulligan_D_or_F_rate": 0.14825,
+      "mulligan_distribution": {
+        "2": 0.06525,
+        "1": 0.403,
+        "0": 0.52,
+        "3+": 0.01175
+      }
+    },
+    "COMMANDEER": {
+      "deck_size": 98,
+      "added": [
+        "Formidable Speaker"
+      ],
+      "removed": [
+        "Commandeer"
+      ],
+      "census_sample_size": 15000,
+      "interaction_metrics": {
+        "free_interaction_in_opening_7": 0.49446666666666667,
+        "t1_any_live_interaction": 0.22686666666666666,
+        "t1_free_live_interaction": 0.1692,
+        "t1_Force_of_Will_pitch_live": 0.023266666666666668,
+        "t1_Force_of_Negation_pitch_live": 0.0,
+        "t1_Misdirection_pitch_live": 0.0226,
+        "t1_Commandeer_pitch_live": 0.0,
+        "t1_flare_of_denial_live": 0.0,
+        "t2_any_live_interaction": 0.06113333333333333,
+        "t2_free_live_interaction": 0.0432,
+        "t2_Force_of_Will_pitch_live": 0.0029333333333333334,
+        "t2_Force_of_Negation_pitch_live": 0.0,
+        "t2_Misdirection_pitch_live": 0.0032,
+        "t2_Commandeer_pitch_live": 0.0,
+        "t2_flare_of_denial_live": 0.0,
+        "t3_any_live_interaction": 0.0694,
+        "t3_free_live_interaction": 0.0478,
+        "t3_Force_of_Will_pitch_live": 0.004266666666666667,
+        "t3_Force_of_Negation_pitch_live": 0.0,
+        "t3_Misdirection_pitch_live": 0.004266666666666667,
+        "t3_Commandeer_pitch_live": 0.0,
+        "t3_flare_of_denial_live": 0.0,
+        "mean_t3_blue_pitch_fuel_count": 1.5178
+      },
+      "premium_keep_rate_at_7": 0.50525,
+      "mulligan_S_or_A_rate": 0.28875,
+      "mulligan_D_or_F_rate": 0.1455,
+      "mulligan_distribution": {
+        "2": 0.068,
+        "1": 0.4175,
+        "0": 0.50525,
+        "3+": 0.00925
+      }
+    },
+    "MENTAL_MISSTEP": {
+      "deck_size": 98,
+      "added": [
+        "Formidable Speaker"
+      ],
+      "removed": [
+        "Mental Misstep"
+      ],
+      "census_sample_size": 15000,
+      "interaction_metrics": {
+        "free_interaction_in_opening_7": 0.5447333333333333,
+        "t1_any_live_interaction": 0.17386666666666667,
+        "t1_free_live_interaction": 0.17313333333333333,
+        "t1_Force_of_Will_pitch_live": 0.0254,
+        "t1_Force_of_Negation_pitch_live": 0.0,
+        "t1_Misdirection_pitch_live": 0.024133333333333333,
+        "t1_Commandeer_pitch_live": 0.0012666666666666666,
+        "t1_flare_of_denial_live": 0.0,
+        "t2_any_live_interaction": 0.0536,
+        "t2_free_live_interaction": 0.04613333333333333,
+        "t2_Force_of_Will_pitch_live": 0.0036,
+        "t2_Force_of_Negation_pitch_live": 0.0,
+        "t2_Misdirection_pitch_live": 0.0031333333333333335,
+        "t2_Commandeer_pitch_live": 0.0006,
+        "t2_flare_of_denial_live": 0.0,
+        "t3_any_live_interaction": 0.054533333333333336,
+        "t3_free_live_interaction": 0.04413333333333333,
+        "t3_Force_of_Will_pitch_live": 0.0029333333333333334,
+        "t3_Force_of_Negation_pitch_live": 0.0,
+        "t3_Misdirection_pitch_live": 0.0038666666666666667,
+        "t3_Commandeer_pitch_live": 0.00013333333333333334,
+        "t3_flare_of_denial_live": 0.0,
+        "mean_t3_blue_pitch_fuel_count": 1.4899333333333333
+      },
+      "premium_keep_rate_at_7": 0.52,
+      "mulligan_S_or_A_rate": 0.29575,
+      "mulligan_D_or_F_rate": 0.144,
+      "mulligan_distribution": {
+        "2": 0.06525,
+        "0": 0.52,
+        "1": 0.4025,
+        "3+": 0.01225
+      }
+    }
+  },
+  "informational_only": {
+    "AN_OFFER_ADD_ONLY_not_a_real_cut_candidate": {
+      "deck_size": 100,
+      "added": [
+        "Formidable Speaker",
+        "An Offer You Can't Refuse"
+      ],
+      "removed": [],
+      "census_sample_size": 15000,
+      "interaction_metrics": {
+        "free_interaction_in_opening_7": 0.5353333333333333,
+        "t1_any_live_interaction": 0.22546666666666668,
+        "t1_free_live_interaction": 0.16813333333333333,
+        "t1_Force_of_Will_pitch_live": 0.023533333333333333,
+        "t1_Force_of_Negation_pitch_live": 0.0,
+        "t1_Misdirection_pitch_live": 0.0264,
+        "t1_Commandeer_pitch_live": 0.0006666666666666666,
+        "t1_flare_of_denial_live": 0.0,
+        "t2_any_live_interaction": 0.057866666666666663,
+        "t2_free_live_interaction": 0.044066666666666664,
+        "t2_Force_of_Will_pitch_live": 0.0038666666666666667,
+        "t2_Force_of_Negation_pitch_live": 0.0,
+        "t2_Misdirection_pitch_live": 0.0034,
+        "t2_Commandeer_pitch_live": 0.0002666666666666667,
+        "t2_flare_of_denial_live": 0.0,
+        "t3_any_live_interaction": 0.0648,
+        "t3_free_live_interaction": 0.04206666666666667,
+        "t3_Force_of_Will_pitch_live": 0.0037333333333333333,
+        "t3_Force_of_Negation_pitch_live": 0.0,
+        "t3_Misdirection_pitch_live": 0.0036666666666666666,
+        "t3_Commandeer_pitch_live": 0.0005333333333333334,
+        "t3_flare_of_denial_live": 0.00013333333333333334,
+        "mean_t3_blue_pitch_fuel_count": 1.5284666666666666
+      },
+      "premium_keep_rate_at_7": 0.49025,
+      "mulligan_S_or_A_rate": 0.29425,
+      "mulligan_D_or_F_rate": 0.1485,
+      "mulligan_distribution": {
+        "0": 0.49025,
+        "1": 0.426,
+        "2": 0.069,
+        "3+": 0.01475
+      }
+    }
+  },
+  "selection": {
+    "marginal_damage_per_candidate": {
+      "SUBTLETY": {
+        "delta_t2_free_live_interaction": -0.001266666666666666,
+        "delta_t3_free_live_interaction": -0.003066666666666662,
+        "delta_t3_any_live_interaction": -0.004799999999999999,
+        "delta_mulligan_D_or_F": 0.0010000000000000009,
+        "delta_mean_t3_blue_pitch_fuel": 0.040999999999999925
+      },
+      "MISDIRECTION": {
+        "delta_t2_free_live_interaction": 0.0008666666666666684,
+        "delta_t3_free_live_interaction": -0.0032666666666666677,
+        "delta_t3_any_live_interaction": -0.005400000000000002,
+        "delta_mulligan_D_or_F": 0.0037500000000000033,
+        "delta_mean_t3_blue_pitch_fuel": 0.027733333333333388
+      },
+      "COMMANDEER": {
+        "delta_t2_free_live_interaction": 0.000266666666666672,
+        "delta_t3_free_live_interaction": 0.0027333333333333376,
+        "delta_t3_any_live_interaction": 0.0013333333333333391,
+        "delta_mulligan_D_or_F": 0.0010000000000000009,
+        "delta_mean_t3_blue_pitch_fuel": 0.007533333333333392
+      },
+      "MENTAL_MISSTEP": {
+        "delta_t2_free_live_interaction": 0.0032000000000000015,
+        "delta_t3_free_live_interaction": -0.0009333333333333346,
+        "delta_t3_any_live_interaction": -0.013533333333333328,
+        "delta_mulligan_D_or_F": -0.0005000000000000004,
+        "delta_mean_t3_blue_pitch_fuel": -0.020333333333333314
+      }
+    },
+    "harm_score_per_candidate": {
+      "SUBTLETY": 0.006033333333333335,
+      "MISDIRECTION": 0.008776666666666665,
+      "COMMANDEER": -0.004086666666666687,
+      "MENTAL_MISSTEP": 0.012799999999999992
+    },
+    "least_damaging_candidate": "COMMANDEER",
+    "runner_up_within_1pp_note": "COMMANDEER is a clear (>1pp) least-harm choice versus the runner-up.",
+    "recommended_REACTIVE_SLOT": "Commandeer"
+  }
+}
