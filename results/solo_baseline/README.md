@@ -2826,3 +2826,28 @@ untapping during another player's turn) cannot occur in this project's solo/no-o
 engine at any turn count — a structural, not merely low-confidence, limitation. E3 (full
 stratified post-fight conversion) and E5/E6 (late-draw quality, engine-behavior tagging) were not
 built this pass; disclosed explicitly, not silently skipped — see the full report's section 9.
+
+# SIM-DECKBUILD-006 — Four vs Five Dorks / Creature-Mana Network Audit
+
+Full report: `results/solo_baseline/deckbuild006_report.md`. Machine-readable artifacts:
+`deckbuild006_e1_early_cost.json`, `deckbuild006_e2_creature_mana_network.json`,
+`deckbuild006_e5_late_draw_value.json`, `deckbuild006_e6_multiplayer_sensitivity.json`,
+`deckbuild006_regression_gate.json`. Subject: `tymna-thrasios-treefarm-deckbuild006-v1` (98 cards
++ Thrasios/Tymna, minted from the user's own pasted, confirmed-accurate operative list — 9 cards
+removed / 9 added vs. the MANA-AUDIT-002 frozen subject, already including the swap under study).
+
+Question: is four one-mana dorks sufficient, or is five the structural floor for this exact deck
+(candidate swap: Avacyn's Pilgrim OUT, Lotho, Corrupt Shirriff IN)? **Verdict:
+CUT_PILGRIM_KEEP_LOTHO** — the five-to-four transition is structurally trivial by every
+engine-probability metric (T2-engine-probability change: +0.067pp, smaller even than
+DECKBUILD-004's six-to-five transition) and small-but-real by network-size metrics (~0.07-0.08
+fewer creatures/functional dorks by T3, non-compounding through T6). Lotho's measured self-trigger
+floor (pilot's own second spell only) is small, as expected from a card whose real value targets
+opponents this solo engine cannot observe; an explicitly-labeled, uncalibrated multiplayer
+sensitivity scenario (E6, `evidence_type: static_probability`, confidence: low) puts that
+opponent-driven value at an order of magnitude larger than the measured structural cost even under
+the most conservative band. E3 (Cradle draw probability) and E4 (Pod rung census) were skipped with
+disclosure after the phase-1 checkpoint (E2's structural-ceiling numbers already showed the effect
+too small to change the decision); E7 (post-first-fight state modeling) was skipped because
+SIM-DECKBUILD-005's framework does not exist to reuse and phases 1/E5/E6 already resolved the
+decision — see the full report's "Scope disclosure" section.
