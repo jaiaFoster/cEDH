@@ -1,0 +1,315 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild006-v1",
+  "subject_deck_hash": "856e02c0ed50dd577eaf00b3e23fb5ab91f509cbd997c24824c34ed02a0893ad",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_006_E2_CREATURE_MANA_NETWORK",
+  "nominal_true_one_mana_dorks": [
+    "Avacyn's Pilgrim",
+    "Birds of Paradise",
+    "Deathrite Shaman",
+    "Delighted Halfling",
+    "Noble Hierarch"
+  ],
+  "deathrite_graveyard_fuel_reverification": {
+    "land_discard_outlets_present_in_new_operative_98": {
+      "Mox Diamond": "ETB: discard a land card (controller's choice) - a real, but single, T1-only opportunity to put ONE colored land in the graveyard."
+    },
+    "conclusion": "Unchanged from MANA-AUDIT-002's finding: the only land-to-graveyard outlet in this decklist is Mox Diamond's single ETB discard-a-land choice (present in both the old and new operative lists - not part of this task's 9-card diff). No new discard-a-land or self-mill effect was added by the 9-card swap under study. Deathrite's graveyard-exile mana ability therefore remains a genuinely low-T1-3-frequency line even in the new list (needs Mox Diamond specifically resolved with a real dual land discarded to it, not just any card) - re-verified, not merely assumed, and the engine's existing non-implementation is left as-is rather than built out for this narrow case, consistent with report_policy's 'do not expand infrastructure' guidance."
+  },
+  "badgermole_cub_disclosure": "Badgermole Cub's 'whenever you tap a creature for mana, add an additional G' amplifier is NOT modeled in this engine (DORK-003, previously investigated and deferred - a genuine engine change, not attempted here either). This is a CONSERVATIVE omission for this specific question: more dorks present means strictly more independent Badgermole trigger opportunities, so this understates the 5-dork configs' (A, C) advantage over the 4-dork configs (B, D), never the reverse. See rules_tests/regression/test_deckbuild006_badgermole_not_modeled.py for the explicit, tested confirmation of this gap's current status.",
+  "network_by_turn": {
+    "A_5D_NO_LOTHO": {
+      "T1": {
+        "mean_creature_count": 0.34573333333333334,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": 0.21213333333333334,
+        "mean_functional_dorks_in_play": 0.1776,
+        "pct_zero_functional_dorks_in_play": 0.8243333333333334,
+        "pct_two_plus_functional_dorks_in_play": 0.0019333333333333333,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.34573333333333334,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": 0.8909333333333334,
+        "mean_attack_eligible_creature_count": 0.3456666666666667,
+        "mean_nominal_dorks_in_play": 0.294,
+        "mean_functional_dorks_in_play": 0.2438,
+        "pct_zero_functional_dorks_in_play": 0.7754666666666666,
+        "pct_two_plus_functional_dorks_in_play": 0.018933333333333333,
+        "kinnan_active_rate": 0.0015333333333333334,
+        "mean_gaea_cradle_structural_ceiling_G": 0.8909333333333334,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": 1.4889333333333334,
+        "mean_attack_eligible_creature_count": 0.8909333333333334,
+        "mean_nominal_dorks_in_play": 0.3648,
+        "mean_functional_dorks_in_play": 0.29586666666666667,
+        "pct_zero_functional_dorks_in_play": 0.7346,
+        "pct_two_plus_functional_dorks_in_play": 0.029133333333333334,
+        "kinnan_active_rate": 0.011733333333333333,
+        "mean_gaea_cradle_structural_ceiling_G": 1.4889333333333334,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.00013333333333333334
+      }
+    },
+    "B_4D_NO_LOTHO": {
+      "T1": {
+        "mean_creature_count": 0.3094,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": 0.1698,
+        "mean_functional_dorks_in_play": 0.1338,
+        "pct_zero_functional_dorks_in_play": 0.8668666666666667,
+        "pct_two_plus_functional_dorks_in_play": 0.0006666666666666666,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.3094,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": 0.8345333333333333,
+        "mean_attack_eligible_creature_count": 0.30933333333333335,
+        "mean_nominal_dorks_in_play": 0.2344,
+        "mean_functional_dorks_in_play": 0.18293333333333334,
+        "pct_zero_functional_dorks_in_play": 0.8275333333333333,
+        "pct_two_plus_functional_dorks_in_play": 0.0104,
+        "kinnan_active_rate": 0.0016666666666666668,
+        "mean_gaea_cradle_structural_ceiling_G": 0.8345333333333333,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": 1.4088666666666667,
+        "mean_attack_eligible_creature_count": 0.8345333333333333,
+        "mean_nominal_dorks_in_play": 0.29246666666666665,
+        "mean_functional_dorks_in_play": 0.22253333333333333,
+        "pct_zero_functional_dorks_in_play": 0.7934,
+        "pct_two_plus_functional_dorks_in_play": 0.0156,
+        "kinnan_active_rate": 0.012,
+        "mean_gaea_cradle_structural_ceiling_G": 1.4088666666666667,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      }
+    },
+    "C_5D_LOTHO": {
+      "T1": {
+        "mean_creature_count": 0.34526666666666667,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": 0.21093333333333333,
+        "mean_functional_dorks_in_play": 0.17666666666666667,
+        "pct_zero_functional_dorks_in_play": 0.8251333333333334,
+        "pct_two_plus_functional_dorks_in_play": 0.0018,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.34526666666666667,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": 0.8970666666666667,
+        "mean_attack_eligible_creature_count": 0.3452,
+        "mean_nominal_dorks_in_play": 0.2936,
+        "mean_functional_dorks_in_play": 0.24346666666666666,
+        "pct_zero_functional_dorks_in_play": 0.7758666666666667,
+        "pct_two_plus_functional_dorks_in_play": 0.019066666666666666,
+        "kinnan_active_rate": 0.0015333333333333334,
+        "mean_gaea_cradle_structural_ceiling_G": 0.8970666666666667,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": 1.502,
+        "mean_attack_eligible_creature_count": 0.8968666666666667,
+        "mean_nominal_dorks_in_play": 0.36286666666666667,
+        "mean_functional_dorks_in_play": 0.2944,
+        "pct_zero_functional_dorks_in_play": 0.7361333333333333,
+        "pct_two_plus_functional_dorks_in_play": 0.029066666666666668,
+        "kinnan_active_rate": 0.011733333333333333,
+        "mean_gaea_cradle_structural_ceiling_G": 1.502,
+        "kinnan_active_and_functional_dorks_2plus_rate": 6.666666666666667e-05
+      }
+    },
+    "D_4D_LOTHO": {
+      "T1": {
+        "mean_creature_count": 0.31206666666666666,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": 0.1708,
+        "mean_functional_dorks_in_play": 0.1354,
+        "pct_zero_functional_dorks_in_play": 0.8657333333333334,
+        "pct_two_plus_functional_dorks_in_play": 0.0011333333333333334,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.31206666666666666,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": 0.8453333333333334,
+        "mean_attack_eligible_creature_count": 0.312,
+        "mean_nominal_dorks_in_play": 0.23573333333333332,
+        "mean_functional_dorks_in_play": 0.18446666666666667,
+        "pct_zero_functional_dorks_in_play": 0.8257333333333333,
+        "pct_two_plus_functional_dorks_in_play": 0.009866666666666666,
+        "kinnan_active_rate": 0.0013333333333333333,
+        "mean_gaea_cradle_structural_ceiling_G": 0.8453333333333334,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": 1.4273333333333333,
+        "mean_attack_eligible_creature_count": 0.8451333333333333,
+        "mean_nominal_dorks_in_play": 0.29073333333333334,
+        "mean_functional_dorks_in_play": 0.2224,
+        "pct_zero_functional_dorks_in_play": 0.7922666666666667,
+        "pct_two_plus_functional_dorks_in_play": 0.0142,
+        "kinnan_active_rate": 0.011866666666666666,
+        "mean_gaea_cradle_structural_ceiling_G": 1.4273333333333333,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      }
+    }
+  },
+  "deltas": {
+    "A_5D_NO_LOTHO_vs_B_4D_NO_LOTHO": {
+      "T1": {
+        "mean_creature_count": -0.03633333333333333,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": -0.042333333333333334,
+        "mean_functional_dorks_in_play": -0.043800000000000006,
+        "pct_zero_functional_dorks_in_play": 0.04253333333333331,
+        "pct_two_plus_functional_dorks_in_play": -0.0012666666666666668,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": -0.03633333333333333,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": -0.056400000000000006,
+        "mean_attack_eligible_creature_count": -0.03633333333333333,
+        "mean_nominal_dorks_in_play": -0.059599999999999986,
+        "mean_functional_dorks_in_play": -0.06086666666666665,
+        "pct_zero_functional_dorks_in_play": 0.052066666666666706,
+        "pct_two_plus_functional_dorks_in_play": -0.008533333333333334,
+        "kinnan_active_rate": 0.0001333333333333334,
+        "mean_gaea_cradle_structural_ceiling_G": -0.056400000000000006,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": -0.08006666666666673,
+        "mean_attack_eligible_creature_count": -0.056400000000000006,
+        "mean_nominal_dorks_in_play": -0.07233333333333336,
+        "mean_functional_dorks_in_play": -0.07333333333333333,
+        "pct_zero_functional_dorks_in_play": 0.05879999999999996,
+        "pct_two_plus_functional_dorks_in_play": -0.013533333333333335,
+        "kinnan_active_rate": 0.0002666666666666668,
+        "mean_gaea_cradle_structural_ceiling_G": -0.08006666666666673,
+        "kinnan_active_and_functional_dorks_2plus_rate": -0.00013333333333333334
+      }
+    },
+    "A_5D_NO_LOTHO_vs_C_5D_LOTHO": {
+      "T1": {
+        "mean_creature_count": -0.0004666666666666708,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": -0.0012000000000000066,
+        "mean_functional_dorks_in_play": -0.0009333333333333416,
+        "pct_zero_functional_dorks_in_play": 0.0008000000000000229,
+        "pct_two_plus_functional_dorks_in_play": -0.0001333333333333334,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": -0.0004666666666666708,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": 0.006133333333333324,
+        "mean_attack_eligible_creature_count": -0.0004666666666666708,
+        "mean_nominal_dorks_in_play": -0.00039999999999995595,
+        "mean_functional_dorks_in_play": -0.0003333333333333244,
+        "pct_zero_functional_dorks_in_play": 0.00040000000000006697,
+        "pct_two_plus_functional_dorks_in_play": 0.00013333333333333253,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.006133333333333324,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": 0.01306666666666656,
+        "mean_attack_eligible_creature_count": 0.005933333333333346,
+        "mean_nominal_dorks_in_play": -0.0019333333333333425,
+        "mean_functional_dorks_in_play": -0.0014666666666666717,
+        "pct_zero_functional_dorks_in_play": 0.0015333333333332755,
+        "pct_two_plus_functional_dorks_in_play": -6.666666666666626e-05,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.01306666666666656,
+        "kinnan_active_and_functional_dorks_2plus_rate": -6.666666666666667e-05
+      }
+    },
+    "B_4D_NO_LOTHO_vs_D_4D_LOTHO": {
+      "T1": {
+        "mean_creature_count": 0.0026666666666666505,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": 0.0010000000000000009,
+        "mean_functional_dorks_in_play": 0.0015999999999999903,
+        "pct_zero_functional_dorks_in_play": -0.0011333333333333195,
+        "pct_two_plus_functional_dorks_in_play": 0.00046666666666666677,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": 0.0026666666666666505,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": 0.010800000000000032,
+        "mean_attack_eligible_creature_count": 0.0026666666666666505,
+        "mean_nominal_dorks_in_play": 0.0013333333333333253,
+        "mean_functional_dorks_in_play": 0.001533333333333331,
+        "pct_zero_functional_dorks_in_play": -0.0018000000000000238,
+        "pct_two_plus_functional_dorks_in_play": -0.0005333333333333336,
+        "kinnan_active_rate": -0.0003333333333333335,
+        "mean_gaea_cradle_structural_ceiling_G": 0.010800000000000032,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": 0.01846666666666663,
+        "mean_attack_eligible_creature_count": 0.010599999999999943,
+        "mean_nominal_dorks_in_play": -0.001733333333333309,
+        "mean_functional_dorks_in_play": -0.0001333333333333464,
+        "pct_zero_functional_dorks_in_play": -0.0011333333333333195,
+        "pct_two_plus_functional_dorks_in_play": -0.0013999999999999985,
+        "kinnan_active_rate": -0.00013333333333333426,
+        "mean_gaea_cradle_structural_ceiling_G": 0.01846666666666663,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      }
+    },
+    "A_5D_NO_LOTHO_vs_D_4D_LOTHO": {
+      "T1": {
+        "mean_creature_count": -0.03366666666666668,
+        "mean_attack_eligible_creature_count": 0.0,
+        "mean_nominal_dorks_in_play": -0.04133333333333333,
+        "mean_functional_dorks_in_play": -0.042200000000000015,
+        "pct_zero_functional_dorks_in_play": 0.04139999999999999,
+        "pct_two_plus_functional_dorks_in_play": -0.0007999999999999999,
+        "kinnan_active_rate": 0.0,
+        "mean_gaea_cradle_structural_ceiling_G": -0.03366666666666668,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T2": {
+        "mean_creature_count": -0.045599999999999974,
+        "mean_attack_eligible_creature_count": -0.03366666666666668,
+        "mean_nominal_dorks_in_play": -0.05826666666666666,
+        "mean_functional_dorks_in_play": -0.05933333333333332,
+        "pct_zero_functional_dorks_in_play": 0.05026666666666668,
+        "pct_two_plus_functional_dorks_in_play": -0.009066666666666667,
+        "kinnan_active_rate": -0.0002000000000000001,
+        "mean_gaea_cradle_structural_ceiling_G": -0.045599999999999974,
+        "kinnan_active_and_functional_dorks_2plus_rate": 0.0
+      },
+      "T3": {
+        "mean_creature_count": -0.0616000000000001,
+        "mean_attack_eligible_creature_count": -0.04580000000000006,
+        "mean_nominal_dorks_in_play": -0.07406666666666667,
+        "mean_functional_dorks_in_play": -0.07346666666666668,
+        "pct_zero_functional_dorks_in_play": 0.057666666666666644,
+        "pct_two_plus_functional_dorks_in_play": -0.014933333333333333,
+        "kinnan_active_rate": 0.00013333333333333253,
+        "mean_gaea_cradle_structural_ceiling_G": -0.0616000000000001,
+        "kinnan_active_and_functional_dorks_2plus_rate": -0.00013333333333333334
+      }
+    }
+  },
+  "required_key_number": {
+    "T2_mean_functional_dorks_in_play_delta_A_to_B": -0.06086666666666665,
+    "interpretation": "Direct measure of the network-SIZE cost (not just engine-probability cost, which E1 covers) of losing Avacyn's Pilgrim: the average number of fewer live mana-producing creatures on the battlefield at T2 in the 4-dork config vs the 5-dork reference, both without Lotho."
+  }
+}

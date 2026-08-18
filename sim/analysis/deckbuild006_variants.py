@@ -130,6 +130,13 @@ def deckbuild006_cards_pool(base_rows):
             PILGRIM_NAME, cache[prev_by_name[PILGRIM_NAME]["scryfall_id"]]
         )
     merged[PLACEHOLDER_NAME] = dict(PLACEHOLDER_CARD_DATA, name=PLACEHOLDER_NAME)
+    # Treasure Token is never a real decklist entry (it's a token Lotho creates in-game) but every
+    # config needs its row data available for state.cards lookups the moment
+    # deckbuild006_cards.apply_lotho_trigger_if_any() appends one to nonland_perms - present in
+    # ALL configs (not just the Lotho ones) so a stray lookup never KeyErrors even where it can
+    # never actually be created.
+    treasure = deckbuild006_cards.NEW_CARD_DATA[deckbuild006_cards.TREASURE_NAME]
+    merged[deckbuild006_cards.TREASURE_NAME] = dict(treasure, name=deckbuild006_cards.TREASURE_NAME)
     return merged
 
 
