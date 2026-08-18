@@ -1,0 +1,232 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild006-v1",
+  "subject_deck_hash": "856e02c0ed50dd577eaf00b3e23fb5ab91f509cbd997c24824c34ed02a0893ad",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_006_E1_EARLY_COST",
+  "operational_definitions_note": "T2_autonomous_engine excludes Kinnan/Deathrite Shaman/Gaea's Cradle (mana tools, not independent value engines) - identical definition to DECKBUILD-004's E1, reused verbatim so results are comparable without a methodology confound. color_failure_rate = 1 - all_wubg at T3.",
+  "paired_seed_note": "Same RNG seed drives both variants' draws (project convention) - NOT a literal same-7-cards guarantee, since the two variants' underlying card lists differ.",
+  "census_by_variant": {
+    "A_5D_NO_LOTHO": {
+      "T1_premium_engine": 0.059333333333333335,
+      "T2_any_engine": 0.24313333333333334,
+      "T2_autonomous_engine": 0.19953333333333334,
+      "T2_engine_plus_interaction_retained": 0.0102,
+      "T2_engine_plus_persistent_mana_remaining": 0.09706666666666666,
+      "T3_two_plus_engines": 0.059666666666666666,
+      "T1_functional_mana": 0.08846666666666667,
+      "T2_functional_mana": 0.7742,
+      "T3_functional_mana": 0.8351333333333333,
+      "color_failure_rate_T3": 0.46066666666666667,
+      "mean_final_hand_size_T3": 4.108466666666667,
+      "keep_rate_7": 0.51625,
+      "keep_rate_6": 0.8400516795865633,
+      "keep_rate_5": 0.8449111470113085,
+      "average_final_hand_size": 6.438875
+    },
+    "B_4D_NO_LOTHO": {
+      "T1_premium_engine": 0.062266666666666665,
+      "T2_any_engine": 0.2438,
+      "T2_autonomous_engine": 0.199,
+      "T2_engine_plus_interaction_retained": 0.010133333333333333,
+      "T2_engine_plus_persistent_mana_remaining": 0.09573333333333334,
+      "T3_two_plus_engines": 0.05873333333333333,
+      "T1_functional_mana": 0.08846666666666667,
+      "T2_functional_mana": 0.7669333333333334,
+      "T3_functional_mana": 0.8283333333333334,
+      "color_failure_rate_T3": 0.4639333333333333,
+      "mean_final_hand_size_T3": 4.181,
+      "keep_rate_7": 0.514875,
+      "keep_rate_6": 0.8363823756763721,
+      "keep_rate_5": 0.84251968503937,
+      "average_final_hand_size": 6.4355
+    },
+    "C_5D_LOTHO": {
+      "T1_premium_engine": 0.0586,
+      "T2_any_engine": 0.24773333333333333,
+      "T2_autonomous_engine": 0.20393333333333333,
+      "T2_engine_plus_interaction_retained": 0.010133333333333333,
+      "T2_engine_plus_persistent_mana_remaining": 0.09566666666666666,
+      "T3_two_plus_engines": 0.060333333333333336,
+      "T1_functional_mana": 0.08726666666666667,
+      "T2_functional_mana": 0.7758,
+      "T3_functional_mana": 0.8336666666666667,
+      "color_failure_rate_T3": 0.4562,
+      "mean_final_hand_size_T3": 4.120466666666666,
+      "keep_rate_7": 0.513375,
+      "keep_rate_6": 0.8371435910608785,
+      "keep_rate_5": 0.8438485804416404,
+      "average_final_hand_size": 6.434125
+    },
+    "D_4D_LOTHO": {
+      "T1_premium_engine": 0.06133333333333333,
+      "T2_any_engine": 0.24813333333333334,
+      "T2_autonomous_engine": 0.20246666666666666,
+      "T2_engine_plus_interaction_retained": 0.01,
+      "T2_engine_plus_persistent_mana_remaining": 0.09246666666666667,
+      "T3_two_plus_engines": 0.05753333333333333,
+      "T1_functional_mana": 0.0856,
+      "T2_functional_mana": 0.7721333333333333,
+      "T3_functional_mana": 0.8313333333333334,
+      "color_failure_rate_T3": 0.4626,
+      "mean_final_hand_size_T3": 4.168266666666667,
+      "keep_rate_7": 0.5085,
+      "keep_rate_6": 0.8367243133265514,
+      "keep_rate_5": 0.8317757009345794,
+      "average_final_hand_size": 6.42825
+    }
+  },
+  "comparisons": {
+    "A_5D_NO_LOTHO_vs_B_4D_NO_LOTHO": {
+      "census_delta": {
+        "T1_premium_engine": 0.0029333333333333295,
+        "T2_any_engine": 0.0006666666666666488,
+        "T2_autonomous_engine": -0.0005333333333333301,
+        "T2_engine_plus_interaction_retained": -6.6666666666668e-05,
+        "T2_engine_plus_persistent_mana_remaining": -0.0013333333333333253,
+        "T3_two_plus_engines": -0.0009333333333333346,
+        "T1_functional_mana": 0.0,
+        "T2_functional_mana": -0.0072666666666666435,
+        "T3_functional_mana": -0.006799999999999917,
+        "color_failure_rate_T3": 0.00326666666666664,
+        "mean_final_hand_size_T3": 0.07253333333333334,
+        "keep_rate_7": -0.001375000000000015,
+        "keep_rate_6": -0.0036693039101912683,
+        "keep_rate_5": -0.0023914619719385133,
+        "average_final_hand_size": -0.003375000000000128
+      },
+      "flip_metrics": {
+        "sample_size": 8000,
+        "keep_A_ship_B_rate": 0.010625,
+        "ship_A_keep_B_rate": 0.005375,
+        "both_agree_rate": 0.984,
+        "mean_engine_turn_delta_B_minus_A": -0.015217391304347827,
+        "pct_hands_engine_only_reachable_in_B": 0.005625,
+        "note": "A is the first-named variant, B the second. Paired-seed = same RNG seed drives both variants' draws (project convention), NOT a literal same-7-cards guarantee since the two variants' card lists differ."
+      }
+    },
+    "A_5D_NO_LOTHO_vs_C_5D_LOTHO": {
+      "census_delta": {
+        "T1_premium_engine": -0.0007333333333333358,
+        "T2_any_engine": 0.004599999999999993,
+        "T2_autonomous_engine": 0.004399999999999987,
+        "T2_engine_plus_interaction_retained": -6.6666666666668e-05,
+        "T2_engine_plus_persistent_mana_remaining": -0.0013999999999999985,
+        "T3_two_plus_engines": 0.0006666666666666696,
+        "T1_functional_mana": -0.0011999999999999927,
+        "T2_functional_mana": 0.0016000000000000458,
+        "T3_functional_mana": -0.0014666666666666162,
+        "color_failure_rate_T3": -0.004466666666666674,
+        "mean_final_hand_size_T3": 0.011999999999999567,
+        "keep_rate_7": -0.002874999999999961,
+        "keep_rate_6": -0.0029080885256848044,
+        "keep_rate_5": -0.0010625665696681885,
+        "average_final_hand_size": -0.004750000000000476
+      },
+      "flip_metrics": {
+        "sample_size": 8000,
+        "keep_A_ship_B_rate": 0.061875,
+        "ship_A_keep_B_rate": 0.06175,
+        "both_agree_rate": 0.876375,
+        "mean_engine_turn_delta_B_minus_A": 0.006256517205422315,
+        "pct_hands_engine_only_reachable_in_B": 0.058,
+        "note": "A is the first-named variant, B the second. Paired-seed = same RNG seed drives both variants' draws (project convention), NOT a literal same-7-cards guarantee since the two variants' card lists differ."
+      }
+    },
+    "B_4D_NO_LOTHO_vs_D_4D_LOTHO": {
+      "census_delta": {
+        "T1_premium_engine": -0.0009333333333333346,
+        "T2_any_engine": 0.004333333333333356,
+        "T2_autonomous_engine": 0.0034666666666666457,
+        "T2_engine_plus_interaction_retained": -0.00013333333333333253,
+        "T2_engine_plus_persistent_mana_remaining": -0.0032666666666666677,
+        "T3_two_plus_engines": -0.0011999999999999997,
+        "T1_functional_mana": -0.00286666666666667,
+        "T2_functional_mana": 0.005199999999999982,
+        "T3_functional_mana": 0.0030000000000000027,
+        "color_failure_rate_T3": -0.0013333333333332975,
+        "mean_final_hand_size_T3": -0.012733333333333263,
+        "keep_rate_7": -0.0063750000000000195,
+        "keep_rate_6": 0.00034193765017931366,
+        "keep_rate_5": -0.010743984104790605,
+        "average_final_hand_size": -0.007249999999999979
+      },
+      "flip_metrics": {
+        "sample_size": 8000,
+        "keep_A_ship_B_rate": 0.1905,
+        "ship_A_keep_B_rate": 0.196,
+        "both_agree_rate": 0.6135,
+        "mean_engine_turn_delta_B_minus_A": 0.03934593765968319,
+        "pct_hands_engine_only_reachable_in_B": 0.17225,
+        "note": "A is the first-named variant, B the second. Paired-seed = same RNG seed drives both variants' draws (project convention), NOT a literal same-7-cards guarantee since the two variants' card lists differ."
+      }
+    },
+    "C_5D_LOTHO_vs_D_4D_LOTHO": {
+      "census_delta": {
+        "T1_premium_engine": 0.0027333333333333307,
+        "T2_any_engine": 0.00040000000000001146,
+        "T2_autonomous_engine": -0.0014666666666666717,
+        "T2_engine_plus_interaction_retained": -0.00013333333333333253,
+        "T2_engine_plus_persistent_mana_remaining": -0.0031999999999999945,
+        "T3_two_plus_engines": -0.002800000000000004,
+        "T1_functional_mana": -0.0016666666666666774,
+        "T2_functional_mana": -0.003666666666666707,
+        "T3_functional_mana": -0.0023333333333332984,
+        "color_failure_rate_T3": 0.006400000000000017,
+        "mean_final_hand_size_T3": 0.04780000000000051,
+        "keep_rate_7": -0.004875000000000074,
+        "keep_rate_6": -0.0004192777343271503,
+        "keep_rate_5": -0.01207287950706093,
+        "average_final_hand_size": -0.0058749999999996305
+      },
+      "flip_metrics": {
+        "sample_size": 8000,
+        "keep_A_ship_B_rate": 0.17825,
+        "ship_A_keep_B_rate": 0.178625,
+        "both_agree_rate": 0.643125,
+        "mean_engine_turn_delta_B_minus_A": 0.00860832137733142,
+        "pct_hands_engine_only_reachable_in_B": 0.1555,
+        "note": "A is the first-named variant, B the second. Paired-seed = same RNG seed drives both variants' draws (project convention), NOT a literal same-7-cards guarantee since the two variants' card lists differ."
+      }
+    },
+    "A_5D_NO_LOTHO_vs_D_4D_LOTHO": {
+      "census_delta": {
+        "T1_premium_engine": 0.001999999999999995,
+        "T2_any_engine": 0.0050000000000000044,
+        "T2_autonomous_engine": 0.0029333333333333156,
+        "T2_engine_plus_interaction_retained": -0.00020000000000000052,
+        "T2_engine_plus_persistent_mana_remaining": -0.004599999999999993,
+        "T3_two_plus_engines": -0.0021333333333333343,
+        "T1_functional_mana": -0.00286666666666667,
+        "T2_functional_mana": -0.002066666666666661,
+        "T3_functional_mana": -0.0037999999999999146,
+        "color_failure_rate_T3": 0.0019333333333333425,
+        "mean_final_hand_size_T3": 0.059800000000000075,
+        "keep_rate_7": -0.007750000000000035,
+        "keep_rate_6": -0.0033273662600119547,
+        "keep_rate_5": -0.013135446076729118,
+        "average_final_hand_size": -0.010625000000000107
+      },
+      "flip_metrics": {
+        "sample_size": 8000,
+        "keep_A_ship_B_rate": 0.193125,
+        "ship_A_keep_B_rate": 0.193375,
+        "both_agree_rate": 0.6135,
+        "mean_engine_turn_delta_B_minus_A": 0.019908116385911178,
+        "pct_hands_engine_only_reachable_in_B": 0.172,
+        "note": "A is the first-named variant, B the second. Paired-seed = same RNG seed drives both variants' draws (project convention), NOT a literal same-7-cards guarantee since the two variants' card lists differ."
+      }
+    }
+  },
+  "required_key_number": {
+    "exact_pp_change_T2_engine_probability_A_5D_NO_LOTHO_to_B_4D_NO_LOTHO": 0.06666666666666488,
+    "interpretation_band": "trivial",
+    "compare_to_deckbuild004_six_to_five_result": "DECKBUILD-004's six->five dork transition (Elves of Deep Shadow->Neoform) measured +0.14pp T2-engine change (~neutral). This E1 run's five->four number above is this task's own independent measurement, computed with the identical T2_autonomous_engine/T2_any_engine definitions and paired-seed methodology - see results/solo_baseline/deckbuild004_e1_early_cost.json for the original number if a live side-by-side is needed; not re-asserted here as a fact to avoid drift if that file is ever regenerated."
+  }
+}
