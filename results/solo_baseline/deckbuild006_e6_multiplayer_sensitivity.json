@@ -1,0 +1,48 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild006-v1",
+  "subject_deck_hash": "856e02c0ed50dd577eaf00b3e23fb5ab91f509cbd997c24824c34ed02a0893ad",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_006_E6_MULTIPLAYER_SENSITIVITY",
+  "confidence": {
+    "level": "low",
+    "reason": "No tournament-replay or per-turn-spell-count calibration source exists in this project for opponent behavior by pod archetype; SCENARIO_BANDS' probabilities are explicitly labeled ASSUMPTIONS chosen to bracket plausible cEDH pod behavior, not measured or fit to any dataset."
+  },
+  "architectural_invisibility_note": "This solo engine structurally cannot observe an opponent casting a spell at any turn count - not a low-confidence estimate of something it could in principle see, the same category as Talion's and Seedborn Muse's opponent-dependent triggers (DECKBUILD-004's established disclosure). E5's cumulative_lotho_triggers numbers are therefore a real FLOOR on Lotho's total value (self-triggers only) - everything in this module is additive upside on top of that floor, in an explicitly labeled scenario, not a replacement for it.",
+  "opponent_count_assumed": 3,
+  "turns_modeled": 4,
+  "scenario_bands": {
+    "LOW_INTERACTION_POD": {
+      "p_opponent_casts_2nd_spell_per_turn": 0.1,
+      "rationale": "Slow, land-light, or single-action-per-turn opponents (e.g. a grindy stax or ramp pod) - a real second spell in one turn is uncommon.",
+      "expected_additional_treasures_from_opponents_over_turns_modeled": 1.2000000000000002,
+      "expected_additional_life_lost_from_opponents_over_turns_modeled": 1.2000000000000002
+    },
+    "TYPICAL_CEDH_POD": {
+      "p_opponent_casts_2nd_spell_per_turn": 0.3,
+      "rationale": "A representative competitive pod mixing rocks/dorks with spells - a second spell (e.g. a rock plus a tutor, or two cheap interaction pieces) is a regular but not universal occurrence.",
+      "expected_additional_treasures_from_opponents_over_turns_modeled": 3.5999999999999996,
+      "expected_additional_life_lost_from_opponents_over_turns_modeled": 3.5999999999999996
+    },
+    "HIGH_VELOCITY_POD": {
+      "p_opponent_casts_2nd_spell_per_turn": 0.55,
+      "rationale": "Fast combo-dense or storm-adjacent pods where multi-spell turns are the norm rather than the exception.",
+      "expected_additional_treasures_from_opponents_over_turns_modeled": 6.6000000000000005,
+      "expected_additional_life_lost_from_opponents_over_turns_modeled": 6.6000000000000005
+    }
+  },
+  "required_key_number": {
+    "typical_pod_expected_additional_treasures_T3_to_T6": 3.5999999999999996,
+    "band_range_low_to_high": [
+      1.2000000000000002,
+      6.6000000000000005
+    ],
+    "interpretation": "Under the TYPICAL_CEDH_POD assumption, Lotho generates an expected 3.6 extra Treasures (and 3.6 life lost) from opponents alone across the 4 turns modeled (T3-T6), ranging 1.2-6.6 across the LOW-to-HIGH bands, ON TOP OF E5's measured self-trigger floor - a real, structurally significant value driver this solo engine cannot itself simulate. This is presented as a labeled, uncalibrated sensitivity band, not a claimed real-game expected value - see report_policy's explicit instruction against overstating scenario-derived numbers."
+  }
+}

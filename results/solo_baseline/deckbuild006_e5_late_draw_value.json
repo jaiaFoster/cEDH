@@ -1,0 +1,324 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild006-v1",
+  "subject_deck_hash": "856e02c0ed50dd577eaf00b3e23fb5ab91f509cbd997c24824c34ed02a0893ad",
+  "subject_deck_card_count": 98,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_006_E5_LATE_DRAW_VALUE",
+  "max_turn_note": "Extends the same validated T1-3 engine to T1-T6 - not a new model, a longer run of the identical develop_turn() loop (no turn-3 cap exists in that function itself). First time this project has looked past T3; not directly comparable to prior T1-3-only census tables without matching the turn number.",
+  "lotho_self_trigger_only_note": "cumulative_lotho_triggers/life_lost counts ONLY the pilot's own second-spell triggers (the sole source this solo engine can see) - opponent second-spell triggers, Lotho's other real value driver in an actual pod, are architecturally invisible here and covered qualitatively, with explicit scenario bands, by E6.",
+  "by_turn": {
+    "A_5D_NO_LOTHO": {
+      "T1": {
+        "any_engine_active_rate": 0.1115,
+        "two_plus_engines_active_rate": 0.00075,
+        "functional_mana_rate": 0.0905,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T2": {
+        "any_engine_active_rate": 0.243875,
+        "two_plus_engines_active_rate": 0.0155,
+        "functional_mana_rate": 0.77525,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T3": {
+        "any_engine_active_rate": 0.410125,
+        "two_plus_engines_active_rate": 0.057875,
+        "functional_mana_rate": 0.835375,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T4": {
+        "any_engine_active_rate": 0.5805,
+        "two_plus_engines_active_rate": 0.1735,
+        "functional_mana_rate": 0.87725,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T5": {
+        "any_engine_active_rate": 0.681,
+        "two_plus_engines_active_rate": 0.304,
+        "functional_mana_rate": 0.91125,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T6": {
+        "any_engine_active_rate": 0.74975,
+        "two_plus_engines_active_rate": 0.3985,
+        "functional_mana_rate": 0.93425,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      }
+    },
+    "B_4D_NO_LOTHO": {
+      "T1": {
+        "any_engine_active_rate": 0.116375,
+        "two_plus_engines_active_rate": 0.000875,
+        "functional_mana_rate": 0.090625,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T2": {
+        "any_engine_active_rate": 0.2455,
+        "two_plus_engines_active_rate": 0.015125,
+        "functional_mana_rate": 0.767875,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T3": {
+        "any_engine_active_rate": 0.408125,
+        "two_plus_engines_active_rate": 0.05625,
+        "functional_mana_rate": 0.828875,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T4": {
+        "any_engine_active_rate": 0.57425,
+        "two_plus_engines_active_rate": 0.170375,
+        "functional_mana_rate": 0.871,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T5": {
+        "any_engine_active_rate": 0.671375,
+        "two_plus_engines_active_rate": 0.2955,
+        "functional_mana_rate": 0.905375,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T6": {
+        "any_engine_active_rate": 0.741125,
+        "two_plus_engines_active_rate": 0.389875,
+        "functional_mana_rate": 0.9295,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      }
+    },
+    "C_5D_LOTHO": {
+      "T1": {
+        "any_engine_active_rate": 0.108125,
+        "two_plus_engines_active_rate": 0.00075,
+        "functional_mana_rate": 0.0885,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T2": {
+        "any_engine_active_rate": 0.245875,
+        "two_plus_engines_active_rate": 0.017375,
+        "functional_mana_rate": 0.77175,
+        "mean_cumulative_lotho_triggers": 0.000625,
+        "mean_cumulative_life_lost_to_lotho": 0.000625,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.000625
+      },
+      "T3": {
+        "any_engine_active_rate": 0.4145,
+        "two_plus_engines_active_rate": 0.061125,
+        "functional_mana_rate": 0.83,
+        "mean_cumulative_lotho_triggers": 0.00275,
+        "mean_cumulative_life_lost_to_lotho": 0.00275,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0025
+      },
+      "T4": {
+        "any_engine_active_rate": 0.587625,
+        "two_plus_engines_active_rate": 0.180625,
+        "functional_mana_rate": 0.874125,
+        "mean_cumulative_lotho_triggers": 0.011875,
+        "mean_cumulative_life_lost_to_lotho": 0.011875,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.01025
+      },
+      "T5": {
+        "any_engine_active_rate": 0.690625,
+        "two_plus_engines_active_rate": 0.317,
+        "functional_mana_rate": 0.909625,
+        "mean_cumulative_lotho_triggers": 0.021875,
+        "mean_cumulative_life_lost_to_lotho": 0.021875,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.016625
+      },
+      "T6": {
+        "any_engine_active_rate": 0.75925,
+        "two_plus_engines_active_rate": 0.417625,
+        "functional_mana_rate": 0.933875,
+        "mean_cumulative_lotho_triggers": 0.030125,
+        "mean_cumulative_life_lost_to_lotho": 0.030125,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.022125
+      }
+    },
+    "D_4D_LOTHO": {
+      "T1": {
+        "any_engine_active_rate": 0.112875,
+        "two_plus_engines_active_rate": 0.0005,
+        "functional_mana_rate": 0.08775,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T2": {
+        "any_engine_active_rate": 0.247625,
+        "two_plus_engines_active_rate": 0.018875,
+        "functional_mana_rate": 0.76,
+        "mean_cumulative_lotho_triggers": 0.000875,
+        "mean_cumulative_life_lost_to_lotho": 0.000875,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.000875
+      },
+      "T3": {
+        "any_engine_active_rate": 0.414625,
+        "two_plus_engines_active_rate": 0.064375,
+        "functional_mana_rate": 0.82025,
+        "mean_cumulative_lotho_triggers": 0.0045,
+        "mean_cumulative_life_lost_to_lotho": 0.0045,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.004375
+      },
+      "T4": {
+        "any_engine_active_rate": 0.58275,
+        "two_plus_engines_active_rate": 0.179,
+        "functional_mana_rate": 0.867375,
+        "mean_cumulative_lotho_triggers": 0.014375,
+        "mean_cumulative_life_lost_to_lotho": 0.014375,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.013
+      },
+      "T5": {
+        "any_engine_active_rate": 0.686,
+        "two_plus_engines_active_rate": 0.3045,
+        "functional_mana_rate": 0.902875,
+        "mean_cumulative_lotho_triggers": 0.0255,
+        "mean_cumulative_life_lost_to_lotho": 0.0255,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.021
+      },
+      "T6": {
+        "any_engine_active_rate": 0.758375,
+        "two_plus_engines_active_rate": 0.4065,
+        "functional_mana_rate": 0.9295,
+        "mean_cumulative_lotho_triggers": 0.034625,
+        "mean_cumulative_life_lost_to_lotho": 0.034625,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.027625
+      }
+    }
+  },
+  "deltas": {
+    "A_5D_NO_LOTHO_vs_B_4D_NO_LOTHO": {
+      "T1": {
+        "any_engine_active_rate": 0.004875000000000004,
+        "two_plus_engines_active_rate": 0.000125,
+        "functional_mana_rate": 0.0001250000000000001,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T2": {
+        "any_engine_active_rate": 0.0016249999999999876,
+        "two_plus_engines_active_rate": -0.00037500000000000033,
+        "functional_mana_rate": -0.00737500000000002,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T3": {
+        "any_engine_active_rate": -0.0020000000000000018,
+        "two_plus_engines_active_rate": -0.0016250000000000014,
+        "functional_mana_rate": -0.00649999999999995,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T4": {
+        "any_engine_active_rate": -0.006249999999999978,
+        "two_plus_engines_active_rate": -0.003124999999999989,
+        "functional_mana_rate": -0.006249999999999978,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T5": {
+        "any_engine_active_rate": -0.009624999999999995,
+        "two_plus_engines_active_rate": -0.008500000000000008,
+        "functional_mana_rate": -0.005874999999999964,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T6": {
+        "any_engine_active_rate": -0.008624999999999994,
+        "two_plus_engines_active_rate": -0.008624999999999994,
+        "functional_mana_rate": -0.004750000000000032,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      }
+    },
+    "A_5D_NO_LOTHO_vs_D_4D_LOTHO": {
+      "T1": {
+        "any_engine_active_rate": 0.0013750000000000012,
+        "two_plus_engines_active_rate": -0.00025,
+        "functional_mana_rate": -0.0027500000000000024,
+        "mean_cumulative_lotho_triggers": 0.0,
+        "mean_cumulative_life_lost_to_lotho": 0.0,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.0
+      },
+      "T2": {
+        "any_engine_active_rate": 0.0037500000000000033,
+        "two_plus_engines_active_rate": 0.0033749999999999995,
+        "functional_mana_rate": -0.015249999999999986,
+        "mean_cumulative_lotho_triggers": 0.000875,
+        "mean_cumulative_life_lost_to_lotho": 0.000875,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.000875
+      },
+      "T3": {
+        "any_engine_active_rate": 0.004500000000000004,
+        "two_plus_engines_active_rate": 0.006499999999999999,
+        "functional_mana_rate": -0.015124999999999944,
+        "mean_cumulative_lotho_triggers": 0.0045,
+        "mean_cumulative_life_lost_to_lotho": 0.0045,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.004375
+      },
+      "T4": {
+        "any_engine_active_rate": 0.0022499999999999742,
+        "two_plus_engines_active_rate": 0.005500000000000005,
+        "functional_mana_rate": -0.009874999999999967,
+        "mean_cumulative_lotho_triggers": 0.014375,
+        "mean_cumulative_life_lost_to_lotho": 0.014375,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.013
+      },
+      "T5": {
+        "any_engine_active_rate": 0.0050000000000000044,
+        "two_plus_engines_active_rate": 0.0005000000000000004,
+        "functional_mana_rate": -0.008375000000000021,
+        "mean_cumulative_lotho_triggers": 0.0255,
+        "mean_cumulative_life_lost_to_lotho": 0.0255,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.021
+      },
+      "T6": {
+        "any_engine_active_rate": 0.008624999999999994,
+        "two_plus_engines_active_rate": 0.007999999999999952,
+        "functional_mana_rate": -0.004750000000000032,
+        "mean_cumulative_lotho_triggers": 0.034625,
+        "mean_cumulative_life_lost_to_lotho": 0.034625,
+        "pct_at_least_one_lotho_trigger_by_this_turn": 0.027625
+      }
+    }
+  },
+  "required_key_number": {
+    "T6_any_engine_active_delta_A_to_D": 0.8624999999999994,
+    "T6_mean_cumulative_lotho_triggers_in_D": 0.034625,
+    "interpretation": "If the T2/T3 structural gap (E1/E2) does not widen by T6, the 5->4 transition's cost is confirmed flat, not compounding, over this engine's full modeled horizon. The Lotho self-trigger count shows the FLOOR of Lotho's real value (opponent triggers, uncounted here, can only add to it - see E6)."
+  }
+}
