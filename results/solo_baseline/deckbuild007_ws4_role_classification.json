@@ -1,0 +1,173 @@
+{
+  "phase": "SIM_DECKBUILD_007_WS4_ROLE_CLASSIFICATION",
+  "primary_role_counts": {
+    "mana_acceleration": 36,
+    "card_engine": 10,
+    "mana_engine": 6,
+    "tutor_conversion": 15,
+    "interaction": 13,
+    "proactive_protection": 2,
+    "combo_core": 5,
+    "toolbox_clone_utility": 12
+  },
+  "primary_role_lists": {
+    "mana_acceleration": [
+      "Ancient Tomb",
+      "Birds of Paradise",
+      "Chrome Mox",
+      "City of Brass",
+      "City of Traitors",
+      "Deathrite Shaman",
+      "Delighted Halfling",
+      "Devoted Druid",
+      "Elvish Spirit Guide",
+      "Exotic Orchard",
+      "Gemstone Caverns",
+      "Lotus Petal",
+      "Mana Confluence",
+      "Mana Vault",
+      "Mox Amber",
+      "Mox Diamond",
+      "Noble Hierarch",
+      "Sol Ring",
+      "Command Tower",
+      "Dark Ritual",
+      "Bayou",
+      "Flooded Strand",
+      "Marsh Flats",
+      "Misty Rainforest",
+      "Polluted Delta",
+      "Savannah",
+      "Scalding Tarn",
+      "Scrubland",
+      "Starting Town",
+      "Talon Gates of Madara",
+      "Tropical Island",
+      "Tundra",
+      "Underground Sea",
+      "Verdant Catacombs",
+      "Windswept Heath",
+      "Wooded Foothills"
+    ],
+    "card_engine": [
+      "Archivist of Oghma",
+      "Esper Sentinel",
+      "Mystic Remora",
+      "Rhystic Study",
+      "Smothering Tithe",
+      "Sylvan Library",
+      "Faerie Mastermind",
+      "Orcish Bowmasters",
+      "Runic Armasaur",
+      "The Cabbage Merchant"
+    ],
+    "mana_engine": [
+      "Kinnan, Bonder Prodigy",
+      "Gaea's Cradle",
+      "Badgermole Cub",
+      "Lotho, Corrupt Shirriff",
+      "Enduring Vitality",
+      "Seedborn Muse"
+    ],
+    "tutor_conversion": [
+      "Chord of Calling",
+      "Crop Rotation",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Ranger-Captain of Eos",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor",
+      "Birthing Pod",
+      "Neoform",
+      "Birthing Ritual"
+    ],
+    "interaction": [
+      "Endurance",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Flusterstorm",
+      "Force of Negation",
+      "Force of Will",
+      "Mental Misstep",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Silence",
+      "Subtlety",
+      "Veil of Summer",
+      "Commandeer"
+    ],
+    "proactive_protection": [
+      "Grand Abolisher",
+      "Talion, the Kindly Lord"
+    ],
+    "combo_core": [
+      "Colossal Skyturtle",
+      "Gilded Drake",
+      "Abhorrent Oculus",
+      "Derevi, Empyrial Tactician",
+      "Swift Reconfiguration"
+    ],
+    "toolbox_clone_utility": [
+      "Clever Impersonator",
+      "Sowing Mycospawn",
+      "Hazel's Brewmaster",
+      "Gleaming Splendor",
+      "Oboro Breezecaller",
+      "Biomancer's Familiar",
+      "Delney, Streetwise Lookout",
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Minamo, School at Water's Edge",
+      "Formidable Speaker",
+      "Mockingbird"
+    ]
+  },
+  "secondary_roles": {
+    "Gaea's Cradle": [
+      "mana_acceleration"
+    ],
+    "Kinnan, Bonder Prodigy": [
+      "combo_core"
+    ],
+    "Fierce Guardianship": [
+      "proactive_protection"
+    ],
+    "Silence": [
+      "proactive_protection"
+    ],
+    "Talion, the Kindly Lord": [
+      "card_engine"
+    ],
+    "Devoted Druid": [
+      "combo_core"
+    ],
+    "Grand Abolisher": [
+      "mana_acceleration",
+      "card_engine"
+    ],
+    "Deathrite Shaman": [
+      "card_engine"
+    ],
+    "Birthing Ritual": [
+      "mana_acceleration"
+    ],
+    "The Cabbage Merchant": [
+      "mana_engine"
+    ],
+    "Formidable Speaker": [
+      "tutor_conversion"
+    ],
+    "Seedborn Muse": [
+      "combo_core"
+    ],
+    "Orcish Bowmasters": [
+      "interaction"
+    ]
+  },
+  "role_saturation_note": "mana_acceleration (35 primary, dominated by the mana base itself) and tutor_conversion (15) are the two deepest categories by raw count, but the mana base is load-bearing (lands aren't cut candidates in this analysis) - the MEANINGFULLY saturated, cuttable-without-a-coverage-hole categories are card_engine (10, six of which are 'passive value engines' with heavy overlap: Archivist/Esper Sentinel/Mystic Remora/Rhystic Study/Smothering Tithe/Sylvan Library all independently generate card advantage with no shared dependency) and tutor_conversion (15, several of which reach overlapping target sets)."
+}
