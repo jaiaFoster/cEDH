@@ -195,6 +195,26 @@ class HandState:
         # hand, consumed (hand -> exile) only if actually used to pay for something.
         if "Elvish Spirit Guide" in self.hand:
             out.append(("__esg_virtual__", {"G"}, 1))
+        # Deathrite Shaman graveyard-fetch mana (SIM-DECKBUILD-007 mandatory correction): real
+        # Oracle text "{T}: Exile a land card from a graveyard: Add one mana of any color that
+        # land could produce." Web-verified: fetchlands DO qualify (real competitive precedent -
+        # Modern/Legacy Jund runs heavy fetches specifically to fuel Deathrite), with the color
+        # options being whatever basic land type(s) that fetch searches for (its "could produce"
+        # colors). Tied to Deathrite's OWN perm ref (not a separate synthetic ref) so the existing
+        # payment engine's capacity tracking and _commit_payment's tap-marking work unchanged -
+        # using this taps Deathrite for the turn, correctly blocking its other two {T} abilities
+        # (not modeled here) for that turn too, a free correct side effect of reusing the same ref.
+        deathrite_perm = next(
+            (p for p in self.nonland_perms if p.name == "Deathrite Shaman" and not p.tapped
+             and p.entered_turn != self.turn), None,
+        )
+        if deathrite_perm is not None:
+            reachable_colors = set()
+            for gy_card in self.graveyard:
+                if gy_card in FETCH_LAND_TARGET_TYPES:
+                    reachable_colors |= {BASIC_TYPE_COLOR[t] for t in FETCH_LAND_TARGET_TYPES[gy_card]}
+            if reachable_colors:
+                out.append((deathrite_perm, reachable_colors, 1))
         return out
 
     def creature_count(self):
@@ -465,6 +485,18 @@ def _commit_payment(state, plan):
                     state.temp_mana_used_log.append((state.turn, ref.name))
             else:
                 ref.tapped = True
+                if ref.name == "Deathrite Shaman":
+                    # Real Oracle text EXILES the land card - it must leave the graveyard
+                    # permanently (not stay available for a future turn's activation). Deathrite
+                    # is not in MANA_SOURCES, so this is the only path that ever taps a Perm named
+                    # "Deathrite Shaman" - unambiguously the graveyard-fetch-mana ability. Logged
+                    # (not just removed) so _rollback_payment can restore the exact card for
+                    # can_pay_jointly's read-only dry runs.
+                    for gy_card in state.graveyard:
+                        if gy_card in FETCH_LAND_TARGET_TYPES:
+                            state.graveyard.remove(gy_card)
+                            state.temp_mana_used_log.append((state.turn, f"__deathrite_gy__:{gy_card}"))
+                            break
 
 
 def _rollback_payment(state, plans):
@@ -499,6 +531,15 @@ def _rollback_payment(state, plans):
                         state.nonland_perms.append(ref)
                 else:
                     ref.tapped = False
+                    if ref.name == "Deathrite Shaman":
+                        marker = next(
+                            (m for (t, m) in state.temp_mana_used_log
+                             if t == state.turn and m.startswith("__deathrite_gy__:")), None,
+                        )
+                        if marker is not None:
+                            gy_card = marker.split(":", 1)[1]
+                            state.graveyard.append(gy_card)
+                            state.temp_mana_used_log.remove((state.turn, marker))
 
 
 def can_pay_jointly(state, costs):
