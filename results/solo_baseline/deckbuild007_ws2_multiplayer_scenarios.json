@@ -1,0 +1,66 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild007-v1",
+  "subject_deck_hash": "ab704e30d1e660eca99e6dbf8cf2091e6c8906e8d817ea3c45289fca5c4c1d82",
+  "subject_deck_card_count": 99,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_007_WS2_MULTIPLAYER_SCENARIOS",
+  "confidence": {
+    "level": "low",
+    "reason": "Scenario bands, not calibrated - see module docstring."
+  },
+  "lotho_reused_from": "results/solo_baseline/deckbuild006_e5_late_draw_value.json + deckbuild006_e6_multiplayer_sensitivity.json (not re-simulated here)",
+  "talion_default_number_used": 2,
+  "cabbage_merchant": {
+    "scenario_bands": {
+      "LOW_INTERACTION_POD": {
+        "p_opponent_noncreature_spell_per_turn": 0.15000000000000002,
+        "rationale": "Scaled from DECKBUILD-006 E6's Lotho LOW band (0.10) - any noncreature spell is a broader trigger than specifically a second spell.",
+        "expected_foods_made_T_to_T+4": 1.8000000000000003,
+        "expected_foods_lost_to_combat_T_to_T+4": 1.3333333333333333,
+        "expected_net_foods": 0.466666666666667,
+        "expected_mana_from_foods": 0.2333333333333335
+      },
+      "TYPICAL_CEDH_POD": {
+        "p_opponent_noncreature_spell_per_turn": 0.44999999999999996,
+        "rationale": "Scaled from DECKBUILD-006 E6's Lotho TYPICAL band (0.30).",
+        "expected_foods_made_T_to_T+4": 5.3999999999999995,
+        "expected_foods_lost_to_combat_T_to_T+4": 1.3333333333333333,
+        "expected_net_foods": 4.066666666666666,
+        "expected_mana_from_foods": 2.033333333333333
+      },
+      "HIGH_VELOCITY_POD": {
+        "p_opponent_noncreature_spell_per_turn": 0.8250000000000001,
+        "rationale": "Scaled from DECKBUILD-006 E6's Lotho HIGH band (0.55), capped at 1.0 (a probability).",
+        "expected_foods_made_T_to_T+4": 9.9,
+        "expected_foods_lost_to_combat_T_to_T+4": 1.3333333333333333,
+        "expected_net_foods": 8.566666666666666,
+        "expected_mana_from_foods": 4.283333333333333
+      }
+    },
+    "vs_lotho_note": "Structurally weaker than Lotho on both axes measured: half the exchange rate (2 Foods/mana vs 1 Treasure/mana) and a real attrition risk Lotho's Treasures don't share (combat damage strips Foods)."
+  },
+  "seedborn_muse": {
+    "deterministic_value_by_mana_base": {
+      "3": {
+        "extra_untap_events_before_own_next_turn": 3,
+        "extra_mana_available_before_own_next_turn": 9
+      },
+      "5": {
+        "extra_untap_events_before_own_next_turn": 3,
+        "extra_mana_available_before_own_next_turn": 15
+      },
+      "8": {
+        "extra_untap_events_before_own_next_turn": 3,
+        "extra_mana_available_before_own_next_turn": 24
+      }
+    },
+    "conversion_accelerator_note": "Deterministic (not scenario-based) - triggers on EVERY other player's untap step unconditionally, not on a specific opponent action. In a 4-player pod, grants 3 additional full mana-refresh events BEFORE the controller's own next turn - i.e. real value starting immediately at the first opponent's very next untap step, not deferred to a future turn. Functions as BOTH a near-term conversion accelerator (extra protection/response mana available during opponents' turns, directly relevant to the assignment's 'survive/profit from the first fight' phase) AND a long-game value multiplier (compounds every cycle it survives) - not an either/or.",
+    "pod_4_to_5_unique_target_note": "Re-verified in Workstream 3 (deckbuild007_ws3_conversion_architecture.json: pod_rungs.4_to_5) against the new 101-card pool: Seedborn Muse remains the ONLY MV5 creature this deck runs, so it is still Pod's unique resolver for that rung."
+  }
+}
