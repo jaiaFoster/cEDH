@@ -61,14 +61,20 @@ NEW_CARD_DATA = {
 }
 NEW_CARD_DATA.update(D6_NEW_CARD_DATA)
 
-# Dark Ritual, Birthing Ritual, Carpet of Flowers are all real mana/engine cards - registered so
-# the generic loop can consider them, and so this task's dedicated analysis scripts have a
-# consistent classification to work from. Dark Ritual Residue and Cabbage Merchant are NOT here -
-# residue is a pure bookkeeping object (never cast/classified), Cabbage Merchant's activated Food
-# ability is entirely opponent-fueled (see module docstring in build scripts) and gets no solo
-# engine representation beyond existing as a creature body.
+# Birthing Ritual and Carpet of Flowers are real PERMANENTS (Enchantments) - the generic greedy
+# loop's existing "any permanent type -> create a Perm" cast-execution path already handles them
+# correctly, so they're registered in ACCELERATION for normal auto-casting consideration.
+#
+# Dark Ritual is deliberately EXCLUDED from ACCELERATION/any auto-cast class. It's an Instant with
+# a net-mana effect the generic cast-execution path has no logic for (that path's only two
+# outcomes for a non-permanent-type card are "goes to graveyard" or the two hardcoded Mox Diamond/
+# Chrome Mox special cases) - if auto-cast through the generic path, it would silently pay {B} for
+# zero effect (the card discarded, no mana ever produced), a real correctness bug, not a design
+# choice. Dark Ritual is castable ONLY via try_cast_dark_ritual() below (dedicated, forced-only,
+# matching this project's established BATTLEFIELD_SEARCH_ONLY/Formidable-Speaker-style pattern for
+# mechanics the generic loop cannot execute correctly on its own).
 NEW_ENGINE_CLASSES = {}
-NEW_ACCELERATION = {DARK_RITUAL_NAME, "Birthing Ritual", CARPET_NAME}
+NEW_ACCELERATION = {"Birthing Ritual", CARPET_NAME}
 
 # Dark Ritual Residue reuses the exact Lotus-Petal-style one-shot MANA_SOURCES pattern (see
 # deckbuild006_cards.py's own Treasure Token precedent) - 3 separate Perm objects, each good for

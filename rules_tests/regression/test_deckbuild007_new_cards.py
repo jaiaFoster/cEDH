@@ -116,10 +116,17 @@ def test_dark_ritual_residue_does_not_carry_over_to_next_turn():
     assert state.total_mana_value() == 0
 
 
-def test_biomancers_familiar_and_birthing_ritual_and_carpet_are_registered_acceleration():
-    assert "Dark Ritual" in ACCELERATION
+def test_birthing_ritual_and_carpet_are_registered_acceleration_dark_ritual_is_not():
     assert "Birthing Ritual" in ACCELERATION
     assert d7.CARPET_NAME in ACCELERATION
+    # Dark Ritual is deliberately excluded - see deckbuild007_cards.py's module docstring for why
+    # auto-casting an Instant through the generic permanent-creation path would silently waste it.
+    assert "Dark Ritual" not in ACCELERATION
+
+
+def test_dark_ritual_is_never_auto_cast_by_the_generic_greedy_loop():
+    from opening_hand_policy import _card_class, DEFAULT_PRIORITY
+    assert _card_class("Dark Ritual", CARDS) not in DEFAULT_PRIORITY
 
 
 def test_variant_builder_carpet_instead_of_ritual():

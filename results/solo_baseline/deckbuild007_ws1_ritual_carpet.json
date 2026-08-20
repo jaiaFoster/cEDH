@@ -1,0 +1,168 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild007-v1",
+  "subject_deck_hash": "ab704e30d1e660eca99e6dbf8cf2091e6c8906e8d817ea3c45289fca5c4c1d82",
+  "subject_deck_card_count": 99,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_007_WS1_RITUAL_CARPET",
+  "config_sizes": {
+    "RITUAL_CURRENT": 99,
+    "RITUAL_REMOVED": 98,
+    "CARPET_INSTEAD": 99,
+    "BOTH_FLEX_CUT": 99
+  },
+  "ritual_policy_note": "Purposeful-cast heuristic (see module docstring): cast Ritual on turn T iff it newly enables one of the 4 named targets that isn't cast yet, using turn-start capacity. Not a claim of optimal play - a defined, disclosed proxy.",
+  "carpet_scenario_note": "Carpet's mana output is NOT simulated (opponent-dependent) - see carpet_scenario_bands, evidence_type static_probability, confidence low. Its own cast timing (on_battlefield rate) IS simulated normally below.",
+  "results": {
+    "RITUAL_CURRENT": {
+      "T3_color_failure_rate": 0.46852,
+      "Birthing Pod_cast_by_T1": 0.00276,
+      "Birthing Pod_cast_by_T2": 0.00652,
+      "Birthing Pod_cast_by_T3": 0.014,
+      "Birthing Pod_cast_by_T4": 0.02916,
+      "Talion, the Kindly Lord_cast_by_T1": 0.0,
+      "Talion, the Kindly Lord_cast_by_T2": 0.0004,
+      "Talion, the Kindly Lord_cast_by_T3": 0.00304,
+      "Talion, the Kindly Lord_cast_by_T4": 0.01472,
+      "Smothering Tithe_cast_by_T1": 0.00036,
+      "Smothering Tithe_cast_by_T2": 0.00188,
+      "Smothering Tithe_cast_by_T3": 0.00668,
+      "Smothering Tithe_cast_by_T4": 0.0224,
+      "Seedborn Muse_cast_by_T1": 0.0,
+      "Seedborn Muse_cast_by_T2": 0.00032,
+      "Seedborn Muse_cast_by_T3": 0.00188,
+      "Seedborn Muse_cast_by_T4": 0.01,
+      "ritual_purposeful_use_rate": 0.00224,
+      "ritual_mean_stranded_units_when_used": 1.6964285714285714,
+      "ritual_pct_fully_stranded_when_used": 0.5178571428571429,
+      "ritual_enabled_target_breakdown": {
+        "Seedborn Muse": 12,
+        "Smothering Tithe": 15,
+        "Talion, the Kindly Lord": 10,
+        "Birthing Pod": 19
+      }
+    },
+    "RITUAL_REMOVED": {
+      "T3_color_failure_rate": 0.46516,
+      "Birthing Pod_cast_by_T1": 0.00332,
+      "Birthing Pod_cast_by_T2": 0.0074,
+      "Birthing Pod_cast_by_T3": 0.0158,
+      "Birthing Pod_cast_by_T4": 0.03424,
+      "Talion, the Kindly Lord_cast_by_T1": 0.0,
+      "Talion, the Kindly Lord_cast_by_T2": 8e-05,
+      "Talion, the Kindly Lord_cast_by_T3": 0.00236,
+      "Talion, the Kindly Lord_cast_by_T4": 0.01408,
+      "Smothering Tithe_cast_by_T1": 0.00036,
+      "Smothering Tithe_cast_by_T2": 0.00208,
+      "Smothering Tithe_cast_by_T3": 0.00736,
+      "Smothering Tithe_cast_by_T4": 0.0244,
+      "Seedborn Muse_cast_by_T1": 0.0,
+      "Seedborn Muse_cast_by_T2": 0.00036,
+      "Seedborn Muse_cast_by_T3": 0.00232,
+      "Seedborn Muse_cast_by_T4": 0.01092
+    },
+    "CARPET_INSTEAD": {
+      "T3_color_failure_rate": 0.46948,
+      "Birthing Pod_cast_by_T1": 0.00272,
+      "Birthing Pod_cast_by_T2": 0.006,
+      "Birthing Pod_cast_by_T3": 0.01392,
+      "Birthing Pod_cast_by_T4": 0.03072,
+      "Talion, the Kindly Lord_cast_by_T1": 0.0,
+      "Talion, the Kindly Lord_cast_by_T2": 0.00016,
+      "Talion, the Kindly Lord_cast_by_T3": 0.00216,
+      "Talion, the Kindly Lord_cast_by_T4": 0.01244,
+      "Smothering Tithe_cast_by_T1": 0.00012,
+      "Smothering Tithe_cast_by_T2": 0.00144,
+      "Smothering Tithe_cast_by_T3": 0.00604,
+      "Smothering Tithe_cast_by_T4": 0.0212,
+      "Seedborn Muse_cast_by_T1": 0.0,
+      "Seedborn Muse_cast_by_T2": 0.00024,
+      "Seedborn Muse_cast_by_T3": 0.00256,
+      "Seedborn Muse_cast_by_T4": 0.01076,
+      "carpet_on_battlefield_T1": 0.04364,
+      "carpet_on_battlefield_T2": 0.05992,
+      "carpet_on_battlefield_T3": 0.07312,
+      "carpet_on_battlefield_T4": 0.08544
+    },
+    "BOTH_FLEX_CUT": {
+      "T3_color_failure_rate": 0.46972,
+      "Birthing Pod_cast_by_T1": 0.0028,
+      "Birthing Pod_cast_by_T2": 0.00672,
+      "Birthing Pod_cast_by_T3": 0.0138,
+      "Birthing Pod_cast_by_T4": 0.02952,
+      "Talion, the Kindly Lord_cast_by_T1": 0.0,
+      "Talion, the Kindly Lord_cast_by_T2": 0.00024,
+      "Talion, the Kindly Lord_cast_by_T3": 0.00212,
+      "Talion, the Kindly Lord_cast_by_T4": 0.01216,
+      "Smothering Tithe_cast_by_T1": 0.00016,
+      "Smothering Tithe_cast_by_T2": 0.0016,
+      "Smothering Tithe_cast_by_T3": 0.00624,
+      "Smothering Tithe_cast_by_T4": 0.02032,
+      "Seedborn Muse_cast_by_T1": 0.0,
+      "Seedborn Muse_cast_by_T2": 0.00036,
+      "Seedborn Muse_cast_by_T3": 0.0024,
+      "Seedborn Muse_cast_by_T4": 0.01124,
+      "ritual_purposeful_use_rate": 0.00184,
+      "ritual_mean_stranded_units_when_used": 1.9130434782608696,
+      "ritual_pct_fully_stranded_when_used": 0.6086956521739131,
+      "ritual_enabled_target_breakdown": {
+        "Smothering Tithe": 9,
+        "Seedborn Muse": 17,
+        "Birthing Pod": 10,
+        "Talion, the Kindly Lord": 10
+      },
+      "carpet_on_battlefield_T1": 0.045,
+      "carpet_on_battlefield_T2": 0.06064,
+      "carpet_on_battlefield_T3": 0.0736,
+      "carpet_on_battlefield_T4": 0.08564
+    }
+  },
+  "carpet_scenario_bands": {
+    "SLOW_MIDRANGE_SLOP_POD": {
+      "avg_opponent_islands_by_turn": {
+        "1": 0.3,
+        "2": 0.6,
+        "3": 1.0,
+        "4": 1.4
+      },
+      "rationale": "Midrange/'slop' pods lean less blue-dense on average; still nonzero because blue remains the format's single most-played color even outside dedicated control shells (Rhystic Study/Mystic Remora-style splashes are common)."
+    },
+    "TYPICAL_CEDH_POD": {
+      "avg_opponent_islands_by_turn": {
+        "1": 0.5,
+        "2": 1.0,
+        "3": 1.6,
+        "4": 2.1
+      },
+      "rationale": "Blue is the most staple-dense color in the format by a wide margin - most competitive decks run it as a primary or secondary color. Counts original dual lands with the Island type (Tropical Island/Underground Sea/Tundra), not just basics - a real rules fact, not an assumption."
+    },
+    "FAST_TURBO_BLUE_HEAVY_POD": {
+      "avg_opponent_islands_by_turn": {
+        "1": 0.8,
+        "2": 1.5,
+        "3": 2.3,
+        "4": 3.0
+      },
+      "rationale": "Fast combo/control pods skew even more blue-dense (Thoracle, Rog Si, Kinnan-mirror, stax-control shells) - the scenario where Carpet's design intent (accelerating against blue-heavy tables) should matter most."
+    }
+  },
+  "required_key_numbers": {
+    "ritual_purposeful_use_rate_in_current_build": 0.00224,
+    "ritual_enabled_target_breakdown": {
+      "Seedborn Muse": 12,
+      "Smothering Tithe": 15,
+      "Talion, the Kindly Lord": 10,
+      "Birthing Pod": 19
+    },
+    "ritual_mean_stranded_units_when_used": 1.6964285714285714,
+    "smothering_tithe_T2_delta_ritual_vs_removed_pp": -0.019999999999999987,
+    "birthing_pod_T2_delta_ritual_vs_removed_pp": -0.08800000000000005,
+    "talion_T2_delta_ritual_vs_removed_pp": 0.032,
+    "seedborn_T3_delta_ritual_vs_removed_pp": -0.044000000000000004
+  }
+}

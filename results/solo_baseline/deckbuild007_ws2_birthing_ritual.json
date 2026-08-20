@@ -1,0 +1,50 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild007-v1",
+  "subject_deck_hash": "ab704e30d1e660eca99e6dbf8cf2091e6c8906e8d817ea3c45289fca5c4c1d82",
+  "subject_deck_card_count": 99,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_007_WS2_BIRTHING_RITUAL",
+  "method_note": "Monte Carlo samples of a 7-card draw from the 99-card pool (proxy for the shuffled remaining library's top 7) - see module docstring for the disclosed, CONSERVATIVE simplification (ignores already-seen cards, understating true late-game creature density in the remaining library).",
+  "mycospawn_note": "Sowing Mycospawn's land-search is a CAST trigger, never fires when Ritual puts it into play directly - scored here as a body only, no tutor credit.",
+  "by_rung": {
+    "sac_MV1_find_MV_le_2": {
+      "representative_sac_creature": "Delighted Halfling",
+      "p_any_legal_hit": 0.72695,
+      "p_meaningful_upgrade": 0.577,
+      "p_premium_target": 0.25975,
+      "p_immediate_conversion_target": 0.070325
+    },
+    "sac_MV2_find_MV_le_3": {
+      "representative_sac_creature": "Badgermole Cub",
+      "p_any_legal_hit": 0.904725,
+      "p_meaningful_upgrade": 0.826675,
+      "p_premium_target": 0.311125,
+      "p_immediate_conversion_target": 0.137575
+    },
+    "sac_MV3_find_MV_le_4": {
+      "representative_sac_creature": "Endurance",
+      "p_any_legal_hit": 0.94265,
+      "p_meaningful_upgrade": 0.89375,
+      "p_premium_target": 0.2046,
+      "p_immediate_conversion_target": 0.142375
+    },
+    "sac_MV4_find_MV_le_5": {
+      "representative_sac_creature": "Clever Impersonator",
+      "p_any_legal_hit": 0.95005,
+      "p_meaningful_upgrade": 0.904525,
+      "p_premium_target": 0.07015,
+      "p_immediate_conversion_target": 0.19895
+    }
+  },
+  "required_summary": {
+    "mean_p_any_legal_hit_across_rungs": 0.88109375,
+    "mean_p_premium_target_across_rungs": 0.21140625000000002,
+    "verdict_input": "grindy nondeterministic value"
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "static_probability",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild007-v1",
+  "subject_deck_hash": "ab704e30d1e660eca99e6dbf8cf2091e6c8906e8d817ea3c45289fca5c4c1d82",
+  "subject_deck_card_count": 99,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_007_WS2_BIOMANCERS_FAMILIAR",
+  "method_note": "Deterministic arithmetic sweep, not Monte Carlo - see module docstring.",
+  "reduction_table_by_mana_total": {
+    "2": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": false,
+        "affordable_with": true,
+        "unlocked_by_reduction": true
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": false,
+        "affordable_with": false,
+        "unlocked_by_reduction": false
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": false,
+        "affordable_with": true,
+        "unlocked_by_reduction": true
+      }
+    },
+    "3": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": false,
+        "affordable_with": true,
+        "unlocked_by_reduction": true
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": false,
+        "affordable_with": false,
+        "unlocked_by_reduction": false
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": false,
+        "affordable_with": true,
+        "unlocked_by_reduction": true
+      }
+    },
+    "4": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": false,
+        "affordable_with": false,
+        "unlocked_by_reduction": false
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      }
+    },
+    "5": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": false,
+        "affordable_with": true,
+        "unlocked_by_reduction": true
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      }
+    },
+    "6": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": false,
+        "affordable_with": true,
+        "unlocked_by_reduction": true
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      }
+    },
+    "7": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      }
+    },
+    "8": {
+      "Thrasios, Triton Hero (modeled proxy)": {
+        "cost_without_familiar": "{4}",
+        "cost_with_familiar_or_training_grounds": "{2}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Kinnan, Bonder Prodigy": {
+        "cost_without_familiar": "{5}{G}{U}",
+        "cost_with_familiar_or_training_grounds": "{3}{G}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Oboro Breezecaller": {
+        "cost_without_familiar": "{2}",
+        "cost_with_familiar_or_training_grounds": "{1}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      },
+      "Faerie Mastermind": {
+        "cost_without_familiar": "{3}{U}",
+        "cost_with_familiar_or_training_grounds": "{1}{U}",
+        "affordable_without": true,
+        "affordable_with": true,
+        "unlocked_by_reduction": false
+      }
+    }
+  },
+  "required_summary": {
+    "mana_total_where_reduction_first_matters": {
+      "Thrasios, Triton Hero (modeled proxy)": 2,
+      "Kinnan, Bonder Prodigy": 5,
+      "Oboro Breezecaller": null,
+      "Faerie Mastermind": 2
+    },
+    "structural_note": "Familiar and Training Grounds are FUNCTIONALLY IDENTICAL for this reduction (same text, same floor) - the real decision is the creature-vs-land delivery vehicle tradeoff (see module docstring), not different mana math."
+  }
+}
