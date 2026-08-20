@@ -1,0 +1,439 @@
+{
+  "run_class": "DECK_BACKED_GOLDFISH",
+  "evidence_type": "goldfish",
+  "subject_deck_version": "tymna-thrasios-treefarm-deckbuild007-v1",
+  "subject_deck_hash": "ab704e30d1e660eca99e6dbf8cf2091e6c8906e8d817ea3c45289fca5c4c1d82",
+  "subject_deck_card_count": 99,
+  "commander_identities": [
+    "Thrasios, Triton Hero",
+    "Tymna the Weaver"
+  ],
+  "basics_substituted": false,
+  "phase": "SIM_DECKBUILD_007_WS3_CONVERSION_ARCHITECTURE",
+  "grid_note": "Structured grid (mana x creatures x pod-present x protection), 150 random creature/engine draws per cell - see module docstring for disclosed simplifications (generic any-color mana, no live opponent model).",
+  "pod_rungs": {
+    "1_to_2": {
+      "dead_end": false,
+      "targets_tried": 11,
+      "class_distribution": {
+        "not_converting": 1.0
+      },
+      "key_target_hit_rate": 0.18181818181818182
+    },
+    "2_to_3": {
+      "dead_end": false,
+      "targets_tried": 11,
+      "class_distribution": {
+        "not_converting": 1.0
+      },
+      "key_target_hit_rate": 0.36363636363636365
+    },
+    "3_to_4": {
+      "dead_end": false,
+      "targets_tried": 5,
+      "class_distribution": {
+        "unprotected_conversion": 0.2,
+        "not_converting": 0.8
+      },
+      "key_target_hit_rate": 0.6
+    },
+    "4_to_5": {
+      "dead_end": false,
+      "targets_tried": 1,
+      "class_distribution": {
+        "not_converting": 1.0
+      },
+      "key_target_hit_rate": 1.0
+    }
+  },
+  "grid_results": {
+    "mana4_creatures2_podTrue_prot0": {
+      "not_converting": 0.5466666666666666,
+      "unprotected_conversion": 0.4533333333333333,
+      "pod_used_rate": 0.9
+    },
+    "mana4_creatures2_podTrue_prot1": {
+      "protected_conversion": 0.26666666666666666,
+      "not_converting": 0.5866666666666667,
+      "unprotected_conversion": 0.14666666666666667,
+      "pod_used_rate": 0.8466666666666667
+    },
+    "mana4_creatures2_podTrue_prot2": {
+      "not_converting": 0.56,
+      "protected_conversion": 0.38,
+      "unprotected_conversion": 0.06,
+      "pod_used_rate": 0.8933333333333333
+    },
+    "mana4_creatures2_podFalse_prot0": {
+      "not_converting": 0.94,
+      "unprotected_conversion": 0.06,
+      "pod_used_rate": null
+    },
+    "mana4_creatures2_podFalse_prot1": {
+      "not_converting": 0.9533333333333334,
+      "protected_conversion": 0.03333333333333333,
+      "unprotected_conversion": 0.013333333333333334,
+      "pod_used_rate": null
+    },
+    "mana4_creatures2_podFalse_prot2": {
+      "not_converting": 0.94,
+      "protected_conversion": 0.06,
+      "pod_used_rate": null
+    },
+    "mana4_creatures3_podTrue_prot0": {
+      "not_converting": 0.54,
+      "unprotected_conversion": 0.46,
+      "pod_used_rate": 0.9066666666666666
+    },
+    "mana4_creatures3_podTrue_prot1": {
+      "not_converting": 0.5333333333333333,
+      "protected_conversion": 0.2733333333333333,
+      "unprotected_conversion": 0.19333333333333333,
+      "pod_used_rate": 0.8533333333333334
+    },
+    "mana4_creatures3_podTrue_prot2": {
+      "protected_conversion": 0.48,
+      "not_converting": 0.49333333333333335,
+      "unprotected_conversion": 0.02666666666666667,
+      "pod_used_rate": 0.8533333333333334
+    },
+    "mana4_creatures3_podFalse_prot0": {
+      "not_converting": 0.9466666666666667,
+      "unprotected_conversion": 0.05333333333333334,
+      "pod_used_rate": null
+    },
+    "mana4_creatures3_podFalse_prot1": {
+      "not_converting": 0.9466666666666667,
+      "protected_conversion": 0.04666666666666667,
+      "unprotected_conversion": 0.006666666666666667,
+      "pod_used_rate": null
+    },
+    "mana4_creatures3_podFalse_prot2": {
+      "not_converting": 0.92,
+      "protected_conversion": 0.08,
+      "pod_used_rate": null
+    },
+    "mana4_creatures5_podTrue_prot0": {
+      "not_converting": 0.64,
+      "unprotected_conversion": 0.36,
+      "pod_used_rate": 0.7133333333333334
+    },
+    "mana4_creatures5_podTrue_prot1": {
+      "not_converting": 0.52,
+      "protected_conversion": 0.3466666666666667,
+      "unprotected_conversion": 0.13333333333333333,
+      "pod_used_rate": 0.72
+    },
+    "mana4_creatures5_podTrue_prot2": {
+      "protected_conversion": 0.44,
+      "not_converting": 0.5533333333333333,
+      "unprotected_conversion": 0.006666666666666667,
+      "pod_used_rate": 0.6666666666666666
+    },
+    "mana4_creatures5_podFalse_prot0": {
+      "not_converting": 0.84,
+      "unprotected_conversion": 0.16,
+      "pod_used_rate": null
+    },
+    "mana4_creatures5_podFalse_prot1": {
+      "protected_conversion": 0.17333333333333334,
+      "not_converting": 0.8266666666666667,
+      "pod_used_rate": null
+    },
+    "mana4_creatures5_podFalse_prot2": {
+      "not_converting": 0.7866666666666666,
+      "protected_conversion": 0.21333333333333335,
+      "pod_used_rate": null
+    },
+    "mana6_creatures2_podTrue_prot0": {
+      "unprotected_conversion": 0.47333333333333333,
+      "not_converting": 0.5266666666666666,
+      "pod_used_rate": 0.8866666666666667
+    },
+    "mana6_creatures2_podTrue_prot1": {
+      "protected_conversion": 0.35333333333333333,
+      "unprotected_conversion": 0.02666666666666667,
+      "not_converting": 0.62,
+      "pod_used_rate": 0.8733333333333333
+    },
+    "mana6_creatures2_podTrue_prot2": {
+      "protected_conversion": 0.4533333333333333,
+      "not_converting": 0.5466666666666666,
+      "pod_used_rate": 0.8933333333333333
+    },
+    "mana6_creatures2_podFalse_prot0": {
+      "not_converting": 0.96,
+      "unprotected_conversion": 0.04,
+      "pod_used_rate": null
+    },
+    "mana6_creatures2_podFalse_prot1": {
+      "not_converting": 0.96,
+      "protected_conversion": 0.04,
+      "pod_used_rate": null
+    },
+    "mana6_creatures2_podFalse_prot2": {
+      "not_converting": 0.9533333333333334,
+      "protected_conversion": 0.04666666666666667,
+      "pod_used_rate": null
+    },
+    "mana6_creatures3_podTrue_prot0": {
+      "unprotected_conversion": 0.47333333333333333,
+      "not_converting": 0.5266666666666666,
+      "pod_used_rate": 0.8533333333333334
+    },
+    "mana6_creatures3_podTrue_prot1": {
+      "not_converting": 0.5866666666666667,
+      "protected_conversion": 0.36,
+      "unprotected_conversion": 0.05333333333333334,
+      "pod_used_rate": 0.8466666666666667
+    },
+    "mana6_creatures3_podTrue_prot2": {
+      "protected_conversion": 0.43333333333333335,
+      "not_converting": 0.5666666666666667,
+      "pod_used_rate": 0.8466666666666667
+    },
+    "mana6_creatures3_podFalse_prot0": {
+      "not_converting": 0.9333333333333333,
+      "unprotected_conversion": 0.06666666666666667,
+      "pod_used_rate": null
+    },
+    "mana6_creatures3_podFalse_prot1": {
+      "not_converting": 0.92,
+      "protected_conversion": 0.08,
+      "pod_used_rate": null
+    },
+    "mana6_creatures3_podFalse_prot2": {
+      "not_converting": 0.9333333333333333,
+      "protected_conversion": 0.06666666666666667,
+      "pod_used_rate": null
+    },
+    "mana6_creatures5_podTrue_prot0": {
+      "not_converting": 0.5533333333333333,
+      "unprotected_conversion": 0.44666666666666666,
+      "pod_used_rate": 0.7
+    },
+    "mana6_creatures5_podTrue_prot1": {
+      "protected_conversion": 0.44,
+      "not_converting": 0.5266666666666666,
+      "unprotected_conversion": 0.03333333333333333,
+      "pod_used_rate": 0.7466666666666667
+    },
+    "mana6_creatures5_podTrue_prot2": {
+      "protected_conversion": 0.4,
+      "not_converting": 0.6,
+      "pod_used_rate": 0.6666666666666666
+    },
+    "mana6_creatures5_podFalse_prot0": {
+      "not_converting": 0.84,
+      "unprotected_conversion": 0.16,
+      "pod_used_rate": null
+    },
+    "mana6_creatures5_podFalse_prot1": {
+      "not_converting": 0.8666666666666667,
+      "protected_conversion": 0.12666666666666668,
+      "unprotected_conversion": 0.006666666666666667,
+      "pod_used_rate": null
+    },
+    "mana6_creatures5_podFalse_prot2": {
+      "not_converting": 0.84,
+      "protected_conversion": 0.16,
+      "pod_used_rate": null
+    },
+    "mana8_creatures2_podTrue_prot0": {
+      "not_converting": 0.5933333333333334,
+      "unprotected_conversion": 0.4066666666666667,
+      "pod_used_rate": 0.88
+    },
+    "mana8_creatures2_podTrue_prot1": {
+      "not_converting": 0.5466666666666666,
+      "protected_conversion": 0.43333333333333335,
+      "unprotected_conversion": 0.02,
+      "pod_used_rate": 0.8666666666666667
+    },
+    "mana8_creatures2_podTrue_prot2": {
+      "not_converting": 0.6266666666666667,
+      "protected_conversion": 0.37333333333333335,
+      "pod_used_rate": 0.86
+    },
+    "mana8_creatures2_podFalse_prot0": {
+      "not_converting": 0.9533333333333334,
+      "unprotected_conversion": 0.04666666666666667,
+      "pod_used_rate": null
+    },
+    "mana8_creatures2_podFalse_prot1": {
+      "not_converting": 0.94,
+      "protected_conversion": 0.06,
+      "pod_used_rate": null
+    },
+    "mana8_creatures2_podFalse_prot2": {
+      "not_converting": 0.96,
+      "protected_conversion": 0.04,
+      "pod_used_rate": null
+    },
+    "mana8_creatures3_podTrue_prot0": {
+      "not_converting": 0.5466666666666666,
+      "unprotected_conversion": 0.4533333333333333,
+      "pod_used_rate": 0.8
+    },
+    "mana8_creatures3_podTrue_prot1": {
+      "not_converting": 0.48,
+      "protected_conversion": 0.5133333333333333,
+      "unprotected_conversion": 0.006666666666666667,
+      "pod_used_rate": 0.8266666666666667
+    },
+    "mana8_creatures3_podTrue_prot2": {
+      "not_converting": 0.6,
+      "protected_conversion": 0.4,
+      "pod_used_rate": 0.8133333333333334
+    },
+    "mana8_creatures3_podFalse_prot0": {
+      "not_converting": 0.9,
+      "unprotected_conversion": 0.1,
+      "pod_used_rate": null
+    },
+    "mana8_creatures3_podFalse_prot1": {
+      "not_converting": 0.92,
+      "protected_conversion": 0.08,
+      "pod_used_rate": null
+    },
+    "mana8_creatures3_podFalse_prot2": {
+      "not_converting": 0.9066666666666666,
+      "protected_conversion": 0.09333333333333334,
+      "pod_used_rate": null
+    },
+    "mana8_creatures5_podTrue_prot0": {
+      "unprotected_conversion": 0.5266666666666666,
+      "not_converting": 0.47333333333333333,
+      "pod_used_rate": 0.6933333333333334
+    },
+    "mana8_creatures5_podTrue_prot1": {
+      "not_converting": 0.4666666666666667,
+      "protected_conversion": 0.5133333333333333,
+      "unprotected_conversion": 0.02,
+      "pod_used_rate": 0.7466666666666667
+    },
+    "mana8_creatures5_podTrue_prot2": {
+      "not_converting": 0.5666666666666667,
+      "protected_conversion": 0.43333333333333335,
+      "pod_used_rate": 0.6933333333333334
+    },
+    "mana8_creatures5_podFalse_prot0": {
+      "unprotected_conversion": 0.17333333333333334,
+      "not_converting": 0.8266666666666667,
+      "pod_used_rate": null
+    },
+    "mana8_creatures5_podFalse_prot1": {
+      "not_converting": 0.8466666666666667,
+      "protected_conversion": 0.15333333333333332,
+      "pod_used_rate": null
+    },
+    "mana8_creatures5_podFalse_prot2": {
+      "protected_conversion": 0.1,
+      "not_converting": 0.9,
+      "pod_used_rate": null
+    },
+    "mana10_creatures2_podTrue_prot0": {
+      "not_converting": 0.5466666666666666,
+      "unprotected_conversion": 0.4533333333333333,
+      "pod_used_rate": 0.8733333333333333
+    },
+    "mana10_creatures2_podTrue_prot1": {
+      "not_converting": 0.56,
+      "protected_conversion": 0.44,
+      "pod_used_rate": 0.8733333333333333
+    },
+    "mana10_creatures2_podTrue_prot2": {
+      "protected_conversion": 0.44666666666666666,
+      "not_converting": 0.5533333333333333,
+      "pod_used_rate": 0.9333333333333333
+    },
+    "mana10_creatures2_podFalse_prot0": {
+      "not_converting": 0.98,
+      "unprotected_conversion": 0.02,
+      "pod_used_rate": null
+    },
+    "mana10_creatures2_podFalse_prot1": {
+      "not_converting": 0.9666666666666667,
+      "protected_conversion": 0.03333333333333333,
+      "pod_used_rate": null
+    },
+    "mana10_creatures2_podFalse_prot2": {
+      "not_converting": 0.96,
+      "protected_conversion": 0.04,
+      "pod_used_rate": null
+    },
+    "mana10_creatures3_podTrue_prot0": {
+      "not_converting": 0.5866666666666667,
+      "unprotected_conversion": 0.41333333333333333,
+      "pod_used_rate": 0.8466666666666667
+    },
+    "mana10_creatures3_podTrue_prot1": {
+      "not_converting": 0.5266666666666666,
+      "protected_conversion": 0.47333333333333333,
+      "pod_used_rate": 0.8133333333333334
+    },
+    "mana10_creatures3_podTrue_prot2": {
+      "protected_conversion": 0.48,
+      "not_converting": 0.52,
+      "pod_used_rate": 0.7733333333333333
+    },
+    "mana10_creatures3_podFalse_prot0": {
+      "not_converting": 0.9666666666666667,
+      "unprotected_conversion": 0.03333333333333333,
+      "pod_used_rate": null
+    },
+    "mana10_creatures3_podFalse_prot1": {
+      "not_converting": 0.9533333333333334,
+      "protected_conversion": 0.04666666666666667,
+      "pod_used_rate": null
+    },
+    "mana10_creatures3_podFalse_prot2": {
+      "not_converting": 0.96,
+      "protected_conversion": 0.04,
+      "pod_used_rate": null
+    },
+    "mana10_creatures5_podTrue_prot0": {
+      "unprotected_conversion": 0.49333333333333335,
+      "not_converting": 0.5066666666666667,
+      "pod_used_rate": 0.7466666666666667
+    },
+    "mana10_creatures5_podTrue_prot1": {
+      "not_converting": 0.6266666666666667,
+      "protected_conversion": 0.37333333333333335,
+      "pod_used_rate": 0.7866666666666666
+    },
+    "mana10_creatures5_podTrue_prot2": {
+      "not_converting": 0.5533333333333333,
+      "protected_conversion": 0.44666666666666666,
+      "pod_used_rate": 0.72
+    },
+    "mana10_creatures5_podFalse_prot0": {
+      "not_converting": 0.86,
+      "unprotected_conversion": 0.14,
+      "pod_used_rate": null
+    },
+    "mana10_creatures5_podFalse_prot1": {
+      "protected_conversion": 0.2,
+      "not_converting": 0.8,
+      "pod_used_rate": null
+    },
+    "mana10_creatures5_podFalse_prot2": {
+      "not_converting": 0.86,
+      "protected_conversion": 0.14,
+      "pod_used_rate": null
+    }
+  },
+  "aggregate_by_axis": {
+    "P_convert_given_pod_present": 0.447037037037037,
+    "P_convert_given_pod_absent": 0.08981481481481482,
+    "P_protected_convert_given_pod_present": 0.2764814814814815,
+    "P_protected_convert_given_pod_absent": 0.059814814814814814,
+    "failure_mode_distribution": {
+      "mana": 0.06945681211041853,
+      "protection": 0.10796972395369546,
+      "wrong_pod_mv": 0.09416740872662512,
+      "missing_outlet": 0.5475289403383793,
+      "access": 0.18087711487088157
+    }
+  }
+}
