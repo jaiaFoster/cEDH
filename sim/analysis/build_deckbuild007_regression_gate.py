@@ -1,0 +1,114 @@
+"""SIM-DECKBUILD-007 — validation gate. Mirrors the established pattern from prior tasks."""
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+REQUIRED_CATEGORIES = {
+    "frozen_deck_and_new_card_provenance": {
+        "tests": ["rules_tests/regression/test_deckbuild007_new_cards.py"],
+        "property": "The operative 101 (99+2) hash matches, a tampered copy is rejected, the "
+                     "diff vs deckbuild006 matches the assignment's own framing exactly, Dark "
+                     "Ritual's net-mana residue pattern is correct and stranded-mana-tracked, and "
+                     "Dark Ritual is confirmed NEVER auto-cast by the generic greedy loop (the "
+                     "correctness bug this task's design avoids).",
+    },
+    "deathrite_mandatory_correction": {
+        "tests": ["rules_tests/regression/test_deckbuild007_deathrite_fetch_mana.py"],
+        "property": "Deathrite Shaman's graveyard-fetch mana ability (the assignment's mandatory "
+                     "correction, web-verified against 2 independent sources) is correctly "
+                     "implemented: summoning-sickness-gated, taps only once per turn regardless "
+                     "of graveyard fetch count, permanently exiles the consumed fetch, and "
+                     "supports full rollback for dry-run payability checks.",
+    },
+    "ws1_ritual_carpet_helpers": {
+        "tests": ["rules_tests/regression/test_deckbuild007_ws1_helpers.py"],
+        "property": "All 4 factorial configs (current/removed/carpet-instead/both-flex-cut) build "
+                     "and census correctly; Carpet's own cast-timing tracking works; the scenario "
+                     "bands are monotonic by turn and by pod-speed band.",
+    },
+    "ws2_birthing_ritual_rungs": {
+        "tests": ["rules_tests/regression/test_deckbuild007_ws2_birthing_ritual.py"],
+        "property": "Higher sac-MV rungs never have a lower any-hit rate than lower rungs; "
+                     "premium/meaningful/immediate probabilities are always subsets of any-hit; "
+                     "the premium target lists are real creatures actually in this deck.",
+    },
+    "ws2_biomancers_familiar_arithmetic": {
+        "tests": ["rules_tests/regression/test_deckbuild007_ws2_biomancers_familiar.py"],
+        "property": "The {2}-less cost-reduction arithmetic (shared, verified-identical text with "
+                     "Training Grounds) correctly touches only generic mana, floors at 1 total "
+                     "mana, and never reduces an all-colored-pip cost below its own pip count.",
+    },
+    "ws2_multiplayer_scenarios": {
+        "tests": ["rules_tests/regression/test_deckbuild007_ws2_multiplayer_scenarios.py"],
+        "property": "Cabbage Merchant's scenario bands are monotonic and correctly land below "
+                     "Lotho's own previously-measured TYPICAL result (the real, measured "
+                     "exchange-rate/attrition disadvantage); Seedborn's deterministic value "
+                     "scales linearly with mana base and equals opponent_count x mana_base exactly.",
+    },
+    "ws3_conversion_architecture_and_pod": {
+        "tests": ["rules_tests/regression/test_deckbuild007_ws3_conversion_architecture.py"],
+        "property": "The 4->5 Pod rung is re-verified (not assumed) to remain a Seedborn-Muse-"
+                     "unique target against the NEW 101-card pool, explicitly checking that none "
+                     "of the 4 new cards are competing MV5 creatures; the state sampler runs "
+                     "correctly with and without Pod present.",
+    },
+    "ws4_role_classification": {
+        "tests": ["rules_tests/regression/test_deckbuild007_ws4_role_classification.py"],
+        "property": "Every one of the 99 real main-deck cards has exactly one primary role "
+                     "assigned, with no card double-counted or omitted.",
+    },
+}
+
+
+def _run_full_suite():
+    result = subprocess.run(
+        [sys.executable, "-m", "pytest", "rules_tests/", "-q"],
+        cwd=REPO_ROOT, capture_output=True, text=True,
+    )
+    return result.returncode == 0, result.stdout[-3000:]
+
+
+def main():
+    passed, tail = _run_full_suite()
+    result = {
+        "phase": "SIM_DECKBUILD_007_REGRESSION_GATE",
+        "full_suite_passed": passed,
+        "full_suite_output_tail": tail,
+        "gate_status": "OPEN" if passed else "BLOCKED",
+        "required_categories": REQUIRED_CATEGORIES,
+        "artifacts_committed": [
+            "data/decklists/tymna-thrasios-treefarm-deckbuild007-v1.json",
+            "sim/analysis/build_deckbuild007_frozen_deck.py", "sim/analysis/deckbuild007_cards.py",
+            "sim/analysis/deckbuild007_variants.py",
+            "sim/analysis/build_deckbuild007_ws1_ritual_carpet.py",
+            "sim/analysis/build_deckbuild007_ws2_birthing_ritual.py",
+            "sim/analysis/build_deckbuild007_ws2_biomancers_familiar.py",
+            "sim/analysis/build_deckbuild007_ws2_multiplayer_scenarios.py",
+            "sim/analysis/build_deckbuild007_ws3_conversion_architecture.py",
+            "sim/analysis/build_deckbuild007_ws4_role_classification.py",
+            "results/solo_baseline/deckbuild007_ws1_ritual_carpet.json",
+            "results/solo_baseline/deckbuild007_ws2_birthing_ritual.json",
+            "results/solo_baseline/deckbuild007_ws2_biomancers_familiar.json",
+            "results/solo_baseline/deckbuild007_ws2_multiplayer_scenarios.json",
+            "results/solo_baseline/deckbuild007_ws3_conversion_architecture.json",
+            "results/solo_baseline/deckbuild007_ws4_role_classification.json",
+            "results/solo_baseline/deckbuild007_report.md",
+        ],
+        "mandatory_correction_applied": (
+            "Deathrite Shaman graveyard-fetch mana - implemented in opening_hand_policy.py's "
+            "core available_sources()/_commit_payment()/_rollback_payment(), not scoped to this "
+            "task's own files, so every prior and future task's simulations now see the corrected "
+            "behavior automatically."
+        ),
+    }
+    out_path = REPO_ROOT / "results" / "solo_baseline" / "deckbuild007_regression_gate.json"
+    out_path.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    print(f"wrote {out_path}")
+    print(f"full_suite_passed={passed}  gate_status={result['gate_status']}")
+
+
+if __name__ == "__main__":
+    main()

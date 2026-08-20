@@ -2851,3 +2851,32 @@ disclosure after the phase-1 checkpoint (E2's structural-ceiling numbers already
 too small to change the decision); E7 (post-first-fight state modeling) was skipped because
 SIM-DECKBUILD-005's framework does not exist to reuse and phases 1/E5/E6 already resolved the
 decision — see the full report's "Scope disclosure" section.
+
+# SIM-DECKBUILD-007 — Current 101 Validation, Acceleration Audit, and Final Cut
+
+Full report: `results/solo_baseline/deckbuild007_report.md`. Machine-readable artifacts:
+`deckbuild007_ws1_ritual_carpet.json`, `deckbuild007_ws2_birthing_ritual.json`,
+`deckbuild007_ws2_biomancers_familiar.json`, `deckbuild007_ws2_multiplayer_scenarios.json`,
+`deckbuild007_ws3_conversion_architecture.json`, `deckbuild007_ws4_role_classification.json`,
+`deckbuild007_regression_gate.json`. Subject: `tymna-thrasios-treefarm-deckbuild007-v1` (99 main
++ Thrasios/Tymna: −An Offer You Can't Refuse/−Shang-Chi/−Training Grounds,
++Biomancer's Familiar/+Birthing Ritual/+Dark Ritual/+The Cabbage Merchant vs. DECKBUILD-006).
+
+**Mandatory correction applied at the core-engine level** (not scoped to this task alone):
+Deathrite Shaman's graveyard-fetch mana ability, previously modeled as always-dead
+(MANA-AUDIT-002, DECKBUILD-006), is now correctly implemented in
+`sim/analysis/opening_hand_policy.py`'s `available_sources()`/`_commit_payment()`/
+`_rollback_payment()` — web-verified against real competitive-Magic precedent (Legacy/Modern Jund
+runs heavy fetches specifically to fuel Deathrite).
+
+Question: is the current 101-card candidate build aligned with its stated strategy, and what's the
+single least-damaging 101st-card cut? **Recommended cut: Dark Ritual** — its measured contribution
+to the four named premium-engine timings (Birthing Pod/Talion/Smothering Tithe/Seedborn Muse) is
+real but negligible (0.22% purposeful-use rate at n=25,000, all T2/T3 timing deltas under 0.1pp),
+in the deck's single most role-saturated category (36 mana-acceleration cards). Carpet of Flowers
+was evaluated as a replacement/addition and not recommended either (low own-cast rate, mana output
+gated on a double-conditional that keeps population-wide expected value small). Birthing Ritual and
+Biomancer's Familiar are both earning their slots (88%/21% any-hit/premium rates; a cost reduction
+functionally identical to the Training Grounds it replaced, respectively). Pod remains one of the
+strongest conversion routes (44.7% vs. 9.0% convert rate with/without) without full dependency on
+it, and Seedborn Muse is re-confirmed as its unique 4→5 rung resolver in the new card pool.
