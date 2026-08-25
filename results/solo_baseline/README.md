@@ -2880,3 +2880,33 @@ Biomancer's Familiar are both earning their slots (88%/21% any-hit/premium rates
 functionally identical to the Training Grounds it replaced, respectively). Pod remains one of the
 strongest conversion routes (44.7% vs. 9.0% convert rate with/without) without full dependency on
 it, and Seedborn Muse is re-confirmed as its unique 4→5 rung resolver in the new card pool.
+
+# SIM-ROGFARM-001 — RogSi Wheel-Farm Falsification & Mechanism Validation
+
+Full Stage 1 report: `results/solo_baseline/rogfarm001_report_stage1.md` (+ machine-readable
+companion `rogfarm001_stage1_report.json`). Subject: three frozen decks — Stock RogSi
+(`rogsi-valley-forge-2026-v1`, Joseph Mekhail's 1st-place Valley Forge 2026 list), R1 Minimal Rog
+Farm (`rogfarm-r1-minimal-v1`, the falsification candidate), and Blue Farm Control 2026
+(`bluefarm-control-2026-v1`) — a completely separate project scope from the Tymna/Thrasios work
+above, sharing only card-pool overlap (49 of 133 unique RogSi/Blue-Farm cards already had
+cache-verified Oracle data from that project; loads via its own `data/decklists/*.json` files, not
+through `sim/analysis/opening_hand_model.py`'s Tymna/Thrasios-specific loaders).
+
+**PASS 1 (freeze + Stage 1 legality/rules/package audit) is complete; this is a genuine
+checkpoint, not a stopping point.** All three decks verified at exactly 98 unique cards + 2
+commanders; R1's diff against Stock RogSi is exactly the 6-removed/6-added the assignment
+specifies. The core mechanism claim is real and correctly derived from Oracle text (WebSearch-
+verified this task): Narset, Parter of Veils hard-caps every opponent at 1 card off any "each
+player draws N" wheel while the controller draws normally; Notion Thief goes further and
+redirects every one of those opponent draws to the controller instead (0 cards for opponents).
+Wheel of Fortune/Windfall refuel Underworld Breach's graveyard fuel (discard-based); Timetwister
+erases it (shuffle-based) — these must never be pooled together, exactly as the assignment warns.
+R1 passes the Stage 1 package-quality hard-failure gate cleanly (0 synergy-only blanks among its 6
+added cards, threshold ≤2).
+
+**Stage 2 (paired opening-hand Monte Carlo across all three decks) has not been started** — it
+requires new simulation infrastructure for ~84 previously-unmodeled cards (rituals, Underworld
+Breach's escape-cost payment model, a wheel-effect class, Narset/Notion Thief/Bowmasters draw-
+replacement modeling), comparable in scope to the entire SIM-DECKBUILD-004/006/007 line of work
+combined, for a non-overlapping card pool. Disclosed explicitly per this task's own report policy,
+not a blocker — this is the PASS 1 completion checkpoint.

@@ -1,0 +1,74 @@
+{
+  "phase": "SIM_ROGFARM_001_STAGE1_REPORT",
+  "evidence_type": "static_probability",
+  "deck_hashes": {
+    "rogsi-valley-forge-2026-v1": {
+      "deck_hash": "535bde31b8c7d0aefe9700650fe4549558c7b50632f56e310aa551878460ca56",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "card_count": 98
+    },
+    "rogfarm-r1-minimal-v1": {
+      "deck_hash": "e8aaed0c97d002ab29c0d3cf684b79f0441e49087aca4ea88797208a303a51d8",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "card_count": 98
+    },
+    "bluefarm-control-2026-v1": {
+      "deck_hash": "c08cc939993b28f2b3a69ec23e2c69fa2c9577769506ce71c77e3d0a1c3fe959",
+      "commanders": [
+        "Tymna the Weaver",
+        "Kraum, Ludevic's Opus"
+      ],
+      "card_count": 98
+    }
+  },
+  "r1_diff": {
+    "removed": [
+      "Demonic Consultation",
+      "Dramatic Reversal",
+      "Final Fortune",
+      "Strike It Rich",
+      "Tainted Pact",
+      "Thassa's Oracle"
+    ],
+    "added": [
+      "Faerie Mastermind",
+      "Foil",
+      "Force of Negation",
+      "Narset, Parter of Veils",
+      "Notion Thief",
+      "Subtlety"
+    ],
+    "removed_count": 6,
+    "added_count": 6
+  },
+  "package_audit": {
+    "synergy_only_blanks_among_added_cards": [],
+    "synergy_only_blank_count": 0,
+    "hard_failure_threshold": 2,
+    "hard_failure_gate": "PASS"
+  },
+  "rules_assertions_verified": [
+    "Fierce Guardianship: free with any 1 commander controlled, counters noncreature spells only.",
+    "Deadly Rollick: free with any 1 commander controlled, exiles target creature.",
+    "Flare of Duplication: alt cost = sacrifice a nontoken RED creature (Rograkh/Birgi both qualify).",
+    "Hexing Squelcher: uncounterable self + your other spells uncounterable + Ward 2 on your other creatures.",
+    "Narset, Parter of Veils: caps EACH OPPONENT at 1 card/turn (hard cap, not a replacement); controller unaffected.",
+    "Notion Thief: TRUE replacement - redirects every non-first-per-draw-step opponent draw to controller (0 opponent cards from a wheel).",
+    "Orcish Bowmasters: triggers once PER CARD an opponent draws beyond their first that turn (repeatable, not capped).",
+    "Faerie Mastermind: triggers ONCE on an opponent's literal 2nd card of the turn only - not a per-card trigger.",
+    "Payoff removed before wheel resolves -> wheel resolves with zero asymmetry (continuous effect requires source on battlefield).",
+    "Multiple replacement effects -> the AFFECTED PLAYER chooses which applies (CR 616.1).",
+    "Clone + legend rule: per-player: an opponent's clone of a legendary payoff doesn't violate OUR legend rule.",
+    "Underworld Breach escape = mana cost + exile 3 OTHER graveyard cards; net -4 graveyard cards per LED+BrainFreeze loop.",
+    "Wheel of Fortune/Windfall are discard-based -> REFILL Breach graveyard fuel.",
+    "Timetwister shuffles hand+graveyard+library together -> ERASES Breach graveyard fuel (opposite effect).",
+    "Will of the Jeskai: optional per-player 5-card wheel OR graveyard-flashback mode - a third distinct wheel type."
+  ],
+  "stage2_status": "NOT_STARTED - disclosed scope, see report's final section"
+}
