@@ -53,6 +53,31 @@ def test_arcane_signet_grixis_colors_for_rogsi():
     assert ohm.MANA_SOURCES["Arcane Signet"]["colors"] == {"U", "B", "R"}
 
 
+def test_command_zone_uses_scoped_commanders_not_stale_module_binding():
+    # Regression for a real bug caught by the Stage 2 harness's own smoke test: HandState's
+    # command_zone comes from opening_hand_policy.py's own "from opening_hand_model import
+    # COMMANDERS" binding, not a fresh module-attribute lookup - reassigning ohm.COMMANDERS to a
+    # brand new dict object (rather than mutating the existing one in place) left that binding
+    # pointing at the OLD dict, so a RogSi simulation's command_zone silently still contained
+    # Tymna the Weaver/Thrasios, Triton Hero after "install" claimed to scope it to Rograkh/Silas.
+    state = _state([])
+    assert state.command_zone == {"Rograkh, Son of Rohgahh", "Silas Renn, Seeker Adept"}
+    assert "Tymna the Weaver" not in state.command_zone
+
+
+def test_interaction_dispatch_patch_visible_through_snapshot_metrics():
+    # Regression for the same class of stale-binding bug: opening_hand_metrics.py imported
+    # interaction_is_live directly at ITS OWN import time, so patching only
+    # interaction_model.interaction_is_live never reached snapshot_metrics()'s actual call site -
+    # Foil/Daze's alt costs were silently invisible to every real simulation despite passing in
+    # isolation. Verifies Foil's alt cost is correctly detected THROUGH the real call path.
+    from opening_hand_metrics import snapshot_metrics
+    state = _state(["Foil", "Underground Sea", "Lightning Bolt"])
+    state.turn = 2
+    snap = snapshot_metrics(state, CARDS, [])
+    assert "Foil" in snap["live_interaction"]
+
+
 def test_daze_hardcast_with_mana():
     state = _state(["Daze"])
     state.lands.append(LandInPlay("Underground Sea", 1, tapped=False))

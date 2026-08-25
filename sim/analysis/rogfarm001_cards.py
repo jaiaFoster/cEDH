@@ -672,9 +672,24 @@ _ORIG_COMMANDERS_DICT = None
 # would hardcode a rogfarm-only mechanic into a file every other task also imports), these
 # wrapper functions are what analysis scripts call instead - installed/uninstalled alongside the
 # data tables, exactly like every other per-task engine extension in this project.
+#
+# CORRECTNESS NOTE (found while smoke-testing the Stage 2 harness): reassigning
+# im.interaction_is_live etc. only updates interaction_model.py's OWN module attribute. Every
+# caller this project's actual simulation path goes through - opening_hand_metrics.py's
+# snapshot_metrics() and opening_hand_policy.py's develop_turn() - imported these three names
+# directly ("from interaction_model import interaction_is_live", etc.) at THEIR OWN import time,
+# binding their own module-level names to the ORIGINAL function objects; rebinding
+# interaction_model's attribute never touches those already-bound references. Every module that
+# holds one of these stale direct-import bindings must be patched individually.
+import opening_hand_metrics as ohmetrics  # noqa: E402
+import opening_hand_policy as ohp  # noqa: E402
+
 _ORIG_IS_LIVE = im.interaction_is_live
 _ORIG_RESOLVE = im.resolve_interaction_cast
 _ORIG_COMMIT = im.commit_interaction_cast
+_ORIG_METRICS_IS_LIVE = ohmetrics.interaction_is_live
+_ORIG_POLICY_RESOLVE = ohp.resolve_interaction_cast
+_ORIG_POLICY_COMMIT = ohp.commit_interaction_cast
 
 
 def _patched_is_live(name, state, cards):
@@ -733,6 +748,9 @@ def install_new_card_tables(commander_names=None):
     im.interaction_is_live = _patched_is_live
     im.resolve_interaction_cast = _patched_resolve
     im.commit_interaction_cast = _patched_commit
+    ohmetrics.interaction_is_live = _patched_is_live
+    ohp.resolve_interaction_cast = _patched_resolve
+    ohp.commit_interaction_cast = _patched_commit
 
     for name, colors in NEW_LAND_COLOR_SETS.items():
         ohm.LAND_COLOR_SETS[name] = colors
@@ -761,7 +779,15 @@ def install_new_card_tables(commander_names=None):
         colors = COMMANDER_IDENTITY_COLORS.get(key, set())
         ohm.MANA_SOURCES["Arcane Signet"] = {"colors": colors, "creature": False}
         ohm.ACCELERATION.add("Arcane Signet")
-        _ORIG_COMMANDERS_DICT = ohm.COMMANDERS
+        # In-place mutation, NOT reassignment: opening_hand_policy.py (and other modules) did
+        # "from opening_hand_model import COMMANDERS" at THEIR OWN import time, binding their own
+        # name to this exact dict OBJECT - reassigning ohm.COMMANDERS to a new object (as an
+        # earlier version of this function did) only rebinds THIS module's attribute and leaves
+        # every other module still looking at the old dict, which is how a RogSi simulation
+        # ended up with Tymna/Thrasios sitting in its command_zone (found via the Stage 2
+        # harness's smoke test - see rogfarm001_cards regression tests for the isolation check
+        # this bug produced). Mutating the same object in place is visible everywhere.
+        _ORIG_COMMANDERS_DICT = dict(ohm.COMMANDERS)  # snapshot of the CONTENT, for restore
         new_commanders = {}
         for name in commander_names:
             if name in _ORIG_COMMANDERS_DICT:
@@ -770,7 +796,8 @@ def install_new_card_tables(commander_names=None):
                 new_commanders[name] = {"cost": NEW_COMMANDER_COSTS[name]}
             else:
                 raise ValueError(f"no cost registered for commander {name!r}")
-        ohm.COMMANDERS = new_commanders
+        ohm.COMMANDERS.clear()
+        ohm.COMMANDERS.update(new_commanders)
 
     if SIMIAN_SPIRIT_GUIDE_NAME in NEW_CARD_DATA:
         from opening_hand_policy import HandState
@@ -793,6 +820,9 @@ def uninstall_new_card_tables():
     im.interaction_is_live = _ORIG_IS_LIVE
     im.resolve_interaction_cast = _ORIG_RESOLVE
     im.commit_interaction_cast = _ORIG_COMMIT
+    ohmetrics.interaction_is_live = _ORIG_METRICS_IS_LIVE
+    ohp.resolve_interaction_cast = _ORIG_POLICY_RESOLVE
+    ohp.commit_interaction_cast = _ORIG_POLICY_COMMIT
 
     for name in NEW_LAND_COLOR_SETS:
         ohm.LAND_COLOR_SETS.pop(name, None)
@@ -818,7 +848,8 @@ def uninstall_new_card_tables():
     d6.uninstall_new_card_tables()
 
     if _ORIG_COMMANDERS_DICT is not None:
-        ohm.COMMANDERS = _ORIG_COMMANDERS_DICT
+        ohm.COMMANDERS.clear()
+        ohm.COMMANDERS.update(_ORIG_COMMANDERS_DICT)
         _ORIG_COMMANDERS_DICT = None
 
     if _ORIG_AVAILABLE_SOURCES is not None:
