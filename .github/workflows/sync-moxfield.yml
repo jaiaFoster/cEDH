@@ -1,0 +1,48 @@
+name: Sync canonical Moxfield deck
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  pull_request:
+    paths:
+      - ".github/workflows/sync-moxfield.yml"
+      - "sim/ingestion/moxfield.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-moxfield-deck
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Import and validate canonical deck
+        run: |
+          python -m sim.ingestion.moxfield \
+            --deck "https://moxfield.com/decks/gvyGvOx0g0uJ7ultPy-pbw" \
+            --expected-main 98 \
+            --expected-commanders 2
+
+      - name: Commit a changed deck snapshot
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/deck_sources/moxfield/tymna-thrasios; then
+            echo "Canonical deck is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/deck_sources/moxfield/tymna-thrasios
+          git commit -m "data: sync canonical Moxfield deck"
+          git push

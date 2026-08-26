@@ -21,6 +21,8 @@ from conftest import load_json, load_jsonl, REPO_ROOT, SCHEMAS_DIR
 # loader is "json" for one-object-per-file, "jsonl" for one-object-per-line.
 DIRECTORY_SCHEMA_MAP = [
     ("data/decklists/*.json", "decklist.schema.json", "json"),
+    ("data/deck_sources/**/current.json", "deck_source_snapshot.schema.json", "json"),
+    ("data/deck_sources/**/history/*.json", "deck_source_snapshot.schema.json", "json"),
     ("data/cards_cache/**/*.json", "card.schema.json", "json"),
     ("data/archetypes/**/*.json", "archetype.schema.json", "json"),
     ("data/policies/**/*.json", "policy.schema.json", "json"),

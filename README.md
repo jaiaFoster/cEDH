@@ -26,6 +26,7 @@ for the gates that must pass before any result is treated as evidence.
 |---|---|
 | `docs/` | Charter, architecture, sources, versioning, validation gates, policy framework |
 | `data/decklists/` | Subject and opponent decklists (versioned) |
+| `data/deck_sources/` | Automatically captured canonical source lists before Oracle/cache promotion |
 | `data/cards_cache/` | Ingested Oracle/rulings data, keyed by Scryfall ID + printing |
 | `data/archetypes/` | Empirical archetype registry derived from tournament data |
 | `data/policies/` | Archetype policy definitions and their evidence sources |
