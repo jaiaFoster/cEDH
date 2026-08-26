@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cedh-research.local/schemas/deck_source_snapshot.schema.json",
+  "title": "Canonical deck source snapshot",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source",
+    "deck_name",
+    "retrieved_at",
+    "content_hash",
+    "counts",
+    "commanders",
+    "cards",
+    "history_file"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source": {
+      "type": "object",
+      "required": ["type", "deck_id", "url", "endpoint"],
+      "properties": {
+        "type": {"const": "moxfield_public_deck"},
+        "deck_id": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "format": "uri"},
+        "endpoint": {"type": "string", "format": "uri"}
+      },
+      "additionalProperties": false
+    },
+    "deck_name": {"type": "string", "minLength": 1},
+    "moxfield_version": {"type": ["integer", "null"]},
+    "moxfield_updated_at": {"type": ["string", "null"]},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "content_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "counts": {
+      "type": "object",
+      "required": ["commanders", "mainboard"],
+      "properties": {
+        "commanders": {"type": "integer", "minimum": 1},
+        "mainboard": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "commanders": {"$ref": "#/$defs/cards"},
+    "cards": {"$ref": "#/$defs/cards"},
+    "history_file": {"type": "string", "pattern": "^history/.+\\.json$"}
+  },
+  "$defs": {
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "quantity", "scryfall_id"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "quantity": {"type": "integer", "minimum": 1},
+          "scryfall_id": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
