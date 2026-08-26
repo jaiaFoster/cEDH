@@ -53,11 +53,16 @@ Read, in order:
    synthetic vs. deck-backed, and why a gold-state test can never be
    confused with (or silently feed) empirical deck-performance statistics.
 
-## Current blockers
+Tournament data sourced from [TopDeck.gg](https://topdeck.gg) is ingested by
+`sim/ingestion/topdeck_gg.py` and retains the attribution required by TopDeck's
+API terms.
 
-- No subject decklist has been supplied yet (`data/decklists/` is empty).
-- This execution environment's network egress is blocked to every external MTG
-  data source tested so far (Scryfall, MTGJSON, Commander Spellbook, TopDeck.gg,
-  EDHTop16 — see `docs/SOURCES.md` for the concrete test results). Card/interaction/
-  tournament ingestion needs either a network policy change on this environment or
-  an out-of-band data drop.
+## Current data status
+
+- The subject Moxfield list is imported and refreshed automatically.
+- The authenticated TopDeck.gg feed is live. GitHub Actions refreshes completed
+  EDH tournament candidates every six hours and stores immutable raw snapshots
+  alongside normalized event records.
+- TopDeck.gg labels the format as EDH rather than cEDH. Downstream metagame reports
+  must apply an explicit event-eligibility/classification layer before treating the
+  candidate feed as a cEDH population.

@@ -9,7 +9,7 @@ Status:
   - mtgjson.py      Not implemented yet (cross-validation against scryfall.py).
   - spellbook.py    Not implemented yet (Commander Spellbook combo/interaction
                     seed data - next planned adapter, feeds SIM-0005).
-  - topdeck_gg.py   Not implemented yet (tournament events/standings/decklists).
+  - topdeck_gg.py   Authenticated tournament/standings/decklist/pod snapshots.
   - edhtop16.py     Not implemented yet (tournament aggregation, prevalence,
                     seats - live endpoint confirmed as a GraphQL API at
                     edhtop16.com/api/graphql, see coverage_backlog INFRA-0001).
