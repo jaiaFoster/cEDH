@@ -1,0 +1,126 @@
+{
+  "phase": "SIM_ROGFARM_001_STAGE2_GATES",
+  "n_trials": 50000,
+  "by_policy": {
+    "P1_ENGINE_FORWARD": {
+      "policy": "P1_ENGINE_FORWARD",
+      "gates": {
+        "engine_advantage": {
+          "pass": false,
+          "protected_engine_by_t2_delta_pp": 3.19,
+          "engine_by_t2_delta_pp": 7.88,
+          "interaction_delta_vs_blue_pp": 0.34,
+          "path_a_protected_engine_ge_7pp": false,
+          "path_b_engine_ge_10pp_and_interaction_not_worse": false
+        },
+        "rogsi_defensive_retention": {
+          "pass": true,
+          "interaction_delta_vs_stock_pp": 0.28,
+          "threshold_pp": -5.0
+        },
+        "conditional_burden": {
+          "pass": false,
+          "identity_stranded_rate_delta_pp": 44.05,
+          "stock_baseline_note": "Stock runs none of R1's 6 identity cards - baseline is structurally 0, not measured.",
+          "threshold_pp": 4.0
+        },
+        "mana": {
+          "pass": false,
+          "r1_meaningful_mana_failure_pct": 5.2,
+          "stock_meaningful_mana_failure_pct": 5.25,
+          "delta_pp": -0.05
+        },
+        "wheel_emergence": {
+          "pass": false,
+          "protected_asymmetric_wheel_by_t3_pct": 0.04,
+          "threshold_pct": 12.0
+        }
+      },
+      "fail_count": 4,
+      "stop_rule_triggered": true
+    },
+    "P2_BALANCED": {
+      "policy": "P2_BALANCED",
+      "gates": {
+        "engine_advantage": {
+          "pass": true,
+          "protected_engine_by_t2_delta_pp": 4.06,
+          "engine_by_t2_delta_pp": 10.22,
+          "interaction_delta_vs_blue_pp": 0.15,
+          "path_a_protected_engine_ge_7pp": false,
+          "path_b_engine_ge_10pp_and_interaction_not_worse": true
+        },
+        "rogsi_defensive_retention": {
+          "pass": true,
+          "interaction_delta_vs_stock_pp": 0.58,
+          "threshold_pp": -5.0
+        },
+        "conditional_burden": {
+          "pass": false,
+          "identity_stranded_rate_delta_pp": 45.47,
+          "stock_baseline_note": "Stock runs none of R1's 6 identity cards - baseline is structurally 0, not measured.",
+          "threshold_pp": 4.0
+        },
+        "mana": {
+          "pass": false,
+          "r1_meaningful_mana_failure_pct": 7.99,
+          "stock_meaningful_mana_failure_pct": 8.86,
+          "delta_pp": -0.86
+        },
+        "wheel_emergence": {
+          "pass": false,
+          "protected_asymmetric_wheel_by_t3_pct": 0.02,
+          "threshold_pct": 12.0
+        }
+      },
+      "fail_count": 3,
+      "stop_rule_triggered": true
+    },
+    "P3_TURBO_RESPECTFUL": {
+      "policy": "P3_TURBO_RESPECTFUL",
+      "gates": {
+        "engine_advantage": {
+          "pass": false,
+          "protected_engine_by_t2_delta_pp": 1.7,
+          "engine_by_t2_delta_pp": 4.49,
+          "interaction_delta_vs_blue_pp": -0.79,
+          "path_a_protected_engine_ge_7pp": false,
+          "path_b_engine_ge_10pp_and_interaction_not_worse": false
+        },
+        "rogsi_defensive_retention": {
+          "pass": true,
+          "interaction_delta_vs_stock_pp": 0.14,
+          "threshold_pp": -5.0
+        },
+        "conditional_burden": {
+          "pass": false,
+          "identity_stranded_rate_delta_pp": 46.22,
+          "stock_baseline_note": "Stock runs none of R1's 6 identity cards - baseline is structurally 0, not measured.",
+          "threshold_pp": 4.0
+        },
+        "mana": {
+          "pass": false,
+          "r1_meaningful_mana_failure_pct": 16.08,
+          "stock_meaningful_mana_failure_pct": 17.13,
+          "delta_pp": -1.05
+        },
+        "wheel_emergence": {
+          "pass": false,
+          "protected_asymmetric_wheel_by_t3_pct": 0.02,
+          "threshold_pct": 12.0
+        }
+      },
+      "fail_count": 4,
+      "stop_rule_triggered": true
+    }
+  },
+  "primary_policy": "P2_BALANCED",
+  "primary_decision": "ROG_FARM_FALSIFIED_OR_REDESIGN",
+  "stop_rule_triggered_all_policies": true,
+  "stop_rule_triggered_any_policy": true,
+  "fail_counts_by_policy": {
+    "P1_ENGINE_FORWARD": 4,
+    "P2_BALANCED": 3,
+    "P3_TURBO_RESPECTFUL": 4
+  }
+}

@@ -2892,21 +2892,29 @@ above, sharing only card-pool overlap (49 of 133 unique RogSi/Blue-Farm cards al
 cache-verified Oracle data from that project; loads via its own `data/decklists/*.json` files, not
 through `sim/analysis/opening_hand_model.py`'s Tymna/Thrasios-specific loaders).
 
-**PASS 1 (freeze + Stage 1 legality/rules/package audit) is complete; this is a genuine
-checkpoint, not a stopping point.** All three decks verified at exactly 98 unique cards + 2
-commanders; R1's diff against Stock RogSi is exactly the 6-removed/6-added the assignment
-specifies. The core mechanism claim is real and correctly derived from Oracle text (WebSearch-
-verified this task): Narset, Parter of Veils hard-caps every opponent at 1 card off any "each
-player draws N" wheel while the controller draws normally; Notion Thief goes further and
-redirects every one of those opponent draws to the controller instead (0 cards for opponents).
-Wheel of Fortune/Windfall refuel Underworld Breach's graveyard fuel (discard-based); Timetwister
-erases it (shuffle-based) — these must never be pooled together, exactly as the assignment warns.
-R1 passes the Stage 1 package-quality hard-failure gate cleanly (0 synergy-only blanks among its 6
-added cards, threshold ≤2).
+**PASS 1 (freeze + Stage 1 legality/rules/package audit): complete and PASS.** All three decks
+verified at exactly 98 unique cards + 2 commanders; R1's diff against Stock RogSi is exactly the
+6-removed/6-added the assignment specifies. Two Stage 1 corrections were made after the initial
+draft (user-supplied Foil Oracle text; the Underworld Breach + Lion's Eye Diamond + Brain Freeze
+loop is a genuine self-sustaining/effectively-infinite combo when Brain Freeze targets the caster,
+not the originally-drafted "net −4/loop, hard fuel-limited" value engine — see
+`rogfarm001_breach_loop.py` and its 18 regression tests). R1 passes the Stage 1 package-quality
+hard-failure gate cleanly (0 synergy-only blanks among its 6 added cards, threshold ≤2).
 
-**Stage 2 (paired opening-hand Monte Carlo across all three decks) has not been started** — it
-requires new simulation infrastructure for ~84 previously-unmodeled cards (rituals, Underworld
-Breach's escape-cost payment model, a wheel-effect class, Narset/Notion Thief/Bowmasters draw-
-replacement modeling), comparable in scope to the entire SIM-DECKBUILD-004/006/007 line of work
-combined, for a non-overlapping card pool. Disclosed explicitly per this task's own report policy,
-not a blocker — this is the PASS 1 completion checkpoint.
+**PASS 2/3 (Stage 2 paired opening-hand/T1–T3 Monte Carlo): complete. Result: STOP —
+`ROG_FARM_FALSIFIED_OR_REDESIGN`.** Full report:
+`results/solo_baseline/rogfarm001_report_stage2.md` (+ `rogfarm001_stage2_results.json` /
+`rogfarm001_stage2_gates.json`). 450,000 paired T1–T3 trials across all 3 decks × 3 pre-registered
+mulligan policies (P1 ENGINE_FORWARD/P2 BALANCED/P3 TURBO_RESPECTFUL — `rogfarm001_mulligan_
+policies.py`). R1 fails 3–4 of the 5 Section 9 falsification gates under **every** policy (never
+fewer than 3, well past the ≥2 stop threshold): it clears defensive retention robustly and shows a
+narrow, policy-dependent engine-timing edge, but its identity-package cards sit stranded ~44–46%
+of the time by T3 and its signature "protected asymmetric wheel" state — the specific mechanism
+its own thesis is built on — occurs in essentially 0% of hands (0.02–0.04% against a 12% target)
+across all three decks tested, not just R1. Per the assignment's own instruction, this task does
+not proceed into the mechanism ablations or Stage 3's wheel-state laboratory. New card-data/
+mulligan-policy/harness infrastructure (`rogfarm001_cards.py`, `rogfarm001_mulligan_policies.py`,
+`rogfarm001_variants.py`, `build_rogfarm001_stage2_harness.py`, `build_rogfarm001_stage2_gates.py`)
+covers all 84 previously-unmodeled cards across the three decks, reusing
+`deckbuild006_cards.py`/`mana_audit002_variants.py`/`deckbuild007_cards.py`'s existing card data
+directly wherever available.

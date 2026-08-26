@@ -165,9 +165,18 @@ def aggregate(results):
         return sum(r[key] for r in results) / n
 
     identity_hands = [r for r in results if r["identity_cards_in_opening"] > 0]
-    identity_stranded_rate = (
-        sum(r["identity_cards_stranded_t3"] for r in identity_hands) / max(1, len(identity_hands))
-        if identity_hands else None
+    # Section 7 lists these as THREE separate aggregates - identity_card_stranded_rate must be a
+    # true [0,1] rate (per identity CARD seen, not per hand), distinct from "average stranded
+    # identity cards per kept hand" (a mean count, which can exceed 1.0). Conflating the two into
+    # one field under the "rate" name was a real unit-mismatch bug caught while reading the Stage
+    # 2 gate output (Gate 3's delta showed "51.76pp" against a pp-scaled threshold when the
+    # underlying quantity was actually a mean COUNT, not a probability) - fixed here rather than
+    # reported as-is.
+    total_identity_seen = sum(r["identity_cards_in_opening"] for r in identity_hands)
+    total_identity_stranded = sum(r["identity_cards_stranded_t3"] for r in identity_hands)
+    identity_card_stranded_rate = (total_identity_stranded / total_identity_seen) if total_identity_seen else None
+    mean_stranded_identity_cards_per_kept_hand = (
+        total_identity_stranded / len(identity_hands) if identity_hands else None
     )
     win_turns = [r["earliest_credible_win_turn"] for r in results if r["earliest_credible_win_turn"] is not None]
     oracle_redundancy = sum(1 for r in results if r["thoracle_zero_step_t3"] and not r["breach_zero_step_t3"]) / n
@@ -186,7 +195,8 @@ def aggregate(results):
         "mana_2plus_t3": rate("mana_2plus_t3"),
         "mana_3plus_t3": rate("mana_3plus_t3"),
         "meaningful_mana_failure_rate": rate("meaningful_mana_failure"),
-        "identity_card_stranded_rate": identity_stranded_rate,
+        "identity_card_stranded_rate": identity_card_stranded_rate,
+        "mean_stranded_identity_cards_per_kept_hand": mean_stranded_identity_cards_per_kept_hand,
         "identity_hands_fraction": len(identity_hands) / n,
         "p_hand_2plus_conditional_identity_cards": sum(
             1 for r in results if r["identity_cards_in_opening"] >= 2
