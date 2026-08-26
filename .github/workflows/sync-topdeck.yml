@@ -1,0 +1,82 @@
+name: Sync TopDeck tournaments
+
+on:
+  workflow_dispatch:
+    inputs:
+      tid:
+        description: "Specific TopDeck tournament ID (optional)"
+        required: false
+        type: string
+      days:
+        description: "Rolling days when TID is empty"
+        required: true
+        default: "7"
+        type: string
+      participant_min:
+        description: "Minimum tournament size"
+        required: true
+        default: "16"
+        type: string
+      include_rounds:
+        description: "Include round and pod data"
+        required: true
+        default: true
+        type: boolean
+  push:
+    paths:
+      - ".github/workflows/sync-topdeck.yml"
+  schedule:
+    - cron: "37 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-topdeck-tournaments
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TOPDECK_API_KEY: ${{ secrets.TOPDECK_API_KEY }}
+      TID: ${{ inputs.tid || '' }}
+      DAYS: ${{ inputs.days || '7' }}
+      PARTICIPANT_MIN: ${{ inputs.participant_min || '16' }}
+      INCLUDE_ROUNDS: ${{ inputs.include_rounds || 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify API authentication
+        run: python -m sim.ingestion.topdeck_gg --smoke
+
+      - name: Ingest completed EDH tournaments
+        shell: bash
+        run: |
+          args=(--output-root data/tournament_snapshots/topdeck --participant-min "$PARTICIPANT_MIN")
+          if [[ -n "$TID" ]]; then
+            args+=(--tid "$TID")
+          else
+            args+=(--last "$DAYS")
+          fi
+          if [[ "$INCLUDE_ROUNDS" == "true" ]]; then
+            args+=(--include-rounds)
+          fi
+          python -m sim.ingestion.topdeck_gg "${args[@]}"
+
+      - name: Commit changed snapshots
+        run: |
+          if [ -z "$(git status --porcelain -- data/tournament_snapshots/topdeck)" ]; then
+            echo "TopDeck snapshots are unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tournament_snapshots/topdeck
+          git commit -m "data: sync TopDeck tournament snapshots"
+          git push
