@@ -23,6 +23,7 @@ DIRECTORY_SCHEMA_MAP = [
     ("data/decklists/*.json", "decklist.schema.json", "json"),
     ("data/deck_sources/**/current.json", "deck_source_snapshot.schema.json", "json"),
     ("data/deck_sources/**/history/*.json", "deck_source_snapshot.schema.json", "json"),
+    ("data/tournament_snapshots/topdeck/normalized/*.json", "topdeck_tournament.schema.json", "json"),
     ("data/cards_cache/**/*.json", "card.schema.json", "json"),
     ("data/archetypes/**/*.json", "archetype.schema.json", "json"),
     ("data/policies/**/*.json", "policy.schema.json", "json"),
