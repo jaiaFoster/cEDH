@@ -117,17 +117,18 @@ reproducible and cheap to re-run, each writing to `data/cards_cache/` /
   API. Free, ~100 req/min general endpoints (lower for bulk queries),
   **requires visible attribution/link-back** per their terms — any published
   artifact using this data must credit TopDeck.gg. Provides events, players,
-  standings, pairings, results.
-- **EDHTop16** (search results point to both `edhtop16.com` and an API
-  surface referenced as `cedhtop16.com/api` — **domain needs verification
-  once reachable**, do not hardcode a base URL from search-snippet inference
-  alone) — tournament aggregation, commander prevalence, decklists,
-  conversion stats, seat statistics, metagame summaries. JSON, MongoDB-style
-  filters, 120 req/min.
+  standings, structured deck objects, pairings, and results. Authenticated V2
+  ingestion is implemented in `sim/ingestion/topdeck_gg.py`; the scheduled
+  workflow writes versioned raw and normalized records under
+  `data/tournament_snapshots/topdeck/`.
+- **EDHTop16** — the current live API is GraphQL at
+  `edhtop16.com/api/graphql`; the legacy `cedhtop16.com/api` host redirects.
+  Treat this as a complementary validation/enrichment source rather than the
+  primary ingestion path.
 
-Both are the primary source for the empirical archetype registry (Layer 3)
-and empirical pod distributions (charter section "Empirical pod
-distributions"). Access blocked in this environment currently (see above).
+Both inform the empirical archetype registry (Layer 3) and empirical pod
+distributions (charter section "Empirical pod distributions"). TopDeck.gg is
+the active primary feed; EDHTop16 enrichment remains a later phase.
 
 ## Tier 5 — Archetype definition (secondary sources)
 
