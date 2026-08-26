@@ -53,6 +53,10 @@ Read, in order:
    synthetic vs. deck-backed, and why a gold-state test can never be
    confused with (or silently feed) empirical deck-performance statistics.
 
+Tournament data sourced from [TopDeck.gg](https://topdeck.gg) is ingested by
+`sim/ingestion/topdeck_gg.py` and retains the attribution required by TopDeck's
+API terms.
+
 ## Current blockers
 
 - No subject decklist has been supplied yet (`data/decklists/` is empty).
