@@ -42,7 +42,7 @@ jobs:
     env:
       TOPDECK_API_KEY: ${{ secrets.TOPDECK_API_KEY }}
       TID: ${{ inputs.tid || '' }}
-      DAYS: ${{ inputs.days || '7' }}
+      DAYS: ${{ github.event_name == 'push' && '30' || inputs.days || '7' }}
       PARTICIPANT_MIN: ${{ inputs.participant_min || '16' }}
       INCLUDE_ROUNDS: ${{ inputs.include_rounds || 'true' }}
     steps:
