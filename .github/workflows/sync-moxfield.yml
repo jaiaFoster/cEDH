@@ -40,7 +40,7 @@ jobs:
       - name: Commit a changed deck snapshot
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- data/deck_sources/moxfield/tymna-thrasios; then
+          if [ -z "$(git status --porcelain -- data/deck_sources/moxfield/tymna-thrasios)" ]; then
             echo "Canonical deck is unchanged."
             exit 0
           fi
