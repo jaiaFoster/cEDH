@@ -285,7 +285,7 @@ This is a sensible response to META-002/003's finding that v165 was overinvested
 
 ## Deck-builder handoff: questions to answer next
 
-1. Is the remaining resolved-creature suite—Gilded Drake, Swift Reconfiguration, Subtlety, Otawara, Talon Gates, and conditional counters—enough for the expected number of Kinnan/Sisay/Magda/Tayam-style opponents?
+1. Is the remaining creature-prevention/answer suite—Gilded Drake, Swift Reconfiguration, Subtlety, Otawara, Talon Gates, and conditional counters—enough for the expected number of Kinnan/Sisay/Magda/Tayam-style opponents?
 2. Which current slot is intended to be the second unconditional answer when Gilded Drake is unavailable or invalid?
 3. Does `Summoner's Pact` find a matchup-changing answer often enough to justify the upkeep liability, especially when it cannot find Gilded Drake, Subtlety, or most stack interaction?
 4. Is five-mana triple-blue Teferi reliably deployable before the relevant second fight, or is it primarily a win-more protection layer?
