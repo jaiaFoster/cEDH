@@ -1,0 +1,680 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-08-31T06:05:18.263776Z",
+  "content_hash": "d3987d0210b9a636f215562ed902fdb092700259df9e10af7595bca9cc3d58b9",
+  "tid": "casual-edh-tournament-2",
+  "name": "Casual EDH Tournament",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1788112800,
+  "start_date_utc": "2026-08-30T18:00:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 4,
+  "event_data": {
+    "lat": 29.878835,
+    "lng": -95.737181,
+    "city": "",
+    "state": "Texas",
+    "country": "United States",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/3ac0697d-4465-49b1-4186-74583fa92a00/public",
+    "address": "21211 FM 529, Cypress, TX 77433, USA"
+  },
+  "field_size": 16,
+  "decklist_coverage": {
+    "submitted": 15,
+    "structured": 15,
+    "total": 16
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+      "player_name": "Brian",
+      "commanders": [
+        "Tom, Bert, and William"
+      ],
+      "wins": 3,
+      "wins_swiss": 3,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 0,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+      "player_name": "Crisstione Turner",
+      "commanders": [
+        "Omnath, Locus of Creation"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "VD1Yj3s9cScsrFDVBFb86T5xEcq2",
+      "player_name": "Alex",
+      "commanders": [
+        "Pantlaza, Sun-Favored"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "FudCirTXzzL45EJ9TxiVO4TR1c92",
+      "player_name": "Lea",
+      "commanders": [
+        "Amalia Benavides Aguirre"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 5,
+      "player_id": "RJcDM202c0UB5bFZ1Kw5thb8z2j1",
+      "player_name": "Tristan Woodard",
+      "commanders": [
+        "Rowan, Scion of War"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 6,
+      "player_id": "jjA1oZjiFvUITCgBpfPGP25hTal1",
+      "player_name": "Sully Sullivan",
+      "commanders": [
+        "Jin Sakai, Ghost of Tsushima"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 7,
+      "player_id": "5hcspQlBFHPyQHW4TsHi6Y0r0Jv1",
+      "player_name": "Diego Flores",
+      "commanders": [
+        "Barktooth Warbeard"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 8,
+      "player_id": "hRocdRJZjbT258xvB5xrhJU1nL93",
+      "player_name": "Daniel Jacobson",
+      "commanders": [
+        "Gwenom, Remorseless"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "pvy8VT3hgobDgugPWztAAzBKCP73",
+      "player_name": "Michael A Stearns",
+      "commanders": [
+        "Strefan, Maurer Progenitor"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 10,
+      "player_id": "pg4fEQmV1IfKSnS0ej7zSlzhR1l1",
+      "player_name": "Juan Lopez",
+      "commanders": [
+        "Captain America, Team Leader"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "LWnj5s7gsZbLvophLj5ssZGHW6i1",
+      "player_name": "Kaden",
+      "commanders": [
+        "Caesar, Legion's Emperor"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 12,
+      "player_id": "mv36GFkEebgJFeeMmSFBmBO2eX03",
+      "player_name": "William Humphrey",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "cXmeaAzWvGQqhWKgdQ1ITAa4OR93",
+      "player_name": "Joel Kitchen ",
+      "commanders": [
+        "Sovereign Okinec Ahau"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 14,
+      "player_id": "RV2EOjRaPRSEGoGU4r6i86lhLoA3",
+      "player_name": "Omar Verduzco",
+      "commanders": [
+        "Teval, the Balanced Scale"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "bqq2I7kIAzd9Zj6bOrNllv3wbI82",
+      "player_name": "Stefano Vellone",
+      "commanders": [
+        "Kykar, Wind's Fury"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 16,
+      "player_id": "BCRvTnO8m3Sz0fq5BJlPRa2lWQl2",
+      "player_name": "Madison Rojas",
+      "commanders": [
+        "Obosh, the Preypiercer"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Brian",
+      "winner_id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+      "players": [
+        {
+          "id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+          "name": "Crisstione Turner"
+        },
+        {
+          "id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+          "name": "Brian"
+        },
+        {
+          "id": "VD1Yj3s9cScsrFDVBFb86T5xEcq2",
+          "name": "Alex"
+        },
+        {
+          "id": "pvy8VT3hgobDgugPWztAAzBKCP73",
+          "name": "Michael A Stearns"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Sully Sullivan",
+      "winner_id": "jjA1oZjiFvUITCgBpfPGP25hTal1",
+      "players": [
+        {
+          "id": "pg4fEQmV1IfKSnS0ej7zSlzhR1l1",
+          "name": "Juan Lopez"
+        },
+        {
+          "id": "bqq2I7kIAzd9Zj6bOrNllv3wbI82",
+          "name": "Stefano Vellone"
+        },
+        {
+          "id": "5hcspQlBFHPyQHW4TsHi6Y0r0Jv1",
+          "name": "Diego Flores"
+        },
+        {
+          "id": "jjA1oZjiFvUITCgBpfPGP25hTal1",
+          "name": "Sully Sullivan"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Tristan Woodard",
+      "winner_id": "RJcDM202c0UB5bFZ1Kw5thb8z2j1",
+      "players": [
+        {
+          "id": "hRocdRJZjbT258xvB5xrhJU1nL93",
+          "name": "Daniel Jacobson"
+        },
+        {
+          "id": "LWnj5s7gsZbLvophLj5ssZGHW6i1",
+          "name": "Kaden"
+        },
+        {
+          "id": "RJcDM202c0UB5bFZ1Kw5thb8z2j1",
+          "name": "Tristan Woodard"
+        },
+        {
+          "id": "RV2EOjRaPRSEGoGU4r6i86lhLoA3",
+          "name": "Omar Verduzco"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Lea",
+      "winner_id": "FudCirTXzzL45EJ9TxiVO4TR1c92",
+      "players": [
+        {
+          "id": "BCRvTnO8m3Sz0fq5BJlPRa2lWQl2",
+          "name": "Madison Rojas"
+        },
+        {
+          "id": "FudCirTXzzL45EJ9TxiVO4TR1c92",
+          "name": "Lea"
+        },
+        {
+          "id": "cXmeaAzWvGQqhWKgdQ1ITAa4OR93",
+          "name": "Joel Kitchen "
+        },
+        {
+          "id": "mv36GFkEebgJFeeMmSFBmBO2eX03",
+          "name": "William Humphrey"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Brian",
+      "winner_id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+      "players": [
+        {
+          "id": "jjA1oZjiFvUITCgBpfPGP25hTal1",
+          "name": "Sully Sullivan"
+        },
+        {
+          "id": "RJcDM202c0UB5bFZ1Kw5thb8z2j1",
+          "name": "Tristan Woodard"
+        },
+        {
+          "id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+          "name": "Brian"
+        },
+        {
+          "id": "FudCirTXzzL45EJ9TxiVO4TR1c92",
+          "name": "Lea"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Crisstione Turner",
+      "winner_id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+      "players": [
+        {
+          "id": "cXmeaAzWvGQqhWKgdQ1ITAa4OR93",
+          "name": "Joel Kitchen "
+        },
+        {
+          "id": "5hcspQlBFHPyQHW4TsHi6Y0r0Jv1",
+          "name": "Diego Flores"
+        },
+        {
+          "id": "hRocdRJZjbT258xvB5xrhJU1nL93",
+          "name": "Daniel Jacobson"
+        },
+        {
+          "id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+          "name": "Crisstione Turner"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "mv36GFkEebgJFeeMmSFBmBO2eX03",
+          "name": "William Humphrey"
+        },
+        {
+          "id": "pvy8VT3hgobDgugPWztAAzBKCP73",
+          "name": "Michael A Stearns"
+        },
+        {
+          "id": "pg4fEQmV1IfKSnS0ej7zSlzhR1l1",
+          "name": "Juan Lopez"
+        },
+        {
+          "id": "LWnj5s7gsZbLvophLj5ssZGHW6i1",
+          "name": "Kaden"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Alex",
+      "winner_id": "VD1Yj3s9cScsrFDVBFb86T5xEcq2",
+      "players": [
+        {
+          "id": "VD1Yj3s9cScsrFDVBFb86T5xEcq2",
+          "name": "Alex"
+        },
+        {
+          "id": "RV2EOjRaPRSEGoGU4r6i86lhLoA3",
+          "name": "Omar Verduzco"
+        },
+        {
+          "id": "bqq2I7kIAzd9Zj6bOrNllv3wbI82",
+          "name": "Stefano Vellone"
+        },
+        {
+          "id": "BCRvTnO8m3Sz0fq5BJlPRa2lWQl2",
+          "name": "Madison Rojas"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Brian",
+      "winner_id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+      "players": [
+        {
+          "id": "RV2EOjRaPRSEGoGU4r6i86lhLoA3",
+          "name": "Omar Verduzco"
+        },
+        {
+          "id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+          "name": "Brian"
+        },
+        {
+          "id": "pg4fEQmV1IfKSnS0ej7zSlzhR1l1",
+          "name": "Juan Lopez"
+        },
+        {
+          "id": "cXmeaAzWvGQqhWKgdQ1ITAa4OR93",
+          "name": "Joel Kitchen "
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Diego Flores",
+      "winner_id": "5hcspQlBFHPyQHW4TsHi6Y0r0Jv1",
+      "players": [
+        {
+          "id": "mv36GFkEebgJFeeMmSFBmBO2eX03",
+          "name": "William Humphrey"
+        },
+        {
+          "id": "RJcDM202c0UB5bFZ1Kw5thb8z2j1",
+          "name": "Tristan Woodard"
+        },
+        {
+          "id": "5hcspQlBFHPyQHW4TsHi6Y0r0Jv1",
+          "name": "Diego Flores"
+        },
+        {
+          "id": "VD1Yj3s9cScsrFDVBFb86T5xEcq2",
+          "name": "Alex"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Crisstione Turner",
+      "winner_id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+      "players": [
+        {
+          "id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+          "name": "Crisstione Turner"
+        },
+        {
+          "id": "LWnj5s7gsZbLvophLj5ssZGHW6i1",
+          "name": "Kaden"
+        },
+        {
+          "id": "FudCirTXzzL45EJ9TxiVO4TR1c92",
+          "name": "Lea"
+        },
+        {
+          "id": "bqq2I7kIAzd9Zj6bOrNllv3wbI82",
+          "name": "Stefano Vellone"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Daniel Jacobson",
+      "winner_id": "hRocdRJZjbT258xvB5xrhJU1nL93",
+      "players": [
+        {
+          "id": "pvy8VT3hgobDgugPWztAAzBKCP73",
+          "name": "Michael A Stearns"
+        },
+        {
+          "id": "jjA1oZjiFvUITCgBpfPGP25hTal1",
+          "name": "Sully Sullivan"
+        },
+        {
+          "id": "BCRvTnO8m3Sz0fq5BJlPRa2lWQl2",
+          "name": "Madison Rojas"
+        },
+        {
+          "id": "hRocdRJZjbT258xvB5xrhJU1nL93",
+          "name": "Daniel Jacobson"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "YYEF9YNvf2SscMrs6f8uduYXPc93",
+          "name": "Brian"
+        },
+        {
+          "id": "2sgv5zmWgTWI6TiwLC05hBz2p403",
+          "name": "Crisstione Turner"
+        },
+        {
+          "id": "VD1Yj3s9cScsrFDVBFb86T5xEcq2",
+          "name": "Alex"
+        },
+        {
+          "id": "FudCirTXzzL45EJ9TxiVO4TR1c92",
+          "name": "Lea"
+        }
+      ]
+    }
+  ]
+}
