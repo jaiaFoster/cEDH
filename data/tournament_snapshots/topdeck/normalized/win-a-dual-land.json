@@ -5,8 +5,8 @@
     "name": "TopDeck.gg",
     "url": "https://topdeck.gg"
   },
-  "pulled_at": "2026-08-30T05:46:47.461289Z",
-  "content_hash": "a1a974c1f99c2fbdf35edac88c4f866a58a95e4687fffd5385f95fe5988e5a60",
+  "pulled_at": "2026-08-31T14:23:43.856394Z",
+  "content_hash": "498304b2df5705b402b9fdb15f89a048ea7b2dc1cf66bebe4eecde14a0ec02fc",
   "tid": "win-a-dual-land",
   "name": "Win a Dual land",
   "game": "Magic: The Gathering",
@@ -33,18 +33,19 @@
   "entries": [
     {
       "standing": 1,
-      "player_id": "XG3zUDaSLrSgWeyzj1BMUCypIFI3",
-      "player_name": "Ethan Magness",
+      "player_id": "y2vJ5ZGokRaTOkBFXuJfNpSEvhf1",
+      "player_name": "Christopher Alleyne ",
       "commanders": [
-        "Queen Marchesa"
+        "Thrasios, Triton Hero",
+        "Yoshimaru, Ever Faithful"
       ],
-      "wins": 3,
-      "wins_swiss": 1,
-      "wins_bracket": 2,
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
       "draws": 1,
       "losses": 2,
-      "losses_swiss": 2,
-      "losses_bracket": 0,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
       "byes": 0,
       "top_cut": true,
       "winner": true,
@@ -53,27 +54,6 @@
     },
     {
       "standing": 2,
-      "player_id": "y2vJ5ZGokRaTOkBFXuJfNpSEvhf1",
-      "player_name": "Christopher Alleyne ",
-      "commanders": [
-        "Thrasios, Triton Hero",
-        "Yoshimaru, Ever Faithful"
-      ],
-      "wins": 3,
-      "wins_swiss": 2,
-      "wins_bracket": 1,
-      "draws": 1,
-      "losses": 2,
-      "losses_swiss": 1,
-      "losses_bracket": 1,
-      "byes": 0,
-      "top_cut": true,
-      "winner": false,
-      "decklist_present": true,
-      "structured_deck_present": true
-    },
-    {
-      "standing": 3,
       "player_id": "KOMr4NxCHjc1upGWTZnY8QHUvv42",
       "player_name": "Daniel Curry ",
       "commanders": [
@@ -83,9 +63,9 @@
       "wins_swiss": 2,
       "wins_bracket": 1,
       "draws": 0,
-      "losses": 3,
+      "losses": 2,
       "losses_swiss": 2,
-      "losses_bracket": 1,
+      "losses_bracket": 0,
       "byes": 0,
       "top_cut": true,
       "winner": false,
@@ -93,7 +73,7 @@
       "structured_deck_present": true
     },
     {
-      "standing": 4,
+      "standing": 3,
       "player_id": "rsJDLYJLzMPn1Ni7UEZVd8cpZHq1",
       "player_name": "Laura Losai",
       "commanders": [
@@ -103,9 +83,29 @@
       "wins_swiss": 1,
       "wins_bracket": 1,
       "draws": 1,
-      "losses": 3,
+      "losses": 2,
       "losses_swiss": 2,
-      "losses_bracket": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "XG3zUDaSLrSgWeyzj1BMUCypIFI3",
+      "player_name": "Ethan Magness",
+      "commanders": [
+        "Queen Marchesa"
+      ],
+      "wins": 2,
+      "wins_swiss": 1,
+      "wins_bracket": 1,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
       "byes": 0,
       "top_cut": true,
       "winner": false,
@@ -988,8 +988,8 @@
       "round": "Top 16",
       "table": 3,
       "status": "Completed",
-      "winner": "Christopher Alleyne ",
-      "winner_id": "y2vJ5ZGokRaTOkBFXuJfNpSEvhf1",
+      "winner": "Draw",
+      "winner_id": "Draw",
       "players": [
         {
           "id": "y2vJ5ZGokRaTOkBFXuJfNpSEvhf1",
@@ -1031,31 +1031,6 @@
         {
           "id": "EPMYDJN6Eeeada4523d5ghYyr5k2",
           "name": "andrew homfray-stephens"
-        }
-      ]
-    },
-    {
-      "round": "Top 4",
-      "table": 1,
-      "status": "Completed",
-      "winner": "Ethan Magness",
-      "winner_id": "XG3zUDaSLrSgWeyzj1BMUCypIFI3",
-      "players": [
-        {
-          "id": "XG3zUDaSLrSgWeyzj1BMUCypIFI3",
-          "name": "Ethan Magness"
-        },
-        {
-          "id": "KOMr4NxCHjc1upGWTZnY8QHUvv42",
-          "name": "Daniel Curry "
-        },
-        {
-          "id": "y2vJ5ZGokRaTOkBFXuJfNpSEvhf1",
-          "name": "Christopher Alleyne "
-        },
-        {
-          "id": "rsJDLYJLzMPn1Ni7UEZVd8cpZHq1",
-          "name": "Laura Losai"
         }
       ]
     }
