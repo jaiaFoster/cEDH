@@ -1,0 +1,819 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-09-05T10:54:26.886520Z",
+  "content_hash": "c4665043d1ef131a23255491e83ca3cf346eb150a516cf58f423f6bdad03495e",
+  "tid": "cedh-ccc-9426",
+  "name": "CCcEDH 9/4/26",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1788571800,
+  "start_date_utc": "2026-09-05T01:30:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 4,
+  "event_data": {
+    "lat": 36.8222,
+    "lng": -119.709663,
+    "city": "Clovis",
+    "state": "California",
+    "country": "United States",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/01c12b9e-4aa4-4c2c-f448-93558e329500/public",
+    "address": "50 W Bullard Ave, Clovis, CA 93612, USA"
+  },
+  "field_size": 20,
+  "decklist_coverage": {
+    "submitted": 11,
+    "structured": 11,
+    "total": 20
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+      "player_name": "Luis H [CenCal]",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 1,
+      "wins_bracket": 1,
+      "draws": 2,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 2,
+      "player_id": "7ST0nkDp97V99CFQ06HWTKvLp2o1",
+      "player_name": "Hi it me Ed [CenCal]",
+      "commanders": [
+        "Marneus Calgar"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 0,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "tcGlkTXnKJVkceU3AivK6L9wDeZ2",
+      "player_name": "Bsphere [Brian C]",
+      "commanders": [
+        "Ishai, Ojutai Dragonspeaker",
+        "Rograkh, Son of Rohgahh"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 0,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "042p5uBU7hNmqkfPaUZ2SXr7mwn2",
+      "player_name": "Nicholas",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "uLSNEeECeOh5AF5k7UtnhJwx5YC2",
+      "player_name": "Wes [CenCal]",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 6,
+      "player_id": "jAoxgyuEIWXvpCLXzXg1haW5Vp62",
+      "player_name": "Carlos Sanchez [CenCal]",
+      "commanders": [
+        "Winota, Joiner of Forces"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 7,
+      "player_id": "qEBG1ho0snRqUPGg9Vcuhb4O5YI3",
+      "player_name": "Thomas G [CenCal]",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 8,
+      "player_id": "g0zidDNZmpZgHqIuw6MVB1k2exJ3",
+      "player_name": "Taylor Metry [CenCal]",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 9,
+      "player_id": "EGqySrYeSicpNHjDia9ICLuOUVK2",
+      "player_name": "Christian",
+      "commanders": [
+        "Rydia, Summoner of Mist"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 10,
+      "player_id": "h03fC9V2OmgoUJBrNwdgVV4tSUD2",
+      "player_name": "Viva La Rhystic Study! Lucas raynor",
+      "commanders": [
+        "Heliod, the Radiant Dawn // Heliod, the Warped Eclipse"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "yoF2eraEsDhnATBxEIlhVuBYlsh1",
+      "player_name": "Ryan Higa [CenCal]",
+      "commanders": [
+        "Vivi Ornitier"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 12,
+      "player_id": "5QxYDLbQXTWf0ybw9WQFf4IVRO33",
+      "player_name": "[IR!] Magician_MTG/Julian",
+      "commanders": [
+        "Tevesh Szat, Doom of Fools",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 13,
+      "player_id": "WSd2ZxhqOve3eYhWO6V4dK6EauI2",
+      "player_name": "[CCC] Kevin Tyler",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 14,
+      "player_id": "atMzDTyZtiVMhKzQhDxhovirsDh2",
+      "player_name": "MexiDLite (Nico)",
+      "commanders": [
+        "Leonardo, the Balance",
+        "Michelangelo, the Heart"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "C4nTVsQ18jNfAhQ7lP9e62S1GUz2",
+      "player_name": "Martin J Veloz Jr",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 16,
+      "player_id": "NEKcWfCXKRRr3GnLB20uOC7dwxt1",
+      "player_name": "Ethan Ayala",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 17,
+      "player_id": "01LVHblaEITezqOPtPGeHDKIIjx2",
+      "player_name": "Marco",
+      "commanders": [
+        "Marneus Calgar"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 18,
+      "player_id": "ItSJf9bdnkTe8UbDgkMF6pc53o03",
+      "player_name": "Stitch mtg",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 19,
+      "player_id": "vAilM6MYncZc72fZ1jH7aCQ8EAH3",
+      "player_name": "Foggy [AF Card Games]",
+      "commanders": [
+        "Crystal, Inhuman Princess"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 20,
+      "player_id": "6zlhEwZZBbPDuvuxXzQkAsUrlzm2",
+      "player_name": "Isaak Reimche ",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "jAoxgyuEIWXvpCLXzXg1haW5Vp62",
+          "name": "Carlos Sanchez [CenCal]"
+        },
+        {
+          "id": "h03fC9V2OmgoUJBrNwdgVV4tSUD2",
+          "name": "Viva La Rhystic Study! Lucas raynor"
+        },
+        {
+          "id": "7ST0nkDp97V99CFQ06HWTKvLp2o1",
+          "name": "Hi it me Ed [CenCal]"
+        },
+        {
+          "id": "NEKcWfCXKRRr3GnLB20uOC7dwxt1",
+          "name": "Ethan Ayala"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Wes [CenCal]",
+      "winner_id": "uLSNEeECeOh5AF5k7UtnhJwx5YC2",
+      "players": [
+        {
+          "id": "vAilM6MYncZc72fZ1jH7aCQ8EAH3",
+          "name": "Foggy [AF Card Games]"
+        },
+        {
+          "id": "uLSNEeECeOh5AF5k7UtnhJwx5YC2",
+          "name": "Wes [CenCal]"
+        },
+        {
+          "id": "g0zidDNZmpZgHqIuw6MVB1k2exJ3",
+          "name": "Taylor Metry [CenCal]"
+        },
+        {
+          "id": "atMzDTyZtiVMhKzQhDxhovirsDh2",
+          "name": "MexiDLite (Nico)"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Luis H [CenCal]",
+      "winner_id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+      "players": [
+        {
+          "id": "01LVHblaEITezqOPtPGeHDKIIjx2",
+          "name": "Marco"
+        },
+        {
+          "id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+          "name": "Luis H [CenCal]"
+        },
+        {
+          "id": "6zlhEwZZBbPDuvuxXzQkAsUrlzm2",
+          "name": "Isaak Reimche "
+        },
+        {
+          "id": "C4nTVsQ18jNfAhQ7lP9e62S1GUz2",
+          "name": "Martin J Veloz Jr"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Thomas G [CenCal]",
+      "winner_id": "qEBG1ho0snRqUPGg9Vcuhb4O5YI3",
+      "players": [
+        {
+          "id": "EGqySrYeSicpNHjDia9ICLuOUVK2",
+          "name": "Christian"
+        },
+        {
+          "id": "ItSJf9bdnkTe8UbDgkMF6pc53o03",
+          "name": "Stitch mtg"
+        },
+        {
+          "id": "qEBG1ho0snRqUPGg9Vcuhb4O5YI3",
+          "name": "Thomas G [CenCal]"
+        },
+        {
+          "id": "5QxYDLbQXTWf0ybw9WQFf4IVRO33",
+          "name": "[IR!] Magician_MTG/Julian"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "tcGlkTXnKJVkceU3AivK6L9wDeZ2",
+          "name": "Bsphere [Brian C]"
+        },
+        {
+          "id": "yoF2eraEsDhnATBxEIlhVuBYlsh1",
+          "name": "Ryan Higa [CenCal]"
+        },
+        {
+          "id": "042p5uBU7hNmqkfPaUZ2SXr7mwn2",
+          "name": "Nicholas"
+        },
+        {
+          "id": "WSd2ZxhqOve3eYhWO6V4dK6EauI2",
+          "name": "[CCC] Kevin Tyler"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+          "name": "Luis H [CenCal]"
+        },
+        {
+          "id": "yoF2eraEsDhnATBxEIlhVuBYlsh1",
+          "name": "Ryan Higa [CenCal]"
+        },
+        {
+          "id": "qEBG1ho0snRqUPGg9Vcuhb4O5YI3",
+          "name": "Thomas G [CenCal]"
+        },
+        {
+          "id": "uLSNEeECeOh5AF5k7UtnhJwx5YC2",
+          "name": "Wes [CenCal]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "WSd2ZxhqOve3eYhWO6V4dK6EauI2",
+          "name": "[CCC] Kevin Tyler"
+        },
+        {
+          "id": "C4nTVsQ18jNfAhQ7lP9e62S1GUz2",
+          "name": "Martin J Veloz Jr"
+        },
+        {
+          "id": "h03fC9V2OmgoUJBrNwdgVV4tSUD2",
+          "name": "Viva La Rhystic Study! Lucas raynor"
+        },
+        {
+          "id": "ItSJf9bdnkTe8UbDgkMF6pc53o03",
+          "name": "Stitch mtg"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Bsphere [Brian C]",
+      "winner_id": "tcGlkTXnKJVkceU3AivK6L9wDeZ2",
+      "players": [
+        {
+          "id": "NEKcWfCXKRRr3GnLB20uOC7dwxt1",
+          "name": "Ethan Ayala"
+        },
+        {
+          "id": "6zlhEwZZBbPDuvuxXzQkAsUrlzm2",
+          "name": "Isaak Reimche "
+        },
+        {
+          "id": "tcGlkTXnKJVkceU3AivK6L9wDeZ2",
+          "name": "Bsphere [Brian C]"
+        },
+        {
+          "id": "vAilM6MYncZc72fZ1jH7aCQ8EAH3",
+          "name": "Foggy [AF Card Games]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Nicholas",
+      "winner_id": "042p5uBU7hNmqkfPaUZ2SXr7mwn2",
+      "players": [
+        {
+          "id": "042p5uBU7hNmqkfPaUZ2SXr7mwn2",
+          "name": "Nicholas"
+        },
+        {
+          "id": "EGqySrYeSicpNHjDia9ICLuOUVK2",
+          "name": "Christian"
+        },
+        {
+          "id": "jAoxgyuEIWXvpCLXzXg1haW5Vp62",
+          "name": "Carlos Sanchez [CenCal]"
+        },
+        {
+          "id": "g0zidDNZmpZgHqIuw6MVB1k2exJ3",
+          "name": "Taylor Metry [CenCal]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "5QxYDLbQXTWf0ybw9WQFf4IVRO33",
+          "name": "[IR!] Magician_MTG/Julian"
+        },
+        {
+          "id": "atMzDTyZtiVMhKzQhDxhovirsDh2",
+          "name": "MexiDLite (Nico)"
+        },
+        {
+          "id": "01LVHblaEITezqOPtPGeHDKIIjx2",
+          "name": "Marco"
+        },
+        {
+          "id": "7ST0nkDp97V99CFQ06HWTKvLp2o1",
+          "name": "Hi it me Ed [CenCal]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "h03fC9V2OmgoUJBrNwdgVV4tSUD2",
+          "name": "Viva La Rhystic Study! Lucas raynor"
+        },
+        {
+          "id": "5QxYDLbQXTWf0ybw9WQFf4IVRO33",
+          "name": "[IR!] Magician_MTG/Julian"
+        },
+        {
+          "id": "tcGlkTXnKJVkceU3AivK6L9wDeZ2",
+          "name": "Bsphere [Brian C]"
+        },
+        {
+          "id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+          "name": "Luis H [CenCal]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Hi it me Ed [CenCal]",
+      "winner_id": "7ST0nkDp97V99CFQ06HWTKvLp2o1",
+      "players": [
+        {
+          "id": "uLSNEeECeOh5AF5k7UtnhJwx5YC2",
+          "name": "Wes [CenCal]"
+        },
+        {
+          "id": "7ST0nkDp97V99CFQ06HWTKvLp2o1",
+          "name": "Hi it me Ed [CenCal]"
+        },
+        {
+          "id": "C4nTVsQ18jNfAhQ7lP9e62S1GUz2",
+          "name": "Martin J Veloz Jr"
+        },
+        {
+          "id": "042p5uBU7hNmqkfPaUZ2SXr7mwn2",
+          "name": "Nicholas"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Carlos Sanchez [CenCal]",
+      "winner_id": "jAoxgyuEIWXvpCLXzXg1haW5Vp62",
+      "players": [
+        {
+          "id": "jAoxgyuEIWXvpCLXzXg1haW5Vp62",
+          "name": "Carlos Sanchez [CenCal]"
+        },
+        {
+          "id": "qEBG1ho0snRqUPGg9Vcuhb4O5YI3",
+          "name": "Thomas G [CenCal]"
+        },
+        {
+          "id": "WSd2ZxhqOve3eYhWO6V4dK6EauI2",
+          "name": "[CCC] Kevin Tyler"
+        },
+        {
+          "id": "atMzDTyZtiVMhKzQhDxhovirsDh2",
+          "name": "MexiDLite (Nico)"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Christian",
+      "winner_id": "EGqySrYeSicpNHjDia9ICLuOUVK2",
+      "players": [
+        {
+          "id": "NEKcWfCXKRRr3GnLB20uOC7dwxt1",
+          "name": "Ethan Ayala"
+        },
+        {
+          "id": "01LVHblaEITezqOPtPGeHDKIIjx2",
+          "name": "Marco"
+        },
+        {
+          "id": "yoF2eraEsDhnATBxEIlhVuBYlsh1",
+          "name": "Ryan Higa [CenCal]"
+        },
+        {
+          "id": "EGqySrYeSicpNHjDia9ICLuOUVK2",
+          "name": "Christian"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Taylor Metry [CenCal]",
+      "winner_id": "g0zidDNZmpZgHqIuw6MVB1k2exJ3",
+      "players": [
+        {
+          "id": "g0zidDNZmpZgHqIuw6MVB1k2exJ3",
+          "name": "Taylor Metry [CenCal]"
+        },
+        {
+          "id": "ItSJf9bdnkTe8UbDgkMF6pc53o03",
+          "name": "Stitch mtg"
+        },
+        {
+          "id": "6zlhEwZZBbPDuvuxXzQkAsUrlzm2",
+          "name": "Isaak Reimche "
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Luis H [CenCal]",
+      "winner_id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+      "players": [
+        {
+          "id": "GGS6urCweEPaL05TgKBOVsBG8L13",
+          "name": "Luis H [CenCal]"
+        },
+        {
+          "id": "7ST0nkDp97V99CFQ06HWTKvLp2o1",
+          "name": "Hi it me Ed [CenCal]"
+        },
+        {
+          "id": "tcGlkTXnKJVkceU3AivK6L9wDeZ2",
+          "name": "Bsphere [Brian C]"
+        },
+        {
+          "id": "042p5uBU7hNmqkfPaUZ2SXr7mwn2",
+          "name": "Nicholas"
+        }
+      ]
+    }
+  ]
+}
