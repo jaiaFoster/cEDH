@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-09-05T20:41:47.668124Z",
+  "content_hash": "e0c362f18ad957c53f5a3d10c8082ebdac6972c87a5ef6b6ad79e437b9a94c47",
+  "tid": "huddersfield-september-cedh-2",
+  "name": "Huddersfield September cEDH",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1788602400,
+  "start_date_utc": "2026-09-05T10:00:00Z",
+  "swiss_rounds": 4,
+  "top_cut_size": 4,
+  "event_data": {
+    "lat": 53.644851,
+    "lng": -1.784285,
+    "city": "",
+    "state": "England",
+    "country": "United Kingdom",
+    "headerImage": "",
+    "address": "Gemini Games, High Street, Huddersfield, UK"
+  },
+  "field_size": 17,
+  "decklist_coverage": {
+    "submitted": 16,
+    "structured": 16,
+    "total": 17
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+      "player_name": "Ed G",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 2,
+      "wins_swiss": 1,
+      "wins_bracket": 1,
+      "draws": 3,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "0nHakhCWx5erd58MM1miEStvMrj1",
+      "player_name": "Ben Norrie",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 1,
+      "losses_swiss": 0,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+      "player_name": "Toni ",
+      "commanders": [
+        "Vivi Ornitier"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 1,
+      "losses_swiss": 0,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+      "player_name": "Chris Gardner",
+      "commanders": [
+        "Oswald Fiddlebender"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 5,
+      "player_id": "w2aCFUbae5ec0iPq19kC1oMlI243",
+      "player_name": "A",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 6,
+      "player_id": "rSfJzNhPxHghWX1pUtQAlj0Jggt2",
+      "player_name": "Miles Fan",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 7,
+      "player_id": "eNSmdCYO6lWDySDD08HoVZfmyUi1",
+      "player_name": "Daniel Tregoiing",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 8,
+      "player_id": "HI3QE6XRrQWie8J8cF6zaUMlDuw2",
+      "player_name": "Maia Wooff",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Yoshimaru, Ever Faithful"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "UUKWcn4srsRn7g4YgE6JLYxn4m63",
+      "player_name": "Philip Smith",
+      "commanders": [
+        "Malcolm, Keen-Eyed Navigator",
+        "Vial Smasher the Fierce"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 10,
+      "player_id": "SZad0S9aZCPVGCmRLdjQQ4waYCo2",
+      "player_name": "Matthew Humphrey",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "5IMSd0OvohUBvrmGh6kLXAffv4C2",
+      "player_name": "Tom Convery",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 12,
+      "player_id": "Kd1x5tISv9OxpsbiF9fhlBepWUC3",
+      "player_name": "Alex Blore",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 13,
+      "player_id": "eBxc6tPfrjb9lkGdTsTOnuiOZNJ3",
+      "player_name": "James Ruler",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Vial Smasher the Fierce"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 14,
+      "player_id": "Rsx8JCK7VLTizLOjFV7TXPZfRsg2",
+      "player_name": "JJ Pinnick",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 15,
+      "player_id": "K4qLObK3eDcZLuHnKaqthC7XdWr2",
+      "player_name": "Fuzz",
+      "commanders": [
+        "Dargo, the Shipwrecker",
+        "Tymna the Weaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 16,
+      "player_id": "EAfD9RbYHdbMQo0hIYibFDE9p8U2",
+      "player_name": "Wayne Calvert",
+      "commanders": [
+        "Etali, Primal Conqueror // Etali, Primal Sickness"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 17,
+      "player_id": "F8sj9LZlzGXrh8hcoUmapGB40lV2",
+      "player_name": "Charlie Emmott",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Kd1x5tISv9OxpsbiF9fhlBepWUC3",
+          "name": "Alex Blore"
+        },
+        {
+          "id": "Rsx8JCK7VLTizLOjFV7TXPZfRsg2",
+          "name": "JJ Pinnick"
+        },
+        {
+          "id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+          "name": "Ed G"
+        },
+        {
+          "id": "SZad0S9aZCPVGCmRLdjQQ4waYCo2",
+          "name": "Matthew Humphrey"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Ben Norrie",
+      "winner_id": "0nHakhCWx5erd58MM1miEStvMrj1",
+      "players": [
+        {
+          "id": "eNSmdCYO6lWDySDD08HoVZfmyUi1",
+          "name": "Daniel Tregoiing"
+        },
+        {
+          "id": "0nHakhCWx5erd58MM1miEStvMrj1",
+          "name": "Ben Norrie"
+        },
+        {
+          "id": "UUKWcn4srsRn7g4YgE6JLYxn4m63",
+          "name": "Philip Smith"
+        },
+        {
+          "id": "F8sj9LZlzGXrh8hcoUmapGB40lV2",
+          "name": "Charlie Emmott"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Maia Wooff",
+      "winner_id": "HI3QE6XRrQWie8J8cF6zaUMlDuw2",
+      "players": [
+        {
+          "id": "EAfD9RbYHdbMQo0hIYibFDE9p8U2",
+          "name": "Wayne Calvert"
+        },
+        {
+          "id": "HI3QE6XRrQWie8J8cF6zaUMlDuw2",
+          "name": "Maia Wooff"
+        },
+        {
+          "id": "eBxc6tPfrjb9lkGdTsTOnuiOZNJ3",
+          "name": "James Ruler"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Toni ",
+      "winner_id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+      "players": [
+        {
+          "id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+          "name": "Toni "
+        },
+        {
+          "id": "K4qLObK3eDcZLuHnKaqthC7XdWr2",
+          "name": "Fuzz"
+        },
+        {
+          "id": "w2aCFUbae5ec0iPq19kC1oMlI243",
+          "name": "A"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Chris Gardner",
+      "winner_id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+      "players": [
+        {
+          "id": "5IMSd0OvohUBvrmGh6kLXAffv4C2",
+          "name": "Tom Convery"
+        },
+        {
+          "id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+          "name": "Chris Gardner"
+        },
+        {
+          "id": "rSfJzNhPxHghWX1pUtQAlj0Jggt2",
+          "name": "Miles Fan"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "HI3QE6XRrQWie8J8cF6zaUMlDuw2",
+          "name": "Maia Wooff"
+        },
+        {
+          "id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+          "name": "Chris Gardner"
+        },
+        {
+          "id": "0nHakhCWx5erd58MM1miEStvMrj1",
+          "name": "Ben Norrie"
+        },
+        {
+          "id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+          "name": "Toni "
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Ed G",
+      "winner_id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+      "players": [
+        {
+          "id": "eBxc6tPfrjb9lkGdTsTOnuiOZNJ3",
+          "name": "James Ruler"
+        },
+        {
+          "id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+          "name": "Ed G"
+        },
+        {
+          "id": "5IMSd0OvohUBvrmGh6kLXAffv4C2",
+          "name": "Tom Convery"
+        },
+        {
+          "id": "K4qLObK3eDcZLuHnKaqthC7XdWr2",
+          "name": "Fuzz"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Miles Fan",
+      "winner_id": "rSfJzNhPxHghWX1pUtQAlj0Jggt2",
+      "players": [
+        {
+          "id": "rSfJzNhPxHghWX1pUtQAlj0Jggt2",
+          "name": "Miles Fan"
+        },
+        {
+          "id": "Kd1x5tISv9OxpsbiF9fhlBepWUC3",
+          "name": "Alex Blore"
+        },
+        {
+          "id": "F8sj9LZlzGXrh8hcoUmapGB40lV2",
+          "name": "Charlie Emmott"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "A",
+      "winner_id": "w2aCFUbae5ec0iPq19kC1oMlI243",
+      "players": [
+        {
+          "id": "w2aCFUbae5ec0iPq19kC1oMlI243",
+          "name": "A"
+        },
+        {
+          "id": "UUKWcn4srsRn7g4YgE6JLYxn4m63",
+          "name": "Philip Smith"
+        },
+        {
+          "id": "Rsx8JCK7VLTizLOjFV7TXPZfRsg2",
+          "name": "JJ Pinnick"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Daniel Tregoiing",
+      "winner_id": "eNSmdCYO6lWDySDD08HoVZfmyUi1",
+      "players": [
+        {
+          "id": "SZad0S9aZCPVGCmRLdjQQ4waYCo2",
+          "name": "Matthew Humphrey"
+        },
+        {
+          "id": "EAfD9RbYHdbMQo0hIYibFDE9p8U2",
+          "name": "Wayne Calvert"
+        },
+        {
+          "id": "eNSmdCYO6lWDySDD08HoVZfmyUi1",
+          "name": "Daniel Tregoiing"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "w2aCFUbae5ec0iPq19kC1oMlI243",
+          "name": "A"
+        },
+        {
+          "id": "rSfJzNhPxHghWX1pUtQAlj0Jggt2",
+          "name": "Miles Fan"
+        },
+        {
+          "id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+          "name": "Ed G"
+        },
+        {
+          "id": "0nHakhCWx5erd58MM1miEStvMrj1",
+          "name": "Ben Norrie"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+          "name": "Toni "
+        },
+        {
+          "id": "Kd1x5tISv9OxpsbiF9fhlBepWUC3",
+          "name": "Alex Blore"
+        },
+        {
+          "id": "eNSmdCYO6lWDySDD08HoVZfmyUi1",
+          "name": "Daniel Tregoiing"
+        },
+        {
+          "id": "eBxc6tPfrjb9lkGdTsTOnuiOZNJ3",
+          "name": "James Ruler"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Philip Smith",
+      "winner_id": "UUKWcn4srsRn7g4YgE6JLYxn4m63",
+      "players": [
+        {
+          "id": "UUKWcn4srsRn7g4YgE6JLYxn4m63",
+          "name": "Philip Smith"
+        },
+        {
+          "id": "K4qLObK3eDcZLuHnKaqthC7XdWr2",
+          "name": "Fuzz"
+        },
+        {
+          "id": "SZad0S9aZCPVGCmRLdjQQ4waYCo2",
+          "name": "Matthew Humphrey"
+        },
+        {
+          "id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+          "name": "Chris Gardner"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Tom Convery",
+      "winner_id": "5IMSd0OvohUBvrmGh6kLXAffv4C2",
+      "players": [
+        {
+          "id": "5IMSd0OvohUBvrmGh6kLXAffv4C2",
+          "name": "Tom Convery"
+        },
+        {
+          "id": "F8sj9LZlzGXrh8hcoUmapGB40lV2",
+          "name": "Charlie Emmott"
+        },
+        {
+          "id": "Rsx8JCK7VLTizLOjFV7TXPZfRsg2",
+          "name": "JJ Pinnick"
+        },
+        {
+          "id": "EAfD9RbYHdbMQo0hIYibFDE9p8U2",
+          "name": "Wayne Calvert"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "0nHakhCWx5erd58MM1miEStvMrj1",
+          "name": "Ben Norrie"
+        },
+        {
+          "id": "eNSmdCYO6lWDySDD08HoVZfmyUi1",
+          "name": "Daniel Tregoiing"
+        },
+        {
+          "id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+          "name": "Ed G"
+        },
+        {
+          "id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+          "name": "Toni "
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "w2aCFUbae5ec0iPq19kC1oMlI243",
+          "name": "A"
+        },
+        {
+          "id": "UUKWcn4srsRn7g4YgE6JLYxn4m63",
+          "name": "Philip Smith"
+        },
+        {
+          "id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+          "name": "Chris Gardner"
+        },
+        {
+          "id": "rSfJzNhPxHghWX1pUtQAlj0Jggt2",
+          "name": "Miles Fan"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Matthew Humphrey",
+      "winner_id": "SZad0S9aZCPVGCmRLdjQQ4waYCo2",
+      "players": [
+        {
+          "id": "F8sj9LZlzGXrh8hcoUmapGB40lV2",
+          "name": "Charlie Emmott"
+        },
+        {
+          "id": "SZad0S9aZCPVGCmRLdjQQ4waYCo2",
+          "name": "Matthew Humphrey"
+        },
+        {
+          "id": "eBxc6tPfrjb9lkGdTsTOnuiOZNJ3",
+          "name": "James Ruler"
+        },
+        {
+          "id": "5IMSd0OvohUBvrmGh6kLXAffv4C2",
+          "name": "Tom Convery"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Ed G",
+      "winner_id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+      "players": [
+        {
+          "id": "0nHakhCWx5erd58MM1miEStvMrj1",
+          "name": "Ben Norrie"
+        },
+        {
+          "id": "DZvx9iDsj2OkS8yKqkdig5g4X2n1",
+          "name": "Toni "
+        },
+        {
+          "id": "cxpjZsxM4QSgH5pSwpWCrlRJY643",
+          "name": "Ed G"
+        },
+        {
+          "id": "tC6aIM3LuYOV0nB4BCofJxDFTic2",
+          "name": "Chris Gardner"
+        }
+      ]
+    }
+  ]
+}
