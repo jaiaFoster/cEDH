@@ -1,0 +1,678 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-09-19T16:02:37.664262Z",
+  "content_hash": "3622c413c9e03da3948450341f8a683e75aba7f0ac5c11b8c71c6732ba8e1b1e",
+  "tid": "7-tq1-cedh-2026",
+  "name": "7. TQ1 cEDH 2026",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1789808400,
+  "start_date_utc": "2026-09-19T09:00:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 4,
+  "event_data": {
+    "lat": 50.990989,
+    "lng": 7.134308,
+    "city": "Bergisch Gladbach",
+    "state": "Nordrhein-Westfalen",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/e4139a69-16f7-4707-98c7-9a6a5d054800/public",
+    "address": "Quirlsberg 1, 51465 Bergisch Gladbach, Deutschland"
+  },
+  "field_size": 16,
+  "decklist_coverage": {
+    "submitted": 12,
+    "structured": 12,
+    "total": 16
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "player_name": "Tom Schweizer",
+      "commanders": [
+        "Krark, the Thumbless",
+        "Rograkh, Son of Rohgahh"
+      ],
+      "wins": 3,
+      "wins_swiss": 2,
+      "wins_bracket": 1,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+      "player_name": "Yannik (zachbraff)",
+      "commanders": [
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+      "player_name": "Sebastian B | EkuzTheTeacher",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 4,
+      "player_id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+      "player_name": "Leon Seyb [SNAP]",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "j35xeAGLUzaoV7UIXSlAyl0hwL32",
+      "player_name": "Konstantin Kierspel ",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 6,
+      "player_id": "rlgtqqSBS9fglcgbsNcM1sdGaLH2",
+      "player_name": "Leo Römer",
+      "commanders": [
+        "Nick Fury, Agent of S.H.I.E.L.D."
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 7,
+      "player_id": "s9u59AP9I4Qe1XrmguYv8PXgWXD3",
+      "player_name": "Marvin Röttgers",
+      "commanders": [
+        "Chatterfang, Squirrel General"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 8,
+      "player_id": "O0JEECOc7MZAp6n81oFeexYeIUY2",
+      "player_name": "Jörg Tebartz",
+      "commanders": [
+        "Chatterfang, Squirrel General"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "reQUBvm9poQ9PsgdbK3smuUZ1lF2",
+      "player_name": "Daniel Enns",
+      "commanders": [
+        "Malcolm, Keen-Eyed Navigator",
+        "Vial Smasher the Fierce"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 10,
+      "player_id": "vr7sZWvNVGRjH2mSN3xUkLpjXic2",
+      "player_name": "Peter Rupp",
+      "commanders": [
+        "Kenrith, the Returned King"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+      "player_name": "Morgan McNally",
+      "commanders": [
+        "Krark, the Thumbless",
+        "Sakashima of a Thousand Faces"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 12,
+      "player_id": "RdRoegSQFdNhxJmE4tlyv0vz9272",
+      "player_name": "Maximilian Hemgenberg",
+      "commanders": [
+        "Dargo, the Shipwrecker",
+        "Reyhan, Last of the Abzan"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 13,
+      "player_id": "2X6eKz7njJRT1GmNsqaGFjeUN5f1",
+      "player_name": "Toni Flosbach ",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 14,
+      "player_id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+      "player_name": "Justin S. [OBST]",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "zKx4GGovSDcVRlOYJzjzAlSzVpn2",
+      "player_name": "Felix Ulbrich",
+      "commanders": [
+        "The Great Goblin"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 16,
+      "player_id": "HazFv7t3SVancu54uzwsYQA3liJ2",
+      "player_name": "Philipp Hemgenberg",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Tom Schweizer",
+      "winner_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "players": [
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer"
+        },
+        {
+          "id": "vr7sZWvNVGRjH2mSN3xUkLpjXic2",
+          "name": "Peter Rupp"
+        },
+        {
+          "id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+          "name": "Sebastian B | EkuzTheTeacher"
+        },
+        {
+          "id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+          "name": "Yannik (zachbraff)"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Marvin Röttgers",
+      "winner_id": "s9u59AP9I4Qe1XrmguYv8PXgWXD3",
+      "players": [
+        {
+          "id": "s9u59AP9I4Qe1XrmguYv8PXgWXD3",
+          "name": "Marvin Röttgers"
+        },
+        {
+          "id": "j35xeAGLUzaoV7UIXSlAyl0hwL32",
+          "name": "Konstantin Kierspel "
+        },
+        {
+          "id": "RdRoegSQFdNhxJmE4tlyv0vz9272",
+          "name": "Maximilian Hemgenberg"
+        },
+        {
+          "id": "reQUBvm9poQ9PsgdbK3smuUZ1lF2",
+          "name": "Daniel Enns"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Leo Römer",
+      "winner_id": "rlgtqqSBS9fglcgbsNcM1sdGaLH2",
+      "players": [
+        {
+          "id": "HazFv7t3SVancu54uzwsYQA3liJ2",
+          "name": "Philipp Hemgenberg"
+        },
+        {
+          "id": "rlgtqqSBS9fglcgbsNcM1sdGaLH2",
+          "name": "Leo Römer"
+        },
+        {
+          "id": "zKx4GGovSDcVRlOYJzjzAlSzVpn2",
+          "name": "Felix Ulbrich"
+        },
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Leon Seyb [SNAP]",
+      "winner_id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+      "players": [
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "2X6eKz7njJRT1GmNsqaGFjeUN5f1",
+          "name": "Toni Flosbach "
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "O0JEECOc7MZAp6n81oFeexYeIUY2",
+          "name": "Jörg Tebartz"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Tom Schweizer",
+      "winner_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "players": [
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer"
+        },
+        {
+          "id": "rlgtqqSBS9fglcgbsNcM1sdGaLH2",
+          "name": "Leo Römer"
+        },
+        {
+          "id": "s9u59AP9I4Qe1XrmguYv8PXgWXD3",
+          "name": "Marvin Röttgers"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Yannik (zachbraff)",
+      "winner_id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+      "players": [
+        {
+          "id": "O0JEECOc7MZAp6n81oFeexYeIUY2",
+          "name": "Jörg Tebartz"
+        },
+        {
+          "id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+          "name": "Yannik (zachbraff)"
+        },
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        },
+        {
+          "id": "j35xeAGLUzaoV7UIXSlAyl0hwL32",
+          "name": "Konstantin Kierspel "
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Daniel Enns",
+      "winner_id": "reQUBvm9poQ9PsgdbK3smuUZ1lF2",
+      "players": [
+        {
+          "id": "reQUBvm9poQ9PsgdbK3smuUZ1lF2",
+          "name": "Daniel Enns"
+        },
+        {
+          "id": "zKx4GGovSDcVRlOYJzjzAlSzVpn2",
+          "name": "Felix Ulbrich"
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "vr7sZWvNVGRjH2mSN3xUkLpjXic2",
+          "name": "Peter Rupp"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Sebastian B | EkuzTheTeacher",
+      "winner_id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+      "players": [
+        {
+          "id": "RdRoegSQFdNhxJmE4tlyv0vz9272",
+          "name": "Maximilian Hemgenberg"
+        },
+        {
+          "id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+          "name": "Sebastian B | EkuzTheTeacher"
+        },
+        {
+          "id": "2X6eKz7njJRT1GmNsqaGFjeUN5f1",
+          "name": "Toni Flosbach "
+        },
+        {
+          "id": "HazFv7t3SVancu54uzwsYQA3liJ2",
+          "name": "Philipp Hemgenberg"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Konstantin Kierspel ",
+      "winner_id": "j35xeAGLUzaoV7UIXSlAyl0hwL32",
+      "players": [
+        {
+          "id": "j35xeAGLUzaoV7UIXSlAyl0hwL32",
+          "name": "Konstantin Kierspel "
+        },
+        {
+          "id": "zKx4GGovSDcVRlOYJzjzAlSzVpn2",
+          "name": "Felix Ulbrich"
+        },
+        {
+          "id": "2X6eKz7njJRT1GmNsqaGFjeUN5f1",
+          "name": "Toni Flosbach "
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Sebastian B | EkuzTheTeacher",
+      "winner_id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+      "players": [
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        },
+        {
+          "id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+          "name": "Sebastian B | EkuzTheTeacher"
+        },
+        {
+          "id": "reQUBvm9poQ9PsgdbK3smuUZ1lF2",
+          "name": "Daniel Enns"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Yannik (zachbraff)",
+      "winner_id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+      "players": [
+        {
+          "id": "RdRoegSQFdNhxJmE4tlyv0vz9272",
+          "name": "Maximilian Hemgenberg"
+        },
+        {
+          "id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+          "name": "Yannik (zachbraff)"
+        },
+        {
+          "id": "rlgtqqSBS9fglcgbsNcM1sdGaLH2",
+          "name": "Leo Römer"
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Jörg Tebartz",
+      "winner_id": "O0JEECOc7MZAp6n81oFeexYeIUY2",
+      "players": [
+        {
+          "id": "s9u59AP9I4Qe1XrmguYv8PXgWXD3",
+          "name": "Marvin Röttgers"
+        },
+        {
+          "id": "vr7sZWvNVGRjH2mSN3xUkLpjXic2",
+          "name": "Peter Rupp"
+        },
+        {
+          "id": "HazFv7t3SVancu54uzwsYQA3liJ2",
+          "name": "Philipp Hemgenberg"
+        },
+        {
+          "id": "O0JEECOc7MZAp6n81oFeexYeIUY2",
+          "name": "Jörg Tebartz"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Tom Schweizer",
+      "winner_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "players": [
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer"
+        },
+        {
+          "id": "ea0pPqYpgFWU4lxsstezwvzCLZw2",
+          "name": "Yannik (zachbraff)"
+        },
+        {
+          "id": "dVONmzmUOoMZL37o7KnbRglowaj1",
+          "name": "Sebastian B | EkuzTheTeacher"
+        },
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        }
+      ]
+    }
+  ]
+}
