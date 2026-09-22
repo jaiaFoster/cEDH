@@ -1,0 +1,782 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-09-22T05:21:01.612070Z",
+  "content_hash": "78f495ed3d3048c93fd2062cfbcb678d094ade54e9321b47f4f76a82939e5b60",
+  "tid": "commander-sealed-cedh-sunday",
+  "name": "Commander Sealed cEDH Sunday",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1789911000,
+  "start_date_utc": "2026-09-20T13:30:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 4,
+  "event_data": {
+    "lat": 43.0488,
+    "lng": -77.659172,
+    "city": "Henrietta",
+    "state": "New York",
+    "country": "United States",
+    "address": "RIT Inn & Conference Center, 5257 W Henrietta Rd, Henrietta, NY 14467, USA"
+  },
+  "field_size": 19,
+  "decklist_coverage": {
+    "submitted": 7,
+    "structured": 7,
+    "total": 19
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+      "player_name": "Dio",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 3,
+      "wins_swiss": 2,
+      "wins_bracket": 1,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+      "player_name": "Derek Sherry",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+      "player_name": "ScoopPhase",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+      "player_name": "Jonathan Gibbons",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "ZiHzDI4IhMOoKOoNd2W2iUvTOxY2",
+      "player_name": "Tad Gibson",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 6,
+      "player_id": "8J2uZlB2QVat8OWSaXutskpgwsl1",
+      "player_name": "Gunnar Wuher",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 7,
+      "player_id": "BwxEZe5MRTV0M0Q2CerWxouxmQW2",
+      "player_name": "Zachary Smith",
+      "commanders": [
+        "Aang, at the Crossroads // Aang, Destined Savior"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 8,
+      "player_id": "vFwfNyGNeQTf0TLIcDgEJwqNwB53",
+      "player_name": "Luci Logica",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 9,
+      "player_id": "FLGLMBWcX1aXLQOq14pnjDaxNhw2",
+      "player_name": "Brian Knowles",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 10,
+      "player_id": "DRFdbEVJHwfTo1YJHDQJaV8bL3f1",
+      "player_name": "Brandon Barlow",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 11,
+      "player_id": "LKT6Aq6uV8QGLGEtecG8nMPvqns2",
+      "player_name": "Michael R Bauman",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 12,
+      "player_id": "WWcgKMZrO8bM8xeIsmPzxJcs0243",
+      "player_name": "Del Davis",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "bwJcKgtAITayCbSgEFaM5Tzsa0B2",
+      "player_name": "[NAUS] Paul Haupt",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 14,
+      "player_id": "qJpDCUgADRS3mPvkEIw3kppgnxD2",
+      "player_name": "audrey stoneham",
+      "commanders": [
+        "Etali, Primal Conqueror // Etali, Primal Sickness"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "TXv7Z1nX0oh9mb4n5MXJXdzGyi83",
+      "player_name": "Steph Smith",
+      "commanders": [
+        "Francisco, Fowl Marauder",
+        "Malcolm, Keen-Eyed Navigator"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 16,
+      "player_id": "Pjfdr8BrgsZ7iv9YzYlU7yeNIh33",
+      "player_name": "Kai Reed",
+      "commanders": [
+        "Yuriko, the Tiger's Shadow"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 17,
+      "player_id": "zeF3rmLCtkZtqp5r2dMuYBm6B8X2",
+      "player_name": "Courtney Cunningham ",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 18,
+      "player_id": "8ENJ6s1pezbHlamVhRX5TPJBtRR2",
+      "player_name": "Tim Wade",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 19,
+      "player_id": "4Hb2vUDnx7Tdh6RV3RAUrJDAIEn2",
+      "player_name": "Jester King",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Brian Knowles",
+      "winner_id": "FLGLMBWcX1aXLQOq14pnjDaxNhw2",
+      "players": [
+        {
+          "id": "4Hb2vUDnx7Tdh6RV3RAUrJDAIEn2",
+          "name": "Jester King"
+        },
+        {
+          "id": "8ENJ6s1pezbHlamVhRX5TPJBtRR2",
+          "name": "Tim Wade"
+        },
+        {
+          "id": "Pjfdr8BrgsZ7iv9YzYlU7yeNIh33",
+          "name": "Kai Reed"
+        },
+        {
+          "id": "FLGLMBWcX1aXLQOq14pnjDaxNhw2",
+          "name": "Brian Knowles"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "ScoopPhase",
+      "winner_id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+      "players": [
+        {
+          "id": "qJpDCUgADRS3mPvkEIw3kppgnxD2",
+          "name": "audrey stoneham"
+        },
+        {
+          "id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+          "name": "ScoopPhase"
+        },
+        {
+          "id": "zeF3rmLCtkZtqp5r2dMuYBm6B8X2",
+          "name": "Courtney Cunningham "
+        },
+        {
+          "id": "TXv7Z1nX0oh9mb4n5MXJXdzGyi83",
+          "name": "Steph Smith"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Jonathan Gibbons",
+      "winner_id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+      "players": [
+        {
+          "id": "LKT6Aq6uV8QGLGEtecG8nMPvqns2",
+          "name": "Michael R Bauman"
+        },
+        {
+          "id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+          "name": "Jonathan Gibbons"
+        },
+        {
+          "id": "8J2uZlB2QVat8OWSaXutskpgwsl1",
+          "name": "Gunnar Wuher"
+        },
+        {
+          "id": "DRFdbEVJHwfTo1YJHDQJaV8bL3f1",
+          "name": "Brandon Barlow"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Zachary Smith",
+      "winner_id": "BwxEZe5MRTV0M0Q2CerWxouxmQW2",
+      "players": [
+        {
+          "id": "ZiHzDI4IhMOoKOoNd2W2iUvTOxY2",
+          "name": "Tad Gibson"
+        },
+        {
+          "id": "BwxEZe5MRTV0M0Q2CerWxouxmQW2",
+          "name": "Zachary Smith"
+        },
+        {
+          "id": "vFwfNyGNeQTf0TLIcDgEJwqNwB53",
+          "name": "Luci Logica"
+        },
+        {
+          "id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+          "name": "Derek Sherry"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Dio",
+      "winner_id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+      "players": [
+        {
+          "id": "WWcgKMZrO8bM8xeIsmPzxJcs0243",
+          "name": "Del Davis"
+        },
+        {
+          "id": "bwJcKgtAITayCbSgEFaM5Tzsa0B2",
+          "name": "[NAUS] Paul Haupt"
+        },
+        {
+          "id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+          "name": "Dio"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Dio",
+      "winner_id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+      "players": [
+        {
+          "id": "FLGLMBWcX1aXLQOq14pnjDaxNhw2",
+          "name": "Brian Knowles"
+        },
+        {
+          "id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+          "name": "Dio"
+        },
+        {
+          "id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+          "name": "Jonathan Gibbons"
+        },
+        {
+          "id": "BwxEZe5MRTV0M0Q2CerWxouxmQW2",
+          "name": "Zachary Smith"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "ScoopPhase",
+      "winner_id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+      "players": [
+        {
+          "id": "DRFdbEVJHwfTo1YJHDQJaV8bL3f1",
+          "name": "Brandon Barlow"
+        },
+        {
+          "id": "bwJcKgtAITayCbSgEFaM5Tzsa0B2",
+          "name": "[NAUS] Paul Haupt"
+        },
+        {
+          "id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+          "name": "ScoopPhase"
+        },
+        {
+          "id": "Pjfdr8BrgsZ7iv9YzYlU7yeNIh33",
+          "name": "Kai Reed"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Tad Gibson",
+      "winner_id": "ZiHzDI4IhMOoKOoNd2W2iUvTOxY2",
+      "players": [
+        {
+          "id": "zeF3rmLCtkZtqp5r2dMuYBm6B8X2",
+          "name": "Courtney Cunningham "
+        },
+        {
+          "id": "ZiHzDI4IhMOoKOoNd2W2iUvTOxY2",
+          "name": "Tad Gibson"
+        },
+        {
+          "id": "4Hb2vUDnx7Tdh6RV3RAUrJDAIEn2",
+          "name": "Jester King"
+        },
+        {
+          "id": "WWcgKMZrO8bM8xeIsmPzxJcs0243",
+          "name": "Del Davis"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Derek Sherry",
+      "winner_id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+      "players": [
+        {
+          "id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+          "name": "Derek Sherry"
+        },
+        {
+          "id": "TXv7Z1nX0oh9mb4n5MXJXdzGyi83",
+          "name": "Steph Smith"
+        },
+        {
+          "id": "8ENJ6s1pezbHlamVhRX5TPJBtRR2",
+          "name": "Tim Wade"
+        },
+        {
+          "id": "LKT6Aq6uV8QGLGEtecG8nMPvqns2",
+          "name": "Michael R Bauman"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Gunnar Wuher",
+      "winner_id": "8J2uZlB2QVat8OWSaXutskpgwsl1",
+      "players": [
+        {
+          "id": "vFwfNyGNeQTf0TLIcDgEJwqNwB53",
+          "name": "Luci Logica"
+        },
+        {
+          "id": "8J2uZlB2QVat8OWSaXutskpgwsl1",
+          "name": "Gunnar Wuher"
+        },
+        {
+          "id": "qJpDCUgADRS3mPvkEIw3kppgnxD2",
+          "name": "audrey stoneham"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Derek Sherry",
+      "winner_id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+      "players": [
+        {
+          "id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+          "name": "Dio"
+        },
+        {
+          "id": "8J2uZlB2QVat8OWSaXutskpgwsl1",
+          "name": "Gunnar Wuher"
+        },
+        {
+          "id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+          "name": "ScoopPhase"
+        },
+        {
+          "id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+          "name": "Derek Sherry"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Tad Gibson",
+      "winner_id": "ZiHzDI4IhMOoKOoNd2W2iUvTOxY2",
+      "players": [
+        {
+          "id": "qJpDCUgADRS3mPvkEIw3kppgnxD2",
+          "name": "audrey stoneham"
+        },
+        {
+          "id": "FLGLMBWcX1aXLQOq14pnjDaxNhw2",
+          "name": "Brian Knowles"
+        },
+        {
+          "id": "LKT6Aq6uV8QGLGEtecG8nMPvqns2",
+          "name": "Michael R Bauman"
+        },
+        {
+          "id": "ZiHzDI4IhMOoKOoNd2W2iUvTOxY2",
+          "name": "Tad Gibson"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Brandon Barlow",
+      "winner_id": "DRFdbEVJHwfTo1YJHDQJaV8bL3f1",
+      "players": [
+        {
+          "id": "BwxEZe5MRTV0M0Q2CerWxouxmQW2",
+          "name": "Zachary Smith"
+        },
+        {
+          "id": "DRFdbEVJHwfTo1YJHDQJaV8bL3f1",
+          "name": "Brandon Barlow"
+        },
+        {
+          "id": "zeF3rmLCtkZtqp5r2dMuYBm6B8X2",
+          "name": "Courtney Cunningham "
+        },
+        {
+          "id": "8ENJ6s1pezbHlamVhRX5TPJBtRR2",
+          "name": "Tim Wade"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Jonathan Gibbons",
+      "winner_id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+      "players": [
+        {
+          "id": "Pjfdr8BrgsZ7iv9YzYlU7yeNIh33",
+          "name": "Kai Reed"
+        },
+        {
+          "id": "WWcgKMZrO8bM8xeIsmPzxJcs0243",
+          "name": "Del Davis"
+        },
+        {
+          "id": "TXv7Z1nX0oh9mb4n5MXJXdzGyi83",
+          "name": "Steph Smith"
+        },
+        {
+          "id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+          "name": "Jonathan Gibbons"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Luci Logica",
+      "winner_id": "vFwfNyGNeQTf0TLIcDgEJwqNwB53",
+      "players": [
+        {
+          "id": "vFwfNyGNeQTf0TLIcDgEJwqNwB53",
+          "name": "Luci Logica"
+        },
+        {
+          "id": "bwJcKgtAITayCbSgEFaM5Tzsa0B2",
+          "name": "[NAUS] Paul Haupt"
+        },
+        {
+          "id": "4Hb2vUDnx7Tdh6RV3RAUrJDAIEn2",
+          "name": "Jester King"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Dio",
+      "winner_id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+      "players": [
+        {
+          "id": "0m0nIHaJ81TkJHqwTnpR7zgwQL52",
+          "name": "Dio"
+        },
+        {
+          "id": "TuYRWSqzRtc47Z4AqSxZSegFp222",
+          "name": "Derek Sherry"
+        },
+        {
+          "id": "swZfZ6SWbCXg4DF5T6HZozp3t003",
+          "name": "ScoopPhase"
+        },
+        {
+          "id": "Yx3kQWPP4rMEWmRqBZtPCGaQLor2",
+          "name": "Jonathan Gibbons"
+        }
+      ]
+    }
+  ]
+}
