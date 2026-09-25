@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-09-25T05:21:46.177812Z",
+  "content_hash": "eec5ef8cc748f16aeb02ff271ac28fcc4498be9d1500622f4d28a4b698985e13",
+  "tid": "cedh-arcanum",
+  "name": "cEDH @ Arcanum!",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1790298000,
+  "start_date_utc": "2026-09-25T01:00:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 0,
+  "event_data": {
+    "lat": 32.278912,
+    "lng": -110.977075,
+    "city": "Tucson",
+    "state": "Arizona",
+    "country": "United States",
+    "address": "3994 N Oracle Rd, Tucson, AZ 85705, USA"
+  },
+  "field_size": 18,
+  "decklist_coverage": {
+    "submitted": 3,
+    "structured": 3,
+    "total": 18
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "s1oHN8DcZrTPZzMLAVXQFAUSJNb2",
+      "player_name": "Kyle Tunison [[SLOP]]",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": true,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 2,
+      "player_id": "U2N4EN3E7vPnpyaRNndZo7HFV7G2",
+      "player_name": "bruth [[SLOP]]",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 3,
+      "player_id": "Ck3ong7Ru9Yg9mPTkcZqVEijV5q2",
+      "player_name": "Aidan Brean",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 4,
+      "player_id": "sRy9LZn92idJXEW4LLdsHnVypJv1",
+      "player_name": "Robert Schnepp",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "3gggi8EqAtVj5lA9PHd04gyHdhX2",
+      "player_name": "Rurik Neumann",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 6,
+      "player_id": "9wds6pSUnLNsVxtkb7j2tGa8OH32",
+      "player_name": "Picklesmom",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 7,
+      "player_id": "rVT6jws4dth1WR33cP8GJtXPnCf2",
+      "player_name": "Chip Morgan",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 8,
+      "player_id": "5eqy52Qb9tYVfZu3djGtWwyVZI22",
+      "player_name": "Sachin Sahoo",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "08zOUub7ojOb3ijto8jZuSKWHfG3",
+      "player_name": "Luke Lindsay",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 10,
+      "player_id": "u89rt5P3rkgk8yki7kJ2sSMlhM13",
+      "player_name": "Zach J Gable",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "gx5yRFOfvJYlAujxwoyKPsjTdWs1",
+      "player_name": "Oliver Chenault [[SLOP]]",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 12,
+      "player_id": "j6dS084uEWPUVq2lF1oi5LyLeUi1",
+      "player_name": "Mike Tunison",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "pb8uFYL0nSTdH9t2IwIiLDhWS4U2",
+      "player_name": "Killamonsta",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 14,
+      "player_id": "DAH3KmzYuBe9S2mCrT1FppYzVgS2",
+      "player_name": "Joseph Gilmore",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 15,
+      "player_id": "cMpGieTLWFPvgsmKkxa9nV4Skk03",
+      "player_name": "Patty OMalley [BB]",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 16,
+      "player_id": "nwBkSm4qiOd4umllUQShekwHVXq1",
+      "player_name": "ThePapaSquats ",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 17,
+      "player_id": "GecMcrfY0ceB6dlug66I6RWYc2Z2",
+      "player_name": "Ray Ray",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 18,
+      "player_id": "8kYmXsuuliMEOlMtTZGLqLHm5Ey2",
+      "player_name": "GST and snowball are art thieves",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Rurik Neumann",
+      "winner_id": "3gggi8EqAtVj5lA9PHd04gyHdhX2",
+      "players": [
+        {
+          "id": "9wds6pSUnLNsVxtkb7j2tGa8OH32",
+          "name": "Picklesmom"
+        },
+        {
+          "id": "u89rt5P3rkgk8yki7kJ2sSMlhM13",
+          "name": "Zach J Gable"
+        },
+        {
+          "id": "3gggi8EqAtVj5lA9PHd04gyHdhX2",
+          "name": "Rurik Neumann"
+        },
+        {
+          "id": "cMpGieTLWFPvgsmKkxa9nV4Skk03",
+          "name": "Patty OMalley [BB]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "bruth [[SLOP]]",
+      "winner_id": "U2N4EN3E7vPnpyaRNndZo7HFV7G2",
+      "players": [
+        {
+          "id": "U2N4EN3E7vPnpyaRNndZo7HFV7G2",
+          "name": "bruth [[SLOP]]"
+        },
+        {
+          "id": "GecMcrfY0ceB6dlug66I6RWYc2Z2",
+          "name": "Ray Ray"
+        },
+        {
+          "id": "DAH3KmzYuBe9S2mCrT1FppYzVgS2",
+          "name": "Joseph Gilmore"
+        },
+        {
+          "id": "s1oHN8DcZrTPZzMLAVXQFAUSJNb2",
+          "name": "Kyle Tunison [[SLOP]]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "pb8uFYL0nSTdH9t2IwIiLDhWS4U2",
+          "name": "Killamonsta"
+        },
+        {
+          "id": "j6dS084uEWPUVq2lF1oi5LyLeUi1",
+          "name": "Mike Tunison"
+        },
+        {
+          "id": "gx5yRFOfvJYlAujxwoyKPsjTdWs1",
+          "name": "Oliver Chenault [[SLOP]]"
+        },
+        {
+          "id": "5eqy52Qb9tYVfZu3djGtWwyVZI22",
+          "name": "Sachin Sahoo"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Aidan Brean",
+      "winner_id": "Ck3ong7Ru9Yg9mPTkcZqVEijV5q2",
+      "players": [
+        {
+          "id": "rVT6jws4dth1WR33cP8GJtXPnCf2",
+          "name": "Chip Morgan"
+        },
+        {
+          "id": "8kYmXsuuliMEOlMtTZGLqLHm5Ey2",
+          "name": "GST and snowball are art thieves"
+        },
+        {
+          "id": "Ck3ong7Ru9Yg9mPTkcZqVEijV5q2",
+          "name": "Aidan Brean"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Robert Schnepp",
+      "winner_id": "sRy9LZn92idJXEW4LLdsHnVypJv1",
+      "players": [
+        {
+          "id": "sRy9LZn92idJXEW4LLdsHnVypJv1",
+          "name": "Robert Schnepp"
+        },
+        {
+          "id": "nwBkSm4qiOd4umllUQShekwHVXq1",
+          "name": "ThePapaSquats "
+        },
+        {
+          "id": "08zOUub7ojOb3ijto8jZuSKWHfG3",
+          "name": "Luke Lindsay"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "3gggi8EqAtVj5lA9PHd04gyHdhX2",
+          "name": "Rurik Neumann"
+        },
+        {
+          "id": "Ck3ong7Ru9Yg9mPTkcZqVEijV5q2",
+          "name": "Aidan Brean"
+        },
+        {
+          "id": "sRy9LZn92idJXEW4LLdsHnVypJv1",
+          "name": "Robert Schnepp"
+        },
+        {
+          "id": "U2N4EN3E7vPnpyaRNndZo7HFV7G2",
+          "name": "bruth [[SLOP]]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Kyle Tunison [[SLOP]]",
+      "winner_id": "s1oHN8DcZrTPZzMLAVXQFAUSJNb2",
+      "players": [
+        {
+          "id": "cMpGieTLWFPvgsmKkxa9nV4Skk03",
+          "name": "Patty OMalley [BB]"
+        },
+        {
+          "id": "s1oHN8DcZrTPZzMLAVXQFAUSJNb2",
+          "name": "Kyle Tunison [[SLOP]]"
+        },
+        {
+          "id": "nwBkSm4qiOd4umllUQShekwHVXq1",
+          "name": "ThePapaSquats "
+        },
+        {
+          "id": "pb8uFYL0nSTdH9t2IwIiLDhWS4U2",
+          "name": "Killamonsta"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Zach J Gable",
+      "winner_id": "u89rt5P3rkgk8yki7kJ2sSMlhM13",
+      "players": [
+        {
+          "id": "8kYmXsuuliMEOlMtTZGLqLHm5Ey2",
+          "name": "GST and snowball are art thieves"
+        },
+        {
+          "id": "u89rt5P3rkgk8yki7kJ2sSMlhM13",
+          "name": "Zach J Gable"
+        },
+        {
+          "id": "gx5yRFOfvJYlAujxwoyKPsjTdWs1",
+          "name": "Oliver Chenault [[SLOP]]"
+        },
+        {
+          "id": "GecMcrfY0ceB6dlug66I6RWYc2Z2",
+          "name": "Ray Ray"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Chip Morgan",
+      "winner_id": "rVT6jws4dth1WR33cP8GJtXPnCf2",
+      "players": [
+        {
+          "id": "DAH3KmzYuBe9S2mCrT1FppYzVgS2",
+          "name": "Joseph Gilmore"
+        },
+        {
+          "id": "j6dS084uEWPUVq2lF1oi5LyLeUi1",
+          "name": "Mike Tunison"
+        },
+        {
+          "id": "rVT6jws4dth1WR33cP8GJtXPnCf2",
+          "name": "Chip Morgan"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Picklesmom",
+      "winner_id": "9wds6pSUnLNsVxtkb7j2tGa8OH32",
+      "players": [
+        {
+          "id": "5eqy52Qb9tYVfZu3djGtWwyVZI22",
+          "name": "Sachin Sahoo"
+        },
+        {
+          "id": "08zOUub7ojOb3ijto8jZuSKWHfG3",
+          "name": "Luke Lindsay"
+        },
+        {
+          "id": "9wds6pSUnLNsVxtkb7j2tGa8OH32",
+          "name": "Picklesmom"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "9wds6pSUnLNsVxtkb7j2tGa8OH32",
+          "name": "Picklesmom"
+        },
+        {
+          "id": "U2N4EN3E7vPnpyaRNndZo7HFV7G2",
+          "name": "bruth [[SLOP]]"
+        },
+        {
+          "id": "rVT6jws4dth1WR33cP8GJtXPnCf2",
+          "name": "Chip Morgan"
+        },
+        {
+          "id": "gx5yRFOfvJYlAujxwoyKPsjTdWs1",
+          "name": "Oliver Chenault [[SLOP]]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Kyle Tunison [[SLOP]]",
+      "winner_id": "s1oHN8DcZrTPZzMLAVXQFAUSJNb2",
+      "players": [
+        {
+          "id": "u89rt5P3rkgk8yki7kJ2sSMlhM13",
+          "name": "Zach J Gable"
+        },
+        {
+          "id": "s1oHN8DcZrTPZzMLAVXQFAUSJNb2",
+          "name": "Kyle Tunison [[SLOP]]"
+        },
+        {
+          "id": "Ck3ong7Ru9Yg9mPTkcZqVEijV5q2",
+          "name": "Aidan Brean"
+        },
+        {
+          "id": "j6dS084uEWPUVq2lF1oi5LyLeUi1",
+          "name": "Mike Tunison"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Sachin Sahoo",
+      "winner_id": "5eqy52Qb9tYVfZu3djGtWwyVZI22",
+      "players": [
+        {
+          "id": "DAH3KmzYuBe9S2mCrT1FppYzVgS2",
+          "name": "Joseph Gilmore"
+        },
+        {
+          "id": "5eqy52Qb9tYVfZu3djGtWwyVZI22",
+          "name": "Sachin Sahoo"
+        },
+        {
+          "id": "sRy9LZn92idJXEW4LLdsHnVypJv1",
+          "name": "Robert Schnepp"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Luke Lindsay",
+      "winner_id": "08zOUub7ojOb3ijto8jZuSKWHfG3",
+      "players": [
+        {
+          "id": "08zOUub7ojOb3ijto8jZuSKWHfG3",
+          "name": "Luke Lindsay"
+        },
+        {
+          "id": "3gggi8EqAtVj5lA9PHd04gyHdhX2",
+          "name": "Rurik Neumann"
+        },
+        {
+          "id": "pb8uFYL0nSTdH9t2IwIiLDhWS4U2",
+          "name": "Killamonsta"
+        }
+      ]
+    }
+  ]
+}
