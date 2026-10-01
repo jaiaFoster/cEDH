@@ -1,0 +1,125 @@
+{
+  "report_id": "META-010",
+  "prepared_at": "2026-10-01T00:59:31Z",
+  "target_event": {
+    "name": "October cEDH Tournament!",
+    "date": "2026-10-04",
+    "venue": "The Arcanum Sanctorum",
+    "city": "Tucson",
+    "state": "Arizona",
+    "topdeck_url": "https://topdeck.gg/event/october-cedh-tournament",
+    "registration_count_publicly_verified": false
+  },
+  "subject_deck": {
+    "name": "Creature Factory",
+    "commanders": ["Thrasios, Triton Hero", "Tymna the Weaver"],
+    "moxfield_version": 5,
+    "moxfield_updated_at": "2026-09-17T19:55:17.423Z",
+    "retrieved_at": "2026-09-17T21:25:11.752303Z",
+    "content_hash": "ec14a002da5d11503a849f03fc673a13f45696b38cc6fb47f620afd46569341a",
+    "mainboard_count": 98,
+    "freshness_status": "usable_snapshot_freshness_unverified",
+    "last_change": {"in": "Flash Photography", "out": "Sowing Mycospawn"}
+  },
+  "window": {
+    "start_utc": "2026-09-02T00:00:00Z",
+    "end_utc": "2026-10-01T23:59:59Z",
+    "archive_last_sync_commit": "60c9d6e9285c9e78a323f88a46e4737db57683c9",
+    "archive_last_sync_time": "2026-09-30T22:36:19Z"
+  },
+  "arizona": {
+    "events": 7,
+    "seats": 166,
+    "structured_lists": 78,
+    "coverage_pct": 47.0,
+    "unique_pilots": 96,
+    "cut_seats": 18,
+    "known_cut_entries": 14,
+    "relevant_counts": {
+      "Kinnan": {"entries": 7, "cuts": 4, "wins": 1},
+      "Blue Farm": {"entries": 6, "cuts": 1, "wins": 1},
+      "T&T": {"entries": 6, "cuts": 2, "wins": 0},
+      "Rograkh/Thrasios": {"entries": 3, "cuts": 1, "wins": 0},
+      "Rograkh/Silas": {"entries": 3, "cuts": 0, "wins": 0},
+      "Tayam": {"entries": 3, "cuts": 0, "wins": 0},
+      "Sisay": {"entries": 2, "cuts": 0, "wins": 0},
+      "Magda": {"entries": 1, "cuts": 0, "wins": 0}
+    }
+  },
+  "local_high_coverage": {
+    "events": 4,
+    "seats": 117,
+    "structured_lists": 115,
+    "coverage_pct": 98.3,
+    "unique_pilots": 73,
+    "cut_seats": 22,
+    "counts": {
+      "T&T": {"entries": 11, "cuts": 2, "wins": 0},
+      "Kinnan": {"entries": 8, "cuts": 6, "wins": 2},
+      "Blue Farm": {"entries": 5, "cuts": 1, "wins": 0},
+      "Tayam": {"entries": 4, "cuts": 0, "wins": 0},
+      "Rograkh/Thrasios": {"entries": 3, "cuts": 2, "wins": 1},
+      "Rograkh/Silas": {"entries": 2, "cuts": 1, "wins": 0},
+      "Sisay": {"entries": 3, "cuts": 0, "wins": 0},
+      "Magda": {"entries": 1, "cuts": 0, "wins": 0}
+    }
+  },
+  "arcanum_monthlies": {
+    "events": 2,
+    "seats": 67,
+    "structured_lists": 66,
+    "coverage_pct": 98.5,
+    "counts": {
+      "T&T": {"entries": 6, "cuts": 2, "wins": 0},
+      "Kinnan": {"entries": 5, "cuts": 4, "wins": 2},
+      "Blue Farm": {"entries": 2, "cuts": 1, "wins": 0}
+    }
+  },
+  "southern_nevada": {
+    "events": 7,
+    "seats": 175,
+    "structured_lists": 28,
+    "coverage_pct": 16.0,
+    "unique_pilots": 78,
+    "cut_seats": 32,
+    "known_cut_entries": 11
+  },
+  "global": {
+    "events": 218,
+    "seats": 5999,
+    "structured_lists": 3502,
+    "coverage_pct": 58.4,
+    "unique_pilots": 4237,
+    "cut_seats": 1068,
+    "known_cut_entries": 856,
+    "relevant_counts": {
+      "Kinnan": {"entries": 308, "pilots": 260, "cuts": 91, "wins": 16},
+      "Blue Farm": {"entries": 259, "pilots": 217, "cuts": 91, "wins": 17},
+      "Rograkh/Thrasios": {"entries": 206, "pilots": 174, "cuts": 64, "wins": 8},
+      "Rograkh/Silas": {"entries": 177, "pilots": 158, "cuts": 40, "wins": 6},
+      "Sisay": {"entries": 166, "pilots": 145, "cuts": 55, "wins": 14},
+      "T&T": {"entries": 104, "pilots": 94, "cuts": 25, "wins": 2},
+      "Tayam": {"entries": 81, "pilots": 68, "cuts": 10, "wins": 1},
+      "Magda": {"entries": 77, "pilots": 72, "cuts": 23, "wins": 3}
+    }
+  },
+  "readiness": {
+    "overall_weighted_score": 7.5,
+    "scale": 10,
+    "label": "tournament-ready_with_concentrated_gaps",
+    "axes": {
+      "early_development": 8.5,
+      "engine_quality_recovery": 8.5,
+      "stack_agency": 8.5,
+      "protected_attempt_quality": 8.0,
+      "resolved_creature_agency": 7.5,
+      "noncreature_permanent_agency": 5.5,
+      "graveyard_agency": 5.0,
+      "conversion_speed_compactness": 6.5,
+      "postfight_flash_conversion": 7.0
+    },
+    "confidence": "medium",
+    "is_win_rate_estimate": false
+  }
+}
+
