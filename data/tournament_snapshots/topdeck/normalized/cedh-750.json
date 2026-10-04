@@ -1,0 +1,942 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-10-04T12:50:00.594881Z",
+  "content_hash": "5c2bbaaf1a051fb63c1b780cba124316dc7f4deb15bf54421601c0263377ec10",
+  "tid": "cedh-750",
+  "name": "CEDH",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1791070200,
+  "start_date_utc": "2026-10-03T23:30:00Z",
+  "swiss_rounds": 4,
+  "top_cut_size": 4,
+  "event_data": {
+    "lat": 39.849454,
+    "lng": -105.011449,
+    "city": "Federal Heights",
+    "state": "Colorado",
+    "country": "United States",
+    "address": "8410 Umatilla St, Federal Heights, CO 80260, USA"
+  },
+  "field_size": 22,
+  "decklist_coverage": {
+    "submitted": 4,
+    "structured": 4,
+    "total": 22
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+      "player_name": "Ban Rhystic Study (Raul Rodriguez)",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 4,
+      "wins_swiss": 3,
+      "wins_bracket": 1,
+      "draws": 1,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "4oExgumq9lQBaDYmVrik5tkvdh02",
+      "player_name": "Isaac Erickson [SQR]",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 1,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+      "player_name": "Josh Zuckerman-Erd // CriticalEDH",
+      "commanders": [
+        "Tayam, Luminous Enigma"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+      "player_name": "pigeonize (Level 7)",
+      "commanders": [
+        "Shang-Chi, Master of Kung Fu"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 5,
+      "player_id": "f3BtxZ2YUfMKFYkVmzTzZfd9hsu2",
+      "player_name": "Austin Clarke // CriticalEDH",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 6,
+      "player_id": "BYV3xhNu8rQ84eh1b9xxBrctGft2",
+      "player_name": "David Whitmore ",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 7,
+      "player_id": "yUOs6BH9x6cJraYLyzhGI6hUmy32",
+      "player_name": "Abrham Montes",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 8,
+      "player_id": "OnpUT2WC1HVDXLTixcg19VdbBAz1",
+      "player_name": "Tyler Lindblad",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 9,
+      "player_id": "10XZGpOw5vVlD7VeYRO1XvBv3Ft2",
+      "player_name": "Janos Nado // CriticalEDH",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 1,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 10,
+      "player_id": "3m7bkhFJYjU6ekHMzwSkEGHg2H83",
+      "player_name": "Jules",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 1,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 11,
+      "player_id": "6ub5nYn3ohfUrQatn8lpuUxrQnt2",
+      "player_name": "Hunter Morris",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 12,
+      "player_id": "X6izFBGkI4RrUOVvFI3UE7fXuA82",
+      "player_name": "Nick KlecStar",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 1,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "1ukecoae6nbDJ0puhwnrqdC0sRU2",
+      "player_name": "[CHUDS] Nathan Shiflet",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 14,
+      "player_id": "OcbEdYeSK5ZOsPnXqY4P3aXu0EG3",
+      "player_name": "Titus (EBAM)",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 15,
+      "player_id": "R2f3CMXUBgcKGSXXDXwSEGMOuNx2",
+      "player_name": "Hazen W [SQR]",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 16,
+      "player_id": "rihDCCRZgTV8KG6FBy7COcx0CaO2",
+      "player_name": "Daniel",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 17,
+      "player_id": "XaIaeyEnjj2U3erx6gFR",
+      "player_name": "Liam M",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 18,
+      "player_id": "iqotoMePecPu28dPxk5XiBOPwBy1",
+      "player_name": "Mason [CHUDS]",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 19,
+      "player_id": "NQ9YwxHHOHZJP5nbKX2nJhZOjfn2",
+      "player_name": "Freddie Aguilar",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 20,
+      "player_id": "whEk9KLvWXWAidYM1m7LMNCrIEM2",
+      "player_name": "Andres Cano",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 21,
+      "player_id": "J1h9gUQxBNZDnFfxfA3VBvVkvvp2",
+      "player_name": "Justin Davis",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 22,
+      "player_id": "YMYOz4vpXeQUXJcinIq1XOCSBK62",
+      "player_name": "Davey Jones (Xavier)",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Hunter Morris",
+      "winner_id": "6ub5nYn3ohfUrQatn8lpuUxrQnt2",
+      "players": [
+        {
+          "id": "6ub5nYn3ohfUrQatn8lpuUxrQnt2",
+          "name": "Hunter Morris"
+        },
+        {
+          "id": "rihDCCRZgTV8KG6FBy7COcx0CaO2",
+          "name": "Daniel"
+        },
+        {
+          "id": "NQ9YwxHHOHZJP5nbKX2nJhZOjfn2",
+          "name": "Freddie Aguilar"
+        },
+        {
+          "id": "iqotoMePecPu28dPxk5XiBOPwBy1",
+          "name": "Mason [CHUDS]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "yUOs6BH9x6cJraYLyzhGI6hUmy32",
+          "name": "Abrham Montes"
+        },
+        {
+          "id": "f3BtxZ2YUfMKFYkVmzTzZfd9hsu2",
+          "name": "Austin Clarke // CriticalEDH"
+        },
+        {
+          "id": "OcbEdYeSK5ZOsPnXqY4P3aXu0EG3",
+          "name": "Titus (EBAM)"
+        },
+        {
+          "id": "BYV3xhNu8rQ84eh1b9xxBrctGft2",
+          "name": "David Whitmore "
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Ban Rhystic Study (Raul Rodriguez)",
+      "winner_id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+      "players": [
+        {
+          "id": "YMYOz4vpXeQUXJcinIq1XOCSBK62",
+          "name": "Davey Jones (Xavier)"
+        },
+        {
+          "id": "R2f3CMXUBgcKGSXXDXwSEGMOuNx2",
+          "name": "Hazen W [SQR]"
+        },
+        {
+          "id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+          "name": "Ban Rhystic Study (Raul Rodriguez)"
+        },
+        {
+          "id": "J1h9gUQxBNZDnFfxfA3VBvVkvvp2",
+          "name": "Justin Davis"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Isaac Erickson [SQR]",
+      "winner_id": "4oExgumq9lQBaDYmVrik5tkvdh02",
+      "players": [
+        {
+          "id": "4oExgumq9lQBaDYmVrik5tkvdh02",
+          "name": "Isaac Erickson [SQR]"
+        },
+        {
+          "id": "3m7bkhFJYjU6ekHMzwSkEGHg2H83",
+          "name": "Jules"
+        },
+        {
+          "id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+          "name": "Josh Zuckerman-Erd // CriticalEDH"
+        },
+        {
+          "id": "whEk9KLvWXWAidYM1m7LMNCrIEM2",
+          "name": "Andres Cano"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "pigeonize (Level 7)",
+      "winner_id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+      "players": [
+        {
+          "id": "1ukecoae6nbDJ0puhwnrqdC0sRU2",
+          "name": "[CHUDS] Nathan Shiflet"
+        },
+        {
+          "id": "X6izFBGkI4RrUOVvFI3UE7fXuA82",
+          "name": "Nick KlecStar"
+        },
+        {
+          "id": "OnpUT2WC1HVDXLTixcg19VdbBAz1",
+          "name": "Tyler Lindblad"
+        },
+        {
+          "id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+          "name": "pigeonize (Level 7)"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "f3BtxZ2YUfMKFYkVmzTzZfd9hsu2",
+          "name": "Austin Clarke // CriticalEDH"
+        },
+        {
+          "id": "10XZGpOw5vVlD7VeYRO1XvBv3Ft2",
+          "name": "Janos Nado // CriticalEDH"
+        },
+        {
+          "id": "XaIaeyEnjj2U3erx6gFR",
+          "name": "Liam M"
+        },
+        {
+          "id": "iqotoMePecPu28dPxk5XiBOPwBy1",
+          "name": "Mason [CHUDS]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Josh Zuckerman-Erd // CriticalEDH",
+      "winner_id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+      "players": [
+        {
+          "id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+          "name": "pigeonize (Level 7)"
+        },
+        {
+          "id": "J1h9gUQxBNZDnFfxfA3VBvVkvvp2",
+          "name": "Justin Davis"
+        },
+        {
+          "id": "OcbEdYeSK5ZOsPnXqY4P3aXu0EG3",
+          "name": "Titus (EBAM)"
+        },
+        {
+          "id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+          "name": "Josh Zuckerman-Erd // CriticalEDH"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "BYV3xhNu8rQ84eh1b9xxBrctGft2",
+          "name": "David Whitmore "
+        },
+        {
+          "id": "1ukecoae6nbDJ0puhwnrqdC0sRU2",
+          "name": "[CHUDS] Nathan Shiflet"
+        },
+        {
+          "id": "NQ9YwxHHOHZJP5nbKX2nJhZOjfn2",
+          "name": "Freddie Aguilar"
+        },
+        {
+          "id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+          "name": "Ban Rhystic Study (Raul Rodriguez)"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "R2f3CMXUBgcKGSXXDXwSEGMOuNx2",
+          "name": "Hazen W [SQR]"
+        },
+        {
+          "id": "yUOs6BH9x6cJraYLyzhGI6hUmy32",
+          "name": "Abrham Montes"
+        },
+        {
+          "id": "4oExgumq9lQBaDYmVrik5tkvdh02",
+          "name": "Isaac Erickson [SQR]"
+        },
+        {
+          "id": "rihDCCRZgTV8KG6FBy7COcx0CaO2",
+          "name": "Daniel"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Tyler Lindblad",
+      "winner_id": "OnpUT2WC1HVDXLTixcg19VdbBAz1",
+      "players": [
+        {
+          "id": "whEk9KLvWXWAidYM1m7LMNCrIEM2",
+          "name": "Andres Cano"
+        },
+        {
+          "id": "OnpUT2WC1HVDXLTixcg19VdbBAz1",
+          "name": "Tyler Lindblad"
+        },
+        {
+          "id": "YMYOz4vpXeQUXJcinIq1XOCSBK62",
+          "name": "Davey Jones (Xavier)"
+        },
+        {
+          "id": "6ub5nYn3ohfUrQatn8lpuUxrQnt2",
+          "name": "Hunter Morris"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Ban Rhystic Study (Raul Rodriguez)",
+      "winner_id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+      "players": [
+        {
+          "id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+          "name": "Ban Rhystic Study (Raul Rodriguez)"
+        },
+        {
+          "id": "6ub5nYn3ohfUrQatn8lpuUxrQnt2",
+          "name": "Hunter Morris"
+        },
+        {
+          "id": "10XZGpOw5vVlD7VeYRO1XvBv3Ft2",
+          "name": "Janos Nado // CriticalEDH"
+        },
+        {
+          "id": "4oExgumq9lQBaDYmVrik5tkvdh02",
+          "name": "Isaac Erickson [SQR]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+          "name": "Josh Zuckerman-Erd // CriticalEDH"
+        },
+        {
+          "id": "rihDCCRZgTV8KG6FBy7COcx0CaO2",
+          "name": "Daniel"
+        },
+        {
+          "id": "OnpUT2WC1HVDXLTixcg19VdbBAz1",
+          "name": "Tyler Lindblad"
+        },
+        {
+          "id": "f3BtxZ2YUfMKFYkVmzTzZfd9hsu2",
+          "name": "Austin Clarke // CriticalEDH"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "OcbEdYeSK5ZOsPnXqY4P3aXu0EG3",
+          "name": "Titus (EBAM)"
+        },
+        {
+          "id": "R2f3CMXUBgcKGSXXDXwSEGMOuNx2",
+          "name": "Hazen W [SQR]"
+        },
+        {
+          "id": "3m7bkhFJYjU6ekHMzwSkEGHg2H83",
+          "name": "Jules"
+        },
+        {
+          "id": "1ukecoae6nbDJ0puhwnrqdC0sRU2",
+          "name": "[CHUDS] Nathan Shiflet"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "pigeonize (Level 7)",
+      "winner_id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+      "players": [
+        {
+          "id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+          "name": "pigeonize (Level 7)"
+        },
+        {
+          "id": "YMYOz4vpXeQUXJcinIq1XOCSBK62",
+          "name": "Davey Jones (Xavier)"
+        },
+        {
+          "id": "BYV3xhNu8rQ84eh1b9xxBrctGft2",
+          "name": "David Whitmore "
+        },
+        {
+          "id": "iqotoMePecPu28dPxk5XiBOPwBy1",
+          "name": "Mason [CHUDS]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Abrham Montes",
+      "winner_id": "yUOs6BH9x6cJraYLyzhGI6hUmy32",
+      "players": [
+        {
+          "id": "yUOs6BH9x6cJraYLyzhGI6hUmy32",
+          "name": "Abrham Montes"
+        },
+        {
+          "id": "XaIaeyEnjj2U3erx6gFR",
+          "name": "Liam M"
+        },
+        {
+          "id": "J1h9gUQxBNZDnFfxfA3VBvVkvvp2",
+          "name": "Justin Davis"
+        },
+        {
+          "id": "NQ9YwxHHOHZJP5nbKX2nJhZOjfn2",
+          "name": "Freddie Aguilar"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Ban Rhystic Study (Raul Rodriguez)",
+      "winner_id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+      "players": [
+        {
+          "id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+          "name": "Ban Rhystic Study (Raul Rodriguez)"
+        },
+        {
+          "id": "XaIaeyEnjj2U3erx6gFR",
+          "name": "Liam M"
+        },
+        {
+          "id": "OnpUT2WC1HVDXLTixcg19VdbBAz1",
+          "name": "Tyler Lindblad"
+        },
+        {
+          "id": "OcbEdYeSK5ZOsPnXqY4P3aXu0EG3",
+          "name": "Titus (EBAM)"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Austin Clarke // CriticalEDH",
+      "winner_id": "f3BtxZ2YUfMKFYkVmzTzZfd9hsu2",
+      "players": [
+        {
+          "id": "f3BtxZ2YUfMKFYkVmzTzZfd9hsu2",
+          "name": "Austin Clarke // CriticalEDH"
+        },
+        {
+          "id": "R2f3CMXUBgcKGSXXDXwSEGMOuNx2",
+          "name": "Hazen W [SQR]"
+        },
+        {
+          "id": "6ub5nYn3ohfUrQatn8lpuUxrQnt2",
+          "name": "Hunter Morris"
+        },
+        {
+          "id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+          "name": "pigeonize (Level 7)"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Josh Zuckerman-Erd // CriticalEDH",
+      "winner_id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+      "players": [
+        {
+          "id": "iqotoMePecPu28dPxk5XiBOPwBy1",
+          "name": "Mason [CHUDS]"
+        },
+        {
+          "id": "1ukecoae6nbDJ0puhwnrqdC0sRU2",
+          "name": "[CHUDS] Nathan Shiflet"
+        },
+        {
+          "id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+          "name": "Josh Zuckerman-Erd // CriticalEDH"
+        },
+        {
+          "id": "yUOs6BH9x6cJraYLyzhGI6hUmy32",
+          "name": "Abrham Montes"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 4,
+      "status": "Completed",
+      "winner": "David Whitmore ",
+      "winner_id": "BYV3xhNu8rQ84eh1b9xxBrctGft2",
+      "players": [
+        {
+          "id": "rihDCCRZgTV8KG6FBy7COcx0CaO2",
+          "name": "Daniel"
+        },
+        {
+          "id": "BYV3xhNu8rQ84eh1b9xxBrctGft2",
+          "name": "David Whitmore "
+        },
+        {
+          "id": "10XZGpOw5vVlD7VeYRO1XvBv3Ft2",
+          "name": "Janos Nado // CriticalEDH"
+        },
+        {
+          "id": "3m7bkhFJYjU6ekHMzwSkEGHg2H83",
+          "name": "Jules"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Ban Rhystic Study (Raul Rodriguez)",
+      "winner_id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+      "players": [
+        {
+          "id": "PyBI30NTTTbJIlrpF8Jbt00s0c52",
+          "name": "Ban Rhystic Study (Raul Rodriguez)"
+        },
+        {
+          "id": "4oExgumq9lQBaDYmVrik5tkvdh02",
+          "name": "Isaac Erickson [SQR]"
+        },
+        {
+          "id": "Lc4XcMCSYkXqkkQpmFYAY6isBt33",
+          "name": "Josh Zuckerman-Erd // CriticalEDH"
+        },
+        {
+          "id": "cOHH27D1bKSu9TTa2FkZ3frml9Y2",
+          "name": "pigeonize (Level 7)"
+        }
+      ]
+    }
+  ]
+}
