@@ -1,0 +1,926 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-10-07T06:25:28.724194Z",
+  "content_hash": "b37b109340bdc1b068ff0b4e0a8ddf35a8c58c3eba431b7b06d2904db6b55376",
+  "tid": "magic-stronghold-cedh-tuesday-329",
+  "name": "Magic Stronghold cEDH Tuesday",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1791336600,
+  "start_date_utc": "2026-10-07T01:30:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 0,
+  "event_data": {
+    "lat": 49.232692,
+    "lng": -123.024184,
+    "city": "Vancouver",
+    "state": "British Columbia",
+    "country": "Canada",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/8ae79219-04ee-4f0f-e493-8f4fdf19e200/public",
+    "address": "3665 Kingsway, Vancouver, BC, Canada"
+  },
+  "field_size": 24,
+  "decklist_coverage": {
+    "submitted": 5,
+    "structured": 5,
+    "total": 24
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "QPC38M3Nd2hwcAdcyvete3E36To1",
+      "player_name": "Scott Peters",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": true,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 2,
+      "player_id": "b5zuwsbf96hUmUY7M3wGaZn33D43",
+      "player_name": "wyan",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "mJfUoAIOxNb89CGA80rVRvLjpkF2",
+      "player_name": "Caleb",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 4,
+      "player_id": "w7ylvBqiWdaqDg1yM32w0mVKvEI2",
+      "player_name": "Mark Segaric",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "bgz55DT2boZGdcnUeZ5oWuQ36u42",
+      "player_name": "brandon",
+      "commanders": [
+        "Lotho, Corrupt Shirriff"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 6,
+      "player_id": "YOYsjBkp2uedVy9hPN22JRY8OSY2",
+      "player_name": "Lucas Laviolette",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 7,
+      "player_id": "PcgoE148I8WiX6LEDBWZUiTRARs2",
+      "player_name": "Ethan Moore",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 8,
+      "player_id": "vfdtAwZTwZfrX1rMSh3FHxpKhUf1",
+      "player_name": "Cody Peters",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 9,
+      "player_id": "CVNYKvGyluOsGPXK7xP8N73his82",
+      "player_name": "Cam T",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 10,
+      "player_id": "xUkVyftEFDNjuLiC56TGJvQ4eeL2",
+      "player_name": "Alexander Bye",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 11,
+      "player_id": "IBapG6ZIJYSTUvHVmyFAqriIart2",
+      "player_name": "Ethan De Meyer",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 12,
+      "player_id": "HxqiX8iwhbUpHyGS2l5cQCz3zj63",
+      "player_name": "Daniel Stolee",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "Keh45DeoDZQh5hjb7biruJzJcwD2",
+      "player_name": "Aaron Campbell",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 14,
+      "player_id": "5SDFjnKfUlUICH2Q9vJKYdOF2qp1",
+      "player_name": "Edith R.Y.",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "xd9SA1EbgDWMgtTQE0nQ9H5UOwb2",
+      "player_name": "Reese K",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 16,
+      "player_id": "E48Xftq12HNrDUu8m7eOeuJVtno1",
+      "player_name": "Scott Kenning",
+      "commanders": [
+        "Vohar, Vodalian Desecrator"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 17,
+      "player_id": "gqYFTPyQ9Bf1AGa9eUNsoKui6nL2",
+      "player_name": "Chris",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 18,
+      "player_id": "gj9YIO0ZqKgI0OSTCYkujQdmNYJ2",
+      "player_name": "Ryan LeMesurier",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 19,
+      "player_id": "2ALs3dUKKFVICK0ddvPA7f2DYPD3",
+      "player_name": "Ozzy",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 20,
+      "player_id": "bV96zoj97NMm3gia2Bp093GEUgC2",
+      "player_name": "Jason ",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 21,
+      "player_id": "jGyEvZGKIgVRGfl9JKUlF1etLIB2",
+      "player_name": "Kieran Alton-Tracy",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 22,
+      "player_id": "LV8pT51dpeZlNUQY5vwnDBjCaif1",
+      "player_name": "Kyle Wendt",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 23,
+      "player_id": "CjpoJcZ4clYuuVD87g7hAoKgDC73",
+      "player_name": "Andrew L Feldinger",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 24,
+      "player_id": "q6tvVQD77SW0IFW83M33z2dd6Rv1",
+      "player_name": "Hector Moses",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Caleb",
+      "winner_id": "mJfUoAIOxNb89CGA80rVRvLjpkF2",
+      "players": [
+        {
+          "id": "xUkVyftEFDNjuLiC56TGJvQ4eeL2",
+          "name": "Alexander Bye"
+        },
+        {
+          "id": "5SDFjnKfUlUICH2Q9vJKYdOF2qp1",
+          "name": "Edith R.Y."
+        },
+        {
+          "id": "mJfUoAIOxNb89CGA80rVRvLjpkF2",
+          "name": "Caleb"
+        },
+        {
+          "id": "PcgoE148I8WiX6LEDBWZUiTRARs2",
+          "name": "Ethan Moore"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "brandon",
+      "winner_id": "bgz55DT2boZGdcnUeZ5oWuQ36u42",
+      "players": [
+        {
+          "id": "q6tvVQD77SW0IFW83M33z2dd6Rv1",
+          "name": "Hector Moses"
+        },
+        {
+          "id": "CjpoJcZ4clYuuVD87g7hAoKgDC73",
+          "name": "Andrew L Feldinger"
+        },
+        {
+          "id": "E48Xftq12HNrDUu8m7eOeuJVtno1",
+          "name": "Scott Kenning"
+        },
+        {
+          "id": "bgz55DT2boZGdcnUeZ5oWuQ36u42",
+          "name": "brandon"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Ethan De Meyer",
+      "winner_id": "IBapG6ZIJYSTUvHVmyFAqriIart2",
+      "players": [
+        {
+          "id": "gj9YIO0ZqKgI0OSTCYkujQdmNYJ2",
+          "name": "Ryan LeMesurier"
+        },
+        {
+          "id": "2ALs3dUKKFVICK0ddvPA7f2DYPD3",
+          "name": "Ozzy"
+        },
+        {
+          "id": "bV96zoj97NMm3gia2Bp093GEUgC2",
+          "name": "Jason "
+        },
+        {
+          "id": "IBapG6ZIJYSTUvHVmyFAqriIart2",
+          "name": "Ethan De Meyer"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Scott Peters",
+      "winner_id": "QPC38M3Nd2hwcAdcyvete3E36To1",
+      "players": [
+        {
+          "id": "QPC38M3Nd2hwcAdcyvete3E36To1",
+          "name": "Scott Peters"
+        },
+        {
+          "id": "LV8pT51dpeZlNUQY5vwnDBjCaif1",
+          "name": "Kyle Wendt"
+        },
+        {
+          "id": "jGyEvZGKIgVRGfl9JKUlF1etLIB2",
+          "name": "Kieran Alton-Tracy"
+        },
+        {
+          "id": "Keh45DeoDZQh5hjb7biruJzJcwD2",
+          "name": "Aaron Campbell"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "wyan",
+      "winner_id": "b5zuwsbf96hUmUY7M3wGaZn33D43",
+      "players": [
+        {
+          "id": "vfdtAwZTwZfrX1rMSh3FHxpKhUf1",
+          "name": "Cody Peters"
+        },
+        {
+          "id": "gqYFTPyQ9Bf1AGa9eUNsoKui6nL2",
+          "name": "Chris"
+        },
+        {
+          "id": "CVNYKvGyluOsGPXK7xP8N73his82",
+          "name": "Cam T"
+        },
+        {
+          "id": "b5zuwsbf96hUmUY7M3wGaZn33D43",
+          "name": "wyan"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "w7ylvBqiWdaqDg1yM32w0mVKvEI2",
+          "name": "Mark Segaric"
+        },
+        {
+          "id": "HxqiX8iwhbUpHyGS2l5cQCz3zj63",
+          "name": "Daniel Stolee"
+        },
+        {
+          "id": "YOYsjBkp2uedVy9hPN22JRY8OSY2",
+          "name": "Lucas Laviolette"
+        },
+        {
+          "id": "xd9SA1EbgDWMgtTQE0nQ9H5UOwb2",
+          "name": "Reese K"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Ethan Moore",
+      "winner_id": "PcgoE148I8WiX6LEDBWZUiTRARs2",
+      "players": [
+        {
+          "id": "PcgoE148I8WiX6LEDBWZUiTRARs2",
+          "name": "Ethan Moore"
+        },
+        {
+          "id": "xd9SA1EbgDWMgtTQE0nQ9H5UOwb2",
+          "name": "Reese K"
+        },
+        {
+          "id": "bgz55DT2boZGdcnUeZ5oWuQ36u42",
+          "name": "brandon"
+        },
+        {
+          "id": "LV8pT51dpeZlNUQY5vwnDBjCaif1",
+          "name": "Kyle Wendt"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Cody Peters",
+      "winner_id": "vfdtAwZTwZfrX1rMSh3FHxpKhUf1",
+      "players": [
+        {
+          "id": "IBapG6ZIJYSTUvHVmyFAqriIart2",
+          "name": "Ethan De Meyer"
+        },
+        {
+          "id": "jGyEvZGKIgVRGfl9JKUlF1etLIB2",
+          "name": "Kieran Alton-Tracy"
+        },
+        {
+          "id": "vfdtAwZTwZfrX1rMSh3FHxpKhUf1",
+          "name": "Cody Peters"
+        },
+        {
+          "id": "YOYsjBkp2uedVy9hPN22JRY8OSY2",
+          "name": "Lucas Laviolette"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "HxqiX8iwhbUpHyGS2l5cQCz3zj63",
+          "name": "Daniel Stolee"
+        },
+        {
+          "id": "E48Xftq12HNrDUu8m7eOeuJVtno1",
+          "name": "Scott Kenning"
+        },
+        {
+          "id": "mJfUoAIOxNb89CGA80rVRvLjpkF2",
+          "name": "Caleb"
+        },
+        {
+          "id": "2ALs3dUKKFVICK0ddvPA7f2DYPD3",
+          "name": "Ozzy"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Keh45DeoDZQh5hjb7biruJzJcwD2",
+          "name": "Aaron Campbell"
+        },
+        {
+          "id": "b5zuwsbf96hUmUY7M3wGaZn33D43",
+          "name": "wyan"
+        },
+        {
+          "id": "w7ylvBqiWdaqDg1yM32w0mVKvEI2",
+          "name": "Mark Segaric"
+        },
+        {
+          "id": "5SDFjnKfUlUICH2Q9vJKYdOF2qp1",
+          "name": "Edith R.Y."
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Scott Peters",
+      "winner_id": "QPC38M3Nd2hwcAdcyvete3E36To1",
+      "players": [
+        {
+          "id": "QPC38M3Nd2hwcAdcyvete3E36To1",
+          "name": "Scott Peters"
+        },
+        {
+          "id": "gqYFTPyQ9Bf1AGa9eUNsoKui6nL2",
+          "name": "Chris"
+        },
+        {
+          "id": "xUkVyftEFDNjuLiC56TGJvQ4eeL2",
+          "name": "Alexander Bye"
+        },
+        {
+          "id": "gj9YIO0ZqKgI0OSTCYkujQdmNYJ2",
+          "name": "Ryan LeMesurier"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Cam T",
+      "winner_id": "CVNYKvGyluOsGPXK7xP8N73his82",
+      "players": [
+        {
+          "id": "bV96zoj97NMm3gia2Bp093GEUgC2",
+          "name": "Jason "
+        },
+        {
+          "id": "CVNYKvGyluOsGPXK7xP8N73his82",
+          "name": "Cam T"
+        },
+        {
+          "id": "CjpoJcZ4clYuuVD87g7hAoKgDC73",
+          "name": "Andrew L Feldinger"
+        },
+        {
+          "id": "q6tvVQD77SW0IFW83M33z2dd6Rv1",
+          "name": "Hector Moses"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "mJfUoAIOxNb89CGA80rVRvLjpkF2",
+          "name": "Caleb"
+        },
+        {
+          "id": "b5zuwsbf96hUmUY7M3wGaZn33D43",
+          "name": "wyan"
+        },
+        {
+          "id": "QPC38M3Nd2hwcAdcyvete3E36To1",
+          "name": "Scott Peters"
+        },
+        {
+          "id": "bgz55DT2boZGdcnUeZ5oWuQ36u42",
+          "name": "brandon"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Mark Segaric",
+      "winner_id": "w7ylvBqiWdaqDg1yM32w0mVKvEI2",
+      "players": [
+        {
+          "id": "w7ylvBqiWdaqDg1yM32w0mVKvEI2",
+          "name": "Mark Segaric"
+        },
+        {
+          "id": "PcgoE148I8WiX6LEDBWZUiTRARs2",
+          "name": "Ethan Moore"
+        },
+        {
+          "id": "CVNYKvGyluOsGPXK7xP8N73his82",
+          "name": "Cam T"
+        },
+        {
+          "id": "IBapG6ZIJYSTUvHVmyFAqriIart2",
+          "name": "Ethan De Meyer"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Keh45DeoDZQh5hjb7biruJzJcwD2",
+          "name": "Aaron Campbell"
+        },
+        {
+          "id": "gqYFTPyQ9Bf1AGa9eUNsoKui6nL2",
+          "name": "Chris"
+        },
+        {
+          "id": "HxqiX8iwhbUpHyGS2l5cQCz3zj63",
+          "name": "Daniel Stolee"
+        },
+        {
+          "id": "bV96zoj97NMm3gia2Bp093GEUgC2",
+          "name": "Jason "
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "E48Xftq12HNrDUu8m7eOeuJVtno1",
+          "name": "Scott Kenning"
+        },
+        {
+          "id": "gj9YIO0ZqKgI0OSTCYkujQdmNYJ2",
+          "name": "Ryan LeMesurier"
+        },
+        {
+          "id": "xd9SA1EbgDWMgtTQE0nQ9H5UOwb2",
+          "name": "Reese K"
+        },
+        {
+          "id": "5SDFjnKfUlUICH2Q9vJKYdOF2qp1",
+          "name": "Edith R.Y."
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Lucas Laviolette",
+      "winner_id": "YOYsjBkp2uedVy9hPN22JRY8OSY2",
+      "players": [
+        {
+          "id": "2ALs3dUKKFVICK0ddvPA7f2DYPD3",
+          "name": "Ozzy"
+        },
+        {
+          "id": "YOYsjBkp2uedVy9hPN22JRY8OSY2",
+          "name": "Lucas Laviolette"
+        },
+        {
+          "id": "LV8pT51dpeZlNUQY5vwnDBjCaif1",
+          "name": "Kyle Wendt"
+        },
+        {
+          "id": "CjpoJcZ4clYuuVD87g7hAoKgDC73",
+          "name": "Andrew L Feldinger"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Alexander Bye",
+      "winner_id": "xUkVyftEFDNjuLiC56TGJvQ4eeL2",
+      "players": [
+        {
+          "id": "q6tvVQD77SW0IFW83M33z2dd6Rv1",
+          "name": "Hector Moses"
+        },
+        {
+          "id": "jGyEvZGKIgVRGfl9JKUlF1etLIB2",
+          "name": "Kieran Alton-Tracy"
+        },
+        {
+          "id": "xUkVyftEFDNjuLiC56TGJvQ4eeL2",
+          "name": "Alexander Bye"
+        }
+      ]
+    }
+  ]
+}
