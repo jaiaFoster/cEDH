@@ -1,0 +1,4593 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-10-18T05:05:48.313953Z",
+  "content_hash": "5179d29d3917996cbe03e30865d93a2fb5ba389167bbacf26487076cd23af348",
+  "tid": "cedh-069-die-fabrik",
+  "name": "1.cEDH069 Major @Die Fabrik",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1792224000,
+  "start_date_utc": "2026-10-17T08:00:00Z",
+  "swiss_rounds": 6,
+  "top_cut_size": 16,
+  "event_data": {
+    "lat": 49.803865,
+    "lng": 8.598266,
+    "city": "Pfungstadt",
+    "state": "Hessen",
+    "country": "Germany",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/d79747b4-62be-4c0d-3bf1-ba077448ef00/public",
+    "address": "Eberstädter Str. 26, 64319 Pfungstadt, Deutschland"
+  },
+  "field_size": 77,
+  "decklist_coverage": {
+    "submitted": 77,
+    "structured": 77,
+    "total": 77
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+      "player_name": "Samuel Zobeley",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 4,
+      "wins_swiss": 2,
+      "wins_bracket": 2,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+      "player_name": "Bent Vetter",
+      "commanders": [
+        "The Wandering Minstrel"
+      ],
+      "wins": 3,
+      "wins_swiss": 2,
+      "wins_bracket": 1,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+      "player_name": "Incraut [OBST]",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 3,
+      "wins_swiss": 2,
+      "wins_bracket": 1,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+      "player_name": "Marwin Zimmermann",
+      "commanders": [
+        "Tayam, Luminous Enigma"
+      ],
+      "wins": 3,
+      "wins_swiss": 2,
+      "wins_bracket": 1,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 5,
+      "player_id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+      "player_name": "Fabian Meyer-Benz",
+      "commanders": [
+        "Captain Sisay"
+      ],
+      "wins": 3,
+      "wins_swiss": 3,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 6,
+      "player_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "player_name": "Tom Schweizer [SNAP]",
+      "commanders": [
+        "The Fantasticar"
+      ],
+      "wins": 3,
+      "wins_swiss": 3,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 7,
+      "player_id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+      "player_name": "Matthias Schmuck",
+      "commanders": [
+        "Hei Bai, Forest Guardian"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 8,
+      "player_id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+      "player_name": "Karsten Etnoos [SNAP]",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+      "player_name": "[069] Jakob Frodien",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 10,
+      "player_id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+      "player_name": "Casual Seven [NMH] ",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+      "player_name": "Sascha Reimann",
+      "commanders": [
+        "Winota, Joiner of Forces"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 12,
+      "player_id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+      "player_name": "Onur Coskun [OBST] #FreeGrisiB",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 13,
+      "player_id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+      "player_name": "Kevin Hirtz [CAVE]",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 14,
+      "player_id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+      "player_name": "Philipp Borst",
+      "commanders": [
+        "Scion of the Ur-Dragon"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 2,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+      "player_name": "Sebastian",
+      "commanders": [
+        "Dihada, Binder of Wills"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 4,
+      "losses_swiss": 3,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 16,
+      "player_id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+      "player_name": "Momo Winter",
+      "commanders": [
+        "Arcum Dagsson"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 4,
+      "losses_swiss": 3,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 17,
+      "player_id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+      "player_name": "[069] Marc Dombrowski",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 18,
+      "player_id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+      "player_name": "[069] Johannes Richter",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 19,
+      "player_id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+      "player_name": "Leon Seyb [SNAP]",
+      "commanders": [
+        "Dack Fayden, Helping Hand"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 5,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 20,
+      "player_id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+      "player_name": "Marcel Röser",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 5,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 21,
+      "player_id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+      "player_name": "[069] Sofienne Bibaoune",
+      "commanders": [
+        "Najeela, the Blade-Blossom"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 22,
+      "player_id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+      "player_name": "FREE GRISELBRAND Louis Gitfrog [OBST]",
+      "commanders": [
+        "Inalla, Archmage Ritualist"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 23,
+      "player_id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+      "player_name": "Adam Bauer",
+      "commanders": [
+        "K'rrik, Son of Yawgmoth"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 24,
+      "player_id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+      "player_name": "[069]David Schumacher",
+      "commanders": [
+        "Magda, Brazen Outlaw"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 25,
+      "player_id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+      "player_name": "Pascal Stutz [CAVE]",
+      "commanders": [
+        "Atraxa, Grand Unifier"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 26,
+      "player_id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+      "player_name": "Thomas Lenz",
+      "commanders": [
+        "Dack Fayden, Helping Hand"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 27,
+      "player_id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+      "player_name": "Justin Nicola",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 28,
+      "player_id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+      "player_name": "Kevin Winkler",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 29,
+      "player_id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+      "player_name": "Max Wierzewski ",
+      "commanders": [
+        "Rocco, Cabaretti Caterer"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 30,
+      "player_id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+      "player_name": "Tobias Barenberg [SNAP]",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 31,
+      "player_id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+      "player_name": "[069] Kevin Meklenburg ",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 32,
+      "player_id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+      "player_name": "Lissie Nicolaisen ",
+      "commanders": [
+        "Francisco, Fowl Marauder",
+        "Rograkh, Son of Rohgahh"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 33,
+      "player_id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+      "player_name": "Eisenherz [INTIM]",
+      "commanders": [
+        "Urza, Lord High Artificer"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 34,
+      "player_id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+      "player_name": "Sascha Gerlach",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 35,
+      "player_id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+      "player_name": "Pascal L",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 36,
+      "player_id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+      "player_name": "[069] Andreas S.",
+      "commanders": [
+        "Urza, Lord High Artificer"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 37,
+      "player_id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+      "player_name": "Robbse [CAVE]",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Yoshimaru, Ever Faithful"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 38,
+      "player_id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+      "player_name": "Christopher Gaul",
+      "commanders": [
+        "Glarb, Calamity's Augur"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 39,
+      "player_id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+      "player_name": "Justin S. [OBST]",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 40,
+      "player_id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+      "player_name": "Abdi [OBST]",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 41,
+      "player_id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+      "player_name": "[069]Philipp Leibbrandt",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 42,
+      "player_id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+      "player_name": "Emely Wittig",
+      "commanders": [
+        "Winota, Joiner of Forces"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 43,
+      "player_id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+      "player_name": "Bryce Day",
+      "commanders": [
+        "Prismari, the Inspiration"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 44,
+      "player_id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+      "player_name": "Morgan McNally",
+      "commanders": [
+        "Ob Nixilis, Captive Kingpin"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 45,
+      "player_id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+      "player_name": "Mike Roger Hoffmann [CAVE]",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 46,
+      "player_id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+      "player_name": "Komaran",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 47,
+      "player_id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+      "player_name": "Cornizzle",
+      "commanders": [
+        "Flubs, the Fool"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 48,
+      "player_id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+      "player_name": "Bruno Peixoto",
+      "commanders": [
+        "Glarb, Calamity's Augur"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 49,
+      "player_id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+      "player_name": "Kost Nixilis",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 50,
+      "player_id": "qdUfuY9cT9YaRg9AVRVUfD1eARE2",
+      "player_name": "Teemo ",
+      "commanders": [
+        "Nick Fury, Agent of S.H.I.E.L.D."
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 51,
+      "player_id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+      "player_name": "Yannik H",
+      "commanders": [
+        "Crystal, Inhuman Princess"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 5,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 52,
+      "player_id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+      "player_name": "FREE GRISELBRAND Philipp Fischer [OBST]",
+      "commanders": [
+        "Tasigur, the Golden Fang"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 5,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 53,
+      "player_id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+      "player_name": "Jack of all trades [CAVE]",
+      "commanders": [
+        "Dack Fayden, Helping Hand"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 5,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 54,
+      "player_id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+      "player_name": "Toni Gleichmann",
+      "commanders": [
+        "Tana, the Bloodsower",
+        "Tymna the Weaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 5,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 55,
+      "player_id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+      "player_name": "Jan Klein",
+      "commanders": [
+        "Nick Fury, Agent of S.H.I.E.L.D."
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 56,
+      "player_id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+      "player_name": "Carlos Retter",
+      "commanders": [
+        "Magda, Brazen Outlaw"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 57,
+      "player_id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+      "player_name": "Al Parker [OBST]",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 58,
+      "player_id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+      "player_name": "Moritz Storch",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Silas Renn, Seeker Adept"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 59,
+      "player_id": "Bw2DRgbYhXWGD6rZWW0H75LHjW52",
+      "player_name": "Marius Minn",
+      "commanders": [
+        "Elsha of the Infinite"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 60,
+      "player_id": "qPcKuZarSCYy5W4bom7d6yR95fE2",
+      "player_name": "Martin Schuckmann",
+      "commanders": [
+        "Y'shtola, Night's Blessed"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 4,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 61,
+      "player_id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+      "player_name": "[069] Kian",
+      "commanders": [
+        "K'rrik, Son of Yawgmoth"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 62,
+      "player_id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+      "player_name": "[069]Philipp Beckert",
+      "commanders": [
+        "Ral, Monsoon Mage // Ral, Leyline Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 63,
+      "player_id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+      "player_name": "[069] Jonas Grund",
+      "commanders": [
+        "Inalla, Archmage Ritualist"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 64,
+      "player_id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+      "player_name": "Björn Dolinski",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 65,
+      "player_id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+      "player_name": "Fabian Cloos [CAVE]",
+      "commanders": [
+        "Thrasios, Triton Hero",
+        "Tymna the Weaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 66,
+      "player_id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+      "player_name": "Remigiusz Sender",
+      "commanders": [
+        "Tayam, Luminous Enigma"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 67,
+      "player_id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+      "player_name": "Jochen",
+      "commanders": [
+        "Tivit, Seller of Secrets"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 68,
+      "player_id": "lkEm8RlUB4VBNngnl8NYwDHMiDq2",
+      "player_name": "Tom Mallebré ",
+      "commanders": [
+        "Raph & Mikey, Troublemakers"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 69,
+      "player_id": "oEsd1JwwJLZpbBjoMpBoOoDInxr2",
+      "player_name": "Tyler McKinney",
+      "commanders": [
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 3,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 70,
+      "player_id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+      "player_name": "Lars Grohs",
+      "commanders": [
+        "Rowan, Scion of War"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 71,
+      "player_id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+      "player_name": "Nico Lengner",
+      "commanders": [
+        "Ishai, Ojutai Dragonspeaker",
+        "Rograkh, Son of Rohgahh"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 2,
+      "losses": 4,
+      "losses_swiss": 4,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 72,
+      "player_id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+      "player_name": "Tobias Delp",
+      "commanders": [
+        "Jhoira, Weatherlight Captain"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 73,
+      "player_id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+      "player_name": "Eris✨",
+      "commanders": [
+        "Tayam, Luminous Enigma"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 74,
+      "player_id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+      "player_name": "Michael Leon",
+      "commanders": [
+        "Six"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 75,
+      "player_id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+      "player_name": "Michael dierdorf",
+      "commanders": [
+        "Urza, Lord High Artificer"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 6,
+      "losses_swiss": 6,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 76,
+      "player_id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+      "player_name": "Dion Weder",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 6,
+      "losses_swiss": 6,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 77,
+      "player_id": "FruGeKymlcbTuBVUEEm7TjSuTY83",
+      "player_name": "Inken S",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 5,
+      "losses_swiss": 5,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Lissie Nicolaisen ",
+      "winner_id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+      "players": [
+        {
+          "id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+          "name": "Lissie Nicolaisen "
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        },
+        {
+          "id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+          "name": "Tobias Delp"
+        },
+        {
+          "id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+          "name": "Michael dierdorf"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+          "name": "[069]Philipp Beckert"
+        },
+        {
+          "id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+          "name": "[069] Andreas S."
+        },
+        {
+          "id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+          "name": "Christopher Gaul"
+        },
+        {
+          "id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+          "name": "Sascha Gerlach"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "oEsd1JwwJLZpbBjoMpBoOoDInxr2",
+          "name": "Tyler McKinney"
+        },
+        {
+          "id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+          "name": "Lars Grohs"
+        },
+        {
+          "id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+          "name": "[069] Jonas Grund"
+        },
+        {
+          "id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+          "name": "Moritz Storch"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        },
+        {
+          "id": "qPcKuZarSCYy5W4bom7d6yR95fE2",
+          "name": "Martin Schuckmann"
+        },
+        {
+          "id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+          "name": "Marcel Röser"
+        },
+        {
+          "id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+          "name": "Adam Bauer"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Tobias Barenberg [SNAP]",
+      "winner_id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+      "players": [
+        {
+          "id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+          "name": "[069] Johannes Richter"
+        },
+        {
+          "id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+          "name": "Tobias Barenberg [SNAP]"
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+          "name": "Pascal Stutz [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        },
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        },
+        {
+          "id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+          "name": "Björn Dolinski"
+        },
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+          "name": "Yannik H"
+        },
+        {
+          "id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+          "name": "[069]Philipp Leibbrandt"
+        },
+        {
+          "id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+          "name": "Carlos Retter"
+        },
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Momo Winter",
+      "winner_id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+      "players": [
+        {
+          "id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+          "name": "Abdi [OBST]"
+        },
+        {
+          "id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+          "name": "Kost Nixilis"
+        },
+        {
+          "id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+          "name": "Emely Wittig"
+        },
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+          "name": "Pascal L"
+        },
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        },
+        {
+          "id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+          "name": "Justin Nicola"
+        },
+        {
+          "id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+          "name": "Jochen"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 10,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "lkEm8RlUB4VBNngnl8NYwDHMiDq2",
+          "name": "Tom Mallebré "
+        },
+        {
+          "id": "Bw2DRgbYhXWGD6rZWW0H75LHjW52",
+          "name": "Marius Minn"
+        },
+        {
+          "id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+          "name": "Fabian Cloos [CAVE]"
+        },
+        {
+          "id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+          "name": "Toni Gleichmann"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 11,
+      "status": "Completed",
+      "winner": "Bryce Day",
+      "winner_id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+      "players": [
+        {
+          "id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+          "name": "[069] Kian"
+        },
+        {
+          "id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+          "name": "Bryce Day"
+        },
+        {
+          "id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+          "name": "[069] Sofienne Bibaoune"
+        },
+        {
+          "id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+          "name": "Cornizzle"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 12,
+      "status": "Completed",
+      "winner": "Tom Schweizer [SNAP]",
+      "winner_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "players": [
+        {
+          "id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+          "name": "Komaran"
+        },
+        {
+          "id": "qdUfuY9cT9YaRg9AVRVUfD1eARE2",
+          "name": "Teemo "
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        },
+        {
+          "id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+          "name": "Nico Lengner"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 13,
+      "status": "Completed",
+      "winner": "Matthias Schmuck",
+      "winner_id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+      "players": [
+        {
+          "id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+          "name": "Eris✨"
+        },
+        {
+          "id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+          "name": "Dion Weder"
+        },
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        },
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 14,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+          "name": "Jan Klein"
+        },
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        },
+        {
+          "id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+          "name": "Al Parker [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 15,
+      "status": "Completed",
+      "winner": "Max Wierzewski ",
+      "winner_id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+      "players": [
+        {
+          "id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+          "name": "Mike Roger Hoffmann [CAVE]"
+        },
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        },
+        {
+          "id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+          "name": "Max Wierzewski "
+        },
+        {
+          "id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+          "name": "Bruno Peixoto"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 16,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        },
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+          "name": "Michael Leon"
+        },
+        {
+          "id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+          "name": "[069] Kevin Meklenburg "
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 17,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+          "name": "Robbse [CAVE]"
+        },
+        {
+          "id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+          "name": "Kevin Winkler"
+        },
+        {
+          "id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+          "name": "FREE GRISELBRAND Philipp Fischer [OBST]"
+        },
+        {
+          "id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+          "name": "Jack of all trades [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 18,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+          "name": "Remigiusz Sender"
+        },
+        {
+          "id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+          "name": "[069]David Schumacher"
+        },
+        {
+          "id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+          "name": "Eisenherz [INTIM]"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 19,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+          "name": "FREE GRISELBRAND Louis Gitfrog [OBST]"
+        },
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        },
+        {
+          "id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+          "name": "Thomas Lenz"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 20,
+      "status": "Completed",
+      "winner": "Kevin Hirtz [CAVE]",
+      "winner_id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+      "players": [
+        {
+          "id": "FruGeKymlcbTuBVUEEm7TjSuTY83",
+          "name": "Inken S"
+        },
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        },
+        {
+          "id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+          "name": "[069] Marc Dombrowski"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        },
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        },
+        {
+          "id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+          "name": "Tobias Barenberg [SNAP]"
+        },
+        {
+          "id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+          "name": "Bryce Day"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        },
+        {
+          "id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+          "name": "Max Wierzewski "
+        },
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        },
+        {
+          "id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+          "name": "Lissie Nicolaisen "
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Christopher Gaul",
+      "winner_id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+      "players": [
+        {
+          "id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+          "name": "Jochen"
+        },
+        {
+          "id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+          "name": "Christopher Gaul"
+        },
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        },
+        {
+          "id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+          "name": "Robbse [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        },
+        {
+          "id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+          "name": "FREE GRISELBRAND Philipp Fischer [OBST]"
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+          "name": "Yannik H"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "qPcKuZarSCYy5W4bom7d6yR95fE2",
+          "name": "Martin Schuckmann"
+        },
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+          "name": "Kevin Winkler"
+        },
+        {
+          "id": "Bw2DRgbYhXWGD6rZWW0H75LHjW52",
+          "name": "Marius Minn"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+          "name": "[069] Kevin Meklenburg "
+        },
+        {
+          "id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+          "name": "Pascal L"
+        },
+        {
+          "id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+          "name": "Moritz Storch"
+        },
+        {
+          "id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+          "name": "Jan Klein"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Onur Coskun [OBST] #FreeGrisiB",
+      "winner_id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+      "players": [
+        {
+          "id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+          "name": "Björn Dolinski"
+        },
+        {
+          "id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+          "name": "[069]Philipp Leibbrandt"
+        },
+        {
+          "id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+          "name": "Lars Grohs"
+        },
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Philipp Borst",
+      "winner_id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+      "players": [
+        {
+          "id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+          "name": "[069] Andreas S."
+        },
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        },
+        {
+          "id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+          "name": "Adam Bauer"
+        },
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Karsten Etnoos [SNAP]",
+      "winner_id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+      "players": [
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        },
+        {
+          "id": "lkEm8RlUB4VBNngnl8NYwDHMiDq2",
+          "name": "Tom Mallebré "
+        },
+        {
+          "id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+          "name": "Sascha Gerlach"
+        },
+        {
+          "id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+          "name": "Michael Leon"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 10,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+          "name": "Marcel Röser"
+        },
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        },
+        {
+          "id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+          "name": "Carlos Retter"
+        },
+        {
+          "id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+          "name": "[069]David Schumacher"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 11,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+          "name": "Fabian Cloos [CAVE]"
+        },
+        {
+          "id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+          "name": "Jack of all trades [CAVE]"
+        },
+        {
+          "id": "oEsd1JwwJLZpbBjoMpBoOoDInxr2",
+          "name": "Tyler McKinney"
+        },
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 12,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+          "name": "Toni Gleichmann"
+        },
+        {
+          "id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+          "name": "Al Parker [OBST]"
+        },
+        {
+          "id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+          "name": "Remigiusz Sender"
+        },
+        {
+          "id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+          "name": "[069]Philipp Beckert"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 13,
+      "status": "Completed",
+      "winner": "Justin Nicola",
+      "winner_id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+      "players": [
+        {
+          "id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+          "name": "FREE GRISELBRAND Louis Gitfrog [OBST]"
+        },
+        {
+          "id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+          "name": "Eisenherz [INTIM]"
+        },
+        {
+          "id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+          "name": "[069] Jonas Grund"
+        },
+        {
+          "id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+          "name": "Justin Nicola"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 14,
+      "status": "Completed",
+      "winner": "Thomas Lenz",
+      "winner_id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+      "players": [
+        {
+          "id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+          "name": "Cornizzle"
+        },
+        {
+          "id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+          "name": "Thomas Lenz"
+        },
+        {
+          "id": "FruGeKymlcbTuBVUEEm7TjSuTY83",
+          "name": "Inken S"
+        },
+        {
+          "id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+          "name": "Dion Weder"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 15,
+      "status": "Completed",
+      "winner": "[069] Jakob Frodien",
+      "winner_id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+      "players": [
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        },
+        {
+          "id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+          "name": "Emely Wittig"
+        },
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        },
+        {
+          "id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+          "name": "Mike Roger Hoffmann [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 16,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+          "name": "Nico Lengner"
+        },
+        {
+          "id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+          "name": "Tobias Delp"
+        },
+        {
+          "id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+          "name": "Eris✨"
+        },
+        {
+          "id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+          "name": "[069] Kian"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 17,
+      "status": "Completed",
+      "winner": "Incraut [OBST]",
+      "winner_id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+      "players": [
+        {
+          "id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+          "name": "Michael dierdorf"
+        },
+        {
+          "id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+          "name": "[069] Marc Dombrowski"
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+          "name": "Komaran"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 18,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+          "name": "Pascal Stutz [CAVE]"
+        },
+        {
+          "id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+          "name": "[069] Sofienne Bibaoune"
+        },
+        {
+          "id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+          "name": "Abdi [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 19,
+      "status": "Completed",
+      "winner": "Casual Seven [NMH] ",
+      "winner_id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+      "players": [
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        },
+        {
+          "id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+          "name": "Kost Nixilis"
+        },
+        {
+          "id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+          "name": "[069] Johannes Richter"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 20,
+      "status": "Completed",
+      "winner": "Sebastian",
+      "winner_id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+      "players": [
+        {
+          "id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+          "name": "Bruno Peixoto"
+        },
+        {
+          "id": "qdUfuY9cT9YaRg9AVRVUfD1eARE2",
+          "name": "Teemo "
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+          "name": "Thomas Lenz"
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        },
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Karsten Etnoos [SNAP]",
+      "winner_id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+      "players": [
+        {
+          "id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+          "name": "Remigiusz Sender"
+        },
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        },
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        },
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+          "name": "[069]David Schumacher"
+        },
+        {
+          "id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+          "name": "Christopher Gaul"
+        },
+        {
+          "id": "qPcKuZarSCYy5W4bom7d6yR95fE2",
+          "name": "Martin Schuckmann"
+        },
+        {
+          "id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+          "name": "Justin Nicola"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Marwin Zimmermann",
+      "winner_id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+      "players": [
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        },
+        {
+          "id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+          "name": "[069] Kevin Meklenburg "
+        },
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Momo Winter",
+      "winner_id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+      "players": [
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        },
+        {
+          "id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+          "name": "Bryce Day"
+        },
+        {
+          "id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+          "name": "Kevin Winkler"
+        },
+        {
+          "id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+          "name": "Fabian Cloos [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Bw2DRgbYhXWGD6rZWW0H75LHjW52",
+          "name": "Marius Minn"
+        },
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        },
+        {
+          "id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+          "name": "Tobias Barenberg [SNAP]"
+        },
+        {
+          "id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+          "name": "FREE GRISELBRAND Philipp Fischer [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+          "name": "Toni Gleichmann"
+        },
+        {
+          "id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+          "name": "Moritz Storch"
+        },
+        {
+          "id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+          "name": "Lissie Nicolaisen "
+        },
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+          "name": "Marcel Röser"
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        },
+        {
+          "id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+          "name": "Jack of all trades [CAVE]"
+        },
+        {
+          "id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+          "name": "Max Wierzewski "
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Leon Seyb [SNAP]",
+      "winner_id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+      "players": [
+        {
+          "id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+          "name": "[069]Philipp Beckert"
+        },
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+          "name": "Jan Klein"
+        },
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 10,
+      "status": "Completed",
+      "winner": "Pascal L",
+      "winner_id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+      "players": [
+        {
+          "id": "oEsd1JwwJLZpbBjoMpBoOoDInxr2",
+          "name": "Tyler McKinney"
+        },
+        {
+          "id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+          "name": "Carlos Retter"
+        },
+        {
+          "id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+          "name": "Pascal L"
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 11,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+          "name": "Al Parker [OBST]"
+        },
+        {
+          "id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+          "name": "Eisenherz [INTIM]"
+        },
+        {
+          "id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+          "name": "[069] Sofienne Bibaoune"
+        },
+        {
+          "id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+          "name": "Yannik H"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 12,
+      "status": "Completed",
+      "winner": "Samuel Zobeley",
+      "winner_id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+      "players": [
+        {
+          "id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+          "name": "Michael Leon"
+        },
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        },
+        {
+          "id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+          "name": "Abdi [OBST]"
+        },
+        {
+          "id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+          "name": "[069] Kian"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 13,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+          "name": "Pascal Stutz [CAVE]"
+        },
+        {
+          "id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+          "name": "Nico Lengner"
+        },
+        {
+          "id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+          "name": "FREE GRISELBRAND Louis Gitfrog [OBST]"
+        },
+        {
+          "id": "lkEm8RlUB4VBNngnl8NYwDHMiDq2",
+          "name": "Tom Mallebré "
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 14,
+      "status": "Completed",
+      "winner": "Morgan McNally",
+      "winner_id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+      "players": [
+        {
+          "id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+          "name": "Tobias Delp"
+        },
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        },
+        {
+          "id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+          "name": "Lars Grohs"
+        },
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 15,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+          "name": "Adam Bauer"
+        },
+        {
+          "id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+          "name": "[069] Jonas Grund"
+        },
+        {
+          "id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+          "name": "Robbse [CAVE]"
+        },
+        {
+          "id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+          "name": "Björn Dolinski"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 16,
+      "status": "Completed",
+      "winner": "Sascha Gerlach",
+      "winner_id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+      "players": [
+        {
+          "id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+          "name": "Sascha Gerlach"
+        },
+        {
+          "id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+          "name": "Eris✨"
+        },
+        {
+          "id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+          "name": "Jochen"
+        },
+        {
+          "id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+          "name": "[069]Philipp Leibbrandt"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 17,
+      "status": "Completed",
+      "winner": "[069] Marc Dombrowski",
+      "winner_id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+      "players": [
+        {
+          "id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+          "name": "[069] Andreas S."
+        },
+        {
+          "id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+          "name": "[069] Marc Dombrowski"
+        },
+        {
+          "id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+          "name": "Kost Nixilis"
+        },
+        {
+          "id": "qdUfuY9cT9YaRg9AVRVUfD1eARE2",
+          "name": "Teemo "
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 18,
+      "status": "Completed",
+      "winner": "Bruno Peixoto",
+      "winner_id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+      "players": [
+        {
+          "id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+          "name": "[069] Johannes Richter"
+        },
+        {
+          "id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+          "name": "Bruno Peixoto"
+        },
+        {
+          "id": "FruGeKymlcbTuBVUEEm7TjSuTY83",
+          "name": "Inken S"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 19,
+      "status": "Completed",
+      "winner": "Emely Wittig",
+      "winner_id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+      "players": [
+        {
+          "id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+          "name": "Komaran"
+        },
+        {
+          "id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+          "name": "Cornizzle"
+        },
+        {
+          "id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+          "name": "Emely Wittig"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 20,
+      "status": "Completed",
+      "winner": "Mike Roger Hoffmann [CAVE]",
+      "winner_id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+      "players": [
+        {
+          "id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+          "name": "Michael dierdorf"
+        },
+        {
+          "id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+          "name": "Dion Weder"
+        },
+        {
+          "id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+          "name": "Mike Roger Hoffmann [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Onur Coskun [OBST] #FreeGrisiB",
+      "winner_id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+      "players": [
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        },
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        },
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        },
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        },
+        {
+          "id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+          "name": "Sascha Gerlach"
+        },
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+          "name": "Thomas Lenz"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Marwin Zimmermann",
+      "winner_id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+      "players": [
+        {
+          "id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+          "name": "Bruno Peixoto"
+        },
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        },
+        {
+          "id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+          "name": "Emely Wittig"
+        },
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Tom Schweizer [SNAP]",
+      "winner_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "players": [
+        {
+          "id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+          "name": "Pascal L"
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+          "name": "Christopher Gaul"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 5,
+      "status": "Completed",
+      "winner": "[069] Jakob Frodien",
+      "winner_id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+      "players": [
+        {
+          "id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+          "name": "Justin Nicola"
+        },
+        {
+          "id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+          "name": "[069] Marc Dombrowski"
+        },
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        },
+        {
+          "id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+          "name": "Tobias Barenberg [SNAP]"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Samuel Zobeley",
+      "winner_id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+      "players": [
+        {
+          "id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+          "name": "Lissie Nicolaisen "
+        },
+        {
+          "id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+          "name": "Bryce Day"
+        },
+        {
+          "id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+          "name": "[069]David Schumacher"
+        },
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Sebastian",
+      "winner_id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+      "players": [
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        },
+        {
+          "id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+          "name": "Mike Roger Hoffmann [CAVE]"
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        },
+        {
+          "id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+          "name": "Al Parker [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "qPcKuZarSCYy5W4bom7d6yR95fE2",
+          "name": "Martin Schuckmann"
+        },
+        {
+          "id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+          "name": "FREE GRISELBRAND Philipp Fischer [OBST]"
+        },
+        {
+          "id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+          "name": "Toni Gleichmann"
+        },
+        {
+          "id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+          "name": "Max Wierzewski "
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Bw2DRgbYhXWGD6rZWW0H75LHjW52",
+          "name": "Marius Minn"
+        },
+        {
+          "id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+          "name": "Marcel Röser"
+        },
+        {
+          "id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+          "name": "Yannik H"
+        },
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 10,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+          "name": "Jack of all trades [CAVE]"
+        },
+        {
+          "id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+          "name": "[069] Sofienne Bibaoune"
+        },
+        {
+          "id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+          "name": "Moritz Storch"
+        },
+        {
+          "id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+          "name": "FREE GRISELBRAND Louis Gitfrog [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 11,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+          "name": "Adam Bauer"
+        },
+        {
+          "id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+          "name": "Eisenherz [INTIM]"
+        },
+        {
+          "id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+          "name": "Pascal Stutz [CAVE]"
+        },
+        {
+          "id": "oEsd1JwwJLZpbBjoMpBoOoDInxr2",
+          "name": "Tyler McKinney"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 12,
+      "status": "Completed",
+      "winner": "Bent Vetter",
+      "winner_id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+      "players": [
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        },
+        {
+          "id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+          "name": "Nico Lengner"
+        },
+        {
+          "id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+          "name": "[069] Jonas Grund"
+        },
+        {
+          "id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+          "name": "Remigiusz Sender"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 13,
+      "status": "Completed",
+      "winner": "Robbse [CAVE]",
+      "winner_id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+      "players": [
+        {
+          "id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+          "name": "Robbse [CAVE]"
+        },
+        {
+          "id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+          "name": "Fabian Cloos [CAVE]"
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+          "name": "[069]Philipp Beckert"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 14,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+          "name": "Carlos Retter"
+        },
+        {
+          "id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+          "name": "Jan Klein"
+        },
+        {
+          "id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+          "name": "Björn Dolinski"
+        },
+        {
+          "id": "lkEm8RlUB4VBNngnl8NYwDHMiDq2",
+          "name": "Tom Mallebré "
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 15,
+      "status": "Completed",
+      "winner": "Fabian Meyer-Benz",
+      "winner_id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+      "players": [
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        },
+        {
+          "id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+          "name": "Abdi [OBST]"
+        },
+        {
+          "id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+          "name": "Kevin Winkler"
+        },
+        {
+          "id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+          "name": "[069] Kevin Meklenburg "
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 16,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+          "name": "[069] Kian"
+        },
+        {
+          "id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+          "name": "[069] Andreas S."
+        },
+        {
+          "id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+          "name": "Jochen"
+        },
+        {
+          "id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+          "name": "Lars Grohs"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 17,
+      "status": "Completed",
+      "winner": "Sascha Reimann",
+      "winner_id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+      "players": [
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        },
+        {
+          "id": "FruGeKymlcbTuBVUEEm7TjSuTY83",
+          "name": "Inken S"
+        },
+        {
+          "id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+          "name": "Michael Leon"
+        },
+        {
+          "id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+          "name": "Eris✨"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 18,
+      "status": "Completed",
+      "winner": "[069] Johannes Richter",
+      "winner_id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+      "players": [
+        {
+          "id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+          "name": "[069] Johannes Richter"
+        },
+        {
+          "id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+          "name": "[069]Philipp Leibbrandt"
+        },
+        {
+          "id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+          "name": "Tobias Delp"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 19,
+      "status": "Completed",
+      "winner": "Teemo ",
+      "winner_id": "qdUfuY9cT9YaRg9AVRVUfD1eARE2",
+      "players": [
+        {
+          "id": "qdUfuY9cT9YaRg9AVRVUfD1eARE2",
+          "name": "Teemo "
+        },
+        {
+          "id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+          "name": "Cornizzle"
+        },
+        {
+          "id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+          "name": "Michael dierdorf"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "table": 20,
+      "status": "Completed",
+      "winner": "Komaran",
+      "winner_id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+      "players": [
+        {
+          "id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+          "name": "Dion Weder"
+        },
+        {
+          "id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+          "name": "Kost Nixilis"
+        },
+        {
+          "id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+          "name": "Komaran"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Philipp Borst",
+      "winner_id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+      "players": [
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        },
+        {
+          "id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+          "name": "Christopher Gaul"
+        },
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        },
+        {
+          "id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+          "name": "Tobias Barenberg [SNAP]"
+        },
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        },
+        {
+          "id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+          "name": "Pascal L"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Fabian Meyer-Benz",
+      "winner_id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+      "players": [
+        {
+          "id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+          "name": "[069] Johannes Richter"
+        },
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        },
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        },
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+          "name": "Thomas Lenz"
+        },
+        {
+          "id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+          "name": "Justin Nicola"
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        },
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        },
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        },
+        {
+          "id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+          "name": "Lissie Nicolaisen "
+        },
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Kevin Hirtz [CAVE]",
+      "winner_id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+      "players": [
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        },
+        {
+          "id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+          "name": "Max Wierzewski "
+        },
+        {
+          "id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+          "name": "Komaran"
+        },
+        {
+          "id": "2bbpli3JfqYDhsTrHlWel3jAM0j2",
+          "name": "Morgan McNally"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Incraut [OBST]",
+      "winner_id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+      "players": [
+        {
+          "id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+          "name": "Bryce Day"
+        },
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        },
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 8,
+      "status": "Completed",
+      "winner": "[069] Marc Dombrowski",
+      "winner_id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+      "players": [
+        {
+          "id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+          "name": "[069] Marc Dombrowski"
+        },
+        {
+          "id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+          "name": "Sascha Gerlach"
+        },
+        {
+          "id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+          "name": "Bruno Peixoto"
+        },
+        {
+          "id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+          "name": "Robbse [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Eisenherz [INTIM]",
+      "winner_id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+      "players": [
+        {
+          "id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+          "name": "Moritz Storch"
+        },
+        {
+          "id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+          "name": "Eisenherz [INTIM]"
+        },
+        {
+          "id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+          "name": "Mike Roger Hoffmann [CAVE]"
+        },
+        {
+          "id": "Bw2DRgbYhXWGD6rZWW0H75LHjW52",
+          "name": "Marius Minn"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 10,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+          "name": "Toni Gleichmann"
+        },
+        {
+          "id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+          "name": "Emely Wittig"
+        },
+        {
+          "id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+          "name": "Yannik H"
+        },
+        {
+          "id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+          "name": "Jack of all trades [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 11,
+      "status": "Completed",
+      "winner": "[069] Sofienne Bibaoune",
+      "winner_id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+      "players": [
+        {
+          "id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+          "name": "[069] Sofienne Bibaoune"
+        },
+        {
+          "id": "qPcKuZarSCYy5W4bom7d6yR95fE2",
+          "name": "Martin Schuckmann"
+        },
+        {
+          "id": "lkEm8RlUB4VBNngnl8NYwDHMiDq2",
+          "name": "Tom Mallebré "
+        },
+        {
+          "id": "oEsd1JwwJLZpbBjoMpBoOoDInxr2",
+          "name": "Tyler McKinney"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 12,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+          "name": "Jan Klein"
+        },
+        {
+          "id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+          "name": "FREE GRISELBRAND Philipp Fischer [OBST]"
+        },
+        {
+          "id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+          "name": "Marcel Röser"
+        },
+        {
+          "id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+          "name": "Pascal Stutz [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 13,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+          "name": "[069]David Schumacher"
+        },
+        {
+          "id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+          "name": "Al Parker [OBST]"
+        },
+        {
+          "id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+          "name": "Adam Bauer"
+        },
+        {
+          "id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+          "name": "FREE GRISELBRAND Louis Gitfrog [OBST]"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 14,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+          "name": "Fabian Cloos [CAVE]"
+        },
+        {
+          "id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+          "name": "Remigiusz Sender"
+        },
+        {
+          "id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+          "name": "[069] Kian"
+        },
+        {
+          "id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+          "name": "Carlos Retter"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 15,
+      "status": "Completed",
+      "winner": "[069] Andreas S.",
+      "winner_id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+      "players": [
+        {
+          "id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+          "name": "Björn Dolinski"
+        },
+        {
+          "id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+          "name": "[069] Andreas S."
+        },
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+          "name": "Nico Lengner"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 16,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+          "name": "Jochen"
+        },
+        {
+          "id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+          "name": "[069] Jonas Grund"
+        },
+        {
+          "id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+          "name": "[069]Philipp Beckert"
+        },
+        {
+          "id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+          "name": "Kevin Winkler"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 17,
+      "status": "Completed",
+      "winner": "[069] Kevin Meklenburg ",
+      "winner_id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+      "players": [
+        {
+          "id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+          "name": "Eris✨"
+        },
+        {
+          "id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+          "name": "Lars Grohs"
+        },
+        {
+          "id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+          "name": "[069] Kevin Meklenburg "
+        },
+        {
+          "id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+          "name": "Cornizzle"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 18,
+      "status": "Completed",
+      "winner": "Abdi [OBST]",
+      "winner_id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+      "players": [
+        {
+          "id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+          "name": "Dion Weder"
+        },
+        {
+          "id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+          "name": "Abdi [OBST]"
+        },
+        {
+          "id": "FruGeKymlcbTuBVUEEm7TjSuTY83",
+          "name": "Inken S"
+        },
+        {
+          "id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+          "name": "Tobias Delp"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "table": 19,
+      "status": "Completed",
+      "winner": "Kost Nixilis",
+      "winner_id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+      "players": [
+        {
+          "id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+          "name": "Michael Leon"
+        },
+        {
+          "id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+          "name": "Kost Nixilis"
+        },
+        {
+          "id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+          "name": "Michael dierdorf"
+        },
+        {
+          "id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+          "name": "[069]Philipp Leibbrandt"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Matthias Schmuck",
+      "winner_id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+      "players": [
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        },
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        },
+        {
+          "id": "8BW0R7ZCN6N2IemhAGv0g41oRqS2",
+          "name": "Eisenherz [INTIM]"
+        },
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Fabian Meyer-Benz",
+      "winner_id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+      "players": [
+        {
+          "id": "aH2lshx1bzPyuJgVR9nKqtvE84s1",
+          "name": "Max Wierzewski "
+        },
+        {
+          "id": "Vn3lrnfL8eO3IQzxjfZXDByrgJ62",
+          "name": "Tobias Barenberg [SNAP]"
+        },
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        },
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Tom Schweizer [SNAP]",
+      "winner_id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+      "players": [
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        },
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        },
+        {
+          "id": "gT3Ovm5HmxYwIQ6kalcEkZGWwSC3",
+          "name": "Lissie Nicolaisen "
+        },
+        {
+          "id": "VD9aVrSPodW0q9RkxUkN8D1EDkW2",
+          "name": "Robbse [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Casual Seven [NMH] ",
+      "winner_id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+      "players": [
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        },
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        },
+        {
+          "id": "V8XOmsqjuJhQF39IJ36TjSUzOIp1",
+          "name": "Justin Nicola"
+        },
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Bent Vetter",
+      "winner_id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+      "players": [
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        },
+        {
+          "id": "m5COBCrbbJMP5YIQZJ8J7F3aHsi1",
+          "name": "Pascal L"
+        },
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "KFLH7xPGOZXQVvb4OPj0bi2w9rE3",
+          "name": "[069] Andreas S."
+        },
+        {
+          "id": "WHZBcDhpkeOVNeoQJsYBLRCzTHh2",
+          "name": "Abdi [OBST]"
+        },
+        {
+          "id": "osVxN53Yl2RtiL5sSx2W65QkxKg1",
+          "name": "Leon Seyb [SNAP]"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "ecyrO0YKM7N1ftsOtJhnz4CiCvp1",
+          "name": "[069] Kevin Meklenburg "
+        },
+        {
+          "id": "AOzgorJiN1h47WabmFB9JuDJ49m1",
+          "name": "Sascha Gerlach"
+        },
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        },
+        {
+          "id": "ogBmwm8OSPZauSTE2r44RQZtCFm1",
+          "name": "[069] Sofienne Bibaoune"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Sascha Reimann",
+      "winner_id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+      "players": [
+        {
+          "id": "hQZ3XbRBbDRfyulwqeNpIO9C2q83",
+          "name": "Thomas Lenz"
+        },
+        {
+          "id": "X7a65SN1mgU0Vsao10oKsVKHePl1",
+          "name": "Christopher Gaul"
+        },
+        {
+          "id": "eVfyrD5XAVM3so6hpwxEV4GDDrA3",
+          "name": "[069] Marc Dombrowski"
+        },
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 9,
+      "status": "Completed",
+      "winner": "[069] Johannes Richter",
+      "winner_id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+      "players": [
+        {
+          "id": "d300t6DnxgcIcVgVWBj9KGBT7Hu2",
+          "name": "Emely Wittig"
+        },
+        {
+          "id": "5spPNSRpIZaT0q1eSK4s1Aqqod42",
+          "name": "Bryce Day"
+        },
+        {
+          "id": "15kotBpZXofCpz0wbsDuz9EBBlJ2",
+          "name": "FREE GRISELBRAND Philipp Fischer [OBST]"
+        },
+        {
+          "id": "Kqz10dpgMdfyoSsnHpYVC8PgbYW2",
+          "name": "[069] Johannes Richter"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 10,
+      "status": "Completed",
+      "winner": "Marcel Röser",
+      "winner_id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+      "players": [
+        {
+          "id": "i8fBZv9ZcQMLvDWB3vjEzGqXv9f2",
+          "name": "Kost Nixilis"
+        },
+        {
+          "id": "CXnNcaMsyMOa6fguvtPgxmiW8tz1",
+          "name": "Bruno Peixoto"
+        },
+        {
+          "id": "2HPZHLJtB8R73RIqQ9rLIOTbxsT2",
+          "name": "Toni Gleichmann"
+        },
+        {
+          "id": "iJTg9bXUT5Ual0kEovWMDMRBMDJ3",
+          "name": "Marcel Röser"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 11,
+      "status": "Completed",
+      "winner": "Pascal Stutz [CAVE]",
+      "winner_id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+      "players": [
+        {
+          "id": "rRsdeLYrGKXuHHlHdJymsvCM5fV2",
+          "name": "Pascal Stutz [CAVE]"
+        },
+        {
+          "id": "pRyn0wSTq2Up36WihgcWJsL7lv62",
+          "name": "Jack of all trades [CAVE]"
+        },
+        {
+          "id": "fwABOvQos6Xzzmo3KTcX3Ao2DQO2",
+          "name": "Komaran"
+        },
+        {
+          "id": "uTf1drFcaKXOs7RNdStMtaSt8WE2",
+          "name": "Mike Roger Hoffmann [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 12,
+      "status": "Completed",
+      "winner": "FREE GRISELBRAND Louis Gitfrog [OBST]",
+      "winner_id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+      "players": [
+        {
+          "id": "urLgWUeuhQU5GdlQRdoXD3SESi62",
+          "name": "Yannik H"
+        },
+        {
+          "id": "wYNiB0N21fSXpdcCkVpLOR4lAUE2",
+          "name": "FREE GRISELBRAND Louis Gitfrog [OBST]"
+        },
+        {
+          "id": "XgydbDIvQEZhPVKZ0KutyqL4yZ42",
+          "name": "Remigiusz Sender"
+        },
+        {
+          "id": "B8wYY1O6ELZwHyXaISL03wE579Q2",
+          "name": "Jan Klein"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 13,
+      "status": "Completed",
+      "winner": "[069]David Schumacher",
+      "winner_id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+      "players": [
+        {
+          "id": "Lk286uCmioVRrZMYYYy2ekpacth2",
+          "name": "Moritz Storch"
+        },
+        {
+          "id": "Aixfba6Q97ZOijeSP5fdFoSYVv73",
+          "name": "Jochen"
+        },
+        {
+          "id": "VIhuNuODhtR3xoe5kf4nsoJPL9B3",
+          "name": "[069]David Schumacher"
+        },
+        {
+          "id": "lOya5rAyClUOJlm89NMqyaPoQBG3",
+          "name": "Fabian Cloos [CAVE]"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 14,
+      "status": "Completed",
+      "winner": "Adam Bauer",
+      "winner_id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+      "players": [
+        {
+          "id": "LLp5aXy78WcOvD71zotAW4BZKpU2",
+          "name": "Nico Lengner"
+        },
+        {
+          "id": "tQU5z4fQkMUkF0JlDO0LqvqvNsH3",
+          "name": "Carlos Retter"
+        },
+        {
+          "id": "0DIOe2y0CmfZgpC4cVQ6wGYrXQ82",
+          "name": "[069]Philipp Beckert"
+        },
+        {
+          "id": "fc4zIe3VVjcpobBfHMCKXMxxFC32",
+          "name": "Adam Bauer"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 15,
+      "status": "Completed",
+      "winner": "[069]Philipp Leibbrandt",
+      "winner_id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+      "players": [
+        {
+          "id": "cBpUt6D4t4Qr9eXS38q9Xwxv9jf1",
+          "name": "[069]Philipp Leibbrandt"
+        },
+        {
+          "id": "FqsXJzA5byRZwCIOXJYddnVQcD62",
+          "name": "Al Parker [OBST]"
+        },
+        {
+          "id": "7QfmaGdBuofCQNSzxGM3v1mZBze2",
+          "name": "[069] Jonas Grund"
+        },
+        {
+          "id": "ao9GoQ0Tz1TUc2j58aipJ6WVG0D3",
+          "name": "[069] Kian"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 16,
+      "status": "Completed",
+      "winner": "Kevin Winkler",
+      "winner_id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+      "players": [
+        {
+          "id": "YGtSLMpDAvZLbA97yEI7NqpF0Xh2",
+          "name": "Kevin Winkler"
+        },
+        {
+          "id": "dobdx3y8R3PNO0nN6Wqx6rxPPJr2",
+          "name": "Tobias Delp"
+        },
+        {
+          "id": "FLxDucEC6EelT5YwUZoEMbhh8Hk1",
+          "name": "Michael Leon"
+        },
+        {
+          "id": "StGX8CyjsMS2Zokl7Kxfwwh1RXx1",
+          "name": "Björn Dolinski"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 17,
+      "status": "Completed",
+      "winner": "Justin S. [OBST]",
+      "winner_id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+      "players": [
+        {
+          "id": "os6fGmorj6YPH6v3MyD4fX1YbDR2",
+          "name": "Justin S. [OBST]"
+        },
+        {
+          "id": "pHLvDXPSrKcow5BoqTKqfoPGqX12",
+          "name": "Lars Grohs"
+        },
+        {
+          "id": "MORu4BeJ3RV6djbAMqswz6zwQOI3",
+          "name": "Dion Weder"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "table": 18,
+      "status": "Completed",
+      "winner": "Cornizzle",
+      "winner_id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+      "players": [
+        {
+          "id": "2ep8lueaY5P82oxBQk2mo1eYD7L2",
+          "name": "Cornizzle"
+        },
+        {
+          "id": "tYVHfXPO0vVVUze2DzNY2WpNOyu2",
+          "name": "Michael dierdorf"
+        },
+        {
+          "id": "BvsDnWQjabhNFP5OJznkoQf8Gtx2",
+          "name": "Eris✨"
+        }
+      ]
+    },
+    {
+      "round": "Top 16",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Bent Vetter",
+      "winner_id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+      "players": [
+        {
+          "id": "qXS39dEqLjheQdTpXE6I3FJKRKm1",
+          "name": "Fabian Meyer-Benz"
+        },
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        },
+        {
+          "id": "INYC35x4asgEw6Hieksmeh7q2Gr2",
+          "name": "Casual Seven [NMH] "
+        },
+        {
+          "id": "8Q3iOnBsNxSy8DkINKAbOkhyPqO2",
+          "name": "Sebastian"
+        }
+      ]
+    },
+    {
+      "round": "Top 16",
+      "table": 2,
+      "status": "Completed",
+      "winner": "Incraut [OBST]",
+      "winner_id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+      "players": [
+        {
+          "id": "1ZTQReIdV4RMbrdLcgSJyPdo6Al2",
+          "name": "Tom Schweizer [SNAP]"
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "1Q0m2lPPkrgiTTtNxlMfWub6NWc2",
+          "name": "Sascha Reimann"
+        },
+        {
+          "id": "vvYVXBYJE9ZSb49VpP1jCCpYwMj1",
+          "name": "Momo Winter"
+        }
+      ]
+    },
+    {
+      "round": "Top 16",
+      "table": 3,
+      "status": "Completed",
+      "winner": "Marwin Zimmermann",
+      "winner_id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+      "players": [
+        {
+          "id": "bQIeWvZELWb2nYA1qQGv9lk6BJ52",
+          "name": "Matthias Schmuck"
+        },
+        {
+          "id": "cqlLnEwue3giZy0bQqFZu0gS7bB3",
+          "name": "Karsten Etnoos [SNAP]"
+        },
+        {
+          "id": "Njl2e6AA05T4Jfiv4h4n5BnQLrE2",
+          "name": "Onur Coskun [OBST] #FreeGrisiB"
+        },
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        }
+      ]
+    },
+    {
+      "round": "Top 16",
+      "table": 4,
+      "status": "Completed",
+      "winner": "Samuel Zobeley",
+      "winner_id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+      "players": [
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        },
+        {
+          "id": "brnoX5qfB6hScAhqdycJCfmXCrj2",
+          "name": "[069] Jakob Frodien"
+        },
+        {
+          "id": "b1XWf5cw2gcke7RXuAQbD9ltMNE3",
+          "name": "Kevin Hirtz [CAVE]"
+        },
+        {
+          "id": "FIXOZlXDFhToEEPHw0w9dkV72LI3",
+          "name": "Philipp Borst"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Samuel Zobeley",
+      "winner_id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+      "players": [
+        {
+          "id": "BeJHeAulErbH5SUOkD1y7cVg2em1",
+          "name": "Samuel Zobeley"
+        },
+        {
+          "id": "e1fiVi8BH7QAYrs2XfJb3izAi4J2",
+          "name": "Bent Vetter"
+        },
+        {
+          "id": "OZFihRdgxPPInb9VTHUiaobR9lg2",
+          "name": "Incraut [OBST]"
+        },
+        {
+          "id": "DbkASvG2VpSli6tCyYL5PP7EfVH3",
+          "name": "Marwin Zimmermann"
+        }
+      ]
+    }
+  ]
+}
