@@ -1,0 +1,106 @@
+$ /Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/.venv/bin/python /Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/repository/commander-card-power-research-v1/run_benchmarks.py
+{
+  "decks": 174,
+  "methods": 9,
+  "cached_names": 32075,
+  "llm_metrics": {
+    "edhrec6": {
+      "spearman": 0.2,
+      "kendall": 0.06666666666666665,
+      "pairwise_accuracy": 0.5333333333333333,
+      "pairs": 15,
+      "spearman_bootstrap95": [
+        -1.0,
+        0.92
+      ],
+      "n_requested": 6,
+      "n_complete": 6
+    },
+    "reddit5": {
+      "spearman": 0.39999999999999997,
+      "kendall": 0.3333333333333334,
+      "pairwise_accuracy": 0.6666666666666666,
+      "pairs": 6,
+      "spearman_bootstrap95": [
+        -1.0,
+        1.0
+      ],
+      "n_requested": 5,
+      "n_complete": 4
+    },
+    "new_pair_accuracy": 0.8,
+    "new_pairs_complete": 5,
+    "new_year_matched_pairs": [
+      {
+        "stronger": "Elven Empire",
+        "weaker": "Spirit Squadron",
+        "difference": 87.0,
+        "credit": 1.0,
+        "complete": true
+      },
+      {
+        "stronger": "Necron Dynasties",
+        "weaker": "Painbow",
+        "difference": -565.0,
+        "credit": 0.0,
+        "complete": true
+      },
+      {
+        "stronger": "Eldrazi Unbound",
+        "weaker": "Virtue and Valor",
+        "difference": 59.0,
+        "credit": 1.0,
+        "complete": true
+      },
+      {
+        "stronger": "Endless Punishment",
+        "weaker": "Deadly Disguise",
+        "difference": 539.0,
+        "credit": 1.0,
+        "complete": true
+      },
+      {
+        "stronger": "Limit Break (FINAL FANTASY VII)",
+        "weaker": "Living Energy",
+        "difference": 174.0,
+        "credit": 1.0,
+        "complete": true
+      }
+    ],
+    "complete_decks": 164,
+    "covered_precon_oracle_ids": 6394,
+    "median_known_subtotal": 5344.0,
+    "median_complete_decks": 5350.0,
+    "validation_complete": false
+  }
+}
+
+
+$ /Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/.venv/bin/python /Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/repository/commander-card-power-research-v1/build_reports.py
+Generated source inventory and two statistical/live-integration reports
+
+
+$ /Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/.venv/bin/python -m unittest discover -s /Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/repository/commander-card-power-research-v1 -p test_*.py -v
+test_additive_deck_totals (test_research.ResearchTests.test_additive_deck_totals) ... ok
+test_all_methods_preserve_deck_coverage (test_research.ResearchTests.test_all_methods_preserve_deck_coverage) ... ok
+test_basic_control_is_globally_fixed (test_research.ResearchTests.test_basic_control_is_globally_fixed) ... ok
+test_card_identity_and_integer_ratings (test_research.ResearchTests.test_card_identity_and_integer_ratings) ... ok
+test_commented_commander_section (test_research.ResearchTests.test_commented_commander_section) ... ok
+test_live_combo_results_never_change_points (test_research.ResearchTests.test_live_combo_results_never_change_points) ... ok
+test_missing_is_not_a_zero_score (test_research.ResearchTests.test_missing_is_not_a_zero_score) ... ok
+test_pickle_globals_rejected (test_research.ResearchTests.test_pickle_globals_rejected) ... ok
+test_duplicate_quantity (test_spellbook.Tests.test_duplicate_quantity) ... ok
+test_foreign_host (test_spellbook.Tests.test_foreign_host) ... ok
+test_normalize_merge (test_spellbook.Tests.test_normalize_merge) ... ok
+test_pagination (test_spellbook.Tests.test_pagination) ... ok
+test_parse (test_spellbook.Tests.test_parse) ... ok
+test_reject_sideboard (test_spellbook.Tests.test_reject_sideboard) ... ok
+test_retry (test_spellbook.Tests.test_retry) ... ok
+test_team_split (test_spellbook.Tests.test_team_split) ... ok
+test_unknown_not_silent (test_spellbook.Tests.test_unknown_not_silent) ... ok
+test_unresolved (test_spellbook.Tests.test_unresolved) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.385s
+
+OK

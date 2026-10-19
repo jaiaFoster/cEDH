@@ -1,0 +1,3646 @@
+{
+  "input": {
+    "main": [
+      {
+        "card": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+        "quantity": 1
+      },
+      {
+        "card": "73089a39-a2f6-4aa2-a058-e6551475153d",
+        "quantity": 1
+      }
+    ],
+    "commanders": []
+  },
+  "raw": {
+    "categories": {
+      "identity": "B",
+      "included": [
+        {
+          "id": "690-3966",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 1.89,
+          "uses": [
+            {
+              "card": {
+                "id": 690,
+                "name": "Sanguine Bond",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "73089a39-a2f6-4aa2-a058-e6551475153d",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.png?1783927550",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "43.22",
+            "cardmarket": "30.45",
+            "cardkingdom": "49.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 150078,
+          "bracketTag": "S",
+          "description": "Gain life.\nSanguine Bond triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 19,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        }
+      ],
+      "includedByChangingCommanders": [],
+      "almostIncluded": [
+        {
+          "id": "314-3966",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 1.79,
+          "uses": [
+            {
+              "card": {
+                "id": 314,
+                "name": "Vito, Thorn of the Dusk Rose",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "7336a541-3ae9-4ab2-acb8-f574c0a5b3a9",
+                "typeLine": "Legendary Creature \u2014 Vampire Cleric",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/f/0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5.png?1783930698",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/f/0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5.webp?1783930698",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/f/0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5.webp?1783930698",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/f/0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5.webp?1783930698",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/f/0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5.webp?1783930698"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "47.42",
+            "cardmarket": "34.12",
+            "cardkingdom": "56.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 125777,
+          "bracketTag": "S",
+          "description": "Gain life.\nVito triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 14,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "690-6191",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 1.86,
+          "uses": [
+            {
+              "card": {
+                "id": 690,
+                "name": "Sanguine Bond",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "73089a39-a2f6-4aa2-a058-e6551475153d",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.png?1783927550",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 6191,
+                "name": "Bloodthirsty Conqueror",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "fd505c02-c59e-476d-8e88-35da862ddc23",
+                "typeLine": "Creature \u2014 Vampire Knight",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/c/e/ce860ed4-a5bd-4347-9eab-dd716ea84db1.png?1783909112",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/c/e/ce860ed4-a5bd-4347-9eab-dd716ea84db1.webp?1783909112",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/c/e/ce860ed4-a5bd-4347-9eab-dd716ea84db1.webp?1783909112",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/c/e/ce860ed4-a5bd-4347-9eab-dd716ea84db1.webp?1783909112",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/c/e/ce860ed4-a5bd-4347-9eab-dd716ea84db1.webp?1783909112"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "40.13",
+            "cardmarket": "29.02",
+            "cardkingdom": "56.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": true,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 79057,
+          "bracketTag": "S",
+          "description": "Gain life.\nSanguine Bond triggers, causing an opponent to lose 1 life.\nBloodthirsty Conqueror triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 7,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "3966-5755",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 1.88,
+          "uses": [
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 5755,
+                "name": "Enduring Tenacity",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "98e698ae-1a69-469c-9cfb-0e3fedeb71d4",
+                "typeLine": "Enchantment Creature \u2014 Snake Glimmer",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/d/5/d5756d4b-3068-412c-8643-880d3459151e.png?1783909481",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/d/5/d5756d4b-3068-412c-8643-880d3459151e.webp?1783909481",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/d/5/d5756d4b-3068-412c-8643-880d3459151e.webp?1783909481",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/d/5/d5756d4b-3068-412c-8643-880d3459151e.webp?1783909481",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/d/5/d5756d4b-3068-412c-8643-880d3459151e.webp?1783909481"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "50.25",
+            "cardmarket": "38.15",
+            "cardkingdom": "59.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 75537,
+          "bracketTag": "S",
+          "description": "Gain life.\nEnduring Tenacity triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 8,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "110-3966",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 2.4,
+          "uses": [
+            {
+              "card": {
+                "id": 110,
+                "name": "Marauding Blight-Priest",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "814b87fe-2a75-4ff2-8637-7e69e3fb285b",
+                "typeLine": "Creature \u2014 Vampire Cleric",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.png?1783909072",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.webp?1783909072",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.webp?1783909072",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.webp?1783909072",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.webp?1783909072"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "37.96",
+            "cardmarket": "27.50",
+            "cardkingdom": "43.48"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 60860,
+          "bracketTag": "S",
+          "description": "Gain life.\nMarauding Blight-Priest triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 5,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "3966-4740",
+          "of": [
+            {
+              "id": 538
+            }
+          ],
+          "salt": 1.5,
+          "uses": [
+            {
+              "card": {
+                "id": 4740,
+                "name": "Aetherflux Reservoir",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "5f15125e-ae89-471e-b055-226a783bc7c1",
+                "typeLine": "Artifact",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/9/6/96b6b2e1-c3e6-464c-8a13-b15deb34e862.png?1783937164",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/9/6/96b6b2e1-c3e6-464c-8a13-b15deb34e862.webp?1783937164",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/9/6/96b6b2e1-c3e6-464c-8a13-b15deb34e862.webp?1783937164",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/9/6/96b6b2e1-c3e6-464c-8a13-b15deb34e862.webp?1783937164",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/9/6/96b6b2e1-c3e6-464c-8a13-b15deb34e862.webp?1783937164"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "58.91",
+            "cardmarket": "42.63",
+            "cardkingdom": "70.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 538
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 13,
+                "name": "Infinite damage",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 56509,
+          "bracketTag": "S",
+          "description": "Activate Aetherflux Reservoir by paying 50 life, dealing 50 damage to target opponent.\nExquisite Blood triggers, causing you to gain you 50 life.\nRepeat.",
+          "manaNeeded": "",
+          "variantCount": 2,
+          "saltVoteCount": 8,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have at least 51 life."
+        },
+        {
+          "id": "3966-5867",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 2.17,
+          "uses": [
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 5867,
+                "name": "Starscape Cleric",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8d72ddb3-ef6e-4847-b6d4-5d85b1dd5802",
+                "typeLine": "Creature \u2014 Bat Cleric",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/5/3/53a938a7-0154-4350-87cb-00da24ec3824.png?1783910828",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/5/3/53a938a7-0154-4350-87cb-00da24ec3824.webp?1783910828",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/5/3/53a938a7-0154-4350-87cb-00da24ec3824.webp?1783910828",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/5/3/53a938a7-0154-4350-87cb-00da24ec3824.webp?1783910828",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/5/3/53a938a7-0154-4350-87cb-00da24ec3824.webp?1783910828"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "38.73",
+            "cardmarket": "28.82",
+            "cardkingdom": "44.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 28291,
+          "bracketTag": "S",
+          "description": "Gain life.\nStarscape Cleric triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 6,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "2939-3966",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 2939,
+                "name": "Defiant Bloodlord",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "7bf5196d-a16c-418f-943c-2128e40c55da",
+                "typeLine": "Creature \u2014 Vampire",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/4/e/4e7ae077-52c7-49a1-a61a-61e50b494616.png?1783927554",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/4/e/4e7ae077-52c7-49a1-a61a-61e50b494616.webp?1783927554",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/4/e/4e7ae077-52c7-49a1-a61a-61e50b494616.webp?1783927554",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/4/e/4e7ae077-52c7-49a1-a61a-61e50b494616.webp?1783927554",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/4/e/4e7ae077-52c7-49a1-a61a-61e50b494616.webp?1783927554"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "38.11",
+            "cardmarket": "27.50",
+            "cardkingdom": "43.58"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": false,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": false,
+            "pauperCommanderMain": false
+          },
+          "popularity": 11712,
+          "bracketTag": "S",
+          "description": "Gain life.\nDefiant Bloodlord triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 1,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "3966-4912",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 4912,
+                "name": "Epicure of Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "bdb319a6-a1cd-44f5-999d-af1bb55b2fc4",
+                "typeLine": "Creature \u2014 Vampire",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/c/ac79386b-91eb-4813-8f3c-3b74b45be188.png?1783927553",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/c/ac79386b-91eb-4813-8f3c-3b74b45be188.webp?1783927553",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/c/ac79386b-91eb-4813-8f3c-3b74b45be188.webp?1783927553",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/c/ac79386b-91eb-4813-8f3c-3b74b45be188.webp?1783927553",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/c/ac79386b-91eb-4813-8f3c-3b74b45be188.webp?1783927553"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "37.84",
+            "cardmarket": "27.48",
+            "cardkingdom": "43.34"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 8391,
+          "bracketTag": "S",
+          "description": "Gain life.\nEpicure of Blood triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 1,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "690-1612",
+          "of": [
+            {
+              "id": 11330
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 1612,
+                "name": "Shard of the Nightbringer",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "eedd5a17-d0fe-4a13-8f2c-f343bfa43f92",
+                "typeLine": "Creature \u2014 C'tan",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/2/1/21e4140e-22b3-479f-a259-0f56ed02b8ad.png?1783920909",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/2/1/21e4140e-22b3-479f-a259-0f56ed02b8ad.webp?1783920909",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/2/1/21e4140e-22b3-479f-a259-0f56ed02b8ad.webp?1783920909",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/2/1/21e4140e-22b3-479f-a259-0f56ed02b8ad.webp?1783920909",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/2/1/21e4140e-22b3-479f-a259-0f56ed02b8ad.webp?1783920909"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "H"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 690,
+                "name": "Sanguine Bond",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "73089a39-a2f6-4aa2-a058-e6551475153d",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.png?1783927550",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "9.49",
+            "cardmarket": "9.13",
+            "cardkingdom": "12.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 11330
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 995,
+                "name": "Infinite lifeloss for target opponent",
+                "status": "H",
+                "uncountable": false
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 63,
+                "name": "Target opponent loses the game",
+                "status": "S",
+                "uncountable": false
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": false,
+            "predh": false,
+            "legacy": true,
+            "modern": false,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": false,
+            "pauperCommanderMain": false
+          },
+          "popularity": 7521,
+          "bracketTag": "P",
+          "description": "Cast Shard of the Nightbringer by paying {5}{B}{B}{B}.\nShard of the Nightbringer triggers, causing an opponent to lose half their life total, rounded up, and you to gain life equal to the life lost this way.\nSanguine Bond triggers, causing the opponent to lose life equal to the amount of life gained this way.\nThe opponent loses the game due to having zero or less life.",
+          "manaNeeded": "{5}{B}{B}{B}",
+          "variantCount": 1,
+          "saltVoteCount": 2,
+          "manaValueNeeded": 8,
+          "easyPrerequisites": "",
+          "notablePrerequisites": ""
+        },
+        {
+          "id": "3966-7286",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 7286,
+                "name": "South Wind Avatar",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "003e5dc6-8b26-4a0a-a50b-5f0806a7bacd",
+                "typeLine": "Creature \u2014 Snake Spirit Avatar",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/c/1/c17bc07c-7147-4c84-aa0b-8a0865fba94e.png?1783904101",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/c/1/c17bc07c-7147-4c84-aa0b-8a0865fba94e.webp?1783904101",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/c/1/c17bc07c-7147-4c84-aa0b-8a0865fba94e.webp?1783904101",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/c/1/c17bc07c-7147-4c84-aa0b-8a0865fba94e.webp?1783904101",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/c/1/c17bc07c-7147-4c84-aa0b-8a0865fba94e.webp?1783904101"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "38.92",
+            "cardmarket": "28.61",
+            "cardkingdom": "45.48"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "B",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 4961,
+          "bracketTag": "S",
+          "description": "Gain life.\nSouth Wind Avatar triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 0,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        }
+      ],
+      "almostIncludedByAddingColors": [
+        {
+          "id": "690-4996",
+          "of": [
+            {
+              "id": 2194
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 4996,
+                "name": "Beacon of Immortality",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "bfcdf563-c6e5-4a54-bb63-4aba219b94e2",
+                "typeLine": "Instant",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/f/0/f0b9b5da-d3fa-4d70-a71a-a2342dbfd527.png?1783943081",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/f/0/f0b9b5da-d3fa-4d70-a71a-a2342dbfd527.webp?1783943081",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/f/0/f0b9b5da-d3fa-4d70-a71a-a2342dbfd527.webp?1783943081",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/f/0/f0b9b5da-d3fa-4d70-a71a-a2342dbfd527.webp?1783943081",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/f/0/f0b9b5da-d3fa-4d70-a71a-a2342dbfd527.webp?1783943081"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "H"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 690,
+                "name": "Sanguine Bond",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "73089a39-a2f6-4aa2-a058-e6551475153d",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.png?1783927550",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "20.19",
+            "cardmarket": "10.88",
+            "cardkingdom": "25.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "WB",
+          "includes": [
+            {
+              "id": 2194
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 63,
+                "name": "Target opponent loses the game",
+                "status": "S",
+                "uncountable": false
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": false,
+            "predh": true,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": false,
+            "pauperCommanderMain": false
+          },
+          "popularity": 17575,
+          "bracketTag": "S",
+          "description": "Cast Beacon of Immortality by paying {5}{W}, doubling your life total and shuffling Beacon of Immortality into your library.\nSanguine Bond triggers, causing target opponent who had an equal of lower life total than you to lose life equal to the life you gained.\n The opponent loses the game due to having zero or less life.",
+          "manaNeeded": "{5}{W}",
+          "variantCount": 1,
+          "saltVoteCount": 4,
+          "manaValueNeeded": 6,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have an equal or higher life total than an opponent."
+        },
+        {
+          "id": "3966-4789",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": 2.57,
+          "uses": [
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 4789,
+                "name": "Cliffhaven Vampire",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "1915a311-209b-4628-8122-af3055a78fed",
+                "typeLine": "Creature \u2014 Vampire Warrior Ally",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/5/5/5544247d-1f8f-443f-a4c4-d8461db28a79.png?1783937896",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/5/5/5544247d-1f8f-443f-a4c4-d8461db28a79.webp?1783937896",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/5/5/5544247d-1f8f-443f-a4c4-d8461db28a79.webp?1783937896",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/5/5/5544247d-1f8f-443f-a4c4-d8461db28a79.webp?1783937896",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/5/5/5544247d-1f8f-443f-a4c4-d8461db28a79.webp?1783937896"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "38.40",
+            "cardmarket": "27.85",
+            "cardkingdom": "44.98"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "WB",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": false,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": false,
+            "pauperCommanderMain": false
+          },
+          "popularity": 14873,
+          "bracketTag": "S",
+          "description": "Gain life.\nCliffhaven Vampire triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 7,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "690-4624",
+          "of": [
+            {
+              "id": 33251
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 690,
+                "name": "Sanguine Bond",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "73089a39-a2f6-4aa2-a058-e6551475153d",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.png?1783927550",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 4624,
+                "name": "Revival // Revenge",
+                "faces": 2,
+                "spoiler": false,
+                "oracleId": "836ecd67-6487-4f3d-9e08-013746be829a",
+                "typeLine": "Sorcery // Sorcery",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/e/3/e33b265d-1956-48d0-91d5-036f06dd816a.png?1783913269",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/e/3/e33b265d-1956-48d0-91d5-036f06dd816a.webp?1783913269",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/e/3/e33b265d-1956-48d0-91d5-036f06dd816a.webp?1783913269",
+                "layoutRotationFront": "clockwise",
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/e/3/e33b265d-1956-48d0-91d5-036f06dd816a.webp?1783913269",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/e/3/e33b265d-1956-48d0-91d5-036f06dd816a.webp?1783913269"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "H"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "5.92",
+            "cardmarket": "3.42",
+            "cardkingdom": "7.68"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "WB",
+          "includes": [
+            {
+              "id": 33251
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 46,
+                "name": "Near-infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 1953,
+                "name": "Near-infinite lifeloss for up to two target opponents",
+                "status": "S",
+                "uncountable": false
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": true,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 13420,
+          "bracketTag": "P",
+          "description": "Cast Revenge by paying {4}{W}{B}, doubling your life total and causing an opponent to lose half their life total, rounded up.\nSanugine Bond triggers, causing an opponent to lose life equal to the life you gained.",
+          "manaNeeded": "{4}{W}{B}",
+          "variantCount": 1,
+          "saltVoteCount": 0,
+          "manaValueNeeded": 6,
+          "easyPrerequisites": "",
+          "notablePrerequisites": ""
+        },
+        {
+          "id": "2973-3966",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 2973,
+                "name": "Dina, Soul Steeper",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "2121bcb4-f5fe-447f-9112-c7e5b5c45baf",
+                "typeLine": "Legendary Creature \u2014 Dryad Druid",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/6/a/6ae992b6-506b-4667-884f-4f7fc075b71e.png?1783903754",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/6/a/6ae992b6-506b-4667-884f-4f7fc075b71e.webp?1783903754",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/6/a/6ae992b6-506b-4667-884f-4f7fc075b71e.webp?1783903754",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/6/a/6ae992b6-506b-4667-884f-4f7fc075b71e.webp?1783903754",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/6/a/6ae992b6-506b-4667-884f-4f7fc075b71e.webp?1783903754"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "37.97",
+            "cardmarket": "27.46",
+            "cardkingdom": "43.34"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "BG",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 13131,
+          "bracketTag": "S",
+          "description": "Gain life.\nDina triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 1,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "92-3966",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 92,
+                "name": "Vizkopa Guildmage",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "f19e7c5c-67fa-4ae4-89b8-afa0e08a6c48",
+                "typeLine": "Creature \u2014 Human Wizard",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/d/f/dfdce9d1-a163-40e1-a70a-1f09cf400a6c.png?1783935509",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/d/f/dfdce9d1-a163-40e1-a70a-1f09cf400a6c.webp?1783935509",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/d/f/dfdce9d1-a163-40e1-a70a-1f09cf400a6c.webp?1783935509",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/d/f/dfdce9d1-a163-40e1-a70a-1f09cf400a6c.webp?1783935509",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/d/f/dfdce9d1-a163-40e1-a70a-1f09cf400a6c.webp?1783935509"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "38.14",
+            "cardmarket": "27.82",
+            "cardkingdom": "43.78"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "WB",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": false,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": false,
+            "pauperCommanderMain": false
+          },
+          "popularity": 12357,
+          "bracketTag": "S",
+          "description": "Activate Vizkopa Guildmage's second ability by paying {1}{W}{B}, causing each opponent to lose life whenever you gain life this turn.\nGain life.\nVizkopa Guildmage triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 3.",
+          "manaNeeded": "{1}{W}{B}",
+          "variantCount": 24,
+          "saltVoteCount": 1,
+          "manaValueNeeded": 3,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life."
+        },
+        {
+          "id": "3966-7416",
+          "of": [
+            {
+              "id": 539
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 3966,
+                "name": "Exquisite Blood",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.png?1783913874",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/0/e/0e8ccfa7-4178-476a-a155-0ca1c98556c9.webp?1783913874"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 7416,
+                "name": "Professor Dellian Fel",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "8c5fe985-69e1-4a03-99fc-a6fd2314a9a7",
+                "typeLine": "Legendary Planeswalker \u2014 Dellian",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/6/f/6ff3b4d8-1271-4c5d-8834-7662244f173d.png?1783903636",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/6/f/6ff3b4d8-1271-4c5d-8834-7662244f173d.webp?1783903636",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/6/f/6ff3b4d8-1271-4c5d-8834-7662244f173d.webp?1783903636",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/6/f/6ff3b4d8-1271-4c5d-8834-7662244f173d.webp?1783903636",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/6/f/6ff3b4d8-1271-4c5d-8834-7662244f173d.webp?1783903636"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B",
+                "G"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "42.35",
+            "cardmarket": "33.63",
+            "cardkingdom": "51.48"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "BG",
+          "includes": [
+            {
+              "id": 539
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 15,
+                "name": "Infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 14,
+                "name": "Infinite lifegain triggers",
+                "status": "C",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 26,
+                "name": "Infinite lifeloss",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": false,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 3365,
+          "bracketTag": "S",
+          "description": "Gain life.\nProfessor Dellian Fel's emblem triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+          "manaNeeded": "",
+          "variantCount": 24,
+          "saltVoteCount": 0,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "You have a way to gain life.\nYou have Professor Dellian Fel's emblem."
+        },
+        {
+          "id": "690-1162",
+          "of": [
+            {
+              "id": 7925
+            }
+          ],
+          "salt": null,
+          "uses": [
+            {
+              "card": {
+                "id": 1162,
+                "name": "Enduring Angel // Angelic Enforcer",
+                "faces": 2,
+                "spoiler": false,
+                "oracleId": "93d1e21b-7326-4aad-9f6e-e0e391845a18",
+                "typeLine": "Creature \u2014 Angel // Creature \u2014 Angel",
+                "imageUriBackPng": "https://cards.scryfall.io/png/back/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.png?1783925664",
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.png?1783925664",
+                "imageUriBackLarge": "https://cards.scryfall.io/display/back/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "imageUriBackSmall": "https://cards.scryfall.io/thumb/back/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "imageUriBackNormal": "https://cards.scryfall.io/grid/back/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "imageUriBackArtCrop": "https://cards.scryfall.io/art/back/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664",
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/2/a204c2a3-a899-4b70-8825-7e085b655ed0.webp?1783925664"
+              },
+              "quantity": 1,
+              "usedFace": 2,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            },
+            {
+              "card": {
+                "id": 690,
+                "name": "Sanguine Bond",
+                "faces": 1,
+                "spoiler": false,
+                "oracleId": "73089a39-a2f6-4aa2-a058-e6551475153d",
+                "typeLine": "Enchantment",
+                "imageUriBackPng": null,
+                "imageUriFrontPng": "https://cards.scryfall.io/png/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.png?1783927550",
+                "imageUriBackLarge": null,
+                "imageUriBackSmall": null,
+                "imageUriBackNormal": null,
+                "imageUriFrontLarge": "https://cards.scryfall.io/display/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriFrontSmall": "https://cards.scryfall.io/thumb/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "layoutRotationFront": null,
+                "imageUriFrontNormal": "https://cards.scryfall.io/grid/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550",
+                "imageUriBackArtCrop": null,
+                "imageUriFrontArtCrop": "https://cards.scryfall.io/art/front/a/d/ad4de9f1-7a39-45af-828e-c59234d9e9b9.webp?1783927550"
+              },
+              "quantity": 1,
+              "usedFace": null,
+              "zoneLocations": [
+                "B"
+              ],
+              "exileCardState": "",
+              "mustBeCommander": false,
+              "libraryCardState": "",
+              "graveyardCardState": "",
+              "battlefieldCardState": ""
+            }
+          ],
+          "notes": "",
+          "prices": {
+            "tcgplayer": "7.72",
+            "cardmarket": "4.49",
+            "cardkingdom": "9.48"
+          },
+          "status": "OK",
+          "spoiler": false,
+          "identity": "WB",
+          "includes": [
+            {
+              "id": 7925
+            }
+          ],
+          "produces": [
+            {
+              "feature": {
+                "id": 46,
+                "name": "Near-infinite lifegain",
+                "status": "S",
+                "uncountable": true
+              },
+              "quantity": 1
+            },
+            {
+              "feature": {
+                "id": 601,
+                "name": "Near-infinite lifeloss for target opponent",
+                "status": "S",
+                "uncountable": false
+              },
+              "quantity": 1
+            }
+          ],
+          "requires": [],
+          "legalities": {
+            "brawl": true,
+            "predh": false,
+            "legacy": true,
+            "modern": true,
+            "pauper": false,
+            "alchemy": false,
+            "pioneer": true,
+            "vintage": true,
+            "standard": false,
+            "commander": true,
+            "premodern": false,
+            "oathbreaker": true,
+            "standardBrawl": false,
+            "pauperCommander": false,
+            "competitiveBrawl": true,
+            "pauperCommanderMain": false
+          },
+          "popularity": 1232,
+          "bracketTag": "S",
+          "description": "Declare Angelic Enforcer as an attacker.\nAngelic Enforcer triggers, doubling your life total.\nSanguine Bond triggers, causing target opponent whose life total is less than or equal to Angelic Enforcer's power to lose life equal to the life you gained.\nThat opponent loses the game due to having 0 or less life.",
+          "manaNeeded": "",
+          "variantCount": 6,
+          "saltVoteCount": 2,
+          "manaValueNeeded": 0,
+          "easyPrerequisites": "",
+          "notablePrerequisites": "\nAngelic Enforcer does not have summoning sickness.\nYour life total is higher than or equal to an opponent's."
+        }
+      ],
+      "almostIncludedByChangingCommanders": [],
+      "almostIncludedByAddingColorsAndChangingCommanders": []
+    },
+    "pages": 1
+  },
+  "records": [
+    {
+      "id": "690-3966",
+      "category": "included",
+      "status": "component_complete",
+      "url": "https://commanderspellbook.com/combo/690-3966/",
+      "components": [
+        {
+          "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+          "name": "Sanguine Bond",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nSanguine Bond triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "314-3966",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/314-3966/",
+      "components": [
+        {
+          "oracle_id": "7336a541-3ae9-4ab2-acb8-f574c0a5b3a9",
+          "name": "Vito, Thorn of the Dusk Rose",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nVito triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "690-6191",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/690-6191/",
+      "components": [
+        {
+          "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+          "name": "Sanguine Bond",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "fd505c02-c59e-476d-8e88-35da862ddc23",
+          "name": "Bloodthirsty Conqueror",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nSanguine Bond triggers, causing an opponent to lose 1 life.\nBloodthirsty Conqueror triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-5755",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-5755/",
+      "components": [
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "98e698ae-1a69-469c-9cfb-0e3fedeb71d4",
+          "name": "Enduring Tenacity",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nEnduring Tenacity triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "110-3966",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/110-3966/",
+      "components": [
+        {
+          "oracle_id": "814b87fe-2a75-4ff2-8637-7e69e3fb285b",
+          "name": "Marauding Blight-Priest",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nMarauding Blight-Priest triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-4740",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-4740/",
+      "components": [
+        {
+          "oracle_id": "5f15125e-ae89-471e-b055-226a783bc7c1",
+          "name": "Aetherflux Reservoir",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have at least 51 life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Activate Aetherflux Reservoir by paying 50 life, dealing 50 damage to target opponent.\nExquisite Blood triggers, causing you to gain you 50 life.\nRepeat.",
+      "outcomes": [
+        "Infinite damage",
+        "Infinite lifegain triggers"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": true,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-5867",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-5867/",
+      "components": [
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8d72ddb3-ef6e-4847-b6d4-5d85b1dd5802",
+          "name": "Starscape Cleric",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nStarscape Cleric triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "2939-3966",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/2939-3966/",
+      "components": [
+        {
+          "oracle_id": "7bf5196d-a16c-418f-943c-2128e40c55da",
+          "name": "Defiant Bloodlord",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nDefiant Bloodlord triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-4912",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-4912/",
+      "components": [
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "bdb319a6-a1cd-44f5-999d-af1bb55b2fc4",
+          "name": "Epicure of Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nEpicure of Blood triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "690-1612",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/690-1612/",
+      "components": [
+        {
+          "oracle_id": "eedd5a17-d0fe-4a13-8f2c-f343bfa43f92",
+          "name": "Shard of the Nightbringer",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "H"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+          "name": "Sanguine Bond",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "",
+      "mana_needed": "{5}{B}{B}{B}",
+      "mana_value_needed": 8,
+      "description": "Cast Shard of the Nightbringer by paying {5}{B}{B}{B}.\nShard of the Nightbringer triggers, causing an opponent to lose half their life total, rounded up, and you to gain life equal to the life lost this way.\nSanguine Bond triggers, causing the opponent to lose life equal to the amount of life gained this way.\nThe opponent loses the game due to having zero or less life.",
+      "outcomes": [
+        "Infinite lifeloss for target opponent",
+        "Target opponent loses the game"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-7286",
+      "category": "almostIncluded",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-7286/",
+      "components": [
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "003e5dc6-8b26-4a0a-a50b-5f0806a7bacd",
+          "name": "South Wind Avatar",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nSouth Wind Avatar triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain",
+        "Infinite lifegain triggers",
+        "Infinite lifeloss"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "690-4996",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/690-4996/",
+      "components": [
+        {
+          "oracle_id": "bfcdf563-c6e5-4a54-bb63-4aba219b94e2",
+          "name": "Beacon of Immortality",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "H"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+          "name": "Sanguine Bond",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have an equal or higher life total than an opponent.",
+      "mana_needed": "{5}{W}",
+      "mana_value_needed": 6,
+      "description": "Cast Beacon of Immortality by paying {5}{W}, doubling your life total and shuffling Beacon of Immortality into your library.\nSanguine Bond triggers, causing target opponent who had an equal of lower life total than you to lose life equal to the life you gained.\n The opponent loses the game due to having zero or less life.",
+      "outcomes": [
+        "Target opponent loses the game"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-4789",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-4789/",
+      "components": [
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "1915a311-209b-4628-8122-af3055a78fed",
+          "name": "Cliffhaven Vampire",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nCliffhaven Vampire triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "690-4624",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/690-4624/",
+      "components": [
+        {
+          "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+          "name": "Sanguine Bond",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "836ecd67-6487-4f3d-9e08-013746be829a",
+          "name": "Revival // Revenge",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "H"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "",
+      "mana_needed": "{4}{W}{B}",
+      "mana_value_needed": 6,
+      "description": "Cast Revenge by paying {4}{W}{B}, doubling your life total and causing an opponent to lose half their life total, rounded up.\nSanugine Bond triggers, causing an opponent to lose life equal to the life you gained.",
+      "outcomes": [
+        "Near-infinite lifegain",
+        "Near-infinite lifeloss for up to two target opponents"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "2973-3966",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/2973-3966/",
+      "components": [
+        {
+          "oracle_id": "2121bcb4-f5fe-447f-9112-c7e5b5c45baf",
+          "name": "Dina, Soul Steeper",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nDina triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "92-3966",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/92-3966/",
+      "components": [
+        {
+          "oracle_id": "f19e7c5c-67fa-4ae4-89b8-afa0e08a6c48",
+          "name": "Vizkopa Guildmage",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.",
+      "mana_needed": "{1}{W}{B}",
+      "mana_value_needed": 3,
+      "description": "Activate Vizkopa Guildmage's second ability by paying {1}{W}{B}, causing each opponent to lose life whenever you gain life this turn.\nGain life.\nVizkopa Guildmage triggers, causing each opponent to lose 1 life.\nExquisite Blood triggers for each opponent that lost life.\nResolve a Exquisite Blood trigger, gaining 1 life.\nRepeat from step 3.",
+      "outcomes": [
+        "Infinite lifegain triggers",
+        "Infinite lifeloss",
+        "Infinite lifegain"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "3966-7416",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/3966-7416/",
+      "components": [
+        {
+          "oracle_id": "8f933fae-6c0c-42d7-a817-14760d8285cd",
+          "name": "Exquisite Blood",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "8c5fe985-69e1-4a03-99fc-a6fd2314a9a7",
+          "name": "Professor Dellian Fel",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B",
+            "G"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "You have a way to gain life.\nYou have Professor Dellian Fel's emblem.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Gain life.\nProfessor Dellian Fel's emblem triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+      "outcomes": [
+        "Infinite lifegain",
+        "Infinite lifegain triggers",
+        "Infinite lifeloss"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    },
+    {
+      "id": "690-1162",
+      "category": "almostIncludedByAddingColors",
+      "status": "missing_components_or_conditions",
+      "url": "https://commanderspellbook.com/combo/690-1162/",
+      "components": [
+        {
+          "oracle_id": "93d1e21b-7326-4aad-9f6e-e0e391845a18",
+          "name": "Enduring Angel // Angelic Enforcer",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        },
+        {
+          "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+          "name": "Sanguine Bond",
+          "quantity": 1,
+          "commander_required": false,
+          "zone_locations": [
+            "B"
+          ],
+          "battlefield_state": "",
+          "graveyard_state": "",
+          "exile_state": "",
+          "library_state": ""
+        }
+      ],
+      "templates": [],
+      "easy_prerequisites": "",
+      "notable_prerequisites": "\nAngelic Enforcer does not have summoning sickness.\nYour life total is higher than or equal to an opponent's.",
+      "mana_needed": "",
+      "mana_value_needed": 0,
+      "description": "Declare Angelic Enforcer as an attacker.\nAngelic Enforcer triggers, doubling your life total.\nSanguine Bond triggers, causing target opponent whose life total is less than or equal to Angelic Enforcer's power to lose life equal to the life you gained.\nThat opponent loses the game due to having 0 or less life.",
+      "outcomes": [
+        "Near-infinite lifegain",
+        "Near-infinite lifeloss for target opponent"
+      ],
+      "requires_commander": false,
+      "potential_win_outcome": false,
+      "early_win": "not_established_by_component_match",
+      "lock_candidate": false,
+      "mass_land_denial_candidate": false,
+      "manual_review": true,
+      "construction_point_adjustment": 0,
+      "cross_deck_components_required": true,
+      "controller_review_required": true,
+      "team_functionality": "unverified",
+      "review_notes": [
+        "Check ownership and controller restrictions, zones and mana sharing.",
+        "Check commander access separately for each player.",
+        "Templates and prerequisites can invalidate apparent union matches."
+      ]
+    }
+  ]
+}

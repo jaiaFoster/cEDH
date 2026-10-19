@@ -1,0 +1,4 @@
+method,alpha,training_decks,held_out_decks,held_out_mae,held_out_spearman,negative_coefficients,purpose
+ridge_zero_prior,0.1,106,58,1162.0805739585119,-0.08862297553995936,1615,emulation identifiability diagnostic; labels are known card-score sums
+ridge_zero_prior,10.0,106,58,1207.855776061363,-0.12556715937317392,1589,emulation identifiability diagnostic; labels are known card-score sums
+ridge_zero_prior,1000.0,106,58,2204.0495198094814,-0.3914053248075123,1029,emulation identifiability diagnostic; labels are known card-score sums

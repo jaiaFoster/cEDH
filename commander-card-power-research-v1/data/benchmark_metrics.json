@@ -1,0 +1,626 @@
+{
+  "n_decks": 174,
+  "n_precon_oracle_cards": 6429,
+  "matrix_rank": 174,
+  "nullity_lower_bound": 6255,
+  "cards_appearing_in_one_deck": 4382,
+  "identical_column_groups_gt1": 317,
+  "cards_in_identical_column_groups": 4766,
+  "creature_published_rows": 857,
+  "creature_unique_ids": 855,
+  "cached_names": 32075,
+  "cached_names_matched_oracle": 32171,
+  "methods": {
+    "baseline_v02": {
+      "edhrec6": {
+        "spearman": -0.48571428571428577,
+        "kendall": -0.3333333333333333,
+        "pairwise_accuracy": 0.3333333333333333,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -1.0,
+          1.0
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": -0.6,
+        "kendall": -0.39999999999999997,
+        "pairwise_accuracy": 0.3,
+        "pairs": 10,
+        "spearman_bootstrap95": [
+          -1.0,
+          1.0
+        ],
+        "n_requested": 5,
+        "n_complete": 5
+      },
+      "new_pair_accuracy": 0.2,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": -108.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": -229.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 39.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": -60.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": -168.0,
+          "credit": 0.0,
+          "complete": true
+        }
+      ],
+      "complete_decks": 174,
+      "covered_precon_oracle_ids": 6429,
+      "median_known_subtotal": 896.5,
+      "median_complete_decks": 896.5,
+      "validation_complete": true
+    },
+    "canlander": {
+      "edhrec6": {
+        "spearman": -0.39279220242478635,
+        "kendall": -0.34641016151377546,
+        "pairwise_accuracy": 0.4,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -0.9486832980505139,
+          0.1391216687280505
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": null,
+        "kendall": null,
+        "pairwise_accuracy": 0.5,
+        "pairs": 10,
+        "spearman_bootstrap95": null,
+        "n_requested": 5,
+        "n_complete": 5
+      },
+      "new_pair_accuracy": 0.6,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": 3.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        }
+      ],
+      "complete_decks": 174,
+      "covered_precon_oracle_ids": 6429,
+      "median_known_subtotal": 3.0,
+      "median_complete_decks": 3.0,
+      "validation_complete": true
+    },
+    "official_gc": {
+      "edhrec6": {
+        "spearman": -0.13093073414159545,
+        "kendall": -0.11547005383792514,
+        "pairwise_accuracy": 0.4666666666666667,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -0.9332565252573828,
+          0.44721359549995804
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": 0.7071067811865475,
+        "kendall": 0.6324555320336759,
+        "pairwise_accuracy": 0.7,
+        "pairs": 10,
+        "spearman_bootstrap95": [
+          0.7071067811865475,
+          1.0
+        ],
+        "n_requested": 5,
+        "n_complete": 5
+      },
+      "new_pair_accuracy": 0.4,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": -2.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        }
+      ],
+      "complete_decks": 174,
+      "covered_precon_oracle_ids": 6429,
+      "median_known_subtotal": 0.0,
+      "median_complete_decks": 0.0,
+      "validation_complete": true
+    },
+    "xmage_card_adapter": {
+      "edhrec6": {
+        "spearman": 0.2571428571428572,
+        "kendall": 0.2,
+        "pairwise_accuracy": 0.6,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -1.0,
+          1.0
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": 0.39999999999999997,
+        "kendall": 0.39999999999999997,
+        "pairwise_accuracy": 0.7,
+        "pairs": 10,
+        "spearman_bootstrap95": [
+          -0.8749999999999999,
+          1.0
+        ],
+        "n_requested": 5,
+        "n_complete": 5
+      },
+      "new_pair_accuracy": 0.4,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": -36.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": -13.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 57.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": -112.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 34.0,
+          "credit": 1.0,
+          "complete": true
+        }
+      ],
+      "complete_decks": 174,
+      "covered_precon_oracle_ids": 6429,
+      "median_known_subtotal": 239.0,
+      "median_complete_decks": 239.0,
+      "validation_complete": true
+    },
+    "adoption_log_proxy": {
+      "edhrec6": {
+        "spearman": null,
+        "kendall": null,
+        "pairwise_accuracy": null,
+        "n_requested": 6,
+        "n_complete": 0,
+        "reason": "fewer than three fully covered decks"
+      },
+      "reddit5": {
+        "spearman": null,
+        "kendall": null,
+        "pairwise_accuracy": null,
+        "n_requested": 5,
+        "n_complete": 0,
+        "reason": "fewer than three fully covered decks"
+      },
+      "new_pair_accuracy": null,
+      "new_pairs_complete": 0,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": -40.20694523402693,
+          "credit": 0.0,
+          "complete": false
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": -111.83790081568881,
+          "credit": 0.0,
+          "complete": false
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 61.30216568416739,
+          "credit": 1.0,
+          "complete": false
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": 57.51297891785157,
+          "credit": 1.0,
+          "complete": false
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 46.07495263632529,
+          "credit": 1.0,
+          "complete": false
+        }
+      ],
+      "complete_decks": 0,
+      "covered_precon_oracle_ids": 6421,
+      "median_known_subtotal": 268.5959347919153,
+      "median_complete_decks": null,
+      "validation_complete": false
+    },
+    "expert_flag_votes": {
+      "edhrec6": {
+        "spearman": -0.4140393356054126,
+        "kendall": -0.36514837167011066,
+        "pairwise_accuracy": 0.36666666666666664,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -0.9486832980505139,
+          0.4647580015448901
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": 0.7071067811865475,
+        "kendall": 0.6324555320336759,
+        "pairwise_accuracy": 0.7,
+        "pairs": 10,
+        "spearman_bootstrap95": [
+          0.7071067811865475,
+          1.0
+        ],
+        "n_requested": 5,
+        "n_complete": 5
+      },
+      "new_pair_accuracy": 0.5,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": 1.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": -2.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": true
+        }
+      ],
+      "complete_decks": 174,
+      "covered_precon_oracle_ids": 6429,
+      "median_known_subtotal": 1.0,
+      "median_complete_decks": 1.0,
+      "validation_complete": true
+    },
+    "creature_published_partial": {
+      "edhrec6": {
+        "spearman": null,
+        "kendall": null,
+        "pairwise_accuracy": null,
+        "n_requested": 6,
+        "n_complete": 0,
+        "reason": "fewer than three fully covered decks"
+      },
+      "reddit5": {
+        "spearman": null,
+        "kendall": null,
+        "pairwise_accuracy": null,
+        "n_requested": 5,
+        "n_complete": 0,
+        "reason": "fewer than three fully covered decks"
+      },
+      "new_pair_accuracy": null,
+      "new_pairs_complete": 0,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": 53.0,
+          "credit": 1.0,
+          "complete": false
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": -57.0,
+          "credit": 0.0,
+          "complete": false
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": false
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": -70.0,
+          "credit": 0.0,
+          "complete": false
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 0.0,
+          "credit": 0.5,
+          "complete": false
+        }
+      ],
+      "complete_decks": 0,
+      "covered_precon_oracle_ids": 126,
+      "median_known_subtotal": 0.0,
+      "median_complete_decks": null,
+      "validation_complete": false
+    },
+    "zarzak_cached_llm": {
+      "edhrec6": {
+        "spearman": 0.2,
+        "kendall": 0.06666666666666665,
+        "pairwise_accuracy": 0.5333333333333333,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -1.0,
+          0.92
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": 0.39999999999999997,
+        "kendall": 0.3333333333333334,
+        "pairwise_accuracy": 0.6666666666666666,
+        "pairs": 6,
+        "spearman_bootstrap95": [
+          -1.0,
+          1.0
+        ],
+        "n_requested": 5,
+        "n_complete": 4
+      },
+      "new_pair_accuracy": 0.8,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": 87.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": -565.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 59.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": 539.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 174.0,
+          "credit": 1.0,
+          "complete": true
+        }
+      ],
+      "complete_decks": 164,
+      "covered_precon_oracle_ids": 6394,
+      "median_known_subtotal": 5344.0,
+      "median_complete_decks": 5350.0,
+      "validation_complete": false
+    },
+    "zarzak_basic_equalized": {
+      "edhrec6": {
+        "spearman": -0.028571428571428574,
+        "kendall": 0.06666666666666665,
+        "pairwise_accuracy": 0.5333333333333333,
+        "pairs": 15,
+        "spearman_bootstrap95": [
+          -1.0,
+          1.0
+        ],
+        "n_requested": 6,
+        "n_complete": 6
+      },
+      "reddit5": {
+        "spearman": 0.39999999999999997,
+        "kendall": 0.3333333333333334,
+        "pairwise_accuracy": 0.6666666666666666,
+        "pairs": 6,
+        "spearman_bootstrap95": [
+          -1.0,
+          1.0
+        ],
+        "n_requested": 5,
+        "n_complete": 4
+      },
+      "new_pair_accuracy": 0.6,
+      "new_pairs_complete": 5,
+      "new_year_matched_pairs": [
+        {
+          "stronger": "Elven Empire",
+          "weaker": "Spirit Squadron",
+          "difference": -333.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Necron Dynasties",
+          "weaker": "Painbow",
+          "difference": -1135.0,
+          "credit": 0.0,
+          "complete": true
+        },
+        {
+          "stronger": "Eldrazi Unbound",
+          "weaker": "Virtue and Valor",
+          "difference": 209.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Endless Punishment",
+          "weaker": "Deadly Disguise",
+          "difference": 519.0,
+          "credit": 1.0,
+          "complete": true
+        },
+        {
+          "stronger": "Limit Break (FINAL FANTASY VII)",
+          "weaker": "Living Energy",
+          "difference": 164.0,
+          "credit": 1.0,
+          "complete": true
+        }
+      ],
+      "complete_decks": 164,
+      "covered_precon_oracle_ids": 6394,
+      "median_known_subtotal": 5292.5,
+      "median_complete_decks": 5297.5,
+      "validation_complete": false
+    }
+  }
+}

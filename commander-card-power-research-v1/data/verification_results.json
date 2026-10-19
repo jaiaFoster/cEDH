@@ -1,0 +1,48 @@
+{
+  "verified_at": "2026-10-19T23:46:01.316489+00:00",
+  "commands": [
+    {
+      "command": [
+        "/Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/.venv/bin/python",
+        "/Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/repository/commander-card-power-research-v1/run_benchmarks.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/.venv/bin/python",
+        "/Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/repository/commander-card-power-research-v1/build_reports.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/jaiafoster/Documents/Codex/2026-10-19/agent-task-commander-league-card-point/repository/commander-card-power-research-v1",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "offline_tests_passed": 18,
+  "reproduction_hashes_identical": true,
+  "artifact_sha256": {
+    "benchmark_results.csv": "337cd81d98654ab6786a22a3a19ae97dd038cf27a4a0aba29cc5d9c950c6624e",
+    "card_scoring_candidates.csv": "c95cf76a61f4ba06454d1c3443c6101bc090de4ab90579daf52809ae28d9ab05",
+    "data/benchmark_metrics.json": "06bb88d09408dc1e2215dbe3d6999a06b2955b82d7cd3f38756ef93979b775d5",
+    "data/annual_distributions.csv": "37820bdd7b5e1c3e5f028ffc18ef496ff55974f468a38f05dfc2e6dd8e89d4b9",
+    "data/inverse_emulation.csv": "6a53c69b76b16ab8643f86cdec3ddafd16774f04838e938400eab87cf4c2c98f",
+    "data/price_sensitivity.csv": "4092bd29475de690dd6e6be822f9e9fed296607eca6fc5ebd4491dffb84bbb84",
+    "benchmark_analysis.md": "477c99f587b26d9fa84f32c67955026f147c2472965baa76c334880c112eade5",
+    "spellbook_integration_report.md": "25f67b515aaed0dfbdcf4efb39e7f593d23e31bad664c00f01106b5a2b5e7c42"
+  },
+  "baseline_unchanged": true,
+  "live_precon_checks_succeeded": 5,
+  "live_repeats_identical": true
+}
