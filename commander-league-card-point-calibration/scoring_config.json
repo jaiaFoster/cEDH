@@ -1,0 +1,404 @@
+{
+  "version": "0.2.0-provisional",
+  "seed": 20261019,
+  "as_of": "2026-10-19",
+  "global_multiplier": 1.0,
+  "nonland_base": 2,
+  "basic_land": 2,
+  "nonbasic_land": 3,
+  "land_fixing_bonus": 3,
+  "land_tapped_discount": 2,
+  "land_utility_bonus": 3,
+  "efficiency_decay": 0.22,
+  "second_role_fraction": 0.35,
+  "game_changer_floor": 45,
+  "high_impact_threshold": 30,
+  "team_cap": 2000,
+  "individual_cap": 0,
+  "commander_adjustment": 0,
+  "bracket3_design_anchor": 1000,
+  "role_weights": {
+    "acceleration": 20,
+    "advantage": 18,
+    "tutor": 24,
+    "interaction": 20,
+    "board": 10
+  },
+  "patterns": {
+    "acceleration": "(?i)(?:\\{t\\}[^.\\n]{0,65}:? add |add \\{[wubrgc]\\}|create[^.\\n]{0,65}treasure token|search your library for[^.\\n]{0,80}land[^.\\n]{0,100}(?:battlefield)|additional land on each|spells? you cast cost[^.\\n]{0,30}less)",
+    "advantage": "(?i)(?:draw (?:a|an|two|three|four|five|six|seven|x|that many|cards? equal)|draws? a card|play[^.\\n]{0,60}(?:top of your library|from exile)|cast[^.\\n]{0,60}from your graveyard|return[^.\\n]{0,60}from your graveyard to your hand)",
+    "tutor": "(?i)search your library for (?![^.\\n]{0,70}\\bland\\b)[^.\\n]{0,100}card",
+    "interaction": "(?i)(?:destroy (?:target|all|each)|exile (?:target|all|each)|counter target (?:spell|activated|triggered)|return (?:target|all)[^.\\n]{0,70}to (?:its|their|the|owner)|target[^.\\n]{0,40}gets? -\\d+/-\\d+|deals? \\d+ damage to (?:any target|target creature))",
+    "board": "(?i)(?:create[^.\\n]{0,100}(?:creature token|tokens? with)|creatures you control get|double[^.\\n]{0,60}(?:power|damage)|additional combat|each opponent loses|damage to each opponent)"
+  },
+  "repeat_pattern": "(?i)(?:whenever|at the beginning of|\\{t\\}[^.\\n]*:|\\{\\d+\\}[^.\\n]*:)",
+  "repeat_multiplier": 1.35,
+  "broad_interaction_multiplier": 1.25,
+  "broad_interaction_pattern": "(?i)(?:destroy all|exile all|nonland permanent|any target)",
+  "overrides": {
+    "Sol Ring": {
+      "points": 65,
+      "reason": "One mana for repeatable two-mana acceleration; large opening-hand advantage.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Arcane Signet": {
+      "points": 14,
+      "reason": "Two-mana colored acceleration without additional activation cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Command Tower": {
+      "points": 7,
+      "reason": "Untapped unrestricted commander-color fixing.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Exotic Orchard": {
+      "points": 6,
+      "reason": "Usually broad fixing; opponent dependent.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Fellwar Stone": {
+      "points": 13,
+      "reason": "Two-mana conditional colored acceleration.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Cultivate": {
+      "points": 12,
+      "reason": "Three-mana land acceleration plus land to hand.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Kodama's Reach": {
+      "points": 12,
+      "reason": "Functional Cultivate analogue.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Rampant Growth": {
+      "points": 13,
+      "reason": "Two-mana basic land acceleration.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Nature's Lore": {
+      "points": 19,
+      "reason": "Two-mana Forest acceleration, potentially untapped typed dual.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Three Visits": {
+      "points": 19,
+      "reason": "Functional Nature\u2019s Lore analogue.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Farseek": {
+      "points": 16,
+      "reason": "Efficient typed land acceleration, tapped.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Swords to Plowshares": {
+      "points": 25,
+      "reason": "One-mana unconditional creature exile with modest drawback.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Path to Exile": {
+      "points": 22,
+      "reason": "One-mana creature exile; gives opponent a land.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Beast Within": {
+      "points": 20,
+      "reason": "Flexible three-mana permanent removal with token drawback.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Generous Gift": {
+      "points": 20,
+      "reason": "Flexible three-mana permanent removal with token drawback.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Counterspell": {
+      "points": 22,
+      "reason": "Two-mana unconditional counterspell.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Negate": {
+      "points": 15,
+      "reason": "Efficient but restricted counterspell.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Swan Song": {
+      "points": 25,
+      "reason": "One-mana restricted counterspell with token drawback.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Cyclonic Rift": {
+      "points": 60,
+      "reason": "Cheap bounce or asymmetric seven-mana board reset.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Rhystic Study": {
+      "points": 75,
+      "reason": "Low-cost repeatable multiplayer card advantage; opponents can pay.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Mystic Remora": {
+      "points": 60,
+      "reason": "One-mana multiplayer draw engine, cumulative upkeep.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Smothering Tithe": {
+      "points": 65,
+      "reason": "Repeatable multiplayer resource engine.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Demonic Tutor": {
+      "points": 65,
+      "reason": "Two-mana unrestricted tutor directly to hand.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Vampiric Tutor": {
+      "points": 60,
+      "reason": "One-mana instant unrestricted top-deck tutor, card disadvantage.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Enlightened Tutor": {
+      "points": 45,
+      "reason": "One-mana restricted top-deck tutor, card disadvantage.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Worldly Tutor": {
+      "points": 45,
+      "reason": "One-mana creature top-deck tutor, card disadvantage.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Mystical Tutor": {
+      "points": 50,
+      "reason": "One-mana instant/sorcery top-deck tutor.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Diabolic Tutor": {
+      "points": 12,
+      "reason": "Four-mana unrestricted tutor: meaningful tempo cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Diabolic Intent": {
+      "points": 45,
+      "reason": "Efficient tutor requiring a sacrificed creature.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Skullclamp": {
+      "points": 40,
+      "reason": "Highly efficient repeatable draw, requires suitable creatures.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Esper Sentinel": {
+      "points": 40,
+      "reason": "Cheap conditional repeatable draw.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "The One Ring": {
+      "points": 70,
+      "reason": "Protection plus repeatable escalating card draw.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Necropotence": {
+      "points": 70,
+      "reason": "Large life-to-cards conversion with timing and discard costs.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Bolas's Citadel": {
+      "points": 55,
+      "reason": "Life-paid top-deck casting engine, six-mana entry cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Consecrated Sphinx": {
+      "points": 65,
+      "reason": "Six-mana high-output opponent-draw engine.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Seedborn Muse": {
+      "points": 50,
+      "reason": "Untaps on opposing turns; requires mana sinks.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Teferi's Protection": {
+      "points": 45,
+      "reason": "Efficient broad defensive protection.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Fierce Guardianship": {
+      "points": 60,
+      "reason": "Conditional free noncreature counterspell.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Force of Will": {
+      "points": 55,
+      "reason": "Free counterspell at two-card cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Deflecting Swat": {
+      "points": 40,
+      "reason": "Conditional free redirection.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Deadly Rollick": {
+      "points": 38,
+      "reason": "Conditional free creature exile.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Flawless Maneuver": {
+      "points": 30,
+      "reason": "Conditional free creature protection.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Farewell": {
+      "points": 45,
+      "reason": "Flexible exile reset; official Game Changer, expensive.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Austere Command": {
+      "points": 18,
+      "reason": "Flexible six-mana destroy sweeper.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Blasphemous Act": {
+      "points": 25,
+      "reason": "Often one-mana damage sweeper.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Wrath of God": {
+      "points": 20,
+      "reason": "Four-mana creature sweeper.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Toxic Deluge": {
+      "points": 35,
+      "reason": "Three-mana scalable toughness sweeper with life cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Llanowar Elves": {
+      "points": 18,
+      "reason": "One-mana creature acceleration with summoning sickness.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Elvish Mystic": {
+      "points": 18,
+      "reason": "Functional Llanowar Elves analogue.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Fyndhorn Elves": {
+      "points": 18,
+      "reason": "Functional Llanowar Elves analogue.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Birds of Paradise": {
+      "points": 23,
+      "reason": "One-mana any-color creature acceleration.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Mana Vault": {
+      "points": 65,
+      "reason": "One-mana burst of three mana; costly untap.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Chrome Mox": {
+      "points": 65,
+      "reason": "Zero-mana acceleration requiring imprint card.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Mox Diamond": {
+      "points": 65,
+      "reason": "Zero-mana acceleration requiring land discard.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Ancient Tomb": {
+      "points": 50,
+      "reason": "Untapped land produces two mana at life cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Gaea's Cradle": {
+      "points": 70,
+      "reason": "Land scales with creature count, no standalone mana on empty board.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Mana Drain": {
+      "points": 40,
+      "reason": "Counterspell plus delayed mana advantage.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Reanimate": {
+      "points": 30,
+      "reason": "One-mana graveyard-to-battlefield effect with life cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Lightning Greaves": {
+      "points": 16,
+      "reason": "Low-cost reusable haste and protection; shroud drawback.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Swiftfoot Boots": {
+      "points": 12,
+      "reason": "Reusable haste and hexproof with equip cost.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Temple of the False God": {
+      "points": 3,
+      "reason": "Two-mana land with substantial early-game failure risk.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Evolving Wilds": {
+      "points": 3,
+      "reason": "Tapped basic-land fixing with sacrifice.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Terramorphic Expanse": {
+      "points": 3,
+      "reason": "Functional Evolving Wilds analogue.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Myriad Landscape": {
+      "points": 5,
+      "reason": "Tapped colorless land with slow two-basic ramp.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Solemn Simulacrum": {
+      "points": 13,
+      "reason": "Four-mana ramp body and delayed draw.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Thran Dynamo": {
+      "points": 18,
+      "reason": "Four-mana repeatable three-mana acceleration.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Gilded Lotus": {
+      "points": 12,
+      "reason": "Five-mana repeatable colored acceleration.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Commander's Sphere": {
+      "points": 8,
+      "reason": "Three-mana rock with sacrifice draw.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Mind Stone": {
+      "points": 12,
+      "reason": "Two-mana colorless rock with paid sacrifice draw.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Wayfarer's Bauble": {
+      "points": 9,
+      "reason": "Three total mana split over turns for basic land ramp.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Dark Ritual": {
+      "points": 24,
+      "reason": "One-mana temporary net two-mana acceleration.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    },
+    "Thassa's Oracle": {
+      "points": 45,
+      "reason": "Low standalone impact but compact game-ending enabler; Game Changer floor.",
+      "evidence": "analyst functional assessment; provisional magnitude"
+    }
+  },
+  "override_policy": "Absolute final points, keyed by Oracle ID preferred; exact canonical names also accepted. No legality changes.",
+  "coefficient_evidence": "Expert structural priors, not fitted effect sizes or win probabilities. All automatic ratings provisional.",
+  "mana_value_knee": 2,
+  "body_stats_per_mana": 2
+}

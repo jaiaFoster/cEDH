@@ -1,0 +1,1579 @@
+TopDeck.gg API – Tournaments V2 Documentation
+API Docs
+Getting Started
+Usage Requirements
+Authentication
+Tournaments
+POST
+Bulk Tournaments
+GET
+Single Tournament
+GET
+Tournament Info
+GET
+Standings
+GET
+Player Details
+GET
+All Rounds
+GET
+Latest Round
+Staff
+GET
+Attendees
+POST
+Create Tournament
+POST
+Register Players
+Account
+GET
+My Tournaments
+Reference
+Error Codes
+Webhooks →
+Get API Key
+TopDeck.gg
+API
+Complete reference for TopDeck.gg's tournaments API. Access data on tournaments, players, and standings. Seamlessly integrate tournament data into your projects.
+v2
+Tournaments · Players · Standings · Decklists · Free REST API
+Developer Portal
+Webhook Docs
+OpenAPI Spec
+Usage Requirements
+The TopDeck.gg API is
+free to use
+, providing tournament data for your projects and applications.
+Rate Limits
+Most endpoints allow
+100 requests per minute
+. Heavier endpoints like bulk tournament queries have lower limits. You'll receive a
+429
+response if you exceed your limit. Need more? E-mail us at
+[email protected]
+.
+Attribution Required
+Any project using the API must include a visible credit and link back to TopDeck.gg. See the attribution example on the right.
+Info
+By using the API, you agree to these requirements. Thank you for supporting TopDeck.gg!
+Quick Start
+curl https://topdeck.gg/api/v2/tournaments \
+  -H "Authorization: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"game": "Magic: The Gathering", "format": "Standard", "start": 1700000000}'
+Attribution Example
+<p>Data provided by
+  <a href="https://topdeck.gg"
+     target="_blank">
+    TopDeck.gg
+  </a>
+</p>
+Authentication
+All endpoints use the following base URL:
+https://topdeck.gg/api
+Every request must include your API key in the
+Authorization
+header. Keys are free — create one from the
+developer portal
+.
+Get API Key
+Example Request
+curl https://topdeck.gg/api/v2/tournaments \
+  -H "Authorization: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"game": "Magic: The Gathering", "format": "Standard"}'
+Header Format
+{
+  "Authorization": "YOUR_API_KEY",
+  "Content-Type": "application/json"
+}
+Staff View
+Building a tool for an event you staff? Add
+?view=staff
+to a single-tournament read —
+/v2/tournaments/{TID}
+,
+/standings
+,
+/players/{ID}
+,
+/players/{ID}/table
+,
+/rounds
+,
+/rounds/latest
+or
+/rounds/{n}
+— to see decks as the tournament manager shows them to staff:
+decklist
+,
+deckObj
+,
+archetype
+and
+archetypeInput
+while the event runs, and
+leader
+before it starts.
+Your API key's account must hold a staff role on that tournament (any role — the same check as
+/attendees
+); otherwise the request returns
+403
+. Without the parameter, every read follows the public rules. Contact details (email, Discord) stay on
+/attendees
+.
+Staff-view responses are never cached. Decklists make them larger, so poll
+/rounds/latest
+or
+/players/{ID}/table
+rather than the full tournament.
+Example Request
+curl "https://topdeck.gg/api/v2/tournaments/{TID}/rounds/latest?view=staff" \
+  -H "Authorization: YOUR_API_KEY"
+POST
+/v2/tournaments
+Search completed tournaments. Returns standings, decklists, and optional round data. Filter by TID, or by game + format + date range.
+Request Body
+Use either TID mode (specific IDs) or query mode (filters).
+game
+and
+format
+are required in query mode.
+Field
+Type
+Description
+TID
+string | string[]
+Tournament ID or array of IDs. Disables query-mode filters.
+game
+string
+Game name. Case sensitive.
+format
+string
+Game format. Case sensitive.
+start
+integer
+Earliest tournament start date (unix seconds).
+end
+integer
+Latest tournament start date (unix seconds).
+last
+integer
+Days back from today. Alternative to
+start
+/
+end
+.
+participantMin
+integer
+Minimum participant count.
+participantMax
+integer
+Maximum participant count.
+columns
+string[]
+Player fields to include on standings. See allowed values below.
+rounds
+boolean | string[]
+Include round data.
+true
+is shorthand for
+["round", "tables"
+]. Default
+false
+.
+tables
+string[]
+Table fields to include when
+rounds
+is set. See allowed values below.
+players
+string[]
+Player fields within table rows when
+rounds
+is set. See allowed values below.
+Allowed values
+Field
+Default
+Valid values
+columns
+decklist, wins, draws, losses
+name, id, decklist, wins, winsSwiss, winsBracket, winRate, winRateSwiss, winRateBracket, byes, draws, losses, lossesSwiss, lossesBracket
+tables
+table, players, winner, status
+table, players, winner, status
+players
+name, id
+name, id, decklist
+Including
+decklist
+in
+columns
+or
+players
+also returns
+deckObj
+when structured deck data is available.
+For leader-based games — Riftbound (the Legend) and Magic commander formats (the commander) — standings rows and round players also carry a
+leader
+string: the deck's leader card name(s). Two cards (partners, a background) appear in alphabetical order as
+"A / B"
+, and a double-faced card by its front face, so the same deck always reads the same. It is always included (no column request needed) and absent when there is no deck or the event has not started yet.
+For every other game, standings rows and round players carry an
+archetype
+string: the deck's archetype label. It is a staff correction, else the player's own name for the deck when it holds up against the decklist, else an automatic label (deck rules for Magic 60-card formats). Alongside it,
+archetypeInput
+is the name the player typed for the deck, as typed — it can differ from
+archetype
+(a nickname, or a name the decklist contradicts). Both are present once decklists are public (the event has ended, or the organizer enabled "Show Decks"); each is absent without a value.
+Selecting
+winner
+in
+tables
+also returns
+winner_id
+. For 1v1 (Pairs) matches it additionally returns the per-match game score as
+winner_games
+and
+loser_games
+(
+null
+for multiplayer pods and score-based formats).
+For team events (e.g. Trios), each standing is one team:
+name
+is the combined team name,
+id
+and
+decklist
+belong to the team captain, and a
+players
+array lists the roster (
+id
+,
+name
+,
+teamTag
+, plus decklists when the
+decklist
+column is requested). Round tables are per-seat sub-matches: tables from the same team pairing share a
+match
+key, and each player carries their
+teamTag
+when the organizer configured format tags.
+Supported games and formats
+Pass exactly as written (case sensitive).
+Game
+Format
+Magic: The Gathering
+EDH
+Pauper EDH
+Casual EDH
+Standard
+Pioneer
+Modern
+Legacy
+Pauper
+Vintage
+Premodern
+Sealed
+Limited
+Duel Commander
+Old School 93/94
+Canadian Highlander
+Tiny Leaders
+Team Trios
+Two-Headed Giant
+EDH Draft
+Timeless
+Historic
+Explorer
+7pt Highlander
+Oathbreaker
+Other
+Pokemon
+Standard
+Expanded
+Legacy
+GLC
+Yu-Gi-Oh
+Edison
+Goat
+Advanced
+HAT
+REDU
+Genesys
+Domain
+One Piece
+Leave format blank ("")
+Gundam TCG
+Leave format blank ("")
+Union Arena
+Leave format blank ("")
+Star Wars Unlimited
+Premier
+Draft
+Twin Suns
+Disney Lorcana
+Core Constructed
+Infinity Constructed
+Sealed
+Pack Rush
+Riftbound
+Constructed
+Limited
+Sealed
+2v2
+Free-for-All
+Marvel Snap
+Leave format blank ("")
+Overpower
+Modern
+Draft
+Sealed
+Legacy Mixed
+Modern Skirmish
+Legacy Skirmish
+Naruto Mythos TCG
+Release Event
+Pre-Release Event
+Local Tournament
+Store Championship
+Regional
+Cyberpunk TCG
+Leave format blank ("")
+Chrono Core TCG
+Launch Event
+Weekly Arena
+Crossfire
+Realm Showdown
+Realm Championship
+Beyblade
+X
+Cardfight Vanguard
+Standard
+Premium
+VPremium
+Digimon
+Leave format blank ("")
+Flesh and Blood
+Leave format blank ("")
+Shadowverse: Evolve
+Leave format blank ("")
+Sorcery: Contested Realm
+Leave format blank ("")
+Altered
+Standard
+Draft
+CookieRun: Braverse TCG
+Casual
+Constructed
+Cookie Party
+Brave League
+Draft
+Sealed
+Learn to Play
+Pre-Release
+Rush of Ikorr
+Standard
+Neopets: Battledome
+Leave format blank ("")
+Lairen: La Historia
+Leave format blank ("")
+Five Mics
+Leave format blank ("")
+Settlers of Catan
+Leave format blank ("")
+Gudnak
+Leave format blank ("")
+Hadrai'da Ascendant
+Conquest Duel
+Conquest Tag Team
+Conquest Squads
+Conquest Battle Royale
+Gladiator Duel
+Gladiator Tag Team
+Gladiator Squads
+Palworld TCG
+Leave format blank ("")
+Azuki TCG
+Leave format blank ("")
+My Little Pony Card Game
+Leave format blank ("")
+Shard Bugs TCG
+Leave format blank ("")
+Dragon Ball Super Card Game Fusion World
+Leave format blank ("")
+Vibes TCG
+Leave format blank ("")
+Response Fields
+Tournament Level
+Field
+Type
+Description
+TID
+string
+Tournament identifier
+tournamentName
+string
+Name of the tournament
+swissNum
+number
+Number of Swiss rounds played
+startDate
+number
+Unix timestamp of tournament start
+game
+string
+Game being played
+format
+string
+Game format
+topCut
+number
+Size of the top cut bracket (0 if none)
+eventData
+object
+Location details (lat, lng, city, state, address, headerImage)
+standings
+array
+Player standings (based on columns param)
+rounds
+array
+Round data (when rounds param is included)
+isTeamEvent
+boolean
+Present and true for team events
+teamSize
+number
+Players per team (team events only)
+teamTags
+array
+Ordered per-seat format tags (team events only)
+sharedTeamGame
+boolean
+Present when the whole team plays one shared game per round (team events only)
+Request
+{
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "last": 30,
+  "columns": ["name", "decklist", "wins", "draws", "losses"],
+  "rounds": true
+}
+Response
+[
+  {
+    "TID": "abc123",
+    "tournamentName": "Weekly EDH",
+    "swissNum": 5,
+    "startDate": 1627844461,
+    "game": "Magic: The Gathering",
+    "format": "EDH",
+    "topCut": 8,
+    "eventData": {
+      "city": "New York",
+      "state": "NY",
+      "address": "Local Game Store"
+    },
+    "standings": [
+      {
+        "name": "Player Name",
+        "decklist": "~~Commanders~~\n...",
+        "wins": 4,
+        "draws": 1,
+        "losses": 0
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "tables": [
+          {
+            "table": 1,
+            "players": [
+              { "name": "Alice", "id": "abc" },
+              { "name": "Bob", "id": "def" }
+            ],
+            "winner": "Alice",
+            "winner_id": "abc",
+            "winner_games": 2,
+            "loser_games": 1,
+            "status": "Completed"
+          }
+        ]
+      }
+    ]
+  }
+]
+GET
+/v2/tournaments/{TID}
+Full tournament data: metadata, standings, and all rounds in one response.
+Conditional Fields
+Decklists:
+Only when tournament has ended OR organizer enabled "Show Decks"
+deckObj:
+Only when structured deck data is available
+Leaders:
+Leader-based games (Riftbound, Magic commander formats) include each player's
+leader
+— the deck's leader card name(s) — once the event has started; absent pre-start or without a submitted deck
+Archetypes:
+Other games include each player's
+archetype
+— the deck's archetype label — and
+archetypeInput
+, the name the player typed, when the tournament has ended or the organizer enabled "Show Decks" (the same rule as decklists); each absent without a value
+Staff view:
+With
+?view=staff
+, the event's staff see decklists and archetypes live and leaders before the start — see
+Staff View
+Discord fields:
+Only when tournament includes Discord info
+Win rate fields:
+League tournaments use
+successRate
+instead of
+winRate
+Response Fields
+Top Level
+Field
+Type
+Description
+data
+object
+Tournament metadata. See fields below.
+standings
+array
+Player standings. See
+standings
+for field shape.
+rounds
+array
+All rounds. See
+rounds
+for field shape.
+data
+Field
+Type
+Description
+tid
+string
+Tournament ID.
+name
+string
+Tournament name.
+game
+string
+Game.
+format
+string
+Game format.
+startDate
+number
+Unix timestamp of start.
+isTeamEvent
+boolean
+Present and true for team events.
+teamSize
+number
+Players per team (team events only).
+teamTags
+array
+Ordered per-seat format tags (team events only).
+sharedTeamGame
+boolean
+Present when the whole team plays one shared game per round (team events only).
+Response
+{
+  "data": {
+    "tid": "abc123",
+    "name": "Tournament Name",
+    "game": "Magic: The Gathering",
+    "format": "EDH",
+    "startDate": 1627844461
+  },
+  "standings": [
+    {
+      "standing": 1,
+      "name": "Player Name",
+      "id": "abc123",
+      "points": 15,
+      "winRate": 0.8,
+      "opponentWinRate": 0.6
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "tables": [
+        {
+          "table": 1,
+          "players": [
+            { "name": "Alice", "id": "abc123" },
+            { "name": "Bob", "id": "def456" }
+          ],
+          "winner": "Alice",
+          "winner_id": "abc123",
+          "winner_games": 2,
+          "loser_games": 1,
+          "status": "Completed"
+        }
+      ]
+    }
+  ]
+}
+GET
+/v2/tournaments/{TID}/info
+Tournament metadata, schedule, and location.
+Response Fields
+Field
+Type
+Description
+tid
+string
+Tournament ID
+name
+string
+Tournament name
+game
+string
+Game being played
+format
+string
+Game format
+startDate
+number
+Unix timestamp of start
+endDate
+number | null
+Unix timestamp of end
+status
+string
+Complete
+,
+Ongoing
+, or
+Not Started
+location
+object | null
+Location details (name, city, state, country, lat, lng)
+headerImage
+string | null
+URL of event header image
+Response
+{
+  "tid": "abc123",
+  "name": "Tournament Name",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "startDate": 1627844461,
+  "endDate": 1627855261,
+  "status": "Complete",
+  "location": {
+    "name": "Card Kingdom Seattle",
+    "city": "Seattle",
+    "state": "WA",
+    "country": "US"
+  },
+  "headerImage": "https://..."
+}
+GET
+/v2/tournaments/{TID}/standings
+Standings for a tournament. League tournaments report
+successRate
+instead of
+winRate
+. Pairs-mode tournaments additionally include
+gameWinRate
+.
+Conditional Fields
+Decklists:
+Only when tournament has ended OR organizer enabled "Show Decks"
+deckObj:
+Only when structured deck data is available
+Leaders:
+Leader-based games (Riftbound, Magic commander formats) include each player's
+leader
+— the deck's leader card name(s) — once the event has started; absent pre-start or without a submitted deck
+Archetypes:
+Other games include each player's
+archetype
+— the deck's archetype label — and
+archetypeInput
+, the name the player typed, when the tournament has ended or the organizer enabled "Show Decks" (the same rule as decklists); each absent without a value
+Staff view:
+With
+?view=staff
+, the event's staff see decklists and archetypes live and leaders before the start — see
+Staff View
+Discord fields:
+Only when tournament includes Discord info
+Win rate fields:
+League tournaments use
+successRate
+/
+opponentSuccessRate
+Game win rates:
+Only in Pairs mode tournaments (
+gameWinRate
+,
+opponentGameWinRate
+)
+Team events:
+name
+is the combined team name and
+id
+/
+decklist
+are the captain's; a
+players
+array lists the roster with per-seat
+teamTag
+s and decklists
+Response
+[
+  {
+    "standing": 1,
+    "name": "Player Name",
+    "id": "abc123",
+    "leader": "Kha'Zix, Voidreaver",
+    "decklist": "~~Commanders~~\n...",
+    "deckObj": { "Commanders": {}, "Mainboard": {} },
+    "points": 15,
+    "winRate": 0.83,
+    "opponentWinRate": 0.7
+  }
+]
+GET
+/v2/tournaments/{TID}/players/{ID}
+Player details and match record.
+Conditional Fields
+Decklists:
+Only when tournament has ended OR organizer enabled "Show Decks"
+deckObj:
+Only when structured deck data is available
+Leaders:
+Leader-based games (Riftbound, Magic commander formats) include each player's
+leader
+— the deck's leader card name(s) — once the event has started; absent pre-start or without a submitted deck
+Archetypes:
+Other games include each player's
+archetype
+— the deck's archetype label — and
+archetypeInput
+, the name the player typed, when the tournament has ended or the organizer enabled "Show Decks" (the same rule as decklists); each absent without a value
+Staff view:
+With
+?view=staff
+, the event's staff see decklists and archetypes live and leaders before the start — see
+Staff View
+Response Fields
+Field
+Type
+Description
+name
+string
+Display name.
+standing
+number
+Tournament standing.
+leader
+string
+Leader card name(s) — leader-based games, once the event has started.
+archetype
+string
+Deck archetype label — other games, once decklists are public (event ended or Show Decks on).
+archetypeInput
+string
+The name the player typed for the deck — can differ from
+archetype
+. Same visibility.
+decklist
+string | null
+Decklist text or URL.
+deckObj
+object | null
+Structured deck data.
+winRate
+number
+Overall win rate (0.0–1.0).
+gamesPlayed
+number
+Total games played.
+gamesWon
+number
+Games won.
+byes
+number
+Byes received.
+gamesDrawn
+number
+Games drawn.
+gamesLost
+number
+Games lost.
+winsBracket
+number
+Elimination-bracket matches won (not included in gamesWon).
+lossesBracket
+number
+Elimination-bracket matches lost (not included in gamesLost).
+Response
+{
+  "name": "Player Name",
+  "standing": 1,
+  "decklist": "~~Commanders~~\n...",
+  "deckObj": { "Commanders": {}, "Mainboard": {} },
+  "winRate": 0.83,
+  "gamesPlayed": 10,
+  "gamesWon": 8,
+  "byes": 0,
+  "gamesDrawn": 1,
+  "gamesLost": 1,
+  "winsBracket": 2,
+  "lossesBracket": 1
+}
+GET
+/v2/tournaments/{TID}/rounds
+List every round of a tournament, each with its tables and results. Returns an array of round objects.
+Conditional Fields
+Decklists:
+Only when tournament has ended OR organizer enabled "Show Decks"
+deckObj:
+Only when structured deck data is available
+Leaders:
+Leader-based games (Riftbound, Magic commander formats) include each player's
+leader
+— the deck's leader card name(s) — once the event has started; absent pre-start or without a submitted deck
+Archetypes:
+Other games include each player's
+archetype
+— the deck's archetype label — and
+archetypeInput
+, the name the player typed, when the tournament has ended or the organizer enabled "Show Decks" (the same rule as decklists); each absent without a value
+Staff view:
+With
+?view=staff
+, the event's staff see decklists and archetypes live and leaders before the start — see
+Staff View
+Discord fields:
+Only when tournament includes Discord info
+Team events:
+each table is one per-seat sub-match; tables from the same team pairing share a
+match
+key and players include their
+teamTag
+Response Fields
+Round
+Field
+Type
+Description
+round
+number | string
+Round number, or bracket label like
+"Top 8"
+.
+tables
+array
+Tables played this round. See fields below.
+Table
+Field
+Type
+Description
+table
+number | "Byes"
+Table number, or
+"Byes"
+for the bye row.
+players
+array
+Players seated. See
+player details
+for field shape.
+winner
+string | null
+Winner's name, or
+null
+for draws or unfinished.
+winner_id
+string | "Draw" | null
+Winner's ID,
+"Draw"
+for ties,
+null
+for unfinished.
+winner_games
+number | null
+Games won by the match winner. Only for 1v1 (Pairs) matches;
+null
+for multiplayer pods, score-based formats, and draws or unfinished matches.
+loser_games
+number | null
+Games won by the loser.
+null
+in the same cases as
+winner_games
+.
+status
+string
+Completed
+,
+Active
+,
+Pending
+, or
+Bye
+.
+match
+string
+Groups the per-seat sub-tables of one team pairing (team events only).
+Response
+[
+  {
+    "round": 1,
+    "tables": [
+      {
+        "table": 1,
+        "players": [
+          { "name": "Player 1", "id": "abc" },
+          { "name": "Player 2", "id": "def" }
+        ],
+        "winner": "Player 1",
+        "winner_id": "abc",
+        "winner_games": 2,
+        "loser_games": 1,
+        "status": "Completed"
+      }
+    ]
+  },
+  {
+    "round": "Top 8",
+    "tables": [{ ... }]
+  }
+]
+GET
+/v2/tournaments/{TID}/rounds/latest
+Tables from the current/latest round. Returns a flat array of tables — no round wrapper, unlike
+/rounds
+.
+Conditional Fields
+Decklists:
+Only when tournament has ended OR organizer enabled "Show Decks"
+deckObj:
+Only when structured deck data is available
+Leaders:
+Leader-based games (Riftbound, Magic commander formats) include each player's
+leader
+— the deck's leader card name(s) — once the event has started; absent pre-start or without a submitted deck
+Archetypes:
+Other games include each player's
+archetype
+— the deck's archetype label — and
+archetypeInput
+, the name the player typed, when the tournament has ended or the organizer enabled "Show Decks" (the same rule as decklists); each absent without a value
+Staff view:
+With
+?view=staff
+, the event's staff see decklists and archetypes live and leaders before the start — see
+Staff View
+Discord fields:
+Only when tournament includes Discord info
+Response Fields
+Each element is a table. Same shape as the
+tables
+entries on
+/rounds
+:
+Field
+Type
+Description
+table
+number | "Byes"
+Table number, or
+"Byes"
+for the bye row.
+players
+array
+Players seated.
+winner
+string | null
+Winner's name, or
+null
+for draws or unfinished.
+winner_id
+string | "Draw" | null
+Winner's ID,
+"Draw"
+for ties,
+null
+for unfinished.
+winner_games
+number | null
+Games won by the match winner. Only for 1v1 (Pairs) matches;
+null
+for multiplayer pods, score-based formats, and draws or unfinished matches.
+loser_games
+number | null
+Games won by the loser.
+null
+in the same cases as
+winner_games
+.
+status
+string
+Completed
+,
+Active
+,
+Pending
+, or
+Bye
+.
+Response
+[
+  {
+    "table": 1,
+    "players": [
+      { "name": "Player 1", "id": "abc" },
+      { "name": "Player 2", "id": "def" }
+    ],
+    "winner": "Player 1",
+    "winner_id": "abc",
+    "winner_games": 2,
+    "loser_games": 1,
+    "status": "Completed"
+  },
+  {
+    "table": "Byes",
+    "players": [
+      { "name": "Player 5", "id": "ghi" }
+    ],
+    "status": "Bye"
+  }
+]
+GET
+/v2/tournaments/{TID}/attendees
+All tournament attendees: registered players, dropped players, and waitlisted users.
+Staff Only
+Requires a staff role on this tournament.
+Response Fields
+Field
+Type
+Description
+uid
+string | null
+User ID.
+null
+for unregistered waitlist entries.
+name
+string
+Display name.
+email
+string | null
+Email address.
+discord
+string | null
+Discord username.
+discordId
+string | null
+Discord user ID.
+status
+string
+player
+,
+dropped
+, or
+waitlist
+.
+standing
+number | null
+Tournament standing.
+null
+for dropped or waitlist.
+decklist
+string | null
+Decklist URL or text.
+deckObj
+object | null
+Structured deck data.
+leader
+string
+Leader card name(s) — leader-based games (Riftbound, Magic commander formats). Absent without a deck.
+archetype
+string
+Deck archetype label — other games. Absent without a label.
+archetypeInput
+string
+The name the player typed for the deck — can differ from
+archetype
+. Absent when none.
+Waitlist-Specific Fields
+Additional fields for entries with
+status: "waitlist"
+:
+Field
+Type
+Description
+joinedAt
+number | null
+Unix timestamp when the user joined the waitlist.
+waitlistStatus
+string
+waiting
+,
+offered
+,
+accepted
+,
+declined
+, or
+expired
+.
+waitlistPosition
+number | null
+Queue position. Only set when
+waitlistStatus: "waiting"
+.
+offeredAt
+number | null
+Unix timestamp when the spot was offered.
+expirationTimestamp
+number | null
+Unix timestamp when the offer expires.
+Response
+[
+  {
+    "uid": "player123",
+    "name": "John Doe",
+    "email": "
+[email protected]
+",
+    "status": "player",
+    "standing": 1,
+    "decklist": "~~Commanders~~\n...",
+    "deckObj": { "Commanders": {}, "Mainboard": {} }
+  },
+  {
+    "uid": "dropped456",
+    "name": "Jane Smith",
+    "email": "
+[email protected]
+",
+    "status": "dropped",
+    "standing": null
+  },
+  {
+    "uid": "waitlist789",
+    "name": "Bob Wilson",
+    "email": "
+[email protected]
+",
+    "status": "waitlist",
+    "waitlistStatus": "waiting",
+    "waitlistPosition": 1,
+    "joinedAt": 1627840000
+  }
+]
+POST
+/v2/tournaments/create
+Create a tournament owned by your API key's account. Include
+eventPage
+to also create a public, discoverable event page with registration; omit it for an unlisted, bracket-only tournament.
+Note
+Requires an active
+TopDeck subscription
+. Limited to
+10 requests per minute
+.
+Payments
+Payment processing (Stripe/PayPal) cannot be enabled through the API. Configure payments from the web dashboard after creating the event.
+Request Body
+Field
+Type
+Description
+name
+string
+Tournament name, 4–200 characters. Required.
+startDate
+number
+Start time as a Unix timestamp in seconds. Required.
+game
+string
+Game name exactly as it appears on TopDeck, e.g.
+Magic: The Gathering
+. Required.
+format
+string
+A valid format for the game, e.g.
+EDH
+. Invalid values return a
+400
+listing the valid options. Required.
+selfReport
+boolean
+Allow players to self-report match results. Defaults to
+false
+.
+eventPage
+object
+Creates a public event page. See fields below.
+autopilot
+object
+Creates the event with Autopilot on: it runs rounds, the top cut and the finish by itself. Send
+{}
+for the defaults. See fields below. Not available for team formats.
+eventPage Fields
+Field
+Type
+Description
+location
+string
+Venue address, geocoded for event discovery. Required.
+contactEmail
+string
+Organizer contact shown on the event page. Required.
+playerCap
+integer
+Maximum player count. Optional.
+price
+number
+Entry fee displayed on the event page. Optional.
+currency
+string
+One of
+usd
+,
+eur
+,
+gbp
+,
+jpy
+,
+cad
+,
+aud
+,
+mxn
+,
+brl
+,
+cop
+. Defaults to
+usd
+.
+description
+string
+Event details. Markdown supported.
+allowRegistration
+boolean
+Accept registrations on the event page. Defaults to
+true
+.
+publish
+boolean
+Set
+false
+to create the event page as an unlisted draft — hidden from event discovery and not publicly viewable. Saving the event from the web dashboard publishes it. Defaults to
+true
+.
+autopilot Fields
+Field
+Type
+Description
+rounds
+integer
+Swiss rounds, 1–20.
+0
+or omitted sizes them from the players in round 1.
+cut
+integer
+Top cut after the Swiss rounds:
+4
+,
+8
+,
+12
+,
+16
+,
+32
+or
+64
+(pod formats:
+4
+,
+7
+,
+10
+,
+13
+,
+16
+,
+40
+or
+64
+).
+0
+or omitted ends the event after the Swiss rounds.
+startDelay
+integer
+Minutes between publishing a round's pairings and starting its clock, 0–30. Defaults to
+3
+.
+firstRound
+string
+Who pairs round 1:
+manual
+(staff; the default),
+swiss
+, or
+bracket
+(single elimination seating every player; 1v1 formats only). With
+swiss
+or
+bracket
+, round 1 pairs when self check-in ends, after dropping players who didn't check in.
+confirmTimeout
+integer
+Minutes until a self-reported result its opponent hasn't confirmed or disputed is accepted, 0–60. Applies when results need confirmation.
+0
+waits for the opponent. Defaults to
+5
+.
+Response Fields
+Field
+Type
+Description
+tid
+string
+Tournament ID, generated from the name.
+url
+string
+Public URL: the event page if a published
+eventPage
+was provided, otherwise the bracket.
+Request
+{
+  "name": "Friday Night EDH",
+  "startDate": 1751655600,
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "selfReport": false,
+  "eventPage": {
+    "location": "123 Main St, Austin, TX",
+    "contactEmail": "
+[email protected]
+",
+    "playerCap": 32,
+    "price": 15,
+    "currency": "usd",
+    "description": "### Friday Night EDH\nCasual pods, prizes for all!",
+    "allowRegistration": true
+  }
+}
+Response
+{
+  "tid": "friday-night-edh",
+  "url": "https://topdeck.gg/event/friday-night-edh"
+}
+POST
+/v2/tournaments/{TID}/register
+Register one or more players by email. Emails matching an account are registered immediately; emails without an account receive an invitation and convert on signup. Returns
+409
+if the request would exceed the event's player cap — pass
+overrideCap: true
+to bypass.
+Staff Only
+Requires
+admin
+role or higher.
+Request Body
+Field
+Type
+Description
+emails
+string | string[]
+Email or array of emails. Required.
+overrideCap
+boolean
+Skip the capacity check. Defaults to
+false
+.
+Response Fields
+Each input email appears in exactly one bucket, lowercased.
+Field
+Type
+Description
+added
+string[]
+Newly registered.
+pending
+string[]
+No account found; invitation sent.
+alreadyRegistered
+string[]
+Already registered or invited. No-op.
+failed
+string[]
+Could not be processed.
+banned
+string[]
+Banned by this organizer. Skipped.
+capacity
+number | null
+Event player cap, or
+null
+if unset.
+registeredCount
+number
+Total registered: confirmed, pending invites, and offered waitlist seats.
+Request
+{
+  "emails": ["
+[email protected]
+", "
+[email protected]
+"],
+  "overrideCap": false
+}
+Response
+{
+  "added": ["
+[email protected]
+"],
+  "pending": ["
+[email protected]
+"],
+  "alreadyRegistered": [],
+  "failed": [],
+  "banned": [],
+  "capacity": 32,
+  "registeredCount": 24
+}
+GET
+/v2/me/tournaments
+List tournaments owned by your API key. Defaults to tournaments with a future start date; pass
+filter=all
+to include in-progress and past events.
+Query Parameters
+Parameter
+Type
+Default
+Description
+filter
+string
+upcoming
+Set to
+all
+to include in-progress and past tournaments.
+Response Fields
+Field
+Type
+Description
+tid
+string
+Tournament ID
+name
+string
+Tournament name
+game
+string
+Game being played
+format
+string
+Game format
+startDate
+number
+Unix timestamp of start
+endDate
+number | null
+Unix timestamp of end
+status
+string
+Complete
+,
+Ongoing
+, or
+Not Started
+location
+object | null
+Location details (name, city, state, country, lat, lng)
+headerImage
+string | null
+URL of event header image
+registeredCount
+number | null
+Current registered player count (null if event has no registration data)
+capacity
+number | null
+Participant cap for the event (null if uncapped)
+Response
+[
+  {
+    "tid": "abc123",
+    "name": "Weekly Modern",
+    "game": "Magic: The Gathering",
+    "format": "Modern",
+    "startDate": 1627844461,
+    "endDate": 1627855261,
+    "status": "Not Started",
+    "location": {
+      "name": "Card Kingdom Seattle",
+      "city": "Seattle",
+      "state": "WA",
+      "country": "US"
+    },
+    "headerImage": "https://...",
+    "registeredCount": 24,
+    "capacity": 32
+  }
+]
+Error Codes
+The API uses standard HTTP status codes. Errors return a JSON body with a single
+error
+field describing what went wrong.
+Code
+Meaning
+When
+400
+Bad Request
+Missing or invalid parameters
+401
+Unauthorized
+Invalid or missing API key
+403
+Forbidden
+Valid API key but insufficient permissions on the tournament
+404
+Not Found
+Tournament (or other referenced resource) doesn't exist
+409
+Conflict
+Action would violate a constraint (e.g. register past player cap)
+429
+Rate Limited
+Too many requests per minute
+500
+Server Error
+Internal error —
+contact us
+400 Bad Request
+{ "error": "Both \"game\" and \"format\" fields are required." }
+401 Unauthorized
+{ "error": "Invalid API key" }
+403 Forbidden
+{ "error": "Forbidden: Insufficient permissions" }
+404 Not Found
+{ "error": "Tournament not found" }
+409 Conflict
+{ "error": "Event would exceed capacity (32/32 registered, 2 requested, 0 available). Set overrideCap: true to bypass." }
+429 Rate Limited
+{ "error": "Rate limit exceeded", "retryAfterSeconds": 42 }
+Also includes a
+Retry-After
+header with the seconds to wait.
+500 Server Error
+{ "error": "Internal server error" }
+Top
