@@ -1,0 +1,732 @@
+{
+  "as_of": "2026-10-19",
+  "candidate_count": 9610,
+  "main_manual_assessments": 587,
+  "commander_manual_assessments": 171,
+  "command_zone_options": 3510,
+  "top1000_unreviewed": 423,
+  "main_pointed": 287,
+  "commander_pointed": 90,
+  "pointed_union": 339,
+  "official_named_bans": 42,
+  "canlander_count": 46,
+  "game_changer_count": 53,
+  "cohorts": {
+    "cedh_holdout": {
+      "registrations": 2628,
+      "unique_lists": 2520
+    },
+    "bracket3_declared": {
+      "registrations": 151,
+      "unique_lists": 150
+    }
+  },
+  "ingestion": {
+    "event_manifest_count": 1472,
+    "eligible_event_count": 701,
+    "cohort_deck_counts": {
+      "cedh_train": 7906,
+      "cedh_holdout": 2628,
+      "bracket3_declared": 151
+    },
+    "exclusions": {
+      "future_event": 4,
+      "entry_without_structured_deck": 8464,
+      "not_explicit_competitive_or_bracket3": 767,
+      "entry_unknown_card": 18
+    },
+    "unknown_names": [
+      [
+        "Phenomena Recorder",
+        6
+      ],
+      [
+        "Bayo, Irritable Instructor",
+        3
+      ],
+      [
+        "Quint's Insight",
+        2
+      ],
+      [
+        "IMP'S MSCHF",
+        2
+      ],
+      [
+        "Ademi of the Silkchutes",
+        1
+      ],
+      [
+        "Holga, Relentless Rager",
+        1
+      ],
+      [
+        "Detect Intrusion",
+        1
+      ],
+      [
+        "Makdee and Itla, Skysnarers",
+        1
+      ],
+      [
+        "Basil, Cabaretti Loudmouth",
+        1
+      ]
+    ],
+    "training_unique_cards": 6927,
+    "training_top30": [
+      [
+        "Sol Ring",
+        7744
+      ],
+      [
+        "Gemstone Caverns",
+        7562
+      ],
+      [
+        "Lotus Petal",
+        7534
+      ],
+      [
+        "Chrome Mox",
+        7453
+      ],
+      [
+        "Ancient Tomb",
+        7301
+      ],
+      [
+        "Mana Vault",
+        7085
+      ],
+      [
+        "Mox Diamond",
+        6982
+      ],
+      [
+        "Command Tower",
+        6871
+      ],
+      [
+        "City of Brass",
+        5997
+      ],
+      [
+        "Misty Rainforest",
+        5981
+      ],
+      [
+        "Polluted Delta",
+        5829
+      ],
+      [
+        "Mana Confluence",
+        5811
+      ],
+      [
+        "Scalding Tarn",
+        5676
+      ],
+      [
+        "Flooded Strand",
+        5664
+      ],
+      [
+        "Mox Amber",
+        5405
+      ],
+      [
+        "Mystic Remora",
+        5389
+      ],
+      [
+        "Verdant Catacombs",
+        5316
+      ],
+      [
+        "Flusterstorm",
+        5284
+      ],
+      [
+        "Mental Misstep",
+        5283
+      ],
+      [
+        "Pact of Negation",
+        5159
+      ],
+      [
+        "Force of Will",
+        5146
+      ],
+      [
+        "Fierce Guardianship",
+        5137
+      ],
+      [
+        "Rhystic Study",
+        5136
+      ],
+      [
+        "Arcane Signet",
+        5033
+      ],
+      [
+        "Mindbreak Trap",
+        4972
+      ],
+      [
+        "Wooded Foothills",
+        4870
+      ],
+      [
+        "Mox Opal",
+        4804
+      ],
+      [
+        "Otawara, Soaring City",
+        4647
+      ],
+      [
+        "Deflecting Swat",
+        4475
+      ],
+      [
+        "Windswept Heath",
+        4416
+      ]
+    ]
+  },
+  "validation": [
+    {
+      "source": "validation.csv",
+      "n": 6,
+      "spearman": -0.802377419802878,
+      "kendall": -0.7006490497453707,
+      "pairwise_ties_half_credit": 0.2,
+      "bootstrap_rho_p025": -1.0,
+      "bootstrap_rho_p975": 0.0,
+      "independence": "reused diagnostic, not untouched validation; only four-player reviewer opinions",
+      "decks": [
+        {
+          "name": "Mutant Menace",
+          "points": 12
+        },
+        {
+          "name": "Animated Army",
+          "points": 12
+        },
+        {
+          "name": "Miracle Worker",
+          "points": 13
+        },
+        {
+          "name": "Creative Energy",
+          "points": 13
+        },
+        {
+          "name": "Death Toll",
+          "points": 16
+        },
+        {
+          "name": "Science!",
+          "points": 13
+        }
+      ]
+    },
+    {
+      "source": "reddit_validation.csv",
+      "n": 5,
+      "spearman": 0.15389675281277312,
+      "kendall": 0.10540925533894596,
+      "pairwise_ties_half_credit": 0.55,
+      "bootstrap_rho_p025": -1.0,
+      "bootstrap_rho_p975": 1.0,
+      "independence": "reused diagnostic, not untouched validation; only four-player reviewer opinions",
+      "decks": [
+        {
+          "name": "Exit from Exile",
+          "points": 17
+        },
+        {
+          "name": "Explorers of the Deep",
+          "points": 12
+        },
+        {
+          "name": "Necron Dynasties",
+          "points": 12
+        },
+        {
+          "name": "Cavalry Charge",
+          "points": 14
+        },
+        {
+          "name": "Eldrazi Unbound",
+          "points": 13
+        }
+      ]
+    }
+  ],
+  "sensitivity": {
+    "runs": 200,
+    "main_point_count_min": 267,
+    "main_point_count_max": 290,
+    "median_jaccard": 0.9216352069838174,
+    "scenario": "independent uniform impact +/-2 on manually assessed cards, no rerating of raw cache tail"
+  },
+  "specialist_floor_affected_cards": 51,
+  "recommended_cohorts": [
+    {
+      "policy": "configured_policy",
+      "cohort": "official_precons",
+      "main_threshold": 75.0,
+      "command_zone_threshold": 75.0,
+      "curve": "tiered",
+      "specialist_floor": true,
+      "main_pointed_cards": 287,
+      "pointed_commander_options": 90,
+      "deck_count": 174,
+      "legal_deck_count": 171,
+      "legal_deck_median": 13.0,
+      "median": 13.0,
+      "mean": 14.028735632183908,
+      "p10": 12.0,
+      "p25": 12.0,
+      "p75": 15.0,
+      "p90": 17.0,
+      "std": 2.63903152870034,
+      "minimum": 1,
+      "maximum": 25,
+      "zero_decks": 0,
+      "unique_totals": 14,
+      "median_pointed_cards": 2.0,
+      "median_command_zone_share": 0.0,
+      "median_top3_share": 1.0
+    },
+    {
+      "policy": "configured_policy",
+      "cohort": "cedh_holdout",
+      "main_threshold": 75.0,
+      "command_zone_threshold": 75.0,
+      "curve": "tiered",
+      "specialist_floor": true,
+      "main_pointed_cards": 287,
+      "pointed_commander_options": 90,
+      "deck_count": 2520,
+      "legal_deck_count": 2520,
+      "legal_deck_median": 169.0,
+      "median": 169.0,
+      "mean": 171.2218253968254,
+      "p10": 96.9,
+      "p25": 135.75,
+      "p75": 209.0,
+      "p90": 254.0,
+      "std": 53.819663441227725,
+      "minimum": 1,
+      "maximum": 274,
+      "zero_decks": 0,
+      "unique_totals": 228,
+      "median_pointed_cards": 44.0,
+      "median_command_zone_share": 0.04042260843731432,
+      "median_top3_share": 0.1728395061728395
+    },
+    {
+      "policy": "configured_policy",
+      "cohort": "bracket3_declared",
+      "main_threshold": 75.0,
+      "command_zone_threshold": 75.0,
+      "curve": "tiered",
+      "specialist_floor": true,
+      "main_pointed_cards": 287,
+      "pointed_commander_options": 90,
+      "deck_count": 150,
+      "legal_deck_count": 150,
+      "legal_deck_median": 42.0,
+      "median": 42.0,
+      "mean": 46.013333333333335,
+      "p10": 15.0,
+      "p25": 27.0,
+      "p75": 59.75,
+      "p90": 83.29999999999998,
+      "std": 26.44761484701781,
+      "minimum": 1,
+      "maximum": 126,
+      "zero_decks": 0,
+      "unique_totals": 76,
+      "median_pointed_cards": 11.5,
+      "median_command_zone_share": 0.0,
+      "median_top3_share": 0.563301282051282
+    }
+  ],
+  "top_legal_main": [
+    {
+      "card_name": "Sol Ring",
+      "main_deck_impact": 98.0,
+      "main_deck_points": 12
+    },
+    {
+      "card_name": "Demonic Tutor",
+      "main_deck_impact": 96.25,
+      "main_deck_points": 12
+    },
+    {
+      "card_name": "Ad Nauseam",
+      "main_deck_impact": 95.0,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Force of Will",
+      "main_deck_impact": 92.5,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Chrome Mox",
+      "main_deck_impact": 92.25,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Mox Diamond",
+      "main_deck_impact": 92.25,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Vampiric Tutor",
+      "main_deck_impact": 92.25,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Grim Monolith",
+      "main_deck_impact": 90.75,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Mana Vault",
+      "main_deck_impact": 90.75,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Ancient Tomb",
+      "main_deck_impact": 90.5,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Necropotence",
+      "main_deck_impact": 90.5,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Underworld Breach",
+      "main_deck_impact": 90.5,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Yawgmoth's Will",
+      "main_deck_impact": 90.5,
+      "main_deck_points": 8
+    },
+    {
+      "card_name": "Silence",
+      "main_deck_impact": 89.5,
+      "main_deck_points": 5
+    },
+    {
+      "card_name": "Thassa's Oracle",
+      "main_deck_impact": 89.5,
+      "main_deck_points": 5
+    }
+  ],
+  "top_commanders": [
+    {
+      "card_name": "Thrasios, Triton Hero",
+      "main_deck_points": 3,
+      "command_zone_impact": 95.0,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Najeela, the Blade-Blossom",
+      "main_deck_points": 1,
+      "command_zone_impact": 94.5,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Sisay, Weatherlight Captain",
+      "main_deck_points": 1,
+      "command_zone_impact": 94.5,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Kinnan, Bonder Prodigy",
+      "main_deck_points": 5,
+      "command_zone_impact": 94.0,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Vivi Ornitier",
+      "main_deck_points": 3,
+      "command_zone_impact": 94.0,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Yuriko, the Tiger's Shadow",
+      "main_deck_points": 1,
+      "command_zone_impact": 93.25,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Inalla, Archmage Ritualist",
+      "main_deck_points": 1,
+      "command_zone_impact": 92.0,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Kenrith, the Returned King",
+      "main_deck_points": 1,
+      "command_zone_impact": 91.0,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Tymna the Weaver",
+      "main_deck_points": 1,
+      "command_zone_impact": 90.75,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Rograkh, Son of Rohgahh",
+      "main_deck_points": 0,
+      "command_zone_impact": 90.25,
+      "command_zone_points": 8,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Magda, Brazen Outlaw",
+      "main_deck_points": 1,
+      "command_zone_impact": 90.0,
+      "command_zone_points": 5,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "K'rrik, Son of Yawgmoth",
+      "main_deck_points": 1,
+      "command_zone_impact": 89.5,
+      "command_zone_points": 5,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Nadu, Winged Wisdom",
+      "main_deck_points": 3,
+      "command_zone_impact": 89.5,
+      "command_zone_points": 5,
+      "commander_legality": "banned"
+    },
+    {
+      "card_name": "Derevi, Empyrial Tactician",
+      "main_deck_points": 1,
+      "command_zone_impact": 88.25,
+      "command_zone_points": 5,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Winota, Joiner of Forces",
+      "main_deck_points": 1,
+      "command_zone_impact": 86.0,
+      "command_zone_points": 5,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Emry, Lurker of the Loch",
+      "main_deck_points": 1,
+      "command_zone_impact": 85.25,
+      "command_zone_points": 5,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Edric, Spymaster of Trest",
+      "main_deck_points": 3,
+      "command_zone_impact": 85.0,
+      "command_zone_points": 3,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Ral, Monsoon Mage // Ral, Leyline Prodigy",
+      "main_deck_points": 0,
+      "command_zone_impact": 84.75,
+      "command_zone_points": 3,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "Crystal, Inhuman Princess",
+      "main_deck_points": 0,
+      "command_zone_impact": 84.25,
+      "command_zone_points": 3,
+      "commander_legality": "legal"
+    },
+    {
+      "card_name": "King T'Challa // Black Panther, Hope Enduring",
+      "main_deck_points": 0,
+      "command_zone_impact": 84.25,
+      "command_zone_points": 3,
+      "commander_legality": "legal"
+    }
+  ],
+  "legal_2hg_pointed_main": 252,
+  "legal_2hg_pointed_commanders": 84,
+  "legal_2hg_pointed_union": 304,
+  "precon_legality_flags": [
+    {
+      "name": "Political Puppets",
+      "issues": [
+        "official_commander_illegal:Trade Secrets"
+      ]
+    },
+    {
+      "name": "Mystic Intellect",
+      "issues": [
+        "official_commander_illegal:Dockside Extortionist"
+      ]
+    },
+    {
+      "name": "Upgrades Unleashed",
+      "issues": [
+        "singleton_limit:Mossfire Valley"
+      ]
+    }
+  ],
+  "additional_cohort_extremes": {
+    "cedh_holdout": [
+      {
+        "deck_name": "cedh_holdout_6d2d29f7c1b53476",
+        "total_points": 1
+      },
+      {
+        "deck_name": "cedh_holdout_29c06c2ba82f00f7",
+        "total_points": 274
+      }
+    ],
+    "bracket3_declared": [
+      {
+        "deck_name": "bracket3_declared_3a07b344234051ce",
+        "total_points": 1
+      },
+      {
+        "deck_name": "bracket3_declared_11611bc4fd6c9ef6",
+        "total_points": 126
+      }
+    ]
+  },
+  "unreviewed_cache_only_pointed": 0,
+  "tier_boundary_review_cards": 145,
+  "reused_pair_checks": [
+    {
+      "stronger": "Elven Empire",
+      "weaker": "Spirit Squadron",
+      "points_stronger": 12,
+      "points_weaker": 13,
+      "credit": 0.0
+    },
+    {
+      "stronger": "Necron Dynasties",
+      "weaker": "Painbow",
+      "points_stronger": 12,
+      "points_weaker": 1,
+      "credit": 1.0
+    },
+    {
+      "stronger": "Eldrazi Unbound",
+      "weaker": "Virtue and Valor",
+      "points_stronger": 13,
+      "points_weaker": 13,
+      "credit": 0.5
+    },
+    {
+      "stronger": "Endless Punishment",
+      "weaker": "Deadly Disguise",
+      "points_stronger": 13,
+      "points_weaker": 18,
+      "credit": 0.0
+    },
+    {
+      "stronger": "Limit Break (FINAL FANTASY VII)",
+      "weaker": "Living Energy",
+      "points_stronger": 15,
+      "points_weaker": 12,
+      "credit": 1.0
+    }
+  ],
+  "reused_pair_accuracy": 0.5,
+  "deck_rating_sensitivity": {
+    "bracket3_declared": {
+      "median_score_min": 38.0,
+      "median_score_max": 43.0,
+      "median_rank_correlation": 0.9926572432292478
+    },
+    "cedh_holdout": {
+      "median_score_min": 161.0,
+      "median_score_max": 178.0,
+      "median_rank_correlation": 0.9955197119356353
+    },
+    "official_precons": {
+      "median_score_min": 12.0,
+      "median_score_max": 13.0,
+      "median_rank_correlation": 0.9503295060394996
+    }
+  },
+  "command_zone_price_inversions": [
+    {
+      "card_name": "Griselbrand",
+      "main_deck_points": 5,
+      "command_zone_points": 1,
+      "command_zone_explanation": "Command-zone deployment needs eight mana rather than a main-deck reanimation line; larger shared life supports repeated draw."
+    },
+    {
+      "card_name": "Emrakul, the Aeons Torn",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Fifteen-mana cast gives an extra TEAM turn and a powerful resilient threat, but colorless command-zone deployment is expensive. Main80 includes a specialist floor and may use colored cheating infrastructure; banned status remains independent."
+    },
+    {
+      "card_name": "Emrakul, the Promised End",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Colorless commander construction makes graveyard card-type discounts harder than a colored main-deck shell; mind control affects the opposing team turn. High deployment cost can make command-zone pricing lower despite guaranteed access."
+    },
+    {
+      "card_name": "Vilis, Broker of Blood",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Eight-mana black command-zone draw engine is expensive compared with one-mana main-deck reanimation. Life-loss draw and targeted activation can be powerful from sixty shared life, but guaranteed access does not erase the casting cost."
+    },
+    {
+      "card_name": "Iona, Shield of Emeria",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Nine-mana mono-white command-zone deployment lacks cheap black reanimation available to main-deck shells. Color denial can affect both opponents but is not an unconditional win. Lower access value reflects real deployment/color constraints; retain ban."
+    },
+    {
+      "card_name": "Ulamog, the Ceaseless Hunger",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Ten-mana colorless commander removes two permanents on CAST and threatens a single players library, whose eventual loss ends a team. Costly deployment and narrow colorless construction reduce access value; cheating into play does not produce its cast trigger."
+    },
+    {
+      "card_name": "Ulamog, the Infinite Gyre",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Eleven-mana colorless commander is resilient and annihilates defending resources but needs costly cast/attack access. Main-deck colored mana/cheating can deploy the threat more easily; lower command price is an explicit provisional judgment."
+    },
+    {
+      "card_name": "Kozilek, the Great Distortion",
+      "main_deck_points": 1,
+      "command_zone_points": 0,
+      "command_zone_explanation": "Ten-mana colorless commander can refill and match-discard counter spells after deployment; broad colored main-deck cheating/mana infrastructure is unavailable. High cost and matching hand requirements justify a provisional free command price, flagged for review."
+    }
+  ]
+}

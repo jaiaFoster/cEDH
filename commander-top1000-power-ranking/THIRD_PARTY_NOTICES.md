@@ -1,0 +1,10 @@
+# Source notices
+
+- Magic card names/text, artwork and Comprehensive Rules are Wizards of the Coast material. This directory uses the previously frozen Scryfall/Oracle data in the calibration project and retains source links; it does not assert an open license for Wizards content. The fresh rules download is represented publicly by its URL/checksum and a paraphrased review.
+- The published zarzak rating cache is reused from the prior research snapshot at commit `2ccb39f3e0fa08d91e848c2c98851effa8fa1fb2`. The upstream repository is MIT-licensed; the preserved [license](../commander-card-power-research-v1/data/raw/zarzak/LICENSE) and [prior notices](../commander-card-power-research-v1/THIRD_PARTY_NOTICES.md) remain applicable. No separate cache-specific license restriction was identified in the prior review. These are LLM ratings, not empirical outcomes.
+- Canadian Highlander council points are attributed factual expert reference: https://canadianhighlander.ca/points-list/ . No blanket data/software license is inferred from public availability. The Commander judgments are not presented as council-approved prices.
+- Tournament observations use the repository's existing authorized snapshots. Required attribution: **TopDeck.gg — https://topdeck.gg**. No credentials or player identities are added to the new outputs; derived deck IDs are content hashes. Source snapshot paths and retrieval metadata remain in the inherited manifest.
+- The previous Commander Spellbook client and upstream license remain in the v1 directory; combo analysis is separate from construction cost. No new Spellbook bulk data or proprietary evaluator scores were acquired in this sprint.
+- Interchangeable-name verification used three small Scryfall printing queries, recorded in `data/name_alias_provenance.json`, alongside the rules and original printing indicators. Calculators and reproduction use the saved mapping offline.
+
+Public access, a software license and statistical validity are separate questions. The source inventory and detailed reuse discussion in the prior research directory remain the broader reference.

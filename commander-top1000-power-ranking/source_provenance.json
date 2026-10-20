@@ -1,0 +1,63 @@
+{
+  "commander-top1000-power-ranking/data/rules_source.json": {
+    "sha256": "c2b4b475f35cc921b14c7c44917b28bfb8a7ec75a97f2bbe2eb9b344c9abde51",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "commander-top1000-power-ranking/data/name_aliases.json": {
+    "sha256": "7e17fe420595bd8a056e6bc500ff44b26e04982d08b7c433ed0b3eccc526dfe5",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "commander-top1000-power-ranking/data/name_alias_provenance.json": {
+    "sha256": "1b9353a83f9b5af7957dab5612b03b5be73ec32b0aab29b6f92302674e0c3a4c",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "commander-league-card-point-calibration/data/raw/oracle_cards.jsonl.gz": {
+    "sha256": "68bf8eec4d35c0ec144124c7e8d1091ee1d4acefc0fa32d689fc07129381bc80",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "commander-league-card-point-calibration/data/clean/precons.json": {
+    "sha256": "73b33e5a5edaa95a2a8a1993a4daeb064047031e2f18847b2de8d490d27d1be7",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "commander-card-power-research-v1/data/zarzak_cache.json": {
+    "sha256": "2fca7de91aa225070da2e19e7a6176e692fa3156a463eb4d8dac6e51fb5da010",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "commander-card-power-research-v1/data/benchmark_inputs.json": {
+    "sha256": "5d8310b1ed7b775551c7a4b1eafb37cba07254f0a222c0d301bb791cd4da31e5",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "data/tournament_snapshots/topdeck/manifest.json": {
+    "sha256": "3d25328689f6cdd5fa25f6e4f262b8aa6cc84c3bcadb7685c323c080e7cd5e7d",
+    "source_snapshot_as_of": "2026-10-19"
+  },
+  "notes": "TopDeck raw-snapshot paths and content-addressed hashes remain in the existing manifest. No API calls or paid services required for reproduction.",
+  "execution_environment": {
+    "python": "3.13.3",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "config_sha256": "712d11426ce84f80ab8e2731d7499bc7d43170e62d807e048a6f711a9a8557f3",
+  "assessment_sha256": "91c194a05739daf3246a1d2f8bd54a5ae0c782e9635ee0e462dda5ddf2a4b455",
+  "implementation_sha256": {
+    "ranking.py": "f37fbc6a7aad50d83e3ff1d96040fa96d4e840028b7e30bdced1bcc40b5a3661",
+    "backend.py": "7af4792dd65a9e6e47427aa0db55009dff22ad140b74b28ff870b23b923c6fa7",
+    "data_sources.py": "f0ca103cdf002a235ec5db9fe1b1bec3ff6c869d2c6719f10b51bb7bf7d38486",
+    "pipeline.py": "d9950a6e9986630530a49be2c00e913482f39ffcec7a35d3a69e15a5bd793db9",
+    "extended_analysis.py": "e2806f67eece4e032b9cd3f08e9b2ce094f7499356e77d470656af9985595d97",
+    "score_decks.py": "9b152f219490a7882e6182312c8d17f7ae0a223d459b177311ccb9a8655a075a",
+    "requirements.txt": "98ff8ff28acc35ff46fd1ede2c48db9b5f9888742f479dd8106b0e16450fbaff"
+  },
+  "source_urls": {
+    "oracle": "https://scryfall.com/docs/api/bulk-data",
+    "precons": "https://github.com/taw/magic-preconstructed-decks-data",
+    "published_ratings": "https://github.com/zarzak/mtg-deck-builder/tree/2ccb39f3e0fa08d91e848c2c98851effa8fa1fb2",
+    "canadian_points": "https://canadianhighlander.ca/points-list/",
+    "tournament_snapshots": "https://topdeck.gg",
+    "rules": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+  }
+}

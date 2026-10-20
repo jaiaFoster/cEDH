@@ -1,0 +1,54 @@
+{
+  "version": "top1000-v0.1-candidate",
+  "as_of": "2026-10-19",
+  "weights": {
+    "ceiling": 5.5,
+    "applicability": 2,
+    "tempo": 1.5,
+    "resilience": 1
+  },
+  "main_threshold": 75,
+  "commander_threshold": 75,
+  "curve": "tiered",
+  "specialist_min_ceiling": 9.5,
+  "specialist_floor": 80,
+  "tier_bands": [
+    [
+      5,
+      1
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      15,
+      5
+    ],
+    [
+      20,
+      8
+    ],
+    [
+      25,
+      12
+    ],
+    [
+      null,
+      20
+    ]
+  ],
+  "overrides": {},
+  "team_cap": null,
+  "individual_cap": null,
+  "notes": "Provisional policy judgment; no measured win-rate or 1000-point calibration. Prices alternative by location; zero synergy premiums.",
+  "unreviewed_prior": {
+    "default_rating": 60,
+    "center": 35,
+    "divisor": 8,
+    "ceiling_cap": 7.5,
+    "neutral": 5,
+    "command_zone_cap": 69,
+    "command_zone_offset": 4
+  }
+}
