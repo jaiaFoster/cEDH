@@ -1,0 +1,175 @@
+{
+  "adversarial_teams": 13,
+  "anchor_count": 50,
+  "benchmark_decks_including_fixtures": 2870,
+  "budget_reference60_transfer20": [
+    {
+      "admitted": 3304,
+      "admitted_fraction": 0.3304,
+      "allocation_policy": "transfer20",
+      "cohort_or_team": "bracket3_declared",
+      "individual_max": 72,
+      "pairs": 10000,
+      "reference": 60,
+      "scenario": "synthetic_same_cohort_pairing",
+      "team_cap": 120
+    },
+    {
+      "admitted": 0,
+      "admitted_fraction": 0.0,
+      "allocation_policy": "transfer20",
+      "cohort_or_team": "cedh_holdout",
+      "individual_max": 72,
+      "pairs": 10000,
+      "reference": 60,
+      "scenario": "synthetic_same_cohort_pairing",
+      "team_cap": 120
+    },
+    {
+      "admitted": 10000,
+      "admitted_fraction": 1.0,
+      "allocation_policy": "transfer20",
+      "cohort_or_team": "official_precons",
+      "individual_max": 72,
+      "pairs": 10000,
+      "reference": 60,
+      "scenario": "synthetic_same_cohort_pairing",
+      "team_cap": 120
+    }
+  ],
+  "cohort_distributions": [
+    {
+      "bootstrap_median_high": 3.5,
+      "bootstrap_median_low": 0.0,
+      "cohort": "adversarial_fixture",
+      "max": 39,
+      "mean": 4.730769230769231,
+      "median": 1.5,
+      "method": "audited",
+      "min": 0,
+      "n": 26,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p75": 4.0,
+      "p90": 10.0,
+      "unique_scores": 9,
+      "zero": 12
+    },
+    {
+      "bootstrap_median_high": 70.5,
+      "bootstrap_median_low": 55.0,
+      "cohort": "bracket3_declared",
+      "max": 198,
+      "mean": 71.50666666666666,
+      "median": 66.0,
+      "method": "audited",
+      "min": 1,
+      "n": 150,
+      "p10": 19.0,
+      "p25": 38.5,
+      "p75": 101.75,
+      "p90": 139.2,
+      "unique_scores": 90,
+      "zero": 0
+    },
+    {
+      "bootstrap_median_high": 283.0,
+      "bootstrap_median_low": 274.0,
+      "cohort": "cedh_holdout",
+      "max": 505,
+      "mean": 291.49285714285713,
+      "median": 278.0,
+      "method": "audited",
+      "min": 7,
+      "n": 2520,
+      "p10": 160.0,
+      "p25": 227.0,
+      "p75": 368.0,
+      "p90": 425.0999999999999,
+      "unique_scores": 406,
+      "zero": 0
+    },
+    {
+      "bootstrap_median_high": 17.0,
+      "bootstrap_median_low": 16.0,
+      "cohort": "official_precons",
+      "max": 30,
+      "mean": 17.379310344827587,
+      "median": 16.0,
+      "method": "audited",
+      "min": 1,
+      "n": 174,
+      "p10": 15.0,
+      "p25": 15.0,
+      "p75": 18.0,
+      "p90": 22.0,
+      "unique_scores": 15,
+      "zero": 0
+    }
+  ],
+  "combo_candidates": 42,
+  "exact_budget_reference60_transfer20": [
+    {
+      "admitted": 3679,
+      "admitted_fraction": 0.32921700223713646,
+      "allocation_policy": "transfer20",
+      "cohort_or_team": "bracket3_declared",
+      "individual_max": 72,
+      "pairs": 11175,
+      "reference": 60,
+      "scenario": "exact_unordered_distinct_cohort_pairs",
+      "team_cap": 120
+    },
+    {
+      "admitted": 47,
+      "admitted_fraction": 1.4808093410713498e-05,
+      "allocation_policy": "transfer20",
+      "cohort_or_team": "cedh_holdout",
+      "individual_max": 72,
+      "pairs": 3173940,
+      "reference": 60,
+      "scenario": "exact_unordered_distinct_cohort_pairs",
+      "team_cap": 120
+    },
+    {
+      "admitted": 15051,
+      "admitted_fraction": 1.0,
+      "allocation_policy": "transfer20",
+      "cohort_or_team": "official_precons",
+      "individual_max": 72,
+      "pairs": 15051,
+      "reference": 60,
+      "scenario": "exact_unordered_distinct_cohort_pairs",
+      "team_cap": 120
+    }
+  ],
+  "expected_cohort_counts": {
+    "bracket3_declared": 150,
+    "cedh_holdout": 2520,
+    "official_precons": 174
+  },
+  "false_split_records": 14,
+  "family_reviews": 55,
+  "hypothetical_inclusive_pointed_identities": 357,
+  "legal_command_zone_pointed": 79,
+  "legal_main_pointed": 269,
+  "legal_pointed_identities": 321,
+  "legal_scoring_fixtures": 26,
+  "newly_free_zones": 9,
+  "newly_pointed_zones": 22,
+  "no_verified_2hg_match_cohort": true,
+  "price_changes": 243,
+  "sampling_interval_warning": "Bootstrap conditions on biased labelled samples and fixed judgment prices; not win-rate, rating or population confidence.",
+  "source_exclusions": {
+    "entry_unknown_card": 18,
+    "entry_without_structured_deck": 8464,
+    "future_event": 4,
+    "not_explicit_competitive_or_bracket3": 767
+  },
+  "verified_cross_team_records": 17,
+  "version": "season0-proposed",
+  "zero_point_adversarial_teams": [
+    "T08",
+    "T09"
+  ]
+}

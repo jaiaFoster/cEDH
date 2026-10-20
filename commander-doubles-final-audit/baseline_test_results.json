@@ -1,0 +1,13 @@
+{
+  "tests_discovered": 37,
+  "executed_passed": 35,
+  "skipped": 2,
+  "failures": 0,
+  "errors_after_environment_skips": 0,
+  "skipped_tests": [
+    "test_cli_alias_commander_selection",
+    "test_unknown_source_card_never_disappears"
+  ],
+  "reason": "Require temporary filesystem writes; local sandbox remains read-only. New CLI tests used an explicit in-memory filesystem shim.",
+  "new_audit_suite": "101 passing tests; see test_results.json"
+}

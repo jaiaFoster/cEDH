@@ -1,0 +1,7 @@
+# Material2HG outliers
+
+Silence protects both friendly casters against both opposing spell casters forW. Chant only targets one head (kicker prohibits all attacking). Abolisher/Voice apply on shared own turn, with different ability coverage. Rift overload returns B's nonlands too; keep organizer0 but note B may be spell-focused. Ring protection is individual. Tithe sees two opposing draws per normal opposing shared step, not three independent opposing turns.
+
+Hidetsugu at even60 is30+30 damage to each team; Grace or Protection supplied by teammate can make it asymmetric. Sorin one-head setting changes full pool to10. Felidar/Test thresholds start met but require deployment and an upkeep window. Yuriko16 triggers hit both opponents and each removes32 shared life. Extra turns and turn control affect whole teams. Shared life does not create shared gain events; split Bond/Blood fails.
+
+Najeela/Derevi can support extra team combats but Derevi's own creatures must connect and untap actual A lands. Kinnan only multiplies own tapped nonland permanents. Seedborn has only one opposing untap window; skipped untap is not restored. Breena compares the two opponents' equal shared totals, so its strict-more-life trigger normally cannot fire. Angel of Destiny uses starting60 and needs75, not55. Curse of Opulence can reward its own controller when a teammate attacks, but does not give that teammate the additional Gold reserved for opponents. All of these are qualitative rules-driven assessments, not measured win-rate adjustments.

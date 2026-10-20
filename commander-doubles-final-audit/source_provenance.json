@@ -1,0 +1,113 @@
+{
+  "as_of": "2026-10-20",
+  "base_commit": "f56cfa939fd2cfd3a4c9a5668af7f25cb97986fa",
+  "inputs": {
+    "commander-card-power-research-v1/data/spellbook/cross_team_positive_control.json": {
+      "kind": "inherited frozen input",
+      "sha256": "91166f6d80b199bb095488864bfe11a76eeb04599f560d93c0b706471957692e"
+    },
+    "commander-league-card-point-calibration/data/clean/precons.json": {
+      "kind": "inherited frozen input",
+      "sha256": "73b33e5a5edaa95a2a8a1993a4daeb064047031e2f18847b2de8d490d27d1be7"
+    },
+    "commander-league-card-point-calibration/data/raw/oracle_cards.jsonl.gz": {
+      "kind": "inherited frozen input",
+      "sha256": "68bf8eec4d35c0ec144124c7e8d1091ee1d4acefc0fa32d689fc07129381bc80"
+    },
+    "commander-top1000-power-ranking/analyst_assessments.json": {
+      "kind": "inherited frozen input",
+      "sha256": "b0a25ea63f8e5ea0a08bf000448a384f5c633e24cb1520dd30a8278e1b290f64"
+    },
+    "commander-top1000-power-ranking/candidate_inventory.csv": {
+      "kind": "inherited frozen input",
+      "sha256": "a559cdbb62c43845c907e2b1c5963af907150d98ded568c8380149670e65c211"
+    },
+    "commander-top1000-power-ranking/scoring_config.json": {
+      "kind": "inherited frozen input",
+      "sha256": "03d97dbb17855c8d9f42b09c3829d4ca7678b17a57507ba1024ee99ac6f66c33"
+    },
+    "data/tournament_snapshots/topdeck/manifest.json": {
+      "kind": "inherited frozen input",
+      "sha256": "3d25328689f6cdd5fa25f6e4f262b8aa6cc84c3bcadb7685c323c080e7cd5e7d"
+    },
+    "rules_metadata": {
+      "bytes": 977752,
+      "distribution": "Source reference and checksums; full text remains at Wizards.",
+      "effective": "2026-09-25",
+      "retrieved_date": "2026-10-19",
+      "sha256_uncompressed": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+      "source": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    }
+  },
+  "seeds": {
+    "bootstrap_and_pairing": 20261020
+  },
+  "sources": [
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/rules",
+      "use": "Current landing page links September25 CR; no October replacement linked at retrieval."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "use": "CR source for controller/team/priority/combat/loss rules; local pinned text SHA retained."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/formats/two-headed-giant",
+      "use": "Commander-specific60 life and no unified construction; commander damage wording conflicts with CR."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/banned-restricted-list",
+      "use": "42 named Commander bans plus category bans; Lutri companion-only; Erayo2HG."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/formats/commander",
+      "use": "Current Game Changers policy: B1/B2none, B3up to3; no literal adoption of GC cap in custom point league."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/news/announcements/commander-brackets-beta-update-october-21-2025",
+      "use": "Bracket3six full turns/seventh-turn expectation; not permission to hold early infinite combo."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/news/announcements/commander-brackets-beta-update-february-9-2026",
+      "use": "No bracket changes; Farewell added; precons no longer automaticB2."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://magic.wizards.com/en/news/announcements/mystery-booster-commander-edition-update-bulletin",
+      "use": "Oct19 announcement plans rulebreaker903.5e and Tolabow Oracle correction. Rules landing still points September snapshot; unsupported permissions manual review, not automatically legal."
+    },
+    {
+      "retrieved": "2026-10-20",
+      "url": "https://spacecowmedia.github.io/commander-spellbook-backend/api.html",
+      "use": "API/cached integration reuse; a new variants request failed tool access, no new live response claimed."
+    },
+    {
+      "retrieved": "2026-10-19 frozen inherited response",
+      "url": "https://commanderspellbook.com/combo/690-3966/",
+      "use": "Existing union-positive Bond/Blood fixture is false under split controllers; component detection only."
+    },
+    {
+      "retrieved": "2026-10-19 inherited pinned snapshot",
+      "url": "https://canadianhighlander.ca/points-list/",
+      "use": "Curated cross-format expert comparison; no redistribution license inferred."
+    },
+    {
+      "retrieved": "2026-10-19 inherited snapshot",
+      "url": "https://scryfall.com/docs/api/bulk-data",
+      "use": "Full Oracle card lookup and legality/identity; new missing cards error, never silently0."
+    },
+    {
+      "retrieved": "2026-10-19 inherited authorized snapshots",
+      "url": "https://topdeck.gg",
+      "use": "Attribution; event labels not verified power; no new API call or player names exported."
+    }
+  ],
+  "third_party_notice": "Credit TopDeck.gg and Commander Spellbook. Oracle text Wizards; prior software/data licenses retained. New API request inaccessible; no new bulk data claimed."
+}

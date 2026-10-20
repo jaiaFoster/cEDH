@@ -1,0 +1,330 @@
+{
+  ".gitignore": {
+    "bytes": 23,
+    "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
+  },
+  "README.md": {
+    "bytes": 2703,
+    "sha256": "fd6fefccd6089ca7efa40e7d016cfb1308d286c093863d75b128f058f6d3e015"
+  },
+  "THIRD_PARTY_NOTICES.md": {
+    "bytes": 1178,
+    "sha256": "a660ff1ed7b9b0e8edd21dc234a69486c71bfe16e20b9b7ff997c5cf9b8eb22f"
+  },
+  "adversarial_decklists/T01_A.txt": {
+    "bytes": 78,
+    "sha256": "2341b3825884c5d90c64488c3772a9616930b740cf720bd2239441623f6ea667"
+  },
+  "adversarial_decklists/T01_B.txt": {
+    "bytes": 85,
+    "sha256": "673211c9c9d8c99a27bee161d75106ce0a39a3db56d40c221a2a6ef1db9bca19"
+  },
+  "adversarial_decklists/T02_A.txt": {
+    "bytes": 105,
+    "sha256": "ff6a3aa2f7eeda593368baa0df152217d04ededc3fc2f851b2ecca507ef1b917"
+  },
+  "adversarial_decklists/T02_B.txt": {
+    "bytes": 112,
+    "sha256": "ba604520c5624ba014454e038be2afac18f1ce281954a2546456abeed625c2c6"
+  },
+  "adversarial_decklists/T03_A.txt": {
+    "bytes": 58,
+    "sha256": "3cd2d49738a6136e58d61680e757649e564d9d6110c684b62da723aecba33962"
+  },
+  "adversarial_decklists/T03_B.txt": {
+    "bytes": 72,
+    "sha256": "dee780ebb439afc4bf4871da210e979a7910f2338879521acac7909bbe9f46c9"
+  },
+  "adversarial_decklists/T04_A.txt": {
+    "bytes": 82,
+    "sha256": "7f5801cfff272ec252b00ac259419b344dddf585ab157ff916dbf426018a4cca"
+  },
+  "adversarial_decklists/T04_B.txt": {
+    "bytes": 78,
+    "sha256": "3ed3f4c0e884f7ca39d0484ee902ec30fed93e5839daec15e7cae03d82dd3840"
+  },
+  "adversarial_decklists/T05_A.txt": {
+    "bytes": 86,
+    "sha256": "1315d664f87bcb9ea17e03c050d3a09cfd0013bb98d585702af3fa244db08dd4"
+  },
+  "adversarial_decklists/T05_B.txt": {
+    "bytes": 65,
+    "sha256": "29383b34579ed68c02f148ceceb5c717cc91b7c0e608781c4c2c59f739cd265b"
+  },
+  "adversarial_decklists/T06_A.txt": {
+    "bytes": 117,
+    "sha256": "5884e2c38b128c0090dde9fdb77049aae19b7a89c981214ee885c20a75cf2077"
+  },
+  "adversarial_decklists/T06_B.txt": {
+    "bytes": 62,
+    "sha256": "04acbc37aa1f1a1c5c554174c6405221a22247c8a4a54117a615458202f6b2e8"
+  },
+  "adversarial_decklists/T07_A.txt": {
+    "bytes": 116,
+    "sha256": "b06821888087b5bc49674e32c94110694d5ee0ad77732954f46ae6421cd2e226"
+  },
+  "adversarial_decklists/T07_B.txt": {
+    "bytes": 52,
+    "sha256": "ee778d4c3d8438968dd1480cafc5b163f8f1cb5dd526218c3657435d01eb6782"
+  },
+  "adversarial_decklists/T08_A.txt": {
+    "bytes": 112,
+    "sha256": "6d598f58365bfd3fd9afe51d6a4b86fb3ed5ff26ac8fcf561f9d3f511e76a03b"
+  },
+  "adversarial_decklists/T08_B.txt": {
+    "bytes": 93,
+    "sha256": "d6583b9888da66c1e1a747891097aae59fe1eca3c432883dbfde9055249f2185"
+  },
+  "adversarial_decklists/T09_A.txt": {
+    "bytes": 106,
+    "sha256": "efa0ba928297d5860cb9877183583f7e9fe4a36d3d910ef86ec1df3088aa56ca"
+  },
+  "adversarial_decklists/T09_B.txt": {
+    "bytes": 106,
+    "sha256": "efa0ba928297d5860cb9877183583f7e9fe4a36d3d910ef86ec1df3088aa56ca"
+  },
+  "adversarial_decklists/T10_A.txt": {
+    "bytes": 68,
+    "sha256": "55880aa76f4601e6c4151e7b9f1e708dc85069bef3c12f48ce9333b2b971b1fc"
+  },
+  "adversarial_decklists/T10_B.txt": {
+    "bytes": 82,
+    "sha256": "6bb23434888fafefa536f20aebbb8004073cc57f71f90ea7ce10312915a38216"
+  },
+  "adversarial_decklists/T11_A.txt": {
+    "bytes": 74,
+    "sha256": "02a4a74b68ab673dca868da53fc6b087e919e3f86499cd305e391d2af2a20f03"
+  },
+  "adversarial_decklists/T11_B.txt": {
+    "bytes": 68,
+    "sha256": "df9eb66510599ee217316a628db912521405e819af6720f71390e29d2018d502"
+  },
+  "adversarial_decklists/T12_A.txt": {
+    "bytes": 68,
+    "sha256": "64c1843d209387ed08f67f16047ae8ef5a431247fc7afc8a9052fc091e189e95"
+  },
+  "adversarial_decklists/T12_B.txt": {
+    "bytes": 108,
+    "sha256": "3d423d33966ff0abc83e74cb683617f2a184647a0c3c411e0983b0569c26582a"
+  },
+  "adversarial_decklists/T13_A.txt": {
+    "bytes": 99,
+    "sha256": "212cf32e3987c0aa4dbe50af87421c8c22522918759e5d9c86a7973d8aac7c98"
+  },
+  "adversarial_decklists/T13_B.txt": {
+    "bytes": 153,
+    "sha256": "d07dfdb3454bb2c91a7d9574d8d9bac5b5ad3a908c95c0b027d5e27e26283577"
+  },
+  "adversarial_decklists/fixtures.json": {
+    "bytes": 5313,
+    "sha256": "547da2055d779f72f81c9fd048a47fe01b702663d4eb3ea2b458f74f523b232d"
+  },
+  "adversarial_team_archetypes.md": {
+    "bytes": 11849,
+    "sha256": "9c63bd9c45880329fa6169be78f4446fe9e0959f46024ad41e5cc965a5aa0450"
+  },
+  "adversarial_team_scores.csv": {
+    "bytes": 17816,
+    "sha256": "d27c729c815b30ccbd5e686244c1b3a2d4a3d977a585a234a686d01a3f1f1614"
+  },
+  "analysis_summary.json": {
+    "bytes": 4544,
+    "sha256": "7b05994328a405e3e8ff639dbb0b539e5d9fa7c247db6b1989604446a115c9e9"
+  },
+  "audit_backend.py": {
+    "bytes": 10395,
+    "sha256": "a81a27d67f05ce3aff8dee16f357e723df6311e8f576e29ab86396e3e8e3205e"
+  },
+  "audit_inputs.json": {
+    "bytes": 136669,
+    "sha256": "50f5274a2ac252367308483b398afc7b1a90af05f7066d5d3c8ba5560d5dac9a"
+  },
+  "audit_pipeline.py": {
+    "bytes": 59788,
+    "sha256": "4b1d57f1cfb260ca36ca35890458e879f291ad4a2e1a37ba311591811dd8c686"
+  },
+  "audit_tests.py": {
+    "bytes": 16877,
+    "sha256": "ac55ff0ab092affde85c1777e632656a3d6dc2bdf3c1e59d86bb3e860c36254e"
+  },
+  "audited_legal_point_schedule.csv": {
+    "bytes": 102844,
+    "sha256": "5ff22666b39928e1fd8b716264060b4bb0e12f26be641ae888dd4d047b4e5f82"
+  },
+  "audited_point_schedule.csv": {
+    "bytes": 102844,
+    "sha256": "5ff22666b39928e1fd8b716264060b4bb0e12f26be641ae888dd4d047b4e5f82"
+  },
+  "baseline_test_results.json": {
+    "bytes": 450,
+    "sha256": "628d758a1b1b74e1c37c58e7ff5b2b5b8facd7a562384d4b7eacca43732baf78"
+  },
+  "budget_stress_test.csv": {
+    "bytes": 29569,
+    "sha256": "f894a545c25863d4650cf96d718625752bdd71fc1ac8508273159072695f2290"
+  },
+  "calibration_disagreements.md": {
+    "bytes": 3395,
+    "sha256": "c72743593f9852c816e6ae1069d9f74da93de76170ad34552fe09c1df76af025"
+  },
+  "card_family_consistency_audit.md": {
+    "bytes": 7110,
+    "sha256": "7f07f189548645185243c331691c0517ff540994151c9736660db3ab060386e7"
+  },
+  "cohort_cost_ordering.csv": {
+    "bytes": 905,
+    "sha256": "fa10d34bdec6d71839bfb7363fd4a1ebb4b6ca899585c4994d4f4a0e28e7af1d"
+  },
+  "cohort_cost_outliers.csv": {
+    "bytes": 8375,
+    "sha256": "8a2a168e3d0e25015e7fc740c43f8c1ae225517d092cb733093369ed3b233420"
+  },
+  "cohort_distribution_summary.csv": {
+    "bytes": 1733,
+    "sha256": "a52b4b2ffed432ab45d7e5b51592e8d8bd61b652df9b4c6f03369ee4833bf7e7"
+  },
+  "cohort_point_concentration.csv": {
+    "bytes": 283,
+    "sha256": "1cf24139a69dbb5c546b4938cc4119df5995f3d2cc84f44bb03c55d1e20b68a0"
+  },
+  "command_zone_consistency_audit.csv": {
+    "bytes": 26320,
+    "sha256": "e3fa3d9dc66771fc4a6dfef4821f1f088b8e9a9bc01f41e0b7e7bc4a14357f9a"
+  },
+  "common_expensive_cards.csv": {
+    "bytes": 4736,
+    "sha256": "9ce6dd0e0c1721f5c039fd5f2e633a39fd5a3189c4aa5c6c2b1ae8445119d582"
+  },
+  "cutoff_boundary_review.csv": {
+    "bytes": 22529,
+    "sha256": "9e88972e39c740805cc6341ee1d2619984c01fd6731a7e5267944645b84328ff"
+  },
+  "cutoff_curve_comparison.csv": {
+    "bytes": 3185,
+    "sha256": "11685aa450ace193387d7f8cf7f50d6c921814aad8103f29e3bd3a7b197b732b"
+  },
+  "cutoff_finalization_report.md": {
+    "bytes": 2386,
+    "sha256": "70ac46f6378904582c43620310e37159ed2a2cc9b0aed353fb453e415d27f55a"
+  },
+  "experimental_unban_review.csv": {
+    "bytes": 2258,
+    "sha256": "bf1c29f7ffb60c3e32e8b5bd76846d791467c9d72a5684c405e262f2e069dbce"
+  },
+  "experimental_unban_review.md": {
+    "bytes": 2207,
+    "sha256": "17b119ad81155ab8af6b07261a94151a76dac2865b3168d21fdcce3302f3f37c"
+  },
+  "final_audit_executive_summary.md": {
+    "bytes": 5025,
+    "sha256": "f73fd1900341934f252f78378704b58dd61e25c0f5184b75ad8bce7e161e74af"
+  },
+  "highest_priority_balance_risks.md": {
+    "bytes": 1369,
+    "sha256": "87749043418e3af477f8ac29b8bf5e5439ba9c77fbe74f5741383f013ccc3b46"
+  },
+  "human_anchor_comparison.csv": {
+    "bytes": 7177,
+    "sha256": "edf9154f31766bb8d750b272898c1c7482112cb2334715d0a61b1a59677d68da"
+  },
+  "human_calibration_anchors.json": {
+    "bytes": 17940,
+    "sha256": "5d892b8700028e12719b43b4a9033a614cdce4e46549d7e6ab558f3dbcb263c7"
+  },
+  "hypothetical_inclusive_point_schedule.csv": {
+    "bytes": 114671,
+    "sha256": "df22fe213b85d550abacee47fe12fe63bbb7089b55cf36843e1522fc24c167d6"
+  },
+  "independent_review.md": {
+    "bytes": 1825,
+    "sha256": "35204682d5dc22b610d1f3afad65d8a2c2ddc0137ce283aab464f4112720b0e3"
+  },
+  "low_point_exploit_report.md": {
+    "bytes": 1558,
+    "sha256": "3e17efd8828154c31b055ae92aded7f592aa2aa5261d27c29a7a410139691be4"
+  },
+  "manual_review_queue.csv": {
+    "bytes": 135505,
+    "sha256": "f9ad353da3f65fda1f0d005cd761ca2707e65878dcca914e429503a2903f0d1e"
+  },
+  "newly_pointed_cards.csv": {
+    "bytes": 3529,
+    "sha256": "0f9bc4178b210dcf4d7be9c2efebe85f3712f83d3d43c6013028044bae273d37"
+  },
+  "newly_unpointed_cards.csv": {
+    "bytes": 1788,
+    "sha256": "8db903cf133b4603be0b78e31fec74d49b02277447be70e03a08ccd9b9d769c1"
+  },
+  "official_2hg_rules_verification.md": {
+    "bytes": 3255,
+    "sha256": "a5f8ef10863364719d04bd88009a181b336cfde3e6a646ac3a3a7c77eca7a002"
+  },
+  "organizer_decisions.csv": {
+    "bytes": 2555,
+    "sha256": "28eb98fc6ec2102af2fc81d17238cac8e8f7d7362a2a3364fb1d15b8b73bc85b"
+  },
+  "point_price_changes.csv": {
+    "bytes": 34981,
+    "sha256": "09d1f90dc0dba7edfa0ed34c9e397b9efbd0465e4497a78a0eb1405305b12cdf"
+  },
+  "proposed_league_legality_policy.md": {
+    "bytes": 2731,
+    "sha256": "52994e013bc7669862e97c362b0a1025b9020c76a7d5ee9acb946d7bbc9ccafd"
+  },
+  "proposed_team_budget_analysis.md": {
+    "bytes": 1612,
+    "sha256": "4ffa0ee5a237ed160033a62b60412748db91f7f417833ee39692e5e137688a6b"
+  },
+  "reproducibility_results.json": {
+    "bytes": 79,
+    "sha256": "72c2eb9760e8ef97e9fc5013d0b5523028cf39fc99587f8db0cdc59c4bbabee8"
+  },
+  "score_distribution_comparison.md": {
+    "bytes": 3232,
+    "sha256": "c4adc1ac3abe78ffc8459fe48bed5702ae2fab8d72e63c8c520c21436d8ea14b"
+  },
+  "scoring_config.json": {
+    "bytes": 9973,
+    "sha256": "4d8c10cb5eb3bb70d0b1e067e48deead40d92f0c7bd8dc001a19aa508d8f0ce6"
+  },
+  "single_card_sensitivity.csv": {
+    "bytes": 3780,
+    "sha256": "d45c737c40f392a25a5e763b00519afeacd581c990df14e1051e0f1780332caf"
+  },
+  "source_provenance.json": {
+    "bytes": 5298,
+    "sha256": "4c4cf82d86f1ac9e06a52006d833811e24650405068477857039058660883bd1"
+  },
+  "team_combo_database.csv": {
+    "bytes": 35663,
+    "sha256": "b2f5629f72f0fca4754a9c0530c96ca3d52317816d581020713e2cf8595a42ee"
+  },
+  "team_combo_rules_analysis.md": {
+    "bytes": 8611,
+    "sha256": "4b8d36b90d3a4ab2e3fe267a6a75a67c0b7121dfbc01d51b0241c6b6e915e25e"
+  },
+  "test_results.json": {
+    "bytes": 312,
+    "sha256": "a947297f16cb97fc0f3541ac14ae893d62bc363ff03a344ab1ee91e047a425e0"
+  },
+  "two_hg_edge_case_matrix.csv": {
+    "bytes": 11853,
+    "sha256": "d261a2be5893fd3b93f690055b7b07ec7977326928cb461dc42610f68d36d592"
+  },
+  "two_hg_power_outliers.md": {
+    "bytes": 1539,
+    "sha256": "aec435a1e24a9296b6b94e934bb4c365e65dc84696098d1173a6acb2622e7039"
+  },
+  "unpointed_high_power_cards.csv": {
+    "bytes": 745133,
+    "sha256": "0efde1421b53fc888fff4fbdd61a4d4207c5ca5ed0f027f5f8e9790c62baa97a"
+  },
+  "updated_cohort_benchmarks.csv": {
+    "bytes": 461504,
+    "sha256": "07d3f597012b4ecc947ed39f1920a9d081a9a119d20f3f9933f076e02b78b476"
+  },
+  "verify_reproducibility.py": {
+    "bytes": 739,
+    "sha256": "5140f440d8e9be1c5674f0092832f7101f3ac4a913b12f84d956456b7a52c6d3"
+  }
+}
