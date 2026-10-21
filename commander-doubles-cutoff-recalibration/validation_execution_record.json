@@ -4,7 +4,7 @@
     "generated_files": 86,
     "observed_result": "passed_exact_byte_comparison"
   },
-  "evidence": "Observed terminal executions during this task; each suite printed OK. Counts cross-checked against test methods.",
+  "evidence": "Observed terminal suite summaries during this task: 37,4,101,38 tests, each OK. Static counts are also supplied; the prior audit adds50 anchor tests dynamically, so static AST counting alone understates its101 executed tests.",
   "execution_date_local": "2026-10-20",
   "old_directories_modified": false,
   "schedule_activated": false,
@@ -14,27 +14,32 @@
       "command": "python commander-top1000-power-ranking/test_backend.py",
       "observed_result": "passed",
       "source_sha256": "eabce02c7573d21681ceb84c8650f1d86270ac6e1c3860a5092c388939f8aaf9",
+      "statically_declared_test_methods": 37,
       "tests_run": 37
     },
     {
       "command": "python commander-top1000-power-ranking/test_cli.py",
       "observed_result": "passed",
       "source_sha256": "9467ea5fbdd473749edae290ddb60fa6cdd9a4932648648585c7905bea1e70ca",
+      "statically_declared_test_methods": 4,
       "tests_run": 4
     },
     {
       "command": "python commander-doubles-final-audit/audit_tests.py",
+      "dynamically_generated_anchor_tests": 50,
       "observed_result": "passed",
       "source_sha256": "ac55ff0ab092affde85c1777e632656a3d6dc2bdf3c1e59d86bb3e860c36254e",
-      "tests_run": 51
+      "statically_declared_test_methods": 51,
+      "tests_run": 101
     },
     {
       "command": "python commander-doubles-cutoff-recalibration/audit_tests.py",
       "observed_result": "passed",
       "source_sha256": "507d8d02c0c46544a91ea5366280e5fff427b9943a2a27f37104bd2e4c0d1c1f",
+      "statically_declared_test_methods": 38,
       "tests_run": 38
     }
   ],
   "timezone": "America/Phoenix",
-  "total_tests": 130
+  "total_tests": 180
 }
