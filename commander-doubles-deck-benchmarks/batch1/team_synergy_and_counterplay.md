@@ -1,0 +1,38 @@
+# Team synergy and counterplay — season0-proposed
+
+These are new 2HG adaptations, not tournament-tested pairings. Teams have shared priority and phases (805.5, 805.7, 805.8), but separate objects/resources (810.5). The rules companion contains exact Oracle identities and controller assumptions. No extra team/combo construction fee is charged. Neither point compliance nor these conditional lines grants league gameplay approval.
+
+## A: two distinct routes under shared protection
+
+A1 primarily wins with its own Oracle plus Consultation/Pact. A2 makes arbitrary own mana using Druid/Swift, Tender/Freed, Basalt/Zirda or Kinnan, or Caller/Helix/Crypt/Bird; own command-zone Thrasios draws its own deck and own Ballista finishes. With only G, cast green tutors for a green answer when needed before conversion; don't pretend G pays every white/blue answer. Midgame Tymna can count opponents hit by either teammate; Kraum sees each opposing head’s second spell. Bruse buffs only A2 creatures, while life gained reaches the shared pool. A1’s discard/counters cover engines; A2’s Kutzil/Teferi can protect both heads’ friendly turn. Both heads have Chant, each targeting one opponent, for six combined construction points.
+
+Weaknesses: A1’s premium Oracle package consumes resources that could accelerate development. A2’s dorks expose it to sweepers and creature-ability hate. Torpor Orb stops Oracle but not all A2 mana production; Totem can stop Thrasios/Ballista conversion even if noncreature Swift Druid still taps. Land channels and explicit removal matter. A1 own Tainted Pact requires unique names; its final main deck meets that. Ordinary Cyclonic Rift overload also bounces A2 nonland permanents, so use a targeted bounce unless the reset justifies the friendly losses.
+
+## B: shared combat plus independent Pod
+
+B1 presents Warrior pressure, Demonic Tutor access and combat untap engines; B2 can supply genuine cross-controller untaps from its own connecting creatures. Derevi may target B1 lands or mana creatures. B1 then pays its own WUBRG, and Najeela adds a shared combat. Neither hands nor mana pools merge. The illustrated Bear Umbra line only needs one specific B2 Derevi connection per cycle once four B1 lands and a B1 Bird are configured correctly. Without that setup, a bare Derevi plus Najeela pair is not automatically infinite. Own Najeela tokens entering attacking are not declared attackers for Repository triggers.
+
+B2 retains an independent Preston/Guardian engine and a Finale/Ballista conversion. Pod sacrifices its own creatures only; own Derevi can return through its command-zone ability. Preston copies are 0/1, so a pile of tokens alone is not lethal. B1 also has a same-controller Dualcaster/Twinflame loop: cast Twinflame targeting an own creature, cast Dualcaster copying Twinflame to target own Dualcaster, repeat finite many hasty copies. Combat or own Bombardment converts them; pay the full own 2R+1R and hold appropriate original spell/target. Cross-head split of those two spells is not assumed to self-sustain.
+
+Weaknesses: defenders can deny the critical Derevi connection; killing Najeela before activation or removing Umbra disrupts the team loop. Wipes punish both heads. Orb attacks B2 ETB engines, Totem attacks creature activations, and global taxes can interfere with both. B2 Glen/Vizier counters noncreature spells only and costs U every cycle; it does not counter opposing commander ninjutsu or every creature. The creature combo has a different combat exposure from Najeela, but these are not fully independent hate profiles.
+
+## C: coordinated libraries, independent Ninja triggers
+
+C1 is the leaner tempo/Oracle head; C2 retains high flips, Doomsday and Nanogene multipliers. One Symmetry targets two friendly players and each searches their own library. With one Yuriko connection per head, Draco16 yields 32 opposing shared life loss per reveal, 64 combined. The card is free in this snapshot. The sequence needs both Dracos still available, correct independent UB and B, successful search and unblocked damage. This is a concerning inexpensive strategy, not proof of a likely turn-three win.
+
+C2 Caller permits its own Nanogene after blockers, when small attackers are already unblocked. C2 targets its own Yuriko. C1/C2/enemy creatures can all become copies, but each head controls its own triggers; n own Yuriko copies and m own connecting Ninjas create n*m triggers for that head. Opposing creatures become black copies too, so pre-block conversion makes Cover of Darkness fear inadequate. Own Throne chosen Ninja increases only own other Ninja creature triggers. Infiltrator’s mandatory draw needs deliberate stack ordering to avoid consuming the next planned flip; Deep Hours can be declined. C2 Doomsday is a separate line requiring two own Ninja connections and an appropriate five-card pile; it halves the shared friendly life once. Extra turns are team turns, making C1 Time Warp and C2 Mastery/Trespass offensive team resources.
+
+Weaknesses: both commanders share a name and hence Pithing Needle can stop both commander-ninjutsu abilities. Needle is a relevant opposing card, not secretly added to these submitted lists. Drannith does not prevent ninjutsu; Cursed Totem applies to creature permanents, not Yuriko’s card ability in CZ. Neither Narset nor Notion Thief stops Yuriko putting a revealed card in hand. Remove Ninjas before damage, use damage prevention, counter search/trigger spells or abilities, or disrupt top cards at the right time. Board wipes and repeated commander removal pressure both heads. C2’s large cards impose real opening-hand and casting costs, quantified as card-profile diagnostics rather than fabricated win rates.
+
+## Adversarial matchup probes
+
+These are conditional desk checks with specified resources, not games played or matchup percentages. `stress_test.csv` records them in machine-readable form.
+
+- Against C’s Symmetry, A1 can use its own Force plus another blue card. Alternatively own Aven Mindcensor with 2W and flash restricts opposing searches to four cards; this removes a guarantee, not necessarily every successful Draco search. Remain within actual timing and mana.
+- Against A2 Caller/Crypt, B2 Haywire Mite can exile Crypt in response to bounce when it is a noncreature artifact on battlefield, with B2’s own G and creature activation available. Ouphe alone is insufficient: casting Crypt and Caller/Bird activations are not artifact activations. Interact with Caller/Bird, Helix or Crypt instead.
+- Against B’s combat loop, C1 can bounce Derevi before damage using Chain of Vapor with own U. B2 can recast/redeploy later, but the specific current combat trigger is denied. If B1 already has a sufficient self-sustaining Nature’s Will/Repository line, removing allied Derevi alone may not suffice.
+- Against B2 Pod, A1 Dress Down or a genuine Torpor Orb stops new ETB triggers while active. Dress Down also strips creature abilities and is temporary; plan exact timing. It is not a universal answer to Najeela’s already-resolving ability or all spells.
+- All three teams carry land-channel answers on applicable heads. Spell-only Kutzil/Teferi restrictions do not stop activation from hand. A played land is not an available channel card.
+- Both B commanders and both C commanders consume zero CZ points; their independently legal combinations are allowed in this test. This is deliberate exposure of the schedule’s free-command-zone risk, not a secret price correction.
+
+No global optimum, actual win percentage, or desired-Bracket-3 certification is claimed. These six complete decks are reproducible strong candidates for organizer review and real table testing.

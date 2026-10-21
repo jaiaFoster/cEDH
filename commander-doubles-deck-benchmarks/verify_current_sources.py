@@ -1,0 +1,12 @@
+"""Small explicit online freshness check; offline build consumes its frozen result."""
+import gzip,hashlib,json,pathlib,re,requests
+from pricing import SOURCE_COMMIT
+HERE=pathlib.Path(__file__).resolve().parent;ROOT=HERE.parent;BASE=ROOT/'commander-doubles-cutoff-recalibration'
+def verify():
+ s=requests.Session();s.headers.update({'User-Agent':'CommanderDoublesResearch/1.0 (noncommercial research)'})
+ bulk=s.get('https://api.scryfall.com/bulk-data',timeout=45);bulk.raise_for_status();record=next(r for r in bulk.json()['data'] if r['type']=='oracle_cards');pin=json.loads((BASE/'data/source_snapshot_manifest.json').read_text());assert record['updated_at']==pin['oracle_bulk']['updated_at'],'New Oracle snapshot requires explicit refresh and legality review; do not silently score stale identities.'
+ landing=s.get('https://magic.wizards.com/en/rules',timeout=45);landing.raise_for_status();url=pin['official']['comprehensive_rules']['url'];cr=s.get(url,timeout=45);cr.raise_for_status();digest=hashlib.sha256(cr.content).hexdigest();assert digest==pin['official']['comprehensive_rules']['sha256'],'Changed rules require manual review'
+ decoded=landing.text.replace('&amp;','&');assert '20260925' in decoded,'Rules landing no longer links pinned edition; manual update required'
+ r={'as_of_local_date':'2026-10-20','timezone':'America/Phoenix','source_commit':SOURCE_COMMIT,'oracle_bulk_metadata_url':'https://api.scryfall.com/bulk-data','oracle_updated_at':record['updated_at'],'oracle_matches_pinned_version':True,'pinned_oracle_sha256':hashlib.sha256((BASE/'data/oracle_current.jsonl.gz').read_bytes()).hexdigest(),'rules_landing_url':'https://magic.wizards.com/en/rules','rules_url':url,'rules_sha256':digest,'current_link_matches':True,'october_rulebreaker_freshness_gap':'Previously identified current CR/announcement discrepancy remains a limitation. No unsupported rulebreaker decks included.','Moxfield_access':'Six public v3 list endpoints200; webpage primer prose loading. Tested one primer URL endpoint404, no bypass. Raw responses local-only; factual lists frozen.','price_override_source_sha256':hashlib.sha256((BASE/'organizer_premium_boundary_decisions_2026-10-20.md').read_bytes()).hexdigest()}
+ p=HERE/'batch1/research/current_source_checks.json';p.write_text(json.dumps(r,indent=2,sort_keys=True)+'\n');print(json.dumps({'oracle_match':True,'CR_match':True}))
+if __name__=='__main__':verify()

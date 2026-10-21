@@ -1,0 +1,9 @@
+acting_deck,target_deck,threat_or_resource,response_or_probe,prerequisites,conditional_result,method,automatic_gameplay_certification
+A1,C1,Scheming Symmetry,Force of Will,A1 has Force plus another own blue card at Symmetry window,Counters search spell unless answered; no pooled pitch cards.,desk_check_not_played_match,False
+A1,C2,Doomsday,Aven Mindcensor,A1 can flash2W before search,"Restricts search to top4, not an unconditional fail; graveyard selection may remain.",desk_check_not_played_match,False
+B2,A2,Tormod's Crypt,Haywire Mite,"B2 has own G, Mite untapped activation not needed, no creature-ability suppression; Crypt on battlefield",Exile Crypt in response to bounce/cast-loop window; Ouphe alone would not stop loop.,desk_check_not_played_match,False
+C1,B2,"Derevi, Empyrial Tactician",Chain of Vapor,C1 has own U before combat damage,Bounce connecting Derevi to deny its current combat untap; other self-sustaining B1 engines may remain.,desk_check_not_played_match,False
+A1,B2,"Preston, the Vanisher",Dress Down,A1 holds1U and timing before new relevant ETBs,Removes creature abilities/ETB triggers temporarily; does not erase already-existing triggers.,desk_check_not_played_match,False
+B2,C1,"Yuriko, the Tiger's Shadow",Drannith Magistrate,Drannith on battlefield,FAILS to prohibit commander ninjutsu; ability is not casting.,desk_check_not_played_match,False
+A2,B2,"Kutzil, Malamet Exemplar","Boseiju, Who Endures",Boseiju in A2 hand with own mana,Boseiju cannot target ordinary Kutzil creature; use Otawara for that eligible target instead.,desk_check_not_played_match,False
+C2,C1,Cover of Darkness,Nanogene Conversion,C2 casts before blockers,FAILS assumed evasion: opposing creatures also become black Yuriko copies; cast after blockers with own Caller instead.,desk_check_not_played_match,False
