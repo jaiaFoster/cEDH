@@ -1,0 +1,61 @@
+{
+  "as_of": "2026-10-20",
+  "input_sha256": {
+    "commander-doubles-cutoff-recalibration/adversarial_inputs.py": "f0270914a68f1e0d4f045ec6dbcd7ea97fd30cefa52d0a358e5666f9da28772f",
+    "commander-doubles-cutoff-recalibration/audit_tests.py": "507d8d02c0c46544a91ea5366280e5fff427b9943a2a27f37104bd2e4c0d1c1f",
+    "commander-doubles-cutoff-recalibration/recalibrate.py": "5411fd02f4d6728ca6bbb3f4358e7022fdbc18b4e1b8a8081c2680d51c6d8f19",
+    "commander-doubles-cutoff-recalibration/recalibrated_backend.py": "cbdc6c098bb72eb326b211b5de9366fb90c4ffbf31c019fe5d365a8f60e89295",
+    "commander-doubles-cutoff-recalibration/review_inputs.py": "465ed673bfee3a2697ec646117507b03c1555f247e041ffae9d9f8df6281e2ae",
+    "commander-doubles-cutoff-recalibration/rules_arithmetic.py": "9e23b1386476daba7a5baf568e157791bf2e36dd204f33527426813f44ca890d",
+    "commander-doubles-cutoff-recalibration/rules_cache.py": "af06749e894653aee8028d559b00348ee9999ec496ae43f60a8fbb7aab56d171",
+    "commander-doubles-final-audit/audit_inputs.json": "50f5274a2ac252367308483b398afc7b1a90af05f7066d5d3c8ba5560d5dac9a",
+    "commander-doubles-final-audit/organizer_calibration_2026-10-20.md": "6e5f70e987667ca78a434bc546c18372bd33b1232bd70287550dc920bb1b3441",
+    "commander-league-card-point-calibration/data/clean/precons.json": "73b33e5a5edaa95a2a8a1993a4daeb064047031e2f18847b2de8d490d27d1be7",
+    "commander-top1000-power-ranking/candidate_inventory.csv": "a559cdbb62c43845c907e2b1c5963af907150d98ded568c8380149670e65c211",
+    "data/tournament_snapshots/topdeck/manifest.json": "3d25328689f6cdd5fa25f6e4f262b8aa6cc84c3bcadb7685c323c080e7cd5e7d"
+  },
+  "licenses": "Scryfall service data is not an invented open-data license; Magic card text and official rules © Wizards. Prior project source/license notices preserved. Noncommercial local research; no images/market prices acquired.",
+  "method_limitations": [
+    "All frozen impact coefficients are judgment, not measured power.",
+    "No new outcome labels or validated paired 2HG data.",
+    "All 9,610 candidate routes reevaluated, not 9,610 new expert ratings.",
+    "Known current identities outside candidate universe zero and explicitly unreviewed.",
+    "No cohort label used to fit prices or determine cutoff."
+  ],
+  "official": {
+    "banned_list": {
+      "bytes": 222570,
+      "sha256": "0623b7ffc55599dfc943a2f6c2b6c82f7a1b0c589be3fd4652d7fdbde88742ed",
+      "url": "https://magic.wizards.com/en/banned-restricted-list"
+    },
+    "comprehensive_rules": {
+      "bytes": 977752,
+      "sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    },
+    "october_bulletin": {
+      "bytes": 178281,
+      "sha256": "b5d7ef19491197c0b9a93f6800211e0fc6d91718799714197ff41944b3bc0da8",
+      "url": "https://magic.wizards.com/en/news/announcements/mystery-booster-commander-edition-update-bulletin"
+    },
+    "rules_landing": {
+      "bytes": 150629,
+      "sha256": "439dff6ba20396933767a4490f42b17824cc9b2ee6fab0db2f5128fa7675728b",
+      "url": "https://magic.wizards.com/en/rules"
+    },
+    "two_hg_format": {
+      "bytes": 386051,
+      "sha256": "6c35a6305b4014b2f3f10dcd8ba42025d29d7ead1c4a095a008545fe2c6eae23",
+      "url": "https://magic.wizards.com/en/formats/two-headed-giant"
+    }
+  },
+  "oracle_bulk": {
+    "download_sha256": "3d38a800eec6b24a7418d52f541a1cf94e5185d3988f551db57622007a25e6e7",
+    "normalized_sha256": "219ddae24c5ff5703dc6ceaf7f7caed0ec1d4b52eab05712b574dbcb2b0b9d6a",
+    "records": 38940,
+    "updated_at": "2026-10-20T21:02:00.122+00:00",
+    "url": "https://data.scryfall.io/oracle-cards/oracle-cards-20261020210200.jsonl.gz"
+  },
+  "source_inventory": "../commander-card-power-research-v1/source_inventory.csv",
+  "starting_commit": "61fe3cbba32443e083af9d96bd7fe79405e79a8d"
+}

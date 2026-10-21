@@ -1,0 +1,1210 @@
+[
+  {
+    "cards_A": [
+      "Chain of Smog"
+    ],
+    "cards_B": [
+      "Witherbloom Apprentice"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "T2 B casts Apprentice with two lands; A casts Chain targeting B. B copies targeting self repeatedly. Each B copy triggers B magecraft; copied spell need not be cast.",
+    "disruption": "Remove Apprentice or counter original/copy/trigger before lethal; silence alone does not stop activated or triggered abilities.",
+    "estimated_mana_investment": "A 1B; B BG",
+    "id": "C01",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "ea14c26b-bf2f-48b4-b879-6e63069ded1f"
+    ],
+    "oracle_ids_B": [
+      "696f554d-0485-48a5-9273-3f6fb7d16a5d"
+    ],
+    "outcome": "Repeatable team drain; 30 B-copy triggers drain 60 opponent shared life.",
+    "rank": 1,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "B controls Apprentice; A targets B; B chooses every self-copy. Empty hand is allowed.",
+    "rules_citations": "109.5; 603.2; 707.10; 810.8a; 810.9",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Dualcaster Mage"
+    ],
+    "cards_B": [
+      "Twinflame",
+      "Memnite"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "T3 B casts Twinflame targeting own seed; A flashes Dualcaster and copies original, changing A-copy target to A Dualcaster. Each A token repeats targeting an A token. End by retaining original B target on last A copy (now illegal for A); original B spell then resolves.",
+    "disruption": "Counter original, remove first Dualcaster before copy resolution, ETB suppression, mass removal or combat prevention.",
+    "estimated_mana_investment": "A 1RR; B 1R; seed 0",
+    "id": "C02",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "8eb7c0a5-6190-40de-b473-2d1daa3bbe28"
+    ],
+    "oracle_ids_B": [
+      "83cf1169-5853-4332-b897-7b17d72d76ab",
+      "7663ac7c-1de3-4250-b96a-fae9dbd66a27"
+    ],
+    "outcome": "Arbitrarily many hasty Dualcaster tokens controlled by A.",
+    "rank": 2,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "B has seed creature; original B Twinflame remains on stack.",
+    "rules_citations": "109.5; 707.10; 707.10c; 805.10",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Rest in Peace"
+    ],
+    "cards_B": [
+      "Helm of Obedience"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "RIP exiles every would-be graveyard card, so Helm stopping condition never occurs. Target mills entire library. Force a draw or wait for their next draw; empty library alone is not immediate loss.",
+    "disruption": "Remove RIP before resolution; counter activation; shuffle/replacement interactions; prevent draw loss.",
+    "estimated_mana_investment": "A 1W; B 4 plus activation X>=1",
+    "id": "C03",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "087f9ad7-e74f-40e2-8102-1ed2925d0418"
+    ],
+    "oracle_ids_B": [
+      "16cadebf-c484-41f8-9e38-5c2c528f5b54"
+    ],
+    "outcome": "Empty one opposing library; failed draw eliminates its whole team.",
+    "rank": 3,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Global graveyard replacement applies to targeted opponent; no library replacement interference.",
+    "rules_citations": "614.6; 701.17; 704.5b; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Leyline of the Void"
+    ],
+    "cards_B": [
+      "Helm of Obedience"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "X>=1 Helm targets C; Leyline replacement stops graveyard entries. Failed C draw subsequently loses opposing team.",
+    "disruption": "Enchantment removal, activation counter, special library replacement.",
+    "estimated_mana_investment": "A 2BB or opening hand; B 4+X",
+    "id": "C04",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "f4e32fc1-1b8d-441e-8e76-71f19f98e925"
+    ],
+    "oracle_ids_B": [
+      "16cadebf-c484-41f8-9e38-5c2c528f5b54"
+    ],
+    "outcome": "Same opposing-library conversion as C03.",
+    "rank": 4,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Leyline A applies to C/D graveyards, not B's.",
+    "rules_citations": "109.5; 614; 704.5b; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Dauthi Voidwalker"
+    ],
+    "cards_B": [
+      "Helm of Obedience"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Helm targets C; Dauthi replaces all graveyard cards with exile. Follow with draw.",
+    "disruption": "Creature removal before activation resolution, ability suppression, replacement effects.",
+    "estimated_mana_investment": "A BB; B 4+X",
+    "id": "C05",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "f1c2dbe2-fbe0-4058-bdf1-91d1b1832786"
+    ],
+    "oracle_ids_B": [
+      "16cadebf-c484-41f8-9e38-5c2c528f5b54"
+    ],
+    "outcome": "Opposing-library conversion, with void counters.",
+    "rank": 5,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Dauthi remains A-controlled through Helm resolution; C/D opponents to both.",
+    "rules_citations": "109.5; 614; 704.5b; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Painter's Servant"
+    ],
+    "cards_B": [
+      "Grindstone"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Painter sets common color. Grindstone repeats its mill-two process through library; follow with failed draw. Shuffle-trigger creatures require additional response/review.",
+    "disruption": "Remove Painter before activation resolves; counter activation; graveyard/library replacements.",
+    "estimated_mana_investment": "A 2; B 1+3 activation",
+    "id": "C06",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "baf93873-35e6-4bf2-bdcc-78a5206422fb"
+    ],
+    "oracle_ids_B": [
+      "97560adc-814e-450c-9ca7-f9364e910a0b"
+    ],
+    "outcome": "Empty targeted library; failed draw wins team game.",
+    "rank": 6,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Chosen color applies in libraries; no unresolved replacement/shuffle rescue.",
+    "rules_citations": "105.3; 614; 704.5b; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Mindcrank"
+    ],
+    "cards_B": [
+      "Bloodchief Ascension"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A Mindcrank responds to opponent life loss by milling. B Ascension sees C/D cards entering graveyard and causes loss2. A Mindcrank repeats. Each trigger uses correct opposing player.",
+    "disruption": "Remove either engine, replace graveyard entries, prevent life loss, counter essential trigger.",
+    "estimated_mana_investment": "A 2; B B; counters plus seed",
+    "id": "C07",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "c73c1d91-0163-49c6-832a-b9327e7a2c9b"
+    ],
+    "oracle_ids_B": [
+      "d5ea905b-4bb6-48d0-9082-c472703db550"
+    ],
+    "outcome": "Deterministic mill/life-loss chain to opposing team loss.",
+    "rank": 7,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "B Ascension already has >=3 quest counters; initial opponent life loss or graveyard card; library cards and life remain.",
+    "rules_citations": "603; 109.5; 810.9; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Drannith Magistrate"
+    ],
+    "cards_B": [
+      "Knowledge Pool"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Opponent hand spell is exiled by Pool; replacement cast from exile is prohibited. C/D also cannot cast commander/nonhand spells. A/B can use Pool normally.",
+    "disruption": "Remove engines with abilities/channel/land abilities, cast triggers can still act; counter Pool ETB/cast trigger; attack Magistrate.",
+    "estimated_mana_investment": "A 1W; B 6",
+    "id": "C08",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "aadd10d0-6dd0-4bdc-8d93-ff08e29a5863"
+    ],
+    "oracle_ids_B": [
+      "cb53bd72-dee8-46fa-b0f9-1eee3a99379a"
+    ],
+    "outcome": "Opponent hand-spell/nonhand-casting lock; not a total rules lock.",
+    "rank": 8,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A Magistrate affects C/D only; B Pool global.",
+    "rules_citations": "101.2; 601.2; 805.5; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Drannith Magistrate"
+    ],
+    "cards_B": [
+      "Possibility Storm"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Storm triggers on C hand spell and exiles it; C cannot cast revealed replacement from exile. Friendly B not an opponent of A.",
+    "disruption": "Activated abilities, channel, removal before lock, cast-trigger effects remain.",
+    "estimated_mana_investment": "A 1W; B 3RR",
+    "id": "C09",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "aadd10d0-6dd0-4bdc-8d93-ff08e29a5863"
+    ],
+    "oracle_ids_B": [
+      "8586169f-cb8c-4424-ba64-a7c1cc00680e"
+    ],
+    "outcome": "Opponents' spells from hand are exiled without permitted replacement spell.",
+    "rank": 9,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A Magistrate and B Storm active.",
+    "rules_citations": "101.2; 601.2; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Teferi, Mage of Zhalfir"
+    ],
+    "cards_B": [
+      "Knowledge Pool"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Pool instruction to cast occurs while its trigger resolves; C/D cannot cast then under Teferi's sorcery timing restriction. Friendly B can cast.",
+    "disruption": "Activated abilities, channel, Teferi removal; counters before both resolve.",
+    "estimated_mana_investment": "A 2UUU; B 6",
+    "id": "C10",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "2b6cbd55-5adc-4a34-ac45-8531705a7ee1"
+    ],
+    "oracle_ids_B": [
+      "cb53bd72-dee8-46fa-b0f9-1eee3a99379a"
+    ],
+    "outcome": "Opponent hand-spell timing lock.",
+    "rank": 10,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Teferi controlled by A; Pool by B.",
+    "rules_citations": "101.2; 117; 601.2; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Intruder Alarm"
+    ],
+    "cards_B": [
+      "Steward of Solidarity"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B taps/exerts Steward to create token. Token entering triggers A Alarm, untapping B Steward; exert does not prohibit an effect from untapping it. Repeat.",
+    "disruption": "Remove Alarm/Steward, suppress ETB/tap abilities; tokens alone are not immediate win.",
+    "estimated_mana_investment": "A 2U; B 1W",
+    "id": "C11",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "1e943e04-e213-4781-b1a7-935aad8790e1"
+    ],
+    "oracle_ids_B": [
+      "dcaf3c6f-06e2-4762-82aa-625113e375a1"
+    ],
+    "outcome": "Arbitrarily many Warrior tokens; later combat or ETB payoff needed.",
+    "rank": 11,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Steward has been controlled since turn began or has haste; Alarm global untap.",
+    "rules_citations": "302.6; 701.43a,b; 603; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Intruder Alarm"
+    ],
+    "cards_B": [
+      "Presence of Gond",
+      "Llanowar Elves"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B taps enchanted creature for Elf. A Alarm untaps all creatures. Repeat. Token/controller B; Alarm A does not transfer control.",
+    "disruption": "Aura/creature/Alarm removal, ETB suppression; combat timing and haste matter.",
+    "estimated_mana_investment": "A 2U; B 2G plus creature",
+    "id": "C12",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "1e943e04-e213-4781-b1a7-935aad8790e1"
+    ],
+    "oracle_ids_B": [
+      "ab42398c-f0a1-4b94-ac5f-b8768e1b4e05",
+      "68954295-54e3-4303-a6bc-fc4547a4e3a3"
+    ],
+    "outcome": "Arbitrarily many Elf tokens.",
+    "rank": 12,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "B creature enchanted by B Gond and able to tap; Alarm A global.",
+    "rules_citations": "109.5; 302.6; 603",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Eldrazi Displacer"
+    ],
+    "cards_B": [
+      "Peregrine Drake"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A pays2C to blink B Drake. It returns tapped under B owner control. B's trigger untaps A's lands. A taps for >3 incl C and repeats; mana never transfers between players.",
+    "disruption": "Remove either creature; counter blink/untap; lands cannot produce needed C or >3.",
+    "estimated_mana_investment": "A 2W plus 2C each cycle; B 4U",
+    "id": "C13",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "9b1f552a-bddc-4fcb-ac67-b4a65b2f48ba"
+    ],
+    "oracle_ids_B": [
+      "0bd67481-6bd9-48d6-92bd-8933b5ea1eae"
+    ],
+    "outcome": "Arbitrarily much A mana with appropriate A lands.",
+    "rank": 13,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A controls lands producing >3 per cycle including C; B owns Drake; Drake ETB chooses A lands.",
+    "rules_citations": "109.5; 603.3a; 810.5; Oracle target up to five lands",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Bloom Tender"
+    ],
+    "cards_B": [
+      "Freed from the Real"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B can untap A Tender, but A cannot spend B mana or activate B Aura. Need a real mana-transfer/control-change mechanism, not shared pool assumption.",
+    "disruption": "Not an executable loop under simple split.",
+    "estimated_mana_investment": "B 2U and U each untap",
+    "id": "C14",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "0c23fefe-9891-4dd8-9bb1-eebdb3274e31"
+    ],
+    "oracle_ids_B": [
+      "03d32ace-dd99-48c6-bcae-9b915d041aef"
+    ],
+    "outcome": "Split setup is finite support, not self-funding infinite mana.",
+    "rank": 14,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A gets creature mana; B controls Aura activated ability and pays U.",
+    "rules_citations": "109.5; 602.2; 810.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_resource_loop"
+  },
+  {
+    "cards_A": [
+      "Sanguine Bond"
+    ],
+    "cards_B": [
+      "Exquisite Blood"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A gain may trigger Bond -> opponent loss -> B Blood gains life. A did not gain that life; chain stops. Either one player controls both or add a genuine cross-trigger engine.",
+    "disruption": "False union; do not assume shared total equates events.",
+    "estimated_mana_investment": "5+5 mana",
+    "id": "C15",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "73089a39-a2f6-4aa2-a058-e6551475153d"
+    ],
+    "oracle_ids_B": [
+      "8f933fae-6c0c-42d7-a817-14760d8285cd"
+    ],
+    "outcome": "Opponent loss gives B life, which does not trigger A Bond.",
+    "rank": 15,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Separate controllers; shared total is not shared gain event.",
+    "rules_citations": "109.5; 603.2; 810.9",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_life_loop"
+  },
+  {
+    "cards_A": [
+      "Heliod, Sun-Crowned"
+    ],
+    "cards_B": [
+      "Walking Ballista"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B Ballista damage gains B life; A Heliod does not trigger for B gain. A team life changes but event ownership stays B.",
+    "disruption": "Consolidate controls or supply genuine extra engine; not proof from union.",
+    "estimated_mana_investment": "3 plus Ballista and lifelink",
+    "id": "C16",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "63e596a2-9126-4af6-8782-c38687d664ad"
+    ],
+    "oracle_ids_B": [
+      "4b515bb0-f275-4400-8032-3173b799ab40"
+    ],
+    "outcome": "No free self-sustaining counters across split controllers.",
+    "rank": 16,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A Heliod, B Ballista; A may grant B Ballista lifelink but life gain belongs to B.",
+    "rules_citations": "109.5; 702.15; 810.9",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_life_loop"
+  },
+  {
+    "cards_A": [
+      "Kinnan, Bonder Prodigy"
+    ],
+    "cards_B": [
+      "Basalt Monolith"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B taps Monolith; A Kinnan does not trigger. No shared mana.",
+    "disruption": "False union.",
+    "estimated_mana_investment": "GU+3",
+    "id": "C17",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "8d11aa49-d4cd-48b1-aa0f-8548fa733416"
+    ],
+    "oracle_ids_B": [
+      "6b8cf2a0-b045-4d91-9d91-c602d40c6237"
+    ],
+    "outcome": "No extra mana from teammate's Monolith.",
+    "rank": 17,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Kinnan only A nonland permanents tapped for mana; B Monolith produces B mana.",
+    "rules_citations": "109.5; 810.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_mana_loop"
+  },
+  {
+    "cards_A": [
+      "Thassa's Oracle"
+    ],
+    "cards_B": [
+      "Demonic Consultation"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B cannot empty A library with own Consultation; A Oracle does not check teammate library.",
+    "disruption": "False union; genuine same-player line remains dangerous.",
+    "estimated_mana_investment": "UU+B",
+    "id": "C18",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "1de1b591-a73f-4974-b507-8c63e07a0868"
+    ],
+    "oracle_ids_B": [
+      "9a1412db-45ad-46ea-8f12-a85d203113d8"
+    ],
+    "outcome": "Consultation empties B library while A Oracle checks A library.",
+    "rank": 18,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Separate player libraries.",
+    "rules_citations": "109.5; 810.5; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_library_win"
+  },
+  {
+    "cards_A": [
+      "Deadeye Navigator"
+    ],
+    "cards_B": [
+      "Peregrine Drake"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Deadeye's soulbond requires both creatures controlled by same player, so simple split does not grant blink to Drake.",
+    "disruption": "False union; Displacer C13 is functional alternative.",
+    "estimated_mana_investment": "4UU+4U",
+    "id": "C19",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "ebef6d84-b724-4a84-bcde-8eb6dc06717d"
+    ],
+    "oracle_ids_B": [
+      "0bd67481-6bd9-48d6-92bd-8933b5ea1eae"
+    ],
+    "outcome": "Soulbond cannot pair across controllers.",
+    "rank": 19,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A Deadeye and B Drake.",
+    "rules_citations": "702.95a,c; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_soulbond"
+  },
+  {
+    "cards_A": [
+      "Tivit, Seller of Secrets"
+    ],
+    "cards_B": [
+      "Time Sieve"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Resources separate. A artifact tokens cannot pay B's sacrifice-five-artifacts cost without actual control transfer.",
+    "disruption": "False union.",
+    "estimated_mana_investment": "3WUB+UB",
+    "id": "C20",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "f4e0b557-4f80-4b7c-bfcc-6d4c468faf2e"
+    ],
+    "oracle_ids_B": [
+      "3da5977a-36d4-4f32-ab9b-8b93809d818d"
+    ],
+    "outcome": "B cannot sacrifice A's Clues/Treasures to B Sieve.",
+    "rank": 20,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Tivit A creates A tokens; B controls Sieve.",
+    "rules_citations": "109.5; 701.21a; 810.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_sacrifice"
+  },
+  {
+    "cards_A": [
+      "Pir, Imaginative Rascal"
+    ],
+    "cards_B": [
+      "Toothy, Imaginary Friend"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B draw puts counter on B Toothy, increased by A Pir to2. B receives Toothy leave draw. Explicit team wording is the exception.",
+    "disruption": "Creature removal; deny draws; not an infinite combo alone.",
+    "estimated_mana_investment": "A 2G; B 3U",
+    "id": "C21",
+    "legality_concern": "Review prerequisites; no automatic point surcharge.",
+    "oracle_ids_A": [
+      "7683c2b2-a06f-4691-9cc5-1968dc032885"
+    ],
+    "oracle_ids_B": [
+      "41d6cce0-b852-4d0e-aee2-081df13dd9b8"
+    ],
+    "outcome": "Pir enhances teammate Toothy counters; no automatic infinite draw.",
+    "rank": 21,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Pir explicitly says permanents your team controls.",
+    "rules_citations": "109.5; 614; 810.5; explicit Oracle team wording",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Silence"
+    ],
+    "cards_B": [
+      "Thassa's Oracle",
+      "Demonic Consultation"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A Silence resolves; B casts Oracle and responds to B ETB with B Consultation. No teammate casting prohibition. No protection from abilities/stack spells.",
+    "disruption": "Counter Silence first; triggered/activated disruption or uncounterable effects still possible.",
+    "estimated_mana_investment": "A W; B UU+B",
+    "id": "C22",
+    "legality_concern": "Review prerequisites; no automatic point surcharge.",
+    "oracle_ids_A": [
+      "8aed54cb-d1bb-45ad-adbe-38e55d84ff31"
+    ],
+    "oracle_ids_B": [
+      "1de1b591-a73f-4974-b507-8c63e07a0868",
+      "9a1412db-45ad-46ea-8f12-a85d203113d8"
+    ],
+    "outcome": "A protects B's own-library win against both opposing spell casters.",
+    "rank": 22,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Oracle and Consultation BOTH B; Silence A resolves first.",
+    "rules_citations": "109.5; 805.5; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Grand Abolisher"
+    ],
+    "cards_B": [
+      "Thassa's Oracle",
+      "Demonic Consultation"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A Abolisher protects shared turn while B executes same-controller line; opposing lands/planeswalkers and allowed triggers remain.",
+    "disruption": "Remove Abolisher before turn, land/planeswalker abilities, triggers, counter engine spells before protection.",
+    "estimated_mana_investment": "A WW; B UU+B",
+    "id": "C23",
+    "legality_concern": "Review prerequisites; no automatic point surcharge.",
+    "oracle_ids_A": [
+      "c749f23c-40c0-4159-b84c-a70cbb062c14"
+    ],
+    "oracle_ids_B": [
+      "1de1b591-a73f-4974-b507-8c63e07a0868",
+      "9a1412db-45ad-46ea-8f12-a85d203113d8"
+    ],
+    "outcome": "Shared-turn asymmetric protection supports teammate win.",
+    "rank": 23,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A own turn is shared with B; prohibit specified opposing actions only.",
+    "rules_citations": "805.4; 805.5; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Angel's Grace"
+    ],
+    "cards_B": [
+      "Heartless Hidetsugu"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A Grace resolves, then B taps Hidetsugu. Each opposing head takes half pool (30 at60); team loses. A team cannot lose while Grace applies. At odd59, 29+29 leaves1, so not lethal.",
+    "disruption": "Counter Grace, remove/tap Hidetsugu, alter pool parity, damage prevention; Grace expires end of turn.",
+    "estimated_mana_investment": "A W; B 3RR plus tap",
+    "id": "C24",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "66ca8a60-e028-4a5f-8177-860b888cb9d1"
+    ],
+    "oracle_ids_B": [
+      "b68e965a-96f4-447a-99be-35dbd27846e9"
+    ],
+    "outcome": "At even60 opposing team can take30+30 and lose; friendly cannot-lose applies teamwide.",
+    "rank": 24,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "B Hidetsugu able to tap; opponent pool even; damage/loss not prevented.",
+    "rules_citations": "810.8a; 810.9; 704.5; 302.6",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Teferi's Protection"
+    ],
+    "cards_B": [
+      "Heartless Hidetsugu"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A Protection phases only A permanents and freezes shared life. B unphased Hidetsugu activates; B's damage cannot change friendly pool. Opponents take two half-pool damage events.",
+    "disruption": "Counter Protection, parity changes, opposing prevention; poison/commander damage/explicit loss not blanket protected.",
+    "estimated_mana_investment": "A 2W; B 3RR plus tap",
+    "id": "C25",
+    "legality_concern": "Review repeatability/early win or lock separately; points never authorize prohibited play.",
+    "oracle_ids_A": [
+      "0d4ecdb1-ec90-497f-a7a4-1c68092b8757"
+    ],
+    "oracle_ids_B": [
+      "b68e965a-96f4-447a-99be-35dbd27846e9"
+    ],
+    "outcome": "Friendly shared pool cannot change, while B remains available to activate lethal damage.",
+    "rank": 25,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "B Hidetsugu not A permanent; opposing pool even.",
+    "rules_citations": "810.9h; 810.9; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Hive Mind"
+    ],
+    "cards_B": [
+      "Summoner's Pact"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B casts Pact; A,C,D copy. All get own delayed payment. If C or D fails upkeep payment, opposing team loses. Not guaranteed against green mana or cannot-lose effects.",
+    "disruption": "Pay upkeep, counter trigger, remove Hive before cast; A/B may lose later if opponents survive.",
+    "estimated_mana_investment": "A 5U; B 0",
+    "id": "C26",
+    "legality_concern": "Review prerequisites; no automatic point surcharge.",
+    "oracle_ids_A": [
+      "f97e405d-4c24-4d4d-9e19-e349c073113c"
+    ],
+    "oracle_ids_B": [
+      "782dcbc4-5a11-42f5-b8d9-4572e36d45b3"
+    ],
+    "outcome": "Opponent upkeep losses if either cannot pay; friendly Pact copies also incur debts.",
+    "rank": 26,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "No opponent can evade/pay own cost; friendly copies must be considered if game continues.",
+    "rules_citations": "707.10; 603.7; 805.8; 810.8a",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "Consecrated Sphinx"
+    ],
+    "cards_B": [
+      "Consecrated Sphinx"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Both trigger from C/D draws, but A draw is not opponent draw to B and vice versa. Opposing-controller Sphinx collusion is a different situation.",
+    "disruption": "No team infinite draw loop.",
+    "estimated_mana_investment": "A 4UU; B 4UU",
+    "id": "C27",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "311a449d-dc74-46e6-9a47-6a597931f736"
+    ],
+    "oracle_ids_B": [
+      "311a449d-dc74-46e6-9a47-6a597931f736"
+    ],
+    "outcome": "Friendly Sphinx draws do not trigger each other.",
+    "rank": 27,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "A and B teammates, therefore not opponents.",
+    "rules_citations": "109.5; 810.1; Oracle opponent",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_friendly_draw_loop"
+  },
+  {
+    "cards_A": [
+      "Notion Thief"
+    ],
+    "cards_B": [
+      "Notion Thief"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "Affected opponent chooses applicable replacement; A/B drawing is not opponent draw to friendly other Thief. Not a mandatory team loop.",
+    "disruption": "Replacement-choice rules; friendly draw does not retrigger replacement.",
+    "estimated_mana_investment": "Each 2UB",
+    "id": "C28",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "f8dab16e-1d50-443e-9431-8b6f1cf61c9c"
+    ],
+    "oracle_ids_B": [
+      "f8dab16e-1d50-443e-9431-8b6f1cf61c9c"
+    ],
+    "outcome": "Friendly Thieves do not bounce draws back and forth.",
+    "rank": 28,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Both replace C/D extra draws; resulting friendly draw isn't opposing to other Thief.",
+    "rules_citations": "614; 616.1; 109.5",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_friendly_draw_loop"
+  },
+  {
+    "cards_A": [
+      "Dovescape"
+    ],
+    "cards_B": [
+      "Guile"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "A controls Dovescape counter trigger; B Guile sees no B-controlled counter source. A ownership change alone irrelevant.",
+    "disruption": "False union; consolidate actual controllers to evaluate known loop.",
+    "estimated_mana_investment": "A 3(W/U)(W/U)(W/U); B 3UUU",
+    "id": "C29",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "d9f4af37-c85e-44ab-9fea-3c67e2f3cf27"
+    ],
+    "oracle_ids_B": [
+      "591bbf84-259d-4885-8b5f-b29c04222d41"
+    ],
+    "outcome": "B Guile does not replace A Dovescape's counter.",
+    "rank": 29,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Guile requires counter from spell/ability B controls.",
+    "rules_citations": "109.5; 603.3a; 614",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_replacement"
+  },
+  {
+    "cards_A": [
+      "Isochron Scepter"
+    ],
+    "cards_B": [
+      "Dramatic Reversal"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "B casting Reversal doesn't untap A Scepter or rocks; A cannot imprint teammate's hand card.",
+    "disruption": "False union; same-player Scepter/Reversal/rocks remains functional.",
+    "estimated_mana_investment": "A 2; B 1U",
+    "id": "C30",
+    "legality_concern": "Do not flag as a proven executable combo.",
+    "oracle_ids_A": [
+      "ddd649f4-dbaf-48ec-8ff7-95581257772d"
+    ],
+    "oracle_ids_B": [
+      "da46904c-8fb8-44c2-b2ab-775a1cc12ec3"
+    ],
+    "outcome": "B Reversal untaps only B nonland permanents, not A Scepter.",
+    "rank": 30,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "Simple split; imprint requires card from Scepter controller's hand.",
+    "rules_citations": "109.5; 810.5; Oracle you control",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "false_split_untap"
+  },
+  {
+    "cards_A": [
+      "Heartbeat of Spring"
+    ],
+    "cards_B": [
+      "Mana Flare"
+    ],
+    "confidence": "high_rules_medium_balance",
+    "demonstrated_sequence": "For a land normally producing1, two additional-one effects yield3, not4. Each land controller gets own extra mana.",
+    "disruption": "Opponents exploit too; symmetrical support, not self-contained loop.",
+    "estimated_mana_investment": "Each 2G or 2R",
+    "id": "C31",
+    "legality_concern": "Review prerequisites; no automatic point surcharge.",
+    "oracle_ids_A": [
+      "f15911a5-f597-452e-a015-b115339f28fc"
+    ],
+    "oracle_ids_B": [
+      "97159138-c34b-416e-b079-5c952383a243"
+    ],
+    "outcome": "Both friendly players get extra mana, as do opponents; additive extra-mana triggers.",
+    "rank": 31,
+    "required_control": "Each listed card is owned and controlled by its listed player unless the description specifies a transfer. C and D are opponents.",
+    "required_game_state": "All lands tapped for mana are eligible, resources remain individual.",
+    "rules_citations": "106; 603; 810.5; Oracle additional mana",
+    "source": "Frozen current Oracle text; current CR 20260925; independent controller review.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Laboratory Maniac"
+    ],
+    "cards_B": [
+      "Kenrith, the Returned King"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "B targets A with draw activation; A draws and wins instead of losing.",
+    "disruption": "Remove Maniac before draw, counter activation, conflicting replacement.",
+    "estimated_mana_investment": "2U activation; Maniac2U; Kenrith4W",
+    "id": "C32",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "aa286dd5-aa19-446d-9003-684d81eb57ca"
+    ],
+    "oracle_ids_B": [
+      "d209b948-9afb-4fd1-a961-72c87282878c"
+    ],
+    "outcome": "B pays2U to make A draw from empty library; A's replacement wins friendly team.",
+    "rank": 32,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "A library empty and Maniac active. B owns Kenrith and receives no borrowed mana.",
+    "rules_citations": "109.5; 810.8a; 614",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Narset, Parter of Veils"
+    ],
+    "cards_B": [
+      "Windfall"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "Windfall discards every player's hand, then draws. Narset applies to C/D, not B.",
+    "disruption": "Counter Windfall/remove Narset; replacements; this leaves possible draw and abilities, not total lock.",
+    "estimated_mana_investment": "A1UU; B2U",
+    "id": "C33",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "ab26fbe2-e808-48b9-8d0d-3fbb6c3d554f"
+    ],
+    "oracle_ids_B": [
+      "08becc07-28bc-4a2f-a6b0-28a2998d2f50"
+    ],
+    "outcome": "Both opposing players restricted to at most one draw each shared turn; friendly draw unrestricted.",
+    "rank": 33,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "Narset A on board, normal draw histories checked individually; Windfall B resolves.",
+    "rules_citations": "109.5; 805.6a; 810.5",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Najeela, the Blade-Blossom"
+    ],
+    "cards_B": [
+      "Derevi, Empyrial Tactician"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "B's five connecting creatures each trigger B Derevi. B untaps A lands. A activates Najeela, untapping all attackers including B's. Repeat only while connections and mana persist.",
+    "disruption": "Blocks/removal, trigger counters, no five events, summoning sickness. Five damage by one creature is one event.",
+    "estimated_mana_investment": "A WUBRG activation each combat; initial commander/board deployment",
+    "id": "C34",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "09619943-6aec-4080-ace5-a0c6ebb23f1c"
+    ],
+    "oracle_ids_B": [
+      "afa49a09-146f-4439-850e-dd1938c93cef"
+    ],
+    "outcome": "B combat-damage triggers can untap A WUBRG lands; A Najeela refreshes both sets of attackers.",
+    "rank": 34,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "B needs >=5 separate creature-to-player combat damage events per combat (or fewer high-output lands); enough connecting creatures remain.",
+    "rules_citations": "805.8; 109.5; 603",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "Inalla, Archmage Ritualist"
+    ],
+    "cards_B": [
+      "Spellseeker"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "Your control refers A. No A copy trigger.",
+    "disruption": "False union; actual same-A Spellseeker lines still review.",
+    "estimated_mana_investment": "A CZ access; B2U",
+    "id": "C35",
+    "legality_concern": "Not a proven cross-team combo.",
+    "oracle_ids_A": [
+      "21bdba6e-3f9d-4ead-8212-0cbb0ce7f8cc"
+    ],
+    "oracle_ids_B": [
+      "47a785ed-8095-4685-8daa-02c4e2b0ffcd"
+    ],
+    "outcome": "A eminence does not trigger from B's Wizard entering.",
+    "rank": 35,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "Inalla A in CZ; B controls entering Spellseeker.",
+    "rules_citations": "109.5; 603.3a",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "false_split_eminence"
+  },
+  {
+    "cards_A": [
+      "Yuriko, the Tiger's Shadow"
+    ],
+    "cards_B": [
+      "Noxious Revival"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "B Revival targets A-owned card; owner's library means A. A Yuriko reveals/draws it; each opponent loses its mana value.",
+    "disruption": "Graveyard removal, counter, library manipulation, prevent damage before Yuriko trigger.",
+    "estimated_mana_investment": "B G or2 life",
+    "id": "C36",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "a7043fbd-1dfd-42cf-be4b-cc343d0949e5"
+    ],
+    "oracle_ids_B": [
+      "97cabeda-9fe3-490d-99b4-4c8d87c17157"
+    ],
+    "outcome": "B can place an A-owned high-mana-value graveyard card atop A library before A Yuriko trigger resolves.",
+    "rank": 36,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "A Yuriko trigger on stack, A-owned suitable card in any graveyard, B can target it.",
+    "rules_citations": "109.5; 810.9; Oracle owner's library",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Platinum Angel"
+    ],
+    "cards_B": [
+      "Pact of Negation"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "B may fail upkeep payment; team cannot lose due A Angel. Removing Angel before loss resolution exposes team.",
+    "disruption": "Remove Angel before delayed trigger resolves. No debt payment shared with A.",
+    "estimated_mana_investment": "A7; B0+upkeep payment optional if unable/willing",
+    "id": "C37",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "b148578c-c0bf-4785-b97c-4b6f83028008"
+    ],
+    "oracle_ids_B": [
+      "f3e213a4-ba5a-468a-93b3-c0a34e1bd725"
+    ],
+    "outcome": "A's cannot-lose protects team from B's unpaid Pact loss.",
+    "rank": 37,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "A Angel remains at loss resolution.",
+    "rules_citations": "810.8a; 603.7",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Angel's Grace"
+    ],
+    "cards_B": [
+      "Final Fortune"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "B Fortune grants team extra turn. In that turn's end step A Grace stops team's loss.",
+    "disruption": "Timing mistake, counter before split-second, repeated-turn restriction.",
+    "estimated_mana_investment": "A W; B RR",
+    "id": "C38",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "66ca8a60-e028-4a5f-8177-860b888cb9d1"
+    ],
+    "oracle_ids_B": [
+      "8d0adc5c-3fdd-4e22-b783-5651f8e57b65"
+    ],
+    "outcome": "Grace during extra shared turn can prevent B's scheduled loss.",
+    "rank": 38,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "A casts Grace during extra turn before delayed loss resolves, not on previous turn.",
+    "rules_citations": "805.8; 810.8a; 603.7",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "Seedborn Muse"
+    ],
+    "cards_B": [
+      "Stasis"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "No opponents' untap step occurs; Muse has no opportunity there.",
+    "disruption": "False union; other explicit untap abilities differ.",
+    "estimated_mana_investment": "A3GG; BU plus upkeep",
+    "id": "C39",
+    "legality_concern": "Not a proven cross-team combo.",
+    "oracle_ids_A": [
+      "463865bc-087e-477b-9e86-84e77f1ad931"
+    ],
+    "oracle_ids_B": [
+      "a8cf1379-0195-4e11-b994-481ef1284245"
+    ],
+    "outcome": "Muse does not untap through a skipped untap step.",
+    "rank": 39,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "Stasis B skips every untap step; no step exists for Muse to modify.",
+    "rules_citations": "805.8; Oracle instead of each untap step",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "false_skipped_untap"
+  },
+  {
+    "cards_A": [
+      "Arcum Dagsson"
+    ],
+    "cards_B": [
+      "Ornithopter"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "Arcum targets B Ornithopter. Creature controller B sacrifices and B searches. Neither sacrifices A permanent nor searches A library.",
+    "disruption": "Remove creature, suppress ability, restrict B search, summoning sickness.",
+    "estimated_mana_investment": "A3U; B0; Arcum tap",
+    "id": "C40",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "0fdfe986-0216-468b-aac8-bbcf588fd894"
+    ],
+    "oracle_ids_B": [
+      "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba"
+    ],
+    "outcome": "A Arcum can target B artifact creature; B sacrifices and searches B library for noncreature artifact.",
+    "rank": 40,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "Arcum A can tap; B creature legal target; B has desired noncreature artifact in own library.",
+    "rules_citations": "701.21a; 109.5; 302.6",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "verified_cross_team"
+  },
+  {
+    "cards_A": [
+      "Coalition Victory"
+    ],
+    "cards_B": [
+      "Transguild Courier"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "Check only A-controlled basic land types and A-controlled colors.",
+    "disruption": "False union unless actual control changes.",
+    "estimated_mana_investment": "A3WUBRG; B4",
+    "id": "C41",
+    "legality_concern": "Not a proven cross-team combo.",
+    "oracle_ids_A": [
+      "e9e25800-9ee7-40c9-b22d-611c7281c125"
+    ],
+    "oracle_ids_B": [
+      "86f94f8e-f45e-42fc-8ad6-e9bdfaaa997d"
+    ],
+    "outcome": "B's five-color creature does not satisfy A's controlled-creature requirement.",
+    "rank": 41,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "A casts Coalition; required board cannot be split.",
+    "rules_citations": "109.5",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "false_split_board_aggregation"
+  },
+  {
+    "cards_A": [
+      "High Tide"
+    ],
+    "cards_B": [
+      "Island"
+    ],
+    "confidence": "independent_rules_review",
+    "demonstrated_sequence": "Global whenever-player-taps-Island effect adds U to that player, not A.",
+    "disruption": "Symmetry benefits opponents; no mana sharing.",
+    "estimated_mana_investment": "A U",
+    "id": "C42",
+    "legality_concern": "Separate early-win/lock review; no synergy price.",
+    "oracle_ids_A": [
+      "dc671205-f2fa-454f-9957-921a6069ad53"
+    ],
+    "oracle_ids_B": [
+      "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+    ],
+    "outcome": "B Islands generate extra B mana; opposing Islands also benefit.",
+    "rank": 42,
+    "required_control": "Listed permanents owned/controlled by A or B as listed; control changes only as explicitly described.",
+    "required_game_state": "Spell resolves, B controls Islands and may tap them.",
+    "rules_citations": "106; 810.5",
+    "source": "Independent reviewer checked frozen Oracle and official CR 20260925.",
+    "status": "verified_team_support"
+  },
+  {
+    "cards_A": [
+      "Final Fortune"
+    ],
+    "cards_B": [
+      "Sundial of the Infinite"
+    ],
+    "id": "RC01",
+    "outcome": "Extra shared team turn with properly timed Sundial bypass of delayed loss; not an automatic recurring loop.",
+    "status": "verified_conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "Sorin Markov"
+    ],
+    "cards_B": [
+      "Hidetsugu's Second Rite"
+    ],
+    "id": "RC02",
+    "outcome": "Set opposing team pool ten then deal ten if still ten on resolution.",
+    "status": "verified_conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "Fraying Omnipotence"
+    ],
+    "cards_B": [
+      "Angel's Grace"
+    ],
+    "id": "RC03",
+    "outcome": "At sixty, simultaneous head losses remove sixty from each team; friendly cannot-lose wins if opposing team loses first.",
+    "status": "verified_conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "False Cure"
+    ],
+    "cards_B": [
+      "Beacon of Immortality"
+    ],
+    "id": "RC04",
+    "outcome": "Target opposing head life gain followed by twice that head gain loss can kill team; replacements/response windows matter.",
+    "status": "verified_conditional_cross_team"
+  },
+  {
+    "cards_A": [
+      "Tivit, Seller of Secrets"
+    ],
+    "cards_B": [
+      "Time Sieve"
+    ],
+    "id": "RC05",
+    "outcome": "Teammate artifacts cannot pay own sacrifice cost. Both artifacts must be controlled by Sieve player.",
+    "status": "false_split_sacrifice"
+  },
+  {
+    "cards_A": [
+      "Savor the Moment"
+    ],
+    "cards_B": [
+      "Savor the Moment"
+    ],
+    "id": "RC06",
+    "outcome": "Alternating preexisting untapped resources can buy successive team draws/land drops; neither head receives skipped untap.",
+    "status": "conditional_team_support_no_untap"
+  }
+]

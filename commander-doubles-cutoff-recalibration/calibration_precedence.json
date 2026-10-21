@@ -1,0 +1,3284 @@
+{
+  "as_of": "2026-10-20",
+  "authoritative_source": "../commander-doubles-final-audit/organizer_calibration_2026-10-20.md",
+  "effective_location_decisions": [
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Abrupt Decay",
+      "oracle_id": "1c747fe2-289e-492a-a846-aa77707e2dc3",
+      "reason": "Ordinary efficient removal; no construction tax.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Ad Nauseam",
+      "oracle_id": "981b0e21-e5e6-4a1e-bfde-679d56623f7f",
+      "reason": "Instant-speed conversion of shared sixty life; own deck mana costs still constrain.",
+      "source": "review_inputs.py",
+      "working_price": 15,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Aetherflux Reservoir",
+      "oracle_id": "5f15125e-ae89-471e-b055-226a783bc7c1",
+      "reason": "Paying 50 from 60 leaves 10; 50 damage is not initial lethal.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Agatha of the Vile Cauldron",
+      "oracle_id": "f398d222-f8e7-4983-9a77-267adef7f551",
+      "reason": "Guaranteed creature-ability reduction with power dependence.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Agatha of the Vile Cauldron",
+      "oracle_id": "f398d222-f8e7-4983-9a77-267adef7f551",
+      "reason": "Own creature-ability reduction depends on own power; not universal two-mana tutor.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Alchemist's Gambit",
+      "oracle_id": "271d8db6-8606-46d7-9812-75aa22fcfd8e",
+      "reason": "Three mana team turn without damage prevention; seven mana avoids loss.",
+      "source": "review_inputs.py",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Alrund's Epiphany",
+      "oracle_id": "bc842838-1993-4480-b8fe-f9d9f2dee7a4",
+      "reason": "Seven mana or foretell setup plus six; one team turn and two bodies, self-exile.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Ancient Tomb",
+      "oracle_id": "23467047-6dba-4498-b783-1ebc4f74b8c2",
+      "reason": "Colorless acceleration occupying a land slot; shared-life damage.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Angel's Grace",
+      "oracle_id": "66ca8a60-e028-4a5f-8177-860b888cb9d1",
+      "reason": "Seven rejected; four remains unapproved. Prevents team loss for one turn.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Arcane Signet",
+      "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+      "reason": "Ordinary two-mana fixing is free.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Archon of Emeria",
+      "oracle_id": "ceef2d5a-77ea-4e56-9806-fd1a2d5be400",
+      "reason": "Rule limit symmetric, opposing nonbasic slowdown asymmetric.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Assassin's Trophy",
+      "oracle_id": "ac10d218-f9a6-4058-9cda-a15ca1b0b7b5",
+      "reason": "Ordinary flexible removal with replacement land.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Beacon of Tomorrows",
+      "oracle_id": "85909caa-d2ad-4487-b9b7-6ac60a14b833",
+      "reason": "Eight-mana one team turn, recyclable but no free repeat.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Bear Umbra",
+      "oracle_id": "44661108-d72f-4d02-9303-7e4b0ecf7e9c",
+      "reason": "Four-mana Aura grants repeat whole-land untap on attack, no combat connection needed; granted trigger belongs to creature controller.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Biomancer's Familiar",
+      "oracle_id": "923d44a9-774d-459c-9cec-1d5b081b51f0",
+      "reason": "Creature counterpart to human Training Grounds; does not pay colored costs.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Birthing Pod",
+      "oracle_id": "f8b9dd54-0837-47f4-ad14-7a0322d46d5f",
+      "reason": "Creature-chain tutor with activation and sacrifice constraints.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Black Market Connections",
+      "oracle_id": "d2664f28-49e1-46f8-a863-b217e961a57c",
+      "reason": "Repeat repeatable life-for-cards/token resources; sixty gives a larger reservoir.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Blood Moon",
+      "oracle_id": "94fac5fe-97d5-4c12-a80c-8efff9d853ae",
+      "reason": "Symmetric fixing denial; team must build around it.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Bloodchief Ascension",
+      "oracle_id": "d5ea905b-4bb6-48d0-9082-c472703db550",
+      "reason": "One-mana exceptional scaling after three end steps; active-state prerequisite retained.",
+      "source": "prior audit family judgment",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Bolas's Citadel",
+      "oracle_id": "2bd111bb-ce02-414c-b5b7-e0e037d8d96b",
+      "reason": "Shared life pays own topdeck spells; six-mana entry and own permanent costs remain.",
+      "source": "review_inputs.py",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Borne Upon a Wind",
+      "oracle_id": "ce19962d-94f9-4b2b-b668-963c0acce308",
+      "reason": "Only caster gains flash permission; does not grant teammate flash.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Breena, the Demagogue",
+      "oracle_id": "d11e627b-8a48-411d-a261-2c9a02a758ba",
+      "reason": "Both opposing heads query same team life, so strict life-comparison trigger fails in two-team game.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Capture of Jingzhou",
+      "oracle_id": "89aa65d9-2502-40b0-90b6-b25a8e9f6155",
+      "reason": "Same five-mana one-team-turn function as Time Warp.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Cephalid Illusionist",
+      "oracle_id": "3c3067c4-0ae0-4c6a-9174-e3c981a20235",
+      "reason": "Target-based self-mill engine needs repeat targeting and separate conversion.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Chain of Smog",
+      "oracle_id": "ea14c26b-bf2f-48b4-b879-6e63069ded1f",
+      "reason": "Repeatable self-copy permission and teammate targeting create a two-mana exceptional enabler; payoff cards not automatically priced.",
+      "source": "prior audit family judgment",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Chain of Vapor",
+      "oracle_id": "2167ac25-d042-4b48-b770-8b94acc1a965",
+      "reason": "Efficient temporary answer with symmetric copying option.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Chance for Glory",
+      "oracle_id": "324af60d-142b-4b6c-afe9-6aa36267d5ee",
+      "reason": "Three mana instant team turn; delayed loss affects team, all own creatures indestructible.",
+      "source": "review_inputs.py",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Chancellor of the Tangle",
+      "oracle_id": "2a521811-7106-4531-b69c-631e207b8988",
+      "reason": "Opening-hand reveal supplies own green on first shared main phase; near ESG one-shot acceleration with opening-only constraint.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Children of Korlis",
+      "oracle_id": "d44a8f89-b9c0-4e8a-9179-baa0c448a3c9",
+      "reason": "One-mana own life-loss reset support; counts own losses, not teammate events, no automatic loop.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Chrome Mox",
+      "oracle_id": "ec3d4466-547c-4e02-b1b5-a156ec4637e9",
+      "reason": "Free permanent mana at colored-card cost.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 14,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "City of Solitude",
+      "oracle_id": "671458ac-7441-4332-9e59-a42ec8b62f31",
+      "reason": "Own-turn spell/ability restriction is stronger but symmetric; teammate shares own turn.",
+      "source": "prior audit family judgment",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "organizer_family_guidance_working_price",
+      "card_name": "Collector Ouphe",
+      "oracle_id": "0c4bc9ea-a5fd-4f44-96a1-5448eee228c4",
+      "reason": "Symmetric artifact restriction; two is analyst selection within general organizer one-to-two guidance.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Conqueror's Flail",
+      "oracle_id": "9aace0d3-89e6-4254-b96f-ee3a878f2f91",
+      "reason": "Shared-own-turn opponents cannot cast spells only while equipped; setup and removal.",
+      "source": "prior audit family judgment",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Consecrated Sphinx",
+      "oracle_id": "311a449d-dc74-46e6-9a47-6a597931f736",
+      "reason": "Six mana and two opponents; friendly draws do not trigger it.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "reason": "Ordinary interaction remains free.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Culling the Weak",
+      "oracle_id": "6385fd0d-256d-4400-9319-afa8170024db",
+      "reason": "Net three black requires sacrificing own creature; below Dark Ritual9 broadly.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Cursed Totem",
+      "oracle_id": "6225a704-430a-4f56-ad87-0e8d87f285f5",
+      "reason": "Symmetric creature-activation denial.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Cyclonic Rift",
+      "oracle_id": "d75b9c82-1b49-4c3e-a1b5-aeef57d6644b",
+      "reason": "Organizer free anchor; overload also bounces friendly teammate permanents.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Damping Sphere",
+      "oracle_id": "fd50d76c-7654-47b9-a5b6-d075874e4357",
+      "reason": "Symmetric mana/storm restriction; no premium acceleration itself.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Dark Ritual",
+      "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+      "reason": "One black for three black, one-shot.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 9,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Dauthi Voidwalker",
+      "oracle_id": "f1c2dbe2-fbe0-4058-bdf1-91d1b1832786",
+      "reason": "Global-opponent graveyard replacement with individual theft conversion.",
+      "source": "prior audit family judgment",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Deadly Rollick",
+      "oracle_id": "0456ec64-2c81-4763-a352-8ff64a4c3d6b",
+      "reason": "Free own-commander-dependent one-creature exile.",
+      "source": "prior audit family judgment",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Deafening Silence",
+      "oracle_id": "6284ef01-d17d-4584-aecb-1b841ae638e5",
+      "reason": "Symmetric one noncreature spell per player; creatures unrestricted.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Defense Grid",
+      "oracle_id": "22ba474e-f6e6-450d-a4cf-0739f0b51079",
+      "reason": "Taxes off-turn spells; both friendly players share active turn.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Deflecting Swat",
+      "oracle_id": "ae120613-97d6-4393-b39d-c3e6c076f5d6",
+      "reason": "Free own-commander-dependent redirection; not unconditional counterspell.",
+      "source": "prior audit family judgment",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Demonic Consultation",
+      "oracle_id": "9a1412db-45ad-46ea-8f12-a85d203113d8",
+      "reason": "One-mana library access/emptying with severe standalone risk.",
+      "source": "prior audit family judgment",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Demonic Tutor",
+      "oracle_id": "82004860-e589-4e38-8d61-8c0210e4ea39",
+      "reason": "Unrestricted two-mana tutor with no topdeck delay.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 15,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Derevi, Empyrial Tactician",
+      "oracle_id": "afa49a09-146f-4439-850e-dd1938c93cef",
+      "reason": "Organizer explicitly free. Competitive risk retained for separate line/legality review; no hidden surcharge.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Dockside Extortionist",
+      "oracle_id": "697bcfe1-ecbf-42a1-bfc7-0766d48ca56b",
+      "reason": "Counts C/D artifacts/enchantments, not teammate. Two opponents lower typical count, but both team decks exploit recurring resources.",
+      "source": "prior hypothetical unban review",
+      "working_price": 14,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Doom Whisperer",
+      "oracle_id": "4a01db2e-cd43-4b1a-a480-169018f82501",
+      "reason": "Repeatable shared-life surveil for own library; five mana deployment.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Doomsday",
+      "oracle_id": "721eb5a2-d7cf-4db0-8013-ef3f596c52a5",
+      "reason": "Compact decisive library engineering; substantial life/setup risk.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Door to Nothingness",
+      "oracle_id": "b919cca5-88c0-4104-b54e-49644fbf78a5",
+      "reason": "Enters tapped, ten colored activation; kills team through one head.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Dosan the Falling Leaf",
+      "oracle_id": "70e4025f-41de-4b47-a590-3c922dc1e209",
+      "reason": "Own-turn spell restriction preserves teammate actions on shared turn; symmetric on opposing turn.",
+      "source": "prior audit family judgment",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Drannith Magistrate",
+      "oracle_id": "aadd10d0-6dd0-4bdc-8d93-ff08e29a5863",
+      "reason": "Asymmetric nonhand casting denial plus opposing commander access; lock review separate.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Druids' Repository",
+      "oracle_id": "cbbc530f-e51b-423e-b219-23bb580fd834",
+      "reason": "Three-mana repeat attack-to-any-color mana store; token/extra-combat setup needed, but exceptional resource conversion.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Dualcaster Mage",
+      "oracle_id": "8eb7c0a5-6190-40de-b473-2d1daa3bbe28",
+      "reason": "Flash copy of any instant/sorcery plus repeatable creature-copy conversion; provisional specialized enabler.",
+      "source": "prior audit family judgment",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Earthcraft",
+      "oracle_id": "50aa7aff-1f01-4224-9a83-01f74d703ec2",
+      "reason": "Cheap repeatable creature-to-basic-land untapping; controller split is not self-sufficient.",
+      "source": "prior audit family judgment",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Eidolon of Rhetoric",
+      "oracle_id": "33017203-233e-498e-806e-94b1dccf5c35",
+      "reason": "Creature Rule of Law; per-player cast limit.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Eldrazi Displacer",
+      "oracle_id": "9b1f552a-bddc-4fcb-ac67-b4a65b2f48ba",
+      "reason": "Repeatable blink can target friendly teammate creature; owner receives returned creature.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Elvish Spirit Guide",
+      "oracle_id": "6b0e23cf-7d68-4329-86db-7adc26abd86b",
+      "reason": "One-shot green acceleration; card expenditure limits repeat value.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Emiel the Blessed",
+      "oracle_id": "b11c250c-f191-4c52-ba02-a9176f163447",
+      "reason": "Repeatable blink any other creature; mana and ownership constraints.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Emrakul, the Promised End",
+      "oracle_id": "4e7a8817-1a66-45c3-ade9-eac79b40b89f",
+      "reason": "Guaranteed repeat cast trigger; expensive deployment and enemy compensating turn.",
+      "source": "review_inputs.py",
+      "working_price": 10,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Emrakul, the Promised End",
+      "oracle_id": "4e7a8817-1a66-45c3-ade9-eac79b40b89f",
+      "reason": "Cast trigger controls enemy shared turn; enemy then gets compensating team turn.",
+      "source": "review_inputs.py",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Enduring Vitality",
+      "oracle_id": "3577c47e-76d3-4659-b922-31c4b74be3a0",
+      "reason": "Three mana creature-dependent acceleration; ordinary engine.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Enlightened Tutor",
+      "oracle_id": "c5229c17-b7be-4b05-b683-f2277edc4849",
+      "reason": "Efficient instant restricted-type tutor.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 9,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Entomb",
+      "oracle_id": "299fc083-0834-4064-8344-f895aff68867",
+      "reason": "One-mana instant graveyard tutor, broad reanimation/recursion.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Eon Frolicker",
+      "oracle_id": "c0a18a53-d520-4795-9b3b-0f93bcf35848",
+      "reason": "Entry if cast grants OPPOSING team a turn; defensive protection only covers controller and own planeswalkers.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Esper Sentinel",
+      "oracle_id": "5def9f38-0a0b-4e8d-9f9d-29dcb46520b4",
+      "reason": "One-per-opponent-per-turn tax draw; dies to creature removal.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Ethersworn Canonist",
+      "oracle_id": "ec3471ad-b65c-4e35-a7d1-68da9555a9ec",
+      "reason": "Each head gets artifact exception; sympathetic artifact construction costs.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Expropriate",
+      "oracle_id": "a69265b2-0e37-4d86-866e-e4a923233b4d",
+      "reason": "Two friendly time votes give two team turns; nine-mana deployment.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Felidar Sovereign",
+      "oracle_id": "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b",
+      "reason": "Six-mana creature must survive to own upkeep.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Fierce Guardianship",
+      "oracle_id": "d09c9cba-fdd2-479b-ad5d-d05181c3e3f9",
+      "reason": "Free noncreature protection requires own commander.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        6,
+        null
+      ],
+      "authority": "organizer_minimum_working_price",
+      "card_name": "Final Fortune",
+      "oracle_id": "8d0adc5c-3fdd-4e22-b783-5651f8e57b65",
+      "reason": "At least six is authoritative; seven is working family choice.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Flusterstorm",
+      "oracle_id": "86bf58f2-7f25-4e10-b797-25e0e8e67769",
+      "reason": "Efficient specialized stack interaction, not all spell types.",
+      "source": "prior audit family judgment",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Food Chain",
+      "oracle_id": "5c8e5092-962e-49ef-ab82-8434e475e4e7",
+      "reason": "Repeatable creature-mana engine, extraordinary specialized ceiling.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 12,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Force of Negation",
+      "oracle_id": "ac2173f9-f223-440a-9231-fd98762bdc6f",
+      "reason": "Pitch only on opposing turn and only noncreature; below Force14.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Force of Will",
+      "oracle_id": "956381ba-6d37-4a8a-846c-bad79222dbee",
+      "reason": "Pitch interaction works from turn zero; card disadvantage remains.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 14,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Fractured Identity",
+      "oracle_id": "1515b0c2-1b55-4cd4-ad81-fb6b1f3e8188",
+      "reason": "Five mana, gives copies to other players including teammate; not free removal.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Frantic Search",
+      "oracle_id": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+      "reason": "Net card disadvantage filtering; untap own lands is setup dependent.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Fraying Omnipotence",
+      "oracle_id": "3b00068d-ad07-417c-bbb3-5f980615fb06",
+      "reason": "Each head loses half shared life simultaneously; symmetric team kill absent protection.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Freed from the Real",
+      "oracle_id": "03d32ace-dd99-48c6-bcae-9b915d041aef",
+      "reason": "Cheap repeatable untapping of enchanted creature; aura controller pays, creature controller gets mana.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Gamble",
+      "oracle_id": "a54f0869-94c8-42af-9080-166efb9486a4",
+      "reason": "One-mana broad tutor; random discard and sorcery speed.",
+      "source": "prior audit family judgment",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Gerrard's Hourglass Pendant",
+      "oracle_id": "01591d42-4ef8-471d-beda-d31186bba6a6",
+      "reason": "Defensive turn-prevention is not an offensive turn engine; five-mana self-exile recovery is ordinary support.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Golos, Tireless Pilgrim",
+      "oracle_id": "efe9c3e0-7315-408e-9903-9d25a681039b",
+      "reason": "Five-color guaranteed land access and repeated card cheating; teammate support does not change ownership.",
+      "source": "prior hypothetical unban review",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Gonti's Aether Heart",
+      "oracle_id": "69428825-3c40-486d-b051-14e97a598ce6",
+      "reason": "Six-mana energy converter, eight energy plus self-exile for team turn.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Grand Abolisher",
+      "oracle_id": "c749f23c-40c0-4159-b84c-a70cbb062c14",
+      "reason": "Stops opposing spells and artifact/creature/enchantment activations on shared own turn.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Grapeshot",
+      "oracle_id": "ebd2d760-5ad8-4027-b124-171822f3edfe",
+      "reason": "Ordinary interchangeable storm payoff, one damage per copy to one target; no automatic combo-membership tax.",
+      "source": "prior audit family judgment",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        0,
+        1
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Gray Merchant of Asphodel",
+      "oracle_id": "38f3b157-0df4-409b-89cc-086e1531cd5b",
+      "reason": "Five mana plus own devotion; two opponent events drain shared pool.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Grindstone",
+      "oracle_id": "97560adc-814e-450c-9ca7-f9364e910a0b",
+      "reason": "One-mana artifact with repeatable milling; Painter needs separate control review.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Hatred",
+      "oracle_id": "40601061-1b25-4db8-8b99-33324ce945cf",
+      "reason": "Five-mana instant can pay shared life to make lethal unblocked attacker; needs combat/survival and is disruptable.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Heartless Hidetsugu",
+      "oracle_id": "b68e965a-96f4-447a-99be-35dbd27846e9",
+      "reason": "Guaranteed repeatable shared-life conversion; tap/summoning sickness and parity protection remain.",
+      "source": "review_inputs.py",
+      "working_price": 12,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Heartless Hidetsugu",
+      "oracle_id": "b68e965a-96f4-447a-99be-35dbd27846e9",
+      "reason": "One activation doubles head damage against shared life; needs asymmetry to avoid draw.",
+      "source": "review_inputs.py",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Helm of Obedience",
+      "oracle_id": "16cadebf-c484-41f8-9e38-5c2c528f5b54",
+      "reason": "Opponent-library conversion across controllers; four-mana plus activation and replacement required.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Humility",
+      "oracle_id": "ed7bdb3e-5c51-4547-9266-76a791e0b2b0",
+      "reason": "Symmetric creatures become 1/1 without abilities.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Ichormoon Gauntlet",
+      "oracle_id": "9fc7aba7-eda2-4134-9c10-31ee35201b72",
+      "reason": "Three mana adds proliferate and expensive loyalty team-turn ability to own planeswalkers; separate setup.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Imperial Seal",
+      "oracle_id": "16cd0b90-f70c-4efa-b252-8de8784ef9a3",
+      "reason": "Sorcery speed and topdeck delay.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Inalla, Archmage Ritualist",
+      "oracle_id": "21bdba6e-3f9d-4ead-8212-0cbb0ce7f8cc",
+      "reason": "Organizer explicitly free. Competitive risk retained for separate line/legality review; no hidden surcharge.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Intruder Alarm",
+      "oracle_id": "1e943e04-e213-4781-b1a7-935aad8790e1",
+      "reason": "Global creature untap engine enables low-mana cross-controller repetition and disables normal creature untaps.",
+      "source": "prior audit family judgment",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Isochron Scepter",
+      "oracle_id": "ddd649f4-dbaf-48ec-8ff7-95581257772d",
+      "reason": "Repeatable low-cost instant access; imprint/card exposure.",
+      "source": "prior audit family judgment",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Jeweled Lotus",
+      "oracle_id": "23216e59-f147-4bb7-a698-12777c2f8584",
+      "reason": "Only controller's commander casting, not teammate. Zero-cost three-mana commander access remains extreme.",
+      "source": "prior hypothetical unban review",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "K'rrik, Son of Yawgmoth",
+      "oracle_id": "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
+      "reason": "Guaranteed own black-cost/life converter, four generic deployment and commander tax matter.",
+      "source": "review_inputs.py",
+      "working_price": 12,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "K'rrik, Son of Yawgmoth",
+      "oracle_id": "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
+      "reason": "Shared life substitutes only own black symbols; generic taxes remain mana.",
+      "source": "review_inputs.py",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Kang the Conqueror",
+      "oracle_id": "da6e24a4-8adc-41a1-b5eb-3e31dc1250c9",
+      "reason": "Guaranteed creature power-up team turn with significant separate mana investment.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Kang the Conqueror",
+      "oracle_id": "da6e24a4-8adc-41a1-b5eb-3e31dc1250c9",
+      "reason": "Four-mana creature plus power-up investment; extra turn shuts power-up activation for that turn.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Karn's Temporal Sundering",
+      "oracle_id": "5afbd367-19c7-418f-994d-a7958fb1c4ae",
+      "reason": "Six mana legendary sorcery requires own legendary permanent.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Kenrith, the Returned King",
+      "oracle_id": "d209b948-9afb-4fd1-a961-72c87282878c",
+      "reason": "Organizer explicitly free. Competitive risk retained for separate line/legality review; no hidden surcharge.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Kiki-Jiki, Mirror Breaker",
+      "oracle_id": "a34b7416-cfe3-4a1e-a8c1-a3056b747519",
+      "reason": "Repeatable hasty copying, meaningful creature restrictions; not every paired payoff priced.",
+      "source": "prior audit family judgment",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Kinnan, Bonder Prodigy",
+      "oracle_id": "8d11aa49-d4cd-48b1-aa0f-8548fa733416",
+      "reason": "Guaranteed mana multiplication and activation outlet.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 15,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Last Chance",
+      "oracle_id": "360039a5-1cbd-4ee3-8f94-21b5348e106a",
+      "reason": "Organizer explicitly endorsed seven.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Lighthouse Chronologist",
+      "oracle_id": "b19ff0dd-2041-461f-aa62-6dc273e4bbe5",
+      "reason": "Nine mana total level investment; opponent end step awards team turn, not two.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Lion's Eye Diamond",
+      "oracle_id": "ee6099b0-fb1f-42f1-b862-7708c6e36d05",
+      "reason": "Three mana at severe hand cost; extraordinary efficient enabler.",
+      "source": "prior audit family judgment",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Lost Isle Calling",
+      "oracle_id": "0efbf29c-09a0-4472-83ad-8d692c0232a5",
+      "reason": "Seven scry counters plus six-mana activation, self-exile; slow specialized payoff.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Lotus Petal",
+      "oracle_id": "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
+      "reason": "Zero-mana one-shot fixing at card cost.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 9,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Magda, Brazen Outlaw",
+      "oracle_id": "3d268e48-3004-4384-bf52-e63243fb5e02",
+      "reason": "Guaranteed Treasure conversion into creatures/artifacts; specialized board setup.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 10,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Magistrate's Scepter",
+      "oracle_id": "487485a6-cf79-48c0-bea9-0ec6b3ee253c",
+      "reason": "Repeatable team-turn converter requires own three counters, tap and substantial charging/setup.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Magosi, the Waterveil",
+      "oracle_id": "4bdffa67-e6b3-4588-b76e-c11db6f043ca",
+      "reason": "Store one team turn by skipping one, then return land on cashout; net not a free turn absent other pieces.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Mana Crypt",
+      "oracle_id": "2c63e4e1-89d2-4bc6-a232-94e75c4b1c8a",
+      "reason": "Free permanent two-mana acceleration; shared60 softens three-damage risk.",
+      "source": "prior hypothetical unban review",
+      "working_price": 15,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mana Drain",
+      "oracle_id": "74d3277a-38e5-4732-afed-084a56148f20",
+      "reason": "Two colored mana, reactive mana conversion; below pitch Force14.",
+      "source": "prior audit family judgment",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mana Vault",
+      "oracle_id": "736892cb-a34b-4bb9-b56c-e26e3db207a2",
+      "reason": "One mana for three colorless mana; later untap cost.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Medomai the Ageless",
+      "oracle_id": "b6b91ea7-a22c-4835-8c62-3360b0fd3a8b",
+      "reason": "Guaranteed six-mana combat-turn engine; cannot attack during extra turns.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Medomai the Ageless",
+      "oracle_id": "b6b91ea7-a22c-4835-8c62-3360b0fd3a8b",
+      "reason": "Six-mana combat-damage team turn; cannot attack during extra turns, recursion/cloning not free.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mental Misstep",
+      "oracle_id": "1a0770e6-b093-4439-baff-6889a50ba12e",
+      "reason": "Free narrow counter; one-mana-value limitation.",
+      "source": "prior audit family judgment",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Mindslaver",
+      "oracle_id": "a806f4ee-f48a-46c3-8772-5aaabebe4c7e",
+      "reason": "Accepted five; controlling one head turn controls opposing team.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mox Amber",
+      "oracle_id": "7a43bd27-fdd8-41f0-9bc4-92568f3408f1",
+      "reason": "Zero-mana permanent mana needs own suitable legend; below Opal10.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mox Diamond",
+      "oracle_id": "f3c5978a-70fa-431f-933b-b954bd0db0ea",
+      "reason": "Free permanent mana at land-card cost.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 14,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mox Opal",
+      "oracle_id": "de2440de-e948-4811-903c-0bbe376ff64d",
+      "reason": "Metalcraft requirement and legendary restriction.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Mu Yanling",
+      "oracle_id": "34e1477a-c0fb-4364-bb93-04a85c0c2517",
+      "reason": "Six-mana planeswalker, distant minus-ten ultimate; no low-investment team-turn engine.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mystic Remora",
+      "oracle_id": "8a52f3c0-2552-4425-b2e3-5496eb2232a7",
+      "reason": "Cheap draw engine; cumulative upkeep and opposing-seat count matter.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Mystical Tutor",
+      "oracle_id": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+      "reason": "Instant restricted tutor with topdeck delay; below Vampiric10.",
+      "source": "prior audit family judgment",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Najeela, the Blade-Blossom",
+      "oracle_id": "09619943-6aec-4080-ace5-a0c6ebb23f1c",
+      "reason": "Organizer explicitly free. Competitive risk retained for separate line/legality review; no hidden surcharge.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        2,
+        3
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Narset, Parter of Veils",
+      "oracle_id": "ab26fbe2-e808-48b9-8d0d-3fbb6c3d554f",
+      "reason": "Asymmetric opposing draw cap; supersedes earlier provisional five.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Nature's Claim",
+      "oracle_id": "6d4e558e-9109-4918-a082-fdcbaffd516b",
+      "reason": "Ordinary narrow removal; four life is shared but not exceptional.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Nature's Will",
+      "oracle_id": "9837287b-d821-4655-8f01-93fc6c7f0ecc",
+      "reason": "Four-mana repeated whole-land untap plus opposing-head land tap; exceptional combat-resource engine, not an interchangeable payoff.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Necrodominance",
+      "oracle_id": "a10b3e35-8cc4-450e-9e30-0fce8df0fea4",
+      "reason": "Shared draw-step skipped; draws cost life, five-card hand limit; own draw only.",
+      "source": "review_inputs.py",
+      "working_price": 12,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        14,
+        15
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Necropotence",
+      "oracle_id": "94a844d2-0574-45a7-b347-e0e329767c42",
+      "reason": "Shared life pays; skip shared draw step costs both heads their ordinary draws.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 15,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Nexus of Fate",
+      "oracle_id": "6c1d22d4-f28e-4041-a9b6-1575e8929b61",
+      "reason": "Seven-mana instant and self-recycling enable recurrence; no assumed loop.",
+      "source": "review_inputs.py",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Notion Thief",
+      "oracle_id": "f8dab16e-1d50-443e-9431-8b6f1cf61c9c",
+      "reason": "Accepted five; steals extra opposing draws, not friendly draws.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Notorious Throng",
+      "oracle_id": "b1461f2a-2f12-49ae-8821-d934dddcb567",
+      "reason": "Six-mana prowl plus prior Rogue damage; extra team turn and tokens require actual combat setup.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Null Rod",
+      "oracle_id": "2f83ca86-e23d-40f7-8085-6928d8cfef9b",
+      "reason": "Symmetric artifact activation denial; family parity with Ouphe/Stony.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Obeka, Brute Chronologist",
+      "oracle_id": "21b76a94-d9f3-4c34-ab24-7e89321b04f0",
+      "reason": "Repeatable shared-turn-ending option; active player may decline, not forced opposing turn end.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Opposition Agent",
+      "oracle_id": "1f438b8f-fe23-4f3b-ab2e-f6c33676c462",
+      "reason": "Flash search theft is exceptional individual disruption.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Orcish Bowmasters",
+      "oracle_id": "ea5103f5-27e0-4eb1-902c-7f34652d6bf3",
+      "reason": "Efficient repeatable draw punishment and flexible ETB damage.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Orim's Chant",
+      "oracle_id": "26d3a818-7faf-443a-a6bd-9773edaedf17",
+      "reason": "Only one opposing head is stopped; lower exceptional price than Silence.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 12,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Pact of Negation",
+      "oracle_id": "f3e213a4-ba5a-468a-93b3-c0a34e1bd725",
+      "reason": "Free protection with mandatory next-upkeep liability; no free turn-seven immunity.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Part the Waterveil",
+      "oracle_id": "54dd35ee-6f89-460d-9370-72bc3fa6840a",
+      "reason": "Six mana sorcery team turn, self-exile; awakened land optional expensive mode.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Path to Exile",
+      "oracle_id": "d683d985-9888-4d21-8b5f-69e69ce4a03b",
+      "reason": "Ordinary interaction with opponent resource compensation.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Peer into the Abyss",
+      "oracle_id": "21fa2442-6eac-4dce-a9cc-76f0053fdb8f",
+      "reason": "Seven mana half-library draw and half-life loss; target head, not both.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Pemmin's Aura",
+      "oracle_id": "ada2f380-bca7-4d64-9587-bab11c776ba8",
+      "reason": "Untap analogue to Freed with additional flexibility; identical untap price.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Perch Protection",
+      "oracle_id": "295fe873-ecb5-4d5e-a73c-3af6c478afc5",
+      "reason": "Gift grants OPPOSING team a turn; six-mana defensive phasing does not inherit offensive price.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Plea for Power",
+      "oracle_id": "8b886623-5c96-48dd-a3d2-fd5865c58ff5",
+      "reason": "Two opposing knowledge votes force tie and draw-three; friendly votes cannot guarantee time.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Primeval Titan",
+      "oracle_id": "ae83ef2c-960f-4c5b-97cc-52465c687c18",
+      "reason": "Two land tutors on entry/attack remain repeatable exceptional ramp. Fewer opponents does not fix repetitive land packages.",
+      "source": "prior hypothetical unban review",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Prophet of Kruphix",
+      "oracle_id": "372351fd-58f7-4cb8-8644-5fbc94ccb145",
+      "reason": "Only one opposing shared untap step; flash/own-resource refreshing still bypasses tempo.",
+      "source": "prior hypothetical unban review",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Ral Zarek",
+      "oracle_id": "75ed6946-e7b1-4bf8-a05c-62a2ba5a6c79",
+      "reason": "Four-mana planeswalker, distant minus-seven plus random flips; multiple pieces needed to exploit quickly.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Ranger-Captain of Eos",
+      "oracle_id": "cada3481-cc2b-4412-b9b5-0436af53aad2",
+      "reason": "Creature tutor plus sacrifice to stop opposing noncreature spells.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 13,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Razaketh, the Foulblooded",
+      "oracle_id": "136c9ecb-59b4-4ef6-bcb2-7b8d3df3ee75",
+      "reason": "Repeatable sacrifice tutor using shared life; eight mana / reanimation and own creatures.",
+      "source": "review_inputs.py",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Reanimate",
+      "oracle_id": "a044474a-cd72-4e9d-bd8d-a08f2de9cdc0",
+      "reason": "One mana to recover a creature from either graveyard; life and target dependence.",
+      "source": "prior audit family judgment",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Regenerations Restored",
+      "oracle_id": "a1e691f3-a3e9-4cfa-a761-d7e020364dfa",
+      "reason": "Twelve-time-counter enchantment plus manipulation; slow specialized support.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Rhystic Study",
+      "oracle_id": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+      "reason": "Repeating opponent-spell draw; two opposing players, not three.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 9,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Rise of the Eldrazi",
+      "oracle_id": "982f70af-077f-40df-b2fe-7c80ebcc7712",
+      "reason": "Twelve mana including CCC; uncounterable broad impact plus one team turn, not cheap acceleration.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Rite of Flame",
+      "oracle_id": "8a2e53f9-8100-488f-8504-b59e9bd1cc29",
+      "reason": "One-mana net-one ritual; narrow red, ordinary higher-cost rituals remain free.",
+      "source": "prior audit family judgment",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "hypothetical_banned_price",
+      "card_name": "Rofellos, Llanowar Emissary",
+      "oracle_id": "3015882b-4897-4d2c-8e33-6731c85a0d03",
+      "reason": "Own Forest count only, no teammate Forests. Guaranteed2-mana acceleration remains explosive.",
+      "source": "prior hypothetical unban review",
+      "working_price": 12,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Rograkh, Son of Rohgahh",
+      "oracle_id": "584cee10-f18c-4633-95cc-f2e7a11841ac",
+      "reason": "Zero-mana guaranteed commander enables many independently priced free effects.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 14,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "organizer_family_guidance_working_price",
+      "card_name": "Rule of Law",
+      "oracle_id": "53e88e64-6f82-4154-a66e-6aeb0154b368",
+      "reason": "Each head may cast one spell; one is analyst selection within general organizer one-to-two guidance.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Sage of Hours",
+      "oracle_id": "bdbf70da-af38-4827-9b8b-39f553ebd34a",
+      "reason": "Repeatable counter-to-team-turn converter; removes five own counters.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Savor the Moment",
+      "oracle_id": "d5b9b75d-4bf0-4328-9bb3-7b260a0c46af",
+      "reason": "Three mana extra team draw/land/combat but whole friendly untap skipped.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Scheming Symmetry",
+      "oracle_id": "6dfb50d7-359b-4644-90e3-7ecdacee7c12",
+      "reason": "Symmetric access; organizer explicitly makes free.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Search the City",
+      "oracle_id": "fe1b0b19-0994-4bc7-ab6c-d1419d274f40",
+      "reason": "Singleton matching-name five-card setup is unusually awkward; no evidence exceptional standalone ceiling.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Second Chance",
+      "oracle_id": "aa19bbf0-7de3-4ec3-a98b-2ac7533c6b0b",
+      "reason": "Three-mana upkeep sacrifice team turn only at five or less shared life; dangerous/recursion-dependent.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        0,
+        1
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Seedborn Muse",
+      "oracle_id": "463865bc-087e-477b-9e86-84e77f1ad931",
+      "reason": "One opposing shared untap, only own permanents; ordinary engine free.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Seedtime",
+      "oracle_id": "3ba50802-57d0-450e-9e2f-a46a09d2f6bb",
+      "reason": "Two-mana instant team turn only during own turn after opposing blue spell; reactive setup limits applicability.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Serra Ascendant",
+      "oracle_id": "27ad3e00-6ffb-48f7-8469-8868d066d1e2",
+      "reason": "Immediately enabled but a combat threat, not deterministic win.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Silence",
+      "oracle_id": "8aed54cb-d1bb-45ad-adbe-38e55d84ff31",
+      "reason": "One white mana shields both friendly players from opposing spells.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 14,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Simian Spirit Guide",
+      "oracle_id": "44e0ffa3-8915-4c1f-8f1a-4aeea1365f07",
+      "reason": "Exile-for-mana analogue to Elvish Spirit Guide6; red generally less flexible.",
+      "source": "prior audit family judgment",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Sisay, Weatherlight Captain",
+      "oracle_id": "fb777610-7562-4d9d-8497-62c562e6d7cb",
+      "reason": "Repeatable legendary tutoring, deployment and activation constraints.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 7,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Skullclamp",
+      "oracle_id": "65986c1b-8e51-4604-b685-d82fa7d1263a",
+      "reason": "Conditional creature-to-card conversion; authoritative minor anchor.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Smothering Tithe",
+      "oracle_id": "153376c9-dffd-458c-8ce3-a4c8269bc4e9",
+      "reason": "Two opponents feed it; four mana and payment choices limit speed.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "reason": "Broadly exceptional turn-one colorless acceleration.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 15,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Sorin Markov",
+      "oracle_id": "c151e8b7-4b28-4f03-8a81-9bf623f893d7",
+      "reason": "Sets opposing shared pool to 10; six mana deployment.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 5,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Spellseeker",
+      "oracle_id": "47a785ed-8095-4685-8daa-02c4e2b0ffcd",
+      "reason": "ETB tutor for efficient interaction/win components; body/copy access. Inalla risk flagged.",
+      "source": "prior audit family judgment",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Sphere of Resistance",
+      "oracle_id": "09c96077-3804-4f12-a613-5bebc5e0413f",
+      "reason": "Symmetric one-mana tax.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Stasis",
+      "oracle_id": "a8cf1379-0195-4e11-b994-481ef1284245",
+      "reason": "Shared untap skip affects both teams; own upkeep maintenance.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Static Orb",
+      "oracle_id": "0004ebd0-dfd6-4276-b4a6-de0003e94237",
+      "reason": "Symmetric permanent untap denial.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Stitch in Time",
+      "oracle_id": "59b2a90e-542f-4fb0-b290-ac79dc2892a4",
+      "reason": "Three mana expected half extra team turn; coin failure remains real.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Stony Silence",
+      "oracle_id": "12c63a45-7eb2-4262-b571-3358182f5610",
+      "reason": "Symmetric artifact activation denial; not asymmetric opponent-only lock.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Stranglehold",
+      "oracle_id": "b66c6e3a-daed-43a3-95d6-4f9d6223bbf1",
+      "reason": "Four-mana asymmetric opposing search/extra-turn denial; below cheap proactive protection.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Sundial of the Infinite",
+      "oracle_id": "79d46e09-2548-440f-9c02-3c3dc39a0cd1",
+      "reason": "Cheap loss-trigger bypass requires own/shared turn and correctly timed activation.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Survival of the Fittest",
+      "oracle_id": "119d719d-e965-45b4-9bc9-ac03211b10c2",
+      "reason": "Repeatable low-cost creature selection, discard and creature-density limits.",
+      "source": "prior audit family judgment",
+      "working_price": 9,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Swan Song",
+      "oracle_id": "8ddfc283-c9b4-41a5-af88-cf0068e986cc",
+      "reason": "One-mana conditional counter; token drawback and misses creatures/artifacts.",
+      "source": "prior audit family judgment",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Sword of Feast and Famine",
+      "oracle_id": "d0901053-6de0-46d0-9ee3-8d40510236c1",
+      "reason": "Three mana plus equip two, repeat land untap/discard on connection; trigger belongs to equipment controller even on friendly creature.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Swords to Plowshares",
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "reason": "Efficient one-target removal, not a premium engine.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Sylvan Library",
+      "oracle_id": "92eed395-62ca-4293-882b-8565c40daab5",
+      "reason": "Four life per retained additional card paid from shared sixty; own draw only.",
+      "source": "review_inputs.py",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Tainted Pact",
+      "oracle_id": "1a85ba2b-ae10-4917-954a-7709b75a9740",
+      "reason": "Two-mana instant library access; deck-construction restrictions.",
+      "source": "prior audit family judgment",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Teferi's Protection",
+      "oracle_id": "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
+      "reason": "Defensive team life protection; own permanents phase out only.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Teferi, Mage of Zhalfir",
+      "oracle_id": "2b6cbd55-5adc-4a34-ac45-8531705a7ee1",
+      "reason": "Asymmetric opponent timing restriction, five mana; Pool lock reviewed separately.",
+      "source": "prior audit family judgment",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Teferi, Master of Time",
+      "oracle_id": "e802fb53-7cf5-46bc-8a0b-f99cf5c20f74",
+      "reason": "One loyalty activation per actual shared turn, not once per head; distant minus-ten ultimate.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Teferi, Timebender",
+      "oracle_id": "761bb894-d3f9-4248-af76-1559c502e342",
+      "reason": "Six-mana planeswalker, distant minus-nine ultimate; ordinary utility.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Temporal Extortion",
+      "oracle_id": "13da5255-2fc5-43a4-a44c-13a5d9ff77c3",
+      "reason": "BBBB conditional turn: opposing head may pay half shared life to counter; not guaranteed team turn.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Temporal Manipulation",
+      "oracle_id": "6b6ac99a-7548-4cad-9fe5-ea611618ab9e",
+      "reason": "Same five-mana one-team-turn function as Time Warp.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Temporal Mastery",
+      "oracle_id": "5c58b8e6-c572-461e-893e-a8c05f20ba17",
+      "reason": "Two-mana miracle team turn requires topdeck/timing; normal seven mana.",
+      "source": "review_inputs.py",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Temporal Trespass",
+      "oracle_id": "c216b924-88ac-4853-9e95-0c345c09eeb6",
+      "reason": "UUU plus graveyard delve; one complete extra team turn, exiles itself.",
+      "source": "review_inputs.py",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Tendrils of Agony",
+      "oracle_id": "78db3190-59bc-4033-95bc-32d8ed872b6a",
+      "reason": "Four-mana storm payoff targets one player, not each opponent; narrow finisher rather than independently exceptional resource.",
+      "source": "prior audit family judgment",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        6,
+        8
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Test of Endurance",
+      "oracle_id": "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc",
+      "reason": "Already above fifty at 60 starting team life; upkeep requirement.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Thassa's Oracle",
+      "oracle_id": "1de1b591-a73f-4974-b507-8c63e07a0868",
+      "reason": "Low-cost alternate-win conversion; empty-library lines need legality review.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "The Legend of Kuruk // Avatar Kuruk",
+      "oracle_id": "201b8936-18f4-4881-a1d4-c308cf3832bf",
+      "reason": "Multi-stage transformation and expensive back-face activation; ordinary strategy support pending stronger evidence.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "The One Ring",
+      "oracle_id": "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
+      "reason": "Reusable cards; its protection is individual.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Thorn of Amethyst",
+      "oracle_id": "0c6c5336-9233-4ab1-9d55-79f20be7ea57",
+      "reason": "Symmetric noncreature tax.",
+      "source": "review_inputs.py",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Thrasios, Triton Hero",
+      "oracle_id": "3d867016-2601-4a37-a73d-308898d3bd37",
+      "reason": "Cheap repeatable mana sink and partner color access.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 10,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Time Sieve",
+      "oracle_id": "3da5977a-36d4-4f32-ab9b-8b93809d818d",
+      "reason": "Repeatable two-mana team-turn converter; five own artifacts each activation.",
+      "source": "review_inputs.py",
+      "working_price": 8,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Time Spiral",
+      "oracle_id": "cac55e46-b730-4569-b92c-a4b5922fc20c",
+      "reason": "Six mana wheel plus own land untap; premium wheel comparison.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Time Stretch",
+      "oracle_id": "72e56963-a9dd-44dc-a4d3-992b4d89dd28",
+      "reason": "Ten mana for two team turns; slower deployment than cheap extra turns.",
+      "source": "review_inputs.py",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Time Warp",
+      "oracle_id": "dbd6a94b-62ff-4a10-9d52-bdd90b26e425",
+      "reason": "Heavy team-turn tax accepted broadly; exact six provisional.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Timesifter",
+      "oracle_id": "99f8805f-6618-4838-a4e7-a3660e3b087f",
+      "reason": "Five-mana global topdeck contest; friendly manipulation can bias recurring team turns, opponents may win too.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Timestream Navigator",
+      "oracle_id": "d0896996-ee31-402e-b642-4e7cca4929fe",
+      "reason": "Ascend, untapped creature and four mana needed; summoning sickness and recursion matter.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        2,
+        3
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Timetwister",
+      "oracle_id": "c823e687-6311-4c99-974b-fd77d204141a",
+      "reason": "Premium graveyard reset wheel; three is selected within approved two-to-three.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Tivit, Seller of Secrets",
+      "oracle_id": "f4e0b557-4f80-4b7c-bfcc-6d4c468faf2e",
+      "reason": "Guaranteed artifact-producing finisher for own Sieve; six mana and combat/ETB requirements.",
+      "source": "review_inputs.py",
+      "working_price": 6,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Toxic Deluge",
+      "oracle_id": "afaef788-34d1-460b-b884-9d7ae6ddeb18",
+      "reason": "Efficient scalable creature reset paid from shared life.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Training Grounds",
+      "oracle_id": "8de3eabe-9a8f-4865-beef-a4888c081d39",
+      "reason": "Only controller's creature activations receive reduction; authoritative minor anchor.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Tree of Perdition",
+      "oracle_id": "0cdece2a-0bdf-4e6d-9ddc-4a8d58b2ec29",
+      "reason": "Four-mana tap creature exchanges own toughness with target opponent/shared pool; summoning sickness and creature interaction.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Trinisphere",
+      "oracle_id": "69d994f2-b8f6-425f-9655-977c2144d40c",
+      "reason": "Symmetric spell-cost floor; affects teammates.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Trouble in Pairs",
+      "oracle_id": "f349f58b-8cc8-45e4-9565-2b46fdf976c9",
+      "reason": "Defensive opposing-turn prevention plus four-mana conditional draw; not taxed like turn engine.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Twice Upon a Time // Unlikely Meeting",
+      "oracle_id": "04dc2e9c-312c-4af8-950c-6a7ed859c9be",
+      "reason": "Six-mana turn requires two own Doctors; Adventure is narrow Doctor tutor, not broad tutor.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Tymna the Weaver",
+      "oracle_id": "d15642e4-e61c-4d29-af48-de837991245e",
+      "reason": "Repeatable draw from damage by either friendly player; partner access.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 9,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Ugin's Nexus",
+      "oracle_id": "fe2afa18-54d0-4595-af27-256398793a42",
+      "reason": "Five-mana sacrifice/exile converter with extra-turn prevention while on board; recurring requires setup.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Ultimecia, Time Sorceress // Ultimecia, Omnipotent",
+      "oracle_id": "70773879-b773-4e81-99ca-8f4bba478962",
+      "reason": "Transform/pay setup and six-mana end-step ability; narrow expensive ceiling pending dedicated gameplay evidence.",
+      "source": "review_inputs.py",
+      "working_price": 0,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Underworld Breach",
+      "oracle_id": "27e0948b-9916-473b-8d8c-a51bdfbc7457",
+      "reason": "Exceptionally efficient graveyard access; loops reviewed separately.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 15,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Unspeakable Symbol",
+      "oracle_id": "a5690d5f-633c-4a1e-afba-5fd79dcbf20e",
+      "reason": "Three-mana repeat life-to-own-creature counters; shared sixty enables commander-damage threat, setup remains.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Vampiric Tutor",
+      "oracle_id": "ededbdae-d9dc-4206-9335-d7158f2d7700",
+      "reason": "Broad instant tutor with life and card/topdeck delay.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 10,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Veil of Summer",
+      "oracle_id": "002965be-a36f-4a09-9ce0-c6535bca1703",
+      "reason": "Protects only controller's spells/permanents as its text specifies; minor anchor.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Voice of Victory",
+      "oracle_id": "b12cbda1-ac09-49eb-96b3-a4df27bc37ea",
+      "reason": "Own shared-turn spell prohibition against opponents; creature vulnerabilities.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 12,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Walk the Aeons",
+      "oracle_id": "0ec36301-6282-49d4-85ea-6a46708e2f60",
+      "reason": "Six mana team turn; buyback sacrifices three own Islands.",
+      "source": "review_inputs.py",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Wanderwine Prophets",
+      "oracle_id": "9ab36915-b600-4970-961a-403f5da0dba1",
+      "reason": "Six mana champion creature; combat and own Merfolk sacrifice setup.",
+      "source": "review_inputs.py",
+      "working_price": 4,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "explicit_organizer_price",
+      "card_name": "Warrior's Oath",
+      "oracle_id": "574044cf-2e2f-4b5c-b4d1-cf05ba814ab2",
+      "reason": "Organizer explicitly endorsed seven.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 7,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": [
+        2,
+        3
+      ],
+      "authority": "organizer_approved_range",
+      "card_name": "Wheel of Fortune",
+      "oracle_id": "a8abd966-de7b-46a3-8ac7-8747ab35653a",
+      "reason": "Premium wheel; three is selected within approved two-to-three.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 3,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Windfall",
+      "oracle_id": "08becc07-28bc-4a2f-a6b0-28a2998d2f50",
+      "reason": "Below premium wheels; exact one not independently dictated.",
+      "source": "organizer_calibration_2026-10-20.md",
+      "working_price": 1,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Winter Orb",
+      "oracle_id": "1dcbd583-3388-4b34-a7cd-131648aa6abd",
+      "reason": "Symmetric land untap denial; requires asymmetric construction.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "provisional_working_price",
+      "card_name": "Worldly Tutor",
+      "oracle_id": "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+      "reason": "Instant creature-only topdeck tutor; below Enlightened9.",
+      "source": "prior audit family judgment",
+      "working_price": 6,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Wormfang Manta",
+      "oracle_id": "17abf8c6-70b6-4877-a0f2-a87b22fb2828",
+      "reason": "Seven mana, entry skips team turn and exit grants one; exceptional bypass needs extra setup.",
+      "source": "review_inputs.py",
+      "working_price": 2,
+      "zone": "main"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "qualitative_zero_anchor",
+      "card_name": "Yuriko, the Tiger's Shadow",
+      "oracle_id": "a7043fbd-1dfd-42cf-be4b-cc343d0949e5",
+      "reason": "Organizer explicitly free. Competitive risk retained for separate line/legality review; no hidden surcharge.",
+      "source": "original organizer qualitative tier plus assistant numeric choice",
+      "working_price": 0,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Zirda, the Dawnwaker",
+      "oracle_id": "7b515c56-7b1e-42a8-82b0-1b30201fb162",
+      "reason": "Guaranteed activated-cost engine; companion eligibility is separate and not auto-approved.",
+      "source": "review_inputs.py",
+      "working_price": 5,
+      "zone": "commanders"
+    },
+    {
+      "activated": false,
+      "approved_range": null,
+      "authority": "assistant_proposed_change_awaiting_approval",
+      "card_name": "Zirda, the Dawnwaker",
+      "oracle_id": "7b515c56-7b1e-42a8-82b0-1b30201fb162",
+      "reason": "Broad permanent activation reduction; own permanents only, specialized loop ceiling.",
+      "source": "review_inputs.py",
+      "working_price": 3,
+      "zone": "main"
+    }
+  ],
+  "numeric_band_enforcement": false,
+  "original_50_qualitative_anchors": [
+    {
+      "card_name": "Arcane Signet",
+      "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+      "tier": 0,
+      "zone": "main"
+    },
+    {
+      "card_name": "Cyclonic Rift",
+      "oracle_id": "d75b9c82-1b49-4c3e-a1b5-aeef57d6644b",
+      "tier": 0,
+      "zone": "main"
+    },
+    {
+      "card_name": "Demonic Tutor",
+      "oracle_id": "82004860-e589-4e38-8d61-8c0210e4ea39",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Elvish Spirit Guide",
+      "oracle_id": "6b0e23cf-7d68-4329-86db-7adc26abd86b",
+      "tier": 3,
+      "zone": "main"
+    },
+    {
+      "card_name": "Fierce Guardianship",
+      "oracle_id": "d09c9cba-fdd2-479b-ad5d-d05181c3e3f9",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Force of Will",
+      "oracle_id": "956381ba-6d37-4a8a-846c-bad79222dbee",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Mana Vault",
+      "oracle_id": "736892cb-a34b-4bb9-b56c-e26e3db207a2",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Rhystic Study",
+      "oracle_id": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Silence",
+      "oracle_id": "8aed54cb-d1bb-45ad-adbe-38e55d84ff31",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Skullclamp",
+      "oracle_id": "65986c1b-8e51-4604-b685-d82fa7d1263a",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "Smothering Tithe",
+      "oracle_id": "153376c9-dffd-458c-8ce3-a4c8269bc4e9",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Swords to Plowshares",
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "The One Ring",
+      "oracle_id": "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Toxic Deluge",
+      "oracle_id": "afaef788-34d1-460b-b884-9d7ae6ddeb18",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "Orim's Chant",
+      "oracle_id": "26d3a818-7faf-443a-a6bd-9773edaedf17",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Grand Abolisher",
+      "oracle_id": "c749f23c-40c0-4159-b84c-a70cbb062c14",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Ranger-Captain of Eos",
+      "oracle_id": "cada3481-cc2b-4412-b9b5-0436af53aad2",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Voice of Victory",
+      "oracle_id": "b12cbda1-ac09-49eb-96b3-a4df27bc37ea",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Veil of Summer",
+      "oracle_id": "002965be-a36f-4a09-9ce0-c6535bca1703",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "Defense Grid",
+      "oracle_id": "22ba474e-f6e6-450d-a4cf-0739f0b51079",
+      "tier": 2,
+      "zone": "main"
+    },
+    {
+      "card_name": "Chrome Mox",
+      "oracle_id": "ec3d4466-547c-4e02-b1b5-a156ec4637e9",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Mox Diamond",
+      "oracle_id": "f3c5978a-70fa-431f-933b-b954bd0db0ea",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Mox Opal",
+      "oracle_id": "de2440de-e948-4811-903c-0bbe376ff64d",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Lotus Petal",
+      "oracle_id": "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Dark Ritual",
+      "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Ancient Tomb",
+      "oracle_id": "23467047-6dba-4498-b783-1ebc4f74b8c2",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Vampiric Tutor",
+      "oracle_id": "ededbdae-d9dc-4206-9335-d7158f2d7700",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Enlightened Tutor",
+      "oracle_id": "c5229c17-b7be-4b05-b683-f2277edc4849",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Imperial Seal",
+      "oracle_id": "16cd0b90-f70c-4efa-b252-8de8784ef9a3",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Mystic Remora",
+      "oracle_id": "8a52f3c0-2552-4425-b2e3-5496eb2232a7",
+      "tier": 3,
+      "zone": "main"
+    },
+    {
+      "card_name": "Esper Sentinel",
+      "oracle_id": "5def9f38-0a0b-4e8d-9f9d-29dcb46520b4",
+      "tier": 3,
+      "zone": "main"
+    },
+    {
+      "card_name": "Necropotence",
+      "oracle_id": "94a844d2-0574-45a7-b347-e0e329767c42",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Underworld Breach",
+      "oracle_id": "27e0948b-9916-473b-8d8c-a51bdfbc7457",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Thassa's Oracle",
+      "oracle_id": "1de1b591-a73f-4974-b507-8c63e07a0868",
+      "tier": 4,
+      "zone": "main"
+    },
+    {
+      "card_name": "Birthing Pod",
+      "oracle_id": "f8b9dd54-0837-47f4-ad14-7a0322d46d5f",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "Training Grounds",
+      "oracle_id": "8de3eabe-9a8f-4865-beef-a4888c081d39",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "Food Chain",
+      "oracle_id": "5c8e5092-962e-49ef-ab82-8434e475e4e7",
+      "tier": 5,
+      "zone": "main"
+    },
+    {
+      "card_name": "Borne Upon a Wind",
+      "oracle_id": "ce19962d-94f9-4b2b-b668-963c0acce308",
+      "tier": 1,
+      "zone": "main"
+    },
+    {
+      "card_name": "Kinnan, Bonder Prodigy",
+      "oracle_id": "8d11aa49-d4cd-48b1-aa0f-8548fa733416",
+      "tier": 5,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Magda, Brazen Outlaw",
+      "oracle_id": "3d268e48-3004-4384-bf52-e63243fb5e02",
+      "tier": 4,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Rograkh, Son of Rohgahh",
+      "oracle_id": "584cee10-f18c-4633-95cc-f2e7a11841ac",
+      "tier": 5,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Thrasios, Triton Hero",
+      "oracle_id": "3d867016-2601-4a37-a73d-308898d3bd37",
+      "tier": 4,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Tymna the Weaver",
+      "oracle_id": "d15642e4-e61c-4d29-af48-de837991245e",
+      "tier": 4,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Sisay, Weatherlight Captain",
+      "oracle_id": "fb777610-7562-4d9d-8497-62c562e6d7cb",
+      "tier": 3,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Kenrith, the Returned King",
+      "oracle_id": "d209b948-9afb-4fd1-a961-72c87282878c",
+      "tier": 0,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Najeela, the Blade-Blossom",
+      "oracle_id": "09619943-6aec-4080-ace5-a0c6ebb23f1c",
+      "tier": 0,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Inalla, Archmage Ritualist",
+      "oracle_id": "21bdba6e-3f9d-4ead-8212-0cbb0ce7f8cc",
+      "tier": 0,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Derevi, Empyrial Tactician",
+      "oracle_id": "afa49a09-146f-4439-850e-dd1938c93cef",
+      "tier": 0,
+      "zone": "commanders"
+    },
+    {
+      "card_name": "Yuriko, the Tiger's Shadow",
+      "oracle_id": "a7043fbd-1dfd-42cf-be4b-cc343d0949e5",
+      "tier": 0,
+      "zone": "commanders"
+    }
+  ],
+  "precedence": [
+    "latest explicit organizer numerical decision",
+    "latest organizer approved numerical range/minimum",
+    "preserved original qualitative anchors (not numeric bands)",
+    "provisional working numeric choices",
+    "assistant proposals awaiting approval",
+    "immutable inherited impact and global curve"
+  ],
+  "qualitative_tiers_are_not_construction_points": true,
+  "removed_assistant_tier_intervals": {
+    "0": [
+      0,
+      0
+    ],
+    "1": [
+      1,
+      2
+    ],
+    "2": [
+      3,
+      4
+    ],
+    "3": [
+      5,
+      7
+    ],
+    "4": [
+      8,
+      10
+    ],
+    "5": [
+      11,
+      15
+    ]
+  },
+  "supersession_history": [
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "explicit_organizer_price",
+        "card_name": "Felidar Sovereign",
+        "oracle_id": "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b",
+        "reason": "Six-mana creature must survive to own upkeep.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 2,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Felidar Sovereign",
+        "oracle_id": "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b",
+        "reason": "Starting shared life clears threshold; six mana and upkeep removal window.",
+        "source": "prior audit family judgment",
+        "working_price": 1,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "explicit_organizer_price",
+        "card_name": "Sorin Markov",
+        "oracle_id": "c151e8b7-4b28-4f03-8a81-9bf623f893d7",
+        "reason": "Sets opposing shared pool to 10; six mana deployment.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 5,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Sorin Markov",
+        "oracle_id": "c151e8b7-4b28-4f03-8a81-9bf623f893d7",
+        "reason": "Six-mana single-player life-setting affects full opposing shared pool.",
+        "source": "prior audit family judgment",
+        "working_price": 2,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "explicit_organizer_price",
+        "card_name": "Serra Ascendant",
+        "oracle_id": "27ad3e00-6ffb-48f7-8469-8868d066d1e2",
+        "reason": "Immediately enabled but a combat threat, not deterministic win.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 1,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Serra Ascendant",
+        "oracle_id": "27ad3e00-6ffb-48f7-8469-8868d066d1e2",
+        "reason": "Starting shared sixty turns on a six-power lifelinker at one mana.",
+        "source": "prior audit family judgment",
+        "working_price": 2,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "explicit_organizer_price",
+        "card_name": "Notion Thief",
+        "oracle_id": "f8dab16e-1d50-443e-9431-8b6f1cf61c9c",
+        "reason": "Accepted five; steals extra opposing draws, not friendly draws.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 5,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Notion Thief",
+        "oracle_id": "f8dab16e-1d50-443e-9431-8b6f1cf61c9c",
+        "reason": "Steals opponent draws; team draw order may create mandatory draw loops.",
+        "source": "prior audit family judgment",
+        "working_price": 5,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": [
+          6,
+          8
+        ],
+        "authority": "organizer_approved_range",
+        "card_name": "Test of Endurance",
+        "oracle_id": "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc",
+        "reason": "Already above fifty at 60 starting team life; upkeep requirement.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 7,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Test of Endurance",
+        "oracle_id": "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc",
+        "reason": "Starting shared life clears threshold; four mana and a full upkeep window.",
+        "source": "prior audit family judgment",
+        "working_price": 2,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": [
+          14,
+          15
+        ],
+        "authority": "organizer_approved_range",
+        "card_name": "Necropotence",
+        "oracle_id": "94a844d2-0574-45a7-b347-e0e329767c42",
+        "reason": "Shared life pays; skip shared draw step costs both heads their ordinary draws.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 15,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Necropotence",
+        "oracle_id": "94a844d2-0574-45a7-b347-e0e329767c42",
+        "reason": "Large shared pool enables extensive exiled-card access; team draw-step skip matters.",
+        "source": "original organizer qualitative tier plus assistant numeric choice",
+        "working_price": 14,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": [
+          2,
+          3
+        ],
+        "authority": "organizer_approved_range",
+        "card_name": "Narset, Parter of Veils",
+        "oracle_id": "ab26fbe2-e808-48b9-8d0d-3fbb6c3d554f",
+        "reason": "Asymmetric opposing draw cap; supersedes earlier provisional five.",
+        "source": "organizer_calibration_2026-10-20.md",
+        "working_price": 3,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Narset, Parter of Veils",
+        "oracle_id": "ab26fbe2-e808-48b9-8d0d-3fbb6c3d554f",
+        "reason": "Opponent-only draw cap preserves friendly draw; not a complete lock alone.",
+        "source": "prior audit family judgment",
+        "working_price": 5,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "assistant_proposed_change_awaiting_approval",
+        "card_name": "Frantic Search",
+        "oracle_id": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+        "reason": "Net card disadvantage filtering; untap own lands is setup dependent.",
+        "source": "review_inputs.py",
+        "working_price": 0,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Frantic Search",
+        "oracle_id": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+        "reason": "Three-mana draw2/discard2/untap up to3 lands is ordinary conditional filtering; specialized land synergies intentionally uncharged.",
+        "source": "prior audit family judgment",
+        "working_price": 0,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "assistant_proposed_change_awaiting_approval",
+        "card_name": "Heartless Hidetsugu",
+        "oracle_id": "b68e965a-96f4-447a-99be-35dbd27846e9",
+        "reason": "One activation doubles head damage against shared life; needs asymmetry to avoid draw.",
+        "source": "review_inputs.py",
+        "working_price": 8,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Heartless Hidetsugu",
+        "oracle_id": "b68e965a-96f4-447a-99be-35dbd27846e9",
+        "reason": "Two individual damage events can consume the entire even shared pool; symmetrical lethal risk.",
+        "source": "prior audit family judgment",
+        "working_price": 4,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "assistant_proposed_change_awaiting_approval",
+        "card_name": "Drannith Magistrate",
+        "oracle_id": "aadd10d0-6dd0-4bdc-8d93-ff08e29a5863",
+        "reason": "Asymmetric nonhand casting denial plus opposing commander access; lock review separate.",
+        "source": "review_inputs.py",
+        "working_price": 5,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Drannith Magistrate",
+        "oracle_id": "aadd10d0-6dd0-4bdc-8d93-ff08e29a5863",
+        "reason": "Cheap asymmetric command-zone/nonhand restriction, no direct hand lock alone.",
+        "source": "prior audit family judgment",
+        "working_price": 4,
+        "zone": "main"
+      }
+    },
+    {
+      "replacement": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "assistant_proposed_change_awaiting_approval",
+        "card_name": "Ad Nauseam",
+        "oracle_id": "981b0e21-e5e6-4a1e-bfde-679d56623f7f",
+        "reason": "Instant-speed conversion of shared sixty life; own deck mana costs still constrain.",
+        "source": "review_inputs.py",
+        "working_price": 15,
+        "zone": "main"
+      },
+      "superseded": {
+        "activated": false,
+        "approved_range": null,
+        "authority": "provisional_working_price",
+        "card_name": "Ad Nauseam",
+        "oracle_id": "981b0e21-e5e6-4a1e-bfde-679d56623f7f",
+        "reason": "Sixty shared life raises realistic card-access ceiling; not drawing or life payment.",
+        "source": "prior audit family judgment",
+        "working_price": 13,
+        "zone": "main"
+      }
+    }
+  ],
+  "version": "season0-proposed"
+}

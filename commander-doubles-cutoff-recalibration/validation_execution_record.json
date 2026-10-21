@@ -1,0 +1,40 @@
+{
+  "deterministic_regeneration": {
+    "command": "python commander-doubles-cutoff-recalibration/recalibrate.py --check",
+    "generated_files": 86,
+    "observed_result": "passed_exact_byte_comparison"
+  },
+  "evidence": "Observed terminal executions during this task; each suite printed OK. Counts cross-checked against test methods.",
+  "execution_date_local": "2026-10-20",
+  "old_directories_modified": false,
+  "schedule_activated": false,
+  "status": "passed",
+  "suites": [
+    {
+      "command": "python commander-top1000-power-ranking/test_backend.py",
+      "observed_result": "passed",
+      "source_sha256": "eabce02c7573d21681ceb84c8650f1d86270ac6e1c3860a5092c388939f8aaf9",
+      "tests_run": 37
+    },
+    {
+      "command": "python commander-top1000-power-ranking/test_cli.py",
+      "observed_result": "passed",
+      "source_sha256": "9467ea5fbdd473749edae290ddb60fa6cdd9a4932648648585c7905bea1e70ca",
+      "tests_run": 4
+    },
+    {
+      "command": "python commander-doubles-final-audit/audit_tests.py",
+      "observed_result": "passed",
+      "source_sha256": "ac55ff0ab092affde85c1777e632656a3d6dc2bdf3c1e59d86bb3e860c36254e",
+      "tests_run": 51
+    },
+    {
+      "command": "python commander-doubles-cutoff-recalibration/audit_tests.py",
+      "observed_result": "passed",
+      "source_sha256": "507d8d02c0c46544a91ea5366280e5fff427b9943a2a27f37104bd2e4c0d1c1f",
+      "tests_run": 38
+    }
+  ],
+  "timezone": "America/Phoenix",
+  "total_tests": 130
+}
