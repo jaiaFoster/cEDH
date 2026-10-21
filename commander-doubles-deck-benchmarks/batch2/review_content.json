@@ -1,0 +1,594 @@
+{
+  "audio": {
+    "D": "Team D pairs K’rrik life-mana storm with Heliod Soul Sisters. K’rrik receives seventy-two points and Heliod forty-eight. The black deck keeps premium tutors and reanimation, but its most alarming route is a conditional second-turn Chainer and Gray Merchant loop. Heliod supplies life from actual Soul Sister triggers, proactive protection, and its own Walking Ballista or Triskelion finish. Shared life helps K’rrik pay costs, but life-gain and loss events still belong to individual players. I removed Children of Korlis because Heliod’s player cannot refund life paid by K’rrik’s player. Necropotence was also rejected because it skips the whole team’s draw step. Early turns develop rituals or white support creatures; later turns threaten independent wins. Graveyard exile, creature-ability suppression and timely removal are important counters. This is a serious early-combo stress test, with a much faster ceiling than the league’s social target, rather than evidence that the budget guarantees balanced games.",
+    "E": "Team E pairs Nekusar wheels with Lavinia prison and draw-go, at fifty-six and sixty-four points. Nekusar uses real wheel spells, damage multipliers and a secondary Mindcrank engine. Lavinia supplies countermagic, Knowledge Pool control and an independent Scepter conversion. The sequencing is crucial: Narset and Notion Thief deny opponent draws, which also removes Nekusar damage triggers. They are alternative control plans, not automatic damage multipliers. The strongest documented burn setup can threaten a shared-life kill on turn five, while Lavinia can establish a conditional fourth-turn Pool lock. That lock still has exceptions, including activated abilities and certain additional mana payments. Expensive fetches and original duals are replaced by basics and conditional fixing, creating real color and tempo costs. Nekusar’s archived tournament results are modest, so I am not calling it an established leading cEDH deck. This team tests whether inexpensive locks and coordinated timing remain too oppressive within the cap.",
+    "F": "Team F pairs Breya artifact prison and Time Sieve with Talion Dimir draw-go. Breya costs fifty-seven points and Talion sixty-three. The artifact deck keeps Sol Ring, multiple artifact tutors, Thopter-Sword, sacrifice recursion and an independent Basalt–Rings finish. Urza plus Thopter Foundry and Sword of the Meek costs only one main-deck point under this snapshot, an important pricing loophole to review. Time Sieve grants an extra turn to both teammates, but its five sacrificed artifacts must belong to Breya’s controller. Thopter Assembly needs six renewable mana and no other friendly Thopters at the upkeep check; Breya and Sai can interfere unless their tokens are cleared. Talion supplies stack protection and its own Oracle–Consultation win, so graveyard hate does not automatically stop both heads. Orb effects are deployed only with a way to release the friendly untap. This looks highly threatening, but its turn sequences remain conditional desk checks, not measured gameplay."
+  },
+  "docs": {
+    "team_synergy_and_counterplay.md": "# Batch2 team plans — season0-proposed\n\nThese six decks are new, unplayed 2HG adaptations. A complete deck and a passing budget do not establish Bracket3 play. No synergy, partner-pair or combo surcharge; no new restrictions or unbans. All mana, cards, permanent control and graveyards stay individual. Shared life and shared turns are the specific exceptions.\n\n## D — two independent conversions, shared life\n\nD1 preserves black storm/reanimation: K’rrik, rituals, premium direct access, Chainer/Gary, Gravecrawler/Altar, Citadel/Top/Reservoir and Vilis. D2 preserves the Modern Soul Sisters core, Ranger access, protection creatures and a command-zone Heliod finish. Sisters that say another creature enters see D1 creatures too; Daxos/Ajani’s Welcome see only D2’s creatures. Authority of the Consuls sees enemy creatures, not allied ones. D2 gains from the qualifying Sister triggers and may then put Heliod counters on D2’s own Ballista.\n\nD1’s Chainer/Gary loop and sacrifice outlets are own-controller machinery. K’rrik can substitute2 life for each B in Chainer’s cost, but the separate printed pay3 life still applies:9 shared life per activation with all three black symbols replaced. Baseline devotion from K’rrik3 + Chainer2 + Gary2 + Seer1 is8; both opponents lose8, and D1 gains16. Sacrifice/reanimate Gary again. This wins without relying on D2; Sisters improve the life reserve. Another route uses own Gravecrawler/Phyrexian Altar plus an own Zombie. D2 Warden plus Heliod can then repeatedly add counters to D2’s own Ballista, a functional distributed payoff.\n\nD2’s own Heliod grants lifelink to own Ballista with at least2 counters (or own Triskelion with its normal counters). Damage causes D2 to gain life; its Heliod replaces the spent counter via a trigger. Giving D1’s Ballista lifelink is legal, but does not make D2 gain life or allow D2 Heliod to refill that other player’s Ballista. D2 Reservoir can spend the shared life generated by D1’s engine, but two50-damage activations normally require starting above100 friendly life to survive the intervening SBAs; a single50 shot does not kill a fresh60-life team.\n\nNecropotence was deliberately omitted: skipping one player’s draw step skips the team’s draw step. Necrodominance also exiles D1’s graveyard resources and was rejected. Children of Korlis on D2 does not refund life D1 paid. Teferi’s Protection would clamp shared life and prevent nonzero life payments, so it was not treated as free protection for K’rrik’s engine. Mother/Giver/Bodyguard/Guardian/Grand Crescendo protect D2’s own creatures. Ranger-Captain, Myrel, Chant and Abeyance can support D1 through restrictions on the enemies, with their actual scopes.\n\nCounterplay: exile Gary in response to reanimation; remove Chainer (its leave trigger matters); counter or remove K’rrik; prevent life gain (teamwide consequence); Cursed Totem stops creature activations; Torpor Orb stops Gary/Sister ETB triggers; artifact-ability suppression stops Reservoir/Altar. D2 avoids permanent graveyard-exile hate that would shut down its ally. The black deck’s graveyard and ability dependence is a real shared tactical weakness, though Heliod’s normal own Ballista loop does not need a graveyard.\n\n## E — choose burn or denial, rather than conflating them\n\nE1 retains a genuine wheel/punishment deck instead of replacing Nekusar with incidental Oracle/Breach. Own Nekusar + Ghyrson + Harmonic Prodigy turns each successful enemy draw into two1-damage Nekusar events, each followed by2 from Ghyrson. Seven enemy draws apiece can therefore supply84 damage capacity across the opposing team, absent prevention and interaction. Ghyrson is not a Wizard: its own trigger is not doubled by Prodigy. Stops/loss occur as game rules require;84 is arithmetic capacity, not damage recorded after the game ends.\n\nNarset limits each opponent’s draws individually. Notion Thief replaces those draws; the replaced draws never happen and cannot trigger Nekusar, Bowmasters or Sheoldred. An own Thief+seven-card wheel gives E1 its own7 plus the enemy14 replacement draws, while E2 draws its own7; those are not shared hands. This is a card-denial plan, not14 Nekusar triggers. Deploy Narset/Thief after the burn route is abandoned or sequenced around it. Omen Machine was intentionally excluded because its global draw prohibition blanks the primary engine. Canonist was removed because it obstructs chained allied wheels and repeated Scepter copies.\n\nE2 Lavinia/Knowledge Pool permits friendly free casts while normally countering enemy free Pool spells. The original hand spell is exiled only if the Pool trigger resolves while it remains on stack. Additional mana taxes that make an enemy spend mana can defeat Lavinia’s no-mana-spent trigger; Teferi’s independent timing restriction is stronger and stops casting during Pool resolution. Flashback, commander casts from CZ, channels, abilities and preexisting stack objects are not universally covered. Drannith narrows enemy non-hand casting but does not stop commander ninjutsu or every ability.\n\nE2 also has own Scepter/Reversal with enough own nonland mana plus Reservoir or Stroke. E1 Guildmage or active Bloodchief Ascension can combine with E2 Mindcrank: both players have the same opponents, so the enemy life-loss/mill chain works without merging control. Graveyard replacements stop it. Ascension gets at most one quest counter at each shared end step, not one per opposing head. The loop needs an initiating loss/mill event and enough cards/life-state to reach the claimed result; an emptied library can require a subsequent forced draw. E2 Sanitarium supplies an actual ability-based draw/discard resource.\n\nNekusar infect is not an automatic seven-card-wheel kill:7 draws from each opposing player gives14 team poison, below15. Another qualifying draw can supply the fifteenth. Damaging Ghyrson does not automatically have infect merely because Nekusar does.\n\nCounterplay: remove punishment bodies before the wheel; fight the wheel or multiplier; use draw denial to reduce damage; pressure the slow five-mana commander; exploit Pool exceptions and channels; remove Lavinia/Teferi before casting the exit spell. Wheels can refill the enemy and dump friendly counter hands. E1’s BBB Dreams and three-color mana are real costs; the list is not asserted top-tier from modest archived results.\n\n## F — permanent engine and separate library win\n\nF1 retains Breya’s artifact sacrifice/recursion identity, borrowing documented Modern Urza ThopterSword and prison techniques rather than pretending the selected tournament lists were already 2HG Time Sieve lists. Foundry/Sword alone costs one mana per Thopter/life; add own Altar/KCI for net colorless mana, or own Urza to tap own Sword and each new Thopter for net blue. Sword must belong in the relevant controller’s graveyard and see that controller’s1/1 enter. A teammate cannot sacrifice your Sword or feed your Time Sieve. The one-point Urza/Foundry/Sword core is intentionally preserved, not secretly repriced.\n\nOwn Breya plus Deathmantle plus KCI/Altar loops its own Breya/tokens. Leave Breya in the graveyard for Deathmantle rather than moving it to CZ. Sacrificing Breya and two own Thopters produces6, paying4 returns Breya and recreates two tokens, banking2; with enough stored mana, retain tokens for Breya damage. A separate own Basalt/Rings loop plus Ballista avoids graveyard reliance. Urza’s mana is blue; casting Breya still needs actual WBR sources, not blue treated as arbitrary colors.\n\nSieve/Assembly takes extra shared team turns but demands repeatable6 own mana, its own five-artifact payment, and zero other F1 Thopters at the Assembly upkeep checks. Breya and Sai tokens are an actual conflict: clear them with an own sacrifice outlet or keep those cards undeployed for this route. F2 Thopters do not fail F1’s check, but also cannot pay F1 Sieve. Assembly is not itself sacrificed in the repeat line; return it, sacrifice the five created tokens, recast it. Extra friendly turns give Talion normal draws and untaps, not automatic Talion triggers from friendly spells.\n\nUrza can tap both own Orbs for mana before the shared friendly untap, freeing both heads’ normal untap. Prototype and Relic Barrier each have their own tap cost and normally handle only one target per untap. Do not deploy both Orbs without enough release mechanisms. Clock untaps only F1 artifacts during an opposing shared untap; it does not untap Talion’s mana, nor create a separate untap for each enemy. Static Orb’s limitation concerns each player’s own untap step. Tangle Wire also affects the friendly team and needs ordering/fodder; no claim of automatic asymmetry.\n\nF2 spends on Force/Fluster, Remora, Oracle/Consultation and six-point Otawara. It wins from its own library and supports the artifact head with actual own cards/mana. Talion counts matching enemy casts, not F1 casts. Graveyard hate that suppresses Sword/Mantle need not stop Oracle or Basalt/Rings; artifact-ability hate need not stop Oracle. Torpor Orb hits Oracle and Sword/Breya ETB routes but not Assembly’s upkeep trigger or Ballista’s replacement counters. No single hate card is assumed irrelevant.\n\nCounterplay: counter the first converter, exile Sword in response to its trigger, disrupt the last artifact payment, remove the Orb-release engine before friendly untap, use creature/artifact ability hate, or counter Oracle’s trigger/library exile. F1 has limited stack interaction; F2 carries that burden. Low monetary budget is not claimed: the lists optimize construction points, using legal expensive cards where appropriate.\n",
+    "budget_tradeoffs.md": "# Budget and mana choices\n\nThe approved working cap is120 team,72 per deck and at most12 transferred from a60 reference. No requirement to spend points for its own sake. D72/48 transfers12; E56/64 transfers4; F57/63 transfers3. Each paid slot is reviewed below; full actual charges are appended by the generator.\n\nD1 retains K’rrik CZ12, Tutor15, Citadel10, Dark Ritual9, Entomb8 and Reanimate6. They preserve deployment, unrestricted access and immediate conversion. Top3 and the one-point recursion/engine pieces remain efficient. Necropotence15 was replaced by Tutor15 on format grounds, not quietly discounted: shared draw-step skipping harms D2, and Necrodominance additionally blocks the graveyard. Peer5 was cut rather than exceeding72 or dropping essential recursion; Necrologia/Vilis/Citadel are conditional alternatives. Most other tutors are slower or conditional, not equivalent direct substitutes. Lake of the Dead, Coffers and Urborg remain baseline zero and are explicitly flagged for review. Mana from Lake needs real Swamp sacrifices.\n\nD2 preserves Ranger-Captain13 for Ballista access plus opposing noncreature suppression, Enlightened9, Sentinel5, Drannith5 and Recruiter4. Heliod CZ2, Ballista2 and Felidar2 support independent finishes. Swords/Chant/Abeyance/Ascendant/Reservoir/Clamp cost1 each. Tithe8 and Grace4 were excluded to fund access/proactive play. Children1 was rejected for its false cross-player refund; there is no hidden refund for K’rrik payments. Sisters and white draw bodies are purposeful, not token filler. Starting60 makes Ascendant’s threshold immediately relevant; a flying blocker still blocks for either enemy.\n\nE1 keeps Tutor15, Mystical7 and Gamble6 to find the exact engine/wheel; Gamble’s discard is real. Thief5 and paid wheel/punishment cards support distinct plans. Beseech6 was cut for BBB and price pressure; Muddle/Shred are limited two-mana access. E2 keeps Force14 with actual blue support, Teferi7 for team protection/Pool timing, Remora6 and Otawara6 as an ability-based exit, plus Drannith5 and Sentinel5. Lavinia CZ remains baseline1: feedback’s main-deck2 is not silently charged as a CZ alternative too. This scope interpretation is disclosed for review. Removing Canonist avoids sabotaging Scepter and allied wheels.\n\nF1 preserves Sol Ring15 because recurring6 for Assembly and early generic deployment matter; Enlightened9 and Sieve8 are strategic anchors. Urza1, Transmute1 and free artifact-only tutors expose a price-family gap without changing the organizer’s sheet. Transmute is not a costless upgrade: sacrifice and any required mana-value difference still apply. F2 keeps Force14, Oracle10/Consultation10, Remora6, Otawara6 and Fluster5. Mystical7, Spellseeker4, Narset3 and Morphic Pool2 were cut; slower conditional access and an extra basic replace them. This is the actual16-point reduction from the79-point draft, preserving expensive channel utility.\n\n## Land policy\n\nAll original10 fetches/original10 duals retain working5, shocks/surveils2, identified rainbow/special fixing1–2, Boseiju/Otawara6 within5–6. Batch2 has no green identity, so Boseiju is illegal in all six and is not used. Otawara is deliberately paid in E2/F2 and cut from E1/F1 under pressure.\n\nThere are no original duals or classic premium fetches in these six lists. We use basics and ordinary pain/fast/check/filter/Pathway/verge fixing rather than assigning imaginary discounts. Conditional fixing carries genuine sequencing requirements; filter lands cannot start colored mana alone, check/verge lands depend on other lands and late fastlands can enter tapped. E1’s BBB Dreams and F1’s WUBR require care; color identity does not prove mana production. E2 Prairie Stream/Mystic Sanctuary conditions use actual basic land types. Unpointed substitutes are a policy consequence to review, not a secret new land-pricing rule.\n\nMalakir Rebirth is a known spell/land MDFC at inherited zero, not a newly approved zero. The organizer requested individual MDFC review. It appears in the approval queue with a one-point scenario: that would put D1 at73 until a documented substitution. Lunarch Veteran is transforming, not a spell/land MDFC; no blanket one-point tax is invented.\n",
+    "opening_hands_and_goldfish.md": "# Conditional turn demonstrations\n\nNo games were played. These are fully specified resource sequences, not measured winning turns, opening-hand success probabilities or matchups. They assume the listed own cards/resources, required library contents and no successful opposition. Starting team skips its first draw step; no line borrows cards or mana from the other head.\n\n## D1: turn2 Gary loop, seven-card example\n\nOwn seven: two Swamps, Dark Ritual, Cabal Ritual, Viscera Seer, Buried Alive, Reanimate. K’rrik is in CZ; Chainer and Gary remain in library. T1 Swamp -> Dark Ritual BBB -> Cabal Ritual1B (leaveB, addBBB) -> four mana. Cast K’rrik with4 generic plus6 Phyrexian life; cast Seer by paying2 life for B. Friendly life52 before any other effects.\n\nT2 second Swamp gives two own generic mana for Buried Alive2B, replacing B with2 life. Put Chainer and Gary into own graveyard. Reanimate B costs2 life via K’rrik, then5 life for Chainer’s mana value: friendly life43. Chainer activation BBB plus pay3 life costs9 if all black symbols are replaced, leaving34. Gary enters: devotion8 (K’rrik3, Chainer2, Gary2, Seer1) causes8 loss to each opponent and gains16 for D1, leaving50 and enemy44. Sacrifice Gary to own Seer and repeat. Four Gary entries provide64 loss capacity; each repeat banks7 friendly life. One actual qualifying D2 Sister gains extra life on each entry, but is not required. Removal, graveyard exile, ETB suppression, life-gain denial and counters disrupt the line. No free two-head protection is smuggled into this seven.\n\n## D2: turn4 own Heliod/Ballista\n\nOwn seven: four Plains, Soul Warden, Arcane Signet, Ballista. T1 Warden. T2 Signet. T3 Heliod from CZ. T4 four lands plus Signet give5 mana. Cast Ballista X1 for2; Warden gains1 and Heliod adds the second counter. Pay1W to grant it lifelink. Repeatedly remove one counter, deal1 to an enemy, gain1 as D2 and resolve Heliod’s own replacement counter trigger. Start with2 counters so it survives the intervening SBA. Without the Sister trigger, X1 is insufficient; casting X2 plus granting lifelink requires6 mana. Heliod’s trigger is not optional, so choose legal own targets deliberately.\n\n## E1: turn5 amplified wheel\n\nOwn starting seven: Island, Swamp, Mountain, Shivan Reef, Talisman of Creativity, Ghyrson, Wheel of Fortune. Stipulate Harmonic Prodigy is drawn byT5 and opposing draws are not prohibited/replaced. T2 Talisman. T3 Ghyrson1UR. T4 fourth land plus Talisman casts Nekusar2UBR. T5 the same five resources cast Prodigy1R then Wheel2R. Each enemy’s seven successful draws creates14 Nekusar one-damage triggers, each with a Ghyrson two-damage trigger:42 per head,84 capacity across the shared pool before prevention, with game termination when appropriate. Prior normal draw-step damage is not needed in this calculation. Narset/Thief/Pool must not be blindly deployed so as to invalidate this line; enemy answers remain live.\n\n## E2: turn3 Scepter conversion, with an explicitly drawn outlet\n\nOwn opening: Island, Plains, Island, Arcane Signet, Basalt, Scepter, Reversal. Stipulate Stroke of Genius is drawn byT3. T2 Signet. T3 use three lands to cast Basalt; tap Basalt forCCC to cast Scepter2, retainingC, and imprint own Reversal. Signet supplies the second mana for Scepter’s activation. Reversal untaps Basalt, Signet and Scepter. They now make4 per iteration and pay2, banking chosen blue/colorless mana. With sufficient own mana, Stroke an enemy for more cards than their library. Without an outlet available this is mana setup, not a demonstrated immediate win.\n\n## E2: turn4 Pool/Lavinia prison setup\n\nOwn seven: three Islands, Plains, Arcane Signet, Azorius Signet, Knowledge Pool. T2 Arcane Signet. T3 third land: cast Azorius Signet with two lands; remaining land plus Arcane supplies WU for Lavinia. T4 fourth land plus Arcane and Azorius’s net one extra mana gives6 for Pool. The ordinary no-mana-spent enemy Pool casts are countered; this is not proof that every ability, tax-assisted cast or non-hand spell is locked out. Teferi is not also assumed cast for free onT3.\n\n## F1: turn3 Basalt/Rings/Ballista\n\nOwn seven: Island, Plains, Swamp, Sol Ring, Basalt, Rings, Ballista. T1 Island -> Ring. T2 Plains: Island+Ring cast Basalt3; tap Basalt CCC to cast Rings3, leaving Plains unused. T3 untapped lands plus Ring supply5 to activate tapped Basalt’s untap3 and pay Rings2. Copy untaps Basalt; tap it for3; original then untaps it. Each subsequent full cycle taps Basalt before and between its untap resolutions, produces6 and spends5, banking1. Generate enough own C to cast Ballista X60 (120mana), then remove60 actual counters for damage. No graveyard or teammate mana is needed; artifact-ability hate and interaction still stop it.\n\n## F1/F2: turn5 Assembly/Sieve begins repeated shared turns\n\nOwn seven: Island, Swamp, Plains, Mountain, Sol Ring, Assembly, Sieve. T1 Ring. T2 second land Swamp casts Sieve UB; T3 Plains. T4 fourth land plus Ring produces6 for Assembly. T5 upkeep, provided no other F1 Thopters, return Assembly and create5 tokens. Tap Sieve and sacrifice those five own artifacts; main phase recast Assembly with recurring6. Next turn is an extra turn for both teammates, and repeat if prerequisites persist. Breya and Sai must remain undeployed or their extra Thopters must be consumed before each upkeep. F2 receives its own untap/draw, never supplies the five sacrificed artifacts.\n\n## F2: independent turn3 Oracle possibility\n\nOwn seven: two Islands, Swamp, Oracle, Consultation, Force of Will, Dispel. T3 UUB casts Oracle and Consultation on its ETB trigger, naming absent Forest. Force may pitch own Dispel. Neither spell accesses F1’s library or uses its mana. A partial source library, counters/trigger counters, win prevention and hostile library changes remain relevant.\n",
+    "archetype_lineage.md": "# Archetype ancestry and access limits\n\nThe factual foundation archive includes two complete100-card tournament registrations per head, with raw snapshot SHA rechecked, pilot locator, archived standing/field/record and dates. These results belong to the original ordinary Commander decks, never the new 2HG pairings. A registered pilot is not automatically the original designer. Some events are bracket-labelled; those labels are event declarations, not independent power verification. Source-card comparison is generated exactly rather than guessed.\n\nD1 preserves the Chainer/Gary, ritual, reanimation and Vilis packages actually present in both selected registrations. The Michael Lehotsky registration also contains Citadel. Premium Mox/LED and other fast mana were cut under points; Necropotence was rejected on shared-turn grounds. K’rrik’s guaranteed CZ price is12, charged once as the alternative to its main8.\n\nD2 registrations contain Ranger/Ranger-Captain, Ballista and Triskelion. The Modern Soul Sisters primary primer supplies the Warden/Attendant/Auriok Champion, protection and Heliod relationship, not a claim that a60-card Modern list can be copied into Commander. The singleton100 adds repeatable white card economy and team-aware support. Torpor Orb from a source list was rejected because it kills friendly Gary/Sister triggers. Spike Feeder is not imported into mono-white.\n\nE1’s5th/24 source is an event explicitly labelled Bracket3; the other is14th/42. These modest results do not establish Nekusar as a top cEDH commander. We retain genuine wheels and punishments, but cut the source’s expensive Oracle/Breach and fast-artifact overlay to keep the approved strategic identity. The new Ghyrson/Prodigy 2HG damage plan is an adaptation, not a claimed tournament result.\n\nE2’s Josh Cole registration includes Knowledge Pool and Force; Evan Hart supplies a different control/prison shell with Narset. Preserve these roles while replacing premium lands and extra paid free counters. Canonist/Omen Machine are specifically rejected for conflicts with allied wheels or own conversion. Scepter/Reversal provides a real independent close instead of expecting a lock alone to be a win.\n\nF1’s Joseph Ward registration contains Salvagers/LED and generic Breya turbo packages; Khaalid Aysha’s contains Deathmantle. Neither is falsely described as the submitted Thopter-Sieve list. The artifact pivot is grounded separately in documented Modern Urza ThopterSword, existing Breya community lists and own Oracle/controller analysis. Keep Engineer/Welder/Deathmantle and artifact recursion, omit duplicate expensive Oracle/Breach, and buy Time Sieve/Orb control. Modern/prison pedigree describes engines, not proof of competitive2HG outcomes.\n\nF2’s two selected Talion entries are both8th, in fields32 and27. Retain Oracle/Consultation, Remora, dense counters and enemy-cast card economy. Remove paid ancillary tutor/denial packages before reducing the broad defensive role. Do not add Null Rod/Cursed Totem merely because some Dimir source uses them: they would impair the ally’s artifact engine.\n\n## Supplementary primary reading\n\n- [Soul Sisters primer, Walking Time Bombs,2020-02-25](https://walkingtimebombs.weebly.com/blog/all-new-soul-sisters-primer): author’s own Modern build and role explanation; no byline verified, no outcome extrapolation.\n- [Heliod tournament report, u/knockturnal](https://www.reddit.com/r/CompetitiveEDH/comments/jfrf7d/): first-person historical report, not independently verified result for our lists; retrieval2026-10-21, exact publication date not extracted.\n- [K’rrik primer announcement, Fonzie,2024-12-19](https://cedhhub.com/community/posts/1275/), linking [Moxfield Cabal](https://moxfield.com/decks/HYT9YcG0bEK1UMvmEEXtTA). Announcement read; current full primer/list was not retrieved.\n- [Frank Karsten, Pro Tour LOTR deck coverage,2023-07-28](https://magic.gg/news/the-10-spiciest-modern-decklists-from-pro-tour-the-lord-of-the-rings): primary report of Urza ThopterSword registrations and engine operation. No unverified finish is assigned.\n- [Trevor Nunez, Judge Rules Tips,2016-05-17](https://blogs.magicjudges.org/rulestips/2016/05/thopter-foundry-and-sword-of-the-meek-how-it-works/): distinguishes finite Foundry/Sword from a mana-generating extension.\n- [Wizards historical artifact/prison discussion,2005-02-28](https://magic.wizards.com/en/news/feature/top-50-artifacts-all-time-2005-02-28): historical context, not current card-text authority.\n- [Breya community author post,2025-05-01](https://www.reddit.com/r/mpcproxies/comments/1kc0g0r/) links [a published Thopter/Sieve list](https://moxfield.com/decks/w2bufD0AG0en-kzO2a8itQ). The post’s engine description was visible; its author was not extracted and no tournament claim is made. It is secondary thematic corroboration, not performance evidence.\n\nMoxfield webpages returned loading shells; the public v3 K’rrik endpoint was inaccessible through the available web tool. No inaccessible full primer was claimed read, no authentication was bypassed and no bulk scrape was attempted. Existing permitted TopDeck factual archives supply complete primary lists. No full copyrighted primer prose or source images are reproduced.\n",
+    "organizer_review_and_limits.md": "# Organizer decisions and remaining limits\n\nAll outputs remain season0-proposed. This package neither activates prices/rules nor adds combo bans. Batch3 is not built.\n\n1. Review D’s conditional turn2 reanimation line and F’s one-point Urza/Foundry/Sword engine before considering120 a social-power guarantee. Prices do not measure win probability.\n2. Lake of the Dead, Coffers/Urborg, free graveyard engines and artifact-only tutor differences are legitimate current-sheet opportunities, flagged rather than silently repriced.\n3. Pain/fast/check/filter/Pathway/verge lands remain inherited zeros while premium fetches/original duals are5. The cheap replacements lose real flexibility/tempo; whether that difference justifies the price gap is a policy question.\n4. Malakir Rebirth remains inherited0 pending the organizer’s requested individual MDFC review. A hypothetical1 raises D1 to73; a legal fallback is Undying Malice0, sacrificing the land option. This scenario does not alter the submitted price.\n5. Lavinia CZ1 is inherited; main2 is the working range selection. Main-deck feedback was not automatically applied to both locations. Confirm scope before a final lock.\n6. Working rainbow/multiplayer values are specifically enumerated, generally1–2; new illustrative selections are not exact individual approvals. Boseiju/Otawara6 preserve the approved5–6 range. The historical50 qualitative anchors stay distinct from later numeric decisions.\n7. Current official rules landing was reread2026-10-21 and still links Sept25 CR. The official Commander/2HG ban sections were reread and the named bans checked. Full Oracle is the pinned2026-10-20 archive; bulk metadata refresh returned403 via the available web tool, so no claim is made to have downloaded an Oct21 Oracle release. None of the chosen cards relies on a newly released/unsupported rulebreaker permission.\n8. No paired games, optimality proof, win rates or average turns were measured. Exact source retention, construction legality, resource arithmetic and conditional controller analysis are the evidence delivered.\n9. Local filesystem was read-only during construction. Computation and tests ran in memory using read-only dependencies; GitHub publication uses the authorized repository connector. The local branch is not falsely claimed synchronized.\n"
+  },
+  "sources_supplementary": [
+    {
+      "source": "Soul Sisters primary primer",
+      "url": "https://walkingtimebombs.weebly.com/blog/all-new-soul-sisters-primer",
+      "author": "Walking Time Bombs; byline not verified",
+      "date": "2020-02-25",
+      "head": "D2",
+      "access": "read primary text",
+      "use": "Soul Sisters engine roles; not Commander results"
+    },
+    {
+      "source": "Krrik Cabal announcement",
+      "url": "https://cedhhub.com/community/posts/1275/",
+      "author": "Fonzie",
+      "date": "2024-12-19",
+      "head": "D1",
+      "access": "announcement read; linked Moxfield shell only",
+      "use": "Published primer lineage; full list not claimed"
+    },
+    {
+      "source": "Krrik Moxfield primer",
+      "url": "https://moxfield.com/decks/HYT9YcG0bEK1UMvmEEXtTA",
+      "author": "not verified from accessible metadata",
+      "date": "publication date not extracted",
+      "head": "D1",
+      "access": "loading shell; v3 endpoint unavailable",
+      "use": "blocked source disclosed"
+    },
+    {
+      "source": "Modern Urza ThopterSword coverage",
+      "url": "https://magic.gg/news/the-10-spiciest-modern-decklists-from-pro-tour-the-lord-of-the-rings",
+      "author": "Frank Karsten",
+      "date": "2023-07-28",
+      "head": "F1",
+      "access": "primary article read",
+      "use": "Actual Pro Tour registrations and artifact engine; no finish extrapolation"
+    },
+    {
+      "source": "Foundry Sword rules explanation",
+      "url": "https://blogs.magicjudges.org/rulestips/2016/05/thopter-foundry-and-sword-of-the-meek-how-it-works/",
+      "author": "Trevor Nunez",
+      "date": "2016-05-17",
+      "head": "F1",
+      "access": "primary judge article read",
+      "use": "Finite two-piece and mana-generating third-piece distinction"
+    },
+    {
+      "source": "Historical prison discussion",
+      "url": "https://magic.wizards.com/en/news/feature/top-50-artifacts-all-time-2005-02-28",
+      "author": "byline not extracted",
+      "date": "2005-02-28",
+      "head": "F1",
+      "access": "official article excerpt read",
+      "use": "Prison lineage only, not current Oracle"
+    }
+  ],
+  "rules": [
+    [
+      "D01",
+      "D",
+      [
+        "K'rrik, Son of Yawgmoth",
+        "Children of Korlis",
+        "Teferi's Protection"
+      ],
+      [
+        "119.4a",
+        "810.9",
+        "810.9a",
+        "810.9h"
+      ],
+      "mixed_functional_and_false_split",
+      "K’rrik D1 pays own life costs from the shared pool. Children belongs to D2.",
+      "D2 may benefit from a higher shared total, but Children counts life D2 actually lost, not D1 payments. A friendly cannot-lose-life effect prevents nonzero payments teamwide.",
+      "Children omitted; no refund inferred from shared-total delta. Life payment must be affordable."
+    ],
+    [
+      "D02",
+      "D",
+      [
+        "Soul Warden",
+        "Soul's Attendant",
+        "Auriok Champion",
+        "Daxos, Blessed by the Sun",
+        "Authority of the Consuls",
+        "Heliod, Sun-Crowned"
+      ],
+      [
+        "109.5",
+        "603.3a",
+        "805.7",
+        "810.9"
+      ],
+      "functional_support",
+      "D2 controls Sister/Heliod; D1 casts/reanimates creatures.",
+      "Generic other-creature Sister triggers can make D2 gain life and put counters on D2 own permanents. Daxos requires D2 creatures; Authority requires enemy creatures.",
+      "D1’s own life gain does not itself trigger D2 Heliod."
+    ],
+    [
+      "D03",
+      "D",
+      [
+        "K'rrik, Son of Yawgmoth",
+        "Chainer, Dementia Master",
+        "Gray Merchant of Asphodel",
+        "Viscera Seer"
+      ],
+      [
+        "107.4",
+        "700.5",
+        "701.21a",
+        "810.5",
+        "810.9"
+      ],
+      "same_controller_combo",
+      "All four D1 controlled. Gary can enter uncast from D1 grave; enough shared life and no ETB/life-gain suppression.",
+      "Pay9 for Chainer when BBB replaced. Devotion8 gives16 loss/gain across two enemy heads; own Seer recycles Gary. Net7 friendly life per repeat.",
+      "Remove Chainer/Gary/K’rrik, counter ability, exile grave or stop life gain. Counter changes/devotion changes require recomputation."
+    ],
+    [
+      "D04",
+      "D",
+      [
+        "Heliod, Sun-Crowned",
+        "Walking Ballista",
+        "Triskelion"
+      ],
+      [
+        "109.5",
+        "117.5",
+        "704.5f",
+        "810.9"
+      ],
+      "own_combo_split_false",
+      "D2 controls Heliod and own Ballista with at least2 counters, grants lifelink for1W.",
+      "D2 damage/lifelink causes own Heliod counter trigger and replaces each spent counter. Triskelion starts with counters and base toughness.",
+      "Heliod may target teammate creature for lifelink, but resulting D1 gain does not trigger D2 Heliod, and D2 cannot put its counter on D1 Ballista."
+    ],
+    [
+      "D05",
+      "D",
+      [
+        "Necropotence",
+        "Necrodominance"
+      ],
+      [
+        "614.10",
+        "805.8"
+      ],
+      "verified_nonbo",
+      "Either enchantment controlled by D1.",
+      "Skipping D1 draw step skips the team draw step. Necrodominance additionally exiles D1 graveyard resources.",
+      "Both omitted. Black draw text is not teamwide card access."
+    ],
+    [
+      "D06",
+      "D",
+      [
+        "Bolas's Citadel",
+        "Sensei's Divining Top",
+        "Aetherflux Reservoir"
+      ],
+      [
+        "109.5",
+        "119.4a",
+        "810.5",
+        "810.9a"
+      ],
+      "same_controller_with_shared_finisher_support",
+      "D1 controls Citadel/Top and its own Reservoir; life permits initial casts; no spell-count restriction.",
+      "Top can be cast for1 life through Citadel, tapped to draw and put itself atop library, and recast. Reservoir gains increasing life from own spells. D2 separately may spend shared life on D2 Reservoir.",
+      "Do not draw past available library or assume one50-damage shot kills60; life costs/control remain exact."
+    ],
+    [
+      "E01",
+      "E",
+      [
+        "Nekusar, the Mindrazer"
+      ],
+      [
+        "121.1",
+        "805.4b",
+        "805.4d",
+        "810.9"
+      ],
+      "functional_team_turn_draw",
+      "E1 controls Nekusar; no draw-denial/replacement.",
+      "Each player in active team normally draws. Nekusar’s that-player draw-step triggers occur for each applicable player; two enemy heads can each draw an additional card.",
+      "Shared draw step is not one shared card and is not two full turns."
+    ],
+    [
+      "E02",
+      "E",
+      [
+        "Nekusar, the Mindrazer",
+        "Harmonic Prodigy",
+        "Ghyrson Starn, Kelermorph",
+        "Wheel of Fortune"
+      ],
+      [
+        "603.2",
+        "603.3a",
+        "810.9"
+      ],
+      "same_controller_burn",
+      "E1 controls all three creatures. Each enemy actually draws7; no damage prevention or ability suppression.",
+      "Prodigy doubles Wizard Nekusar’s1-damage triggers. Each one triggers Ghyrson for2. Capacity7*2*3 per enemy=84 teamwide.",
+      "Ghyrson is not Wizard; its trigger is not doubled by Prodigy. Game ends before unnecessary later events resolve."
+    ],
+    [
+      "E03",
+      "E",
+      [
+        "Nekusar, the Mindrazer",
+        "Narset, Parter of Veils",
+        "Notion Thief",
+        "Sheoldred, the Apocalypse"
+      ],
+      [
+        "101.2",
+        "614.6",
+        "810.5"
+      ],
+      "denial_damage_tradeoff",
+      "Narset on E2 or Thief on E1; both have same enemies.",
+      "Denied/replaced enemy draws never happen and do not trigger opposing-draw damage/loss. Thief gives its own controller replacement draws, not ally cards.",
+      "Use denial as alternative strategy; do not claim seven-card wheel damage while draws are replaced. Ordinary first draw exception still matters."
+    ],
+    [
+      "E04",
+      "E",
+      [
+        "Lavinia, Azorius Renegade",
+        "Knowledge Pool",
+        "Teferi, Time Raveler",
+        "Sphere of Resistance"
+      ],
+      [
+        "101.2",
+        "601.2",
+        "603.3a",
+        "607",
+        "810.5"
+      ],
+      "conditional_prison",
+      "E2 Lavinia/Pool, optionally Teferi. Enemy hand spell and Pool trigger resolve as specified.",
+      "Pool exiles hand spell and offers another linked card for free. Lavinia counters enemy casts on which no mana was spent. Teferi independently denies those casts during resolution.",
+      "Paid additional taxes can bypass Lavinia’s no-mana trigger. Abilities/non-hand casts/preexisting stack objects are not all stopped. Friendly casts are permitted."
+    ],
+    [
+      "E05",
+      "E",
+      [
+        "Narset, Parter of Veils",
+        "Teferi's Puzzle Box",
+        "Geier Reach Sanitarium"
+      ],
+      [
+        "504.1",
+        "805.4b",
+        "805.4d",
+        "805.7"
+      ],
+      "conditional_draw_denial",
+      "E2 controls Narset/Box; enemy reaches shared draw step and normal draws consume each one-draw allowance.",
+      "Order active enemy triggers with correct ownership; Box can bottom enemy hands and fail to draw replacements under Narset. Sanitarium is a separate ability-based draw/discard tool.",
+      "Friendly draws are not denied by own Narset. Timing, instant responses and hostile replacement effects matter; no one combined hand."
+    ],
+    [
+      "E06",
+      "EF",
+      [
+        "Bloodchief Ascension",
+        "Mindcrank"
+      ],
+      [
+        "603.4",
+        "805.4",
+        "810.9"
+      ],
+      "verified_cross_controller_candidate",
+      "E1 or F2 owns Ascension with3 quest counters; ally may own Mindcrank; initiate enemy loss/card in grave and no replacement exile.",
+      "Both controllers share enemies. Enemy loss mills that player; enemy card in grave triggers Ascension loss/gain, which retriggers ally Crank.",
+      "One quest counter at each shared end step, not one per head. Exile replacements and exhausted libraries can halt chain before life lethal; force a draw if needed."
+    ],
+    [
+      "E07",
+      "E",
+      [
+        "Duskmantle Guildmage",
+        "Mindcrank"
+      ],
+      [
+        "109.5",
+        "810.5",
+        "810.9"
+      ],
+      "verified_cross_controller_candidate",
+      "E1 Guildmage, E2 Crank, own E1 mana1UB to set effect; initiating enemy life loss or card to grave.",
+      "Guildmage’s turn effect and ally Crank respond to the same enemies, so loss/mill can repeat across controllers.",
+      "No pooling mana. Requires real initiation, graveyard entries and enough remaining library/life for stated kill; draw may still be required."
+    ],
+    [
+      "E08",
+      "E",
+      [
+        "Nekusar, the Mindrazer",
+        "Tainted Strike",
+        "Phyresis",
+        "Wheel of Fortune"
+      ],
+      [
+        "702.90",
+        "810.8d",
+        "810.10"
+      ],
+      "poison_threshold_check",
+      "E1 Nekusar has infect; no replacements/prevention; each enemy draws7.",
+      "Fourteen1-damage events produce14 shared poison; threshold is15. Another qualifying draw or damage event is required.",
+      "Not a fresh-team one-wheel kill. Ghyrson does not inherit infect."
+    ],
+    [
+      "E09",
+      "E",
+      [
+        "Isochron Scepter",
+        "Dramatic Reversal",
+        "Basalt Monolith",
+        "Arcane Signet",
+        "Aetherflux Reservoir",
+        "Stroke of Genius"
+      ],
+      [
+        "106.4",
+        "109.5",
+        "707",
+        "810.5"
+      ],
+      "same_controller_combo",
+      "E2 owns imprint, Scepter and ready nonland mana output>2; owns available outlet.",
+      "Activation2 casts own Reversal copy, untapping own nonland permanents. Basalt/Signet produce4 per cycle. Store own mana or trigger own Reservoir; Stroke enemy beyond library for team loss.",
+      "No allied mana/untaps. Canonist/Rule of Law can stop repetition; mono-C loop still needs actual U for Stroke."
+    ],
+    [
+      "F01",
+      "F",
+      [
+        "Time Sieve",
+        "Thopter Assembly",
+        "Breya, Etherium Shaper",
+        "Sai, Master Thopterist"
+      ],
+      [
+        "603.4",
+        "701.21a",
+        "805.8",
+        "810.5"
+      ],
+      "same_controller_engine_shared_turn",
+      "F1 controls Sieve/Assembly; no other own Thopters at each intervening-if check; repeatable6 own mana.",
+      "Return Assembly, create5, sacrifice5 own artifacts to Sieve, recast6. Extra turn is shared with F2.",
+      "Breya/Sai tokens can invalidate trigger; clear or withhold them. F2 artifacts cannot pay Sieve. Assembly itself returns rather than being consumed."
+    ],
+    [
+      "F02",
+      "F",
+      [
+        "Thopter Foundry",
+        "Sword of the Meek",
+        "Urza, Lord High Artificer",
+        "Ashnod's Altar",
+        "Krark-Clan Ironworks"
+      ],
+      [
+        "109.5",
+        "605",
+        "701.21a",
+        "810.5"
+      ],
+      "same_controller_combo_split_false",
+      "F1 owns Foundry and Sword graveyard/board, with own Urza or own sacrifice-mana outlet.",
+      "Foundry/Sword alone costs1 per token. Urza taps own Sword/new Thopter to sustain netU and tokens; Altar/KCI sacrifices produced token for netC. Mana/life belong to F1.",
+      "Sword on F2 grave does not return for F1 creature entry; no ally sacrifice. Orb/yard exile/ability hate can interrupt."
+    ],
+    [
+      "F03",
+      "F",
+      [
+        "Breya, Etherium Shaper",
+        "Nim Deathmantle",
+        "Ashnod's Altar",
+        "Krark-Clan Ironworks"
+      ],
+      [
+        "109.5",
+        "603.3a",
+        "701.21a",
+        "903.9"
+      ],
+      "same_controller_combo",
+      "F1 controls all and leaves its commander in own grave for Mantle.",
+      "Sacrifice Breya and2 Thopters for6, Mantle4 returns Breya and makes2, net2. Bank mana then retain excess tokens for own Breya damage.",
+      "Choosing CZ prevents this reanimation. Graveyard/exile/ETB/activation hate matter. Breya still needs own colors if cast first."
+    ],
+    [
+      "F04",
+      "F",
+      [
+        "Basalt Monolith",
+        "Rings of Brighthearth",
+        "Walking Ballista"
+      ],
+      [
+        "106",
+        "603.3a",
+        "605",
+        "810.5"
+      ],
+      "same_controller_non_graveyard_combo",
+      "Own Basalt/Rings, own startup mana and Ballista.",
+      "Pay3 untap and2 Rings-copy. Tap Basalt between resolutions; subsequent cycles produce6 for5 spent. Cast Ballista with real X counters.",
+      "Rings does not copy mana ability; it copies the nonmana untap. Artifact activation suppression stops it."
+    ],
+    [
+      "F05",
+      "F",
+      [
+        "Winter Orb",
+        "Static Orb",
+        "Urza, Lord High Artificer",
+        "Moonsnare Prototype",
+        "Relic Barrier",
+        "Unwinding Clock"
+      ],
+      [
+        "502.2",
+        "805.4a",
+        "810.5"
+      ],
+      "conditional_team_untap_support",
+      "F1 has genuine tap-off resource before shared friendly untap; plan exact number of Orb releases.",
+      "Tapping relevant own Orbs before friendly untap can free both heads. Urza may tap multiple own artifacts without a T cost on Urza. Clock untaps F1 artifacts on enemy shared untap.",
+      "Prototype also has its own T cost; not unlimited taps. One Barrier normally releases only one Orb. Enemy Clock untap does not also untap F2 cards; not doubled per enemy head."
+    ],
+    [
+      "F06",
+      "F",
+      [
+        "Talion, the Kindly Lord",
+        "Time Sieve"
+      ],
+      [
+        "102.3",
+        "805.8",
+        "810.5"
+      ],
+      "support_not_automatic_trigger",
+      "F2 owns Talion, chooses number; F1 activates own Sieve.",
+      "Matching enemy casts lose2 for that enemy and draw1 for F2. Extra shared turns give normal own draws/untaps.",
+      "F1 spells never become enemy Talion triggers; no pooling draws or artifacts."
+    ],
+    [
+      "R01",
+      "EF",
+      [
+        "Boseiju, Who Endures",
+        "Otawara, Soaring City"
+      ],
+      [
+        "602",
+        "810.5"
+      ],
+      "channel_vs_spell",
+      "Channel card in actual own hand, correct own mana, eligible target.",
+      "Channel is activated ability rather than casting a spell, relevant under spell-only prison. Working price6 per identity in main; Boseiju’s G identity excludes it from all six lists.",
+      "Played land cannot also be discarded from hand; no general target-permanent permission for Boseiju. Other channel lands not automatically repriced."
+    ],
+    [
+      "R02",
+      "DEF",
+      [
+        "Orim's Chant",
+        "Abeyance",
+        "Wishclaw Talisman"
+      ],
+      [
+        "102.3",
+        "109.5",
+        "810.5"
+      ],
+      "target_scope_check",
+      "Actual own casting/activation costs and chosen player.",
+      "Chant/Abeyance target only one player. Wishclaw’s new controller must be an opponent, not teammate.",
+      "Do not claim single Chant protects against both heads, Abeyance stops every spell, or Wishclaw can be handed to an ally."
+    ]
+  ],
+  "openings": {
+    "D1": {
+      "hand": {
+        "Swamp": 2,
+        "Dark Ritual": 1,
+        "Cabal Ritual": 1,
+        "Viscera Seer": 1,
+        "Buried Alive": 1,
+        "Reanimate": 1
+      },
+      "turn": 2,
+      "library_required": [
+        "Chainer, Dementia Master",
+        "Gray Merchant of Asphodel"
+      ],
+      "scope": "conditional no-interaction seven-card line"
+    },
+    "D2": {
+      "hand": {
+        "Plains": 4,
+        "Soul Warden": 1,
+        "Arcane Signet": 1,
+        "Walking Ballista": 1
+      },
+      "turn": 4,
+      "scope": "requires Sister gain before Ballista's second counter; own Heliod"
+    },
+    "E1": {
+      "hand": {
+        "Island": 1,
+        "Swamp": 1,
+        "Mountain": 1,
+        "Shivan Reef": 1,
+        "Talisman of Creativity": 1,
+        "Ghyrson Starn, Kelermorph": 1,
+        "Wheel of Fortune": 1
+      },
+      "turn": 5,
+      "draw_by_turn": [
+        "Harmonic Prodigy"
+      ],
+      "scope": "conditional scripted draw; no enemy draw denial/replacement"
+    },
+    "E2": {
+      "hand": {
+        "Island": 2,
+        "Plains": 1,
+        "Arcane Signet": 1,
+        "Basalt Monolith": 1,
+        "Isochron Scepter": 1,
+        "Dramatic Reversal": 1
+      },
+      "turn": 3,
+      "draw_by_turn": [
+        "Stroke of Genius"
+      ],
+      "scope": "mana setup alone is not win without outlet"
+    },
+    "F1": {
+      "hand": {
+        "Island": 1,
+        "Plains": 1,
+        "Swamp": 1,
+        "Sol Ring": 1,
+        "Basalt Monolith": 1,
+        "Rings of Brighthearth": 1,
+        "Walking Ballista": 1
+      },
+      "turn": 3,
+      "scope": "conditional own colorless loop, no ability suppression"
+    },
+    "F2": {
+      "hand": {
+        "Island": 2,
+        "Swamp": 1,
+        "Thassa's Oracle": 1,
+        "Demonic Consultation": 1,
+        "Force of Will": 1,
+        "Dispel": 1
+      },
+      "turn": 3,
+      "scope": "conditional own library exile; Force pitches own Dispel"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "D1": {
+    "hand": {
+      "Buried Alive": 1,
+      "Cabal Ritual": 1,
+      "Dark Ritual": 1,
+      "Reanimate": 1,
+      "Swamp": 2,
+      "Viscera Seer": 1
+    },
+    "library_required": [
+      "Chainer, Dementia Master",
+      "Gray Merchant of Asphodel"
+    ],
+    "scope": "conditional no-interaction seven-card line",
+    "turn": 2
+  },
+  "D2": {
+    "hand": {
+      "Arcane Signet": 1,
+      "Plains": 4,
+      "Soul Warden": 1,
+      "Walking Ballista": 1
+    },
+    "scope": "requires Sister gain before Ballista's second counter; own Heliod",
+    "turn": 4
+  },
+  "E1": {
+    "draw_by_turn": [
+      "Harmonic Prodigy"
+    ],
+    "hand": {
+      "Ghyrson Starn, Kelermorph": 1,
+      "Island": 1,
+      "Mountain": 1,
+      "Shivan Reef": 1,
+      "Swamp": 1,
+      "Talisman of Creativity": 1,
+      "Wheel of Fortune": 1
+    },
+    "scope": "conditional scripted draw; no enemy draw denial/replacement",
+    "turn": 5
+  },
+  "E2": {
+    "draw_by_turn": [
+      "Stroke of Genius"
+    ],
+    "hand": {
+      "Arcane Signet": 1,
+      "Basalt Monolith": 1,
+      "Dramatic Reversal": 1,
+      "Island": 2,
+      "Isochron Scepter": 1,
+      "Plains": 1
+    },
+    "scope": "mana setup alone is not win without outlet",
+    "turn": 3
+  },
+  "F1": {
+    "hand": {
+      "Basalt Monolith": 1,
+      "Island": 1,
+      "Plains": 1,
+      "Rings of Brighthearth": 1,
+      "Sol Ring": 1,
+      "Swamp": 1,
+      "Walking Ballista": 1
+    },
+    "scope": "conditional own colorless loop, no ability suppression",
+    "turn": 3
+  },
+  "F2": {
+    "hand": {
+      "Demonic Consultation": 1,
+      "Dispel": 1,
+      "Force of Will": 1,
+      "Island": 2,
+      "Swamp": 1,
+      "Thassa's Oracle": 1
+    },
+    "scope": "conditional own library exile; Force pitches own Dispel",
+    "turn": 3
+  }
+}
