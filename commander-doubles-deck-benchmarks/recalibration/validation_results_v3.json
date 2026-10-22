@@ -1,0 +1,28 @@
+{
+  "activated": false,
+  "interpretation": "Passing construction, precedence and conditional-rules regressions does not validate point prices or win probabilities.",
+  "results": [
+    {
+      "check": "preserved_batch_suites",
+      "command": "python -m unittest discover -s commander-doubles-deck-benchmarks/tests -p test_batch*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "tests_run": 56
+    },
+    {
+      "check": "global_v3_suite",
+      "command": "python -m unittest discover -s commander-doubles-deck-benchmarks/recalibration -p test_recalibration_v3.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "tests_run": 31
+    },
+    {
+      "check": "byte_reproduction",
+      "command": "python commander-doubles-deck-benchmarks/recalibration/recalibration_v3.py --check",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "schedule_version": "season0-proposed-global-v3-2026-10-22",
+  "total_tests_run": 87
+}
