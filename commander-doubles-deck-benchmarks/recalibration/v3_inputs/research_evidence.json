@@ -1,0 +1,61 @@
+{
+  "retrieval_date": "2026-10-22",
+  "issue": "https://github.com/jaiaFoster/cEDH/issues/5",
+  "fresh_sources": [
+    {
+      "url": "https://magic.wizards.com/en/rules",
+      "kind": "official primary",
+      "finding": "Current landing links the September25,2026 Comprehensive Rules; exact relevant provisions reread this session."
+    },
+    {
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "kind": "official primary",
+      "finding": "805.8 shared added/skipped turns;810.5 separate resources;810.9 individual life events and shared value;903 commander construction;701.49 current dungeon-action numbering."
+    },
+    {
+      "url": "https://magic.wizards.com/en/formats/two-headed-giant",
+      "kind": "official primary",
+      "finding": "Commander overview explicitly uses60 shared team life and independent Commander decks. Handoff calls60 a custom setting; no rule was changed to resolve that terminology."
+    },
+    {
+      "url": "https://magic.wizards.com/en/banned-restricted-list",
+      "kind": "official primary",
+      "finding": "Current named Commander and additional2HG restrictions reread; no experimental unbans. Legality checks continue to use pinned Oracle plus existing Erayo rule."
+    },
+    {
+      "url": "https://commanderspellbook.com/combo/1170-4761-5034/",
+      "kind": "community primary combo documentation",
+      "finding": "Displacer Kitten/Teferi/Sol Ring own-controller draw engine. Used as a mechanism example, not validated card strength or a measured win rate."
+    },
+    {
+      "url": "https://commanderspellbook.com/combo/328-3260-4078-4448/",
+      "kind": "community primary combo documentation",
+      "finding": "Chainer/Krrik/Gary plus sacrifice outlet resource conversion. Existing Batch2 own-controller proof reused; no assumption a union of two decks executes it."
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=oracleid%3A3c9faba7-f2d3-4978-be94-020dc8003dc0+game%3Apaper&unique=prints",
+      "kind": "public primary card API",
+      "finding": "Two paper printings of Intuition returned, despite digital-only representative Oracle printing. Small permitted query; no bulk scrape."
+    },
+    {
+      "url": "https://api.scryfall.com/cards/search?q=oracleid%3A539d7c1a-b5e9-4204-9109-ddb2e8dec168+game%3Apaper&unique=prints",
+      "kind": "public primary card API",
+      "finding": "Four paper printings of Pox returned; representative medium must not exclude this Oracle identity."
+    }
+  ],
+  "access_limitations": [
+    {
+      "url": "https://scryfall.com/docs/api/cards/collection",
+      "result": "Web retrieval403. Existing October20 Oracle snapshot used; no current full-card bulk refresh claimed."
+    }
+  ],
+  "reused_repository_evidence": [
+    "All three original attributed tournament-list foundations and source snapshots remain in batch1/2/3.",
+    "Current 320-row candidate schedule contains individual earlier reasons, impact judgments, Game Changer and Canadian Highlander reference fields; retained as historical evidence, not newly measured strength.",
+    "All three existing controller-rule reviews are reused and specific edge cases independently rechecked against pinned Oracle/current linked CR.",
+    "No external evaluator labels were fitted and no popularity values were treated as power coefficients."
+  ],
+  "statistical_claims": "Construction counts, deterministic prices, score distributions and sensitivity only; no causal win-rate or competitive-prediction estimates.",
+  "activated": false,
+  "current_rules_bytes": "Fresh linked CR download SHA256 matches the preserved September25 archive byte for byte; see current_rules_verification.json."
+}

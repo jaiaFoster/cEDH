@@ -1,0 +1,155 @@
+{
+  "activated": false,
+  "external_evidence": {
+    "access_limitations": [
+      {
+        "result": "Web retrieval403. Existing October20 Oracle snapshot used; no current full-card bulk refresh claimed.",
+        "url": "https://scryfall.com/docs/api/cards/collection"
+      }
+    ],
+    "activated": false,
+    "current_rules_bytes": "Fresh linked CR download SHA256 matches the preserved September25 archive byte for byte; see current_rules_verification.json.",
+    "fresh_sources": [
+      {
+        "finding": "Current landing links the September25,2026 Comprehensive Rules; exact relevant provisions reread this session.",
+        "kind": "official primary",
+        "url": "https://magic.wizards.com/en/rules"
+      },
+      {
+        "finding": "805.8 shared added/skipped turns;810.5 separate resources;810.9 individual life events and shared value;903 commander construction;701.49 current dungeon-action numbering.",
+        "kind": "official primary",
+        "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+      },
+      {
+        "finding": "Commander overview explicitly uses60 shared team life and independent Commander decks. Handoff calls60 a custom setting; no rule was changed to resolve that terminology.",
+        "kind": "official primary",
+        "url": "https://magic.wizards.com/en/formats/two-headed-giant"
+      },
+      {
+        "finding": "Current named Commander and additional2HG restrictions reread; no experimental unbans. Legality checks continue to use pinned Oracle plus existing Erayo rule.",
+        "kind": "official primary",
+        "url": "https://magic.wizards.com/en/banned-restricted-list"
+      },
+      {
+        "finding": "Displacer Kitten/Teferi/Sol Ring own-controller draw engine. Used as a mechanism example, not validated card strength or a measured win rate.",
+        "kind": "community primary combo documentation",
+        "url": "https://commanderspellbook.com/combo/1170-4761-5034/"
+      },
+      {
+        "finding": "Chainer/Krrik/Gary plus sacrifice outlet resource conversion. Existing Batch2 own-controller proof reused; no assumption a union of two decks executes it.",
+        "kind": "community primary combo documentation",
+        "url": "https://commanderspellbook.com/combo/328-3260-4078-4448/"
+      },
+      {
+        "finding": "Two paper printings of Intuition returned, despite digital-only representative Oracle printing. Small permitted query; no bulk scrape.",
+        "kind": "public primary card API",
+        "url": "https://api.scryfall.com/cards/search?q=oracleid%3A3c9faba7-f2d3-4978-be94-020dc8003dc0+game%3Apaper&unique=prints"
+      },
+      {
+        "finding": "Four paper printings of Pox returned; representative medium must not exclude this Oracle identity.",
+        "kind": "public primary card API",
+        "url": "https://api.scryfall.com/cards/search?q=oracleid%3A539d7c1a-b5e9-4204-9109-ddb2e8dec168+game%3Apaper&unique=prints"
+      }
+    ],
+    "issue": "https://github.com/jaiaFoster/cEDH/issues/5",
+    "retrieval_date": "2026-10-22",
+    "reused_repository_evidence": [
+      "All three original attributed tournament-list foundations and source snapshots remain in batch1/2/3.",
+      "Current 320-row candidate schedule contains individual earlier reasons, impact judgments, Game Changer and Canadian Highlander reference fields; retained as historical evidence, not newly measured strength.",
+      "All three existing controller-rule reviews are reused and specific edge cases independently rechecked against pinned Oracle/current linked CR.",
+      "No external evaluator labels were fitted and no popularity values were treated as power coefficients."
+    ],
+    "statistical_claims": "Construction counts, deterministic prices, score distributions and sensitivity only; no causal win-rate or competitive-prediction estimates."
+  },
+  "files_sha256": {
+    "commander-card-power-research-v1/spellbook_integration.py": "ee97c92e96024d13448e5b2e06859940f099880a4ad578460efbf72549a3d035",
+    "commander-doubles-cutoff-recalibration/calibration_precedence.json": "c3da1ac549aee6f3c0d50869d5d9a8051fa88f721fea08d4d7a66b812f0d9bbe",
+    "commander-doubles-cutoff-recalibration/data/comprehensive_rules.gz": "7301abfdc6c486d00bddec4d0475c6f883afd4e8205e615407dac768eeb60e77",
+    "commander-doubles-cutoff-recalibration/data/oracle_current.jsonl.gz": "35e4969bbc1fbfd5bb4dda42f0fb7ad89034da79a08a845e49f06d44745c3cfe",
+    "commander-doubles-cutoff-recalibration/organizer_premium_boundary_decisions_2026-10-20.md": "0e93d2fb9ee439d117dadde024500d34fd69a17572850423ddd67fa0ca8479ff",
+    "commander-doubles-cutoff-recalibration/pairing_review_rules.json": "e40ef8290e89ef87cdcb44e4b148e4b1bac6829106b52053a8d7925840fd46a2",
+    "commander-doubles-cutoff-recalibration/recalibrated_backend.py": "cbdc6c098bb72eb326b211b5de9366fb90c4ffbf31c019fe5d365a8f60e89295",
+    "commander-doubles-cutoff-recalibration/recalibrated_point_schedule.csv": "c2bf3250a904c06763543f17968d07e05584759cbdcbcddd978793ee29b558e5",
+    "commander-doubles-cutoff-recalibration/scoring_config.json": "fbb2a0c5ab36071ee1cc367c5c6a0ed521e73f9b3d4f9d110aec6e4e067fc281",
+    "commander-doubles-deck-benchmarks/accepted_working_price_overrides_2026-10-21.csv": "75a3fc3c0b2b79674c39e3612f54ad9007fd098b8d60d0fca9203a9c9631df6a",
+    "commander-doubles-deck-benchmarks/accepted_working_price_summary_2026-10-21.md": "eca4e13139e89f8a326abbbea1a473a040c00fb16189d9b74b10657f8516e307",
+    "commander-doubles-deck-benchmarks/batch1/decks/A1.json": "07ae635ad1f2429cce4b4b1ecd07e0ca8dec7058ce4b295448969dd3680958eb",
+    "commander-doubles-deck-benchmarks/batch1/decks/A1.txt": "0558cb5a7706b8d11432a39e580c59038f7079c9cd6184cfdc32d8c4928bc045",
+    "commander-doubles-deck-benchmarks/batch1/decks/A2.json": "4536af378b1d1b33d338b50775fed735272c1bd59c82ab5a4623e083fa3c20e6",
+    "commander-doubles-deck-benchmarks/batch1/decks/A2.txt": "14124f14af254053c24b8507f9067b56d91401ac7df77934cdc4badac460eb39",
+    "commander-doubles-deck-benchmarks/batch1/decks/B1.json": "e93ddcfeb30626887e0f70fcfb0f5872b3f3ee7e239bf0653e30a4f5a2638d0d",
+    "commander-doubles-deck-benchmarks/batch1/decks/B1.txt": "edba96c7929967c7c90ea1a34a683900af210fb2e26e4a03bdb8e9ad9805f54b",
+    "commander-doubles-deck-benchmarks/batch1/decks/B2.json": "21952a8deace845489926c9385e2564585013c7ce364e281eec706814fd9475f",
+    "commander-doubles-deck-benchmarks/batch1/decks/B2.txt": "abc8841ea684ef0af468e09670b95566929a16f38f69a05fbe83e4489937cd7b",
+    "commander-doubles-deck-benchmarks/batch1/decks/C1.json": "cc7a9c1bf365239a4061cbe47da4e625f6b1375fbf2bf77aef085c12fbc7a8d4",
+    "commander-doubles-deck-benchmarks/batch1/decks/C1.txt": "974521cc28211c1ddcfb49462434003e9b2adafcafd6a57b8a1e25affb6fd48a",
+    "commander-doubles-deck-benchmarks/batch1/decks/C2.json": "d0d17601960c32736d785120216722befeb9e659020fe770b93ac1599eb5e6dd",
+    "commander-doubles-deck-benchmarks/batch1/decks/C2.txt": "58061a52aa17519045474677f59744fe290aa9754db1a9f3df6f331f79e4d2e3",
+    "commander-doubles-deck-benchmarks/batch1/team_B_repricing_preview_2026-10-21.md": "65bc6f72024746c50bd12ef806fa708dabd5a16e503ab62510648fbc11f35ac4",
+    "commander-doubles-deck-benchmarks/batch1/team_C_organizer_calibration_2026-10-21.md": "d5f8c8a70f32304b741b175b2c47d0af6fd312e1269fc93fcf0be5ec03d86c6a",
+    "commander-doubles-deck-benchmarks/batch2/decks/D1.json": "1dbc2c93632a630fcc4b9e4b0833d1133da251c7c2ac794a655be011289eb0d1",
+    "commander-doubles-deck-benchmarks/batch2/decks/D1.txt": "1db6c6f7aa36be9f63609783f71b8fda216d58c368593cbaf44325b66c861c69",
+    "commander-doubles-deck-benchmarks/batch2/decks/D2.json": "e45a09e032f54689a7a6f6a0e71567d9d7ae4d934037f72993f9e08269878f66",
+    "commander-doubles-deck-benchmarks/batch2/decks/D2.txt": "a01aab08682c8688a91cc37a66dd01d6d767a156beef1ec1957b2440f114d12a",
+    "commander-doubles-deck-benchmarks/batch2/decks/E1.json": "8b78e575c0e60dc79f4f1d7bf9fa3e0f7c45f30bea2e5b51602195053bcc0da8",
+    "commander-doubles-deck-benchmarks/batch2/decks/E1.txt": "2a00024d8e338492f451a002361cac3c0e62c684c216cfafc3e0fcde9329ae56",
+    "commander-doubles-deck-benchmarks/batch2/decks/E2.json": "c771a59d01bfc899a498fe8c2f0920064f78bc72f7579b25f74dcad285cd5d4f",
+    "commander-doubles-deck-benchmarks/batch2/decks/E2.txt": "44febfd6a3a1a1869ca8dc2ec7bd54013d0e170e7110760bd9b209638d2745ae",
+    "commander-doubles-deck-benchmarks/batch2/decks/F1.json": "28515d78c0e6226e1baaca5cd54e04034a81275303f365a3aea75d2093a4221e",
+    "commander-doubles-deck-benchmarks/batch2/decks/F1.txt": "e9f856cbaf65eb151a6cc56b8db8707181fe28e4f7fb51d2ced0ab3d55378041",
+    "commander-doubles-deck-benchmarks/batch2/decks/F2.json": "8dfda5f35cce54c82b4cd26725e13ae1913152eed865fbefbde155bc69144932",
+    "commander-doubles-deck-benchmarks/batch2/decks/F2.txt": "24698dd02f0f5e6189c4bb8b1a184abdaa93466632dcf43af657b1257a7e8d02",
+    "commander-doubles-deck-benchmarks/batch2/research/calibration_documents.json": "16d279f3c927bf945d5bcba502fed159b161fbfe65718857c64168f1f0b61a7b",
+    "commander-doubles-deck-benchmarks/batch2/team_D_organizer_calibration_2026-10-21.md": "99d33e4c2694568b6f08999ab67b1b18b5bce0ecb7be0cb172bfd50a3814e37f",
+    "commander-doubles-deck-benchmarks/batch2/team_E_organizer_calibration_2026-10-21.md": "9d76febc590f79f55e50b2c9213000ca5acea1739023c6b52e40d22c47386972",
+    "commander-doubles-deck-benchmarks/batch2/team_F_organizer_calibration_2026-10-21.md": "0003877bb054f1c246ac85402bbcfa8ac5ecca326752dfda15b3cf5ad957b097",
+    "commander-doubles-deck-benchmarks/batch3/decks/G1.json": "4728e4b612488ef682a0d27ada13b8d266050e4f0fffc3982e3abf78490b57d1",
+    "commander-doubles-deck-benchmarks/batch3/decks/G1.txt": "0898953cd876b885b68860f30502ae0b7fd91b1be336b9f379b065075dbe906e",
+    "commander-doubles-deck-benchmarks/batch3/decks/G2.json": "990b46b8fe7aa71969412eb11af64f1552d50c5a40c15f98caad3b56bfcac7da",
+    "commander-doubles-deck-benchmarks/batch3/decks/G2.txt": "113271a3dcb164ef32168ae8b8ebb3bf10279a130b20a07da9f6b5579022e75d",
+    "commander-doubles-deck-benchmarks/batch3/decks/H1.json": "26ca1c36633b48774c080be1fee41d9c2fb22a11b45cdcbf4b0d4560b660f935",
+    "commander-doubles-deck-benchmarks/batch3/decks/H1.txt": "225b3d83f1ffd8e5355480e2f8b3e31668475166094a89952b4ddf8f6e3c260d",
+    "commander-doubles-deck-benchmarks/batch3/decks/H2.json": "de6efd869fa518be5e3607537080f5f25cf67a1c2fff41808a9541fa2316c36c",
+    "commander-doubles-deck-benchmarks/batch3/decks/H2.txt": "8a6e6658c627a9df63ce05d8a07df2733795dce126ffe503273efa51bf68253f",
+    "commander-doubles-deck-benchmarks/batch3/decks/I1.json": "dab4607cb00a7be65a9ae40fed97cd32bef0fab4dde27750228351a465127d05",
+    "commander-doubles-deck-benchmarks/batch3/decks/I1.txt": "9e35198dde287edd676ee04f1fa7ab2a392b5dcf21b430629339a0af66f13853",
+    "commander-doubles-deck-benchmarks/batch3/decks/I2.json": "e7d0ce524af129d21d7f9f587f4e5118406f3b3e189b65946a06a8433e9c1a7c",
+    "commander-doubles-deck-benchmarks/batch3/decks/I2.txt": "a5c20410a4adc43e273354af13fb11e8e162d163b7b8eb5026db62a40a85b81e",
+    "commander-doubles-deck-benchmarks/batch3/research/accepted_working_price_overrides_2026-10-21.csv": "75a3fc3c0b2b79674c39e3612f54ad9007fd098b8d60d0fca9203a9c9631df6a",
+    "commander-doubles-deck-benchmarks/batch3/team_G_followup_prices_2026-10-21.md": "ff88a5f02e19fa9dd99cffa6f111e3dedfb5e867f3481d75f9a9b1c185d1aa1b",
+    "commander-doubles-deck-benchmarks/batch3/team_G_organizer_calibration_2026-10-21.md": "27263fbee03cedc6fc4cd3c89a99cf9f0f93e1c96db8c11a0c5d2d763d644823",
+    "commander-doubles-deck-benchmarks/batch3/team_H_organizer_calibration_2026-10-21.md": "ea91819ac404d037268a65b29e017427599886e9d99fbf04f126b6b8ef1a3108",
+    "commander-doubles-deck-benchmarks/batch3/team_I_organizer_calibration_2026-10-21.md": "f9dedb9cfb33d48dca99f0a1465029c2d5f58713eb1bbd180196c8ef0ca033e8",
+    "commander-doubles-deck-benchmarks/organizer_batch1_price_lock_2026-10-21.md": "541fd4f31022ee013aaab5fd5d2d0d11f36d6c78a54fd16fbfb7998e34c7d6b2",
+    "commander-doubles-deck-benchmarks/pricing.py": "1ef8b8b06f974e2f5f0972726229bdac6a174e8aa740bc9be35cc4309f19df7a",
+    "commander-doubles-deck-benchmarks/pricing_batch2.py": "77d1bfa54ad9912a16d4656537242f386832b39a7fed19d8fbaf1c1f12431547",
+    "commander-doubles-deck-benchmarks/pricing_batch3.py": "fa0425746aafaede7bfb3ed52f483e3d1f69d712ef5cd4efd3ada329df70811b",
+    "commander-doubles-deck-benchmarks/recalibration/agent_handoff_v1_2026-10-22.md": "e33b4187887783abcaf1a6ca388aa9ad6ae218fad729f42a1442bc7d9b3ed018",
+    "commander-doubles-deck-benchmarks/recalibration/organizer_effective_price_overlay_v2_2026-10-22.csv": "33c2b4359695ec5090e845deac5ed977e82b17850e44b796bd1e4c828afa02f9",
+    "commander-doubles-deck-benchmarks/recalibration/proposals_v3.tsv": "bae98ebe7220a35f46599bcc0ba762e5ef769bdb352553915729eb0540a479c8",
+    "commander-doubles-deck-benchmarks/recalibration/recalibration_reports_v3.py": "de80dd8f8b55f6747c1a805f8a2f3d910b9fcc83ea8b42590086e01aac776e81",
+    "commander-doubles-deck-benchmarks/recalibration/recalibration_rules_v3.py": "54df9eddbb3079f9563dad316f51cd5bcb696430062bf191bf7cfd246c9f8197",
+    "commander-doubles-deck-benchmarks/recalibration/recalibration_v3.py": "a050b48ddb3c819e4a5c98b72bcc565434bd779bde5d72b8b5b45e06a2bcd62a",
+    "commander-doubles-deck-benchmarks/recalibration/score_recalibration_v3.py": "0dc6a43326b687b62082553d39314a2e4221ae9e9e9ba60488207e0dab07284e",
+    "commander-doubles-deck-benchmarks/recalibration/test_recalibration_v3.py": "8c41e74dd7ef6da3907878f977c7b03bda543c836e808485645d74ab79e88cb0",
+    "commander-doubles-deck-benchmarks/recalibration/v3_inputs/current_rules_verification.json": "4643f568e74809b2c3067fab0445bc1e4f4f8d5a7d6976c8503fb77b2a1abe36",
+    "commander-doubles-deck-benchmarks/recalibration/v3_inputs/identity_paper_examples.json": "3563964438d0b1da44f0fc770900b43cf4d95b49d24377cb45c78be0e70cab4a",
+    "commander-doubles-deck-benchmarks/recalibration/v3_inputs/research_evidence.json": "b5a4d8930c1a35ea4bf3b7399467587947557cf34a1fd93e74600128fd6f73df",
+    "commander-doubles-deck-benchmarks/recalibration/validate_recalibration_v3.py": "3c726b049ae64eff8b108754d64cc1bea18cf6af2584439eef6b87cbfd2ad740",
+    "commander-doubles-deck-benchmarks/retotal_12_decks_2026-10-21.csv": "46824ae6edcab63a9ba1bffb472d52aa6775aa76f3078f11f17fcef9a33b84c2",
+    "commander-doubles-deck-benchmarks/retotal_full_card_ledger_2026-10-21.csv": "448149de00dd509669dc9d82cd731c7f6cc52dfeea70ca8d9dc2f0b845247b18",
+    "commander-doubles-deck-benchmarks/team_A_organizer_calibration_2026-10-21.md": "b4d74664fce9212d1f29a996bd4b5bf19ecdf862d31e4268970d7719f373c9c2",
+    "commander-doubles-final-audit/audit_backend.py": "a81a27d67f05ce3aff8dee16f357e723df6311e8f576e29ab86396e3e8e3205e",
+    "commander-doubles-final-audit/audit_inputs.json": "50f5274a2ac252367308483b398afc7b1a90af05f7066d5d3c8ba5560d5dac9a",
+    "commander-doubles-final-audit/human_calibration_anchors.json": "5d892b8700028e12719b43b4a9033a614cdce4e46549d7e6ab558f3dbcb263c7",
+    "commander-doubles-final-audit/organizer_calibration_2026-10-20.md": "6e5f70e987667ca78a434bc546c18372bd33b1232bd70287550dc920bb1b3441",
+    "commander-top1000-power-ranking/backend.py": "7af4792dd65a9e6e47427aa0db55009dff22ad140b74b28ff870b23b923c6fa7",
+    "commander-top1000-power-ranking/candidate_inventory.csv": "a559cdbb62c43845c907e2b1c5963af907150d98ded568c8380149670e65c211",
+    "commander-top1000-power-ranking/data/name_aliases.json": "7e17fe420595bd8a056e6bc500ff44b26e04982d08b7c433ed0b3eccc526dfe5",
+    "commander-top1000-power-ranking/ranking.py": "f37fbc6a7aad50d83e3ff1d96040fa96d4e840028b7e30bdced1bcc40b5a3661"
+  },
+  "oracle_snapshot": "2026-10-20 pinned; no full live bulk refresh claimed",
+  "retrieval_date": "2026-10-22",
+  "rules_text_sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+  "source_commit": "a8b91b934120d412d514c0529cb36c34df6901b0"
+}
