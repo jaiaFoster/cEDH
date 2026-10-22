@@ -1,0 +1,667 @@
+{
+  "audio": {
+    "G": "Team G combines Sheoldred Pox with Oloro enchantment control. The black deck attacks hands, lands, and life totals while the Esper deck uses mana rocks, enchantment recursion, and counterspells to preserve a winning board. Their most alarming line is Bloodletter followed by Pox: from sixty life, the opposing team can lose eighty while our team loses forty. Sorin offers another abrupt life-total conversion. Oloro supplies passive recovery, and Test of Endurance can win at the next upkeep without ever casting the commander. These are alternatives that require coordination: casting Pox at the wrong moment can destroy your own Test plan, and Contamination can strand your teammate's colored spells. Expect a turn spent establishing mana, then either a protected threshold win or disruptive black conversion. This team may be substantially more oppressive than its modest commander prices suggest, especially if repeated resource denial is acceptable.",
+    "H": "Team H pairs an Esper tempo and counterspell deck with Chulane creature combo. Tymna draws from combat, Malcolm makes Treasure from its own Pirates, and inexpensive evasive threats keep cards flowing while the team holds interaction. Chulane supplies the creature engine, supported by bounce creatures, Aluren, and redundant value loops. The sharpest two-player adaptation puts Acererak in the Esper deck: once the Bant player resolves Aluren, the teammate can repeatedly cast Acererak for free and drain both opposing heads through dungeon rooms. Neither commander is necessary for that line. The Esper deck also has its own Oracle and Consultation finish, so removing Chulane is insufficient. Aluren gives opponents the same creature permission, and removal, casting restrictions, and trigger suppression remain meaningful answers. This is an intentionally severe benchmark, with a possible third-turn team line rather than evidence of a measured win rate. The two-point Aluren package deserves urgent organizer review.",
+    "I": "Team I combines Gitrog land recursion with Shorikai Stoneblade control. Gitrog turns discarded or sacrificed lands into cards, finds Dark Depths, and rebuilds resources through Loam and graveyard recursion. Shorikai filters cards and produces equipment carriers while Stoneforge finds Batterskull or Kaldra; the blue-white deck also holds counterspells and has its own artifact-mana finish. The pairing deliberately avoids graveyard hate and creature shutdown effects that would disable Gitrog. Marit Lage is a substantial threat, but twenty damage is not an immediate kill against sixty shared life. For a more decisive route, the lands deck includes a fully specified Woodland and Analyst mana loop that works after removing its own Gitrog, avoiding mandatory draw exhaustion. Both heads can win independently, although graveyard hate pressures the lands player and artifact hate pressures Shorikai. This looks like a powerful benchmark with real setup costs, not proof that the budget has achieved balance."
+  },
+  "openings": {
+    "G1": {
+      "hand": {
+        "Swamp": 3,
+        "Dark Ritual": 1,
+        "Bloodletter of Aclazotz": 1,
+        "Pox": 1,
+        "Duress": 1
+      },
+      "draw_by_turn": [],
+      "library_required": [],
+      "turn": 3,
+      "outcome": "conditional team kill",
+      "sequence": "T1 Swamp, Duress targeting one enemy (the other hand remains unknown). T2 Swamp, cast Ritual from one Swamp and tap other: BBBB casts Bloodletter1BBB. T3 third Swamp paysBBB for Pox. At enemy60, each enemy loses40 after Bloodletter and shared pool falls80; friendly60 loses40 and survives20. No extra cards or teammate mana required. Removing Bloodletter/countering Pox or appropriate replacements stops this. Oloro's gains alter friendly arithmetic favorably, not enemy calculations."
+    },
+    "G2": {
+      "hand": {
+        "Island": 1,
+        "Plains": 1,
+        "Swamp": 1,
+        "Arcane Signet": 1,
+        "Test of Endurance": 1,
+        "Dovin's Veto": 1,
+        "Enlightened Tutor": 1
+      },
+      "draw_by_turn": [],
+      "library_required": [],
+      "turn": 4,
+      "outcome": "conditional upkeep win or protection choice",
+      "sequence": "T1 Island. T2 Plains, Signet2. T3 Swamp: three lands plus Signet produce4, including WW from Plains/Signet, to cast Test. If shared life is>=50 at T4 upkeep and resolution, team wins. Alternatively leave WU for Veto on G1's T3 Pox line; cannot claim to cast Test and retain Veto with the same four mana. Do not combine this demonstration with a Pox below50."
+    },
+    "H1": {
+      "hand": {
+        "Island": 1,
+        "Plains": 1,
+        "Swamp": 1,
+        "Acererak the Archlich": 1,
+        "Dovin's Veto": 1,
+        "Force of Will": 1,
+        "Ponder": 1
+      },
+      "draw_by_turn": [],
+      "library_required": [],
+      "turn": 3,
+      "outcome": "conditional cross-controller dungeon win",
+      "sequence": "Develop own Island/Plains/Swamp. H2 independently resolves Aluren on T3. H1 repeatedly casts its own Acererak free, choosing Lost Mine of Phandelver and Dark Pool;30 visits drain two enemy heads60. H1 retains own WU for Veto and Force pitching Ponder; do not spend Ponder earlier and still count it as pitch. Each cast and dungeon room allows interaction; counters/removal/ETB suppression and Aluren's enemy permissions matter. Fully resolving rooms uses119 casts and29 mandatory Temple draws before the lethal thirtieth Dark Pool; require>=29 cards in H1 library. No draw-bypass shortcut is assumed."
+    },
+    "H2": {
+      "hand": {
+        "Forest": 2,
+        "Island": 1,
+        "Llanowar Elves": 1,
+        "Birds of Paradise": 1,
+        "Aluren": 1,
+        "Shrieking Drake": 1
+      },
+      "draw_by_turn": [],
+      "library_required": [
+        "Laboratory Maniac"
+      ],
+      "turn": 3,
+      "outcome": "Aluren setup, or own Chulane engine T4",
+      "sequence": "T1 Forest Elves. T2 Island, Forest paysG for Birds. T3 Forest gives three lands and two nonsick dorks: cast Aluren2GG for H1's independent Acererak line. Alternative: cast Chulane2GWU on T3 with Birds producingW and IslandU; T4 cast Aluren, then Drake loops draw the deck. Deploy Lab Maniac before an empty-library draw, remembering Chulane's cast draw resolves before Lab Maniac enters. These are alternative uses of mana, not both T3 Chulane and Aluren."
+    },
+    "I1": {
+      "hand": {
+        "Forest": 2,
+        "Swamp": 1,
+        "Llanowar Elves": 1,
+        "Wild Growth": 1,
+        "Dakmor Salvage": 1,
+        "Putrid Imp": 1
+      },
+      "draw_by_turn": [],
+      "library_required": [],
+      "turn": 3,
+      "outcome": "engine deployment, not claimed win",
+      "sequence": "T1 Forest Elves. T2 Swamp; Forest casts Growth onto that Forest, Swamp casts Imp. T3 second Forest: enchanted Forest2, other Forest1, SwampB, ElvesG pay3BG for Gitrog. Discard Dakmor to Imp; replace its Gitrog draw with dredge2 only if at least2 library cards remain. An illustrated top pair containing a land gives one additional draw trigger. Further progress depends on actual library order and triggers; this sequence does not assert a deterministic T3 win."
+    },
+    "I2": {
+      "hand": {
+        "Island": 2,
+        "Plains": 1,
+        "Arcane Signet": 1,
+        "Basalt Monolith": 1,
+        "Rings of Brighthearth": 1,
+        "Walking Ballista": 1
+      },
+      "draw_by_turn": [
+        "Island"
+      ],
+      "library_required": [],
+      "turn": 4,
+      "outcome": "conditional own artifact-mana win",
+      "sequence": "T1 Island. T2 Island Signet. T3 Plains Basalt using3 of4 available; leave Basalt untapped. T4 fourth land drawn by this turn gives lands4+Signet1=5: cast Rings3, retain2, tap Basalt3=5. Pay untap3+copy2, tap Basalt between copy/original resolutions, then again after original:6 per5. Generate120C, cast Ballista X60, resolve then shoot60. Fourth land is an explicit eighth-card condition, not part of the opening seven. Removal/counters/Null Rod stop it."
+    }
+  },
+  "docs": {
+    "team_synergy_and_counterplay.md": "# Batch3 team plans — season0-proposed\n\n## G — Denial plus enchantment control\nG1 establishes black mana, Sheoldred, discard and renewable fodder. G2 places colored rocks, finds Test/Felidar or assembles its own enchantment drain loop, and keeps stack interaction. G1 can convert Bloodletter+Pox, Sorin+Bloodletter, or Peer+Sheoldred into decisive life loss. G2 Wound Reflection can finish G1's Sorin or Pox without shared control. G2's own Exquisite/Bond/Tenacity and G1's own Blood/Vito packages are legitimate independent alternatives; splitting these life-event engines is not.\n\nThe lock plan is deliberately adversarial. Contamination/Ophiomancer can deny both enemies while Oloro gains life from the command zone. It also turns G2 lands into black-only sources: require its nonland colored rocks or a deployed win before committing. Bottomless Pit, Necrogen Mists, Liliana, Smallpox, Death Cloud and Pox cost G2 cards or permanents too. Deploy durable enchantments and rocks first, or choose the quick threshold plan instead. G2 Replenish recovers only its own enchantments. Pox is not a free asymmetrical wipe.\n\nAgainst fast spell combo, use Duress/Thoughtseize on the more dangerous head and G2 Veto/ordinary counters on the stack. A single discard spell cannot clear two hands. Against creature decks, black edicts/Deluge and G2 Verdict trade cards but threaten your own engines. Graveyard hate attacks drain/reanimation but not an already-deployed Test. Opposing Drannith limits battlefield commanders but not Oloro's command-zone trigger. Life-total locks, counters, enchantment removal and attack pressure challenge Test. This pair is mana-hungry and has fewer free counters than H/I; no win percentages claimed.\n\n## H — Two independent finishers plus global creature permission\nH1's changelings/Pirates/evasive threats generate Malcolm Treasure, Tymna cards and combat pressure. H2's mana dorks develop Chulane, with Aluren, Earthcraft, Alarm, bounce creatures and creature tutors supplying overlapping engines. H1 can win through its own Oracle/Consultation; H2 can draw toward its own Lab Maniac; H1 Acererak plus H2 Aluren is a separate cross-controller win requiring neither commander. Chulane never draws for teammate casts.\n\nAluren is global: all four players may flash eligible creatures. Enemy Opposition Agent, Bowmasters, Faerie Mastermind and combo creatures may exploit that window. Tidal Barracuda is a separately paid4-mana way to suppress enemy casting during the friendly turn; it is not itself Aluren-eligible. Chant/Abeyance restrict one enemy, leaving the other to interact. Speaker/Earthcraft can explicitly target a teammate's land, while Curio and ordinary bounce engines refer to their own controller's permanents.\n\nCountering Aluren, removing Acererak at the right time, Torpor Orb/Hushbringer, Rule of Law, Drannith and creature ability suppression attack different routes. A deployed Lab Maniac needs protection from removal before the final draw. Oracle's trigger is different and may beat simple creature removal. Do not cast H1 Oracle into a resolved hostile draw effect or an ETB suppressor. H1 deliberately omits anti-creature stax and global draw denial that would shut off H2. H1 keeps14-point Force despite the squeeze because protecting a team-wide win is its role. Evasive creatures do not guarantee hits through two defending boards.\n\n## I — Lands plus Stoneblade control\nI1 uses Dakmor outlets, Loam, sacrifice/recursion and land tutors for draw/mana. It has a fully specified non-random Woodland/Analyst/Spelunking/Resources loop after removing Gitrog, as well as draw-dependent Dakmor routes and Dark Depths pressure. I2 deploys Stoneforge threats and Shorikai Pilots while keeping blue interaction; Scepter/Reversal or Basalt/Rings plus Ballista gives an independent own-controller artifact route.\n\nThe choice of Shorikai is intentional: its actual tournament shells provide Azorius filtering, artifact mana and stack protection, while its Pilot bodies carry Equipment. It is eligible under current903.3 and remains free in the command zone. The Stoneblade package changes the source engine materially, so this exact hybrid is newly designed, not an attributed tournament winner.\n\nDo not import source RIP/Cage/Totem/Humility just because they are strong Shorikai cards. They sabotage Gitrog. Lantern's enemy-only graveyard exile is appropriate. Opposing RIP/Endurance/Surgical can hurt I1; I2's independent non-graveyard artifact and Equipment routes remain useful. Artifact hate attacks I2 but not Loam/Depths. Combat blockers, edicts and exile answer Marit Lage/Kaldra; a20/20 is not a60-life kill. Sword untaps I2 lands only, and Equip cannot attach to I1's creatures. Never borrow I1 mana for I2's loop.\n\nH dungeon accounting: using fully resolved Lost Mine rooms requires119 casts and29 Temple draws to reach30 Dark Pools. At60 enemy shared life, retain>=29 library cards and do not assume unlimited safe draws. This qualification does not remove theT3 example, but matters late in a long game.\n",
+    "budget_tradeoffs.md": "# Budget choices\n\nG is49/71 with11 transferred to G2. G1 keeps Ritual9 for speed, Opposition Agent8 for enemy tutors and Imperial Seal8 for finding its defining conversions; Sorin/Peer5 each are expensive in mana but unusually decisive with shared life. G2 keeps Demonic15 for any-card access, Enlightened9 for Test/Blood, Test7 for starting60 thresholds and Remora6 for maintaining interaction. Mana Drain7 was cut for Negate0: reserving colored protection and finishing within72 matters more than banking colorless. The78-point G2 draft violated the individual maximum; replacing the7-point counter reduced it to71 and allowed G1's8-point Seal upgrade, producing49/71.\n\nH is69/51 with9 transferred to H1. Its11-point Partner pair, Force14 and Oracle/Consultation20 already consume45. Remora6 and Sentinel5 are retained for card economy. Wishclaw4, Spellseeker4, Bowmasters3 and Dig1 were removed from H1, and a3-point Swan became existing cheap counters. H2 instead pays Worldly6 for creature selection; Recruiter4, Call4, Speaker1 and Wargate2 retain toolbox identity. Cradle15, premium free counters, Enlightened9 and fetch/dual5 were excluded to keep Aluren and supporting redundancy. This is not a guarantee those omissions cost no performance.\n\nI is54/66 with6 transferred to I2. Gitrog keeps Ritual9, Entomb8, Worldly6 and Finale9 because finding or deploying the correct engine is important; Boseiju6 remains a flexible hate answer. I2 retains Force14, Teferi7, Remora6 and Otawara6 to protect both plans. It drops source Sol Ring15 and artifact tutors8–9 rather than its actual Stoneblade package. Rain of Filth1 became Nature's Lore0 in I1 to remove the final team overage and add durable mana rather than sacrificing lands for a one-shot gain. No points were refunded for team synergy.\n\nAll six use basic/conditional fixing rather than original fetches/duals at5. This is a real mana constraint, not proof those sources are equivalent. Shocks2 were weighed against actual colors and spell priorities; current lists choose ordinary basics/checks/fastlands and Signets. MDFCs have no blanket channel tax: Malakir Rebirth0 remains a disclosed review risk, not approved exact0. No weak card was added just to consume the final point.\n",
+    "archetype_lineage.md": "# Attributed foundations and original adaptations\n\nAll twelve complete source registrations are frozen in research/foundations.json with raw snapshot checksums, event/player locators and exact card inventories. Standings are those of the source events, not these adaptations. Every head has two list foundations, but their empirical strength differs substantially.\n\nG1: the archived Sheoldred pilots include a17/18 event entry and a24/40 entry, not demonstrated elite results. Their draw-punishment, Peer, black ritual and life-drain packages supply concrete inventories. Reid Duke's2012 Pox article supplies the established Pox/Smallpox/Liliana/Hymn attrition lineage. Adding Sorin, shared-life Bloodletter/Pox conversion and Oloro support is original2HG engineering. Do not claim that Sheoldred Pox is a tournament-proven winning cEDH archetype.\n\nG2: Albert's12/25 registration is explicitly a casual-labelled event; Jeff Flynn's20/31 cEDH-labelled entry went0-4. They are actual source lists, not strong performance evidence. Mitrian's published Oloro primer supports enchantment, lifegain and alternate-win identity. Mesa Enchantress, enchantment copies, Rector, Replenish, Test and an independent Blood payoff package make this an Esper enchantment-control deck, not green Enchantress translated illegally. Lower-powered creature payloads in source lists became efficient counters and card selection.\n\nH1: Pedro Vidaurri and Ty Ohio have actual first-place registrations in38- and35-player events. Their Tymna/Malcolm compact-win/interaction packages are the strongest source pedigree in this batch. The budget removes ubiquitous expensive mana/tutors and preserves Force/Oracle/Consultation plus evasive Pirates. Acererak is a new cross-team role, not a card attributed to either source list.\n\nH2: David Freijo's5/22 and Duncan McClellan's6/22 Chulane lists both actually contain Aluren. Dork acceleration, Curio/Drake, Alarm/Earthcraft and creature toolbox packages are retained in spirit and exact-card comparisons. Black Cavern Harpy and Acererak are illegal in Bant and absent from H2; Acererak instead belongs to H1. Stefan Stasiak's primary Legacy interview informs the complementary value/combo architecture without claiming his Legacy results for Chulane.\n\nI1: Jason Scott's1/18 and Toni Romero's2/44 Gitrog registrations provide complementary Dakmor/tutor and Loam/Depths land-recursion inventories. These are actual event facts. Keep Dakmor/discard, Loam/recursion and compact threat packages; omit banned Primeval Titan. The specified Woodland/Analyst route provides a deterministic mana benchmark without asserting that random dredge triggers can always be shortcut to a win.\n\nI2: Mark Domzil's1/59 and Philip Jorzik's1/21 Shorikai registrations supply a genuine legal Azorius artifact-control commander pedigree. Both are source registrations, not Stoneblade2HG results. Reto S.'s primary Stoneblade submission supplies Stoneforge/Batterskull/Kaldra with cantrips/counters; its page displays76 total cards and is not silently accepted as a valid60-card tournament list. The newly designed Shorikai Stoneblade hybrid keeps those defining threats, adds Pilot equipment carriers and removes source stax that hurts Gitrog.\n",
+    "organizer_review_and_limits.md": "# Organizer review — urgent unresolved questions\n\n1. **Aluren2 + Acererak0 across H2/H1 is functional.** Both commanders can be absent; Lost Mine Dark Pool loops drain both opponents. Keep it in the adversarial benchmark. Recommend reviewing Aluren's individual price; no new pairing surcharge or prohibition was applied.\n2. **Bloodletter0 + Pox0 can kill a60-life enemy team while its caster's team survives.** Pox also destroys friendly resources. Sorin5 + Bloodletter0 is another sudden conversion. G1's free Sheoldred command zone and G2's free Oloro command zone remain inherited prices, not a new human endorsement.\n3. **Test7 and Felidar5 begin above their win thresholds at60.** Their upkeep timing and interaction windows are actual constraints. Rector0, Replenish0 and low-cost enchantment tutors improve access/recovery. G2 Test plan conflicts with careless Pox.\n4. **Gitrog1 / Shorikai0 / Chulane0 command access remains very cheap.** Gitrog's Woodland loop is setup-heavy but deterministic in the specified state. Original raw Dakmor engine alone is not certified as an instant deterministic win.\n5. **Symmetric locks can be friendly fire.** G Contamination and Pox may create oppressive play patterns. Their presence in a deck does not approve them for league play. No blanket turn-seven, infinite-combo or land-denial prohibition has been imposed.\n6. Malakir Rebirth0 is an unreviewed flexible MDFC. Adding1 currently takes G1 to50 and G team121; a disclosed replacement with Undying Malice0 restores120 but loses the land face. Do not silently reprice it.\n7. Every source result is ordinary Commander or explicitly casual-labelled. No paired2HG outcomes, simulation win rates, average wins/turns or achieved optimality proofs exist. These are aggressively built candidates, not a proof that every budget allocation has been exhaustively optimized.\n8. Latest consolidated overrides are accepted working calibration. Some are exact numeric decisions, others fixed range choices; this batch does not activate either. Historical qualitative tiers and earlier decks remain unchanged.\n\nThe initial construction and tests ran in memory while the filesystem was read-only. Once write access was restored, the frozen package was saved, all56 Batch1/2/3 tests passed from disk, and all46 generated artifacts reproduced byte-for-byte. Publication uses the existing Git branch; no league rule or price is activated. Source snapshots and pinned Oracle were already local; the full Oct21 Oracle bulk refresh was not claimed. Official rules/ban pages were checkedOct21.\n\nAcererak's Lost Mine line is finite-library constrained:119 casts and29 mandatory draws before thirty Dark Pools. The early-game example has sufficient library; no indefinite draw-bypass shortcut is assumed.\n\nWoodland loop colored-mana accounting uses Woodland, three Forests and one Swamp. Each iteration yields7G+2B, spends7G+B and banksB;32B really pays Exsanguinate X30. A five-green-land proof would produce green mana and would not by itself pay the spell'sBB.\n",
+    "opening_hands_and_goldfish.md": "# Conditional turn demonstrations\n\nRead opening_examples.json for exact own-player seven-card hands, optional additional draws and sequenced costs. These are existence examples, not measured goldfish frequencies. No mulligan simulation or paired game was run.\n\n- G1 can deploy Bloodletter onT2 with Ritual and cast Pox onT3. Both players still face interaction and friendly resource loss. G2 must choose between keeping protection up for this and casting its own Test onT3.\n- G2's ordinary3-land/Signet Test line wins onT4 upkeep if>=50 twice. It is invalid if G1 Pox has reduced the pool below50.\n- H2 can resolve Aluren onT3 from3lands and mana dorks; H1's own Acererak then supplies a complete repeated-dungeon win. Its own protection resources are specified separately.\n- H2 can alternatively deploy Chulane onT3, Aluren onT4 and draw through Drake. Lab Maniac timing is explicitly checked before the library empties.\n- I1's illustratedT3 Gitrog/Imp/Dakmor is an engine deployment, not a claimedT3 deterministic kill. A separate fixed-state Woodland/Analyst proof avoids unknown library order.\n- I2'sT4 Basalt/Rings requires a fourth land drawn byT4 in addition to its opening7. Starting mana for the first copy activation is explicitly counted.\n\nFor mulligans, prefer colored development plus an engine or genuine interaction. Do not keep a nominal two-land hand merely because the total includes colorless utility lands. Coordinate keeps but never transfer cards or mana. Starting team skips its first draw step; none of the7-card-only demonstrations quietly assumes aT1draw.\n",
+    "README.md": "# Commander Doubles Batch3 — season0-proposed\n\nRead organizer_audio_review.md first, then teams.csv, decks/, score_ledger.csv, rules_interactions.md and organizer_review_and_limits.md. G/H/I are six complete independent100-card decks; H1 has two legal Partners and98 main cards. No rules or price activation and no experimental unbans.\n\n## Reproduce from repository root\n\n~~~sh\npython commander-doubles-deck-benchmarks/build_batch3.py\npython commander-doubles-deck-benchmarks/build_batch3.py --check\npython -m unittest discover -s commander-doubles-deck-benchmarks/tests -p test_batch3.py -v\npython commander-doubles-deck-benchmarks/score_batch3.py commander-doubles-deck-benchmarks/batch3/decks/G1.txt --deck-b commander-doubles-deck-benchmarks/batch3/decks/G2.json --summary\n~~~\n\nUses the existing Python dependencies, pinned Oracle and source snapshots; ordinary scoring is offline. Frozen inputs are deck_inputs.json, review_content.json, research/foundations.json and source_checks.json. Latest price authority is the accepted_working_price_overrides_2026-10-21.csv file committed at0b1d2dd. Copy is frozen under research for deterministic historical regeneration.\n\nprice_snapshot.csv is sparse: every known legal card with any nonzero actual-zone price is present. All other verified legal paper Oracle identities in the hashed archive are zero; unknown names remain errors. Separate zone prices replace rather than add. Full known-card population is verified in provenance. emit_full_price_snapshot.py can export the full table when desired, avoiding a duplicated31069-row source artifact. README and price manifest identify the exact override composition.\n\nSources are attributed factual registrations already in the authorized archive. No mass scrape, paid API, inaccessible primer reproduction or invented standings. New deck changes are original analysis. The current linkedCR and official banned list were rereadOct21; pinned Oracle snapshot remainsOct20, not a claimed new bulk download. Text lists have Commander/Deck sections; JSON uses submitted_deck with Oracle IDs and version/checksum metadata.\n\nEarlier Batch1/2 lists and retotal files are preserved. Source results do not belong to these adaptations. All budget checks use120 team/72 head/60 reference/12 max transfer and zero synergy surcharge.\n"
+  },
+  "rules": [
+    {
+      "id": "G-life",
+      "team": "G",
+      "cards": [
+        "Sheoldred, the Apocalypse",
+        "Oloro, Ageless Ascetic"
+      ],
+      "rules": [
+        "810.9",
+        "810.9a",
+        "805.4b",
+        "603.3a"
+      ],
+      "classification": "support",
+      "state": "G1 owns Sheoldred; Oloro belongs to G2.",
+      "operation": "Two enemy normal draws cause4 enemy shared loss. G1's draw gains2; G2's draw does not trigger Sheoldred. Oloro gains2 once each friendly upkeep.",
+      "caution": "G1 gaining life does not trigger G2's battlefield Oloro. Shared totals do not merge gain events."
+    },
+    {
+      "id": "G-pox",
+      "team": "G",
+      "cards": [
+        "Pox",
+        "Bloodletter of Aclazotz"
+      ],
+      "rules": [
+        "810.9",
+        "810.9a",
+        "805.6",
+        "608.2c",
+        "614.1"
+      ],
+      "classification": "same_controller",
+      "state": "G1 controls Bloodletter on its shared turn; both pools60 before Pox.",
+      "operation": "Pox assigns20 loss to each head simultaneously. Friendly total60-40=20; doubled enemy loss40 per head gives60-80=-20. Complete the spell's other instructions before checking state-based actions.",
+      "caution": "Friendly hands/creatures/lands also suffer. Recompute for actual life totals and replacements. Pox loses life, rather than setting a total under810.9d."
+    },
+    {
+      "id": "G-sorin",
+      "team": "G",
+      "cards": [
+        "Sorin Markov",
+        "Bloodletter of Aclazotz"
+      ],
+      "rules": [
+        "810.9c",
+        "614.1",
+        "805.4a"
+      ],
+      "classification": "same_controller",
+      "state": "G1 owns both, activates-3 targeting an enemy at shared60 on friendly turn.",
+      "operation": "Without Bloodletter the targeted head loses50 to make its team10. Bloodletter replaces this with100 loss; team ends-40.",
+      "caution": "Six mana for Sorin plus existing Bloodletter; ability counters, target hexproof and removal can stop it."
+    },
+    {
+      "id": "G-wound",
+      "team": "G",
+      "cards": [
+        "Sorin Markov",
+        "Wound Reflection",
+        "Pox"
+      ],
+      "rules": [
+        "810.9",
+        "810.9c",
+        "805.4d",
+        "603.3a"
+      ],
+      "classification": "cross_controller",
+      "state": "G1 resolves Sorin at enemy60; G2 controls Reflection through end step.",
+      "operation": "Only the targeted head lost50; Reflection adds another50 at the shared end step. Plain Pox from60 makes each head lose20; Reflection adds40 total later.",
+      "caution": "One Reflection trigger per shared end step, not two. Enemy gains can affect survival; remove enchantment before its trigger exists."
+    },
+    {
+      "id": "G-endurance",
+      "team": "G",
+      "cards": [
+        "Oloro, Ageless Ascetic",
+        "Test of Endurance",
+        "Felidar Sovereign"
+      ],
+      "rules": [
+        "810.9a",
+        "810.8a",
+        "603.4",
+        "805.7"
+      ],
+      "classification": "same_controller",
+      "state": "G2 controls its alternate win before friendly upkeep.",
+      "operation": "Test checks shared>=50 at trigger AND resolution; Felidar checks>=40. One head winning wins the team. Oloro gain may resolve above an already-triggered win check.",
+      "caution": "At49 Test never triggers: later Oloro gain cannot create it retroactively. Pox can defeat your own upkeep-win plan."
+    },
+    {
+      "id": "G-drain",
+      "team": "G",
+      "cards": [
+        "Exquisite Blood",
+        "Sanguine Bond",
+        "Vito, Thorn of the Dusk Rose",
+        "Enduring Tenacity"
+      ],
+      "rules": [
+        "109.5",
+        "603.3a",
+        "810.9",
+        "810.8a"
+      ],
+      "classification": "split_false_positive",
+      "state": "One head must own Blood and its own Bond/Vito/Tenacity to repeat.",
+      "operation": "Enemy loss triggers that head's Blood gain, which triggers its own payoff, which causes enemy loss. Either deck has a valid own-controller package.",
+      "caution": "G1 Blood plus G2 Bond does NOT repeat because G2 did not gain life. Life-gain prohibitions can stop the team gaining."
+    },
+    {
+      "id": "G-peer",
+      "team": "G",
+      "cards": [
+        "Peer into the Abyss",
+        "Sheoldred, the Apocalypse"
+      ],
+      "rules": [
+        "810.9a",
+        "121.2",
+        "603.3",
+        "117.5"
+      ],
+      "classification": "same_controller",
+      "state": "G1 controls Sheoldred and targets one enemy with Peer.",
+      "operation": "That head draws ceil(library/2), then loses ceil(sharedlife/2). Each draw queues a2-loss trigger; they go on the stack after Peer resolves.",
+      "caution": "Seven-mana spell, not an automatic immediate loss during the draws. Responses to the spell or queued triggers remain relevant."
+    },
+    {
+      "id": "G-denial",
+      "team": "G",
+      "cards": [
+        "Contamination",
+        "Ophiomancer",
+        "Bitterblossom"
+      ],
+      "rules": [
+        "810.5",
+        "805.4d",
+        "106.3",
+        "603.4"
+      ],
+      "classification": "friendly_hazard",
+      "state": "G1 has renewable own fodder; G2 has colored nonland mana or an established win.",
+      "operation": "All players' tapped lands produce onlyB. Ophiomancer triggers once each shared upkeep if G1 has no Snake. G1 sacrifices its own creature to upkeep Contamination.",
+      "caution": "Can strand G2's white/blue spells. Nonland mana and activated abilities bypass it; deploy only with a plan for G2."
+    },
+    {
+      "id": "G-protection",
+      "team": "G",
+      "cards": [
+        "Teferi's Protection",
+        "Pox"
+      ],
+      "rules": [
+        "810.9a",
+        "810.9g",
+        "810.9h",
+        "101.2"
+      ],
+      "classification": "cross_controller",
+      "state": "G2 resolves Protection before G1 Pox/Death Cloud.",
+      "operation": "Fixed friendly shared life cannot change. Only G2's own permanents phase out; G1's board and hand remain exposed.",
+      "caution": "Not protection for G1's permanents. Poison, library-loss and alternate wins remain separate."
+    },
+    {
+      "id": "G-gix",
+      "team": "G",
+      "cards": [
+        "Gix, Yawgmoth Praetor"
+      ],
+      "rules": [
+        "810.9",
+        "109.5",
+        "603.3a"
+      ],
+      "classification": "cross_controller",
+      "state": "G1 controls Gix and a friendly creature hits an enemy head.",
+      "operation": "That creature's controller may pay1 from shared life and draw into its own hand. G2's creature can earn G2 cards.",
+      "caution": "Does not put all cards in G1's hand; excessive payments threaten Test."
+    },
+    {
+      "id": "H-aluren",
+      "team": "H",
+      "cards": [
+        "Aluren",
+        "Acererak the Archlich",
+        "Lost Mine of Phandelver"
+      ],
+      "rules": [
+        "601.2b",
+        "601.2f",
+        "701.49",
+        "309.5",
+        "309.6",
+        "309.7",
+        "810.8a"
+      ],
+      "classification": "cross_controller",
+      "state": "H2 controls Aluren; H1 owns Acererak and has not completed Tomb of Annihilation.",
+      "operation": "Global permission lets H1 cast MV3 Acererak for0 repeatedly. ETB returns it and ventures. Repeated Lost Mine of Phandelver paths visit Dark Pool; each visit drains each enemy1. Thirty Dark Pools cover60 team life. With fully resolved dungeon rooms this uses119 Acererak casts and29 Temple draws before the thirtieth Dark Pool; H1 must have at least29 library cards remaining for this simple line.",
+      "caution": "Each spell/ETB/room permits interaction. Enemies also get Aluren. Never complete Tomb, which stops the return ability. No commander required. The finite-library condition is explicit: this is a sufficient finite kill from the opening state, not a claim of safely drawing indefinitely."
+    },
+    {
+      "id": "H-chulane",
+      "team": "H",
+      "cards": [
+        "Chulane, Teller of Tales",
+        "Aluren",
+        "Shrieking Drake",
+        "Laboratory Maniac"
+      ],
+      "rules": [
+        "109.5",
+        "603.3",
+        "603.3a",
+        "614.1a",
+        "810.8a"
+      ],
+      "classification": "same_controller",
+      "state": "H2 controls Chulane/Aluren, owns Drake and gets Lab Maniac onto battlefield before an empty-library draw.",
+      "operation": "Free self-returning Drake casts draw and optionally place H2's lands. Chulane trigger resolves BEFORE the creature. With one card left, casting Maniac draws it, then Maniac enters; another Drake cast can win.",
+      "caution": "With zero cards and Maniac still in hand, its cast triggers a losing draw BEFORE it enters. H1 Acererak casts do not trigger H2 Chulane."
+    },
+    {
+      "id": "H-earthcraft",
+      "team": "H",
+      "cards": [
+        "Earthcraft",
+        "Shrieking Drake",
+        "Chulane, Teller of Tales"
+      ],
+      "rules": [
+        "602.2",
+        "302.6",
+        "109.5",
+        "810.5"
+      ],
+      "classification": "cross_controller_support",
+      "state": "H2 controls Earthcraft/Drake; either friendly head owns a basic land.",
+      "operation": "Tap newly entered own Drake while its bounce trigger waits: Earthcraft's cost is not Drake's T ability. It can target ANY basic, including H1's, or untap H2 Island to fund another Drake.",
+      "caution": "Cannot tap H1 creatures for the cost. Mandatory Chulane draws still limit repetitions."
+    },
+    {
+      "id": "H-alarm",
+      "team": "H",
+      "cards": [
+        "Intruder Alarm",
+        "Seedborn Muse",
+        "Formidable Speaker"
+      ],
+      "rules": [
+        "109.5",
+        "302.6",
+        "603.3a",
+        "805.4d"
+      ],
+      "classification": "cross_controller_support",
+      "state": "H2 controls Alarm and a nonsick Speaker; any creature enters.",
+      "operation": "Alarm untaps ALL creatures including enemies, and prevents normal creature untaps. Speaker pays1 and taps to untap another target permanent, possibly H1's land/rock.",
+      "caution": "Not automatically infinite mana. Seedborn untaps H2's own permanents once per opposing shared untap, not twice."
+    },
+    {
+      "id": "H-combat",
+      "team": "H",
+      "cards": [
+        "Tymna the Weaver",
+        "Malcolm, Keen-Eyed Navigator",
+        "Changeling Outcast"
+      ],
+      "rules": [
+        "805.10b",
+        "805.10d",
+        "805.4d",
+        "603.3a"
+      ],
+      "classification": "cross_controller_support",
+      "state": "H1 owns both partners; attacks are assigned to enemy heads.",
+      "operation": "Tymna sees distinct enemy players hit, including by H2 creatures: max2 here. Malcolm sees only H1 Pirates and makes H1 Treasure, up to2 opponents per simultaneous damage event.",
+      "caution": "Damage to one head is not both for these triggers. Either enemy's creatures can block for either head."
+    },
+    {
+      "id": "H-oracle",
+      "team": "H",
+      "cards": [
+        "Thassa's Oracle",
+        "Demonic Consultation"
+      ],
+      "rules": [
+        "603.3",
+        "810.8a",
+        "121.4"
+      ],
+      "classification": "same_controller",
+      "state": "H1 casts Oracle then Consultation with Oracle ETB on stack, naming a card absent from its library.",
+      "operation": "Consultation exiles H1's library; resolving Oracle compares H1 devotion and library. Its win wins the team.",
+      "caution": "Trigger counters or forced empty-library draw can beat this. Removal alone does not beat an existing Oracle trigger when library0."
+    },
+    {
+      "id": "I-dakmor",
+      "team": "I",
+      "cards": [
+        "The Gitrog Monster",
+        "Dakmor Salvage",
+        "Skirge Familiar",
+        "Kozilek, Butcher of Truth",
+        "Gaea's Blessing"
+      ],
+      "rules": [
+        "702.52",
+        "603.3",
+        "121.2",
+        "810.5"
+      ],
+      "classification": "conditional_engine",
+      "state": "All belong to I1; Dakmor in hand, Gitrog and discard outlet on board, >=2 cards to dredge.",
+      "operation": "Discard Dakmor triggers Gitrog. Dredge mills2, returning Dakmor. If the batch mills one or more lands, ONE extra Gitrog draw triggers. Skirge makes ownB per discard; grave-shufflers recycle.",
+      "caution": "Unknown order, shuffle triggers and mandatory draws need explicit management. Not automatically a deterministic win; a separate fully specified Woodland mana route is documented."
+    },
+    {
+      "id": "I-woodland",
+      "team": "I",
+      "cards": [
+        "Shifting Woodland",
+        "Aftermath Analyst",
+        "Spelunking",
+        "Squandered Resources",
+        "The Gitrog Monster",
+        "High Market",
+        "Exsanguinate"
+      ],
+      "rules": [
+        "707.2",
+        "614.1",
+        "117.5",
+        "603.3",
+        "810.5"
+      ],
+      "classification": "same_controller_deterministic",
+      "state": "I1 owns Resources/Spelunking, Woodland+3Forests+1Swamp. Grave has Analyst and persistent creature/instant/sorcery/enchantment types. Gitrog is absent (earlier High Market sacrifice if needed).",
+      "operation": "Tap Woodland/3Forests/Swamp for4G+B, sacrifice the three Forests and Swamp to Resources for3G+B: total7G+2B. Pay4G for Woodland's2GG copy ability. Pay3G+B for the copied Analyst's3G sacrifice ability. Return all5 own lands; Spelunking makes them untapped. State resets plusB. Repeat32 times then Exsanguinate X30 drains two enemy heads60.",
+      "caution": "Copying does not ETB/mill3; zone change resets copy. Keep four grave types after lands return. Gitrog still present adds mandatory draws and invalidates unlimited repetition. Grave hate/removal interrupt it."
+    },
+    {
+      "id": "I-depths",
+      "team": "I",
+      "cards": [
+        "Dark Depths",
+        "Thespian's Stage"
+      ],
+      "rules": [
+        "707.2",
+        "704.5j",
+        "603.4",
+        "805.10d"
+      ],
+      "classification": "same_controller",
+      "state": "I1 controls both, pays2 and taps Stage to copy Depths.",
+      "operation": "Keep the zero-counter copy through legend rule, then sacrifice it to its trigger for Marit Lage.",
+      "caution": "20 ordinary damage is only one-third of60, not commander damage. Both enemies can block; exile/bounce/edicts remain answers."
+    },
+    {
+      "id": "I-gear",
+      "team": "I",
+      "cards": [
+        "Stoneforge Mystic",
+        "Stonehewer Giant",
+        "Sigarda's Aid",
+        "Puresteel Paladin",
+        "Sword of Feast and Famine",
+        "Shorikai, Genesis Engine"
+      ],
+      "rules": [
+        "702.6a",
+        "301.5",
+        "109.5",
+        "805.10d",
+        "903.3"
+      ],
+      "classification": "same_controller",
+      "state": "I2 owns Equipment, threats and Pilots. Shorikai is eligible legendary Vehicle under current903.3.",
+      "operation": "Stoneforge tutors Equipment and later puts it in play; Aid/Puresteel/Stonehewer suit up own threats. Sword untaps only I2 lands. Shorikai draws/discards/makes Pilots for I2.",
+      "caution": "No normal equip/Aid onto I1 Gitrog or Marit Lage. Shared blocking reduces simple combat clocks. Shorikai is an artifact until crewed."
+    },
+    {
+      "id": "I-reversal",
+      "team": "I",
+      "cards": [
+        "Isochron Scepter",
+        "Dramatic Reversal",
+        "Basalt Monolith",
+        "Shorikai, Genesis Engine",
+        "Walking Ballista"
+      ],
+      "rules": [
+        "109.5",
+        "601.2",
+        "810.5"
+      ],
+      "classification": "same_controller",
+      "state": "I2 owns Scepter imprinted with Reversal and nonland mana sources producing>2 per round.",
+      "operation": "Own Basalt3 plus Signet/Fellwar can accumulate mana. Reversal untaps only I2 nonlands; Ballista converts own mana, Shorikai can draw bounded cards.",
+      "caution": "I1 resources cannot pay I2 costs. Do not draw past own library. Artifact hate stops the engine."
+    },
+    {
+      "id": "I-rings",
+      "team": "I",
+      "cards": [
+        "Basalt Monolith",
+        "Rings of Brighthearth",
+        "Walking Ballista"
+      ],
+      "rules": [
+        "602.2",
+        "603.3a",
+        "117.3"
+      ],
+      "classification": "same_controller",
+      "state": "I2 owns both and can seed first untap3 plus copy2.",
+      "operation": "Copy Basalt untap; after copy resolves tap for3 before original resolves; after original resolves tap for3 again. Six produced per5 spent; Ballista X60 costs120 and shoots60.",
+      "caution": "Rings does not copy an ally's ability. Demonstrate seed mana; Basalt has no ordinary untap."
+    },
+    {
+      "id": "I-hate",
+      "team": "I",
+      "cards": [
+        "Rest in Peace",
+        "Grafdigger's Cage",
+        "Cursed Totem",
+        "Humility",
+        "Soul-Guide Lantern"
+      ],
+      "rules": [
+        "109.5",
+        "810.5"
+      ],
+      "classification": "friendly_hazard",
+      "state": "Compare Shorikai source stax with I1 graveyard/dork plan.",
+      "operation": "RIP, Cage, Totem and Humility were omitted because they attack I1 engines. Lantern can instead target an enemy grave card or exile only opponents' graveyards.",
+      "caution": "Lantern ETB can target any graveyard: choose carefully. No broad assertion that all graveyard hate is teammate-safe."
+    },
+    {
+      "id": "all-protection",
+      "team": "GHI",
+      "cards": [
+        "Orim's Chant",
+        "Abeyance",
+        "Tidal Barracuda"
+      ],
+      "rules": [
+        "109.5",
+        "805.5",
+        "805.5a"
+      ],
+      "classification": "cross_controller_support",
+      "state": "Friendly head targets one enemy with Chant/Abeyance while teammate acts.",
+      "operation": "Chant stops that enemy's spells; Abeyance stops its instants/sorceries and nonmana activated abilities. Barracuda stops enemies casting on its controller's friendly shared turn.",
+      "caution": "Other enemy and already-stacked objects remain. Barracuda costs4 and is not made free by Aluren."
+    },
+    {
+      "id": "all-turns",
+      "team": "GHI",
+      "cards": [
+        "Sorin Markov",
+        "Necropotence",
+        "Teferi's Protection"
+      ],
+      "rules": [
+        "805.8",
+        "810.5",
+        "810.8a"
+      ],
+      "classification": "rules_scope",
+      "state": "Use shared-team turns and separate resources.",
+      "operation": "Sorin ultimate controlling a player controls that player's team for that turn. Skip-draw would skip friendly team's whole draw step. Extra turns would be extra team turns.",
+      "caution": "Necropotence is absent from all six. No blanket infinite-combo/early-win prohibition or unban activated."
+    }
+  ],
+  "sources_supplementary": [
+    {
+      "id": "S1",
+      "head": "G1",
+      "url": "https://articles.starcitygames.com/articles/legacy-week-pox/",
+      "author": "Reid Duke",
+      "date": "2012-03-08",
+      "access": "read primary author article and embedded list",
+      "use": "Pox/Smallpox/Liliana/Hymn attrition lineage; no 2HG result."
+    },
+    {
+      "id": "S2",
+      "head": "G2",
+      "url": "https://tappedout.net/mtg-decks/oloro-triggered-primer-2023/",
+      "author": "Mitrian",
+      "date": "2023 in title; publication date not established",
+      "access": "read public list/primer",
+      "use": "Lifegain enchantments and alternate-win control; no tournament result."
+    },
+    {
+      "id": "S3",
+      "head": "H2",
+      "url": "https://www.theepicstorm.com/through-the-looking-glass-aluren-with-stefan-stasiak/",
+      "author": "Greg Sor interviewing Stefan Stasiak",
+      "date": "2021-10-15",
+      "access": "read primary interview",
+      "use": "Value-creature/combo structure; illegal Bant black combo pieces not copied. Original analysis only; primer prose not redistributed."
+    },
+    {
+      "id": "S4",
+      "head": "I2",
+      "url": "https://unityleague.gg/decklists/13586a31-adbd-431e-8e57-fc16d324c0e1/",
+      "author": "Reto S.",
+      "date": "last edited2025-03-19",
+      "access": "read primary submission; standings unverified; page displays76 totalcards",
+      "use": "Stoneforge/Batterskull/Kaldra/blue-control analogy, not accepted legal Commander or60-card benchmark."
+    },
+    {
+      "id": "S5",
+      "head": "I1",
+      "url": "https://commanderspellbook.com/search/?q=Skirge+Familiar",
+      "author": "Commander Spellbook contributors",
+      "date": "retrieved2026-10-21",
+      "access": "read public combo index",
+      "use": "Gitrog/Dakmor/Skirge self-mill/resource engine, not automatic deterministic win."
+    },
+    {
+      "id": "S6",
+      "head": "all",
+      "url": "https://magic.wizards.com/en/rules",
+      "author": "Wizards of the Coast",
+      "date": "CR2026-09-25; retrieved2026-10-21",
+      "access": "read official landing/TXT",
+      "use": "Controller/shared-life/turn rules, current Vehicle commander eligibility."
+    },
+    {
+      "id": "S7",
+      "head": "all",
+      "url": "https://magic.wizards.com/en/banned-restricted-list",
+      "author": "Wizards of the Coast",
+      "date": "retrieved2026-10-21",
+      "access": "read current Commander and2HG lists",
+      "use": "Official bans remain; conditional companion permissions not used."
+    },
+    {
+      "id": "S8",
+      "head": "H1",
+      "url": "https://magic.wizards.com/en/news/feature/adventures-forgotten-realms-release-notes-2021-07-09",
+      "author": "Wizards of the Coast",
+      "date": "2021-07-09; retrieved2026-10-21",
+      "access": "read primary release notes",
+      "use": "Venture/dungeon card mechanics; current renumbered action isCR701.49, not older numbering."
+    }
+  ]
+}

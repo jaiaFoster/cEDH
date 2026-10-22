@@ -1,0 +1,97 @@
+{
+  "G1": {
+    "draw_by_turn": [],
+    "hand": {
+      "Bloodletter of Aclazotz": 1,
+      "Dark Ritual": 1,
+      "Duress": 1,
+      "Pox": 1,
+      "Swamp": 3
+    },
+    "library_required": [],
+    "outcome": "conditional team kill",
+    "sequence": "T1 Swamp, Duress targeting one enemy (the other hand remains unknown). T2 Swamp, cast Ritual from one Swamp and tap other: BBBB casts Bloodletter1BBB. T3 third Swamp paysBBB for Pox. At enemy60, each enemy loses40 after Bloodletter and shared pool falls80; friendly60 loses40 and survives20. No extra cards or teammate mana required. Removing Bloodletter/countering Pox or appropriate replacements stops this. Oloro's gains alter friendly arithmetic favorably, not enemy calculations.",
+    "turn": 3
+  },
+  "G2": {
+    "draw_by_turn": [],
+    "hand": {
+      "Arcane Signet": 1,
+      "Dovin's Veto": 1,
+      "Enlightened Tutor": 1,
+      "Island": 1,
+      "Plains": 1,
+      "Swamp": 1,
+      "Test of Endurance": 1
+    },
+    "library_required": [],
+    "outcome": "conditional upkeep win or protection choice",
+    "sequence": "T1 Island. T2 Plains, Signet2. T3 Swamp: three lands plus Signet produce4, including WW from Plains/Signet, to cast Test. If shared life is>=50 at T4 upkeep and resolution, team wins. Alternatively leave WU for Veto on G1's T3 Pox line; cannot claim to cast Test and retain Veto with the same four mana. Do not combine this demonstration with a Pox below50.",
+    "turn": 4
+  },
+  "H1": {
+    "draw_by_turn": [],
+    "hand": {
+      "Acererak the Archlich": 1,
+      "Dovin's Veto": 1,
+      "Force of Will": 1,
+      "Island": 1,
+      "Plains": 1,
+      "Ponder": 1,
+      "Swamp": 1
+    },
+    "library_required": [],
+    "outcome": "conditional cross-controller dungeon win",
+    "sequence": "Develop own Island/Plains/Swamp. H2 independently resolves Aluren on T3. H1 repeatedly casts its own Acererak free, choosing Lost Mine of Phandelver and Dark Pool;30 visits drain two enemy heads60. H1 retains own WU for Veto and Force pitching Ponder; do not spend Ponder earlier and still count it as pitch. Each cast and dungeon room allows interaction; counters/removal/ETB suppression and Aluren's enemy permissions matter. Fully resolving rooms uses119 casts and29 mandatory Temple draws before the lethal thirtieth Dark Pool; require>=29 cards in H1 library. No draw-bypass shortcut is assumed.",
+    "turn": 3
+  },
+  "H2": {
+    "draw_by_turn": [],
+    "hand": {
+      "Aluren": 1,
+      "Birds of Paradise": 1,
+      "Forest": 2,
+      "Island": 1,
+      "Llanowar Elves": 1,
+      "Shrieking Drake": 1
+    },
+    "library_required": [
+      "Laboratory Maniac"
+    ],
+    "outcome": "Aluren setup, or own Chulane engine T4",
+    "sequence": "T1 Forest Elves. T2 Island, Forest paysG for Birds. T3 Forest gives three lands and two nonsick dorks: cast Aluren2GG for H1's independent Acererak line. Alternative: cast Chulane2GWU on T3 with Birds producingW and IslandU; T4 cast Aluren, then Drake loops draw the deck. Deploy Lab Maniac before an empty-library draw, remembering Chulane's cast draw resolves before Lab Maniac enters. These are alternative uses of mana, not both T3 Chulane and Aluren.",
+    "turn": 3
+  },
+  "I1": {
+    "draw_by_turn": [],
+    "hand": {
+      "Dakmor Salvage": 1,
+      "Forest": 2,
+      "Llanowar Elves": 1,
+      "Putrid Imp": 1,
+      "Swamp": 1,
+      "Wild Growth": 1
+    },
+    "library_required": [],
+    "outcome": "engine deployment, not claimed win",
+    "sequence": "T1 Forest Elves. T2 Swamp; Forest casts Growth onto that Forest, Swamp casts Imp. T3 second Forest: enchanted Forest2, other Forest1, SwampB, ElvesG pay3BG for Gitrog. Discard Dakmor to Imp; replace its Gitrog draw with dredge2 only if at least2 library cards remain. An illustrated top pair containing a land gives one additional draw trigger. Further progress depends on actual library order and triggers; this sequence does not assert a deterministic T3 win.",
+    "turn": 3
+  },
+  "I2": {
+    "draw_by_turn": [
+      "Island"
+    ],
+    "hand": {
+      "Arcane Signet": 1,
+      "Basalt Monolith": 1,
+      "Island": 2,
+      "Plains": 1,
+      "Rings of Brighthearth": 1,
+      "Walking Ballista": 1
+    },
+    "library_required": [],
+    "outcome": "conditional own artifact-mana win",
+    "sequence": "T1 Island. T2 Island Signet. T3 Plains Basalt using3 of4 available; leave Basalt untapped. T4 fourth land drawn by this turn gives lands4+Signet1=5: cast Rings3, retain2, tap Basalt3=5. Pay untap3+copy2, tap Basalt between copy/original resolutions, then again after original:6 per5. Generate120C, cast Ballista X60, resolve then shoot60. Fourth land is an explicit eighth-card condition, not part of the opening seven. Removal/counters/Null Rod stop it.",
+    "turn": 4
+  }
+}
