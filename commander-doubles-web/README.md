@@ -53,6 +53,8 @@ Content supports editor previews, drafts, publishing, and loading an earlier ver
 
 ## Points catalog search
 
+The search bar and results remain visible. Search help, filters, sorting, page-size selection, reset, and metadata notes are grouped in the **Advanced** disclosure, collapsed by default. Closing it preserves active filters and results; resetting filters restores the collapsed view.
+
 `/points` supports a **bounded Scryfall-style subset**, backed by the local pinned catalog. It is not a proxy to Scryfall. Ordinary searches need no external API access. Search metadata never supplies or estimates league prices: `/api/points` reads the selected **published PostgreSQL price version** on every request. The browser pins that version while paginating to avoid mixed schedules; reload the page to pick up a later publication. Administrator card picking still uses the same endpoint, with its original numeric `main` and `command` fields.
 
 | Search | Meaning |

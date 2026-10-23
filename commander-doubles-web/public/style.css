@@ -701,6 +701,21 @@ dialog::backdrop {
   padding: 15px;
   font-size: 1rem;
 }
+.catalog-advanced {
+  margin: 16px 0 20px;
+}
+.catalog-advanced > summary {
+  cursor: pointer;
+  padding: 8px 0;
+  color: var(--accent);
+}
+.catalog-advanced > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.catalog-advanced[open] > summary {
+  margin-bottom: 12px;
+}
 .catalog-help {
   margin-bottom: 24px;
 }
