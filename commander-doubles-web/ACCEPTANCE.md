@@ -42,3 +42,11 @@ Production and staging are separate services and schemas in the authorized Railw
 Moxfield direct access from Railway is not reliable and is currently blocked for the tested URLs. Paste/upload fallback is implemented, tested, and required for these decks; direct access should not be represented as verified. Approved read access from Moxfield is the external improvement required for reliable direct imports.
 
 Construction checks use the pinned October 20, 2026 catalog. New releases and later legality changes require a deliberate catalog update. Supported checks do not certify all gameplay interactions. Historical canonical pricing/rules files were not changed. Scheduled paid Railway volume backups were not claimed or enabled; the consistent application export and isolated restore were actually verified.
+
+## Final production verification
+
+All seven public/admin page routes loaded in actual Chrome, with no JavaScript errors or document overflow. Administrator login/logout and Secure/HttpOnly session behavior passed; anonymous admin API access was rejected. Production has the mock provider disabled and no test teams/events. Production GitHub source is `commander-doubles-league`, root `/commander-doubles-web`, with CI gating and path-based deploy filtering. Runtime configuration is stored directly in Railway, avoiding reliance on deprecated Config as Code.
+
+## Credential remediation required
+
+An initial browser evidence file included an absolute workspace path whose directory identifier coincided with the supplied Railway project token. That report was briefly pushed. The branch history was rewritten to remove the path, the superseded workflow run was deleted, and the current committed application/evidence was scanned against all supplied and generated credentials. No secret values remain in the current branch. Treat the old Railway project token as exposed and revoke/replace it in Railway project Settings → Tokens. The supplied environment-scoped token was denied permission to rotate itself. Browser credential changes require the account holder to complete that action. The application does not use this deployment token at runtime, so rotation does not interrupt the website.

@@ -1,0 +1,48 @@
+{
+  "base": "https://cedh-production.up.railway.app",
+  "passed": true,
+  "checks": [
+    {
+      "route": "/",
+      "passed": true
+    },
+    {
+      "route": "/rules",
+      "passed": true
+    },
+    {
+      "route": "/points",
+      "passed": true
+    },
+    {
+      "route": "/schedule",
+      "passed": true
+    },
+    {
+      "route": "/teams",
+      "passed": true
+    },
+    {
+      "route": "/history",
+      "passed": true
+    },
+    {
+      "route": "/admin",
+      "passed": true
+    },
+    {
+      "adminLogin": true,
+      "secureCookie": true
+    },
+    {
+      "mockDisabled": true
+    },
+    {
+      "cleanProduction": true,
+      "unauthorizedAdminRejected": true
+    },
+    {
+      "consoleErrors": 0
+    }
+  ]
+}
