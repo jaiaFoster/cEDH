@@ -19,8 +19,9 @@ import {
   getMoxfield,
   normalizeName,
 } from "./scoring.mjs";
-import { catalog, resolveCard, evaluate, teamEvaluation } from "./legality.mjs";
+import { resolveCard, evaluate, teamEvaluation } from "./legality.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
+import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const fail = (message, status = 400) =>
   Object.assign(new Error(message), { status });
@@ -297,6 +298,7 @@ export function createApp() {
     });
   });
   app.get("/api/points", async (req, res) => {
+    const filters = parseFilters(req.query);
     const version = req.query.version
       ? await one(
           pool,
@@ -304,32 +306,9 @@ export function createApp() {
           [req.query.version],
         )
       : await currentPrices();
-    const needle = normalizeName(req.query.q || "");
-    const offset = Math.max(0, Math.min(50000, Number(req.query.offset) || 0));
-    const filtered = catalog
-      .filter(
-        (c) =>
-          c.oracle_id &&
-          (!needle || normalizeName(c.name).includes(needle)) &&
-          (!req.query.pointed ||
-            (version.prices[c.name]?.main || 0) +
-              (version.prices[c.name]?.command || 0) >
-              0),
-      )
-      .sort((a, b) => a.name.localeCompare(b.name));
     res.json({
       version: { id: version.id, name: version.name },
-      total: filtered.length,
-      cards: filtered
-        .slice(offset, offset + 100)
-        .map((c) => ({
-          name: c.name,
-          oracle_id: c.oracle_id,
-          legal: c.legalities?.commander === "legal",
-          main: version.prices[c.name]?.main || 0,
-          command: version.prices[c.name]?.command ?? 0,
-        })),
-      offset,
+      ...searchCards(version.prices, filters),
     });
   });
   app.post("/api/score", async (req, res) => {
@@ -1079,6 +1058,8 @@ export function createApp() {
       res.sendFile(path.join(ROOT, "public/index.html")),
     );
   app.use(async (err, req, res, next) => {
+    if (err instanceof SearchError)
+      return res.status(400).json({ error: err.message, code: err.code });
     const operation = req.path.match(
       /^\/api\/admin\/events\/([0-9a-f-]{36})\/(tournament|participants|start|finalize|sync)$/,
     );
