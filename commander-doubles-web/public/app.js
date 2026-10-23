@@ -12,8 +12,6 @@ let state,
   session = { admin: false },
   adminTab = "overview",
   pointPage = 0,
-  pointQuery = "",
-  pointed = true,
   activeEvent = null;
 const teamId = () => localStorage.getItem("cd-team");
 const setTeam = (id) => {
@@ -135,39 +133,336 @@ async function homeTeam(event) {
   $("#home-team-info").innerHTML =
     `<h3 class="spaced">${esc(team.name)}</h3><p>${team.players.filter(Boolean).map(esc).join(" + ") || "Player names optional"}</p>${extra}`;
 }
+const defaultPointFilters = () => ({
+  q: "",
+  points: "pointed",
+  zone: "either",
+  identity: "",
+  identityMode: "within",
+  colorCount: "any",
+  min: "",
+  max: "",
+  type: "",
+  mvMin: "",
+  mvMax: "",
+  legality: "any",
+  eligible: "any",
+  sort: "main_desc",
+  limit: "50",
+});
+let pointFilters = defaultPointFilters(),
+  pointRequest,
+  pointRequestId = 0,
+  pointTimer;
+const pointSelect = (id, label, options) =>
+  '<div class="field"><label for="point-' +
+  id +
+  '">' +
+  label +
+  '</label><select id="point-' +
+  id +
+  '" data-point-filter="' +
+  id +
+  '">' +
+  options
+    .map(
+      ([v, title]) =>
+        '<option value="' +
+        v +
+        '"' +
+        (pointFilters[id] === v ? " selected" : "") +
+        ">" +
+        title +
+        "</option>",
+    )
+    .join("") +
+  "</select></div>";
+const pointRange = (id, label, step = "1") =>
+  '<div class="field"><label for="point-' +
+  id +
+  '">' +
+  label +
+  '</label><input type="number" id="point-' +
+  id +
+  '" data-point-filter="' +
+  id +
+  '" min="0" step="' +
+  step +
+  '" value="' +
+  esc(pointFilters[id]) +
+  '" placeholder="Any"></div>';
 async function points() {
+  clearTimeout(pointTimer);
+  pointRequest?.abort();
   main.innerHTML =
     head(
       "The deckbuilding budget",
       "Every card has its place.",
-      "Search all known cards, including zero-point cards. Prices apply independently in the main deck and command zone.",
+      "Find cards by identity, color, type, rules text, mana value, and league points. Main-deck and command-zone prices stay separate.",
     ) +
-    `<div class="panel"><div class="fields"><div class="field"><label for="card-search">Find a card</label><input id="card-search" type="search" placeholder="Sol Ring, Gitrog, Aluren…" value="${esc(pointQuery)}"></div><div class="field"><label for="pointed">Catalog view</label><select id="pointed"><option value="yes" ${pointed ? "selected" : ""}>Pointed cards</option><option value="no" ${!pointed ? "selected" : ""}>Complete catalog, including zero points</option></select></div></div><div id="point-table"></div></div><p class="help spaced">Budget compliance does not establish deck legality. Catalog: October 20, 2026. Current schedule: ${esc(state.price.name)}.</p>`;
-  let timer;
-  $("#card-search").oninput = (e) => {
-    pointQuery = e.target.value;
+    '<section class="panel catalog-panel"><form id="points-search" role="search" aria-label="Card catalog">' +
+    '<label for="card-search">Find a card</label><div class="catalog-search-bar"><input id="card-search" type="search" placeholder=\'id:wu t:artifact mv&lt;=3 o:"draw"\' aria-describedby="point-query-help" value="' +
+    esc(pointFilters.q) +
+    '"><button class="primary" type="submit">Search</button></div>' +
+    '<p class="help" id="point-query-help">Use names or combine <code>id:</code>, <code>c:</code>, <code>t:</code>, <code>o:</code>, and <code>mv</code> comparisons. Quote phrases, such as <code>"Sol Ring"</code>. Space-separated terms use AND.</p>' +
+    '<details class="catalog-help"><summary>Search examples & supported syntax</summary><p class="help"><code>id:wu t:artifact mv&lt;=3</code> finds artifacts usable in white-blue identity. <code>c:u</code> requires blue color; <code>id=wu</code> requires exactly white-blue identity. <code>o:"draw a card" -t:creature</code> excludes creatures. <code>!"Sol Ring"</code> matches an exact name. Colorless uses <code>c:c</code> or <code>id:c</code>; multicolor uses <code>c:m</code> or <code>id:m</code>. Comparisons: <code>= != &lt; &lt;= &gt; &gt;=</code> for mana value and color sets. Other Scryfall operators, OR, groups, and regex are unsupported and show an error. Oracle text uses literal text from the pinned catalog, including reminder text.</p></details>' +
+    '<fieldset class="identity-filter"><legend>Color identity</legend><div class="identity-options">' +
+    [
+      ["w", "White"],
+      ["u", "Blue"],
+      ["b", "Black"],
+      ["r", "Red"],
+      ["g", "Green"],
+    ]
+      .map(
+        ([c, name]) =>
+          '<label><input type="checkbox" name="identity-color" value="' +
+          c +
+          '"' +
+          (pointFilters.identity.includes(c) ? " checked" : "") +
+          '><span class="color-dot color-' +
+          c +
+          '" aria-hidden="true"></span>' +
+          name +
+          "</label>",
+      )
+      .join("") +
+    "</div>" +
+    '<div class="catalog-filter-grid">' +
+    pointSelect("identityMode", "Identity matching", [
+      ["within", "Within colors"],
+      ["exact", "Exact colors"],
+    ]) +
+    pointSelect("colorCount", "Identity category", [
+      ["any", "Any identity"],
+      ["colorless", "Colorless"],
+      ["multicolor", "Multicolor"],
+    ]) +
+    '</div><p class="help">No colors selected means any identity. Contained identity also permits colorless cards. Query conditions and filters are combined.</p></fieldset>' +
+    '<div class="catalog-filter-grid">' +
+    pointSelect("points", "Point values", [
+      ["all", "All cards"],
+      ["pointed", "Pointed only"],
+      ["zero", "Zero only"],
+    ]) +
+    pointSelect("zone", "Point location", [
+      ["either", "Either"],
+      ["main", "Main deck"],
+      ["command", "Command zone"],
+    ]) +
+    pointRange("min", "Minimum points") +
+    pointRange("max", "Maximum points") +
+    '</div><p class="help">Point ranges use the selected location. Either uses the higher price.</p>' +
+    '<details id="catalog-more-filters"><summary>Type, mana value & legality</summary><div class="catalog-filter-grid spaced">' +
+    pointSelect("type", "Card type", [
+      ["", "Any type"],
+      ...[
+        "Artifact",
+        "Battle",
+        "Creature",
+        "Enchantment",
+        "Instant",
+        "Land",
+        "Planeswalker",
+        "Sorcery",
+      ].map((x) => [x.toLowerCase(), x]),
+    ]) +
+    pointRange("mvMin", "Minimum mana value", "0.5") +
+    pointRange("mvMax", "Maximum mana value", "0.5") +
+    pointSelect("legality", "Commander legality", [
+      ["any", "Any status"],
+      ["legal", "Legal"],
+      ["banned", "Banned"],
+      ["not_legal", "Not legal"],
+    ]) +
+    pointSelect("eligible", "Command-zone eligibility", [
+      ["any", "Any card"],
+      ["1", "Eligible only"],
+    ]) +
+    "</div></details>" +
+    '<div class="catalog-sort-row">' +
+    pointSelect("sort", "Sort results", [
+      ["main_desc", "Main-deck points: high to low"],
+      ["main_asc", "Main-deck points: low to high"],
+      ["command_desc", "Command-zone points: high to low"],
+      ["command_asc", "Command-zone points: low to high"],
+      ["name_asc", "Card name: A to Z"],
+      ["name_desc", "Card name: Z to A"],
+      ["mv_asc", "Mana value: low to high"],
+      ["mv_desc", "Mana value: high to low"],
+    ]) +
+    pointSelect("limit", "Cards per page", [
+      ["50", "50"],
+      ["100", "100"],
+    ]) +
+    '<button id="point-reset" type="button">Reset filters</button></div></form>' +
+    '<div id="point-status" class="meta" role="status" aria-live="polite"></div><div id="point-table" aria-busy="true"></div></section><p class="help spaced">Prices: ' +
+    esc(state.price.name) +
+    ". Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.</p>";
+  const form = $("#points-search");
+  function changed(debounce) {
+    pointFilters.q = $("#card-search").value;
+    pointFilters.identity = [
+      ...form.querySelectorAll('[name="identity-color"]:checked'),
+    ]
+      .map((c) => c.value)
+      .join("");
+    for (const control of form.querySelectorAll("[data-point-filter]"))
+      pointFilters[control.dataset.pointFilter] = control.value;
     pointPage = 0;
-    clearTimeout(timer);
-    timer = setTimeout(loadPoints, 200);
+    clearTimeout(pointTimer);
+    pointRequest?.abort();
+    pointRequestId++;
+    $("#point-status").textContent = "Searching…";
+    $("#point-table").innerHTML = "";
+    $("#point-table").setAttribute("aria-busy", "true");
+    if (debounce) pointTimer = setTimeout(loadPoints, 200);
+    else loadPoints();
+  }
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    changed(false);
   };
-  $("#pointed").onchange = (e) => {
-    pointed = e.target.value === "yes";
+  form.oninput = (e) => {
+    if (e.target.matches('input:not([type="checkbox"])')) changed(true);
+  };
+  form.onchange = (e) => {
+    if (e.target.matches('select, input[type="checkbox"]')) changed(false);
+  };
+  $("#point-reset").onclick = async () => {
+    pointFilters = defaultPointFilters();
     pointPage = 0;
-    loadPoints();
+    await points();
+    $("#card-search")?.focus();
   };
   await loadPoints();
 }
 async function loadPoints() {
-  const data = await api(
-    "/api/points?q=" +
-      encodeURIComponent(pointQuery) +
-      "&offset=" +
-      pointPage * 100 +
-      (pointed ? "&pointed=1" : ""),
-  );
-  if (!$("#point-table")) return;
-  $("#point-table").innerHTML =
-    `<div class="section-head"><span class="meta">${data.total.toLocaleString()} cards · ${esc(data.version.name)}</span></div><div class="table-wrap"><table><thead><tr><th>Card</th><th class="num">In deck</th><th class="num">Command zone</th></tr></thead><tbody>${data.cards.map((c) => `<tr><td>${esc(c.name)}${c.legal ? "" : ' <span class="tag warn">Not legal</span>'}</td><td class="num ${c.main ? "count" : ""}">${c.main}</td><td class="num ${c.command ? "count" : ""}">${c.command}</td></tr>`).join("")}</tbody></table></div>${!data.cards.length ? empty("No matching cards") : ""}<div class="actions">${pointPage ? action("← Previous", "points-prev") : ""}<span class="meta">Page ${pointPage + 1}</span>${(pointPage + 1) * 100 < data.total ? action("Next →", "points-next") : ""}</div>`;
+  const requestId = ++pointRequestId;
+  pointRequest?.abort();
+  pointRequest = new AbortController();
+  const params = new URLSearchParams({
+    ...pointFilters,
+    offset: String(pointPage * Number(pointFilters.limit)),
+    version: state.price.id,
+  });
+  const target = $("#point-table");
+  if (!target) return;
+  target.setAttribute("aria-busy", "true");
+  target.innerHTML = "";
+  $("#point-status").textContent = "Searching…";
+  try {
+    const response = await fetch("/api/points?" + params, {
+      signal: pointRequest.signal,
+    });
+    const data = response.headers
+      .get("content-type")
+      ?.includes("application/json")
+      ? await response.json()
+      : {
+          error:
+            response.status === 429
+              ? "Too many searches. Please wait a minute and try again."
+              : "The card catalog returned HTTP " +
+                response.status +
+                ". Please try again.",
+        };
+    if (requestId !== pointRequestId || !target.isConnected) return;
+    if (!response.ok) {
+      $("#point-status").textContent = "Search could not be completed.";
+      target.innerHTML =
+        '<div class="catalog-error" role="alert"><strong>' +
+        (data.code === "unsupported_query"
+          ? "Unsupported search syntax"
+          : data.code?.includes("query") || data.code === "invalid_filter"
+            ? "Check your search or filters"
+            : "Unable to load card prices") +
+        "</strong><p>" +
+        esc(data.error || "Please try again.") +
+        "</p></div>";
+      return;
+    }
+    if (!Number.isInteger(data.total) || !Array.isArray(data.cards))
+      throw Error(
+        "The card catalog returned an unreadable response. Please try again.",
+      );
+    const first = data.total ? data.offset + 1 : 0,
+      last = Math.min(data.total, data.offset + data.cards.length);
+    $("#point-status").textContent =
+      "Showing " +
+      first.toLocaleString() +
+      "–" +
+      last.toLocaleString() +
+      " of " +
+      data.total.toLocaleString() +
+      " cards · " +
+      data.version.name;
+    const identity = (c) =>
+      c.identity.length ? c.identity.join(" / ") : "Colorless";
+    const command = (c) => (c.commanderEligible || c.command ? c.command : "—");
+    target.innerHTML =
+      (data.cards.length
+        ? '<div class="table-wrap"><table class="catalog-table"><caption class="sr-only">Matching league card prices</caption><thead><tr><th scope="col">Card</th><th class="num" scope="col">Main deck</th><th class="num" scope="col">Command zone</th></tr></thead><tbody>' +
+          data.cards
+            .map(
+              (c) =>
+                '<tr data-oracle-id="' +
+                c.oracle_id +
+                '"><td class="catalog-card"><a href="' +
+                esc(c.url) +
+                '" target="_blank" rel="noopener noreferrer">' +
+                esc(c.name) +
+                ' <span aria-hidden="true">↗</span></a><div class="help">' +
+                esc(c.typeLine) +
+                " · MV " +
+                c.mv +
+                " · Identity " +
+                identity(c) +
+                "</div>" +
+                (c.legal
+                  ? ""
+                  : '<span class="tag warn">Not Commander legal</span>') +
+                '</td><td class="num ' +
+                (c.main ? "count" : "") +
+                '">' +
+                c.main +
+                '</td><td class="num ' +
+                (c.command ? "count" : "") +
+                '">' +
+                command(c) +
+                "</td></tr>",
+            )
+            .join("") +
+          "</tbody></table></div>"
+        : empty(
+            "No matching cards",
+            "Try fewer conditions, change the point view, or reset filters.",
+          )) +
+      '<div class="actions catalog-pagination"><button type="button" data-action="points-prev"' +
+      (pointPage === 0 ? " disabled" : "") +
+      '>← Previous</button><span class="meta">Page ' +
+      (pointPage + 1) +
+      " of " +
+      Math.max(1, Math.ceil(data.total / data.limit)) +
+      '</span><button type="button" data-action="points-next"' +
+      (data.offset + data.limit >= data.total ? " disabled" : "") +
+      ">Next →</button></div>";
+  } catch (error) {
+    if (
+      error.name === "AbortError" ||
+      requestId !== pointRequestId ||
+      !target.isConnected
+    )
+      return;
+    $("#point-status").textContent = "Unable to load card prices.";
+    target.innerHTML =
+      '<div class="catalog-error" role="alert">' +
+      esc(error.message) +
+      " Submit the search again to retry.</div>";
+  } finally {
+    if (requestId === pointRequestId && target.isConnected)
+      target.setAttribute("aria-busy", "false");
+  }
 }
 async function teams() {
   main.innerHTML =

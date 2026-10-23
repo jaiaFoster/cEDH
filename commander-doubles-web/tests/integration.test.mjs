@@ -88,6 +88,122 @@ await test("PostgreSQL application acceptance: tournament one through tournament
       },
     );
     await t.test(
+      "public catalog searches combine operators and filters against published prices",
+      async () => {
+        const url = (p) => "/api/points?" + new URLSearchParams(p);
+        const sol = await get(url({ q: '!"Sol Ring"' }));
+        assert.equal(sol.total, 1);
+        assert.equal(sol.cards[0].main, 15);
+        assert.equal(sol.cards[0].command, 0);
+        assert.equal(sol.cards[0].commanderEligible, false);
+        assert.equal(
+          (
+            await get(
+              url({
+                q: '!"Acererak the Archlich"',
+                points: "zero",
+                zone: "main",
+              }),
+            )
+          ).total,
+          1,
+        );
+        const multi = await get(
+          url({
+            q: 'id:wu t:artifact o:"draw a card" mv<=3 "Mind Stone"',
+            points: "all",
+            type: "artifact",
+            mvMax: "3",
+            legality: "legal",
+          }),
+        );
+        assert.ok(multi.cards.some((c) => c.name === "Mind Stone"));
+        assert.ok(
+          multi.cards.every(
+            (c) =>
+              c.identity.every((x) => "WU".includes(x)) &&
+              c.mv <= 3 &&
+              c.typeLine.includes("Artifact") &&
+              c.legal,
+          ),
+        );
+        assert.equal(
+          (
+            await get(
+              url({
+                q: '!"Dryad Arbor"',
+                identity: "g",
+                identityMode: "exact",
+                colorCount: "any",
+              }),
+            )
+          ).cards[0].colors[0],
+          "G",
+        );
+        assert.equal(
+          (
+            await get(
+              url({ q: '!"Sol Ring"', zone: "command", points: "zero" }),
+            )
+          ).total,
+          0,
+        );
+        const unknown = await get(url({ q: '!"unknown audit card 123456"' }));
+        assert.equal(unknown.total, 0);
+        assert.deepEqual(unknown.cards, []);
+        const invalid = await call(
+          url({ q: "set:lea" }),
+          "GET",
+          undefined,
+          false,
+          400,
+        );
+        assert.equal(invalid.data.code, "unsupported_query");
+        await call(url({ q: 'o:"unclosed' }), "GET", undefined, false, 400);
+        await call(url({ sort: "unsupported" }), "GET", undefined, false, 400);
+        await call(url({ min: "9", max: "2" }), "GET", undefined, false, 400);
+        await call("/api/points?q=one&q=two", "GET", undefined, false, 400);
+        await call(url({ offset: "-1" }), "GET", undefined, false, 400);
+      },
+    );
+    await t.test(
+      "all catalog sorts apply before pagination and public search remains compatible with admin picking",
+      async () => {
+        const sorts = [
+          "main_desc",
+          "main_asc",
+          "command_desc",
+          "command_asc",
+          "name_asc",
+          "name_desc",
+          "mv_asc",
+          "mv_desc",
+        ];
+        for (const sort of sorts) {
+          const url = (limit, offset = 0) =>
+            "/api/points?" +
+            new URLSearchParams({
+              sort,
+              pointed: "1",
+              limit: String(limit),
+              offset: String(offset),
+            });
+          const all = await get(url(100)),
+            a = await get(url(50)),
+            b = await get(url(50, 50));
+          assert.equal(all.total, 549);
+          assert.equal(a.version.id, oldPrice);
+          assert.deepEqual([...a.cards, ...b.cards], all.cards, sort);
+          assert.equal(new Set(all.cards.map((c) => c.oracle_id)).size, 100);
+        }
+        // Existing admin searches omit the pointed flag and expect numeric command prices.
+        const picked = await get("/api/points?q=Acererak");
+        assert.equal(picked.cards[0].name, "Acererak the Archlich");
+        assert.equal(picked.cards[0].main, 0);
+        assert.equal(picked.cards[0].command, 0);
+      },
+    );
+    await t.test(
       "admin creates event with Phoenix schedule and opens registration",
       async () => {
         event = await post(
@@ -254,6 +370,13 @@ await test("PostgreSQL application acceptance: tournament one through tournament
         );
         assert.equal((await get("/api/home")).price.id, oldPrice);
         await call(
+          "/api/points?version=" + draft.id,
+          "GET",
+          undefined,
+          false,
+          404,
+        );
+        await call(
           "/api/admin/prices/" + draft.id,
           "PATCH",
           { changes: [{ name: "Acererak the Archlich", main: 1, command: 0 }] },
@@ -268,6 +391,21 @@ await test("PostgreSQL application acceptance: tournament one through tournament
           404,
         );
         assert.notEqual((await get("/api/home")).price.id, oldPrice);
+        const query = encodeURIComponent('!"Sol Ring"');
+        assert.equal((await get("/api/points?q=" + query)).cards[0].main, 16);
+        assert.equal(
+          (await get("/api/points?q=" + query + "&version=" + oldPrice))
+            .cards[0].main,
+          15,
+        );
+        assert.equal(
+          (
+            await get(
+              "/api/points?q=" + encodeURIComponent('!"Acererak the Archlich"'),
+            )
+          ).cards[0].main,
+          1,
+        );
         assert.equal(
           (await get("/api/events/" + event.id)).registrations[0].score.points,
           38,

@@ -47,6 +47,30 @@ Construction checks use the pinned October 20, 2026 catalog. New releases and la
 
 All seven public/admin page routes loaded in actual Chrome, with no JavaScript errors or document overflow. Administrator login/logout and Secure/HttpOnly session behavior passed; anonymous admin API access was rejected. Production has the mock provider disabled and no test teams/events. Production GitHub source is `commander-doubles-league`, root `/commander-doubles-web`, with CI gating and path-based deploy filtering. Runtime configuration is stored directly in Railway, avoiding reliance on deprecated Config as Code.
 
+## Points catalog continuation — October 23, 2026
+
+Executed locally with **Node 22.23.4, PostgreSQL 17.11, and installed Google Chrome** against an isolated disposable database. The production/staging services, credentials, real tournament records, canonical points CSV, scoring module, legality module, rules and event-snapshot logic were not changed.
+
+| Evidence class | Continuation result |
+|---|---|
+| Complete Node unit + real PostgreSQL suite | **66 passed, 0 failed**, including all prior checks, 17 search tests and two new API integration subtests |
+| Complete browser suite | **10 passed, 0 failed**: all three prior lifecycle/admin/mobile tests plus seven catalog tests |
+| Identity combinations | All 32 exact/contained sets tested; all five color controls also exercised in Chrome |
+| Sorting and pagination | All eight sorts, both directions for each point column, global ordering before slicing; browser checks span two pages |
+| Search behavior | Name/phrase/face searches, supported operators, combined filters, pinned legality, zero/CZ prices, unsupported/empty/rate-limit states and stale-response cancellation |
+| Mobile | Actual Chrome at375 and320 CSS-pixel widths; no document overflow; local screenshots reviewed |
+| Metadata | All **38,940** pinned identities enriched from the exact matching original Oracle archive; rebuild and byte comparison pass |
+| Price/history preservation | Canonical549-identity CSV still byte-identical; published edits immediately affect new searches; old price versions and event/deck snapshots retain previous scores |
+| Hosted staging / production | **No new deployment or hosted verification performed**. Staging browser access was denied in this session; local checks are not hosted evidence. |
+
+The browser suite intentionally publishes a test-only Acererak price in its disposable local schema, as the original administrator acceptance test already did. The new zero-price browser check uses a separate free commander so it does not assume the administrator test never ran. No test prices are applied to a real league database.
+
+The extended browser run exposed the existing HTTP429 rate-limit response. The catalog now renders a clear wait-and-retry message for non-JSON HTTP failures and never substitutes free cards. The original request limit is unchanged. Redundant test HTTP reads were removed so the combined suite respects that limit; the rate-limit UI state is separately exercised with a browser response fixture.
+
+Local timing sample: six in-process runs per case over the full catalog; median filtering/sorting ranged **18.58–75.97 ms** across alphabetical, main-price, zero-price/mana, compound identity/type/text/mana, and color/identity searches. These measurements exclude HTTP, PostgreSQL and rendering, and are not a claim about Railway latency.
+
+Reproduce with the existing `npm test` and `npm run test:e2e` commands using a disposable local PostgreSQL database and app. The metadata rebuild command in README uses the hash-pinned source archive and supports `--check`. Browser JSON/JUnit and desktop/mobile screenshots are under the ignored `reports/` directory and CI artifacts; traces or environment files are not committed. No new Railway authentication or actual Challonge/Moxfield calls were attempted for this continuation.
+
 ## Credential remediation required
 
 An initial browser evidence file included an absolute workspace path whose directory identifier coincided with the supplied Railway project token. That report was briefly pushed. The branch history was rewritten to remove the path, the superseded workflow run was deleted, and the current committed application/evidence was scanned against all supplied and generated credentials. No secret values remain in the current branch. Treat the old Railway project token as exposed and revoke/replace it in Railway project Settings → Tokens. The supplied environment-scoped token was denied permission to rotate itself. Browser credential changes require the account holder to complete that action. The application does not use this deployment token at runtime, so rotation does not interrupt the website.

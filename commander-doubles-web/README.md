@@ -51,6 +51,52 @@ Sessions use random 256-bit tokens; PostgreSQL stores only their SHA-256 hashes.
 
 Content supports editor previews, drafts, publishing, and loading an earlier version into the editor. Pricing supports complete-catalog search (including unpointed cards), independent main/CZ prices, editable multi-card drafts, publication, and restoration as a new draft. Published versions are immutable. Deck history supports restoration by player slot. Event history supports audited correction reasons and restoration of previous submission snapshots. Team removal archives identity rather than destroying event history.
 
+## Points catalog search
+
+`/points` supports a **bounded Scryfall-style subset**, backed by the local pinned catalog. It is not a proxy to Scryfall. Ordinary searches need no external API access. Search metadata never supplies or estimates league prices: `/api/points` reads the selected **published PostgreSQL price version** on every request. The browser pins that version while paginating to avoid mixed schedules; reload the page to pick up a later publication. Administrator card picking still uses the same endpoint, with its original numeric `main` and `command` fields.
+
+| Search | Meaning |
+|---|---|
+| `Sol Ring` | Both name fragments, combined with AND; quote `"Sol Ring"` for one contiguous phrase |
+| `!"Sol Ring"` | Exact canonical name or exact face name; returns one Oracle identity |
+| `id:wu` | Identity contained in white-blue, including colorless and mono-colored cards |
+| `id=wu` | Exactly white-blue identity |
+| `c:u` | A blue card face; actual card color, not identity |
+| `id:c`, `c:c` | Colorless identity / colorless card color respectively |
+| `id:m`, `c:m` | Multicolor identity / multicolor card color respectively |
+| `t:artifact` | Literal, case-insensitive type-line substring |
+| `o:"draw a card"` | Literal Oracle text substring in the pinned catalog, including reminder text |
+| `mv<=3`, `mv:3`, `mv:>=3` | Mana-value comparison (also accepts `cmc`) |
+| `id:wu t:artifact o:"draw a card" mv<=3` | All conditions must match |
+| `-t:creature` | Negation of one condition |
+
+Aliases: `identity`, `color`, `type`, `oracle`. Numeric and color-set comparisons accept `=`, `!=`, `<`, `<=`, `>`, `>=`. For color sets these are subset/superset comparisons, not just color-count comparisons. Color names and WUBRG letters are supported. Face-dependent colors are evaluated per face: Archangel Avacyn is searchable as white or red but does not have a white-red face; Glasspool Shore is a colorless face of its blue MDFC. Multiple conditions can match different faces, and results still contain one Oracle identity. The exact-color metadata includes Dryad Arbor's color indicator and devoid cards; color identity and mana costs are never used to guess color.
+
+OR, grouped expressions, regex, unsupported operators (including `set:`, `is:`, `legal:`), malformed quotes, and invalid filters produce **HTTP 400**, with a descriptive `error` and `code`. Valid searches with no matches return **HTTP 200** with `total: 0, cards: []`. This is intentionally not every feature of [Scryfall's syntax](https://scryfall.com/docs/syntax).
+
+The UI provides five color checkboxes, contained/exact identity, colorless/multicolor categories, point location and integer ranges, zero/pointed/all views, type, mana ranges, pinned Commander legality, commander eligibility, and all eight requested sort orders. Search and GUI conditions are ANDed. “Either location” filters the higher of the two prices. Ineligible cards display **—** in the command-zone column, rather than presenting an ineligible card as a free commander; known eligible zero-point commanders display **0**. Commander-zero/range filters exclude ineligible zero entries. A nonzero published command price remains visible even if an organizer assigned it to an ineligible card; it does not confer eligibility.
+
+Filtering and sorting happen across the entire matching set **before** slicing pages. Equal prices/mana values tie-break by canonical name and Oracle ID. Ineligible command-zone values sort last in either direction. Search requests are debounced and aborted when superseded; old responses cannot replace newer results. Loading, empty, syntax-error and network-error states are distinct. The page retains the existing pointed-only default, offers 50/100-card pages, and includes Scryfall links without loading external card images.
+
+### API parameters
+
+`GET /api/points`: `q`, `version` (published UUID), `offset` (0–1,000,000), `limit` (1–100, default 100); `sort` (`main_desc`, `main_asc`, `command_desc`, `command_asc`, `name_asc`, `name_desc`, `mv_asc`, `mv_desc`; default `name_asc`); `points` (`all`, `pointed`, `zero`); `zone` (`either`, `main`, `command`); integer `min`/`max`; `identity` (WUBRG letters or `c`), `identityMode` (`within`, `exact`), `colorCount` (`any`, `colorless`, `multicolor`); literal `type`, numeric `mvMin`/`mvMax`, `legality` (`any`, `legal`, `banned`, `not_legal`), `eligible` (`any`, `1`). Empty optional ranges/identity/type mean no filter. Legacy `pointed=1` remains supported; explicit `points` takes precedence. Repeated/unknown parameters, invalid enums, negative/noninteger pagination or points, and inverted ranges are rejected.
+
+Responses retain `version`, `total`, `offset`, `cards[].name/oracle_id/legal/main/command`, and add `limit`, card color/identity, individual color faces, type line, mana value, pinned legality status, commander eligibility and Scryfall URL. Only verified catalog identities receive known-unlisted zero prices; a nonexistent card search returns no row. Legality and eligibility here describe catalog metadata, not certification of a complete deck, partner pair or gameplay interaction. No scoring or construction rules were changed.
+
+### Rebuild search metadata
+
+The October 20 scoring snapshot intentionally omitted top-level colors. `data/search-metadata.json.gz` adds colors/face colors and card URLs from the **exact original full Oracle archive**, not a new catalog. All 38,940 identities must match; the builder verifies the raw bulk SHA-256 and the loader verifies catalog and uncompressed metadata checksums. Provenance and the download URL are in `data/search-metadata-source.json` and `data/search-metadata.provenance.json`. No prices, bans, card identities or scoring fields are imported.
+
+Download that recorded URL to a local file, then, with Node 22:
+
+```sh
+node scripts/build-search-metadata.mjs /path/to/oracle-cards-20261020210200.jsonl.gz
+node scripts/build-search-metadata.mjs /path/to/oracle-cards-20261020210200.jsonl.gz --check
+```
+
+Normal startup and tests use the committed metadata offline. If the archived download expires, use a retained copy with the same recorded hash; do not silently replace it with current data. A future catalog refresh needs an explicit new catalog/source pin and regenerated metadata together. Historical event inventories and prices are independent of these search fields.
+
 ## Scoring and construction checks
 
 `points.csv` is byte-identical to the canonical 549-identity `commander-doubles-deck-benchmarks/recalibration/community_review/POINTS_v3.csv` from merged PR #6. Historical research files are unchanged, including their `season0-proposed` / `activated=false` designations. The deployed initial schedule is the accepted v3 playtesting baseline; website operation does not rewrite historical activation claims.
