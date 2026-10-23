@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testsuite name="PostgreSQL application acceptance: tournament one through tournament two" time="27.169199" disabled="0" errors="0" tests="23" failures="0" skipped="0" hostname="Jaias-MacBook-Pro-9.local">
+		<testcase name="clean migrations initialize accepted v3 and no fake events" time="0.334292" classname="test"/>
+		<testcase name="server-side admin authorization, password, secure session lifecycle" time="0.585765" classname="test"/>
+		<testcase name="admin creates event with Phoenix schedule and opens registration" time="0.628867" classname="test"/>
+		<testcase name="four persistent teams with two decks each, complete scores and event registration" time="4.555623" classname="test"/>
+		<testcase name="duplicate team names and duplicate registration cannot be created" time="0.332496" classname="test"/>
+		<testcase name="malformed and unknown decks fail with no zero-score save" time="0.200912" classname="test"/>
+		<testcase name="actual API flags over-budget legal deck, does not certify incomplete decks" time="0.119945" classname="test"/>
+		<testcase name="another unauthenticated browser may overwrite a general deck and admin can restore" time="1.029418" classname="test"/>
+		<testcase name="draft pricing and publish do not affect frozen tournament scores" time="1.752446" classname="test"/>
+		<testcase name="draft and published rules have separate public states" time="0.601756" classname="test"/>
+		<testcase name="deadline locks submissions even before scheduled maintenance runs" time="0.700045" classname="test"/>
+		<testcase name="close registration and freeze snapshots; general saved decks stay editable" time="1.377741" classname="test"/>
+		<testcase name="publish participant mapping twice without duplicate remote participants" time="1.579001" classname="test"/>
+		<testcase name="start tournament gets real provider pairings and rejects public edits" time="0.854114" classname="test"/>
+		<testcase name="two semifinals advance winners, excluding losing teams" time="1.120760" classname="test"/>
+		<testcase name="final and finalization archive champion and complete final standings" time="1.118683" classname="test"/>
+		<testcase name="second tournament reuses identities and preserves prior results and snapshots" time="4.064061" classname="test"/>
+		<testcase name="provider downtime preserves last synchronized pairings and records an error" time="1.036723" classname="test"/>
+		<testcase name="event override and restore are audited and preserve submission versions" time="1.229809" classname="test"/>
+		<testcase name="data survives new application instance and new pool connection" time="0.178843" classname="test"/>
+		<testcase name="backup includes snapshots and prices but excludes sessions and secrets" time="0.615384" classname="test"/>
+		<testcase name="logout invalidates session server-side" time="0.134872" classname="test"/>
+		<testcase name="login throttling is enforced in persistent database" time="1.891862" classname="test"/>
+	</testsuite>
+	<testcase name="canonical v3 is byte-identical and has 549 pointed identities" time="0.001368" classname="test"/>
+	<testcase name="CSV quotes and both MDFC faces resolve to the same point record" time="0.000104" classname="test"/>
+	<testcase name="full pinned catalog recognizes free cards, face aliases, and curly apostrophes" time="0.000102" classname="test"/>
+	<testcase name="unknown card is an error rather than a zero score" time="0.000594" classname="test"/>
+	<testcase name="valid 100-card deck distinguishes legality and separate CZ price" time="0.001177" classname="test"/>
+	<testcase name="known unpointed card stays free, but color identity is checked" time="0.000748" classname="test"/>
+	<testcase name="singleton combines aliases across all zones" time="0.000744" classname="test"/>
+	<testcase name="banned cards are flagged independently of point cost" time="0.000717" classname="test"/>
+	<testcase name="incomplete inventory and zero commanders cannot pass" time="0.001500" classname="test"/>
+	<testcase name="legal partners and invalid pair configuration" time="0.000954" classname="test"/>
+	<testcase name="Background and Doctor companion pairs" time="0.000262" classname="test"/>
+	<testcase name="noncommander and standalone Background rejected" time="0.001354" classname="test"/>
+	<testcase name="singleton exception allows any number of Relentless Rats" time="0.000566" classname="test"/>
+	<testcase name="Moxfield v2 and v3 boards exclude sideboards" time="0.001196" classname="test"/>
+	<testcase name="export parser sections, set metadata, and malformed input" time="0.000579" classname="test"/>
+	<testcase name="Moxfield URL rejects SSRF and credentials" time="0.000214" classname="test"/>
+	<testcase name="72/48, 68/50, 60/60 pass; 73/47, 69/52 fail" time="0.000173" classname="test"/>
+	<testcase name="actual Challonge v2.1 participant schema maps to match players" time="0.000222" classname="test"/>
+	<testcase name="Challonge adapter caches no fake success on 429 or downtime" time="0.000549" classname="test"/>
+	<testcase name="Challonge pagination traverses full result sets" time="0.000256" classname="test"/>
+	<testcase name="round robin request supplies the live API required format options" time="0.000272" classname="test"/>
+	<testcase name="Moxfield denied import and timeout never return a zero score" time="0.000239" classname="test"/>
+	<testcase name="invalid Moxfield body cannot silently become a successful empty deck" time="0.000085" classname="test"/>
+	<!-- tests 47 -->
+	<!-- suites 0 -->
+	<!-- pass 47 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 27795.161792 -->
+</testsuites>

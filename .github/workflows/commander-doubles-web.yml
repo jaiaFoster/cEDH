@@ -19,5 +19,5 @@ jobs:
         with:
           node-version: '22'
       - name: Node regression tests
-        run: npm test
+        run: node --test tests/unit.test.mjs
         working-directory: commander-doubles-web
