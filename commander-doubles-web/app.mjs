@@ -1,4 +1,8 @@
 import express from "express";
+import {
+  searchScryfall,
+  scryfallClient as defaultScryfallClient,
+} from "./scryfall-search.mjs";
 import helmet from "helmet";
 import { rateLimit } from "express-rate-limit";
 import {
@@ -22,7 +26,6 @@ import {
 import { resolveCard, evaluate, evaluateSavedDeck, teamEvaluation } from "./legality.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
-import { searchScryfall, scryfallClient as defaultScryfallClient } from "./scryfall-search.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const fail = (message, status = 400) =>
   Object.assign(new Error(message), { status });
