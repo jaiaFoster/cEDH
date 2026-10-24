@@ -5,6 +5,8 @@ if (!file) throw Error("Usage: npm run backup -- /secure/path/league.json");
 const tables = [
   "price_versions",
   "rules_versions",
+  "ruling_entries",
+  "ruling_versions",
   "teams",
   "deck_versions",
   "events",

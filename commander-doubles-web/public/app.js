@@ -1,3 +1,4 @@
+import { renderRulings, renderRulingAdmin } from "./rulings.js";
 const $ = (s) => document.querySelector(s),
   main = $("#main");
 const esc = (x) =>
@@ -716,7 +717,7 @@ async function admin() {
       "Keep things moving.",
       `Environment: ${adminData.environment}. All administrative changes are recorded.`,
     ) +
-    `<div class="admin-layout"><aside class="admin-menu">${["overview", "events", "teams", "prices", "content", "audit"].map((x) => `<button data-admin-tab="${x}" class="${adminTab === x ? "active" : ""}">${x[0].toUpperCase() + x.slice(1)}</button>`).join("")}<button data-action="export">Export league backup ↗</button><button data-action="logout">Sign out</button></aside><section class="admin-section" id="admin-content"></section></div>`;
+    `<div class="admin-layout"><aside class="admin-menu">${["overview", "events", "teams", "prices", "content", "rulings", "audit"].map((x) => `<button data-admin-tab="${x}" class="${adminTab === x ? "active" : ""}">${x[0].toUpperCase() + x.slice(1)}</button>`).join("")}<button data-action="export">Export league backup ↗</button><button data-action="logout">Sign out</button></aside><section class="admin-section" id="admin-content"></section></div>`;
   await renderAdmin();
 }
 function eventForm(e) {
@@ -739,6 +740,8 @@ function eventBody() {
   };
 }
 async function renderAdmin() {
+  if (adminTab === "rulings")
+    return renderRulingAdmin($("#admin-content"), api, notice);
   const el = $("#admin-content");
   if (adminTab === "overview") {
     el.innerHTML = `<div class="grid two"><div class="panel"><div class="eyebrow">League records</div><h2 class="spaced">${state.teams.length} teams · ${state.events.length} events</h2><p>Registration, submissions, and history are stored in PostgreSQL.</p>${action("Manage events", "admin-events", true)}</div><div class="panel"><div class="eyebrow">Challonge integration</div><h2 class="spaced">${adminData.challongeConfigured ? "Connected credentials" : "Key required"}</h2><p>Create or link a tournament from an event. Publish participants before starting. Report actual results in Challonge.</p></div></div><div class="panel spaced"><h2>Current point schedule</h2><p>${esc(state.price.name)}. Event schedules remain frozen when a new version is published.</p><h3>Operational checklist</h3><p>Create an event → open registration → review team decks → close registration → lock submissions → create/link Challonge → publish participants → start tournament.</p><p>After the final, finalize the tournament to archive its champion and standings. Create the next event and reuse existing teams.</p></div>`;
@@ -1201,7 +1204,8 @@ async function route() {
         state.rules.title,
         "The published format, budget, and submission rules.",
       ) +
-      `<article class="panel"><div class="rule-text">${esc(state.rules.body)}</div></article>`;
+      `<article class="panel"><div class="rule-text">${esc(state.rules.body)}</div></article><section id="rulings-reference" class="spaced"></section>`;
+    await renderRulings($("#rulings-reference"), api);
     return;
   }
   if (p === "/points") return points();

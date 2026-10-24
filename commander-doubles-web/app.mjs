@@ -22,6 +22,7 @@ import {
 import { resolveCard, evaluate, evaluateSavedDeck, teamEvaluation } from "./legality.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
+import { installRulingRoutes } from "./rulings.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const fail = (message, status = 400) =>
   Object.assign(new Error(message), { status });
@@ -530,6 +531,7 @@ export function createApp() {
     });
     res.json(out);
   });
+  installRulingRoutes(app, { q, transaction, audit, admin });
   app.use("/api/admin", admin);
   app.get("/api/admin/dashboard", async (req, res) => {
     const [prices, rules, audits, teams] = await Promise.all([
@@ -1019,6 +1021,8 @@ export function createApp() {
     const tables = [
       "price_versions",
       "rules_versions",
+      "ruling_entries",
+      "ruling_versions",
       "teams",
       "deck_versions",
       "events",

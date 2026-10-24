@@ -1021,3 +1021,30 @@ dialog::backdrop {
   max-width: 100%;
 }
 .team-deck { min-width: 0; }
+
+/* Curated rules reference: compact questions, readable examples on small screens. */
+#rulings-reference { margin-top: 3.5rem; scroll-margin-top: 2rem; }
+.ruling-card { border: 1px solid var(--line, #394137); border-radius: 12px; margin: .7rem 0; background: var(--panel, #181e16); }
+.ruling-card > summary { padding: 1.1rem; display: flex; gap: .8rem; align-items: center; justify-content: space-between; cursor: pointer; font-weight: 600; }
+.ruling-card > summary::before { content: '+'; color: var(--accent, #d9f591); }
+.ruling-card[open] > summary::before { content: '−'; }
+.ruling-labels { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; justify-content: flex-end; font-weight: 400; }
+.ruling-labels .meta { font-size: .75rem; }
+.ruling-body { padding: 0 1.25rem 1rem; overflow-wrap: anywhere; }
+.ruling-body h4 { margin: 1.1rem 0 .3rem; }
+.ruling-body p { margin: .6rem 0; }
+.ruling-answer { color: var(--text, #ecefe7); }
+.ruling-sources { font-size: .85rem; }
+.ruling-cards { font-size: .9rem; line-height: 1.9; }
+#ruling-count { margin: 1rem 0; }
+#r-admin-editor textarea { width: 100%; }
+@media (max-width: 620px) {
+  .ruling-card > summary { flex-wrap: wrap; justify-content: flex-start; padding: 1rem; }
+  .ruling-card > summary > span:first-of-type { flex: 1; min-width: 0; }
+  .ruling-labels { flex-basis: 100%; justify-content: flex-start; padding-left: 1.25rem; }
+  .ruling-body { padding: 0 1rem 1rem; }
+  #rulings-reference .fields { grid-template-columns: 1fr; }
+}
+/* Published rules can contain long provenance paths; keep them inside mobile panels. */
+.rule-text { overflow-wrap: anywhere; }
+.ruling-card > summary > span:first-of-type { flex: 1; min-width: 0; }

@@ -3,6 +3,7 @@ import fs from "node:fs";
 import { randomUUID } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { PRICES } from "./scoring.mjs";
+import { seedRulings } from "./rulings.mjs";
 const schema = process.env.DATABASE_SCHEMA || "league";
 if (!/^[a-z][a-z0-9_]{0,50}$/.test(schema))
   throw Error("Invalid DATABASE_SCHEMA");
@@ -41,6 +42,11 @@ export async function migrate() {
           "utf8",
         ),
       );
+    if (!(await c.query("SELECT 1 FROM migrations WHERE version=2")).rowCount)
+      await c.query(
+        fs.readFileSync(new URL("./migrations/002_rulings.sql", import.meta.url), "utf8"),
+      );
+    await seedRulings(c);
     if (!(await c.query("SELECT id FROM price_versions LIMIT 1")).rowCount) {
       const prices = Object.fromEntries(
         [...new Set(PRICES.values())].map((x) => [

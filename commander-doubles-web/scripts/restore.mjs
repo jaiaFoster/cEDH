@@ -9,6 +9,8 @@ await migrate();
 const tables = [
   "price_versions",
   "rules_versions",
+  "ruling_entries",
+  "ruling_versions",
   "teams",
   "deck_versions",
   "events",
@@ -19,6 +21,13 @@ const tables = [
 await transaction(async (c) => {
   if (Number((await c.query("SELECT count(*) AS n FROM teams")).rows[0].n) > 0)
     throw Error("Refusing to overwrite nonempty schema");
+  // Seeded reference rows are removed only inside this isolated recovery schema.
+  // Deferred composite FK allows restoring entries before their version rows.
+  if (data.ruling_entries) {
+    await c.query('UPDATE ruling_entries SET published_version_id=NULL');
+    await c.query('DELETE FROM ruling_versions');
+    await c.query('DELETE FROM ruling_entries');
+  }
   await c.query("DELETE FROM rules_versions");
   await c.query("DELETE FROM price_versions");
   for (const table of tables) {

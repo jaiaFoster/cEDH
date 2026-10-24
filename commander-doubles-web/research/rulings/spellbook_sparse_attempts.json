@@ -1,0 +1,198 @@
+[
+  {
+    "q": "card:\"Aluren\" card:\"Acererak the Archlich\"",
+    "url": "https://backend.commanderspellbook.com/variants/?q=card%3A%22Aluren%22+card%3A%22Acererak+the+Archlich%22&limit=2",
+    "status": 200,
+    "retrieved_at": "2026-10-24T21:06:30.629Z",
+    "count": null,
+    "variant_ids": [],
+    "variants": []
+  },
+  {
+    "q": "card:\"Rest in Peace\" card:\"Helm of Obedience\"",
+    "url": "https://backend.commanderspellbook.com/variants/?q=card%3A%22Rest+in+Peace%22+card%3A%22Helm+of+Obedience%22&limit=2",
+    "status": 200,
+    "retrieved_at": "2026-10-24T21:06:31.626Z",
+    "count": null,
+    "variant_ids": [
+      "3002-5065"
+    ],
+    "variants": [
+      {
+        "id": "3002-5065",
+        "description": "Activate Helm of Obedience by paying {1} and tapping it, causing target opponent to mill a card.\nDue to Rest in Peace's replacement effect, the milled card is exiled instead of going to the graveyard, and that opponents repeats that process until their library is empty.",
+        "uses": [
+          {
+            "card": "Helm of Obedience",
+            "zone": [
+              "B"
+            ]
+          },
+          {
+            "card": "Rest in Peace",
+            "zone": [
+              "B"
+            ]
+          }
+        ],
+        "outcomes": [
+          "Exile target opponent's library"
+        ]
+      }
+    ]
+  },
+  {
+    "q": "card:\"Bloodchief Ascension\" card:\"Mindcrank\"",
+    "url": "https://backend.commanderspellbook.com/variants/?q=card%3A%22Bloodchief+Ascension%22+card%3A%22Mindcrank%22&limit=2",
+    "status": 200,
+    "retrieved_at": "2026-10-24T21:06:32.637Z",
+    "count": null,
+    "variant_ids": [
+      "936-1290"
+    ],
+    "variants": [
+      {
+        "id": "936-1290",
+        "description": "Cause one or more opponents to lose life.\nMindcrank triggers once for each life loss event, causing that player to mill cards equal to the amount of life lost.\nBloodchief Ascension triggers once for each card milled, causing that player to lose 2 life and you to gain 2 life for each trigger.\nRepeat from step 2.",
+        "uses": [
+          {
+            "card": "Bloodchief Ascension",
+            "zone": [
+              "B"
+            ]
+          },
+          {
+            "card": "Mindcrank",
+            "zone": [
+              "B"
+            ]
+          }
+        ],
+        "outcomes": [
+          "Infinite mill",
+          "Near-infinite lifegain",
+          "Near-infinite lifegain triggers",
+          "Near-infinite lifeloss"
+        ]
+      }
+    ]
+  },
+  {
+    "q": "card:\"Sanguine Bond\" card:\"Exquisite Blood\"",
+    "url": "https://backend.commanderspellbook.com/variants/?q=card%3A%22Sanguine+Bond%22+card%3A%22Exquisite+Blood%22&limit=2",
+    "status": 200,
+    "retrieved_at": "2026-10-24T21:06:33.646Z",
+    "count": null,
+    "variant_ids": [
+      "690-3966"
+    ],
+    "variants": [
+      {
+        "id": "690-3966",
+        "description": "Gain life.\nSanguine Bond triggers, causing an opponent to lose 1 life.\nExquisite Blood triggers, causing you to gain 1 life.\nRepeat from step 2.",
+        "uses": [
+          {
+            "card": "Sanguine Bond",
+            "zone": [
+              "B"
+            ]
+          },
+          {
+            "card": "Exquisite Blood",
+            "zone": [
+              "B"
+            ]
+          }
+        ],
+        "outcomes": [
+          "Infinite lifegain triggers",
+          "Infinite lifeloss",
+          "Infinite lifegain"
+        ]
+      }
+    ]
+  },
+  {
+    "q": "card:\"Najeela, the Blade-Blossom\" card:\"Derevi, Empyrial Tactician\"",
+    "url": "https://backend.commanderspellbook.com/variants/?q=card%3A%22Najeela%2C+the+Blade-Blossom%22+card%3A%22Derevi%2C+Empyrial+Tactician%22&limit=2",
+    "status": 200,
+    "retrieved_at": "2026-10-24T21:06:34.652Z",
+    "count": null,
+    "variant_ids": [
+      "2011-2608",
+      "339-1753-2011-2608-4630"
+    ],
+    "variants": [
+      {
+        "id": "2011-2608",
+        "description": "Attack with Najeela, Derevi, and at least two additional creatures.\nNajeela triggers, creating a 1/1 Warrior creature token.\nWhen your creatures deal combat damage to a player, Derevi triggers at least five times, untapping at least five permanents you control.\nActivate those permanents by tapping them to add at least {W}{U}{B}{R}{G}.\nActivate Najeela by paying {W}{U}{B}{R}{G}, untapping all attacking creatures you control, giving them trample, lifelink, and haste, and creating an additional combat phase.\nRepeat.",
+        "uses": [
+          {
+            "card": "Najeela, the Blade-Blossom",
+            "zone": [
+              "B"
+            ]
+          },
+          {
+            "card": "Derevi, Empyrial Tactician",
+            "zone": [
+              "B"
+            ]
+          }
+        ],
+        "outcomes": [
+          "Infinite creature tokens with haste",
+          "Infinite untap of permanents you control",
+          "Infinite colored mana",
+          "Infinite combat phases",
+          "Infinite creature ETB",
+          "Infinite mana permanents you control can produce"
+        ]
+      },
+      {
+        "id": "339-1753-2011-2608-4630",
+        "description": "Activate Jegantha by tapping it, adding {W}{U}{B}{R}{G}.\nActivate Sisay by paying {W}{U}{B}{R}{G}, searching your library for Derevi and putting it onto the battlefield.\nDerevi enters the battlefield, untapping Jegantha.\nActivate Jegantha by tapping it, adding {W}{U}{B}{R}{G}.\nActivate Sisay by paying {W}{U}{B}{R}{G}, searching your library for Samut and putting it onto the battlefield.\nActivate Samut by paying {W} and tapping it, untapping Jegantha.\nActivate Jegantha by tapping it, adding {W}{U}{B}{R}{G}.\nActivate Sisay by paying {W}{U}{B}{R}{G}, searching your library for Najeela and putting it onto the battlefield.\nMove to your combat phase.\nDeclare Derevi as an attacker.\nDeal combat damage to a player with Derevi, untapping Jegantha.\nActivate Jegantha by tapping it, adding {W}{U}{B}{R}{G}.\nAActivate Najeela by paying {W}{U}{B}{R}{G}, untapping all attacking creatures, giving them trample, lifelink and haste, and gaining an additional combat phase after this one.\nRepeat from step 9.",
+        "uses": [
+          {
+            "card": "Jegantha, the Wellspring",
+            "zone": [
+              "B"
+            ]
+          },
+          {
+            "card": "Sisay, Weatherlight Captain",
+            "zone": [
+              "B"
+            ]
+          },
+          {
+            "card": "Derevi, Empyrial Tactician",
+            "zone": [
+              "L"
+            ]
+          },
+          {
+            "card": "Najeela, the Blade-Blossom",
+            "zone": [
+              "L"
+            ]
+          },
+          {
+            "card": "Samut, Voice of Dissent",
+            "zone": [
+              "L"
+            ]
+          }
+        ],
+        "outcomes": [
+          "Infinite untap of permanents you control",
+          "Infinite colored mana",
+          "Infinite combat phases",
+          "Infinite creature ETB",
+          "Infinite mana permanents you control can produce",
+          "Infinite creature tokens with haste"
+        ]
+      }
+    ]
+  }
+]
