@@ -1001,3 +1001,12 @@ dialog::backdrop {
     font-size: 1.6rem;
   }
 }
+
+.import-notice {
+  margin: 16px 0;
+  padding: 14px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.import-notice ul { padding-left: 20px; }

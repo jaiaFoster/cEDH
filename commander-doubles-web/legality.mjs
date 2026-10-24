@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import zlib from "node:zlib";
-import { normalizeName, scoreDeck, scoreTeam } from "./scoring.mjs";
+import { normalizeName, scoreDeck, scoreTeam, parseExport } from "./scoring.mjs";
+import { createCardResolver } from "./card-resolution.mjs";
 export const catalog = zlib
   .gunzipSync(
     fs.readFileSync(new URL("./data/oracle.jsonl.gz", import.meta.url)),
@@ -9,31 +10,15 @@ export const catalog = zlib
   .trim()
   .split("\n")
   .map(JSON.parse);
-const aliases = new Map();
-for (const c of catalog) {
-  for (const n of [
-    c.name,
-    ...c.name.split(" // "),
-    ...(c.card_faces || []).map((f) => f.name),
-  ]) {
-    const k = normalizeName(n);
-    const old = aliases.get(k);
-    if (
-      !old ||
-      c.legalities?.commander === "legal" ||
-      (old.legalities?.commander !== "legal" &&
-        c.legalities?.commander === "banned")
-    )
-      aliases.set(k, c);
-  }
-}
 const named = JSON.parse(
   fs.readFileSync(new URL("./data/name_aliases.json", import.meta.url)),
 ).aliases;
 const ids = new Map(catalog.map((c) => [c.oracle_id, c]));
-for (const [n, id] of Object.entries(named))
-  if (ids.has(id)) aliases.set(normalizeName(n), ids.get(id));
-export const resolveCard = (n) => aliases.get(normalizeName(n));
+const resolver = createCardResolver(catalog, named);
+// Organizer price editing remains exact; tolerant resolution is for deck imports.
+export const resolveCard = resolver.exact;
+export const matchCard = resolver.match;
+export const isCommanderLegal = (card) => card.legalities?.commander === "legal";
 const text = (c) =>
   c.oracle_text ||
   (c.card_faces || []).map((f) => f.oracle_text || "").join("\n");
@@ -83,16 +68,18 @@ export function legalPair(a, b) {
 }
 export function priceTable(prices) {
   const out = new Map();
-  for (const [name, p] of Object.entries(prices)) {
-    for (const n of [name, ...name.split(" // ")])
-      out.set(normalizeName(n), { name, ...p });
-  }
+  for (const [name, p] of Object.entries(prices))
+    out.set(normalizeName(name), { name, ...p });
+  for (const [name, p] of Object.entries(prices))
+    for (const n of name.split(" // "))
+      if (!out.has(normalizeName(n))) out.set(normalizeName(n), { name, ...p });
   return out;
 }
 export function evaluate(deck, prices) {
   const errors = [],
     cards = [],
-    counts = new Map();
+    counts = new Map(),
+    nameCorrections = [];
   for (const row of deck.cards) {
     if (
       !Number.isInteger(row.count) ||
@@ -101,16 +88,21 @@ export function evaluate(deck, prices) {
       !["main", "command"].includes(row.zone)
     )
       throw Error("Invalid deck inventory");
-    const c = resolveCard(row.name);
-    if (!c) throw Error("Unknown or ambiguous card: " + row.name);
-    cards.push({ ...row, name: c.name, oracle_id: c.oracle_id });
+    const { card: c, method } = matchCard(row.name);
+    const corrected = method !== "exact" || row.submitted_name;
+    const submitted = row.submitted_name || row.name;
+    const matchMethod = row.match_method || method;
+    cards.push({ ...row, name: c.name, oracle_id: c.oracle_id,
+      ...(corrected ? { submitted_name: submitted, match_method: matchMethod } : {}) });
+    if (corrected) nameCorrections.push({ submitted, canonical: c.name,
+      oracle_id: c.oracle_id, method: matchMethod });
     counts.set(c.oracle_id, (counts.get(c.oracle_id) || 0) + row.count);
-    if (
-      c.legalities?.commander !== "legal" ||
-      !c.games?.includes("paper") ||
-      c.digital
-    )
-      errors.push(c.name + ": not legal in the pinned paper Commander catalog");
+    // Oracle bulk selects one representative printing per identity. Its games/digital
+    // flags describe that printing, not whether this card has legal paper printings.
+    if (!isCommanderLegal(c))
+      errors.push(c.name + (c.legalities?.commander === "banned"
+        ? ": banned in Commander; not legal in the pinned catalog"
+        : ": not legal in Commander in the pinned catalog"));
   }
   const resolved = { ...deck, cards };
   const score = scoreDeck(resolved, priceTable(prices));
@@ -119,7 +111,7 @@ export function evaluate(deck, prices) {
     .flatMap((r) => Array(r.count).fill(ids.get(r.oracle_id)));
   if (!score.complete)
     errors.push(
-      "Deck must contain exactly 100 cards including one commander or a legal pair",
+      `Imported ${score.count - score.commandCount} main-deck cards + ${score.commandCount} command-zone cards = ${score.count}. Deck must contain exactly 100 cards including one commander or a legal pair. Sideboards and maybeboards are excluded.`,
     );
   if (commanders.length === 1 && eligibility(commanders[0]) !== "commander")
     errors.push(commanders[0].name + " cannot be a standalone commander");
@@ -146,11 +138,22 @@ export function evaluate(deck, prices) {
       ...score,
       legal: errors.length === 0,
       errors: [...new Set(errors)],
+      nameCorrections,
+      warnings: nameCorrections.map((c) => `Matched “${c.submitted}” to “${c.canonical}” (${c.method}). Review this match; points and legality use the canonical card.`),
       withinIndividualBudget: score.points <= 72,
       catalogVersion: "oracle-2026-10-20",
+      resolutionVersion: "oracle-identity-v2",
       gameplayLegalityApproved: false,
     },
   };
+}
+// Recompute current views/new submissions from retained source text, without
+// rewriting stored versions or any frozen tournament registration.
+export function evaluateSavedDeck(record, prices) {
+  const raw = record.source_text?.trim()
+    ? { ...parseExport(record.source_text), name: record.deck.name }
+    : record.deck;
+  return evaluate(raw, prices);
 }
 export function teamEvaluation(scores) {
   const budget = scoreTeam(scores);
