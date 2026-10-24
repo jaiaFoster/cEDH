@@ -41,7 +41,7 @@ Sessions use random 256-bit tokens; PostgreSQL stores only their SHA-256 hashes.
 ## Operating the league
 
 1. In `/admin`, create an event, set its date, IANA time zone, location, registration window, and deck deadline. Phoenix is the default. The event receives the currently published point schedule as an immutable copy.
-2. Open registration. Players create persistent teams, save two decks, and register their team on the event page. Public editing is deliberate: anyone selecting a team can edit its general decks and update unlocked event submissions.
+2. Open registration. Players create a separate team for their pair and register it on the event page; registration can happen before either deck is ready. They then save both decks before the deck deadline and explicitly update the event submission. Public editing is deliberate: anyone selecting a team can edit its general decks and update unlocked event submissions.
 3. General team decks and event submissions are separate. Players explicitly copy their saved decks into an event with **Update event from saved team decks**. Changing general decks never changes a historical event.
 4. Close registration, review both decks and the team budget, and lock submissions. A configured deadline is enforced at request time, including if the app was asleep when the deadline passed.
 5. Create a Challonge tournament or link its integer ID / URL slug. Publish participants. Repeating publication reconciles markers and participant IDs instead of creating duplicates. Both decks must pass supported construction checks and budget checks before the website starts an event.
@@ -50,6 +50,18 @@ Sessions use random 256-bit tokens; PostgreSQL stores only their SHA-256 hashes.
 8. Finalize a completed tournament from the admin dashboard. Challonge's final ranks determine the champion. The archive retains final matches, standings, participant mappings, price version, and deck snapshots. Create a new event and reuse the same team identities.
 
 Content supports editor previews, drafts, publishing, and loading an earlier version into the editor. Pricing supports complete-catalog search (including unpointed cards), independent main/CZ prices, editable multi-card drafts, publication, and restoration as a new draft. Published versions are immutable. Deck history supports restoration by player slot. Event history supports audited correction reasons and restoration of previous submission snapshots. Team removal archives identity rather than destroying event history.
+
+## Team decks and organizer review
+
+Deck versions are stored in PostgreSQL under a team ID and player slot. Browser storage remembers a default team selection; it does not own or store deck submissions. A direct link such as `/teams?team=TEAM_UUID` selects that team explicitly. Invalid/unavailable links do not fall back to another remembered team's decks.
+
+Use **Create a new team** for a different pair. Editing player names or renaming an existing team preserves its ID, saved decks and registrations. The existing-team editor labels this clearly and asks for confirmation when renaming. This is a safeguard against accidental editing, not a new authorization system; the original open-edit model remains.
+
+Each player slot shows **No deck submitted** until that team has a saved deck in that slot. Saved decks identify their team/slot, timestamp and full resolved list, including free cards and commanders. The text is formatted for Moxfield import. Current views use corrected canonical resolution; historical stored inventories/scores remain available unchanged.
+
+In **Admin → Teams**, choose a team to view both current decks and submission history. Inspection does not change the organizer's remembered public team. **Edit team & decks** links explicitly to the inspected team. General saved decks and frozen event submissions remain separate; saving a general deck does not silently replace an event snapshot.
+
+Team loading clears old forms immediately and discards aborted/stale responses. Saves, uploads and errors stay attached to their originating team/form. Event actions use the visible per-tab team choice, even if browser memory changes in another tab. See [TEAM_DECK_ASSOCIATION_FIX.md](TEAM_DECK_ASSOCIATION_FIX.md) for the investigation and regression evidence.
 
 ## Points catalog search
 

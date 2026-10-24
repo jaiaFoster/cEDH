@@ -362,10 +362,10 @@ export function createApp() {
       [team.id],
     );
     const version = await currentPrices();
-    const decks = rows.rows.map((d) => ({
-      ...d,
-      current_score: evaluateSavedDeck(d, version.prices).score,
-    }));
+    const decks = rows.rows.map((d) => {
+      const current = evaluateSavedDeck(d, version.prices);
+      return { ...d, current_deck: current.deck, current_score: current.score };
+    });
     res.json({
       ...team,
       decks,
