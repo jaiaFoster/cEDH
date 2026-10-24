@@ -204,6 +204,7 @@ async function points() {
     '<label for="card-search">Find a card</label><div class="catalog-search-bar"><input id="card-search" type="search" placeholder=\'id:wu t:artifact mv&lt;=3 o:"draw"\' aria-describedby="point-query-help" value="' +
     esc(pointFilters.q) +
     '"><button class="primary" type="submit">Search</button></div>' +
+    '<details id="catalog-advanced" class="catalog-advanced"><summary>Advanced</summary>' +
     '<p class="help" id="point-query-help">Use names or combine <code>id:</code>, <code>c:</code>, <code>t:</code>, <code>o:</code>, and <code>mv</code> comparisons. Quote phrases, such as <code>"Sol Ring"</code>. Space-separated terms use AND.</p>' +
     '<details class="catalog-help"><summary>Search examples & supported syntax</summary><p class="help"><code>id:wu t:artifact mv&lt;=3</code> finds artifacts usable in white-blue identity. <code>c:u</code> requires blue color; <code>id=wu</code> requires exactly white-blue identity. <code>o:"draw a card" -t:creature</code> excludes creatures. <code>!"Sol Ring"</code> matches an exact name. Colorless uses <code>c:c</code> or <code>id:c</code>; multicolor uses <code>c:m</code> or <code>id:m</code>. Comparisons: <code>= != &lt; &lt;= &gt; &gt;=</code> for mana value and color sets. Other Scryfall operators, OR, groups, and regex are unsupported and show an error. Oracle text uses literal text from the pinned catalog, including reminder text.</p></details>' +
     '<fieldset class="identity-filter"><legend>Color identity</legend><div class="identity-options">' +
@@ -253,7 +254,7 @@ async function points() {
     pointRange("min", "Minimum points") +
     pointRange("max", "Maximum points") +
     '</div><p class="help">Point ranges use the selected location. Either uses the higher price.</p>' +
-    '<details id="catalog-more-filters"><summary>Type, mana value & legality</summary><div class="catalog-filter-grid spaced">' +
+    '<div id="catalog-more-filters" class="catalog-filter-grid spaced">' +
     pointSelect("type", "Card type", [
       ["", "Any type"],
       ...[
@@ -279,7 +280,7 @@ async function points() {
       ["any", "Any card"],
       ["1", "Eligible only"],
     ]) +
-    "</div></details>" +
+    "</div>" +
     '<div class="catalog-sort-row">' +
     pointSelect("sort", "Sort results", [
       ["main_desc", "Main-deck points: high to low"],
@@ -295,10 +296,10 @@ async function points() {
       ["50", "50"],
       ["100", "100"],
     ]) +
-    '<button id="point-reset" type="button">Reset filters</button></div></form>' +
-    '<div id="point-status" class="meta" role="status" aria-live="polite"></div><div id="point-table" aria-busy="true"></div></section><p class="help spaced">Prices: ' +
+    '<button id="point-reset" type="button">Reset filters</button></div><p class="help">Prices: ' +
     esc(state.price.name) +
-    ". Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.</p>";
+    '. Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.</p></details></form>' +
+    '<div id="point-status" class="meta" role="status" aria-live="polite"></div><div id="point-table" aria-busy="true"></div></section>';
   const form = $("#points-search");
   function changed(debounce) {
     pointFilters.q = $("#card-search").value;

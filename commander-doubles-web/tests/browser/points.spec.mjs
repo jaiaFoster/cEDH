@@ -35,6 +35,10 @@ test("catalog searches, zero prices, command prices and unsupported queries", as
   );
   await page.setViewportSize({ width: 1440, height: 1100 });
   await page.screenshot({ path: "reports/points-desktop.png", fullPage: true });
+  await expect(page.locator("#catalog-advanced")).not.toHaveAttribute("open", "");
+  await expect(page.getByLabel("Point values", { exact: true })).toBeHidden();
+  await page.locator("#catalog-advanced > summary").click();
+  await expect(page.getByLabel("Sort results")).toBeVisible();
   await page.getByLabel("Point values", { exact: true }).selectOption("zero");
   // The preserved admin lifecycle test intentionally publishes Acererak=1.
   // Use a different known free commander so this assertion is order-independent.
@@ -82,10 +86,10 @@ test("identity, type, mana and price controls combine with the query and reset",
 }) => {
   await page.goto("/points");
   await ready(page);
+  await page.locator("#catalog-advanced > summary").click();
   await page.getByLabel("Point values", { exact: true }).selectOption("all");
   await page.getByLabel("White", { exact: true }).check();
   await page.getByLabel("Blue", { exact: true }).check();
-  await page.locator("#catalog-more-filters summary").click();
   await page.getByLabel("Card type", { exact: true }).selectOption("artifact");
   await page.getByLabel("Maximum mana value", { exact: true }).fill("3");
   await page
@@ -124,12 +128,14 @@ test("identity, type, mana and price controls combine with the query and reset",
     "pointed",
   );
   await expect(page.getByLabel("Sort results")).toHaveValue("main_desc");
+  await expect(page.getByLabel("Sort results")).toBeHidden();
 });
 test("both point sorts and every sort paginate over the full result set", async ({
   page,
 }) => {
   await page.goto("/points");
   await ready(page);
+  await page.locator("#catalog-advanced > summary").click();
   for (const sort of [
     "main_desc",
     "main_asc",
@@ -194,6 +200,7 @@ test("colorless and multicolor categories and valid numeric range errors", async
 }) => {
   await page.goto("/points");
   await ready(page);
+  await page.locator("#catalog-advanced > summary").click();
   await page.getByLabel("Identity category").selectOption("colorless");
   await query(page, '!"Sol Ring"');
   await expect(page.locator("tbody")).toContainText("Sol Ring");
@@ -247,6 +254,7 @@ test("all five identity color controls and color-versus-identity search work", a
 }) => {
   await page.goto("/points");
   await ready(page);
+  await page.locator("#catalog-advanced > summary").click();
   await page.getByLabel("Point values", { exact: true }).selectOption("all");
   await page.getByLabel("Identity matching").selectOption("exact");
   const cases = [
@@ -289,11 +297,16 @@ test("mobile filters remain usable without document overflow", async ({
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(baseURL + "/points");
   await ready(page);
+  await expect(page.getByLabel("Find a card")).toBeVisible();
+  await expect(page.getByLabel("Green", { exact: true })).toBeHidden();
+  await expect(page.locator("tbody tr").first()).toBeVisible();
+  await page.screenshot({ path: "reports/points-mobile-collapsed.png", fullPage: true });
+  await page.locator("#catalog-advanced > summary").focus();
+  await page.keyboard.press("Enter");
   await page.getByLabel("Green", { exact: true }).check();
   await page.getByLabel("Identity matching").selectOption("exact");
   await query(page, "t:creature");
   await expect(page.locator("tbody tr").first()).toBeVisible();
-  await page.locator("#catalog-more-filters summary").click();
   await page.getByLabel("Maximum mana value", { exact: true }).fill("4");
   await page.getByRole("button", { name: "Search", exact: true }).click();
   await ready(page);
@@ -312,6 +325,14 @@ test("mobile filters remain usable without document overflow", async ({
   }
   await page.setViewportSize({ width: 375, height: 812 });
   await page.screenshot({ path: "reports/points-mobile.png", fullPage: true });
+  const count = await page.locator("#point-status").textContent();
+  await page.locator("#catalog-advanced > summary").click();
+  await expect(page.getByLabel("Maximum mana value", { exact: true })).toBeHidden();
+  await expect(page.locator("tbody tr").first()).toBeVisible();
+  await expect(page.locator("#point-status")).toHaveText(count);
+  await page.locator("#catalog-advanced > summary").click();
+  await expect(page.getByLabel("Green", { exact: true })).toBeChecked();
+  await expect(page.getByLabel("Maximum mana value", { exact: true })).toHaveValue("4");
   expect(errors).toEqual([]);
   await context.close();
 });
