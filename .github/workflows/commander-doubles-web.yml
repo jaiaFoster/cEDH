@@ -1,0 +1,23 @@
+name: Commander Doubles Web MVP
+on:
+  pull_request:
+    branches: [commander-doubles-deck-benchmarks]
+    paths:
+      - 'commander-doubles-web/**'
+      - '.github/workflows/commander-doubles-web.yml'
+  push:
+    branches: [commander-doubles-web-mvp]
+    paths:
+      - 'commander-doubles-web/**'
+      - '.github/workflows/commander-doubles-web.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Node regression tests
+        run: node --test tests/unit.test.mjs
+        working-directory: commander-doubles-web

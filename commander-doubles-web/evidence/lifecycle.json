@@ -1,0 +1,1419 @@
+{
+  "provider": "deterministic mock",
+  "database": "actual Railway PostgreSQL, disposable schema",
+  "first": {
+    "id": "a011b963-a50e-40bf-a1e7-5406b7f244c0",
+    "name": "Acceptance · First tournament",
+    "description": "",
+    "starts_at": "2026-11-08T01:00:00.000Z",
+    "timezone": "America/Phoenix",
+    "location": "Online",
+    "registration_opens": null,
+    "registration_closes": null,
+    "lock_at": null,
+    "locked": true,
+    "status": "complete",
+    "price_version_id": "6affd1db-63db-4834-9a74-d5b1c25cd9ca",
+    "provider": "mock",
+    "tournament_id": "mock-e8bd66a6-f11e-4975-8e14-088f665444e5",
+    "tournament_url": null,
+    "tournament_type": "single elimination",
+    "tournament_state": "complete",
+    "sync_data": {
+      "matches": [
+        {
+          "id": "1",
+          "round": 1,
+          "state": "complete",
+          "scores": "1 - 0",
+          "winner_id": "1",
+          "player1_id": "1",
+          "player2_id": "2"
+        },
+        {
+          "id": "2",
+          "round": 1,
+          "state": "complete",
+          "scores": "1 - 0",
+          "winner_id": "3",
+          "player1_id": "3",
+          "player2_id": "4"
+        },
+        {
+          "id": "3",
+          "round": 2,
+          "state": "complete",
+          "scores": "1 - 0",
+          "winner_id": "1",
+          "player1_id": "1",
+          "player2_id": "3"
+        }
+      ],
+      "tournament": {
+        "id": "mock-e8bd66a6-f11e-4975-8e14-088f665444e5",
+        "name": "Acceptance · First tournament",
+        "state": "complete",
+        "tournament_type": "single elimination"
+      },
+      "participants": [
+        {
+          "id": "1",
+          "misc": "cd-registration:98193ad0-0169-443b-bb76-14726de6699d",
+          "name": "Team 1",
+          "final_rank": 1
+        },
+        {
+          "id": "2",
+          "misc": "cd-registration:bebb137a-fe93-4351-95d8-0c98586881e6",
+          "name": "Team 2",
+          "final_rank": 3
+        },
+        {
+          "id": "3",
+          "misc": "cd-registration:faa6907e-44b3-4575-b384-2652ef7d7864",
+          "name": "Team 3",
+          "final_rank": 2
+        },
+        {
+          "id": "4",
+          "misc": "cd-registration:9e8591e8-fb9d-4581-ae9c-d0141d92e66c",
+          "name": "Team 4",
+          "final_rank": 3
+        }
+      ]
+    },
+    "synced_at": "2026-10-23T05:19:32.366Z",
+    "sync_error": null,
+    "champion": "Team 1",
+    "created_at": "2026-10-23T05:19:16.976Z",
+    "submissions_locked": true,
+    "registrations": [
+      {
+        "id": "98193ad0-0169-443b-bb76-14726de6699d",
+        "event_id": "a011b963-a50e-40bf-a1e7-5406b7f244c0",
+        "team_id": "8ce9d5d0-499b-4958-91a1-f1f0b6677c98",
+        "team_name": "Team 1",
+        "participant_id": "1",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "4e155ecf-0f8a-47fc-861e-94870a296ce6",
+            "submitted_at": "2026-10-23T05:19:23.337Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "b96fa3d3-48c2-4a16-89ac-3225a859109e",
+            "submitted_at": "2026-10-23T05:19:17.982Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 38,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:18.249Z",
+        "updated_at": "2026-10-23T05:19:25.064Z"
+      },
+      {
+        "id": "bebb137a-fe93-4351-95d8-0c98586881e6",
+        "event_id": "a011b963-a50e-40bf-a1e7-5406b7f244c0",
+        "team_id": "db905927-5073-49d0-ba84-38ba5baf8eae",
+        "team_name": "Team 2",
+        "participant_id": "2",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "11281f00-a974-4736-8c0c-1ab4f62e1bdc",
+            "submitted_at": "2026-10-23T05:19:18.822Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "1f69a5f9-e935-495f-846d-3c33161eca4a",
+            "submitted_at": "2026-10-23T05:19:19.092Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 38,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:19.438Z",
+        "updated_at": "2026-10-23T05:19:19.438Z"
+      },
+      {
+        "id": "faa6907e-44b3-4575-b384-2652ef7d7864",
+        "event_id": "a011b963-a50e-40bf-a1e7-5406b7f244c0",
+        "team_id": "eee8d876-e29c-4f60-8dfc-08918d5f5444",
+        "team_name": "Team 3",
+        "participant_id": "3",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "e9dcffdb-c769-4e68-b06f-213c15488b79",
+            "submitted_at": "2026-10-23T05:19:20.004Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "c8c8ebf1-b8c6-4db0-ba72-6b7d99fd6b58",
+            "submitted_at": "2026-10-23T05:19:20.275Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 38,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:20.534Z",
+        "updated_at": "2026-10-23T05:19:20.534Z"
+      },
+      {
+        "id": "9e8591e8-fb9d-4581-ae9c-d0141d92e66c",
+        "event_id": "a011b963-a50e-40bf-a1e7-5406b7f244c0",
+        "team_id": "9ceaa0e6-5555-4c67-8b56-4f29f78fe0c7",
+        "team_name": "Team 4",
+        "participant_id": "4",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "88ec5b08-f131-45a0-965d-63a99fd39042",
+            "submitted_at": "2026-10-23T05:19:21.090Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 19,
+              "pointed": [
+                {
+                  "each": 15,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 15
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "024c1616-cff8-4267-a983-a381485da6b8",
+            "submitted_at": "2026-10-23T05:19:21.350Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 38,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:21.604Z",
+        "updated_at": "2026-10-23T05:19:21.604Z"
+      }
+    ],
+    "matches": [
+      {
+        "id": "1",
+        "round": 1,
+        "state": "complete",
+        "scores": "1 - 0",
+        "winner_id": "1",
+        "player1_id": "1",
+        "player2_id": "2",
+        "players": [
+          {
+            "id": "1",
+            "name": "Team 1",
+            "team_id": "8ce9d5d0-499b-4958-91a1-f1f0b6677c98"
+          },
+          {
+            "id": "2",
+            "name": "Team 2",
+            "team_id": "db905927-5073-49d0-ba84-38ba5baf8eae"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "round": 1,
+        "state": "complete",
+        "scores": "1 - 0",
+        "winner_id": "3",
+        "player1_id": "3",
+        "player2_id": "4",
+        "players": [
+          {
+            "id": "3",
+            "name": "Team 3",
+            "team_id": "eee8d876-e29c-4f60-8dfc-08918d5f5444"
+          },
+          {
+            "id": "4",
+            "name": "Team 4",
+            "team_id": "9ceaa0e6-5555-4c67-8b56-4f29f78fe0c7"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "round": 2,
+        "state": "complete",
+        "scores": "1 - 0",
+        "winner_id": "1",
+        "player1_id": "1",
+        "player2_id": "3",
+        "players": [
+          {
+            "id": "1",
+            "name": "Team 1",
+            "team_id": "8ce9d5d0-499b-4958-91a1-f1f0b6677c98"
+          },
+          {
+            "id": "3",
+            "name": "Team 3",
+            "team_id": "eee8d876-e29c-4f60-8dfc-08918d5f5444"
+          }
+        ]
+      }
+    ],
+    "standings": [
+      {
+        "id": "1",
+        "misc": "cd-registration:98193ad0-0169-443b-bb76-14726de6699d",
+        "name": "Team 1",
+        "final_rank": 1
+      },
+      {
+        "id": "3",
+        "misc": "cd-registration:faa6907e-44b3-4575-b384-2652ef7d7864",
+        "name": "Team 3",
+        "final_rank": 2
+      },
+      {
+        "id": "2",
+        "misc": "cd-registration:bebb137a-fe93-4351-95d8-0c98586881e6",
+        "name": "Team 2",
+        "final_rank": 3
+      },
+      {
+        "id": "4",
+        "misc": "cd-registration:9e8591e8-fb9d-4581-ae9c-d0141d92e66c",
+        "name": "Team 4",
+        "final_rank": 3
+      }
+    ]
+  },
+  "second": {
+    "id": "ee97fafe-3886-4090-a250-edb992938602",
+    "name": "Acceptance · Second tournament",
+    "description": "",
+    "starts_at": "2026-11-15T01:00:00.000Z",
+    "timezone": "America/Phoenix",
+    "location": "Online",
+    "registration_opens": null,
+    "registration_closes": null,
+    "lock_at": null,
+    "locked": true,
+    "status": "running",
+    "price_version_id": "167ccb84-9a45-47f7-8fea-ba56eb1e29a6",
+    "provider": "mock",
+    "tournament_id": "mock-9256b2a4-5f18-438f-b859-0b1ce039e75c",
+    "tournament_url": null,
+    "tournament_type": "single elimination",
+    "tournament_state": "underway",
+    "sync_data": {
+      "matches": [
+        {
+          "id": "1",
+          "round": 1,
+          "state": "open",
+          "player1_id": "1",
+          "player2_id": "2"
+        },
+        {
+          "id": "2",
+          "round": 1,
+          "state": "open",
+          "player1_id": "3",
+          "player2_id": "4"
+        },
+        {
+          "id": "3",
+          "round": 2,
+          "state": "pending",
+          "player1_id": null,
+          "player2_id": null
+        }
+      ],
+      "tournament": {
+        "id": "mock-9256b2a4-5f18-438f-b859-0b1ce039e75c",
+        "name": "Acceptance · Second tournament",
+        "state": "underway",
+        "tournament_type": "single elimination"
+      },
+      "participants": [
+        {
+          "id": "1",
+          "misc": "cd-registration:bff2d217-e78f-42e3-9b5c-eafaec4d0bfb",
+          "name": "Team 1"
+        },
+        {
+          "id": "2",
+          "misc": "cd-registration:a02518b6-b556-4d45-82e5-10877e670a4f",
+          "name": "Team 2"
+        },
+        {
+          "id": "3",
+          "misc": "cd-registration:bf5a0587-9052-4025-9abd-42858e04feef",
+          "name": "Team 3"
+        },
+        {
+          "id": "4",
+          "misc": "cd-registration:42c8e207-e083-4ed4-abe4-e60e9a38de48",
+          "name": "Team 4"
+        }
+      ]
+    },
+    "synced_at": "2026-10-23T05:19:37.740Z",
+    "sync_error": null,
+    "champion": null,
+    "created_at": "2026-10-23T05:19:33.028Z",
+    "submissions_locked": true,
+    "registrations": [
+      {
+        "id": "bff2d217-e78f-42e3-9b5c-eafaec4d0bfb",
+        "event_id": "ee97fafe-3886-4090-a250-edb992938602",
+        "team_id": "8ce9d5d0-499b-4958-91a1-f1f0b6677c98",
+        "team_name": "Team 1",
+        "participant_id": "1",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "fb95648d-4478-48ef-9fd4-ed18f20953cc",
+            "submitted_at": "2026-10-23T05:19:27.832Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "b96fa3d3-48c2-4a16-89ac-3225a859109e",
+            "submitted_at": "2026-10-23T05:19:17.982Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 40,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:33.516Z",
+        "updated_at": "2026-10-23T05:19:38.614Z"
+      },
+      {
+        "id": "a02518b6-b556-4d45-82e5-10877e670a4f",
+        "event_id": "ee97fafe-3886-4090-a250-edb992938602",
+        "team_id": "db905927-5073-49d0-ba84-38ba5baf8eae",
+        "team_name": "Team 2",
+        "participant_id": "2",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "11281f00-a974-4736-8c0c-1ab4f62e1bdc",
+            "submitted_at": "2026-10-23T05:19:18.822Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "1f69a5f9-e935-495f-846d-3c33161eca4a",
+            "submitted_at": "2026-10-23T05:19:19.092Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 40,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:33.908Z",
+        "updated_at": "2026-10-23T05:19:33.908Z"
+      },
+      {
+        "id": "bf5a0587-9052-4025-9abd-42858e04feef",
+        "event_id": "ee97fafe-3886-4090-a250-edb992938602",
+        "team_id": "eee8d876-e29c-4f60-8dfc-08918d5f5444",
+        "team_name": "Team 3",
+        "participant_id": "3",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "e9dcffdb-c769-4e68-b06f-213c15488b79",
+            "submitted_at": "2026-10-23T05:19:20.004Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "c8c8ebf1-b8c6-4db0-ba72-6b7d99fd6b58",
+            "submitted_at": "2026-10-23T05:19:20.275Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 40,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:34.310Z",
+        "updated_at": "2026-10-23T05:19:34.310Z"
+      },
+      {
+        "id": "42c8e207-e083-4ed4-abe4-e60e9a38de48",
+        "event_id": "ee97fafe-3886-4090-a250-edb992938602",
+        "team_id": "9ceaa0e6-5555-4c67-8b56-4f29f78fe0c7",
+        "team_name": "Team 4",
+        "participant_id": "4",
+        "decks": [
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 1,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "88ec5b08-f131-45a0-965d-63a99fd39042",
+            "submitted_at": "2026-10-23T05:19:21.090Z"
+          },
+          {
+            "deck": {
+              "name": "Pasted Moxfield export",
+              "cards": [
+                {
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                },
+                {
+                  "name": "Island",
+                  "zone": "main",
+                  "count": 98,
+                  "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                },
+                {
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                }
+              ]
+            },
+            "slot": 2,
+            "score": {
+              "name": "Pasted Moxfield export",
+              "count": 100,
+              "legal": true,
+              "errors": [],
+              "points": 20,
+              "pointed": [
+                {
+                  "each": 16,
+                  "name": "Sol Ring",
+                  "zone": "main",
+                  "count": 1,
+                  "points": 16
+                },
+                {
+                  "each": 4,
+                  "name": "Shorikai, Genesis Engine",
+                  "zone": "command",
+                  "count": 1,
+                  "points": 4
+                }
+              ],
+              "warning": null,
+              "complete": true,
+              "commandCount": 1,
+              "catalogVersion": "oracle-2026-10-20",
+              "withinIndividualBudget": true,
+              "gameplayLegalityApproved": false
+            },
+            "source_url": null,
+            "version_id": "024c1616-cff8-4267-a983-a381485da6b8",
+            "submitted_at": "2026-10-23T05:19:21.350Z"
+          }
+        ],
+        "score": {
+          "max": 120,
+          "label": "Within points budget",
+          "legal": true,
+          "points": 40,
+          "within": true,
+          "checked": true,
+          "complete": true,
+          "transfer": 0,
+          "budgetWithin": true
+        },
+        "created_at": "2026-10-23T05:19:34.690Z",
+        "updated_at": "2026-10-23T05:19:34.690Z"
+      }
+    ],
+    "matches": [
+      {
+        "id": "1",
+        "round": 1,
+        "state": "open",
+        "player1_id": "1",
+        "player2_id": "2",
+        "players": [
+          {
+            "id": "1",
+            "name": "Team 1",
+            "team_id": "8ce9d5d0-499b-4958-91a1-f1f0b6677c98"
+          },
+          {
+            "id": "2",
+            "name": "Team 2",
+            "team_id": "db905927-5073-49d0-ba84-38ba5baf8eae"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "round": 1,
+        "state": "open",
+        "player1_id": "3",
+        "player2_id": "4",
+        "players": [
+          {
+            "id": "3",
+            "name": "Team 3",
+            "team_id": "eee8d876-e29c-4f60-8dfc-08918d5f5444"
+          },
+          {
+            "id": "4",
+            "name": "Team 4",
+            "team_id": "9ceaa0e6-5555-4c67-8b56-4f29f78fe0c7"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "round": 2,
+        "state": "pending",
+        "player1_id": null,
+        "player2_id": null,
+        "players": [
+          null,
+          null
+        ]
+      }
+    ],
+    "standings": []
+  }
+}

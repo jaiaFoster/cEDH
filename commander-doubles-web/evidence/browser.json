@@ -1,0 +1,255 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+      "/workspace/work/cEDH/commander-doubles-web/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/workspace/work/cEDH/commander-doubles-web/playwright.config.mjs",
+    "rootDir": "/workspace/work/cEDH/commander-doubles-web/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/work/cEDH/commander-doubles-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/work/cEDH/commander-doubles-web/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/work/cEDH/commander-doubles-web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/workspace/work/cEDH/commander-doubles-web/tests/browser",
+        "snapshotDir": "/workspace/work/cEDH/commander-doubles-web/tests/browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 240000,
+        "use": {
+          "baseURL": "https://commander-doubles-staging-production.up.railway.app",
+          "channel": "chrome",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/browser.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/browser.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "league.spec.mjs",
+      "file": "league.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "complete multi-tournament browser lifecycle on the actual application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "admin login and create event through actual interface",
+                      "duration": 1429
+                    },
+                    {
+                      "title": "four public teams, two scored export decks each, event registration",
+                      "duration": 6140
+                    },
+                    {
+                      "title": "close, lock, publish participants twice, and start",
+                      "duration": 1320
+                    },
+                    {
+                      "title": "public next matches and locked submission state",
+                      "duration": 317
+                    },
+                    {
+                      "title": "play semifinals, verify final pair, complete final, archive champion",
+                      "duration": 865
+                    },
+                    {
+                      "title": "create second event, reuse teams, preserve first archive",
+                      "duration": 1108
+                    },
+                    {
+                      "title": "public editing in another browser and browser selection persistence",
+                      "duration": 791
+                    },
+                    {
+                      "title": "admin logout denies subsequent admin page access",
+                      "duration": 112
+                    }
+                  ],
+                  "startTime": "2026-10-23T05:19:33.621Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "29a46451ad8752e3b06b-b09e36d7d4bb4eba1865",
+          "file": "league.spec.mjs",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "mobile navigation, card search, keyboard access, and layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T05:19:46.960Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "29a46451ad8752e3b06b-d42620de7ead7e63f0d8",
+          "file": "league.spec.mjs",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "admin pricing search, draft publish, rules preview, and audit UI",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1969,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T05:19:48.177Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "29a46451ad8752e3b06b-e67399e5dc6902e547b0",
+          "file": "league.spec.mjs",
+          "line": 33,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-23T05:19:33.173Z",
+    "duration": 17086.175,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

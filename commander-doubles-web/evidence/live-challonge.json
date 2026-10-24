@@ -1,0 +1,2590 @@
+{
+  "base": "https://commander-doubles-staging-production.up.railway.app",
+  "provider": "actual Challonge v2.1",
+  "events": [
+    {
+      "id": "0795fd0f-b89d-4210-a72d-0c807e01a24f",
+      "name": "Disposable acceptance mvkit1j5 single elimination",
+      "description": "Disposable automated acceptance; not a real league event.",
+      "starts_at": "2026-10-24T05:19:34.879Z",
+      "timezone": "America/Phoenix",
+      "location": "Online",
+      "registration_opens": null,
+      "registration_closes": null,
+      "lock_at": null,
+      "locked": true,
+      "status": "complete",
+      "price_version_id": "d5417e85-faa9-4f07-8885-02138058f2d6",
+      "provider": "challonge",
+      "tournament_id": "18657130",
+      "tournament_url": "https://challonge.com/cd_2c8e4c3378504f70b11fde7804a9ee5c",
+      "tournament_type": "single elimination",
+      "tournament_state": "complete",
+      "sync_data": {
+        "matches": [
+          {
+            "id": "476696773",
+            "tie": false,
+            "round": 1,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569397,
+            "identifier": "A",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:37.184Z",
+              "started_at": "2026-10-23T05:19:37.455Z",
+              "updated_at": "2026-10-23T05:19:38.639Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657130/matches/476696773/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 1,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569397
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569400
+              }
+            ]
+          },
+          {
+            "id": "476696774",
+            "tie": false,
+            "round": 1,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569398,
+            "identifier": "B",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:37.199Z",
+              "started_at": "2026-10-23T05:19:37.476Z",
+              "updated_at": "2026-10-23T05:19:38.813Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657130/matches/476696774/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 2,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569398
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569399
+              }
+            ]
+          },
+          {
+            "id": "476696775",
+            "tie": false,
+            "round": 2,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569397,
+            "identifier": "C",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:37.209Z",
+              "started_at": "2026-10-23T05:19:38.821Z",
+              "updated_at": "2026-10-23T05:19:39.580Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657130/matches/476696775/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 3,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569397
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569398
+              }
+            ]
+          }
+        ],
+        "tournament": {
+          "id": "18657130",
+          "url": "cd_2c8e4c3378504f70b11fde7804a9ee5c",
+          "name": "Disposable acceptance mvkit1j5 single elimination",
+          "state": "complete",
+          "teams": null,
+          "private": true,
+          "game_name": null,
+          "starts_at": null,
+          "tie_breaks": [],
+          "timestamps": {
+            "starts_at": null,
+            "created_at": "2026-10-23T05:19:35.766Z",
+            "started_at": "2026-10-23T05:19:37.222Z",
+            "updated_at": "2026-10-23T05:19:40.659Z",
+            "completed_at": "2026-10-23T05:19:40.405Z"
+          },
+          "description": "",
+          "sign_up_url": null,
+          "match_options": {
+            "accept_attachments": false,
+            "consolation_matches_target_rank": null
+          },
+          "max_team_size": null,
+          "min_team_size": null,
+          "notifications": {
+            "upon_matches_open": true,
+            "upon_tournament_ends": true
+          },
+          "live_image_url": "https://challonge.com/cd_2c8e4c3378504f70b11fde7804a9ee5c.svg",
+          "miles_from_zip": null,
+          "progress_meter": 100,
+          "seeding_options": {
+            "hide_seeds": false,
+            "sequential_pairings": false
+          },
+          "station_options": {
+            "auto_assign": false,
+            "only_start_matches_with_assigned_stations": false
+          },
+          "tournament_type": "single elimination",
+          "full_challonge_url": "https://challonge.com/cd_2c8e4c3378504f70b11fde7804a9ee5c",
+          "participants_count": 4,
+          "group_stage_enabled": false,
+          "kilometers_from_zip": null,
+          "oauth_application_id": null,
+          "registration_options": {
+            "signup_cap": null,
+            "open_signup": false,
+            "check_in_duration": null
+          },
+          "decorated_tournament_type": "Single Elimination"
+        },
+        "participants": [
+          {
+            "id": "307569397",
+            "icon": null,
+            "misc": "cd-registration:b3527d20-bbfd-4145-a693-46bcb85e3a74",
+            "name": "Disposable acceptance mvkit1j5 Team 1",
+            "seed": 1,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 1,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:36.106Z",
+              "updated_at": "2026-10-23T05:19:36.106Z"
+            },
+            "tournament_id": 18657130,
+            "tie_break_points": null
+          },
+          {
+            "id": "307569398",
+            "icon": null,
+            "misc": "cd-registration:71544f6e-b28f-4eb6-8f7b-90d447f3b86e",
+            "name": "Disposable acceptance mvkit1j5 Team 2",
+            "seed": 2,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 2,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:36.279Z",
+              "updated_at": "2026-10-23T05:19:36.279Z"
+            },
+            "tournament_id": 18657130,
+            "tie_break_points": null
+          },
+          {
+            "id": "307569399",
+            "icon": null,
+            "misc": "cd-registration:1da176e8-e023-43fe-9ce3-bb550bdf3904",
+            "name": "Disposable acceptance mvkit1j5 Team 3",
+            "seed": 3,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 3,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:36.494Z",
+              "updated_at": "2026-10-23T05:19:36.494Z"
+            },
+            "tournament_id": 18657130,
+            "tie_break_points": null
+          },
+          {
+            "id": "307569400",
+            "icon": null,
+            "misc": "cd-registration:7855bb84-d867-45f3-91e7-c1290ae3ef29",
+            "name": "Disposable acceptance mvkit1j5 Team 4",
+            "seed": 4,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 3,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:36.623Z",
+              "updated_at": "2026-10-23T05:19:36.623Z"
+            },
+            "tournament_id": 18657130,
+            "tie_break_points": null
+          }
+        ]
+      },
+      "synced_at": "2026-10-23T05:19:40.325Z",
+      "sync_error": null,
+      "champion": "Disposable acceptance mvkit1j5 Team 1",
+      "created_at": "2026-10-23T05:19:34.986Z",
+      "submissions_locked": true,
+      "registrations": [
+        {
+          "id": "b3527d20-bbfd-4145-a693-46bcb85e3a74",
+          "event_id": "0795fd0f-b89d-4210-a72d-0c807e01a24f",
+          "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04",
+          "team_name": "Disposable acceptance mvkit1j5 Team 1",
+          "participant_id": "307569397",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "40839912-7ffe-4e65-9f6f-df6f8d5b2c92",
+              "submitted_at": "2026-10-23T05:19:34.270Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "7e9cba15-c5d0-40b2-aac4-8201afe8ec4e",
+              "submitted_at": "2026-10-23T05:19:34.340Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:35.114Z",
+          "updated_at": "2026-10-23T05:19:35.114Z"
+        },
+        {
+          "id": "71544f6e-b28f-4eb6-8f7b-90d447f3b86e",
+          "event_id": "0795fd0f-b89d-4210-a72d-0c807e01a24f",
+          "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55",
+          "team_name": "Disposable acceptance mvkit1j5 Team 2",
+          "participant_id": "307569398",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "a46ff857-e8f8-4ddd-a867-bf4a5f13d963",
+              "submitted_at": "2026-10-23T05:19:34.449Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "88f3103b-4681-4f37-8a1d-5d3e43601258",
+              "submitted_at": "2026-10-23T05:19:34.511Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:35.181Z",
+          "updated_at": "2026-10-23T05:19:35.181Z"
+        },
+        {
+          "id": "1da176e8-e023-43fe-9ce3-bb550bdf3904",
+          "event_id": "0795fd0f-b89d-4210-a72d-0c807e01a24f",
+          "team_id": "65d721c5-fe4d-44c5-9a39-57bd61592672",
+          "team_name": "Disposable acceptance mvkit1j5 Team 3",
+          "participant_id": "307569399",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "c72dba6a-f7c9-44f2-9e67-76b853ff17d6",
+              "submitted_at": "2026-10-23T05:19:34.639Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "b5300027-0924-47ba-8d87-6ba7ad138242",
+              "submitted_at": "2026-10-23T05:19:34.701Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:35.246Z",
+          "updated_at": "2026-10-23T05:19:35.246Z"
+        },
+        {
+          "id": "7855bb84-d867-45f3-91e7-c1290ae3ef29",
+          "event_id": "0795fd0f-b89d-4210-a72d-0c807e01a24f",
+          "team_id": "def9cbf0-7a87-4228-a92d-91e3cc9556af",
+          "team_name": "Disposable acceptance mvkit1j5 Team 4",
+          "participant_id": "307569400",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "ba192f4f-f91e-4e33-b5c3-189cc255b28b",
+              "submitted_at": "2026-10-23T05:19:34.818Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "3fab1646-afb7-4e2c-a926-9d76f66d4b45",
+              "submitted_at": "2026-10-23T05:19:34.879Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:35.308Z",
+          "updated_at": "2026-10-23T05:19:35.308Z"
+        }
+      ],
+      "matches": [
+        {
+          "id": "476696773",
+          "tie": false,
+          "round": 1,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569397,
+          "identifier": "A",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:37.184Z",
+            "started_at": "2026-10-23T05:19:37.455Z",
+            "updated_at": "2026-10-23T05:19:38.639Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657130/matches/476696773/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 1,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569397
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569400
+            }
+          ],
+          "players": [
+            {
+              "id": "307569397",
+              "name": "Disposable acceptance mvkit1j5 Team 1",
+              "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04"
+            },
+            {
+              "id": "307569400",
+              "name": "Disposable acceptance mvkit1j5 Team 4",
+              "team_id": "def9cbf0-7a87-4228-a92d-91e3cc9556af"
+            }
+          ]
+        },
+        {
+          "id": "476696774",
+          "tie": false,
+          "round": 1,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569398,
+          "identifier": "B",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:37.199Z",
+            "started_at": "2026-10-23T05:19:37.476Z",
+            "updated_at": "2026-10-23T05:19:38.813Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657130/matches/476696774/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 2,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569398
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569399
+            }
+          ],
+          "players": [
+            {
+              "id": "307569398",
+              "name": "Disposable acceptance mvkit1j5 Team 2",
+              "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55"
+            },
+            {
+              "id": "307569399",
+              "name": "Disposable acceptance mvkit1j5 Team 3",
+              "team_id": "65d721c5-fe4d-44c5-9a39-57bd61592672"
+            }
+          ]
+        },
+        {
+          "id": "476696775",
+          "tie": false,
+          "round": 2,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569397,
+          "identifier": "C",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:37.209Z",
+            "started_at": "2026-10-23T05:19:38.821Z",
+            "updated_at": "2026-10-23T05:19:39.580Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657130/matches/476696775/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 3,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569397
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569398
+            }
+          ],
+          "players": [
+            {
+              "id": "307569397",
+              "name": "Disposable acceptance mvkit1j5 Team 1",
+              "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04"
+            },
+            {
+              "id": "307569398",
+              "name": "Disposable acceptance mvkit1j5 Team 2",
+              "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55"
+            }
+          ]
+        }
+      ],
+      "standings": [
+        {
+          "id": "307569397",
+          "icon": null,
+          "misc": "cd-registration:b3527d20-bbfd-4145-a693-46bcb85e3a74",
+          "name": "Disposable acceptance mvkit1j5 Team 1",
+          "seed": 1,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 1,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:36.106Z",
+            "updated_at": "2026-10-23T05:19:36.106Z"
+          },
+          "tournament_id": 18657130,
+          "tie_break_points": null
+        },
+        {
+          "id": "307569398",
+          "icon": null,
+          "misc": "cd-registration:71544f6e-b28f-4eb6-8f7b-90d447f3b86e",
+          "name": "Disposable acceptance mvkit1j5 Team 2",
+          "seed": 2,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 2,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:36.279Z",
+            "updated_at": "2026-10-23T05:19:36.279Z"
+          },
+          "tournament_id": 18657130,
+          "tie_break_points": null
+        },
+        {
+          "id": "307569399",
+          "icon": null,
+          "misc": "cd-registration:1da176e8-e023-43fe-9ce3-bb550bdf3904",
+          "name": "Disposable acceptance mvkit1j5 Team 3",
+          "seed": 3,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 3,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:36.494Z",
+            "updated_at": "2026-10-23T05:19:36.494Z"
+          },
+          "tournament_id": 18657130,
+          "tie_break_points": null
+        },
+        {
+          "id": "307569400",
+          "icon": null,
+          "misc": "cd-registration:7855bb84-d867-45f3-91e7-c1290ae3ef29",
+          "name": "Disposable acceptance mvkit1j5 Team 4",
+          "seed": 4,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 3,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:36.623Z",
+            "updated_at": "2026-10-23T05:19:36.623Z"
+          },
+          "tournament_id": 18657130,
+          "tie_break_points": null
+        }
+      ]
+    },
+    {
+      "id": "40c113b8-99a9-434b-a419-b442b052ccc8",
+      "name": "Disposable acceptance mvkit1j5 round robin",
+      "description": "Disposable automated acceptance; not a real league event.",
+      "starts_at": "2026-10-24T05:19:41.317Z",
+      "timezone": "America/Phoenix",
+      "location": "Online",
+      "registration_opens": null,
+      "registration_closes": null,
+      "lock_at": null,
+      "locked": true,
+      "status": "complete",
+      "price_version_id": "d5417e85-faa9-4f07-8885-02138058f2d6",
+      "provider": "challonge",
+      "tournament_id": "18657131",
+      "tournament_url": "https://challonge.com/cd_7f3f540905fd43cda44b5db6e3f60e07",
+      "tournament_type": "round robin",
+      "tournament_state": "complete",
+      "sync_data": {
+        "matches": [
+          {
+            "id": "476696776",
+            "tie": false,
+            "round": 1,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569404,
+            "identifier": "A",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.570Z",
+              "started_at": "2026-10-23T05:19:43.719Z",
+              "updated_at": "2026-10-23T05:19:44.933Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696776/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 1,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569404
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569405
+              }
+            ]
+          },
+          {
+            "id": "476696777",
+            "tie": false,
+            "round": 1,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569406,
+            "identifier": "B",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.575Z",
+              "started_at": "2026-10-23T05:19:43.724Z",
+              "updated_at": "2026-10-23T05:19:45.086Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696777/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 2,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569406
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569403
+              }
+            ]
+          },
+          {
+            "id": "476696778",
+            "tie": false,
+            "round": 2,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569403,
+            "identifier": "C",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.589Z",
+              "started_at": "2026-10-23T05:19:43.729Z",
+              "updated_at": "2026-10-23T05:19:45.206Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696778/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 3,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569403
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569404
+              }
+            ]
+          },
+          {
+            "id": "476696779",
+            "tie": false,
+            "round": 2,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569405,
+            "identifier": "D",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.592Z",
+              "started_at": "2026-10-23T05:19:43.741Z",
+              "updated_at": "2026-10-23T05:19:45.365Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696779/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 4,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569405
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569406
+              }
+            ]
+          },
+          {
+            "id": "476696780",
+            "tie": false,
+            "round": 3,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569406,
+            "identifier": "E",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.595Z",
+              "started_at": "2026-10-23T05:19:43.746Z",
+              "updated_at": "2026-10-23T05:19:45.563Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696780/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 5,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569406
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569404
+              }
+            ]
+          },
+          {
+            "id": "476696781",
+            "tie": false,
+            "round": 3,
+            "state": "complete",
+            "scores": "1 - 0",
+            "location": null,
+            "winner_id": 307569405,
+            "identifier": "F",
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.598Z",
+              "started_at": "2026-10-23T05:19:43.750Z",
+              "updated_at": "2026-10-23T05:19:45.741Z",
+              "underway_at": null
+            },
+            "relationships": {
+              "attachments": {
+                "data": [],
+                "links": {
+                  "meta": {
+                    "count": 0
+                  },
+                  "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696781/attachments.json"
+                }
+              }
+            },
+            "score_in_sets": [
+              [
+                1,
+                0
+              ]
+            ],
+            "scheduled_time": null,
+            "suggested_play_order": 6,
+            "points_by_participant": [
+              {
+                "scores": [
+                  1
+                ],
+                "participant_id": 307569405
+              },
+              {
+                "scores": [
+                  0
+                ],
+                "participant_id": 307569403
+              }
+            ]
+          }
+        ],
+        "tournament": {
+          "id": "18657131",
+          "url": "cd_7f3f540905fd43cda44b5db6e3f60e07",
+          "name": "Disposable acceptance mvkit1j5 round robin",
+          "state": "complete",
+          "teams": null,
+          "private": true,
+          "game_name": null,
+          "starts_at": null,
+          "tie_breaks": [],
+          "timestamps": {
+            "starts_at": null,
+            "created_at": "2026-10-23T05:19:41.995Z",
+            "started_at": "2026-10-23T05:19:43.606Z",
+            "updated_at": "2026-10-23T05:19:46.608Z",
+            "completed_at": "2026-10-23T05:19:46.546Z"
+          },
+          "description": "",
+          "sign_up_url": null,
+          "match_options": {
+            "accept_attachments": false,
+            "consolation_matches_target_rank": null
+          },
+          "max_team_size": null,
+          "min_team_size": null,
+          "notifications": {
+            "upon_matches_open": true,
+            "upon_tournament_ends": true
+          },
+          "live_image_url": "https://challonge.com/cd_7f3f540905fd43cda44b5db6e3f60e07.svg",
+          "miles_from_zip": null,
+          "progress_meter": 100,
+          "seeding_options": {
+            "hide_seeds": false,
+            "sequential_pairings": false
+          },
+          "station_options": {
+            "auto_assign": false,
+            "only_start_matches_with_assigned_stations": false
+          },
+          "tournament_type": "round robin",
+          "full_challonge_url": "https://challonge.com/cd_7f3f540905fd43cda44b5db6e3f60e07",
+          "participants_count": 4,
+          "group_stage_enabled": false,
+          "kilometers_from_zip": null,
+          "round_robin_options": {
+            "ranking": "match wins",
+            "iterations": 1,
+            "pts_for_game_tie": 0,
+            "pts_for_game_win": 0,
+            "pts_for_match_tie": 0.5,
+            "pts_for_match_win": 1
+          },
+          "oauth_application_id": null,
+          "registration_options": {
+            "signup_cap": null,
+            "open_signup": false,
+            "check_in_duration": null
+          },
+          "decorated_tournament_type": "Round Robin"
+        },
+        "participants": [
+          {
+            "id": "307569403",
+            "icon": null,
+            "misc": "cd-registration:95e97350-4dec-45e3-bc15-06956bb93639",
+            "name": "Disposable acceptance mvkit1j5 Team 1",
+            "seed": 1,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 3,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:42.429Z",
+              "updated_at": "2026-10-23T05:19:42.429Z"
+            },
+            "tournament_id": 18657131,
+            "tie_break_points": null
+          },
+          {
+            "id": "307569404",
+            "icon": null,
+            "misc": "cd-registration:854b6fd5-2d57-4f36-922d-b42f7395a8d3",
+            "name": "Disposable acceptance mvkit1j5 Team 2",
+            "seed": 2,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 4,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:42.612Z",
+              "updated_at": "2026-10-23T05:19:42.612Z"
+            },
+            "tournament_id": 18657131,
+            "tie_break_points": null
+          },
+          {
+            "id": "307569405",
+            "icon": null,
+            "misc": "cd-registration:164398b3-de5d-4f2a-a73c-f259f355f121",
+            "name": "Disposable acceptance mvkit1j5 Team 3",
+            "seed": 3,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 1,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:42.786Z",
+              "updated_at": "2026-10-23T05:19:42.786Z"
+            },
+            "tournament_id": 18657131,
+            "tie_break_points": null
+          },
+          {
+            "id": "307569406",
+            "icon": null,
+            "misc": "cd-registration:1757013c-a397-4507-8492-6ef7ce67eb95",
+            "name": "Disposable acceptance mvkit1j5 Team 4",
+            "seed": 4,
+            "states": {
+              "active": true
+            },
+            "group_id": null,
+            "username": null,
+            "final_rank": 2,
+            "timestamps": {
+              "created_at": "2026-10-23T05:19:43.027Z",
+              "updated_at": "2026-10-23T05:19:43.027Z"
+            },
+            "tournament_id": 18657131,
+            "tie_break_points": null
+          }
+        ]
+      },
+      "synced_at": "2026-10-23T05:19:46.472Z",
+      "sync_error": null,
+      "champion": "Disposable acceptance mvkit1j5 Team 3",
+      "created_at": "2026-10-23T05:19:41.372Z",
+      "submissions_locked": true,
+      "registrations": [
+        {
+          "id": "95e97350-4dec-45e3-bc15-06956bb93639",
+          "event_id": "40c113b8-99a9-434b-a419-b442b052ccc8",
+          "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04",
+          "team_name": "Disposable acceptance mvkit1j5 Team 1",
+          "participant_id": "307569403",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "40839912-7ffe-4e65-9f6f-df6f8d5b2c92",
+              "submitted_at": "2026-10-23T05:19:34.270Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "7e9cba15-c5d0-40b2-aac4-8201afe8ec4e",
+              "submitted_at": "2026-10-23T05:19:34.340Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:41.534Z",
+          "updated_at": "2026-10-23T05:19:41.534Z"
+        },
+        {
+          "id": "854b6fd5-2d57-4f36-922d-b42f7395a8d3",
+          "event_id": "40c113b8-99a9-434b-a419-b442b052ccc8",
+          "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55",
+          "team_name": "Disposable acceptance mvkit1j5 Team 2",
+          "participant_id": "307569404",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "a46ff857-e8f8-4ddd-a867-bf4a5f13d963",
+              "submitted_at": "2026-10-23T05:19:34.449Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "88f3103b-4681-4f37-8a1d-5d3e43601258",
+              "submitted_at": "2026-10-23T05:19:34.511Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:41.606Z",
+          "updated_at": "2026-10-23T05:19:41.606Z"
+        },
+        {
+          "id": "164398b3-de5d-4f2a-a73c-f259f355f121",
+          "event_id": "40c113b8-99a9-434b-a419-b442b052ccc8",
+          "team_id": "65d721c5-fe4d-44c5-9a39-57bd61592672",
+          "team_name": "Disposable acceptance mvkit1j5 Team 3",
+          "participant_id": "307569405",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "c72dba6a-f7c9-44f2-9e67-76b853ff17d6",
+              "submitted_at": "2026-10-23T05:19:34.639Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "b5300027-0924-47ba-8d87-6ba7ad138242",
+              "submitted_at": "2026-10-23T05:19:34.701Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:41.667Z",
+          "updated_at": "2026-10-23T05:19:41.667Z"
+        },
+        {
+          "id": "1757013c-a397-4507-8492-6ef7ce67eb95",
+          "event_id": "40c113b8-99a9-434b-a419-b442b052ccc8",
+          "team_id": "def9cbf0-7a87-4228-a92d-91e3cc9556af",
+          "team_name": "Disposable acceptance mvkit1j5 Team 4",
+          "participant_id": "307569406",
+          "decks": [
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 1,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "ba192f4f-f91e-4e33-b5c3-189cc255b28b",
+              "submitted_at": "2026-10-23T05:19:34.818Z"
+            },
+            {
+              "deck": {
+                "name": "Pasted Moxfield export",
+                "cards": [
+                  {
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "oracle_id": "e2962883-6daf-4a84-af73-917afc73092c"
+                  },
+                  {
+                    "name": "Island",
+                    "zone": "main",
+                    "count": 98,
+                    "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373"
+                  },
+                  {
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487"
+                  }
+                ]
+              },
+              "slot": 2,
+              "score": {
+                "name": "Pasted Moxfield export",
+                "count": 100,
+                "legal": true,
+                "errors": [],
+                "points": 19,
+                "pointed": [
+                  {
+                    "each": 15,
+                    "name": "Sol Ring",
+                    "zone": "main",
+                    "count": 1,
+                    "points": 15
+                  },
+                  {
+                    "each": 4,
+                    "name": "Shorikai, Genesis Engine",
+                    "zone": "command",
+                    "count": 1,
+                    "points": 4
+                  }
+                ],
+                "warning": null,
+                "complete": true,
+                "commandCount": 1,
+                "catalogVersion": "oracle-2026-10-20",
+                "withinIndividualBudget": true,
+                "gameplayLegalityApproved": false
+              },
+              "source_url": null,
+              "version_id": "3fab1646-afb7-4e2c-a926-9d76f66d4b45",
+              "submitted_at": "2026-10-23T05:19:34.879Z"
+            }
+          ],
+          "score": {
+            "max": 120,
+            "label": "Within points budget",
+            "legal": true,
+            "points": 38,
+            "within": true,
+            "checked": true,
+            "complete": true,
+            "transfer": 0,
+            "budgetWithin": true
+          },
+          "created_at": "2026-10-23T05:19:41.724Z",
+          "updated_at": "2026-10-23T05:19:41.724Z"
+        }
+      ],
+      "matches": [
+        {
+          "id": "476696776",
+          "tie": false,
+          "round": 1,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569404,
+          "identifier": "A",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.570Z",
+            "started_at": "2026-10-23T05:19:43.719Z",
+            "updated_at": "2026-10-23T05:19:44.933Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696776/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 1,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569404
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569405
+            }
+          ],
+          "players": [
+            {
+              "id": "307569404",
+              "name": "Disposable acceptance mvkit1j5 Team 2",
+              "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55"
+            },
+            {
+              "id": "307569405",
+              "name": "Disposable acceptance mvkit1j5 Team 3",
+              "team_id": "65d721c5-fe4d-44c5-9a39-57bd61592672"
+            }
+          ]
+        },
+        {
+          "id": "476696777",
+          "tie": false,
+          "round": 1,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569406,
+          "identifier": "B",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.575Z",
+            "started_at": "2026-10-23T05:19:43.724Z",
+            "updated_at": "2026-10-23T05:19:45.086Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696777/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 2,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569406
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569403
+            }
+          ],
+          "players": [
+            {
+              "id": "307569406",
+              "name": "Disposable acceptance mvkit1j5 Team 4",
+              "team_id": "def9cbf0-7a87-4228-a92d-91e3cc9556af"
+            },
+            {
+              "id": "307569403",
+              "name": "Disposable acceptance mvkit1j5 Team 1",
+              "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04"
+            }
+          ]
+        },
+        {
+          "id": "476696778",
+          "tie": false,
+          "round": 2,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569403,
+          "identifier": "C",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.589Z",
+            "started_at": "2026-10-23T05:19:43.729Z",
+            "updated_at": "2026-10-23T05:19:45.206Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696778/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 3,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569403
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569404
+            }
+          ],
+          "players": [
+            {
+              "id": "307569403",
+              "name": "Disposable acceptance mvkit1j5 Team 1",
+              "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04"
+            },
+            {
+              "id": "307569404",
+              "name": "Disposable acceptance mvkit1j5 Team 2",
+              "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55"
+            }
+          ]
+        },
+        {
+          "id": "476696779",
+          "tie": false,
+          "round": 2,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569405,
+          "identifier": "D",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.592Z",
+            "started_at": "2026-10-23T05:19:43.741Z",
+            "updated_at": "2026-10-23T05:19:45.365Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696779/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 4,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569405
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569406
+            }
+          ],
+          "players": [
+            {
+              "id": "307569405",
+              "name": "Disposable acceptance mvkit1j5 Team 3",
+              "team_id": "65d721c5-fe4d-44c5-9a39-57bd61592672"
+            },
+            {
+              "id": "307569406",
+              "name": "Disposable acceptance mvkit1j5 Team 4",
+              "team_id": "def9cbf0-7a87-4228-a92d-91e3cc9556af"
+            }
+          ]
+        },
+        {
+          "id": "476696780",
+          "tie": false,
+          "round": 3,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569406,
+          "identifier": "E",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.595Z",
+            "started_at": "2026-10-23T05:19:43.746Z",
+            "updated_at": "2026-10-23T05:19:45.563Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696780/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 5,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569406
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569404
+            }
+          ],
+          "players": [
+            {
+              "id": "307569406",
+              "name": "Disposable acceptance mvkit1j5 Team 4",
+              "team_id": "def9cbf0-7a87-4228-a92d-91e3cc9556af"
+            },
+            {
+              "id": "307569404",
+              "name": "Disposable acceptance mvkit1j5 Team 2",
+              "team_id": "5b806f2c-492b-44a0-aaec-3e4d034d0d55"
+            }
+          ]
+        },
+        {
+          "id": "476696781",
+          "tie": false,
+          "round": 3,
+          "state": "complete",
+          "scores": "1 - 0",
+          "location": null,
+          "winner_id": 307569405,
+          "identifier": "F",
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.598Z",
+            "started_at": "2026-10-23T05:19:43.750Z",
+            "updated_at": "2026-10-23T05:19:45.741Z",
+            "underway_at": null
+          },
+          "relationships": {
+            "attachments": {
+              "data": [],
+              "links": {
+                "meta": {
+                  "count": 0
+                },
+                "related": "https://api.challonge.com/v2.1/tournaments/18657131/matches/476696781/attachments.json"
+              }
+            }
+          },
+          "score_in_sets": [
+            [
+              1,
+              0
+            ]
+          ],
+          "scheduled_time": null,
+          "suggested_play_order": 6,
+          "points_by_participant": [
+            {
+              "scores": [
+                1
+              ],
+              "participant_id": 307569405
+            },
+            {
+              "scores": [
+                0
+              ],
+              "participant_id": 307569403
+            }
+          ],
+          "players": [
+            {
+              "id": "307569405",
+              "name": "Disposable acceptance mvkit1j5 Team 3",
+              "team_id": "65d721c5-fe4d-44c5-9a39-57bd61592672"
+            },
+            {
+              "id": "307569403",
+              "name": "Disposable acceptance mvkit1j5 Team 1",
+              "team_id": "d94feed9-99b3-471d-a919-51c25f40fc04"
+            }
+          ]
+        }
+      ],
+      "standings": [
+        {
+          "id": "307569405",
+          "icon": null,
+          "misc": "cd-registration:164398b3-de5d-4f2a-a73c-f259f355f121",
+          "name": "Disposable acceptance mvkit1j5 Team 3",
+          "seed": 3,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 1,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:42.786Z",
+            "updated_at": "2026-10-23T05:19:42.786Z"
+          },
+          "tournament_id": 18657131,
+          "tie_break_points": null
+        },
+        {
+          "id": "307569406",
+          "icon": null,
+          "misc": "cd-registration:1757013c-a397-4507-8492-6ef7ce67eb95",
+          "name": "Disposable acceptance mvkit1j5 Team 4",
+          "seed": 4,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 2,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:43.027Z",
+            "updated_at": "2026-10-23T05:19:43.027Z"
+          },
+          "tournament_id": 18657131,
+          "tie_break_points": null
+        },
+        {
+          "id": "307569403",
+          "icon": null,
+          "misc": "cd-registration:95e97350-4dec-45e3-bc15-06956bb93639",
+          "name": "Disposable acceptance mvkit1j5 Team 1",
+          "seed": 1,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 3,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:42.429Z",
+            "updated_at": "2026-10-23T05:19:42.429Z"
+          },
+          "tournament_id": 18657131,
+          "tie_break_points": null
+        },
+        {
+          "id": "307569404",
+          "icon": null,
+          "misc": "cd-registration:854b6fd5-2d57-4f36-922d-b42f7395a8d3",
+          "name": "Disposable acceptance mvkit1j5 Team 2",
+          "seed": 2,
+          "states": {
+            "active": true
+          },
+          "group_id": null,
+          "username": null,
+          "final_rank": 4,
+          "timestamps": {
+            "created_at": "2026-10-23T05:19:42.612Z",
+            "updated_at": "2026-10-23T05:19:42.612Z"
+          },
+          "tournament_id": 18657131,
+          "tie_break_points": null
+        }
+      ]
+    }
+  ]
+}

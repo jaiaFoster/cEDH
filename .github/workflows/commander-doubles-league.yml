@@ -1,0 +1,39 @@
+name: Commander Doubles league
+on:
+  pull_request:
+    paths: ['commander-doubles-web/**', '.github/workflows/commander-doubles-league.yml']
+  push:
+    branches: ['commander-doubles-league']
+    paths: ['commander-doubles-web/**', '.github/workflows/commander-doubles-league.yml']
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env: { POSTGRES_PASSWORD: postgres, POSTGRES_DB: league }
+        ports: ['5432:5432']
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    defaults:
+      run:
+        working-directory: commander-doubles-web
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/league
+      DATABASE_SCHEMA: browser_ci
+      ADMIN_PASSWORD: ci-only-admin-password
+      SESSION_SECRET: ci-only-session-secret-not-for-deployments
+      ALLOW_MOCK: 'true'
+      APP_ENV: ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: npm, cache-dependency-path: commander-doubles-web/package-lock.json }
+      - run: npm ci
+      - run: mkdir -p reports && node --test --test-reporter=spec --test-reporter=junit --test-reporter-destination=stdout --test-reporter-destination=reports/unit-integration.xml tests/*.test.mjs
+      - run: npx playwright install --with-deps chromium
+      - run: npm start > /tmp/league.log 2>&1 &
+      - run: for i in $(seq 1 30); do curl -fsS http://localhost:3000/health && break; sleep 1; done
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: acceptance-reports, path: 'commander-doubles-web/reports/' }

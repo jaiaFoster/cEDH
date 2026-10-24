@@ -1,0 +1,31 @@
+{
+  "unitAndPostgres": {
+    "passed": 47,
+    "failed": 0,
+    "provider": "deterministic mock with actual Railway PostgreSQL"
+  },
+  "deployedBrowser": {
+    "passed": 3,
+    "failed": 0,
+    "deployment": "https://commander-doubles-staging-production.up.railway.app"
+  },
+  "liveChallonge": {
+    "passed": true,
+    "formats": [
+      "single elimination",
+      "round robin"
+    ],
+    "firstEvent": "0795fd0f-b89d-4210-a72d-0c807e01a24f",
+    "secondEvent": "40c113b8-99a9-434b-a419-b442b052ccc8",
+    "sameTeamIds": true,
+    "firstArchiveUnchanged": true
+  },
+  "moxfield": {
+    "localDirectImportSucceeded": true,
+    "railwayDirectImportSucceeded": false,
+    "railwayExportFallbackSucceeded": true
+  },
+  "backupRecovery": {
+    "passed": true
+  }
+}
