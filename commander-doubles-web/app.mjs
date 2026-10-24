@@ -22,6 +22,7 @@ import {
 import { resolveCard, evaluate, evaluateSavedDeck, teamEvaluation } from "./legality.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
+import { searchScryfall, scryfallClient as defaultScryfallClient } from "./scryfall-search.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const fail = (message, status = 400) =>
   Object.assign(new Error(message), { status });
@@ -154,7 +155,7 @@ async function sync(c, event) {
   });
   return data;
 }
-export function createApp() {
+export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
   const app = express();
   app.set("trust proxy", 1);
   app.disable("x-powered-by");
@@ -308,7 +309,9 @@ export function createApp() {
       : await currentPrices();
     res.json({
       version: { id: version.id, name: version.name },
-      ...searchCards(version.prices, filters),
+      ...(filters.source === "scryfall"
+        ? await searchScryfall(version.prices, filters, scryfallClient)
+        : searchCards(version.prices, filters)),
     });
   });
   app.post("/api/score", async (req, res) => {

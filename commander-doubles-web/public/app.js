@@ -133,6 +133,7 @@ async function homeTeam(event) {
 }
 const defaultPointFilters = () => ({
   q: "",
+  source: "local",
   points: "pointed",
   zone: "either",
   identity: "",
@@ -152,6 +153,7 @@ let pointFilters = defaultPointFilters(),
   pointRequest,
   pointRequestId = 0,
   pointTimer;
+let localPointSettings;
 const pointSelect = (id, label, options) =>
   '<div class="field"><label for="point-' +
   id +
@@ -203,6 +205,7 @@ async function points() {
     esc(pointFilters.q) +
     '"><button class="primary" type="submit">Search</button></div>' +
     '<details id="catalog-advanced" class="catalog-advanced"><summary>Advanced</summary>' +
+    '<label class="live-search-toggle"><input id="point-source" type="checkbox"> Search all Magic cards with Scryfall</label><p class="help" id="point-source-help"></p>' +
     '<p class="help" id="point-query-help">Use names or combine <code>id:</code>, <code>c:</code>, <code>t:</code>, <code>o:</code>, and <code>mv</code> comparisons. Quote phrases, such as <code>"Sol Ring"</code>. Space-separated terms use AND.</p>' +
     '<details class="catalog-help"><summary>Search examples & supported syntax</summary><p class="help"><code>id:wu t:artifact mv&lt;=3</code> finds artifacts usable in white-blue identity. <code>c:u</code> requires blue color; <code>id=wu</code> requires exactly white-blue identity. <code>o:"draw a card" -t:creature</code> excludes creatures. <code>!"Sol Ring"</code> matches an exact name. Colorless uses <code>c:c</code> or <code>id:c</code>; multicolor uses <code>c:m</code> or <code>id:m</code>. Comparisons: <code>= != &lt; &lt;= &gt; &gt;=</code> for mana value and color sets. Other Scryfall operators, OR, groups, and regex are unsupported and show an error. Oracle text uses literal text from the pinned catalog, including reminder text.</p></details>' +
     '<fieldset class="identity-filter"><legend>Color identity</legend><div class="identity-options">' +
@@ -294,11 +297,32 @@ async function points() {
       ["50", "50"],
       ["100", "100"],
     ]) +
-    '<button id="point-reset" type="button">Reset filters</button></div><p class="help">Prices: ' +
+    '<button id="point-reset" type="button">Reset filters</button></div><p id="point-metadata-note" class="help">Prices: ' +
     esc(state.price.name) +
     '. Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.</p></details></form>' +
     '<div id="point-status" class="meta" role="status" aria-live="polite"></div><div id="point-table" aria-busy="true"></div></section>';
   const form = $("#points-search");
+  function sourceControls() {
+    const live = pointFilters.source === "scryfall";
+    $("#point-source").checked = live;
+    for (const key of ["points", "zone", "min", "max"])
+      $("#point-" + key).disabled = live;
+    for (const option of $("#point-sort").options)
+      option.disabled = live && /^(main|command)_/.test(option.value);
+    $("#point-limit").innerHTML = (live ? [["175", "175 (Scryfall page)"]] : [["50", "50"], ["100", "100"]])
+      .map(([value,label]) => `<option value="${value}">${label}</option>`).join("");
+    $("#point-limit").value = pointFilters.limit;
+    $("#point-limit").disabled = live;
+    $("#point-query-help").hidden = live;
+    $("#card-search").setAttribute("aria-describedby", live ? "point-source-help" : "point-query-help");
+    $("#point-metadata-note").textContent = "Prices: " + state.price.name + (live
+      ? ". Card information: live Scryfall. Pending means league price verification is required. League deck checks and prices are unchanged."
+      : ". Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.");
+    form.querySelector(".catalog-help").hidden = live;
+    $("#point-source-help").textContent = live
+      ? "Live Scryfall search supports its full syntax and current card catalog. League prices are shown where verified; other cards are marked Pending, never free. Point filters and point sorting are available with this option off. Card information is live; deck checks still use the league catalog."
+      : "The league catalog includes known zero-point cards too. Enable this option to discover additional cards through Scryfall. League prices and deck scoring are unchanged.";
+  }
   function changed(debounce) {
     pointFilters.q = $("#card-search").value;
     pointFilters.identity = [
@@ -315,7 +339,7 @@ async function points() {
     $("#point-status").textContent = "Searching…";
     $("#point-table").innerHTML = "";
     $("#point-table").setAttribute("aria-busy", "true");
-    if (debounce) pointTimer = setTimeout(loadPoints, 200);
+    if (debounce) pointTimer = setTimeout(loadPoints, pointFilters.source === "scryfall" ? 500 : 200);
     else loadPoints();
   }
   form.onsubmit = (e) => {
@@ -326,6 +350,17 @@ async function points() {
     if (e.target.matches('input:not([type="checkbox"])')) changed(true);
   };
   form.onchange = (e) => {
+    if (e.target.id === "point-source") {
+      if (e.target.checked) {
+        localPointSettings = Object.fromEntries(["points", "zone", "min", "max", "sort", "limit"].map(k=>[k,pointFilters[k]]));
+        Object.assign(pointFilters, {source:"scryfall", points:"all", zone:"either", min:"", max:"", sort:"name_asc", limit:"175"});
+      } else {
+        Object.assign(pointFilters, localPointSettings || {points:"pointed", zone:"either", min:"", max:"", sort:"main_desc", limit:"50"}, {source:"local"});
+      }
+      for (const key of ["points", "zone", "min", "max", "sort"])
+        $("#point-" + key).value = pointFilters[key];
+      sourceControls(); changed(false); return;
+    }
     if (e.target.matches('select, input[type="checkbox"]')) changed(false);
   };
   $("#point-reset").onclick = async () => {
@@ -334,6 +369,7 @@ async function points() {
     await points();
     $("#card-search")?.focus();
   };
+  sourceControls();
   await loadPoints();
 }
 async function loadPoints() {
@@ -395,18 +431,20 @@ async function loadPoints() {
       " of " +
       data.total.toLocaleString() +
       " cards · " +
-      data.version.name;
+      data.version.name +
+      (data.source === "scryfall" ? " · Live Scryfall results" : "");
     const identity = (c) =>
       c.identity.length ? c.identity.join(" / ") : "Colorless";
-    const command = (c) => (c.commanderEligible || c.command ? c.command : "—");
+    const command = (c) => c.priceKnown === false ? "Pending" : (c.commanderEligible || c.command ? c.command : "—");
     target.innerHTML =
+      (data.warnings || []).map(w=>'<p class="help">' + esc(w) + '</p>').join("") +
       (data.cards.length
-        ? '<div class="table-wrap"><table class="catalog-table"><caption class="sr-only">Matching league card prices</caption><thead><tr><th scope="col">Card</th><th class="num" scope="col">Main deck</th><th class="num" scope="col">Command zone</th></tr></thead><tbody>' +
+        ? '<div class="table-wrap"><table class="catalog-table"><caption class="sr-only">Matching cards and league prices</caption><thead><tr><th scope="col">Card</th><th class="num" scope="col">Main deck</th><th class="num" scope="col">Command zone</th></tr></thead><tbody>' +
           data.cards
             .map(
               (c) =>
                 '<tr data-oracle-id="' +
-                c.oracle_id +
+                esc(c.oracle_id || "") +
                 '"><td class="catalog-card"><a href="' +
                 esc(c.url) +
                 '" target="_blank" rel="noopener noreferrer">' +
@@ -416,15 +454,16 @@ async function loadPoints() {
                 " · MV " +
                 c.mv +
                 " · Identity " +
-                identity(c) +
+                esc(identity(c)) +
                 "</div>" +
+                (c.priceKnown === false ? '<span class="tag warn">League price review pending</span>' : "") +
                 (c.legal
                   ? ""
                   : '<span class="tag warn">Not Commander legal</span>') +
                 '</td><td class="num ' +
                 (c.main ? "count" : "") +
                 '">' +
-                c.main +
+                (c.priceKnown === false ? "Pending" : c.main) +
                 '</td><td class="num ' +
                 (c.command ? "count" : "") +
                 '">' +
