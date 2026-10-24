@@ -19,7 +19,7 @@ import {
   getMoxfield,
   normalizeName,
 } from "./scoring.mjs";
-import { resolveCard, evaluate, teamEvaluation } from "./legality.mjs";
+import { resolveCard, evaluate, evaluateSavedDeck, teamEvaluation } from "./legality.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -89,7 +89,7 @@ async function deckPair(c, team, prices) {
     [team],
   );
   return r.rows.map((d) => {
-    const v = evaluate(d.deck, prices);
+    const v = evaluateSavedDeck(d, prices);
     return {
       version_id: d.id,
       slot: d.slot,
@@ -364,7 +364,7 @@ export function createApp() {
     const version = await currentPrices();
     const decks = rows.rows.map((d) => ({
       ...d,
-      current_score: evaluate(d.deck, version.prices).score,
+      current_score: evaluateSavedDeck(d, version.prices).score,
     }));
     res.json({
       ...team,
@@ -670,7 +670,7 @@ export function createApp() {
       ]);
       await one(c, "SELECT id FROM teams WHERE id=$1 FOR UPDATE", [d.team_id]);
       const p = await currentPrices(c),
-        v = evaluate(d.deck, p.prices),
+        v = evaluateSavedDeck(d, p.prices),
         n = id();
       await c.query(
         "INSERT INTO deck_versions(id,team_id,slot,source_url,source_text,deck,score,price_version_id,actor,restored_from) VALUES($1,$2,$3,$4,$5,$6,$7,$8,'admin',$9)",

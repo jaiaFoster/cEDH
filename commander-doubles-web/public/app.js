@@ -75,7 +75,7 @@ function matchCard(m) {
 }
 function scoreMarkup(s) {
   if (!s) return "";
-  return `<div class="result ${s.legal && s.withinIndividualBudget ? "good" : "bad"}"><div class="eyebrow">${esc(s.name)}</div><span class="total">${s.points}</span> <span class="meta">points · ${s.count}/100 cards</span><p>${s.legal ? "Construction checks passed against the pinned catalog." : "Construction requires attention."} ${s.withinIndividualBudget ? "" : "Above the individual 72-point cap."}</p>${s.errors?.length ? `<ul class="error-list">${s.errors.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>` : ""}<details><summary>${s.pointed.length} pointed cards · view breakdown</summary><table><thead><tr><th>Card / zone</th><th class="num">Each</th><th class="num">Points</th></tr></thead><tbody>${s.pointed.map((c) => `<tr><td>${c.count} ${esc(c.name)}<br><span class="meta">${esc(c.zone)}</span></td><td class="num">${c.each}</td><td class="num">${c.points}</td></tr>`).join("")}</tbody></table></details></div>`;
+  return `<div class="result ${s.legal && s.withinIndividualBudget ? "good" : "bad"}"><div class="eyebrow">${esc(s.name)}</div><span class="total">${s.points}</span> <span class="meta">points · ${s.count}/100 cards</span><p>${s.legal ? "Construction checks passed against the pinned catalog." : "Construction requires attention."} ${s.withinIndividualBudget ? "" : "Above the individual 72-point cap."}</p>${s.errors?.length ? `<ul class="error-list">${s.errors.map((e) => `<li>${esc(e)}</li>`).join("")}</ul>` : ""}${s.warnings?.length ? `<div class="import-notice"><strong>Check matched card names</strong><ul>${s.warnings.map((w) => `<li>${esc(w)}</li>`).join("")}</ul></div>` : ""}<details><summary>${s.pointed.length} pointed cards · view breakdown</summary><table><thead><tr><th>Card / zone</th><th class="num">Each</th><th class="num">Points</th></tr></thead><tbody>${s.pointed.map((c) => `<tr><td>${c.count} ${esc(c.name)}<br><span class="meta">${esc(c.zone)}</span></td><td class="num">${c.each}</td><td class="num">${c.points}</td></tr>`).join("")}</tbody></table></details></div>`;
 }
 function teamScore(s) {
   return s?.checked
@@ -527,10 +527,18 @@ async function teamDetail() {
     form.onsubmit = async (e) => {
       e.preventDefault();
       await busy(e.submitter, async () => {
-        await api(`/api/teams/${t.id}/decks/${slot}`, "POST", {
-          link: $("#link-" + slot).value,
-          text: $("#export-" + slot).value,
-        });
+        try {
+          await api(`/api/teams/${t.id}/decks/${slot}`, "POST", {
+            link: $("#link-" + slot).value,
+            text: $("#export-" + slot).value,
+          });
+        } catch (error) {
+          if (/Moxfield/i.test(error.message) && !$("#export-" + slot).value.trim()) {
+            form.querySelector("details").open = true;
+            $("#export-" + slot).focus();
+          }
+          throw error;
+        }
         await teamDetail();
         notice("Deck scored and saved. Review the validation below.");
       });
@@ -539,7 +547,7 @@ async function teamDetail() {
 }
 function deckForm(t, slot) {
   const d = t.decks.find((d) => d.slot === slot);
-  return `<section class="spaced"><div class="divider"></div><span class="eyebrow">Player ${slot}</span><h3 class="spaced">${esc(t.players[slot - 1] || "Deck " + slot)}</h3>${d ? `<p class="meta">Saved ${esc(dt(d.created_at))} · ${esc(d.deck.name)}</p>${scoreMarkup(d.current_score)}` : ""}<form id="deck-${slot}">${field("link-" + slot, "Public Moxfield deck URL", d?.source_url || "", "url", 'placeholder="https://moxfield.com/decks/…"')}<details ${d ? "" : "open"}><summary>Paste or upload a Moxfield text export</summary><p class="help">If Moxfield blocks automatic access, use its text export. Include COMMANDER and MAINBOARD (or DECK) section headings. Sideboard and maybeboard are ignored.</p>${area("export-" + slot, "Deck export", "", 'placeholder="COMMANDER&#10;1 Your Commander&#10;&#10;MAINBOARD&#10;99 Island"')}<div class="field"><label for="upload-${slot}">Upload .txt export</label><input id="upload-${slot}" type="file" accept=".txt,text/plain"></div></details><div class="actions"><button type="submit" class="primary">Score & save player ${slot}</button></div></form></section>`;
+  return `<section class="spaced"><div class="divider"></div><span class="eyebrow">Player ${slot}</span><h3 class="spaced">${esc(t.players[slot - 1] || "Deck " + slot)}</h3>${d ? `<p class="meta">Saved ${esc(dt(d.created_at))} · ${esc(d.deck.name)}</p>${scoreMarkup(d.current_score)}` : ""}<form id="deck-${slot}">${field("link-" + slot, "Public Moxfield deck URL", d?.source_url || "", "url", 'placeholder="https://moxfield.com/decks/…"')}<details ${d ? "" : "open"}><summary>Paste or upload a Moxfield text export</summary><p class="help">If Moxfield blocks automatic access, use its text export. Include COMMANDER and MAINBOARD (or DECK) headings, or mark commanders with *CMDR*. Minor unambiguous spelling differences are matched and shown for review. Sideboard and maybeboard are ignored.</p>${area("export-" + slot, "Deck export", "", 'placeholder="COMMANDER&#10;1 Your Commander&#10;&#10;MAINBOARD&#10;99 Island"')}<div class="field"><label for="upload-${slot}">Upload .txt export</label><input id="upload-${slot}" type="file" accept=".txt,text/plain"></div></details><div class="actions"><button type="submit" class="primary">Score & save player ${slot}</button></div></form></section>`;
 }
 async function eventPage(eventId) {
   const e = await api("/api/events/" + eventId);

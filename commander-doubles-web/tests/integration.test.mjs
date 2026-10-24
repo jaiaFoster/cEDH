@@ -225,6 +225,39 @@ await test("PostgreSQL application acceptance: tournament one through tournament
         );
       },
     );
+    await t.test("deck imports accept digital representatives, expose corrections, and retain real legality failures", async (subtest) => {
+      const raw = "COMMANDER\n1 Kenrith, the Returned King\nMAINBOARD\n97 Island\n1 Bayou\n1 Lotus Petla";
+      const scored = await post("/api/score", { decks: [{ text: raw }] });
+      assert.equal(scored.decks[0].legal, true);
+      assert.equal(scored.decks[0].points, 14);
+      assert.equal(scored.decks[0].count, 100);
+      assert.equal(scored.decks[0].nameCorrections[0].canonical, "Lotus Petal");
+      assert.match(scored.decks[0].warnings[0], /Lotus Petla/);
+      const banned = await post("/api/score", { decks: [{ text: raw.replace("Lotus Petla", "Black Lotus") }] });
+      assert.equal(banned.decks[0].legal, false);
+      assert.ok(banned.decks[0].errors.some(e => /banned/.test(e)));
+      await post("/api/score", { decks: [{ text: raw.replace("Lotus Petla", "Imaginary Unknown Card") }] }, false, 400);
+      const team = await post("/api/teams", { name: "Import regression fixture" }, false, 201);
+      subtest.after(async () => {
+        await q("DELETE FROM deck_versions WHERE team_id=$1", [team.id]);
+        await q("DELETE FROM teams WHERE id=$1", [team.id]);
+      });
+      const saved = await post(`/api/teams/${team.id}/decks/1`, { text: raw }, false, 201);
+      const fresh = await get(`/api/teams/${team.id}`);
+      assert.deepEqual(fresh.decks[0].current_score.nameCorrections, saved.score.nameCorrections);
+      assert.equal(fresh.decks[0].current_score.legal, true);
+      // Simulate an older stored canonicalization bug; only its derived current
+      // score changes. Stored version/score and event snapshots remain untouched.
+      const source = raw.replace("Lotus Petla", "Demonic Tutor");
+      const legacy = structuredClone(saved.deck);
+      legacy.cards.find(c => c.name === "Lotus Petal").name = "Emeritus of Woe // Demonic Tutor";
+      await q("UPDATE deck_versions SET source_text=$2,deck=$3,score=$4 WHERE id=$1", [saved.id, source, JSON.stringify(legacy), JSON.stringify({ points: 5, legal: false })]);
+      const repaired = await get(`/api/teams/${team.id}`);
+      assert.equal(repaired.decks[0].current_score.points, 20);
+      assert.equal(repaired.decks[0].current_score.legal, true);
+      assert.deepEqual(repaired.decks[0].score, { points: 5, legal: false });
+      assert.equal(repaired.decks[0].deck.cards.find(c => c.name.includes("Emeritus")).name, "Emeritus of Woe // Demonic Tutor");
+    });
     await t.test(
       "four persistent teams with two decks each, complete scores and event registration",
       async () => {

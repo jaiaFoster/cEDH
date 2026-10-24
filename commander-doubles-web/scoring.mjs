@@ -148,34 +148,41 @@ export function parseExport(text) {
     commandFound = false;
   const cards = [];
   for (const original of text.split(/\r?\n/)) {
-    const line = original.trim();
+    let line = original.trim();
     if (!line || line.startsWith("#") || line.startsWith("//")) continue;
-    if (/^(commander|commanders)$/i.test(line)) {
+    if (/^\[?(commander|commanders)\]?:?$/i.test(line)) {
       zone = "command";
       commandFound = true;
       continue;
     }
-    if (/^(mainboard|main|deck)$/i.test(line)) {
+    if (/^\[?(mainboard|main|deck)\]?:?$/i.test(line)) {
       zone = "main";
       continue;
     }
     if (
-      /^(sideboard|maybeboard|considering|companion|tokens|attractions|stickers)$/i.test(
+      /^\[?(sideboard|maybeboard|considering|companion|tokens|attractions|stickers)\]?:?$/i.test(
         line,
       )
     ) {
       zone = "ignore";
       continue;
     }
-    if (zone === "ignore") continue;
+    let inlineCommander = false;
+    // Moxfield printing/foil tags can occur in either order.
+    let marker;
+    while ((marker = line.match(/\s+\*(CMDR|F|E)\*\s*$/i))) {
+      if (marker[1].toUpperCase() === "CMDR") inlineCommander = commandFound = true;
+      line = line.slice(0, marker.index).trim();
+    }
+    if (zone === "ignore" && !inlineCommander) continue;
     const match = line.match(
-      /^(\d+)\s+(.+?)(?:\s+\([A-Za-z0-9_-]+\)\s+[A-Za-z0-9-]+)?$/,
+      /^(\d+)x?\s+(.+?)(?:\s+\([A-Za-z0-9_-]+\)(?:\s+[A-Za-z0-9★†*-]+)?)?$/i,
     );
     if (!match) throw Error("Could not read export line: " + line.slice(0, 80));
     const count = Number(match[1]);
     if (!Number.isInteger(count) || count < 1 || count > 100)
       throw Error("Invalid card count");
-    cards.push({ name: match[2].trim(), count, zone });
+    cards.push({ name: match[2].trim(), count, zone: inlineCommander ? "command" : zone });
   }
   if (!commandFound)
     throw Error(
@@ -280,7 +287,12 @@ export async function getMoxfield(
         response.status +
         ". Ensure the link is public.",
     );
-  const json = await response.json();
+  let json;
+  try {
+    json = await response.json();
+  } catch {
+    throw Error("Moxfield returned unreadable deck data. Use the pasted export option below.");
+  }
   const value = decodeMoxfield(json);
   if (cache.size > 100) cache.clear();
   cache.set(id, { at: Date.now(), value });
