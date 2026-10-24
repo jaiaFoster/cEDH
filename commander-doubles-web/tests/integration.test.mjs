@@ -258,6 +258,49 @@ await test("PostgreSQL application acceptance: tournament one through tournament
       assert.deepEqual(repaired.decks[0].score, { points: 5, legal: false });
       assert.equal(repaired.decks[0].deck.cards.find(c => c.name.includes("Emeritus")).name, "Emeritus of Woe // Demonic Tutor");
     });
+    await t.test("decks are isolated by team and empty registrations receive only their own later submissions", async (subtest) => {
+      const a = await post("/api/teams", { name: "Association A", players: ["A1", "A2"] }, false, 201);
+      const b = await post("/api/teams", { name: "Association B", players: ["B1", "B2"] }, false, 201);
+      let reg;
+      subtest.after(async () => {
+        if (reg) {
+          await q("DELETE FROM registration_versions WHERE registration_id=$1", [reg.id]);
+          await q("DELETE FROM registrations WHERE id=$1", [reg.id]);
+        }
+        for (const team of [a, b]) {
+          await q("DELETE FROM deck_versions WHERE team_id=$1", [team.id]);
+          await q("DELETE FROM teams WHERE id=$1", [team.id]);
+        }
+      });
+      const original = await post(`/api/teams/${a.id}/decks/1`, { text }, false, 201);
+      const originalA = await get(`/api/teams/${a.id}`);
+      assert.equal(originalA.decks[0].team_id, a.id);
+      assert.equal(originalA.decks[0].current_deck.cards.find(c => c.name === "Sol Ring").count, 1);
+      assert.equal((await get(`/api/teams/${b.id}`)).decks.length, 0);
+      reg = await post(`/api/events/${event.id}/register`, { team_id: b.id }, false, 201);
+      const registered = (await get(`/api/events/${event.id}`)).registrations.find(r => r.id === reg.id);
+      assert.deepEqual(registered.decks, []);
+      const bText = "COMMANDER\n1 Kenrith, the Returned King\nMAINBOARD\n99 Forest";
+      const saved = await post(`/api/teams/${b.id}/decks/2`, { text: bText }, false, 201);
+      const freshB = await get(`/api/teams/${b.id}`);
+      assert.equal(freshB.decks.length, 1);
+      assert.equal(freshB.decks[0].team_id, b.id);
+      assert.equal(freshB.decks[0].slot, 2);
+      assert.equal(freshB.decks[0].id, saved.id);
+      assert.deepEqual((await get(`/api/teams/${a.id}`)).decks, originalA.decks);
+      assert.deepEqual((await get(`/api/events/${event.id}`)).registrations.find(r => r.id === reg.id).decks, []);
+      const copied = await post(`/api/events/${event.id}/submission`, { team_id: b.id });
+      assert.equal(copied.decks.length, 1);
+      assert.equal(copied.decks[0].version_id, saved.id);
+      assert.equal(copied.decks[0].slot, 2);
+      assert.equal(copied.decks[0].deck.cards[0].name, "Kenrith, the Returned King");
+      await call(`/api/teams/${a.id}`, "PATCH", { name: "Renamed Association A", players: ["New name", "A2"] });
+      const renamed = await get(`/api/teams/${a.id}`);
+      assert.equal(renamed.id, a.id);
+      assert.equal(renamed.decks[0].id, original.id);
+      assert.equal(renamed.decks[0].team_id, a.id);
+      assert.equal((await get(`/api/teams/${b.id}`)).decks[0].id, saved.id);
+    });
     await t.test(
       "four persistent teams with two decks each, complete scores and event registration",
       async () => {

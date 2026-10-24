@@ -1010,3 +1010,14 @@ dialog::backdrop {
   overflow-wrap: anywhere;
 }
 .import-notice ul { padding-left: 20px; }
+
+.saved-decklist {
+  margin: 16px 0;
+  min-width: 0;
+}
+.saved-decklist pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.team-deck { min-width: 0; }

@@ -30,9 +30,10 @@ function notice(message, error = false) {
     error ? 11000 : 5000,
   );
 }
-async function api(url, method = "GET", body) {
+async function api(url, method = "GET", body, { signal } = {}) {
   const response = await fetch(url, {
     method,
+    ...(signal ? { signal } : {}),
     headers: {
       "Content-Type": "application/json",
       ...(session.csrf ? { "x-csrf-token": session.csrf } : {}),
@@ -113,25 +114,22 @@ async function home() {
       }<a class="text-link" href="/events/${e.id}">Full bracket & standings →</a></div>`;
   }
 }
+let homeTeamRequest = 0;
 async function homeTeam(event) {
-  if (!teamId()) {
-    return;
-  }
-  const team = state.teams.find((t) => t.id === teamId());
+  const request = ++homeTeamRequest, target = $("#home-team-info"), picker = $("#home-team");
+  if (!target || !picker) return;
+  const selected = picker.value;
+  const team = state.teams.find((t) => t.id === selected);
+  target.innerHTML = team ? '<p role="status">Loading team…</p>' : empty("Ready when you are", "Choose a registered team or create your own.");
   if (!team) return;
   let extra = "";
   if (event) {
     const e = await api("/api/events/" + event.id);
-    const match = e.matches.find(
-      (m) =>
-        m.state === "open" && m.players.some((p) => p?.team_id === team.id),
-    );
-    extra = match
-      ? `<h3 class="spaced">Your next match</h3>${matchCard(match)}`
-      : '<p class="spaced">No open match for your team in this event.</p>';
+    const match = e.matches.find((m) => m.state === "open" && m.players.some((p) => p?.team_id === team.id));
+    extra = match ? `<h3 class="spaced">Your next match</h3>${matchCard(match)}` : '<p class="spaced">No open match for your team in this event.</p>';
   }
-  $("#home-team-info").innerHTML =
-    `<h3 class="spaced">${esc(team.name)}</h3><p>${team.players.filter(Boolean).map(esc).join(" + ") || "Player names optional"}</p>${extra}`;
+  if (request !== homeTeamRequest || target !== $("#home-team-info") || !target.isConnected || picker.value !== selected) return;
+  target.innerHTML = `<h3 class="spaced">${esc(team.name)}</h3><p>${team.players.filter(Boolean).map(esc).join(" + ") || "Player names optional"}</p>${extra}`;
 }
 const defaultPointFilters = () => ({
   q: "",
@@ -465,16 +463,39 @@ async function loadPoints() {
       target.setAttribute("aria-busy", "false");
   }
 }
+let teamDetailRequest = 0, teamDetailController;
+let adminTeamRequest = 0, adminTeamController;
+function selectTeamForEditing(id) {
+  setTeam(id);
+  history.replaceState(null, "", id ? "/teams?team=" + encodeURIComponent(id) : "/teams");
+}
+function deckListMarkup(deck, title = "View full saved decklist") {
+  const rows = deck?.cards || [];
+  const section = (zone) => rows.filter(c => c.zone === zone).map(c => `${c.count} ${c.name}`).join("\n");
+  return `<details class="saved-decklist"><summary>${esc(title)}</summary><pre tabindex="0">${esc("COMMANDER\n" + section("command") + "\n\nMAINBOARD\n" + section("main"))}</pre></details>`;
+}
+function savedDeckMarkup(d, team, slot) {
+  if (!d) return empty("No deck submitted", `No saved deck for ${team.name} · player ${slot}.`);
+  return `<p class="meta">Saved for ${esc(team.name)} · player ${slot}<br>${esc(dt(d.created_at))} · ${esc(d.deck.name)}</p>${scoreMarkup(d.current_score)}${deckListMarkup(d.current_deck || d.deck)}${d.source_url ? `<p><a class="text-link" href="${esc(d.source_url)}" target="_blank" rel="noopener">Open submitted Moxfield deck ↗</a></p>` : ""}`;
+}
 async function teams() {
+  const requested = new URLSearchParams(location.search).get("team");
+  const invalidRequest = requested !== null && !state.teams.some(t => t.id === requested);
+  if (requested !== null) setTeam(invalidRequest ? "" : requested);
   main.innerHTML =
     head(
       "Your side of the table",
       "Find your team.",
-      "One team identity across every tournament. Anyone can edit unlocked decks. Previous versions are saved.",
+      "Create a separate team for a new pair of players, or choose an existing team to manage its saved decks.",
     ) +
-    `<div class="wide-grid"><div class="stack"><div class="panel"><label for="team-select">Select a registered team</label><select id="team-select">${teamOptions()}</select><div id="team-detail"></div></div></div><div class="panel"><h2>Make it official.</h2><p>Create your team once. Bring it back every event.</p><form id="create-team">${field("team-name", "Unique team name", "", "text", 'required maxlength="80"')}<div class="fields">${field("player-one", "Player one (optional)")}${field("player-two", "Player two (optional)")}</div><button class="primary" type="submit">Create team →</button></form></div></div>`;
+    `<div class="actions"><a class="button primary" id="new-team-link" href="#create-team">Create a new team →</a></div><div class="wide-grid spaced"><div class="stack"><div class="panel"><label for="team-select">Select a registered team</label><select id="team-select">${teamOptions()}</select><div id="team-detail" aria-live="polite"></div></div></div><div class="panel"><h2>Create a new team</h2><p>New players or a different pair? Create a separate team here. Its two deck slots start empty.</p><form id="create-team">${field("team-name", "Unique team name", "", "text", 'required maxlength="80"')}<div class="fields">${field("player-one", "Player one (optional)")}${field("player-two", "Player two (optional)")}</div><button class="primary" type="submit">Create team →</button></form></div></div>`;
+  $("#new-team-link").onclick = (e) => {
+    e.preventDefault();
+    $("#team-name").focus();
+    $("#create-team").scrollIntoView({ block: "center", behavior: "smooth" });
+  };
   $("#team-select").onchange = async (e) => {
-    setTeam(e.target.value);
+    selectTeamForEditing(e.target.value);
     await teamDetail();
   };
   $("#create-team").onsubmit = async (e) => {
@@ -484,73 +505,113 @@ async function teams() {
         name: $("#team-name").value,
         players: [$("#player-one").value, $("#player-two").value],
       });
-      setTeam(t.id);
+      selectTeamForEditing(t.id);
       await reload();
       await teams();
-      notice("Team created. Add your two decks.");
+      notice("Team created. Both deck slots are empty; decks can be added later.");
     });
   };
   await teamDetail();
+  if (invalidRequest) notice("That team is unavailable. Choose an existing team or create a new one.", true);
 }
 async function teamDetail() {
-  if (!teamId()) {
-    if ($("#team-detail"))
-      $("#team-detail").innerHTML = empty(
-        "Pick your side",
-        "Select a team to view its decks and edit its details.",
-      );
+  const request = ++teamDetailRequest;
+  teamDetailController?.abort();
+  teamDetailController = new AbortController();
+  const target = $("#team-detail"), picker = $("#team-select");
+  if (!target || !picker) return;
+  const selected = picker.value;
+  // The visible per-tab selection is authoritative. Browser storage only
+  // supplies a default on initial navigation; another tab cannot retarget a form.
+  const current = () => request === teamDetailRequest && target.isConnected &&
+    target === $("#team-detail") && picker.value === selected;
+  target.removeAttribute("data-team-id");
+  target.setAttribute("aria-busy", "true");
+  target.innerHTML = selected ? '<p role="status">Loading selected team…</p>' : empty(
+    "Pick your side", "Select a team to view its decks, or create a separate team for new players.");
+  if (!selected) { target.setAttribute("aria-busy", "false"); return; }
+  let t;
+  try {
+    t = await api("/api/teams/" + encodeURIComponent(selected), "GET", undefined, { signal: teamDetailController.signal });
+    if (!current()) return;
+    if (t.id !== selected || t.decks.some(d => d.team_id !== selected))
+      throw Error("The returned decks do not belong to the selected team. Reload and try again.");
+  } catch (error) {
+    if (!current() || error.name === "AbortError") return;
+    target.innerHTML = empty("Unable to load this team", error.message);
+    target.setAttribute("aria-busy", "false");
     return;
   }
-  const t = await api("/api/teams/" + teamId());
-  $("#team-detail").innerHTML =
-    `<div class="divider"></div><form id="edit-team"><div class="fields">${field("edit-name", "Team name", t.name, "text", 'required maxlength="80"')}${field("edit-p1", "Player one", t.players[0] || "")}</div>${field("edit-p2", "Player two", t.players[1] || "")}<button class="small" type="submit">Save team details</button></form>${teamScore(t.team_score)}<p class="help">General decks are reusable. Saving here does not change event submissions; update those on the event page before the lock.</p>${[1, 2].map((slot) => deckForm(t, slot)).join("")}`;
-  $("#edit-team").onsubmit = async (e) => {
+  target.dataset.teamId = t.id;
+  target.setAttribute("aria-busy", "false");
+  target.innerHTML =
+    `<div class="divider"></div><h2>Editing existing team: ${esc(t.name)}</h2><p class="help">Changes here update this same team. Renaming the team or changing players keeps its existing decks. Use <a href="#create-team">Create a new team</a> for a separate pair.</p><form id="edit-team" data-team-id="${esc(t.id)}"><div class="fields">${field("edit-name", "Team name", t.name, "text", 'required maxlength="80"')}${field("edit-p1", "Player one", t.players[0] || "")}</div>${field("edit-p2", "Player two", t.players[1] || "")}<button class="small" type="submit">Save team details</button></form>${teamScore(t.team_score)}<p class="help">General decks are reusable. Saving here does not change event submissions; update those on the event page before the lock.</p>${[1, 2].map((slot) => deckForm(t, slot)).join("")}`;
+  const editForm = target.querySelector("#edit-team");
+  editForm.onsubmit = async (e) => {
     e.preventDefault();
+    if (!current() || !editForm.isConnected) return;
+    const name = editForm.querySelector("#edit-name").value;
+    const players = [editForm.querySelector("#edit-p1").value, editForm.querySelector("#edit-p2").value];
+    if (name.trim() !== t.name && !window.confirm(`Rename existing team “${t.name}” to “${name.trim()}”? Its saved decks and registrations stay with this same team. To register a different pair, cancel and use Create a new team.`)) return;
     await busy(e.submitter, async () => {
-      await api("/api/teams/" + t.id, "PATCH", {
-        name: $("#edit-name").value,
-        players: [$("#edit-p1").value, $("#edit-p2").value],
-      });
+      await api("/api/teams/" + t.id, "PATCH", { name, players });
       await reload();
-      notice("Team details saved");
+      if (current()) {
+        picker.selectedOptions[0].textContent = state.teams.find(team => team.id === t.id)?.name || name.trim();
+        await teamDetail();
+        notice("Team details saved");
+      }
     });
   };
   for (const slot of [1, 2]) {
-    const form = $("#deck-" + slot);
-    $("#upload-" + slot).onchange = async (e) => {
-      const f = e.target.files[0];
+    const form = target.querySelector("#deck-" + slot);
+    const upload = form.querySelector("#upload-" + slot);
+    const output = form.querySelector("#export-" + slot);
+    const link = form.querySelector("#link-" + slot);
+    let uploadRead = 0;
+    upload.onchange = async (e) => {
+      const read = ++uploadRead, f = e.target.files[0];
       if (f) {
         if (f.size > 50000) return notice("Export must be under 50 KB", true);
-        $("#export-" + slot).value = await f.text();
+        try {
+          const text = await f.text();
+          if (current() && form.isConnected && read === uploadRead) output.value = text;
+        } catch {
+          if (current() && form.isConnected && read === uploadRead)
+            notice("Could not read that export file. Try selecting it again or paste the text.", true);
+        }
       }
     };
     form.onsubmit = async (e) => {
       e.preventDefault();
+      if (!current() || !form.isConnected) return;
+      const submission = { link: link.value, text: output.value };
       await busy(e.submitter, async () => {
         try {
-          await api(`/api/teams/${t.id}/decks/${slot}`, "POST", {
-            link: $("#link-" + slot).value,
-            text: $("#export-" + slot).value,
-          });
+          await api(`/api/teams/${t.id}/decks/${slot}`, "POST", submission);
         } catch (error) {
-          if (/Moxfield/i.test(error.message) && !$("#export-" + slot).value.trim()) {
+          if (!current() || !form.isConnected) return;
+          if (/Moxfield/i.test(error.message) && !output.value.trim()) {
             form.querySelector("details").open = true;
-            $("#export-" + slot).focus();
+            output.focus();
           }
           throw error;
         }
-        await teamDetail();
-        notice("Deck scored and saved. Review the validation below.");
+        if (current()) {
+          await teamDetail();
+          notice("Deck scored and saved. Review the validation below.");
+        }
       });
     };
   }
 }
 function deckForm(t, slot) {
   const d = t.decks.find((d) => d.slot === slot);
-  return `<section class="spaced"><div class="divider"></div><span class="eyebrow">Player ${slot}</span><h3 class="spaced">${esc(t.players[slot - 1] || "Deck " + slot)}</h3>${d ? `<p class="meta">Saved ${esc(dt(d.created_at))} · ${esc(d.deck.name)}</p>${scoreMarkup(d.current_score)}` : ""}<form id="deck-${slot}">${field("link-" + slot, "Public Moxfield deck URL", d?.source_url || "", "url", 'placeholder="https://moxfield.com/decks/…"')}<details ${d ? "" : "open"}><summary>Paste or upload a Moxfield text export</summary><p class="help">If Moxfield blocks automatic access, use its text export. Include COMMANDER and MAINBOARD (or DECK) headings, or mark commanders with *CMDR*. Minor unambiguous spelling differences are matched and shown for review. Sideboard and maybeboard are ignored.</p>${area("export-" + slot, "Deck export", "", 'placeholder="COMMANDER&#10;1 Your Commander&#10;&#10;MAINBOARD&#10;99 Island"')}<div class="field"><label for="upload-${slot}">Upload .txt export</label><input id="upload-${slot}" type="file" accept=".txt,text/plain"></div></details><div class="actions"><button type="submit" class="primary">Score & save player ${slot}</button></div></form></section>`;
+  return `<section class="spaced team-deck" data-team-id="${esc(t.id)}" data-slot="${slot}"><div class="divider"></div><span class="eyebrow">Player ${slot}</span><h3 class="spaced">${esc(t.players[slot - 1] || "Deck " + slot)}</h3>${savedDeckMarkup(d, t, slot)}<form id="deck-${slot}" data-team-id="${esc(t.id)}">${field("link-" + slot, "Public Moxfield deck URL", d?.source_url || "", "url", 'placeholder="https://moxfield.com/decks/…"')}<details ${d ? "" : "open"}><summary>Paste or upload a Moxfield text export</summary><p class="help">If Moxfield blocks automatic access, use its text export. Include COMMANDER and MAINBOARD (or DECK) headings, or mark commanders with *CMDR*. Minor unambiguous spelling differences are matched and shown for review. Sideboard and maybeboard are ignored.</p>${area("export-" + slot, "Deck export", "", 'placeholder="COMMANDER&#10;1 Your Commander&#10;&#10;MAINBOARD&#10;99 Island"')}<div class="field"><label for="upload-${slot}">Upload .txt export</label><input id="upload-${slot}" type="file" accept=".txt,text/plain"></div></details><div class="actions"><button type="submit" class="primary">Score & save player ${slot}</button></div></form></section>`;
 }
 async function eventPage(eventId) {
   const e = await api("/api/events/" + eventId);
+  const selectedTeam = $("#event-team")?.value ?? teamId();
   activeEvent = e;
   main.innerHTML =
     head(
@@ -569,7 +630,7 @@ async function eventPage(eventId) {
           ? "All matches are complete."
           : "Pairings appear after the organizer starts the tournament.",
       )
-    }<details><summary>All rounds & results</summary>${e.matches.map(matchCard).join("") || empty("No results yet")}</details>${e.tournament_url ? `<div class="actions"><a class="button" href="${esc(e.tournament_url)}" target="_blank" rel="noopener">Open Challonge ↗</a></div><details><summary>View embedded bracket</summary><iframe title="Challonge tournament bracket" src="${esc(e.tournament_url)}/module" width="100%" height="520" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe></details>` : ""}</div><div class="panel"><h2>${e.status === "complete" ? "Final standings" : "Registered teams"}</h2>${e.standings.length ? `<table><thead><tr><th>Rank</th><th>Team</th></tr></thead><tbody>${e.standings.map((p) => `<tr><td>${p.final_rank}</td><td>${esc(p.name)}</td></tr>`).join("")}</tbody></table>` : ""}${e.registrations.map((r) => `<details><summary>${esc(r.team_name)} · ${r.score?.points ?? "—"} points ${r.score?.within ? "✓" : "· needs decks"}</summary><p class="help">Event snapshot updated ${esc(dt(r.updated_at, e.timezone))}</p>${r.decks.map((d) => scoreMarkup(d.score) + `<details><summary>View resolved decklist</summary><pre>${esc(d.deck.cards.map((c) => `${c.zone === "command" ? "[Commander] " : ""}${c.count} ${c.name}`).join("\n"))}</pre></details>`).join("") || empty("No submitted decks yet")}</details>`).join("") || empty("The roster is open", "Be the first team to register.")}</div></section><aside class="stack"><div class="panel selected-team"><h2>Your team</h2><label for="event-team">Choose a team</label><select id="event-team">${teamOptions()}</select><div id="event-team-info"></div></div><div class="panel"><h3>Event details</h3><p class="meta">${esc(e.location)}<br>${esc(dt(e.starts_at, e.timezone))}</p><div class="divider"></div><p class="meta">Registration opens<br><strong>${esc(dt(e.registration_opens, e.timezone))}</strong></p><p class="meta">Registration closes<br><strong>${esc(dt(e.registration_closes, e.timezone))}</strong></p><p class="meta">Deck deadline<br><strong>${esc(dt(e.lock_at, e.timezone))}</strong></p><p class="help">Prices are frozen for this event. Later price publications do not change this tournament.</p></div></aside></div>`;
+    }<details><summary>All rounds & results</summary>${e.matches.map(matchCard).join("") || empty("No results yet")}</details>${e.tournament_url ? `<div class="actions"><a class="button" href="${esc(e.tournament_url)}" target="_blank" rel="noopener">Open Challonge ↗</a></div><details><summary>View embedded bracket</summary><iframe title="Challonge tournament bracket" src="${esc(e.tournament_url)}/module" width="100%" height="520" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe></details>` : ""}</div><div class="panel"><h2>${e.status === "complete" ? "Final standings" : "Registered teams"}</h2>${e.standings.length ? `<table><thead><tr><th>Rank</th><th>Team</th></tr></thead><tbody>${e.standings.map((p) => `<tr><td>${p.final_rank}</td><td>${esc(p.name)}</td></tr>`).join("")}</tbody></table>` : ""}${e.registrations.map((r) => `<details><summary>${esc(r.team_name)} · ${r.score?.points ?? "—"} points ${r.score?.within ? "✓" : "· needs decks"}</summary><p class="help">Event snapshot updated ${esc(dt(r.updated_at, e.timezone))}</p>${r.decks.map((d) => scoreMarkup(d.score) + `<details><summary>View resolved decklist</summary><pre>${esc(d.deck.cards.map((c) => `${c.zone === "command" ? "[Commander] " : ""}${c.count} ${c.name}`).join("\n"))}</pre></details>`).join("") || empty("No submitted decks yet")}</details>`).join("") || empty("The roster is open", "Be the first team to register.")}</div></section><aside class="stack"><div class="panel selected-team"><h2>Your team</h2><label for="event-team">Choose a team</label><select id="event-team">${teamOptions(selectedTeam)}</select><div id="event-team-info"></div></div><div class="panel"><h3>Event details</h3><p class="meta">${esc(e.location)}<br>${esc(dt(e.starts_at, e.timezone))}</p><div class="divider"></div><p class="meta">Registration opens<br><strong>${esc(dt(e.registration_opens, e.timezone))}</strong></p><p class="meta">Registration closes<br><strong>${esc(dt(e.registration_closes, e.timezone))}</strong></p><p class="meta">Deck deadline<br><strong>${esc(dt(e.lock_at, e.timezone))}</strong></p><p class="help">Prices are frozen for this event. Later price publications do not change this tournament.</p></div></aside></div>`;
   $("#event-team").onchange = (e2) => {
     setTeam(e2.target.value);
     eventTeam(e);
@@ -577,8 +638,9 @@ async function eventPage(eventId) {
   eventTeam(e);
 }
 function eventTeam(e) {
-  const t = state.teams.find((t) => t.id === teamId()),
-    r = e.registrations.find((r) => r.team_id === teamId());
+  const selected = $("#event-team").value;
+  const t = state.teams.find((t) => t.id === selected),
+    r = e.registrations.find((r) => r.team_id === selected);
   $("#event-team-info").innerHTML = t
     ? `<h3 class="spaced">${esc(t.name)}</h3>${r ? `${tag("Registered")}${teamScore(r.score)}${!e.submissions_locked ? action("Update event from saved team decks", "event-submit", true) : '<p class="help spaced">These event decks are locked. General team decks can still be changed for future tournaments.</p>'}` : e.status === "registration" && !e.submissions_locked ? `<p class="spaced">Your saved decks will be copied into this event.</p>${action("Register this team →", "event-register", true)}` : empty("Registration is closed")}<div class="actions"><a class="text-link meta" href="/teams">Edit general team decks →</a></div>`
     : empty("Choose your team", "Or create one on the Teams page.");
@@ -695,7 +757,7 @@ async function renderAdmin() {
   if (adminTab === "teams") {
     el.innerHTML = `<div class="panel"><h2>Team records & recovery</h2><p>Public team details and decks can be edited on the Teams page. Archived teams retain event history.</p><label for="admin-team">Team</label><select id="admin-team">${teamOptions("", true)}</select><div id="admin-team-detail"></div><a href="/teams" class="text-link">Create or edit a team →</a></div>`;
     $("#admin-team").onchange = async (e) => {
-      if (e.target.value) await adminTeam(e.target.value);
+      await adminTeam(e.target.value);
     };
   }
   if (adminTab === "prices") {
@@ -846,11 +908,32 @@ async function adminEvent(eventId) {
     };
 }
 async function adminTeam(team) {
-  const t = adminData.teams.find((t) => t.id === team);
-  const history = await api("/api/admin/teams/" + team + "/history");
-  setTeam(team);
-  $("#admin-team-detail").innerHTML =
-    `<h3 class="spaced">${esc(t.name)}</h3><div class="actions"><a class="button small" href="/teams">Edit team & decks</a>${action(t.archived ? "Restore team" : "Archive team", (t.archived ? "unarchive:" : "archive:") + team)}</div><h3 class="spaced">Deck submission history</h3>${history.map((d) => `<details class="history-item"><summary>Player ${d.slot} · ${esc(dt(d.created_at))} · ${d.score.points} points · ${esc(d.actor)}</summary>${scoreMarkup(d.score)}<pre>${esc(d.deck.cards.map((c) => `${c.zone} · ${c.count} ${c.name}`).join("\n"))}</pre>${action("Restore this deck version", "restore-deck:" + d.id)}</details>`).join("") || empty("No saved decks")}`;
+  const request = ++adminTeamRequest;
+  adminTeamController?.abort();
+  adminTeamController = new AbortController();
+  const target = $("#admin-team-detail"), picker = $("#admin-team");
+  if (!target || !picker) return;
+  const current = () => request === adminTeamRequest && target.isConnected &&
+    target === $("#admin-team-detail") && picker.value === team;
+  target.innerHTML = team ? '<p role="status">Loading team decks…</p>' : empty("Choose a team", "View its current decks and saved versions.");
+  target.setAttribute("aria-busy", team ? "true" : "false");
+  if (!team) return;
+  try {
+    const options = { signal: adminTeamController.signal };
+    const [t, history] = await Promise.all([
+      api("/api/teams/" + encodeURIComponent(team), "GET", undefined, options),
+      api("/api/admin/teams/" + encodeURIComponent(team) + "/history", "GET", undefined, options),
+    ]);
+    if (!current()) return;
+    if (t.id !== team || t.decks.some(d => d.team_id !== team) || history.some(d => d.team_id !== team))
+      throw Error("The returned decks do not belong to the selected team.");
+    target.innerHTML =
+      `<h3 class="spaced">${esc(t.name)}</h3><div class="actions">${!t.archived ? `<a class="button small" href="/teams?team=${encodeURIComponent(team)}">Edit team & decks</a>` : ""}${action(t.archived ? "Restore team" : "Archive team", (t.archived ? "unarchive:" : "archive:") + team)}</div><h3 class="spaced">Current saved decks</h3>${[1, 2].map(slot => `<section class="team-deck spaced" data-team-id="${esc(team)}" data-slot="${slot}"><h4>Player ${slot} · ${esc(t.players[slot - 1] || "Deck " + slot)}</h4>${savedDeckMarkup(t.decks.find(d => d.slot === slot), t, slot)}</section>`).join("")}<h3 class="spaced">Deck submission history</h3>${history.map((d) => `<details class="history-item"><summary>Player ${d.slot} · ${esc(dt(d.created_at))} · ${d.score.points} points · ${esc(d.actor)}</summary>${scoreMarkup(d.score)}${deckListMarkup(d.deck, "View historical decklist")}${action("Restore this deck version", "restore-deck:" + d.id)}</details>`).join("") || empty("No saved decks")}`;
+  } catch (error) {
+    if (current() && error.name !== "AbortError") target.innerHTML = empty("Unable to load this team", error.message);
+  } finally {
+    if (current()) target.setAttribute("aria-busy", "false");
+  }
 }
 async function regHistory(regId) {
   const versions = await api("/api/admin/registrations/" + regId + "/history");
@@ -917,7 +1000,7 @@ document.addEventListener("click", async (ev) => {
     }
     if (a === "event-register") {
       await api("/api/events/" + activeEvent.id + "/register", "POST", {
-        team_id: teamId(),
+        team_id: $("#event-team").value,
       });
       await eventPage(activeEvent.id);
       notice("Team registered");
@@ -925,7 +1008,7 @@ document.addEventListener("click", async (ev) => {
     }
     if (a === "event-submit") {
       await api("/api/events/" + activeEvent.id + "/submission", "POST", {
-        team_id: teamId(),
+        team_id: $("#event-team").value,
       });
       await eventPage(activeEvent.id);
       notice("Event submission updated from your saved decks");
