@@ -307,6 +307,7 @@ if (new Set(searchIndex.map((c) => c.oracle_id)).size !== searchIndex.length)
 
 const allowed = new Set([
   "q",
+  "source",
   "offset",
   "limit",
   "version",
@@ -346,11 +347,15 @@ export function parseFilters(params = {}) {
     !["0", "1", "true", "false"].includes(params.pointed)
   )
     bad("pointed must be 0 or 1.");
+  const source = choice(params.source || "local", ["local", "scryfall"], "search source");
+  if ((params.q || "").length > 2000) bad("Search is limited to 2,000 characters.", "invalid_query");
   const f = {
-    predicate: compileQuery(params.q || ""),
+    source,
+    query: params.q || "",
+    predicate: source === "local" ? compileQuery(params.q || "") : () => true,
     sort: choice(params.sort || "name_asc", SORTS, "sort"),
     offset: integer(params.offset ?? "0", "Offset", 0, 1000000),
-    limit: integer(params.limit ?? "100", "Page size", 1, 100),
+    limit: integer(params.limit ?? (source === "scryfall" ? "175" : "100"), "Page size", 1, source === "scryfall" ? 175 : 100),
     points: choice(
       params.points ||
         (["1", "true"].includes(params.pointed) ? "pointed" : "all"),

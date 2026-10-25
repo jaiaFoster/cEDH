@@ -1,4 +1,8 @@
 import express from "express";
+import {
+  searchScryfall,
+  scryfallClient as defaultScryfallClient,
+} from "./scryfall-search.mjs";
 import helmet from "helmet";
 import { rateLimit } from "express-rate-limit";
 import {
@@ -155,7 +159,7 @@ async function sync(c, event) {
   });
   return data;
 }
-export function createApp() {
+export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
   const app = express();
   app.set("trust proxy", 1);
   app.disable("x-powered-by");
@@ -309,7 +313,9 @@ export function createApp() {
       : await currentPrices();
     res.json({
       version: { id: version.id, name: version.name },
-      ...searchCards(version.prices, filters),
+      ...(filters.source === "scryfall"
+        ? await searchScryfall(version.prices, filters, scryfallClient)
+        : searchCards(version.prices, filters)),
     });
   });
   app.post("/api/score", async (req, res) => {

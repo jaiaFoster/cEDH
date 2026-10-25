@@ -67,7 +67,7 @@ Team loading clears old forms immediately and discards aborted/stale responses. 
 
 The search bar and results remain visible. Search help, filters, sorting, page-size selection, reset, and metadata notes are grouped in the **Advanced** disclosure, collapsed by default. Closing it preserves active filters and results; resetting filters restores the collapsed view.
 
-`/points` supports a **bounded Scryfall-style subset**, backed by the local pinned catalog. It is not a proxy to Scryfall. Ordinary searches need no external API access. Search metadata never supplies or estimates league prices: `/api/points` reads the selected **published PostgreSQL price version** on every request. The browser pins that version while paginating to avoid mixed schedules; reload the page to pick up a later publication. Administrator card picking still uses the same endpoint, with its original numeric `main` and `command` fields.
+`/points` defaults to a **bounded Scryfall-style subset**, backed by the local pinned catalog. Ordinary searches need no external API access. The optional live discovery mode described below uses Scryfall’s API. Search metadata never supplies or estimates league prices: `/api/points` reads the selected **published PostgreSQL price version** on every request. The browser pins that version while paginating to avoid mixed schedules; reload the page to pick up a later publication. Administrator card picking still uses the same endpoint, with its original numeric `main` and `command` fields.
 
 | Search | Meaning |
 |---|---|
@@ -97,6 +97,22 @@ Filtering and sorting happen across the entire matching set **before** slicing p
 `GET /api/points`: `q`, `version` (published UUID), `offset` (0–1,000,000), `limit` (1–100, default 100); `sort` (`main_desc`, `main_asc`, `command_desc`, `command_asc`, `name_asc`, `name_desc`, `mv_asc`, `mv_desc`; default `name_asc`); `points` (`all`, `pointed`, `zero`); `zone` (`either`, `main`, `command`); integer `min`/`max`; `identity` (WUBRG letters or `c`), `identityMode` (`within`, `exact`), `colorCount` (`any`, `colorless`, `multicolor`); literal `type`, numeric `mvMin`/`mvMax`, `legality` (`any`, `legal`, `banned`, `not_legal`), `eligible` (`any`, `1`). Empty optional ranges/identity/type mean no filter. Legacy `pointed=1` remains supported; explicit `points` takes precedence. Repeated/unknown parameters, invalid enums, negative/noninteger pagination or points, and inverted ranges are rejected.
 
 Responses retain `version`, `total`, `offset`, `cards[].name/oracle_id/legal/main/command`, and add `limit`, card color/identity, individual color faces, type line, mana value, pinned legality status, commander eligibility and Scryfall URL. Only verified catalog identities receive known-unlisted zero prices; a nonexistent card search returns no row. Legality and eligibility here describe catalog metadata, not certification of a complete deck, partner pair or gameplay interaction. No scoring or construction rules were changed.
+
+
+### Optional live Scryfall discovery
+
+In **Points → Advanced**, enable **Search all Magic cards with Scryfall** to search the current Scryfall catalog, including identities outside the league’s pinned catalog. It is off by default; the ordinary catalog already includes known zero-point cards when **Point values → All cards** is selected.
+
+Live mode forwards native Scryfall syntax, including `set:lea OR set:leb`, and combines the color/type/mana/legality controls with it. It uses Scryfall’s default omission of non-card extras; request them explicitly with `include:extras`. Name and mana-value sorting apply to the complete Scryfall result set, with 175-card pages. League-point filtering and sorting are disabled in this mode, because applying them only to the returned page would be misleading and downloading every matching card would be unnecessarily expensive. Returning to local mode restores the previous point filters/sort/page size. Reset returns to the collapsed local defaults.
+
+League prices always come from the selected published PostgreSQL version, matched by **Oracle ID** to the local canonical identity. Known unlisted identities retain zero prices; a current Scryfall identity absent locally shows **Pending** in both price columns, even if Scryfall says it is Commander legal. It is never guessed free or priced by a similar name. Live metadata/legality do not update the league catalog, deck validation, score calculation, tournament inventories or snapshots. Commander eligibility for an unknown league identity is `null`, pending local verification.
+
+`GET /api/points?source=scryfall&q=...` enables live discovery. Omit `limit` or use 175, and use offsets 0,175,350…; available sorts are `name_asc`, `name_desc`, `mv_asc`, `mv_desc`. Omit point restrictions (or use `points=all`); `source=local` remains the default with the original 50/100-card behavior. Both modes support a pinned published `version` UUID.
+
+The server uses only the fixed HTTPS `api.scryfall.com/cards/search` endpoint, with identified User-Agent/Accept headers, no redirects, eight-second network timeouts, a bounded request queue, a maximum of five upstream starts per second per process, shared in-flight requests and a 64-page/60-second metadata cache. Cached metadata never includes league prices; each request joins its own published version. Provider 429s honor Retry-After, malformed syntax is distinct from valid empty results, and outages explicitly suggest switching back to the local catalog. There is no paid API, new dependency, automatic catalog refresh or database migration. Public browsing never contacts a caller-supplied URL.
+
+See [SCRYFALL_DISCOVERY.md](SCRYFALL_DISCOVERY.md) for implementation scope and executed tests. Research references: [official search endpoint](https://scryfall.com/docs/api/cards/search), [syntax](https://scryfall.com/docs/syntax), and the [SDK author’s page-size/search implementation](https://github.com/ChiriVulpes/scryfall-sdk/blob/main/src/api/Cards.ts). The official documentation pages returned 403 through the research browser in this session; the authorized public API itself returned 200 and was exercised through the local application and actual Chrome.
+
 
 ### Rebuild search metadata
 

@@ -716,6 +716,12 @@ dialog::backdrop {
 .catalog-advanced[open] > summary {
   margin-bottom: 12px;
 }
+
+.live-search-toggle { display: flex; align-items: center; gap: 10px; margin: 18px 0 8px; cursor: pointer; }
+.live-search-toggle input { accent-color: var(--accent); flex: none; }
+.catalog-panel :disabled { opacity: .55; }
+.catalog-panel [hidden] { display: none !important; }
+
 .catalog-help {
   margin-bottom: 24px;
 }
