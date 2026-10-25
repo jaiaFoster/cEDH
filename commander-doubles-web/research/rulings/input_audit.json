@@ -1,0 +1,93 @@
+[
+  {
+    "path": "../commander-doubles-deck-benchmarks/recalibration/rules_interactions_v3.jsonl",
+    "sha256": "bc6df3d771bd299bc145840e0bbc1c668a05c36204428a9900bf2f8fa1138587",
+    "records": 24,
+    "fields": [
+      "activated",
+      "card_details",
+      "conclusion",
+      "id",
+      "invalidated_by",
+      "oracle_source",
+      "pricing_implication",
+      "required_configuration",
+      "rules",
+      "source_urls",
+      "status",
+      "verified_date"
+    ]
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/batch1/rules_interactions.jsonl",
+    "sha256": "dc5556b8c3886ef2122d962c10ab9e04f217a5156aa664e03ccc9ed85e4dcc48",
+    "records": 22,
+    "fields": [
+      "cards",
+      "comprehensive_rules",
+      "id",
+      "invalidated_by",
+      "limitations_and_false_positives",
+      "operation",
+      "required_state_and_controllers",
+      "rules_sha256",
+      "rules_url",
+      "status",
+      "team",
+      "verification_date"
+    ]
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/batch2/rules_interactions.jsonl",
+    "sha256": "50095a1b4042b826a93b11eeb9fc9eff921abd1ffd09c70302a1c68488a2be79",
+    "records": 23,
+    "fields": [
+      "cards",
+      "classification",
+      "id",
+      "limitations",
+      "operation",
+      "required_controllers_and_state",
+      "rules",
+      "rules_url",
+      "status",
+      "team",
+      "verification_date"
+    ]
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/batch3/rules_interactions.jsonl",
+    "sha256": "79a47f93211b0ed59ee4c62664091d5ad95c4fb8ec751e586d44226726a6a085",
+    "records": 25,
+    "fields": [
+      "card_details",
+      "cards",
+      "caution",
+      "classification",
+      "id",
+      "operation",
+      "rules",
+      "rules_url",
+      "state",
+      "status",
+      "team",
+      "verification_date"
+    ]
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/recalibration/rules_verification_v3.md",
+    "sha256": "d3643d2545e6b58bb24392b1cbcf5dc91e32cae7db56406917910b5862ebc73d"
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/batch1/rules_interactions.md",
+    "sha256": "5208d387e6c9256c183d5afc4e40d364d125d5914f173ce0245bd9592b93b0b0"
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/batch2/rules_interactions.md",
+    "sha256": "862594919f3c1fdd999c2e6fcb9cade89118bf5144c2378a45b23ff31371f66b"
+  },
+  {
+    "path": "../commander-doubles-deck-benchmarks/batch3/rules_interactions.md",
+    "sha256": "da06e41c2be3eacf98fc85811fba2b32e00ab1680d7d0cccac047fb1636154b9"
+  }
+]

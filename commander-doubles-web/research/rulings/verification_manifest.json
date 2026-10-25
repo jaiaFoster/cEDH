@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-24T21:03:14.351Z",
+  "rules_edition": "September 25, 2026",
+  "sources": [
+    {
+      "url": "https://magic.wizards.com/en/rules",
+      "retrieved_at": "2026-10-24T21:03:07.316Z",
+      "sha256": "ee00fd253dc4ea01c78ed6caaef7d789ba5a46dba0a80e4993a410a3c759dc56",
+      "bytes": 150636
+    },
+    {
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "retrieved_at": "2026-10-24T21:03:07.508Z",
+      "sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+      "bytes": 977752
+    },
+    {
+      "url": "https://api.scryfall.com/bulk-data",
+      "retrieved_at": "2026-10-24T21:03:07.666Z",
+      "sha256": "0d1e6fc1b4277407eee2d1cba75959eb20ba291498db3f4b35e1100014be50cf",
+      "bytes": 3472
+    },
+    {
+      "url": "https://data.scryfall.io/oracle-cards/oracle-cards-20261024210157.jsonl.gz",
+      "retrieved_at": "2026-10-24T21:03:09.059Z",
+      "sha256": "9963fb19f792ddcfeac580e21fbe8c2eb9353962389481a3f84d65eb219bb5ae",
+      "bytes": 25103857
+    },
+    {
+      "url": "https://magic.wizards.com/en/formats/two-headed-giant",
+      "retrieved_at": "2026-10-24T21:03:13.622Z",
+      "sha256": "147ec1c6d7749113a7cb518f2467e61928ab8110155a2f489dd696ffd893c97b",
+      "bytes": 386045
+    },
+    {
+      "url": "https://spacecowmedia.github.io/commander-spellbook-backend/api.html",
+      "retrieved_at": "2026-10-24T21:03:14.115Z",
+      "sha256": "6d1ae2c62a70af70ed69a9b2bc67d41c910a22631f3696deff04df98e2fcf9d6",
+      "bytes": 40705
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SpaceCowMedia/commander-spellbook-backend/master/LICENSE",
+      "retrieved_at": "2026-10-24T21:03:14.351Z",
+      "sha256": "b765a9f4f6adbd27778000086e90a143871a3021244809a396436b92eca67826",
+      "bytes": 1076
+    }
+  ],
+  "oracle_updated_at": "2026-10-24T21:01:57.691+00:00",
+  "oracle_card_count": 38991,
+  "access": {
+    "spellbook": "Sparse named requests; public attribution/link required; MIT backend code does not establish blanket combo-data redistribution license.",
+    "runtime": "Local curated corpus; no live third-party dependency."
+  }
+}

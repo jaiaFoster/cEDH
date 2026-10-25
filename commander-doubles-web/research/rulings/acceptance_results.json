@@ -1,0 +1,25 @@
+{
+  "verified_at": "2026-10-24",
+  "environment": {
+    "node": "22.23.4",
+    "postgresql": "17.11",
+    "browser": "Installed Google Chrome via Playwright"
+  },
+  "node_postgresql": {
+    "tests": 92,
+    "pass": 92,
+    "fail": 0
+  },
+  "browser": {
+    "startTime": "2026-10-24T21:34:48.553Z",
+    "duration": 26079.194,
+    "expected": 26,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "corpus_check": "passed; 57 verified entries, 3 private drafts, 30 initial subjects, 29 additional entries",
+  "hosted_staging_verified": false,
+  "production_modified": false,
+  "scope": "Local disposable PostgreSQL schemas only; no hosted integration writes."
+}

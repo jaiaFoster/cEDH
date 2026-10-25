@@ -186,3 +186,25 @@ Keep exports private: player names and deck history are included. `scripts/resto
 - [Scryfall bulk data](https://scryfall.com/docs/api/bulk-data)
 
 Card data and game names belong to their respective owners. No ownership of Oracle text is claimed.
+
+## Curated 2HG rulings reference
+
+The Rules page includes a searchable, categorized, expandable **2HG Rulings & Interactions** reference. Players can search card names/title/text, combine category and interaction filters, and open worked examples, exceptions, card links and sources. This feature does not score combos or modify league rules, point prices, budgets, bans or event snapshots.
+
+`data/rulings/entries.json` contains 57 reviewed source entries; `drafts.json` contains 3 unresolved private drafts. `research/rulings/` retains the Oracle evidence, rule-number/hash index, source manifests, public JSONL export and 10-item research queue. Read its [research report](research/rulings/RESEARCH_REPORT.md) for the commander-damage wording conflict and other limits. The recorded CR edition is September 25,2026. A verified interpretation is our source-checked worked example, not a newly issued Wizards ruling. No new house rules are seeded.
+
+Migration002 adds `ruling_entries` and immutable `ruling_versions`. Startup migration/seed is transactional and idempotent: it inserts **new stable IDs only**, never replacing an organizer edit, publication pointer or hidden entry. Updating an existing seed file therefore does not update that deployed entry; use the editor or an explicit reviewed revision. Avoid changing existing IDs. Before adopting a new CR edition, refresh and review `research/rulings/rule-index.json` and the selected Oracle evidence.
+
+In **Organizer → Rulings**, select or add a question, edit its plain-text fields, canonical card names and source/reference metadata, then save a draft. Publication is separate and requires `verified`, a reviewer, verification date, valid known rule references and canonical card identities. Drafts do not replace public content. Hide removes a ruling from public searches without deleting history. Restore creates a new review draft and clears verification; publish explicitly after rechecking it. Stale saves/publications receive409 instead of overwriting a newer revision. The menu supports a JSON export containing all entries and versions; full league backup/isolated restore also includes both tables. Never test restores against a live league schema.
+
+Public endpoints: `GET /api/rulings?q=&category=&classification=` and `GET /api/rulings/:id`. Protected endpoints are under `/api/admin/rulings`: list/create, `export`, `:id/history`, `:id/drafts`, `:id/publish`, `:id/hide`, and `:id/restore`. Existing admin session/CSRF protection applies. User text is escaped at render time; source URLs require HTTPS without embedded credentials. There is no runtime request to Spellbook or Scryfall.
+
+Reproduce the deterministic corpus check and ordinary suites with Node 22 and a disposable PostgreSQL database:
+
+```sh
+node scripts/verify-rulings.mjs --check
+npm test
+npm run test:e2e
+```
+
+Optional research refresh instructions and third-party access/licensing notes are in [research/rulings/README.md](research/rulings/README.md). The large Spellbook export uses a streaming Python parser only for research. Normal browsing, editing, tests and scoring need no paid API or Python installation. Refreshing evidence does not automatically verify changed reasoning or publish database edits.

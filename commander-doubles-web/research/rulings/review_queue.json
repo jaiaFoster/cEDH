@@ -1,0 +1,140 @@
+[
+  {
+    "id": "commander-aggregation",
+    "status": "unresolved",
+    "title": "Commander damage split across both heads",
+    "reason": "The CR uses a recipient player; the official format overview uses team wording. Keep 21 as the verified threshold; request an explicit organizer resolution before claiming 11+10 across heads is a loss.",
+    "rule_references": [
+      "903.10a",
+      "810.8a"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "angel-grace-damage",
+    "status": "unresolved",
+    "title": "Angel’s Grace and allied damage at low shared life",
+    "reason": "Team cannot-lose behavior is established. Detailed damage-reduction behavior when the other head takes damage needs a separate replacement/prevention analysis before publication.",
+    "rule_references": [
+      "810.8a",
+      "810.9"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "double-thief",
+    "status": "unresolved",
+    "title": "Multiple Notion Thief replacement effects",
+    "reason": "Do not extrapolate the one-Thief example to multiple competing replacements; the affected player’s choices and event history matter.",
+    "rule_references": [
+      "616.1",
+      "614.5"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "gitrog-loop",
+    "status": "unresolved",
+    "title": "Generic Gitrog shuffle lines",
+    "reason": "A deck archetype name does not prove termination, sufficient draw access or the exact stack sequence. Require a complete state and line.",
+    "rule_references": [
+      "727.2a"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "chainer-devotion",
+    "status": "corrected",
+    "title": "Batch 2 Chainer devotion arithmetic",
+    "reason": "Chainer (3), K’rrik (3), Gray Merchant (2) and Viscera Seer (1) total devotion 9, not 8. The cited life-gain event is 18 before other payments. Do not rewrite the historical file.",
+    "rule_references": [
+      "700.5",
+      "810.9"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "pooled-mana",
+    "status": "rejected",
+    "title": "Spend a teammate’s Basalt mana directly",
+    "reason": "Separate pools prohibit the assumed transfer. Use the public Kinnan/Basalt and payer examples instead.",
+    "rule_references": [
+      "810.5"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "split-bond-loop",
+    "status": "rejected",
+    "title": "Shared life makes split Bond/Blood infinite",
+    "reason": "Individual gain attribution invalidates the claim; retain the public false-positive explanation.",
+    "rule_references": [
+      "109.5",
+      "810.9"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "duplicate-draw-triggers",
+    "status": "duplicate",
+    "title": "Howling Mine as a second generic per-player draw entry",
+    "reason": "Its shared-step pattern is already covered by Nekusar and the draw-order explanation; no padding entry.",
+    "rule_references": [
+      "805.4d"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "spellbook-union",
+    "status": "rejected",
+    "title": "Union of decklists proves cross-team combo legality",
+    "reason": "Membership only locates candidates. Independently check controller, costs, targets and events; four matched examples are reviewed in the corpus.",
+    "rule_references": [
+      "109.5",
+      "810.5",
+      "701.21a"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  },
+  {
+    "id": "aluren-bulk-miss",
+    "status": "unresolved",
+    "title": "No Aluren/Acererak pair in current bulk scan",
+    "reason": "No exact pair matched this snapshot among 115954 variants. That is not proof the combination fails. Public explanation relies on Oracle, dungeon text and CR, not a claimed Spellbook match.",
+    "rule_references": [
+      "109.5",
+      "810.9"
+    ],
+    "source_urls": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "reviewed_on": "2026-10-24"
+  }
+]
