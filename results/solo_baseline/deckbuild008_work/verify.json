@@ -1,0 +1,2607 @@
+{
+ "build1_oracle_less": {
+  "adds": [
+   "Spellseeker"
+  ],
+  "cuts": [
+   "Strix Serenade"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 33,
+   "interaction": 20,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 14,
+   "card_advantage": 13,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 10,
+   "blue_cards": 28,
+   "roles": {
+    "body": 33,
+    "card_advantage": 13,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 14,
+    "interaction": 20,
+    "copy": 4,
+    "combo_component": 10,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.61393,
+   "ci95": [
+    0.60611,
+    0.62169
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.53573,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.00047,
+   "ci95": [
+    0.00023,
+    0.00096
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0174,
+   "ci95": [
+    0.01543,
+    0.01962
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98213,
+   "ci95": [
+    0.97989,
+    0.98413
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.609,
+   "ci95": [
+    0.60116,
+    0.61678
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_U": {
+   "value": 0.7584,
+   "ci95": [
+    0.75148,
+    0.76518
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_B": {
+   "value": 0.53647,
+   "ci95": [
+    0.52848,
+    0.54444
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_G": {
+   "value": 0.791,
+   "ci95": [
+    0.78442,
+    0.79743
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_all_four_colors": {
+   "value": 0.6402,
+   "ci95": [
+    0.63248,
+    0.64784
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79427,
+   "ci95": [
+    0.78772,
+    0.80066
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_mana_ge2": {
+   "value": 0.16553,
+   "ci95": [
+    0.15967,
+    0.17157
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.426,
+   "ci95": [
+    0.41811,
+    0.43393
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_development": {
+   "value": 0.54133,
+   "ci95": [
+    0.53335,
+    0.5493
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_development": {
+   "value": 0.57327,
+   "ci95": [
+    0.56533,
+    0.58116
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34307,
+   "ci95": [
+    0.33551,
+    0.3507
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t3": {
+   "value": 0.5216,
+   "ci95": [
+    0.5136,
+    0.52959
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t4": {
+   "value": 0.58473,
+   "ci95": [
+    0.57683,
+    0.5926
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t2": {
+   "value": 0.0008,
+   "ci95": [
+    0.00046,
+    0.0014
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00026
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.0008,
+   "ci95": [
+    0.00046,
+    0.0014
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00333,
+   "ci95": [
+    0.00253,
+    0.00439
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t3": {
+   "value": 0.00967,
+   "ci95": [
+    0.00822,
+    0.01136
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t3": {
+   "value": 0.00307,
+   "ci95": [
+    0.0023,
+    0.00409
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.0008,
+   "ci95": [
+    0.00046,
+    0.0014
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00026
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.00967,
+   "ci95": [
+    0.00822,
+    0.01136
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01593,
+   "ci95": [
+    0.01405,
+    0.01806
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t4": {
+   "value": 0.042,
+   "ci95": [
+    0.03891,
+    0.04533
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t4": {
+   "value": 0.01467,
+   "ci95": [
+    0.01286,
+    0.01672
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00467,
+   "ci95": [
+    0.0037,
+    0.00589
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00026
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.042,
+   "ci95": [
+    0.03891,
+    0.04533
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04933,
+   "ci95": [
+    0.04598,
+    0.05292
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 630
+  },
+  "first_win_mean_cards": 3.562,
+  "first_win_mean_spells": 4.975
+ },
+ "build2_minimal_oracle": {
+  "adds": [
+   "Spellseeker",
+   "Thassa's Oracle",
+   "Demonic Consultation"
+  ],
+  "cuts": [
+   "Strix Serenade",
+   "Volatile Stormdrake",
+   "Gleaming Splendor"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 33,
+   "interaction": 19,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 14,
+   "card_advantage": 12,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 11,
+   "blue_cards": 28,
+   "roles": {
+    "body": 33,
+    "card_advantage": 12,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 14,
+    "interaction": 19,
+    "copy": 4,
+    "combo_component": 11,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.61173,
+   "ci95": [
+    0.60391,
+    0.6195
+   ],
+   "delta_vs_ref": -0.0022,
+   "delta_se": 0.00054
+  },
+  "mean_mulligans": {
+   "value": 0.53873,
+   "delta_vs_ref": 0.003,
+   "delta_se": 0.00085
+  },
+  "kept_hand_fm0": {
+   "value": 0.00053,
+   "ci95": [
+    0.00027,
+    0.00105
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "kept_hand_fm1": {
+   "value": 0.01727,
+   "ci95": [
+    0.0153,
+    0.01948
+   ],
+   "delta_vs_ref": -0.00013,
+   "delta_se": 0.00013
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.9822,
+   "ci95": [
+    0.97996,
+    0.9842
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 0.00012
+  },
+  "t1_has_W": {
+   "value": 0.59847,
+   "ci95": [
+    0.5906,
+    0.60629
+   ],
+   "delta_vs_ref": -0.01053,
+   "delta_se": 0.00095
+  },
+  "t1_has_U": {
+   "value": 0.76193,
+   "ci95": [
+    0.75505,
+    0.76868
+   ],
+   "delta_vs_ref": 0.00353,
+   "delta_se": 0.00075
+  },
+  "t1_has_B": {
+   "value": 0.54373,
+   "ci95": [
+    0.53575,
+    0.55169
+   ],
+   "delta_vs_ref": 0.00727,
+   "delta_se": 0.00088
+  },
+  "t1_has_G": {
+   "value": 0.79073,
+   "ci95": [
+    0.78415,
+    0.79717
+   ],
+   "delta_vs_ref": -0.00027,
+   "delta_se": 0.00063
+  },
+  "t2_all_four_colors": {
+   "value": 0.64067,
+   "ci95": [
+    0.63295,
+    0.64831
+   ],
+   "delta_vs_ref": 0.00047,
+   "delta_se": 0.00057
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79373,
+   "ci95": [
+    0.78718,
+    0.80013
+   ],
+   "delta_vs_ref": -0.00053,
+   "delta_se": 0.00043
+  },
+  "t1_mana_ge2": {
+   "value": 0.1646,
+   "ci95": [
+    0.15875,
+    0.17062
+   ],
+   "delta_vs_ref": -0.00093,
+   "delta_se": 0.00037
+  },
+  "t2_mana_ge3": {
+   "value": 0.4244,
+   "ci95": [
+    0.41651,
+    0.43233
+   ],
+   "delta_vs_ref": -0.0016,
+   "delta_se": 0.00052
+  },
+  "t1_development": {
+   "value": 0.5394,
+   "ci95": [
+    0.53141,
+    0.54737
+   ],
+   "delta_vs_ref": -0.00193,
+   "delta_se": 0.00061
+  },
+  "t2_development": {
+   "value": 0.56927,
+   "ci95": [
+    0.56133,
+    0.57717
+   ],
+   "delta_vs_ref": -0.004,
+   "delta_se": 0.0007
+  },
+  "premium_engine_by_t2": {
+   "value": 0.3424,
+   "ci95": [
+    0.33485,
+    0.35003
+   ],
+   "delta_vs_ref": -0.00067,
+   "delta_se": 0.00051
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52113,
+   "ci95": [
+    0.51313,
+    0.52912
+   ],
+   "delta_vs_ref": -0.00047,
+   "delta_se": 0.0005
+  },
+  "premium_engine_by_t4": {
+   "value": 0.58433,
+   "ci95": [
+    0.57643,
+    0.5922
+   ],
+   "delta_vs_ref": -0.0004,
+   "delta_se": 0.00052
+  },
+  "det_win_by_t2": {
+   "value": 0.0026,
+   "ci95": [
+    0.0019,
+    0.00355
+   ],
+   "delta_vs_ref": 0.0018,
+   "delta_se": 0.00035
+  },
+  "det_protected_by_t2": {
+   "value": 0.0004,
+   "ci95": [
+    0.00018,
+    0.00087
+   ],
+   "delta_vs_ref": 0.00033,
+   "delta_se": 0.00015
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.00173,
+   "ci95": [
+    0.00118,
+    0.00254
+   ],
+   "delta_vs_ref": 0.00173,
+   "delta_se": 0.00034
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00087,
+   "ci95": [
+    0.00051,
+    0.00148
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.005,
+   "ci95": [
+    0.00399,
+    0.00626
+   ],
+   "delta_vs_ref": 0.00167,
+   "delta_se": 0.00033
+  },
+  "det_win_by_t3": {
+   "value": 0.01893,
+   "ci95": [
+    0.01687,
+    0.02124
+   ],
+   "delta_vs_ref": 0.00927,
+   "delta_se": 0.00079
+  },
+  "det_protected_by_t3": {
+   "value": 0.00507,
+   "ci95": [
+    0.00405,
+    0.00634
+   ],
+   "delta_vs_ref": 0.002,
+   "delta_se": 0.00036
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00093,
+   "ci95": [
+    0.00056,
+    0.00157
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 9e-05
+  },
+  "oracle_line_by_t3": {
+   "value": 0.00907,
+   "ci95": [
+    0.00767,
+    0.01071
+   ],
+   "delta_vs_ref": 0.00907,
+   "delta_se": 0.00077
+  },
+  "infinite_line_by_t3": {
+   "value": 0.0104,
+   "ci95": [
+    0.0089,
+    0.01215
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00024
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.0238,
+   "ci95": [
+    0.02148,
+    0.02636
+   ],
+   "delta_vs_ref": 0.00787,
+   "delta_se": 0.00073
+  },
+  "det_win_by_t4": {
+   "value": 0.07167,
+   "ci95": [
+    0.06765,
+    0.07591
+   ],
+   "delta_vs_ref": 0.02967,
+   "delta_se": 0.0014
+  },
+  "det_protected_by_t4": {
+   "value": 0.02413,
+   "ci95": [
+    0.0218,
+    0.02671
+   ],
+   "delta_vs_ref": 0.00947,
+   "delta_se": 0.00079
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.0056,
+   "ci95": [
+    0.00453,
+    0.00693
+   ],
+   "delta_vs_ref": 0.00093,
+   "delta_se": 0.00027
+  },
+  "oracle_line_by_t4": {
+   "value": 0.03473,
+   "ci95": [
+    0.03192,
+    0.03778
+   ],
+   "delta_vs_ref": 0.03473,
+   "delta_se": 0.0015
+  },
+  "infinite_line_by_t4": {
+   "value": 0.04427,
+   "ci95": [
+    0.04109,
+    0.04768
+   ],
+   "delta_vs_ref": 0.00227,
+   "delta_se": 0.00046
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.07613,
+   "ci95": [
+    0.072,
+    0.08049
+   ],
+   "delta_vs_ref": 0.0268,
+   "delta_se": 0.00134
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 601,
+   "inf_oracle": 642,
+   "oracle_consult": 509
+  },
+  "first_win_mean_cards": 3.219,
+  "first_win_mean_spells": 2.605
+ },
+ "build3_recommended_oracle": {
+  "adds": [
+   "Spellseeker",
+   "Thassa's Oracle",
+   "Demonic Consultation",
+   "Tainted Pact"
+  ],
+  "cuts": [
+   "Strix Serenade",
+   "Volatile Stormdrake",
+   "Gleaming Splendor",
+   "The Queen of Dale"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 32,
+   "interaction": 19,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 15,
+   "card_advantage": 11,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 12,
+   "blue_cards": 28,
+   "roles": {
+    "body": 32,
+    "card_advantage": 11,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 15,
+    "interaction": 19,
+    "copy": 4,
+    "combo_component": 12,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.61307,
+   "ci95": [
+    0.60524,
+    0.62083
+   ],
+   "delta_vs_ref": -0.00087,
+   "delta_se": 0.00056
+  },
+  "mean_mulligans": {
+   "value": 0.53647,
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00092
+  },
+  "kept_hand_fm0": {
+   "value": 0.00053,
+   "ci95": [
+    0.00027,
+    0.00105
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "kept_hand_fm1": {
+   "value": 0.01707,
+   "ci95": [
+    0.01511,
+    0.01927
+   ],
+   "delta_vs_ref": -0.00033,
+   "delta_se": 0.00018
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.9824,
+   "ci95": [
+    0.98017,
+    0.98438
+   ],
+   "delta_vs_ref": 0.00027,
+   "delta_se": 0.00016
+  },
+  "t1_has_W": {
+   "value": 0.5904,
+   "ci95": [
+    0.58251,
+    0.59825
+   ],
+   "delta_vs_ref": -0.0186,
+   "delta_se": 0.0012
+  },
+  "t1_has_U": {
+   "value": 0.7624,
+   "ci95": [
+    0.75552,
+    0.76914
+   ],
+   "delta_vs_ref": 0.004,
+   "delta_se": 0.00087
+  },
+  "t1_has_B": {
+   "value": 0.5516,
+   "ci95": [
+    0.54363,
+    0.55954
+   ],
+   "delta_vs_ref": 0.01513,
+   "delta_se": 0.00114
+  },
+  "t1_has_G": {
+   "value": 0.7906,
+   "ci95": [
+    0.78401,
+    0.79704
+   ],
+   "delta_vs_ref": -0.0004,
+   "delta_se": 0.00075
+  },
+  "t2_all_four_colors": {
+   "value": 0.64133,
+   "ci95": [
+    0.63362,
+    0.64897
+   ],
+   "delta_vs_ref": 0.00113,
+   "delta_se": 0.00067
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79407,
+   "ci95": [
+    0.78752,
+    0.80046
+   ],
+   "delta_vs_ref": -0.0002,
+   "delta_se": 0.00049
+  },
+  "t1_mana_ge2": {
+   "value": 0.16407,
+   "ci95": [
+    0.15823,
+    0.17008
+   ],
+   "delta_vs_ref": -0.00147,
+   "delta_se": 0.00046
+  },
+  "t2_mana_ge3": {
+   "value": 0.42413,
+   "ci95": [
+    0.41624,
+    0.43206
+   ],
+   "delta_vs_ref": -0.00187,
+   "delta_se": 0.00063
+  },
+  "t1_development": {
+   "value": 0.53867,
+   "ci95": [
+    0.53068,
+    0.54663
+   ],
+   "delta_vs_ref": -0.00267,
+   "delta_se": 0.00074
+  },
+  "t2_development": {
+   "value": 0.56507,
+   "ci95": [
+    0.55712,
+    0.57298
+   ],
+   "delta_vs_ref": -0.0082,
+   "delta_se": 0.00091
+  },
+  "premium_engine_by_t2": {
+   "value": 0.3418,
+   "ci95": [
+    0.33425,
+    0.34943
+   ],
+   "delta_vs_ref": -0.00127,
+   "delta_se": 0.00058
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52047,
+   "ci95": [
+    0.51247,
+    0.52846
+   ],
+   "delta_vs_ref": -0.00113,
+   "delta_se": 0.00058
+  },
+  "premium_engine_by_t4": {
+   "value": 0.584,
+   "ci95": [
+    0.57609,
+    0.59187
+   ],
+   "delta_vs_ref": -0.00073,
+   "delta_se": 0.0006
+  },
+  "det_win_by_t2": {
+   "value": 0.00273,
+   "ci95": [
+    0.00202,
+    0.00371
+   ],
+   "delta_vs_ref": 0.00193,
+   "delta_se": 0.00036
+  },
+  "det_protected_by_t2": {
+   "value": 0.0004,
+   "ci95": [
+    0.00018,
+    0.00087
+   ],
+   "delta_vs_ref": 0.00033,
+   "delta_se": 0.00015
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.00187,
+   "ci95": [
+    0.00129,
+    0.0027
+   ],
+   "delta_vs_ref": 0.00187,
+   "delta_se": 0.00035
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00087,
+   "ci95": [
+    0.00051,
+    0.00148
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00513,
+   "ci95": [
+    0.00411,
+    0.00641
+   ],
+   "delta_vs_ref": 0.0018,
+   "delta_se": 0.00035
+  },
+  "det_win_by_t3": {
+   "value": 0.0226,
+   "ci95": [
+    0.02034,
+    0.0251
+   ],
+   "delta_vs_ref": 0.01293,
+   "delta_se": 0.00093
+  },
+  "det_protected_by_t3": {
+   "value": 0.00573,
+   "ci95": [
+    0.00465,
+    0.00707
+   ],
+   "delta_vs_ref": 0.00267,
+   "delta_se": 0.00042
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.001,
+   "ci95": [
+    0.00061,
+    0.00165
+   ],
+   "delta_vs_ref": 0.0002,
+   "delta_se": 0.00012
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0128,
+   "ci95": [
+    0.01112,
+    0.01473
+   ],
+   "delta_vs_ref": 0.0128,
+   "delta_se": 0.00092
+  },
+  "infinite_line_by_t3": {
+   "value": 0.0104,
+   "ci95": [
+    0.0089,
+    0.01215
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00024
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.02747,
+   "ci95": [
+    0.02497,
+    0.03021
+   ],
+   "delta_vs_ref": 0.01153,
+   "delta_se": 0.00088
+  },
+  "det_win_by_t4": {
+   "value": 0.08227,
+   "ci95": [
+    0.07798,
+    0.08677
+   ],
+   "delta_vs_ref": 0.04027,
+   "delta_se": 0.00162
+  },
+  "det_protected_by_t4": {
+   "value": 0.02747,
+   "ci95": [
+    0.02497,
+    0.03021
+   ],
+   "delta_vs_ref": 0.0128,
+   "delta_se": 0.00092
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00627,
+   "ci95": [
+    0.00512,
+    0.00766
+   ],
+   "delta_vs_ref": 0.0016,
+   "delta_se": 0.00034
+  },
+  "oracle_line_by_t4": {
+   "value": 0.04613,
+   "ci95": [
+    0.04289,
+    0.04961
+   ],
+   "delta_vs_ref": 0.04613,
+   "delta_se": 0.00171
+  },
+  "infinite_line_by_t4": {
+   "value": 0.04413,
+   "ci95": [
+    0.04096,
+    0.04754
+   ],
+   "delta_vs_ref": 0.00213,
+   "delta_se": 0.00048
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.0866,
+   "ci95": [
+    0.0822,
+    0.09121
+   ],
+   "delta_vs_ref": 0.03727,
+   "delta_se": 0.00157
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 596,
+   "inf_oracle": 637,
+   "oracle_consult": 504,
+   "oracle_pact": 289
+  },
+  "first_win_mean_cards": 3.108,
+  "first_win_mean_spells": 2.487
+ },
+ "build3_variant_cut_lotho": {
+  "adds": [
+   "Spellseeker",
+   "Thassa's Oracle",
+   "Demonic Consultation",
+   "Tainted Pact"
+  ],
+  "cuts": [
+   "Strix Serenade",
+   "Volatile Stormdrake",
+   "Gleaming Splendor",
+   "Lotho, Corrupt Shirriff"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 32,
+   "interaction": 19,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 15,
+   "card_advantage": 11,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 12,
+   "blue_cards": 28,
+   "roles": {
+    "body": 32,
+    "card_advantage": 11,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 15,
+    "interaction": 19,
+    "copy": 4,
+    "combo_component": 12,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.61287,
+   "ci95": [
+    0.60504,
+    0.62063
+   ],
+   "delta_vs_ref": -0.00107,
+   "delta_se": 0.00055
+  },
+  "mean_mulligans": {
+   "value": 0.5368,
+   "delta_vs_ref": 0.00107,
+   "delta_se": 0.00084
+  },
+  "kept_hand_fm0": {
+   "value": 0.00053,
+   "ci95": [
+    0.00027,
+    0.00105
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "kept_hand_fm1": {
+   "value": 0.01727,
+   "ci95": [
+    0.0153,
+    0.01948
+   ],
+   "delta_vs_ref": -0.00013,
+   "delta_se": 0.00013
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.9822,
+   "ci95": [
+    0.97996,
+    0.9842
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 0.00012
+  },
+  "t1_has_W": {
+   "value": 0.59233,
+   "ci95": [
+    0.58445,
+    0.60017
+   ],
+   "delta_vs_ref": -0.01667,
+   "delta_se": 0.00114
+  },
+  "t1_has_U": {
+   "value": 0.76433,
+   "ci95": [
+    0.75747,
+    0.77106
+   ],
+   "delta_vs_ref": 0.00593,
+   "delta_se": 0.00084
+  },
+  "t1_has_B": {
+   "value": 0.5452,
+   "ci95": [
+    0.53722,
+    0.55316
+   ],
+   "delta_vs_ref": 0.00873,
+   "delta_se": 0.00102
+  },
+  "t1_has_G": {
+   "value": 0.79167,
+   "ci95": [
+    0.78509,
+    0.79809
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00072
+  },
+  "t2_all_four_colors": {
+   "value": 0.6404,
+   "ci95": [
+    0.63269,
+    0.64804
+   ],
+   "delta_vs_ref": 0.0002,
+   "delta_se": 0.00062
+  },
+  "t2_three_plus_colors": {
+   "value": 0.793,
+   "ci95": [
+    0.78644,
+    0.79941
+   ],
+   "delta_vs_ref": -0.00127,
+   "delta_se": 0.00051
+  },
+  "t1_mana_ge2": {
+   "value": 0.164,
+   "ci95": [
+    0.15816,
+    0.17001
+   ],
+   "delta_vs_ref": -0.00153,
+   "delta_se": 0.00045
+  },
+  "t2_mana_ge3": {
+   "value": 0.42387,
+   "ci95": [
+    0.41598,
+    0.43179
+   ],
+   "delta_vs_ref": -0.00213,
+   "delta_se": 0.0006
+  },
+  "t1_development": {
+   "value": 0.539,
+   "ci95": [
+    0.53101,
+    0.54697
+   ],
+   "delta_vs_ref": -0.00233,
+   "delta_se": 0.00073
+  },
+  "t2_development": {
+   "value": 0.5674,
+   "ci95": [
+    0.55946,
+    0.57531
+   ],
+   "delta_vs_ref": -0.00587,
+   "delta_se": 0.00081
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34167,
+   "ci95": [
+    0.33412,
+    0.3493
+   ],
+   "delta_vs_ref": -0.0014,
+   "delta_se": 0.00058
+  },
+  "premium_engine_by_t3": {
+   "value": 0.5208,
+   "ci95": [
+    0.5128,
+    0.52879
+   ],
+   "delta_vs_ref": -0.0008,
+   "delta_se": 0.00057
+  },
+  "premium_engine_by_t4": {
+   "value": 0.58373,
+   "ci95": [
+    0.57582,
+    0.5916
+   ],
+   "delta_vs_ref": -0.001,
+   "delta_se": 0.00057
+  },
+  "det_win_by_t2": {
+   "value": 0.00267,
+   "ci95": [
+    0.00196,
+    0.00363
+   ],
+   "delta_vs_ref": 0.00187,
+   "delta_se": 0.00035
+  },
+  "det_protected_by_t2": {
+   "value": 0.00047,
+   "ci95": [
+    0.00023,
+    0.00096
+   ],
+   "delta_vs_ref": 0.0004,
+   "delta_se": 0.00016
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0018,
+   "ci95": [
+    0.00124,
+    0.00262
+   ],
+   "delta_vs_ref": 0.0018,
+   "delta_se": 0.00035
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00087,
+   "ci95": [
+    0.00051,
+    0.00148
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00507,
+   "ci95": [
+    0.00405,
+    0.00634
+   ],
+   "delta_vs_ref": 0.00173,
+   "delta_se": 0.00034
+  },
+  "det_win_by_t3": {
+   "value": 0.0214,
+   "ci95": [
+    0.0192,
+    0.02384
+   ],
+   "delta_vs_ref": 0.01173,
+   "delta_se": 0.00088
+  },
+  "det_protected_by_t3": {
+   "value": 0.00553,
+   "ci95": [
+    0.00447,
+    0.00685
+   ],
+   "delta_vs_ref": 0.00247,
+   "delta_se": 0.00041
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00093,
+   "ci95": [
+    0.00056,
+    0.00157
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 9e-05
+  },
+  "oracle_line_by_t3": {
+   "value": 0.01187,
+   "ci95": [
+    0.01025,
+    0.01373
+   ],
+   "delta_vs_ref": 0.01187,
+   "delta_se": 0.00088
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01033,
+   "ci95": [
+    0.00884,
+    0.01208
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00023
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.02627,
+   "ci95": [
+    0.02383,
+    0.02895
+   ],
+   "delta_vs_ref": 0.01033,
+   "delta_se": 0.00084
+  },
+  "det_win_by_t4": {
+   "value": 0.08187,
+   "ci95": [
+    0.07759,
+    0.08636
+   ],
+   "delta_vs_ref": 0.03987,
+   "delta_se": 0.00163
+  },
+  "det_protected_by_t4": {
+   "value": 0.0272,
+   "ci95": [
+    0.02472,
+    0.02993
+   ],
+   "delta_vs_ref": 0.01253,
+   "delta_se": 0.00092
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.0062,
+   "ci95": [
+    0.00506,
+    0.00759
+   ],
+   "delta_vs_ref": 0.00153,
+   "delta_se": 0.00033
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0464,
+   "ci95": [
+    0.04315,
+    0.04988
+   ],
+   "delta_vs_ref": 0.0464,
+   "delta_se": 0.00172
+  },
+  "infinite_line_by_t4": {
+   "value": 0.044,
+   "ci95": [
+    0.04083,
+    0.0474
+   ],
+   "delta_vs_ref": 0.002,
+   "delta_se": 0.00049
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.08627,
+   "ci95": [
+    0.08188,
+    0.09087
+   ],
+   "delta_vs_ref": 0.03693,
+   "delta_se": 0.00157
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 595,
+   "inf_oracle": 635,
+   "oracle_consult": 504,
+   "oracle_pact": 283
+  },
+  "first_win_mean_cards": 3.112,
+  "first_win_mean_spells": 2.464
+ },
+ "build3_alt_census_cuts": {
+  "adds": [
+   "Spellseeker",
+   "Thassa's Oracle",
+   "Demonic Consultation",
+   "Tainted Pact"
+  ],
+  "cuts": [
+   "Strix Serenade",
+   "Volatile Stormdrake",
+   "Gilded Drake",
+   "Gleaming Splendor"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 32,
+   "interaction": 18,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 15,
+   "card_advantage": 12,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 12,
+   "blue_cards": 27,
+   "roles": {
+    "body": 32,
+    "card_advantage": 12,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 15,
+    "interaction": 18,
+    "copy": 4,
+    "combo_component": 12,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.60787,
+   "ci95": [
+    0.60003,
+    0.61565
+   ],
+   "delta_vs_ref": -0.00607,
+   "delta_se": 0.00081
+  },
+  "mean_mulligans": {
+   "value": 0.544,
+   "delta_vs_ref": 0.00827,
+   "delta_se": 0.00129
+  },
+  "kept_hand_fm0": {
+   "value": 0.0006,
+   "ci95": [
+    0.00032,
+    0.00114
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 9e-05
+  },
+  "kept_hand_fm1": {
+   "value": 0.0172,
+   "ci95": [
+    0.01524,
+    0.01941
+   ],
+   "delta_vs_ref": -0.0002,
+   "delta_se": 0.00022
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.9822,
+   "ci95": [
+    0.97996,
+    0.9842
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 0.00022
+  },
+  "t1_has_W": {
+   "value": 0.5976,
+   "ci95": [
+    0.58973,
+    0.60542
+   ],
+   "delta_vs_ref": -0.0114,
+   "delta_se": 0.00112
+  },
+  "t1_has_U": {
+   "value": 0.75553,
+   "ci95": [
+    0.74859,
+    0.76235
+   ],
+   "delta_vs_ref": -0.00287,
+   "delta_se": 0.00109
+  },
+  "t1_has_B": {
+   "value": 0.5514,
+   "ci95": [
+    0.54343,
+    0.55935
+   ],
+   "delta_vs_ref": 0.01493,
+   "delta_se": 0.0012
+  },
+  "t1_has_G": {
+   "value": 0.7914,
+   "ci95": [
+    0.78482,
+    0.79783
+   ],
+   "delta_vs_ref": 0.0004,
+   "delta_se": 0.00082
+  },
+  "t2_all_four_colors": {
+   "value": 0.64,
+   "ci95": [
+    0.63228,
+    0.64764
+   ],
+   "delta_vs_ref": -0.0002,
+   "delta_se": 0.00079
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79367,
+   "ci95": [
+    0.78712,
+    0.80007
+   ],
+   "delta_vs_ref": -0.0006,
+   "delta_se": 0.0006
+  },
+  "t1_mana_ge2": {
+   "value": 0.16393,
+   "ci95": [
+    0.15809,
+    0.16994
+   ],
+   "delta_vs_ref": -0.0016,
+   "delta_se": 0.00052
+  },
+  "t2_mana_ge3": {
+   "value": 0.423,
+   "ci95": [
+    0.41511,
+    0.43092
+   ],
+   "delta_vs_ref": -0.003,
+   "delta_se": 0.00075
+  },
+  "t1_development": {
+   "value": 0.53813,
+   "ci95": [
+    0.53015,
+    0.5461
+   ],
+   "delta_vs_ref": -0.0032,
+   "delta_se": 0.00087
+  },
+  "t2_development": {
+   "value": 0.56887,
+   "ci95": [
+    0.56092,
+    0.57677
+   ],
+   "delta_vs_ref": -0.0044,
+   "delta_se": 0.00093
+  },
+  "premium_engine_by_t2": {
+   "value": 0.3426,
+   "ci95": [
+    0.33505,
+    0.35023
+   ],
+   "delta_vs_ref": -0.00047,
+   "delta_se": 0.00072
+  },
+  "premium_engine_by_t3": {
+   "value": 0.5208,
+   "ci95": [
+    0.5128,
+    0.52879
+   ],
+   "delta_vs_ref": -0.0008,
+   "delta_se": 0.00072
+  },
+  "premium_engine_by_t4": {
+   "value": 0.58367,
+   "ci95": [
+    0.57576,
+    0.59153
+   ],
+   "delta_vs_ref": -0.00107,
+   "delta_se": 0.00074
+  },
+  "det_win_by_t2": {
+   "value": 0.00213,
+   "ci95": [
+    0.00151,
+    0.00301
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.0003
+  },
+  "det_protected_by_t2": {
+   "value": 0.00033,
+   "ci95": [
+    0.00014,
+    0.00078
+   ],
+   "delta_vs_ref": 0.00027,
+   "delta_se": 0.00013
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0012,
+   "ci95": [
+    0.00076,
+    0.0019
+   ],
+   "delta_vs_ref": 0.0012,
+   "delta_se": 0.00028
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00093,
+   "ci95": [
+    0.00056,
+    0.00157
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 9e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00467,
+   "ci95": [
+    0.0037,
+    0.00589
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00031
+  },
+  "det_win_by_t3": {
+   "value": 0.02187,
+   "ci95": [
+    0.01965,
+    0.02433
+   ],
+   "delta_vs_ref": 0.0122,
+   "delta_se": 0.0009
+  },
+  "det_protected_by_t3": {
+   "value": 0.0056,
+   "ci95": [
+    0.00453,
+    0.00693
+   ],
+   "delta_vs_ref": 0.00253,
+   "delta_se": 0.00041
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00087,
+   "ci95": [
+    0.00051,
+    0.00148
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 0.00012
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0122,
+   "ci95": [
+    0.01056,
+    0.01409
+   ],
+   "delta_vs_ref": 0.0122,
+   "delta_se": 0.0009
+  },
+  "infinite_line_by_t3": {
+   "value": 0.0104,
+   "ci95": [
+    0.0089,
+    0.01215
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00024
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.0268,
+   "ci95": [
+    0.02433,
+    0.02951
+   ],
+   "delta_vs_ref": 0.01087,
+   "delta_se": 0.00086
+  },
+  "det_win_by_t4": {
+   "value": 0.08153,
+   "ci95": [
+    0.07726,
+    0.08602
+   ],
+   "delta_vs_ref": 0.03953,
+   "delta_se": 0.00162
+  },
+  "det_protected_by_t4": {
+   "value": 0.02787,
+   "ci95": [
+    0.02535,
+    0.03062
+   ],
+   "delta_vs_ref": 0.0132,
+   "delta_se": 0.00095
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00613,
+   "ci95": [
+    0.005,
+    0.00752
+   ],
+   "delta_vs_ref": 0.00147,
+   "delta_se": 0.00033
+  },
+  "oracle_line_by_t4": {
+   "value": 0.04587,
+   "ci95": [
+    0.04263,
+    0.04933
+   ],
+   "delta_vs_ref": 0.04587,
+   "delta_se": 0.00171
+  },
+  "infinite_line_by_t4": {
+   "value": 0.0444,
+   "ci95": [
+    0.04122,
+    0.04781
+   ],
+   "delta_vs_ref": 0.0024,
+   "delta_se": 0.00051
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.08587,
+   "ci95": [
+    0.08149,
+    0.09046
+   ],
+   "delta_vs_ref": 0.03653,
+   "delta_se": 0.00156
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 603,
+   "inf_oracle": 646,
+   "oracle_pact": 278,
+   "oracle_consult": 501
+  },
+  "first_win_mean_cards": 3.114,
+  "first_win_mean_spells": 2.482
+ },
+ "build3_stress_cut_imperial_seal": {
+  "adds": [
+   "Spellseeker",
+   "Thassa's Oracle",
+   "Demonic Consultation",
+   "Tainted Pact"
+  ],
+  "cuts": [
+   "Strix Serenade",
+   "Volatile Stormdrake",
+   "Gleaming Splendor",
+   "Imperial Seal"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 33,
+   "interaction": 19,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 14,
+   "card_advantage": 12,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 12,
+   "blue_cards": 28,
+   "roles": {
+    "body": 33,
+    "card_advantage": 12,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 14,
+    "interaction": 19,
+    "copy": 4,
+    "combo_component": 12,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.60173,
+   "ci95": [
+    0.59387,
+    0.60954
+   ],
+   "delta_vs_ref": -0.0122,
+   "delta_se": 0.00097
+  },
+  "mean_mulligans": {
+   "value": 0.55667,
+   "delta_vs_ref": 0.02093,
+   "delta_se": 0.00153
+  },
+  "kept_hand_fm0": {
+   "value": 0.0006,
+   "ci95": [
+    0.00032,
+    0.00114
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 9e-05
+  },
+  "kept_hand_fm1": {
+   "value": 0.01807,
+   "ci95": [
+    0.01606,
+    0.02032
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00027
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98133,
+   "ci95": [
+    0.97904,
+    0.98338
+   ],
+   "delta_vs_ref": -0.0008,
+   "delta_se": 0.00027
+  },
+  "t1_has_W": {
+   "value": 0.59833,
+   "ci95": [
+    0.59046,
+    0.60615
+   ],
+   "delta_vs_ref": -0.01067,
+   "delta_se": 0.00118
+  },
+  "t1_has_U": {
+   "value": 0.7614,
+   "ci95": [
+    0.75451,
+    0.76815
+   ],
+   "delta_vs_ref": 0.003,
+   "delta_se": 0.001
+  },
+  "t1_has_B": {
+   "value": 0.54047,
+   "ci95": [
+    0.53248,
+    0.54843
+   ],
+   "delta_vs_ref": 0.004,
+   "delta_se": 0.00116
+  },
+  "t1_has_G": {
+   "value": 0.79173,
+   "ci95": [
+    0.78516,
+    0.79816
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00089
+  },
+  "t2_all_four_colors": {
+   "value": 0.64087,
+   "ci95": [
+    0.63315,
+    0.64851
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00094
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79353,
+   "ci95": [
+    0.78698,
+    0.79994
+   ],
+   "delta_vs_ref": -0.00073,
+   "delta_se": 0.00079
+  },
+  "t1_mana_ge2": {
+   "value": 0.16413,
+   "ci95": [
+    0.15829,
+    0.17015
+   ],
+   "delta_vs_ref": -0.0014,
+   "delta_se": 0.00067
+  },
+  "t2_mana_ge3": {
+   "value": 0.43347,
+   "ci95": [
+    0.42555,
+    0.44141
+   ],
+   "delta_vs_ref": 0.00747,
+   "delta_se": 0.00108
+  },
+  "t1_development": {
+   "value": 0.55613,
+   "ci95": [
+    0.54817,
+    0.56407
+   ],
+   "delta_vs_ref": 0.0148,
+   "delta_se": 0.00124
+  },
+  "t2_development": {
+   "value": 0.57867,
+   "ci95": [
+    0.57075,
+    0.58655
+   ],
+   "delta_vs_ref": 0.0054,
+   "delta_se": 0.0013
+  },
+  "premium_engine_by_t2": {
+   "value": 0.33753,
+   "ci95": [
+    0.33001,
+    0.34514
+   ],
+   "delta_vs_ref": -0.00553,
+   "delta_se": 0.00101
+  },
+  "premium_engine_by_t3": {
+   "value": 0.497,
+   "ci95": [
+    0.489,
+    0.505
+   ],
+   "delta_vs_ref": -0.0246,
+   "delta_se": 0.00146
+  },
+  "premium_engine_by_t4": {
+   "value": 0.55893,
+   "ci95": [
+    0.55097,
+    0.56686
+   ],
+   "delta_vs_ref": -0.0258,
+   "delta_se": 0.00148
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00224,
+    0.00401
+   ],
+   "delta_vs_ref": 0.0022,
+   "delta_se": 0.00038
+  },
+  "det_protected_by_t2": {
+   "value": 0.00047,
+   "ci95": [
+    0.00023,
+    0.00096
+   ],
+   "delta_vs_ref": 0.0004,
+   "delta_se": 0.00016
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.00207,
+   "ci95": [
+    0.00146,
+    0.00293
+   ],
+   "delta_vs_ref": 0.00207,
+   "delta_se": 0.00037
+  },
+  "infinite_line_by_t2": {
+   "value": 0.001,
+   "ci95": [
+    0.00061,
+    0.00165
+   ],
+   "delta_vs_ref": 0.0002,
+   "delta_se": 0.00012
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00547,
+   "ci95": [
+    0.00441,
+    0.00678
+   ],
+   "delta_vs_ref": 0.00213,
+   "delta_se": 0.00038
+  },
+  "det_win_by_t3": {
+   "value": 0.02233,
+   "ci95": [
+    0.02009,
+    0.02482
+   ],
+   "delta_vs_ref": 0.01267,
+   "delta_se": 0.00092
+  },
+  "det_protected_by_t3": {
+   "value": 0.00547,
+   "ci95": [
+    0.00441,
+    0.00678
+   ],
+   "delta_vs_ref": 0.0024,
+   "delta_se": 0.0004
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00107,
+   "ci95": [
+    0.00066,
+    0.00173
+   ],
+   "delta_vs_ref": 0.00027,
+   "delta_se": 0.00013
+  },
+  "oracle_line_by_t3": {
+   "value": 0.01247,
+   "ci95": [
+    0.01081,
+    0.01437
+   ],
+   "delta_vs_ref": 0.01247,
+   "delta_se": 0.00091
+  },
+  "infinite_line_by_t3": {
+   "value": 0.0108,
+   "ci95": [
+    0.00927,
+    0.01258
+   ],
+   "delta_vs_ref": 0.00113,
+   "delta_se": 0.00031
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.0272,
+   "ci95": [
+    0.02472,
+    0.02993
+   ],
+   "delta_vs_ref": 0.01127,
+   "delta_se": 0.00088
+  },
+  "det_win_by_t4": {
+   "value": 0.0804,
+   "ci95": [
+    0.07616,
+    0.08486
+   ],
+   "delta_vs_ref": 0.0384,
+   "delta_se": 0.00164
+  },
+  "det_protected_by_t4": {
+   "value": 0.02753,
+   "ci95": [
+    0.02503,
+    0.03028
+   ],
+   "delta_vs_ref": 0.01287,
+   "delta_se": 0.00093
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00613,
+   "ci95": [
+    0.005,
+    0.00752
+   ],
+   "delta_vs_ref": 0.00147,
+   "delta_se": 0.00034
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0442,
+   "ci95": [
+    0.04103,
+    0.04761
+   ],
+   "delta_vs_ref": 0.0442,
+   "delta_se": 0.00168
+  },
+  "infinite_line_by_t4": {
+   "value": 0.0438,
+   "ci95": [
+    0.04064,
+    0.04719
+   ],
+   "delta_vs_ref": 0.0018,
+   "delta_se": 0.00066
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.0846,
+   "ci95": [
+    0.08025,
+    0.08916
+   ],
+   "delta_vs_ref": 0.03527,
+   "delta_se": 0.00158
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 589,
+   "inf_oracle": 633,
+   "oracle_consult": 483,
+   "oracle_pact": 270
+  },
+  "first_win_mean_cards": 3.078,
+  "first_win_mean_spells": 2.509
+ },
+ "build4_creature_pure": {
+  "adds": [
+   "Spellseeker",
+   "Thassa's Oracle",
+   "Hermit Druid",
+   "Shang-Chi, Master of Kung Fu"
+  ],
+  "cuts": [
+   "Strix Serenade",
+   "Volatile Stormdrake",
+   "Gleaming Splendor",
+   "The Queen of Dale"
+  ],
+  "structure": {
+   "lands_incl_mdfc": 28,
+   "mana_density_functional": 28,
+   "fast_mana_rocks_excl_amber": 5,
+   "mox_amber": 1,
+   "esg": 1,
+   "dorks": 5,
+   "creatures": 34,
+   "interaction": 19,
+   "free_counters": 9,
+   "proactive_protection": 4,
+   "tutor_access": 14,
+   "card_advantage": 11,
+   "premium_engines": 8,
+   "timing": 3,
+   "combo_components": 12,
+   "blue_cards": 28,
+   "roles": {
+    "body": 34,
+    "card_advantage": 11,
+    "engine": 10,
+    "mana": 41,
+    "tutor_access": 14,
+    "interaction": 19,
+    "copy": 4,
+    "combo_component": 12,
+    "timing": 3,
+    "outlet": 4,
+    "protection": 4
+   }
+  },
+  "n": 15000,
+  "keep7": {
+   "value": 0.60993,
+   "ci95": [
+    0.6021,
+    0.61771
+   ],
+   "delta_vs_ref": -0.004,
+   "delta_se": 0.00052
+  },
+  "mean_mulligans": {
+   "value": 0.54173,
+   "delta_vs_ref": 0.006,
+   "delta_se": 0.0008
+  },
+  "kept_hand_fm0": {
+   "value": 0.00053,
+   "ci95": [
+    0.00027,
+    0.00105
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "kept_hand_fm1": {
+   "value": 0.0174,
+   "ci95": [
+    0.01543,
+    0.01962
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.00013
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98207,
+   "ci95": [
+    0.97982,
+    0.98407
+   ],
+   "delta_vs_ref": -7e-05,
+   "delta_se": 0.00012
+  },
+  "t1_has_W": {
+   "value": 0.59227,
+   "ci95": [
+    0.58438,
+    0.60011
+   ],
+   "delta_vs_ref": -0.01673,
+   "delta_se": 0.00113
+  },
+  "t1_has_U": {
+   "value": 0.7632,
+   "ci95": [
+    0.75633,
+    0.76994
+   ],
+   "delta_vs_ref": 0.0048,
+   "delta_se": 0.00089
+  },
+  "t1_has_B": {
+   "value": 0.53847,
+   "ci95": [
+    0.53048,
+    0.54643
+   ],
+   "delta_vs_ref": 0.002,
+   "delta_se": 0.00076
+  },
+  "t1_has_G": {
+   "value": 0.80027,
+   "ci95": [
+    0.79379,
+    0.80659
+   ],
+   "delta_vs_ref": 0.00927,
+   "delta_se": 0.00089
+  },
+  "t2_all_four_colors": {
+   "value": 0.64067,
+   "ci95": [
+    0.63295,
+    0.64831
+   ],
+   "delta_vs_ref": 0.00047,
+   "delta_se": 0.00062
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79373,
+   "ci95": [
+    0.78718,
+    0.80013
+   ],
+   "delta_vs_ref": -0.00053,
+   "delta_se": 0.00046
+  },
+  "t1_mana_ge2": {
+   "value": 0.16353,
+   "ci95": [
+    0.1577,
+    0.16954
+   ],
+   "delta_vs_ref": -0.002,
+   "delta_se": 0.00042
+  },
+  "t2_mana_ge3": {
+   "value": 0.42607,
+   "ci95": [
+    0.41817,
+    0.434
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 0.00061
+  },
+  "t1_development": {
+   "value": 0.54327,
+   "ci95": [
+    0.53528,
+    0.55123
+   ],
+   "delta_vs_ref": 0.00193,
+   "delta_se": 0.00066
+  },
+  "t2_development": {
+   "value": 0.57533,
+   "ci95": [
+    0.5674,
+    0.58322
+   ],
+   "delta_vs_ref": 0.00207,
+   "delta_se": 0.00076
+  },
+  "premium_engine_by_t2": {
+   "value": 0.3432,
+   "ci95": [
+    0.33564,
+    0.35084
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 0.00054
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52173,
+   "ci95": [
+    0.51373,
+    0.52972
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 0.00053
+  },
+  "premium_engine_by_t4": {
+   "value": 0.585,
+   "ci95": [
+    0.57709,
+    0.59286
+   ],
+   "delta_vs_ref": 0.00027,
+   "delta_se": 0.00053
+  },
+  "det_win_by_t2": {
+   "value": 0.00087,
+   "ci95": [
+    0.00051,
+    0.00148
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "det_protected_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 7e-05,
+   "ci95": [
+    1e-05,
+    0.00038
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00026
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00087,
+   "ci95": [
+    0.00051,
+    0.00148
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.0034,
+   "ci95": [
+    0.00259,
+    0.00447
+   ],
+   "delta_vs_ref": 7e-05,
+   "delta_se": 7e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01113,
+   "ci95": [
+    0.00957,
+    0.01294
+   ],
+   "delta_vs_ref": 0.00147,
+   "delta_se": 0.00033
+  },
+  "det_protected_by_t3": {
+   "value": 0.00327,
+   "ci95": [
+    0.00247,
+    0.00432
+   ],
+   "delta_vs_ref": 0.0002,
+   "delta_se": 0.00012
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00093,
+   "ci95": [
+    0.00056,
+    0.00157
+   ],
+   "delta_vs_ref": 0.00013,
+   "delta_se": 9e-05
+  },
+  "oracle_line_by_t3": {
+   "value": 0.00073,
+   "ci95": [
+    0.00041,
+    0.00131
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00022
+  },
+  "infinite_line_by_t3": {
+   "value": 0.0104,
+   "ci95": [
+    0.0089,
+    0.01215
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00024
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01687,
+   "ci95": [
+    0.01493,
+    0.01905
+   ],
+   "delta_vs_ref": 0.00093,
+   "delta_se": 0.00027
+  },
+  "det_win_by_t4": {
+   "value": 0.04987,
+   "ci95": [
+    0.0465,
+    0.05347
+   ],
+   "delta_vs_ref": 0.00787,
+   "delta_se": 0.00074
+  },
+  "det_protected_by_t4": {
+   "value": 0.01833,
+   "ci95": [
+    0.01631,
+    0.02061
+   ],
+   "delta_vs_ref": 0.00367,
+   "delta_se": 0.00049
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.0054,
+   "ci95": [
+    0.00435,
+    0.00671
+   ],
+   "delta_vs_ref": 0.00073,
+   "delta_se": 0.00022
+  },
+  "oracle_line_by_t4": {
+   "value": 0.00573,
+   "ci95": [
+    0.00465,
+    0.00707
+   ],
+   "delta_vs_ref": 0.00573,
+   "delta_se": 0.00062
+  },
+  "infinite_line_by_t4": {
+   "value": 0.04507,
+   "ci95": [
+    0.04186,
+    0.0485
+   ],
+   "delta_vs_ref": 0.00307,
+   "delta_se": 0.00048
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.0548,
+   "ci95": [
+    0.05127,
+    0.05856
+   ],
+   "delta_vs_ref": 0.00547,
+   "delta_se": 0.00063
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 631,
+   "inf_oracle": 674,
+   "oracle_hermit": 84
+  },
+  "first_win_mean_cards": 3.374,
+  "first_win_mean_spells": 2.937
+ }
+}

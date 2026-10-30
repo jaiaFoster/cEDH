@@ -374,7 +374,7 @@ def main():
         "data_cutoff": DATA_CUTOFF,
         "archive_note": "The repository archive begins 2026-07-27, so the 'archive' window is "
                         "~3 months, not 6. The 6-month view is supplied separately by the "
-                        "cedhstats.org cross-check (deckbuild008_census_cedhstats_6m.json).",
+                        "cedhstats.org cross-check (deckbuild008_census_cedhstats.json).",
         "eligibility": {"strict": STRICT_RE.pattern, "exclude": EXCLUDE_RE.pattern,
                         "broad_rule": ">=16 seats, not excluded, strict label OR >=50% of known "
                                       "commanders in EDHTop16 six-month top-100 (>=8 known)",
