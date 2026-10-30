@@ -1,0 +1,5848 @@
+{
+ "baseline_deathrite": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ]
+  },
+  "mean_mulligans": {
+   "value": 0.55225
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ]
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ]
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ]
+  },
+  "t1_has_W": {
+   "value": 0.60467,
+   "ci95": [
+    0.59589,
+    0.61338
+   ]
+  },
+  "t1_has_U": {
+   "value": 0.7515,
+   "ci95": [
+    0.74369,
+    0.75915
+   ]
+  },
+  "t1_has_B": {
+   "value": 0.54317,
+   "ci95": [
+    0.53424,
+    0.55206
+   ]
+  },
+  "t1_has_G": {
+   "value": 0.79158,
+   "ci95": [
+    0.78422,
+    0.79876
+   ]
+  },
+  "t2_all_four_colors": {
+   "value": 0.64792,
+   "ci95": [
+    0.63932,
+    0.65641
+   ]
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79333,
+   "ci95": [
+    0.786,
+    0.80048
+   ]
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ]
+  },
+  "t2_mana_ge3": {
+   "value": 0.41158,
+   "ci95": [
+    0.40281,
+    0.42042
+   ]
+  },
+  "t1_development": {
+   "value": 0.55075,
+   "ci95": [
+    0.54184,
+    0.55963
+   ]
+  },
+  "t2_development": {
+   "value": 0.57633,
+   "ci95": [
+    0.56747,
+    0.58515
+   ]
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34408,
+   "ci95": [
+    0.33563,
+    0.35263
+   ]
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52642,
+   "ci95": [
+    0.51748,
+    0.53534
+   ]
+  },
+  "premium_engine_by_t4": {
+   "value": 0.591,
+   "ci95": [
+    0.58218,
+    0.59977
+   ]
+  },
+  "det_win_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ]
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ]
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ]
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ]
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ]
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00317,
+   "ci95": [
+    0.00231,
+    0.00434
+   ]
+  },
+  "det_win_by_t3": {
+   "value": 0.01408,
+   "ci95": [
+    0.01213,
+    0.01635
+   ]
+  },
+  "det_protected_by_t3": {
+   "value": 0.00417,
+   "ci95": [
+    0.00316,
+    0.00549
+   ]
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ]
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ]
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01408,
+   "ci95": [
+    0.01213,
+    0.01635
+   ]
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01583,
+   "ci95": [
+    0.01375,
+    0.01823
+   ]
+  },
+  "det_win_by_t4": {
+   "value": 0.03758,
+   "ci95": [
+    0.03433,
+    0.04114
+   ]
+  },
+  "det_protected_by_t4": {
+   "value": 0.01292,
+   "ci95": [
+    0.01105,
+    0.0151
+   ]
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00508,
+   "ci95": [
+    0.00396,
+    0.00652
+   ]
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ]
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03758,
+   "ci95": [
+    0.03433,
+    0.04114
+   ]
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.042,
+   "ci95": [
+    0.03856,
+    0.04574
+   ]
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 451
+  },
+  "first_win_mean_cards": 3.208,
+  "first_win_mean_spells": 4.787
+ },
+ "baseline_deathrite_opp_graveyard_land_from_t2": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60467,
+   "ci95": [
+    0.59589,
+    0.61338
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_U": {
+   "value": 0.7515,
+   "ci95": [
+    0.74369,
+    0.75915
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_B": {
+   "value": 0.54317,
+   "ci95": [
+    0.53424,
+    0.55206
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_G": {
+   "value": 0.79158,
+   "ci95": [
+    0.78422,
+    0.79876
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_all_four_colors": {
+   "value": 0.65667,
+   "ci95": [
+    0.64812,
+    0.66511
+   ],
+   "delta_vs_ref": 0.00875,
+   "delta_se": 0.00085
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79917,
+   "ci95": [
+    0.7919,
+    0.80624
+   ],
+   "delta_vs_ref": 0.00583,
+   "delta_se": 0.0007
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43217,
+   "ci95": [
+    0.42333,
+    0.44105
+   ],
+   "delta_vs_ref": 0.02058,
+   "delta_se": 0.0013
+  },
+  "t1_development": {
+   "value": 0.55075,
+   "ci95": [
+    0.54184,
+    0.55963
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_development": {
+   "value": 0.58225,
+   "ci95": [
+    0.5734,
+    0.59105
+   ],
+   "delta_vs_ref": 0.00592,
+   "delta_se": 0.00071
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34817,
+   "ci95": [
+    0.33969,
+    0.35674
+   ],
+   "delta_vs_ref": 0.00408,
+   "delta_se": 0.00058
+  },
+  "premium_engine_by_t3": {
+   "value": 0.53192,
+   "ci95": [
+    0.52298,
+    0.54083
+   ],
+   "delta_vs_ref": 0.0055,
+   "delta_se": 0.00068
+  },
+  "premium_engine_by_t4": {
+   "value": 0.596,
+   "ci95": [
+    0.58719,
+    0.60475
+   ],
+   "delta_vs_ref": 0.005,
+   "delta_se": 0.00064
+  },
+  "det_win_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00317,
+   "ci95": [
+    0.00231,
+    0.00434
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t3": {
+   "value": 0.01475,
+   "ci95": [
+    0.01274,
+    0.01707
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00026
+  },
+  "det_protected_by_t3": {
+   "value": 0.00417,
+   "ci95": [
+    0.00316,
+    0.00549
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01475,
+   "ci95": [
+    0.01274,
+    0.01707
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00026
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.0165,
+   "ci95": [
+    0.01437,
+    0.01894
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00026
+  },
+  "det_win_by_t4": {
+   "value": 0.039,
+   "ci95": [
+    0.03568,
+    0.04261
+   ],
+   "delta_vs_ref": 0.00142,
+   "delta_se": 0.00038
+  },
+  "det_protected_by_t4": {
+   "value": 0.0135,
+   "ci95": [
+    0.01159,
+    0.01573
+   ],
+   "delta_vs_ref": 0.00058,
+   "delta_se": 0.00025
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00525,
+   "ci95": [
+    0.00411,
+    0.00671
+   ],
+   "delta_vs_ref": 0.00017,
+   "delta_se": 0.00012
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.039,
+   "ci95": [
+    0.03568,
+    0.04261
+   ],
+   "delta_vs_ref": 0.00142,
+   "delta_se": 0.00038
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.0435,
+   "ci95": [
+    0.03999,
+    0.0473
+   ],
+   "delta_vs_ref": 0.0015,
+   "delta_se": 0.00039
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 468
+  },
+  "first_win_mean_cards": 3.229,
+  "first_win_mean_spells": 4.801
+ },
+ "Avacyn's Pilgrim": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.63908,
+   "ci95": [
+    0.63045,
+    0.64763
+   ],
+   "delta_vs_ref": -0.00883,
+   "delta_se": 0.00095
+  },
+  "t2_three_plus_colors": {
+   "value": 0.794,
+   "ci95": [
+    0.78667,
+    0.80114
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00057
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57617,
+   "ci95": [
+    0.5673,
+    0.58498
+   ],
+   "delta_vs_ref": -0.00017,
+   "delta_se": 0.00082
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34558,
+   "ci95": [
+    0.33713,
+    0.35414
+   ],
+   "delta_vs_ref": 0.0015,
+   "delta_se": 0.00062
+  },
+  "premium_engine_by_t3": {
+   "value": 0.529,
+   "ci95": [
+    0.52006,
+    0.53792
+   ],
+   "delta_vs_ref": 0.00258,
+   "delta_se": 0.00069
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59175,
+   "ci95": [
+    0.58293,
+    0.60051
+   ],
+   "delta_vs_ref": 0.00075,
+   "delta_se": 0.00068
+  },
+  "det_win_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00317,
+   "ci95": [
+    0.00231,
+    0.00434
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t3": {
+   "value": 0.0145,
+   "ci95": [
+    0.01251,
+    0.0168
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.00022
+  },
+  "det_protected_by_t3": {
+   "value": 0.00408,
+   "ci95": [
+    0.00309,
+    0.00539
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.0145,
+   "ci95": [
+    0.01251,
+    0.0168
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.00022
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01625,
+   "ci95": [
+    0.01414,
+    0.01867
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.00022
+  },
+  "det_win_by_t4": {
+   "value": 0.03858,
+   "ci95": [
+    0.03528,
+    0.04218
+   ],
+   "delta_vs_ref": 0.001,
+   "delta_se": 0.00037
+  },
+  "det_protected_by_t4": {
+   "value": 0.01325,
+   "ci95": [
+    0.01135,
+    0.01546
+   ],
+   "delta_vs_ref": 0.00033,
+   "delta_se": 0.00026
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00508,
+   "ci95": [
+    0.00396,
+    0.00652
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03858,
+   "ci95": [
+    0.03528,
+    0.04218
+   ],
+   "delta_vs_ref": 0.001,
+   "delta_se": 0.00037
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04325,
+   "ci95": [
+    0.03975,
+    0.04704
+   ],
+   "delta_vs_ref": 0.00125,
+   "delta_se": 0.0004
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 463
+  },
+  "first_win_mean_cards": 3.227,
+  "first_win_mean_spells": 4.801
+ },
+ "Llanowar Elves": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.63592,
+   "ci95": [
+    0.62727,
+    0.64448
+   ],
+   "delta_vs_ref": -0.012,
+   "delta_se": 0.00101
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78658,
+   "ci95": [
+    0.77916,
+    0.79382
+   ],
+   "delta_vs_ref": -0.00675,
+   "delta_se": 0.00076
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57783,
+   "ci95": [
+    0.56897,
+    0.58664
+   ],
+   "delta_vs_ref": 0.0015,
+   "delta_se": 0.00082
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34667,
+   "ci95": [
+    0.3382,
+    0.35523
+   ],
+   "delta_vs_ref": 0.00258,
+   "delta_se": 0.00062
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52917,
+   "ci95": [
+    0.52023,
+    0.53809
+   ],
+   "delta_vs_ref": 0.00275,
+   "delta_se": 0.00065
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59208,
+   "ci95": [
+    0.58326,
+    0.60085
+   ],
+   "delta_vs_ref": 0.00108,
+   "delta_se": 0.00066
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01433,
+   "ci95": [
+    0.01236,
+    0.01662
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_protected_by_t3": {
+   "value": 0.00408,
+   "ci95": [
+    0.00309,
+    0.00539
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01433,
+   "ci95": [
+    0.01236,
+    0.01662
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01608,
+   "ci95": [
+    0.01398,
+    0.01849
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_win_by_t4": {
+   "value": 0.03875,
+   "ci95": [
+    0.03544,
+    0.04235
+   ],
+   "delta_vs_ref": 0.00117,
+   "delta_se": 0.00044
+  },
+  "det_protected_by_t4": {
+   "value": 0.01333,
+   "ci95": [
+    0.01143,
+    0.01555
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.0003
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00517,
+   "ci95": [
+    0.00403,
+    0.00662
+   ],
+   "delta_vs_ref": 8e-05,
+   "delta_se": 8e-05
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03875,
+   "ci95": [
+    0.03544,
+    0.04235
+   ],
+   "delta_vs_ref": 0.00117,
+   "delta_se": 0.00044
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04342,
+   "ci95": [
+    0.03991,
+    0.04721
+   ],
+   "delta_vs_ref": 0.00142,
+   "delta_se": 0.00046
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 465
+  },
+  "first_win_mean_cards": 3.222,
+  "first_win_mean_spells": 4.802
+ },
+ "Elvish Mystic": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.63592,
+   "ci95": [
+    0.62727,
+    0.64448
+   ],
+   "delta_vs_ref": -0.012,
+   "delta_se": 0.00101
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78658,
+   "ci95": [
+    0.77916,
+    0.79382
+   ],
+   "delta_vs_ref": -0.00675,
+   "delta_se": 0.00076
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57783,
+   "ci95": [
+    0.56897,
+    0.58664
+   ],
+   "delta_vs_ref": 0.0015,
+   "delta_se": 0.00082
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34667,
+   "ci95": [
+    0.3382,
+    0.35523
+   ],
+   "delta_vs_ref": 0.00258,
+   "delta_se": 0.00062
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52917,
+   "ci95": [
+    0.52023,
+    0.53809
+   ],
+   "delta_vs_ref": 0.00275,
+   "delta_se": 0.00065
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59208,
+   "ci95": [
+    0.58326,
+    0.60085
+   ],
+   "delta_vs_ref": 0.00108,
+   "delta_se": 0.00066
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01433,
+   "ci95": [
+    0.01236,
+    0.01662
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_protected_by_t3": {
+   "value": 0.00408,
+   "ci95": [
+    0.00309,
+    0.00539
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01433,
+   "ci95": [
+    0.01236,
+    0.01662
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01608,
+   "ci95": [
+    0.01398,
+    0.01849
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_win_by_t4": {
+   "value": 0.03875,
+   "ci95": [
+    0.03544,
+    0.04235
+   ],
+   "delta_vs_ref": 0.00117,
+   "delta_se": 0.00044
+  },
+  "det_protected_by_t4": {
+   "value": 0.01333,
+   "ci95": [
+    0.01143,
+    0.01555
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.0003
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00517,
+   "ci95": [
+    0.00403,
+    0.00662
+   ],
+   "delta_vs_ref": 8e-05,
+   "delta_se": 8e-05
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03875,
+   "ci95": [
+    0.03544,
+    0.04235
+   ],
+   "delta_vs_ref": 0.00117,
+   "delta_se": 0.00044
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04342,
+   "ci95": [
+    0.03991,
+    0.04721
+   ],
+   "delta_vs_ref": 0.00142,
+   "delta_se": 0.00046
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 465
+  },
+  "first_win_mean_cards": 3.222,
+  "first_win_mean_spells": 4.802
+ },
+ "Fyndhorn Elves": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.63592,
+   "ci95": [
+    0.62727,
+    0.64448
+   ],
+   "delta_vs_ref": -0.012,
+   "delta_se": 0.00101
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78658,
+   "ci95": [
+    0.77916,
+    0.79382
+   ],
+   "delta_vs_ref": -0.00675,
+   "delta_se": 0.00076
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57783,
+   "ci95": [
+    0.56897,
+    0.58664
+   ],
+   "delta_vs_ref": 0.0015,
+   "delta_se": 0.00082
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34667,
+   "ci95": [
+    0.3382,
+    0.35523
+   ],
+   "delta_vs_ref": 0.00258,
+   "delta_se": 0.00062
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52917,
+   "ci95": [
+    0.52023,
+    0.53809
+   ],
+   "delta_vs_ref": 0.00275,
+   "delta_se": 0.00065
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59208,
+   "ci95": [
+    0.58326,
+    0.60085
+   ],
+   "delta_vs_ref": 0.00108,
+   "delta_se": 0.00066
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01433,
+   "ci95": [
+    0.01236,
+    0.01662
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_protected_by_t3": {
+   "value": 0.00408,
+   "ci95": [
+    0.00309,
+    0.00539
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01433,
+   "ci95": [
+    0.01236,
+    0.01662
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01608,
+   "ci95": [
+    0.01398,
+    0.01849
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_win_by_t4": {
+   "value": 0.03875,
+   "ci95": [
+    0.03544,
+    0.04235
+   ],
+   "delta_vs_ref": 0.00117,
+   "delta_se": 0.00044
+  },
+  "det_protected_by_t4": {
+   "value": 0.01333,
+   "ci95": [
+    0.01143,
+    0.01555
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.0003
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00517,
+   "ci95": [
+    0.00403,
+    0.00662
+   ],
+   "delta_vs_ref": 8e-05,
+   "delta_se": 8e-05
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03875,
+   "ci95": [
+    0.03544,
+    0.04235
+   ],
+   "delta_vs_ref": 0.00117,
+   "delta_se": 0.00044
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04342,
+   "ci95": [
+    0.03991,
+    0.04721
+   ],
+   "delta_vs_ref": 0.00142,
+   "delta_se": 0.00046
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 465
+  },
+  "first_win_mean_cards": 3.222,
+  "first_win_mean_spells": 4.802
+ },
+ "Elves of Deep Shadow": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.64025,
+   "ci95": [
+    0.63162,
+    0.64879
+   ],
+   "delta_vs_ref": -0.00767,
+   "delta_se": 0.00093
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79433,
+   "ci95": [
+    0.78701,
+    0.80147
+   ],
+   "delta_vs_ref": 0.001,
+   "delta_se": 0.0006
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57442,
+   "ci95": [
+    0.56555,
+    0.58324
+   ],
+   "delta_vs_ref": -0.00192,
+   "delta_se": 0.00083
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34542,
+   "ci95": [
+    0.33696,
+    0.35397
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00062
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52908,
+   "ci95": [
+    0.52014,
+    0.538
+   ],
+   "delta_vs_ref": 0.00267,
+   "delta_se": 0.00067
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59167,
+   "ci95": [
+    0.58284,
+    0.60043
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00067
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01392,
+   "ci95": [
+    0.01197,
+    0.01617
+   ],
+   "delta_vs_ref": -0.00017,
+   "delta_se": 0.00029
+  },
+  "det_protected_by_t3": {
+   "value": 0.00408,
+   "ci95": [
+    0.00309,
+    0.00539
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01392,
+   "ci95": [
+    0.01197,
+    0.01617
+   ],
+   "delta_vs_ref": -0.00017,
+   "delta_se": 0.00029
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01567,
+   "ci95": [
+    0.01359,
+    0.01805
+   ],
+   "delta_vs_ref": -0.00017,
+   "delta_se": 0.00029
+  },
+  "det_win_by_t4": {
+   "value": 0.03808,
+   "ci95": [
+    0.0348,
+    0.04166
+   ],
+   "delta_vs_ref": 0.0005,
+   "delta_se": 0.00039
+  },
+  "det_protected_by_t4": {
+   "value": 0.01317,
+   "ci95": [
+    0.01128,
+    0.01537
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00028
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00517,
+   "ci95": [
+    0.00403,
+    0.00662
+   ],
+   "delta_vs_ref": 8e-05,
+   "delta_se": 8e-05
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03808,
+   "ci95": [
+    0.0348,
+    0.04166
+   ],
+   "delta_vs_ref": 0.0005,
+   "delta_se": 0.00039
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04267,
+   "ci95": [
+    0.03919,
+    0.04643
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00041
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 457
+  },
+  "first_win_mean_cards": 3.228,
+  "first_win_mean_spells": 4.796
+ },
+ "Arbor Elf": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.63592,
+   "ci95": [
+    0.62727,
+    0.64448
+   ],
+   "delta_vs_ref": -0.012,
+   "delta_se": 0.00101
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78658,
+   "ci95": [
+    0.77916,
+    0.79382
+   ],
+   "delta_vs_ref": -0.00675,
+   "delta_se": 0.00076
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.4145,
+   "ci95": [
+    0.40571,
+    0.42334
+   ],
+   "delta_vs_ref": 0.00292,
+   "delta_se": 0.00077
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57583,
+   "ci95": [
+    0.56697,
+    0.58465
+   ],
+   "delta_vs_ref": -0.0005,
+   "delta_se": 0.00072
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34358,
+   "ci95": [
+    0.33514,
+    0.35213
+   ],
+   "delta_vs_ref": -0.0005,
+   "delta_se": 0.00046
+  },
+  "premium_engine_by_t3": {
+   "value": 0.526,
+   "ci95": [
+    0.51706,
+    0.53492
+   ],
+   "delta_vs_ref": -0.00042,
+   "delta_se": 0.00049
+  },
+  "premium_engine_by_t4": {
+   "value": 0.58967,
+   "ci95": [
+    0.58084,
+    0.59844
+   ],
+   "delta_vs_ref": -0.00133,
+   "delta_se": 0.0005
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01367,
+   "ci95": [
+    0.01174,
+    0.01591
+   ],
+   "delta_vs_ref": -0.00042,
+   "delta_se": 0.00022
+  },
+  "det_protected_by_t3": {
+   "value": 0.00408,
+   "ci95": [
+    0.00309,
+    0.00539
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01367,
+   "ci95": [
+    0.01174,
+    0.01591
+   ],
+   "delta_vs_ref": -0.00042,
+   "delta_se": 0.00022
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01542,
+   "ci95": [
+    0.01336,
+    0.01778
+   ],
+   "delta_vs_ref": -0.00042,
+   "delta_se": 0.00022
+  },
+  "det_win_by_t4": {
+   "value": 0.038,
+   "ci95": [
+    0.03472,
+    0.04157
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.00034
+  },
+  "det_protected_by_t4": {
+   "value": 0.01292,
+   "ci95": [
+    0.01105,
+    0.0151
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0002
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00517,
+   "ci95": [
+    0.00403,
+    0.00662
+   ],
+   "delta_vs_ref": 8e-05,
+   "delta_se": 8e-05
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.038,
+   "ci95": [
+    0.03472,
+    0.04157
+   ],
+   "delta_vs_ref": 0.00042,
+   "delta_se": 0.00034
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04258,
+   "ci95": [
+    0.03911,
+    0.04634
+   ],
+   "delta_vs_ref": 0.00058,
+   "delta_se": 0.00036
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 456
+  },
+  "first_win_mean_cards": 3.206,
+  "first_win_mean_spells": 4.792
+ },
+ "Boreal Druid": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.63592,
+   "ci95": [
+    0.62727,
+    0.64448
+   ],
+   "delta_vs_ref": -0.012,
+   "delta_se": 0.00101
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78658,
+   "ci95": [
+    0.77916,
+    0.79382
+   ],
+   "delta_vs_ref": -0.00675,
+   "delta_se": 0.00076
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57258,
+   "ci95": [
+    0.56371,
+    0.58141
+   ],
+   "delta_vs_ref": -0.00375,
+   "delta_se": 0.00085
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34533,
+   "ci95": [
+    0.33688,
+    0.35389
+   ],
+   "delta_vs_ref": 0.00125,
+   "delta_se": 0.00063
+  },
+  "premium_engine_by_t3": {
+   "value": 0.52808,
+   "ci95": [
+    0.51914,
+    0.537
+   ],
+   "delta_vs_ref": 0.00167,
+   "delta_se": 0.00069
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59075,
+   "ci95": [
+    0.58192,
+    0.59952
+   ],
+   "delta_vs_ref": -0.00025,
+   "delta_se": 0.00068
+  },
+  "det_win_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.003,
+   "ci95": [
+    0.00217,
+    0.00415
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 8e-05
+  },
+  "det_win_by_t3": {
+   "value": 0.01392,
+   "ci95": [
+    0.01197,
+    0.01617
+   ],
+   "delta_vs_ref": -0.00017,
+   "delta_se": 0.00031
+  },
+  "det_protected_by_t3": {
+   "value": 0.00417,
+   "ci95": [
+    0.00316,
+    0.00549
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.00012
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01392,
+   "ci95": [
+    0.01197,
+    0.01617
+   ],
+   "delta_vs_ref": -0.00017,
+   "delta_se": 0.00031
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01575,
+   "ci95": [
+    0.01367,
+    0.01814
+   ],
+   "delta_vs_ref": -8e-05,
+   "delta_se": 0.00032
+  },
+  "det_win_by_t4": {
+   "value": 0.03783,
+   "ci95": [
+    0.03456,
+    0.0414
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00042
+  },
+  "det_protected_by_t4": {
+   "value": 0.01292,
+   "ci95": [
+    0.01105,
+    0.0151
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.00029
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00508,
+   "ci95": [
+    0.00396,
+    0.00652
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03783,
+   "ci95": [
+    0.03456,
+    0.0414
+   ],
+   "delta_vs_ref": 0.00025,
+   "delta_se": 0.00042
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.0425,
+   "ci95": [
+    0.03903,
+    0.04626
+   ],
+   "delta_vs_ref": 0.0005,
+   "delta_se": 0.00044
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 454
+  },
+  "first_win_mean_cards": 3.218,
+  "first_win_mean_spells": 4.795
+ },
+ "Gilded Goose": {
+  "n": 12000,
+  "keep7": {
+   "value": 0.60608,
+   "ci95": [
+    0.59731,
+    0.61479
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.55225,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.0185,
+   "ci95": [
+    0.01624,
+    0.02107
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.981,
+   "ci95": [
+    0.9784,
+    0.98329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60708,
+   "ci95": [
+    0.59831,
+    0.61579
+   ],
+   "delta_vs_ref": 0.00242,
+   "delta_se": 0.00048
+  },
+  "t1_has_U": {
+   "value": 0.75475,
+   "ci95": [
+    0.74697,
+    0.76237
+   ],
+   "delta_vs_ref": 0.00325,
+   "delta_se": 0.00053
+  },
+  "t1_has_B": {
+   "value": 0.53533,
+   "ci95": [
+    0.5264,
+    0.54424
+   ],
+   "delta_vs_ref": -0.00783,
+   "delta_se": 0.0008
+  },
+  "t1_has_G": {
+   "value": 0.79292,
+   "ci95": [
+    0.78557,
+    0.80007
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00035
+  },
+  "t2_all_four_colors": {
+   "value": 0.65267,
+   "ci95": [
+    0.6441,
+    0.66114
+   ],
+   "delta_vs_ref": 0.00475,
+   "delta_se": 0.00079
+  },
+  "t2_three_plus_colors": {
+   "value": 0.79642,
+   "ci95": [
+    0.78912,
+    0.80353
+   ],
+   "delta_vs_ref": 0.00308,
+   "delta_se": 0.00061
+  },
+  "t1_mana_ge2": {
+   "value": 0.16583,
+   "ci95": [
+    0.15929,
+    0.17259
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.43017,
+   "ci95": [
+    0.42133,
+    0.43905
+   ],
+   "delta_vs_ref": 0.01858,
+   "delta_se": 0.00131
+  },
+  "t1_development": {
+   "value": 0.54758,
+   "ci95": [
+    0.53866,
+    0.55647
+   ],
+   "delta_vs_ref": -0.00317,
+   "delta_se": 0.00067
+  },
+  "t2_development": {
+   "value": 0.57892,
+   "ci95": [
+    0.57006,
+    0.58772
+   ],
+   "delta_vs_ref": 0.00258,
+   "delta_se": 0.00082
+  },
+  "premium_engine_by_t2": {
+   "value": 0.34758,
+   "ci95": [
+    0.33911,
+    0.35615
+   ],
+   "delta_vs_ref": 0.0035,
+   "delta_se": 0.00062
+  },
+  "premium_engine_by_t3": {
+   "value": 0.53133,
+   "ci95": [
+    0.5224,
+    0.54025
+   ],
+   "delta_vs_ref": 0.00492,
+   "delta_se": 0.00067
+  },
+  "premium_engine_by_t4": {
+   "value": 0.59433,
+   "ci95": [
+    0.58552,
+    0.60309
+   ],
+   "delta_vs_ref": 0.00333,
+   "delta_se": 0.00068
+  },
+  "det_win_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t2": {
+   "value": 0.0005,
+   "ci95": [
+    0.00023,
+    0.00109
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 8e-05,
+   "ci95": [
+    1e-05,
+    0.00047
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00308,
+   "ci95": [
+    0.00224,
+    0.00425
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00317,
+   "ci95": [
+    0.00231,
+    0.00434
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t3": {
+   "value": 0.01458,
+   "ci95": [
+    0.01259,
+    0.01689
+   ],
+   "delta_vs_ref": 0.0005,
+   "delta_se": 0.00024
+  },
+  "det_protected_by_t3": {
+   "value": 0.00417,
+   "ci95": [
+    0.00316,
+    0.00549
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00133,
+   "ci95": [
+    0.00082,
+    0.00216
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.01458,
+   "ci95": [
+    0.01259,
+    0.01689
+   ],
+   "delta_vs_ref": 0.0005,
+   "delta_se": 0.00024
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01633,
+   "ci95": [
+    0.01422,
+    0.01876
+   ],
+   "delta_vs_ref": 0.0005,
+   "delta_se": 0.00024
+  },
+  "det_win_by_t4": {
+   "value": 0.03892,
+   "ci95": [
+    0.0356,
+    0.04253
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00041
+  },
+  "det_protected_by_t4": {
+   "value": 0.01358,
+   "ci95": [
+    0.01166,
+    0.01582
+   ],
+   "delta_vs_ref": 0.00067,
+   "delta_se": 0.00026
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00525,
+   "ci95": [
+    0.00411,
+    0.00671
+   ],
+   "delta_vs_ref": 0.00017,
+   "delta_se": 0.00012
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00032
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03892,
+   "ci95": [
+    0.0356,
+    0.04253
+   ],
+   "delta_vs_ref": 0.00133,
+   "delta_se": 0.00041
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.04342,
+   "ci95": [
+    0.03991,
+    0.04721
+   ],
+   "delta_vs_ref": 0.00142,
+   "delta_se": 0.00042
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 467
+  },
+  "first_win_mean_cards": 3.229,
+  "first_win_mean_spells": 4.803
+ },
+ "conditional_in_opening_hand": {
+  "Deathrite Shaman": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.48008,
+    "ci95": [
+     0.47115,
+     0.48903
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.63967,
+    "ci95": [
+     0.63103,
+     0.64821
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.5285,
+    "ci95": [
+     0.51956,
+     0.53742
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.71283,
+    "ci95": [
+     0.70467,
+     0.72086
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.64542,
+    "ci95": [
+     0.63681,
+     0.65393
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.7185,
+    "ci95": [
+     0.71038,
+     0.72648
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.45008,
+    "ci95": [
+     0.4412,
+     0.459
+    ]
+   },
+   "t1_development": {
+    "value": 0.74942,
+    "ci95": [
+     0.74158,
+     0.75709
+    ]
+   },
+   "t2_development": {
+    "value": 0.6575,
+    "ci95": [
+     0.64896,
+     0.66594
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.22433,
+    "ci95": [
+     0.21696,
+     0.23188
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.40967,
+    "ci95": [
+     0.4009,
+     0.41849
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.4845,
+    "ci95": [
+     0.47556,
+     0.49345
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.0035,
+    "ci95": [
+     0.00259,
+     0.00473
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00025,
+    "ci95": [
+     9e-05,
+     0.00073
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 8e-05,
+    "ci95": [
+     1e-05,
+     0.00047
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.0035,
+    "ci95": [
+     0.00259,
+     0.00473
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.0035,
+    "ci95": [
+     0.00259,
+     0.00473
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.01633,
+    "ci95": [
+     0.01422,
+     0.01876
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00408,
+    "ci95": [
+     0.00309,
+     0.00539
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.0005,
+    "ci95": [
+     0.00023,
+     0.00109
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01633,
+    "ci95": [
+     0.01422,
+     0.01876
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.01692,
+    "ci95": [
+     0.01476,
+     0.01938
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.04658,
+    "ci95": [
+     0.04296,
+     0.0505
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01667,
+    "ci95": [
+     0.01453,
+     0.01912
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.0035,
+    "ci95": [
+     0.00259,
+     0.00473
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.04658,
+    "ci95": [
+     0.04296,
+     0.0505
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04892,
+    "ci95": [
+     0.0452,
+     0.05292
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 559
+   },
+   "first_win_mean_cards": 3.555,
+   "first_win_mean_spells": 4.794
+  },
+  "Avacyn's Pilgrim": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.56842,
+    "ci95": [
+     0.55953,
+     0.57726
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.72567,
+    "ci95": [
+     0.71761,
+     0.73358
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.67625,
+    "ci95": [
+     0.66782,
+     0.68456
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.24042,
+    "ci95": [
+     0.23285,
+     0.24814
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.42567,
+    "ci95": [
+     0.41685,
+     0.43454
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.498,
+    "ci95": [
+     0.48906,
+     0.50695
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00483,
+    "ci95": [
+     0.00374,
+     0.00624
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00023,
+     0.00109
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     5e-05,
+     0.00061
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00483,
+    "ci95": [
+     0.00374,
+     0.00624
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00483,
+    "ci95": [
+     0.00374,
+     0.00624
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.02275,
+    "ci95": [
+     0.02023,
+     0.02557
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00533,
+    "ci95": [
+     0.00418,
+     0.0068
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.0007,
+     0.00196
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.02275,
+    "ci95": [
+     0.02023,
+     0.02557
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.024,
+    "ci95": [
+     0.02141,
+     0.02689
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.05758,
+    "ci95": [
+     0.05356,
+     0.06189
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.02117,
+    "ci95": [
+     0.01874,
+     0.0239
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.005,
+    "ci95": [
+     0.00389,
+     0.00643
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.05758,
+    "ci95": [
+     0.05356,
+     0.06189
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.061,
+    "ci95": [
+     0.05686,
+     0.06542
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 691
+   },
+   "first_win_mean_cards": 3.559,
+   "first_win_mean_spells": 4.841
+  },
+  "Llanowar Elves": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.53625,
+    "ci95": [
+     0.52732,
+     0.54516
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.66108,
+    "ci95": [
+     0.65256,
+     0.6695
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.68883,
+    "ci95": [
+     0.68049,
+     0.69706
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.24667,
+    "ci95": [
+     0.23904,
+     0.25446
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.42467,
+    "ci95": [
+     0.41585,
+     0.43353
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.49567,
+    "ci95": [
+     0.48672,
+     0.50461
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00042,
+    "ci95": [
+     0.00018,
+     0.00098
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 8e-05,
+    "ci95": [
+     1e-05,
+     0.00047
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.02008,
+    "ci95": [
+     0.01772,
+     0.02275
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.0045,
+    "ci95": [
+     0.00345,
+     0.00587
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.001,
+    "ci95": [
+     0.00057,
+     0.00175
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.02008,
+    "ci95": [
+     0.01772,
+     0.02275
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02125,
+    "ci95": [
+     0.01882,
+     0.02399
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.05375,
+    "ci95": [
+     0.04986,
+     0.05793
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01867,
+    "ci95": [
+     0.01639,
+     0.02125
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00483,
+    "ci95": [
+     0.00374,
+     0.00624
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.05375,
+    "ci95": [
+     0.04986,
+     0.05793
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05758,
+    "ci95": [
+     0.05356,
+     0.06189
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 645
+   },
+   "first_win_mean_cards": 3.538,
+   "first_win_mean_spells": 4.836
+  },
+  "Elvish Mystic": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.53625,
+    "ci95": [
+     0.52732,
+     0.54516
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.66108,
+    "ci95": [
+     0.65256,
+     0.6695
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.68883,
+    "ci95": [
+     0.68049,
+     0.69706
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.24667,
+    "ci95": [
+     0.23904,
+     0.25446
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.42467,
+    "ci95": [
+     0.41585,
+     0.43353
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.49567,
+    "ci95": [
+     0.48672,
+     0.50461
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00042,
+    "ci95": [
+     0.00018,
+     0.00098
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 8e-05,
+    "ci95": [
+     1e-05,
+     0.00047
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.02008,
+    "ci95": [
+     0.01772,
+     0.02275
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.0045,
+    "ci95": [
+     0.00345,
+     0.00587
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.001,
+    "ci95": [
+     0.00057,
+     0.00175
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.02008,
+    "ci95": [
+     0.01772,
+     0.02275
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02125,
+    "ci95": [
+     0.01882,
+     0.02399
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.05375,
+    "ci95": [
+     0.04986,
+     0.05793
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01867,
+    "ci95": [
+     0.01639,
+     0.02125
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00483,
+    "ci95": [
+     0.00374,
+     0.00624
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.05375,
+    "ci95": [
+     0.04986,
+     0.05793
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05758,
+    "ci95": [
+     0.05356,
+     0.06189
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 645
+   },
+   "first_win_mean_cards": 3.538,
+   "first_win_mean_spells": 4.836
+  },
+  "Fyndhorn Elves": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.53625,
+    "ci95": [
+     0.52732,
+     0.54516
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.66108,
+    "ci95": [
+     0.65256,
+     0.6695
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.68883,
+    "ci95": [
+     0.68049,
+     0.69706
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.24667,
+    "ci95": [
+     0.23904,
+     0.25446
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.42467,
+    "ci95": [
+     0.41585,
+     0.43353
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.49567,
+    "ci95": [
+     0.48672,
+     0.50461
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00042,
+    "ci95": [
+     0.00018,
+     0.00098
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 8e-05,
+    "ci95": [
+     1e-05,
+     0.00047
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00425,
+    "ci95": [
+     0.00323,
+     0.00558
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.02008,
+    "ci95": [
+     0.01772,
+     0.02275
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.0045,
+    "ci95": [
+     0.00345,
+     0.00587
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.001,
+    "ci95": [
+     0.00057,
+     0.00175
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.02008,
+    "ci95": [
+     0.01772,
+     0.02275
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02125,
+    "ci95": [
+     0.01882,
+     0.02399
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.05375,
+    "ci95": [
+     0.04986,
+     0.05793
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01867,
+    "ci95": [
+     0.01639,
+     0.02125
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00483,
+    "ci95": [
+     0.00374,
+     0.00624
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.05375,
+    "ci95": [
+     0.04986,
+     0.05793
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05758,
+    "ci95": [
+     0.05356,
+     0.06189
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 645
+   },
+   "first_win_mean_cards": 3.538,
+   "first_win_mean_spells": 4.836
+  },
+  "Elves of Deep Shadow": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.57617,
+    "ci95": [
+     0.5673,
+     0.58498
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.73175,
+    "ci95": [
+     0.72375,
+     0.7396
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.66508,
+    "ci95": [
+     0.65659,
+     0.67347
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.23542,
+    "ci95": [
+     0.22791,
+     0.24309
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.425,
+    "ci95": [
+     0.41618,
+     0.43387
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.497,
+    "ci95": [
+     0.48806,
+     0.50595
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00292,
+    "ci95": [
+     0.0021,
+     0.00405
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00025,
+    "ci95": [
+     9e-05,
+     0.00073
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00292,
+    "ci95": [
+     0.0021,
+     0.00405
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00292,
+    "ci95": [
+     0.0021,
+     0.00405
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.01825,
+    "ci95": [
+     0.016,
+     0.0208
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00367,
+    "ci95": [
+     0.00273,
+     0.00492
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.0005,
+    "ci95": [
+     0.00023,
+     0.00109
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01825,
+    "ci95": [
+     0.016,
+     0.0208
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0195,
+    "ci95": [
+     0.01718,
+     0.02213
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.05217,
+    "ci95": [
+     0.04833,
+     0.05629
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01792,
+    "ci95": [
+     0.01569,
+     0.02045
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00358,
+    "ci95": [
+     0.00266,
+     0.00482
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.05217,
+    "ci95": [
+     0.04833,
+     0.05629
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05617,
+    "ci95": [
+     0.05219,
+     0.06043
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 626
+   },
+   "first_win_mean_cards": 3.572,
+   "first_win_mean_spells": 4.813
+  },
+  "Arbor Elf": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.53625,
+    "ci95": [
+     0.52732,
+     0.54516
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.66108,
+    "ci95": [
+     0.65256,
+     0.6695
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.46983,
+    "ci95": [
+     0.46091,
+     0.47877
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.655,
+    "ci95": [
+     0.64645,
+     0.66345
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.21925,
+    "ci95": [
+     0.21194,
+     0.22674
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.39817,
+    "ci95": [
+     0.38944,
+     0.40696
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.47475,
+    "ci95": [
+     0.46582,
+     0.48369
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.00217,
+     0.00415
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00025,
+    "ci95": [
+     9e-05,
+     0.00073
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 8e-05,
+    "ci95": [
+     1e-05,
+     0.00047
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.00217,
+     0.00415
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.00217,
+     0.00415
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.015,
+    "ci95": [
+     0.01298,
+     0.01734
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00392,
+    "ci95": [
+     0.00295,
+     0.0052
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00083,
+    "ci95": [
+     0.00045,
+     0.00153
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.015,
+    "ci95": [
+     0.01298,
+     0.01734
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.01592,
+    "ci95": [
+     0.01383,
+     0.01832
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.04458,
+    "ci95": [
+     0.04103,
+     0.04842
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01617,
+    "ci95": [
+     0.01406,
+     0.01858
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00417,
+    "ci95": [
+     0.00316,
+     0.00549
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.04458,
+    "ci95": [
+     0.04103,
+     0.04842
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04775,
+    "ci95": [
+     0.04408,
+     0.05171
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 535
+   },
+   "first_win_mean_cards": 3.501,
+   "first_win_mean_spells": 4.787
+  },
+  "Boreal Druid": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.53625,
+    "ci95": [
+     0.52732,
+     0.54516
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.66108,
+    "ci95": [
+     0.65256,
+     0.6695
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.64233,
+    "ci95": [
+     0.63371,
+     0.65086
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.23542,
+    "ci95": [
+     0.22791,
+     0.24309
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.41733,
+    "ci95": [
+     0.40854,
+     0.42618
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.48883,
+    "ci95": [
+     0.47989,
+     0.49778
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00283,
+    "ci95": [
+     0.00203,
+     0.00396
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.00025,
+    "ci95": [
+     9e-05,
+     0.00073
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     5e-05,
+     0.00061
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00283,
+    "ci95": [
+     0.00203,
+     0.00396
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00283,
+    "ci95": [
+     0.00203,
+     0.00396
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.01717,
+    "ci95": [
+     0.01499,
+     0.01965
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00375,
+    "ci95": [
+     0.0028,
+     0.00501
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.001,
+    "ci95": [
+     0.00057,
+     0.00175
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01717,
+    "ci95": [
+     0.01499,
+     0.01965
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.01858,
+    "ci95": [
+     0.01632,
+     0.02116
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.04792,
+    "ci95": [
+     0.04424,
+     0.05189
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.01517,
+    "ci95": [
+     0.01313,
+     0.01751
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00317,
+    "ci95": [
+     0.00231,
+     0.00434
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.04792,
+    "ci95": [
+     0.04424,
+     0.05189
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05217,
+    "ci95": [
+     0.04833,
+     0.05629
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 575
+   },
+   "first_win_mean_cards": 3.522,
+   "first_win_mean_spells": 4.77
+  },
+  "Gilded Goose": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.5065,
+    "ci95": [
+     0.49755,
+     0.51544
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.66533,
+    "ci95": [
+     0.65684,
+     0.67372
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.45542,
+    "ci95": [
+     0.44652,
+     0.46434
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.72392,
+    "ci95": [
+     0.71585,
+     0.73184
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.69342,
+    "ci95": [
+     0.68511,
+     0.7016
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.75225,
+    "ci95": [
+     0.74445,
+     0.75989
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.61025,
+    "ci95": [
+     0.60149,
+     0.61894
+    ]
+   },
+   "t1_development": {
+    "value": 0.72267,
+    "ci95": [
+     0.71459,
+     0.7306
+    ]
+   },
+   "t2_development": {
+    "value": 0.69967,
+    "ci95": [
+     0.6914,
+     0.7078
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.26008,
+    "ci95": [
+     0.25231,
+     0.26801
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.44875,
+    "ci95": [
+     0.43987,
+     0.45766
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.51925,
+    "ci95": [
+     0.51031,
+     0.52818
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.005,
+    "ci95": [
+     0.00389,
+     0.00643
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00023,
+     0.00109
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.005,
+    "ci95": [
+     0.00389,
+     0.00643
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.005,
+    "ci95": [
+     0.00389,
+     0.00643
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.02342,
+    "ci95": [
+     0.02086,
+     0.02628
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00592,
+    "ci95": [
+     0.00469,
+     0.00746
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00058,
+    "ci95": [
+     0.00028,
+     0.0012
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.02342,
+    "ci95": [
+     0.02086,
+     0.02628
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02425,
+    "ci95": [
+     0.02165,
+     0.02716
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.06133,
+    "ci95": [
+     0.05718,
+     0.06577
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.02325,
+    "ci95": [
+     0.0207,
+     0.0261
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00458,
+    "ci95": [
+     0.00352,
+     0.00596
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.06133,
+    "ci95": [
+     0.05718,
+     0.06577
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.06408,
+    "ci95": [
+     0.05984,
+     0.06861
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 736
+   },
+   "first_win_mean_cards": 3.587,
+   "first_win_mean_spells": 4.861
+  },
+  "Deathrite Shaman (opponent graveyard land from T2)": {
+   "n": 12000,
+   "keep7": {
+    "value": 1.0,
+    "ci95": [
+     0.99968,
+     1.0
+    ]
+   },
+   "mean_mulligans": {
+    "value": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "kept_hand_fm1": {
+    "value": 0.06258,
+    "ci95": [
+     0.05839,
+     0.06706
+    ]
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.93742,
+    "ci95": [
+     0.93294,
+     0.94161
+    ]
+   },
+   "t1_has_W": {
+    "value": 0.48008,
+    "ci95": [
+     0.47115,
+     0.48903
+    ]
+   },
+   "t1_has_U": {
+    "value": 0.63967,
+    "ci95": [
+     0.63103,
+     0.64821
+    ]
+   },
+   "t1_has_B": {
+    "value": 0.5285,
+    "ci95": [
+     0.51956,
+     0.53742
+    ]
+   },
+   "t1_has_G": {
+    "value": 0.71283,
+    "ci95": [
+     0.70467,
+     0.72086
+    ]
+   },
+   "t2_all_four_colors": {
+    "value": 0.72575,
+    "ci95": [
+     0.7177,
+     0.73366
+    ]
+   },
+   "t2_three_plus_colors": {
+    "value": 0.77308,
+    "ci95": [
+     0.7655,
+     0.78049
+    ]
+   },
+   "t1_mana_ge2": {
+    "value": 0.14875,
+    "ci95": [
+     0.1425,
+     0.15523
+    ]
+   },
+   "t2_mana_ge3": {
+    "value": 0.63033,
+    "ci95": [
+     0.62166,
+     0.63893
+    ]
+   },
+   "t1_development": {
+    "value": 0.74942,
+    "ci95": [
+     0.74158,
+     0.75709
+    ]
+   },
+   "t2_development": {
+    "value": 0.72925,
+    "ci95": [
+     0.72123,
+     0.73713
+    ]
+   },
+   "premium_engine_by_t2": {
+    "value": 0.26817,
+    "ci95": [
+     0.26032,
+     0.27617
+    ]
+   },
+   "premium_engine_by_t3": {
+    "value": 0.46283,
+    "ci95": [
+     0.45393,
+     0.47177
+    ]
+   },
+   "premium_engine_by_t4": {
+    "value": 0.53192,
+    "ci95": [
+     0.52298,
+     0.54083
+    ]
+   },
+   "det_win_by_t2": {
+    "value": 0.00517,
+    "ci95": [
+     0.00403,
+     0.00662
+    ]
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00023,
+     0.00109
+    ]
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00517,
+    "ci95": [
+     0.00403,
+     0.00662
+    ]
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00517,
+    "ci95": [
+     0.00403,
+     0.00662
+    ]
+   },
+   "det_win_by_t3": {
+    "value": 0.02425,
+    "ci95": [
+     0.02165,
+     0.02716
+    ]
+   },
+   "det_protected_by_t3": {
+    "value": 0.00583,
+    "ci95": [
+     0.00462,
+     0.00736
+    ]
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00033,
+    "ci95": [
+     0.00013,
+     0.00086
+    ]
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t3": {
+    "value": 0.02425,
+    "ci95": [
+     0.02165,
+     0.02716
+    ]
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02517,
+    "ci95": [
+     0.02251,
+     0.02812
+    ]
+   },
+   "det_win_by_t4": {
+    "value": 0.06117,
+    "ci95": [
+     0.05702,
+     0.0656
+    ]
+   },
+   "det_protected_by_t4": {
+    "value": 0.02283,
+    "ci95": [
+     0.02031,
+     0.02566
+    ]
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.0045,
+    "ci95": [
+     0.00345,
+     0.00587
+    ]
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00032
+    ]
+   },
+   "infinite_line_by_t4": {
+    "value": 0.06117,
+    "ci95": [
+     0.05702,
+     0.0656
+    ]
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.06383,
+    "ci95": [
+     0.0596,
+     0.06835
+    ]
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 734
+   },
+   "first_win_mean_cards": 3.597,
+   "first_win_mean_spells": 4.832
+  }
+ },
+ "_rules_table": {
+  "Deathrite Shaman": {
+   "colors": "WUBG (needs a land card in a graveyard)",
+   "true_mana_ability": false,
+   "cast_with": "B or G (hybrid)",
+   "pod_mv": 1,
+   "elf": true,
+   "note": "targets -> not a mana ability: no Kinnan/Badgermole; dead with empty graveyards"
+  },
+  "Avacyn's Pilgrim": {
+   "colors": "W",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": false,
+   "note": "only white dork; W is the Swift/Silence/Tymna colour"
+  },
+  "Llanowar Elves": {
+   "colors": "G",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": true,
+   "note": ""
+  },
+  "Elvish Mystic": {
+   "colors": "G",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": true,
+   "note": "functionally identical to Llanowar Elves"
+  },
+  "Fyndhorn Elves": {
+   "colors": "G",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": true,
+   "note": "functionally identical to Llanowar Elves"
+  },
+  "Elves of Deep Shadow": {
+   "colors": "B",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": true,
+   "note": "1 damage per tap; B is the Consult/Pact/DT colour"
+  },
+  "Arbor Elf": {
+   "colors": "copy of a Forest-typed dual",
+   "true_mana_ability": false,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": true,
+   "note": "untap ability is not a mana ability; needs Bayou/Savannah/Trop"
+  },
+  "Boreal Druid": {
+   "colors": "C",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": true,
+   "note": ""
+  },
+  "Gilded Goose": {
+   "colors": "any, once (then {1}{G} per Food)",
+   "true_mana_ability": true,
+   "cast_with": "G",
+   "pod_mv": 1,
+   "elf": false,
+   "note": "sacrifice-Food mana; not a repeatable dork"
+  }
+ },
+ "_chosen": "Avacyn's Pilgrim",
+ "_choice_rule": "max conditional det_win_by_t4, tie-break t2_all_four_colors, among repeatable true dorks (Mystic/Fyndhorn == Llanowar)"
+}
