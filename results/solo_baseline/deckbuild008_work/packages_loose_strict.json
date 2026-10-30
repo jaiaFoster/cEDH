@@ -1,0 +1,5792 @@
+{
+ "loose": {
+  "BASELINE_v8": {
+   "description": "frozen Moxfield v8 (Deathrite, Strix)",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 32,
+    "interaction": 21,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 10,
+    "blue_cards": 28,
+    "roles": {
+     "body": 32,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 21,
+     "copy": 4,
+     "combo_component": 10,
+     "timing": 3,
+     "outlet": 4,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.64817,
+    "ci95": [
+     0.63599,
+     0.66015
+    ],
+    "delta_vs_ref": -0.01233,
+    "delta_se": 0.00142
+   },
+   "mean_mulligans": {
+    "value": 0.39517,
+    "delta_vs_ref": 0.0135,
+    "delta_se": 0.00173
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.05,
+    "ci95": [
+     0.04477,
+     0.05581
+    ],
+    "delta_vs_ref": 0.00133,
+    "delta_se": 0.00047
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95,
+    "ci95": [
+     0.94419,
+     0.95523
+    ],
+    "delta_vs_ref": -0.00133,
+    "delta_se": 0.00047
+   },
+   "t1_has_W": {
+    "value": 0.6095,
+    "ci95": [
+     0.59709,
+     0.62177
+    ],
+    "delta_vs_ref": -0.00217,
+    "delta_se": 0.00128
+   },
+   "t1_has_U": {
+    "value": 0.76067,
+    "ci95": [
+     0.74971,
+     0.77129
+    ],
+    "delta_vs_ref": -0.0055,
+    "delta_se": 0.00119
+   },
+   "t1_has_B": {
+    "value": 0.5495,
+    "ci95": [
+     0.53688,
+     0.56205
+    ],
+    "delta_vs_ref": 0.00433,
+    "delta_se": 0.00145
+   },
+   "t1_has_G": {
+    "value": 0.78767,
+    "ci95": [
+     0.77714,
+     0.79783
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00099
+   },
+   "t2_all_four_colors": {
+    "value": 0.65683,
+    "ci95": [
+     0.64472,
+     0.66874
+    ],
+    "delta_vs_ref": 0.00633,
+    "delta_se": 0.00165
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79283,
+    "ci95": [
+     0.78239,
+     0.8029
+    ],
+    "delta_vs_ref": -0.0035,
+    "delta_se": 0.00121
+   },
+   "t1_mana_ge2": {
+    "value": 0.16883,
+    "ci95": [
+     0.15957,
+     0.17852
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00083
+   },
+   "t2_mana_ge3": {
+    "value": 0.41183,
+    "ci95": [
+     0.39944,
+     0.42434
+    ],
+    "delta_vs_ref": -0.01467,
+    "delta_se": 0.00196
+   },
+   "t1_development": {
+    "value": 0.52667,
+    "ci95": [
+     0.51402,
+     0.53928
+    ],
+    "delta_vs_ref": 0.007,
+    "delta_se": 0.00131
+   },
+   "t2_development": {
+    "value": 0.55883,
+    "ci95": [
+     0.54624,
+     0.57136
+    ],
+    "delta_vs_ref": 0.00367,
+    "delta_se": 0.00145
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32633,
+    "ci95": [
+     0.31458,
+     0.33831
+    ],
+    "delta_vs_ref": -0.00033,
+    "delta_se": 0.00108
+   },
+   "premium_engine_by_t3": {
+    "value": 0.506,
+    "ci95": [
+     0.49335,
+     0.51864
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00139
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57333,
+    "ci95": [
+     0.56078,
+     0.5858
+    ],
+    "delta_vs_ref": 0.002,
+    "delta_se": 0.00135
+   },
+   "det_win_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00317,
+    "ci95": [
+     0.00203,
+     0.00494
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "det_win_by_t3": {
+    "value": 0.0105,
+    "ci95": [
+     0.00822,
+     0.01341
+    ],
+    "delta_vs_ref": -0.00067,
+    "delta_se": 0.00041
+   },
+   "det_protected_by_t3": {
+    "value": 0.004,
+    "ci95": [
+     0.00269,
+     0.00595
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.00057,
+     0.00241
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t3": {
+    "value": 0.0105,
+    "ci95": [
+     0.00822,
+     0.01341
+    ],
+    "delta_vs_ref": -0.00067,
+    "delta_se": 0.00041
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.016,
+    "ci95": [
+     0.01312,
+     0.0195
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00047
+   },
+   "det_win_by_t4": {
+    "value": 0.03233,
+    "ci95": [
+     0.02815,
+     0.03712
+    ],
+    "delta_vs_ref": -0.01217,
+    "delta_se": 0.00142
+   },
+   "det_protected_by_t4": {
+    "value": 0.01033,
+    "ci95": [
+     0.00807,
+     0.01322
+    ],
+    "delta_vs_ref": -0.0035,
+    "delta_se": 0.00076
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00467,
+    "ci95": [
+     0.00323,
+     0.00674
+    ],
+    "delta_vs_ref": -0.0005,
+    "delta_se": 0.00029
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03233,
+    "ci95": [
+     0.02815,
+     0.03712
+    ],
+    "delta_vs_ref": -0.01217,
+    "delta_se": 0.00142
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04,
+    "ci95": [
+     0.03533,
+     0.04526
+    ],
+    "delta_vs_ref": -0.01217,
+    "delta_se": 0.00143
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 194
+   },
+   "first_win_mean_cards": 3.119,
+   "first_win_mean_spells": 4.753
+  },
+  "A_oracle_less": {
+   "description": "DRS->Avacyn's Pilgrim; Strix->Spellseeker",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 33,
+    "interaction": 20,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 14,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 10,
+    "blue_cards": 28,
+    "roles": {
+     "body": 33,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 14,
+     "interaction": 20,
+     "copy": 4,
+     "combo_component": 10,
+     "timing": 3,
+     "outlet": 4,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.6605,
+    "ci95": [
+     0.64842,
+     0.67238
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "mean_mulligans": {
+    "value": 0.38167,
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04867,
+    "ci95": [
+     0.0435,
+     0.05441
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95133,
+    "ci95": [
+     0.94559,
+     0.9565
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_W": {
+    "value": 0.61167,
+    "ci95": [
+     0.59927,
+     0.62392
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_U": {
+    "value": 0.76617,
+    "ci95": [
+     0.75529,
+     0.7767
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_B": {
+    "value": 0.54517,
+    "ci95": [
+     0.53254,
+     0.55773
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_G": {
+    "value": 0.78783,
+    "ci95": [
+     0.77731,
+     0.79799
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_all_four_colors": {
+    "value": 0.6505,
+    "ci95": [
+     0.63834,
+     0.66247
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79633,
+    "ci95": [
+     0.78595,
+     0.80633
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_mana_ge2": {
+    "value": 0.16867,
+    "ci95": [
+     0.1594,
+     0.17835
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_mana_ge3": {
+    "value": 0.4265,
+    "ci95": [
+     0.41404,
+     0.43906
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_development": {
+    "value": 0.51967,
+    "ci95": [
+     0.50702,
+     0.53229
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_development": {
+    "value": 0.55517,
+    "ci95": [
+     0.54256,
+     0.5677
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32667,
+    "ci95": [
+     0.31491,
+     0.33864
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "premium_engine_by_t3": {
+    "value": 0.505,
+    "ci95": [
+     0.49235,
+     0.51764
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57133,
+    "ci95": [
+     0.55877,
+     0.58381
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t3": {
+    "value": 0.01117,
+    "ci95": [
+     0.0088,
+     0.01416
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t3": {
+    "value": 0.004,
+    "ci95": [
+     0.00269,
+     0.00595
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.00057,
+     0.00241
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01117,
+    "ci95": [
+     0.0088,
+     0.01416
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.017,
+    "ci95": [
+     0.01402,
+     0.02059
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t4": {
+    "value": 0.0445,
+    "ci95": [
+     0.03957,
+     0.05002
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t4": {
+    "value": 0.01383,
+    "ci95": [
+     0.01117,
+     0.01712
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00517,
+    "ci95": [
+     0.00364,
+     0.00732
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t4": {
+    "value": 0.0445,
+    "ci95": [
+     0.03957,
+     0.05002
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05217,
+    "ci95": [
+     0.04682,
+     0.05809
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 267
+   },
+   "first_win_mean_cards": 3.554,
+   "first_win_mean_spells": 4.97
+  },
+  "B_oracle_consult": {
+   "description": "Oracle + Consultation",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 32,
+    "interaction": 19,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 12,
+    "blue_cards": 27,
+    "roles": {
+     "body": 32,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 19,
+     "copy": 4,
+     "combo_component": 12,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.649,
+    "ci95": [
+     0.63683,
+     0.66098
+    ],
+    "delta_vs_ref": -0.0115,
+    "delta_se": 0.0014
+   },
+   "mean_mulligans": {
+    "value": 0.3965,
+    "delta_vs_ref": 0.01483,
+    "delta_se": 0.00176
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04967,
+    "ci95": [
+     0.04445,
+     0.05546
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00047
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95033,
+    "ci95": [
+     0.94454,
+     0.95555
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00047
+   },
+   "t1_has_W": {
+    "value": 0.60817,
+    "ci95": [
+     0.59575,
+     0.62045
+    ],
+    "delta_vs_ref": -0.0035,
+    "delta_se": 0.00142
+   },
+   "t1_has_U": {
+    "value": 0.75983,
+    "ci95": [
+     0.74886,
+     0.77047
+    ],
+    "delta_vs_ref": -0.00633,
+    "delta_se": 0.00166
+   },
+   "t1_has_B": {
+    "value": 0.55,
+    "ci95": [
+     0.53738,
+     0.56255
+    ],
+    "delta_vs_ref": 0.00483,
+    "delta_se": 0.00169
+   },
+   "t1_has_G": {
+    "value": 0.78667,
+    "ci95": [
+     0.77612,
+     0.79685
+    ],
+    "delta_vs_ref": -0.00117,
+    "delta_se": 0.00117
+   },
+   "t2_all_four_colors": {
+    "value": 0.64683,
+    "ci95": [
+     0.63465,
+     0.65883
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00129
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79433,
+    "ci95": [
+     0.78392,
+     0.80437
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00103
+   },
+   "t1_mana_ge2": {
+    "value": 0.16683,
+    "ci95": [
+     0.15761,
+     0.17648
+    ],
+    "delta_vs_ref": -0.00183,
+    "delta_se": 0.0009
+   },
+   "t2_mana_ge3": {
+    "value": 0.4245,
+    "ci95": [
+     0.41205,
+     0.43705
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00113
+   },
+   "t1_development": {
+    "value": 0.52083,
+    "ci95": [
+     0.50818,
+     0.53346
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00117
+   },
+   "t2_development": {
+    "value": 0.55633,
+    "ci95": [
+     0.54373,
+     0.56886
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00119
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32717,
+    "ci95": [
+     0.31541,
+     0.33915
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00099
+   },
+   "premium_engine_by_t3": {
+    "value": 0.5075,
+    "ci95": [
+     0.49485,
+     0.52014
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00121
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57317,
+    "ci95": [
+     0.56061,
+     0.58563
+    ],
+    "delta_vs_ref": 0.00183,
+    "delta_se": 0.00119
+   },
+   "det_win_by_t2": {
+    "value": 0.00333,
+    "ci95": [
+     0.00216,
+     0.00514
+    ],
+    "delta_vs_ref": 0.00233,
+    "delta_se": 0.00062
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.00233,
+    "ci95": [
+     0.00139,
+     0.00391
+    ],
+    "delta_vs_ref": 0.00233,
+    "delta_se": 0.00062
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00517,
+    "ci95": [
+     0.00364,
+     0.00732
+    ],
+    "delta_vs_ref": 0.00217,
+    "delta_se": 0.0006
+   },
+   "det_win_by_t3": {
+    "value": 0.0215,
+    "ci95": [
+     0.01812,
+     0.02549
+    ],
+    "delta_vs_ref": 0.01033,
+    "delta_se": 0.00137
+   },
+   "det_protected_by_t3": {
+    "value": 0.00667,
+    "ci95": [
+     0.0049,
+     0.00906
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00067
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.00057,
+     0.00241
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.01033,
+    "ci95": [
+     0.00807,
+     0.01322
+    ],
+    "delta_vs_ref": 0.01033,
+    "delta_se": 0.00131
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01183,
+    "ci95": [
+     0.00939,
+     0.0149
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00053
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02533,
+    "ci95": [
+     0.02165,
+     0.02962
+    ],
+    "delta_vs_ref": 0.00833,
+    "delta_se": 0.00129
+   },
+   "det_win_by_t4": {
+    "value": 0.0585,
+    "ci95": [
+     0.05284,
+     0.06473
+    ],
+    "delta_vs_ref": 0.014,
+    "delta_se": 0.00236
+   },
+   "det_protected_by_t4": {
+    "value": 0.0205,
+    "ci95": [
+     0.01721,
+     0.0244
+    ],
+    "delta_vs_ref": 0.00667,
+    "delta_se": 0.00141
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00617,
+    "ci95": [
+     0.00448,
+     0.00849
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00047
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0255,
+    "ci95": [
+     0.0218,
+     0.0298
+    ],
+    "delta_vs_ref": 0.0255,
+    "delta_se": 0.00204
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03667,
+    "ci95": [
+     0.0322,
+     0.04173
+    ],
+    "delta_vs_ref": -0.00783,
+    "delta_se": 0.0015
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.06283,
+    "ci95": [
+     0.05697,
+     0.06926
+    ],
+    "delta_vs_ref": 0.01067,
+    "delta_se": 0.00227
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 194,
+    "inf_oracle": 214,
+    "oracle_consult": 151
+   },
+   "first_win_mean_cards": 2.846,
+   "first_win_mean_spells": 2.507
+  },
+  "B2_oracle_pact": {
+   "description": "Oracle + Tainted Pact",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 32,
+    "interaction": 19,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 14,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 12,
+    "blue_cards": 27,
+    "roles": {
+     "body": 32,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 14,
+     "interaction": 19,
+     "copy": 4,
+     "combo_component": 12,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.649,
+    "ci95": [
+     0.63683,
+     0.66098
+    ],
+    "delta_vs_ref": -0.0115,
+    "delta_se": 0.0014
+   },
+   "mean_mulligans": {
+    "value": 0.3965,
+    "delta_vs_ref": 0.01483,
+    "delta_se": 0.00176
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04967,
+    "ci95": [
+     0.04445,
+     0.05546
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00047
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95033,
+    "ci95": [
+     0.94454,
+     0.95555
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00047
+   },
+   "t1_has_W": {
+    "value": 0.60817,
+    "ci95": [
+     0.59575,
+     0.62045
+    ],
+    "delta_vs_ref": -0.0035,
+    "delta_se": 0.00142
+   },
+   "t1_has_U": {
+    "value": 0.75983,
+    "ci95": [
+     0.74886,
+     0.77047
+    ],
+    "delta_vs_ref": -0.00633,
+    "delta_se": 0.00166
+   },
+   "t1_has_B": {
+    "value": 0.54983,
+    "ci95": [
+     0.53722,
+     0.56239
+    ],
+    "delta_vs_ref": 0.00467,
+    "delta_se": 0.00168
+   },
+   "t1_has_G": {
+    "value": 0.78683,
+    "ci95": [
+     0.77629,
+     0.79701
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00115
+   },
+   "t2_all_four_colors": {
+    "value": 0.64683,
+    "ci95": [
+     0.63465,
+     0.65883
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00129
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79433,
+    "ci95": [
+     0.78392,
+     0.80437
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00103
+   },
+   "t1_mana_ge2": {
+    "value": 0.16683,
+    "ci95": [
+     0.15761,
+     0.17648
+    ],
+    "delta_vs_ref": -0.00183,
+    "delta_se": 0.0009
+   },
+   "t2_mana_ge3": {
+    "value": 0.4245,
+    "ci95": [
+     0.41205,
+     0.43705
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00113
+   },
+   "t1_development": {
+    "value": 0.52083,
+    "ci95": [
+     0.50818,
+     0.53346
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00117
+   },
+   "t2_development": {
+    "value": 0.55633,
+    "ci95": [
+     0.54373,
+     0.56886
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00119
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32733,
+    "ci95": [
+     0.31557,
+     0.33931
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00097
+   },
+   "premium_engine_by_t3": {
+    "value": 0.50767,
+    "ci95": [
+     0.49502,
+     0.52031
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.0012
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57333,
+    "ci95": [
+     0.56078,
+     0.5858
+    ],
+    "delta_vs_ref": 0.002,
+    "delta_se": 0.00118
+   },
+   "det_win_by_t2": {
+    "value": 0.0015,
+    "ci95": [
+     0.00079,
+     0.00285
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00029
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00029
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.0035,
+    "ci95": [
+     0.00229,
+     0.00534
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00029
+   },
+   "det_win_by_t3": {
+    "value": 0.01617,
+    "ci95": [
+     0.01327,
+     0.01968
+    ],
+    "delta_vs_ref": 0.005,
+    "delta_se": 0.001
+   },
+   "det_protected_by_t3": {
+    "value": 0.0055,
+    "ci95": [
+     0.00392,
+     0.00771
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.0005
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.00057,
+     0.00241
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.00483,
+    "ci95": [
+     0.00337,
+     0.00693
+    ],
+    "delta_vs_ref": 0.00483,
+    "delta_se": 0.0009
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01183,
+    "ci95": [
+     0.00939,
+     0.0149
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00053
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0205,
+    "ci95": [
+     0.01721,
+     0.0244
+    ],
+    "delta_vs_ref": 0.0035,
+    "delta_se": 0.00093
+   },
+   "det_win_by_t4": {
+    "value": 0.05217,
+    "ci95": [
+     0.04682,
+     0.05809
+    ],
+    "delta_vs_ref": 0.00767,
+    "delta_se": 0.00213
+   },
+   "det_protected_by_t4": {
+    "value": 0.018,
+    "ci95": [
+     0.01493,
+     0.02169
+    ],
+    "delta_vs_ref": 0.00417,
+    "delta_se": 0.00126
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00583,
+    "ci95": [
+     0.0042,
+     0.0081
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00041
+   },
+   "oracle_line_by_t4": {
+    "value": 0.01867,
+    "ci95": [
+     0.01554,
+     0.02241
+    ],
+    "delta_vs_ref": 0.01867,
+    "delta_se": 0.00175
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03667,
+    "ci95": [
+     0.0322,
+     0.04173
+    ],
+    "delta_vs_ref": -0.00783,
+    "delta_se": 0.0015
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05683,
+    "ci95": [
+     0.05125,
+     0.06298
+    ],
+    "delta_vs_ref": 0.00467,
+    "delta_se": 0.00204
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 199,
+    "inf_oracle": 220,
+    "oracle_pact": 109
+   },
+   "first_win_mean_cards": 2.907,
+   "first_win_mean_spells": 2.562
+  },
+  "C_oracle_core3": {
+   "description": "Oracle + Consult + Pact",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 31,
+    "interaction": 18,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 14,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 13,
+    "blue_cards": 26,
+    "roles": {
+     "body": 31,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 14,
+     "interaction": 18,
+     "copy": 4,
+     "combo_component": 13,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.64967,
+    "ci95": [
+     0.6375,
+     0.66164
+    ],
+    "delta_vs_ref": -0.01083,
+    "delta_se": 0.00136
+   },
+   "mean_mulligans": {
+    "value": 0.39667,
+    "delta_vs_ref": 0.015,
+    "delta_se": 0.00175
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04967,
+    "ci95": [
+     0.04445,
+     0.05546
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00053
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95033,
+    "ci95": [
+     0.94454,
+     0.95555
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00053
+   },
+   "t1_has_W": {
+    "value": 0.6095,
+    "ci95": [
+     0.59709,
+     0.62177
+    ],
+    "delta_vs_ref": -0.00217,
+    "delta_se": 0.00171
+   },
+   "t1_has_U": {
+    "value": 0.75583,
+    "ci95": [
+     0.7448,
+     0.76654
+    ],
+    "delta_vs_ref": -0.01033,
+    "delta_se": 0.00195
+   },
+   "t1_has_B": {
+    "value": 0.5585,
+    "ci95": [
+     0.5459,
+     0.57102
+    ],
+    "delta_vs_ref": 0.01333,
+    "delta_se": 0.00206
+   },
+   "t1_has_G": {
+    "value": 0.78183,
+    "ci95": [
+     0.7712,
+     0.7921
+    ],
+    "delta_vs_ref": -0.006,
+    "delta_se": 0.00153
+   },
+   "t2_all_four_colors": {
+    "value": 0.648,
+    "ci95": [
+     0.63582,
+     0.65999
+    ],
+    "delta_vs_ref": -0.0025,
+    "delta_se": 0.00148
+   },
+   "t2_three_plus_colors": {
+    "value": 0.795,
+    "ci95": [
+     0.7846,
+     0.80502
+    ],
+    "delta_vs_ref": -0.00133,
+    "delta_se": 0.00115
+   },
+   "t1_mana_ge2": {
+    "value": 0.16567,
+    "ci95": [
+     0.15647,
+     0.17529
+    ],
+    "delta_vs_ref": -0.003,
+    "delta_se": 0.001
+   },
+   "t2_mana_ge3": {
+    "value": 0.42283,
+    "ci95": [
+     0.41039,
+     0.43538
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00129
+   },
+   "t1_development": {
+    "value": 0.51967,
+    "ci95": [
+     0.50702,
+     0.53229
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.00135
+   },
+   "t2_development": {
+    "value": 0.55567,
+    "ci95": [
+     0.54306,
+     0.5682
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00142
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32783,
+    "ci95": [
+     0.31607,
+     0.33982
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00114
+   },
+   "premium_engine_by_t3": {
+    "value": 0.50817,
+    "ci95": [
+     0.49552,
+     0.52081
+    ],
+    "delta_vs_ref": 0.00317,
+    "delta_se": 0.00138
+   },
+   "premium_engine_by_t4": {
+    "value": 0.574,
+    "ci95": [
+     0.56144,
+     0.58646
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00135
+   },
+   "det_win_by_t2": {
+    "value": 0.0035,
+    "ci95": [
+     0.00229,
+     0.00534
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00064
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0025,
+    "ci95": [
+     0.00152,
+     0.00412
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00064
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00533,
+    "ci95": [
+     0.00378,
+     0.00752
+    ],
+    "delta_vs_ref": 0.00233,
+    "delta_se": 0.00062
+   },
+   "det_win_by_t3": {
+    "value": 0.02483,
+    "ci95": [
+     0.02119,
+     0.02909
+    ],
+    "delta_vs_ref": 0.01367,
+    "delta_se": 0.00155
+   },
+   "det_protected_by_t3": {
+    "value": 0.00717,
+    "ci95": [
+     0.00533,
+     0.00964
+    ],
+    "delta_vs_ref": 0.00317,
+    "delta_se": 0.00073
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.00057,
+     0.00241
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.01383,
+    "ci95": [
+     0.01117,
+     0.01712
+    ],
+    "delta_vs_ref": 0.01383,
+    "delta_se": 0.00151
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01183,
+    "ci95": [
+     0.00939,
+     0.0149
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00053
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0285,
+    "ci95": [
+     0.02458,
+     0.03302
+    ],
+    "delta_vs_ref": 0.0115,
+    "delta_se": 0.00149
+   },
+   "det_win_by_t4": {
+    "value": 0.0705,
+    "ci95": [
+     0.06429,
+     0.07726
+    ],
+    "delta_vs_ref": 0.026,
+    "delta_se": 0.00275
+   },
+   "det_protected_by_t4": {
+    "value": 0.02483,
+    "ci95": [
+     0.02119,
+     0.02909
+    ],
+    "delta_vs_ref": 0.011,
+    "delta_se": 0.00166
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00667,
+    "ci95": [
+     0.0049,
+     0.00906
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.00055
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0385,
+    "ci95": [
+     0.03392,
+     0.04367
+    ],
+    "delta_vs_ref": 0.0385,
+    "delta_se": 0.00248
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03667,
+    "ci95": [
+     0.0322,
+     0.04173
+    ],
+    "delta_vs_ref": -0.00783,
+    "delta_se": 0.00152
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.07467,
+    "ci95": [
+     0.06828,
+     0.08159
+    ],
+    "delta_vs_ref": 0.0225,
+    "delta_se": 0.00268
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 194,
+    "inf_oracle": 214,
+    "oracle_consult": 151,
+    "oracle_pact": 89
+   },
+   "first_win_mean_cards": 2.775,
+   "first_win_mean_spells": 2.359
+  },
+  "D_core3_spellseeker": {
+   "description": "Oracle + Consult + Pact + Spellseeker",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 31,
+    "interaction": 17,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 15,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 13,
+    "blue_cards": 26,
+    "roles": {
+     "body": 31,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 15,
+     "interaction": 17,
+     "copy": 4,
+     "combo_component": 13,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.66383,
+    "ci95": [
+     0.65178,
+     0.67568
+    ],
+    "delta_vs_ref": 0.00333,
+    "delta_se": 0.00193
+   },
+   "mean_mulligans": {
+    "value": 0.382,
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00227
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04717,
+    "ci95": [
+     0.04209,
+     0.05283
+    ],
+    "delta_vs_ref": -0.0015,
+    "delta_se": 0.00083
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95283,
+    "ci95": [
+     0.94717,
+     0.95791
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.00083
+   },
+   "t1_has_W": {
+    "value": 0.61233,
+    "ci95": [
+     0.59994,
+     0.62459
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00203
+   },
+   "t1_has_U": {
+    "value": 0.75817,
+    "ci95": [
+     0.74717,
+     0.76883
+    ],
+    "delta_vs_ref": -0.008,
+    "delta_se": 0.00208
+   },
+   "t1_has_B": {
+    "value": 0.5595,
+    "ci95": [
+     0.5469,
+     0.57202
+    ],
+    "delta_vs_ref": 0.01433,
+    "delta_se": 0.00224
+   },
+   "t1_has_G": {
+    "value": 0.783,
+    "ci95": [
+     0.77239,
+     0.79325
+    ],
+    "delta_vs_ref": -0.00483,
+    "delta_se": 0.00175
+   },
+   "t2_all_four_colors": {
+    "value": 0.64983,
+    "ci95": [
+     0.63767,
+     0.6618
+    ],
+    "delta_vs_ref": -0.00067,
+    "delta_se": 0.00172
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79683,
+    "ci95": [
+     0.78646,
+     0.80682
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00142
+   },
+   "t1_mana_ge2": {
+    "value": 0.16667,
+    "ci95": [
+     0.15745,
+     0.17631
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00135
+   },
+   "t2_mana_ge3": {
+    "value": 0.42283,
+    "ci95": [
+     0.41039,
+     0.43538
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00168
+   },
+   "t1_development": {
+    "value": 0.51767,
+    "ci95": [
+     0.50502,
+     0.5303
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00165
+   },
+   "t2_development": {
+    "value": 0.553,
+    "ci95": [
+     0.54039,
+     0.56554
+    ],
+    "delta_vs_ref": -0.00217,
+    "delta_se": 0.00176
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32583,
+    "ci95": [
+     0.31409,
+     0.3378
+    ],
+    "delta_vs_ref": -0.00083,
+    "delta_se": 0.00136
+   },
+   "premium_engine_by_t3": {
+    "value": 0.5055,
+    "ci95": [
+     0.49285,
+     0.51814
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00162
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57217,
+    "ci95": [
+     0.55961,
+     0.58464
+    ],
+    "delta_vs_ref": 0.00083,
+    "delta_se": 0.00171
+   },
+   "det_win_by_t2": {
+    "value": 0.00367,
+    "ci95": [
+     0.00242,
+     0.00555
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00067
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.00267,
+    "ci95": [
+     0.00164,
+     0.00433
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00067
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.0055,
+    "ci95": [
+     0.00392,
+     0.00771
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00064
+   },
+   "det_win_by_t3": {
+    "value": 0.026,
+    "ci95": [
+     0.02227,
+     0.03034
+    ],
+    "delta_vs_ref": 0.01483,
+    "delta_se": 0.0016
+   },
+   "det_protected_by_t3": {
+    "value": 0.00717,
+    "ci95": [
+     0.00533,
+     0.00964
+    ],
+    "delta_vs_ref": 0.00317,
+    "delta_se": 0.00073
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00117,
+    "ci95": [
+     0.00057,
+     0.00241
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.015,
+    "ci95": [
+     0.01222,
+     0.0184
+    ],
+    "delta_vs_ref": 0.015,
+    "delta_se": 0.00157
+   },
+   "infinite_line_by_t3": {
+    "value": 0.012,
+    "ci95": [
+     0.00954,
+     0.01508
+    ],
+    "delta_vs_ref": 0.00083,
+    "delta_se": 0.0005
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02983,
+    "ci95": [
+     0.02582,
+     0.03445
+    ],
+    "delta_vs_ref": 0.01283,
+    "delta_se": 0.00155
+   },
+   "det_win_by_t4": {
+    "value": 0.0875,
+    "ci95": [
+     0.08061,
+     0.09492
+    ],
+    "delta_vs_ref": 0.043,
+    "delta_se": 0.00283
+   },
+   "det_protected_by_t4": {
+    "value": 0.029,
+    "ci95": [
+     0.02505,
+     0.03356
+    ],
+    "delta_vs_ref": 0.01517,
+    "delta_se": 0.0017
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00667,
+    "ci95": [
+     0.0049,
+     0.00906
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.0005
+   },
+   "oracle_line_by_t4": {
+    "value": 0.05117,
+    "ci95": [
+     0.04587,
+     0.05703
+    ],
+    "delta_vs_ref": 0.05117,
+    "delta_se": 0.00284
+   },
+   "infinite_line_by_t4": {
+    "value": 0.04517,
+    "ci95": [
+     0.0402,
+     0.05072
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.0012
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.09183,
+    "ci95": [
+     0.08478,
+     0.0994
+    ],
+    "delta_vs_ref": 0.03967,
+    "delta_se": 0.00276
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 242,
+    "inf_oracle": 262,
+    "oracle_consult": 227,
+    "oracle_pact": 124
+   },
+   "first_win_mean_cards": 3.08,
+   "first_win_mean_spells": 2.442
+  },
+  "F_oracle_hermit_shangchi": {
+   "description": "Oracle + Hermit Druid + Shang-Chi",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 33,
+    "interaction": 18,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 13,
+    "blue_cards": 26,
+    "roles": {
+     "body": 33,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 18,
+     "copy": 4,
+     "combo_component": 13,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.64817,
+    "ci95": [
+     0.63599,
+     0.66015
+    ],
+    "delta_vs_ref": -0.01233,
+    "delta_se": 0.00142
+   },
+   "mean_mulligans": {
+    "value": 0.39833,
+    "delta_vs_ref": 0.01667,
+    "delta_se": 0.00183
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04967,
+    "ci95": [
+     0.04445,
+     0.05546
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00053
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95033,
+    "ci95": [
+     0.94454,
+     0.95555
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00053
+   },
+   "t1_has_W": {
+    "value": 0.61,
+    "ci95": [
+     0.59759,
+     0.62227
+    ],
+    "delta_vs_ref": -0.00167,
+    "delta_se": 0.00165
+   },
+   "t1_has_U": {
+    "value": 0.75867,
+    "ci95": [
+     0.74768,
+     0.76933
+    ],
+    "delta_vs_ref": -0.0075,
+    "delta_se": 0.00175
+   },
+   "t1_has_B": {
+    "value": 0.54433,
+    "ci95": [
+     0.53171,
+     0.5569
+    ],
+    "delta_vs_ref": -0.00083,
+    "delta_se": 0.0015
+   },
+   "t1_has_G": {
+    "value": 0.7915,
+    "ci95": [
+     0.78104,
+     0.80159
+    ],
+    "delta_vs_ref": 0.00367,
+    "delta_se": 0.00145
+   },
+   "t2_all_four_colors": {
+    "value": 0.64733,
+    "ci95": [
+     0.63515,
+     0.65933
+    ],
+    "delta_vs_ref": -0.00317,
+    "delta_se": 0.0014
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79383,
+    "ci95": [
+     0.78341,
+     0.80388
+    ],
+    "delta_vs_ref": -0.0025,
+    "delta_se": 0.00117
+   },
+   "t1_mana_ge2": {
+    "value": 0.1655,
+    "ci95": [
+     0.15631,
+     0.17512
+    ],
+    "delta_vs_ref": -0.00317,
+    "delta_se": 0.00104
+   },
+   "t2_mana_ge3": {
+    "value": 0.42367,
+    "ci95": [
+     0.41122,
+     0.43622
+    ],
+    "delta_vs_ref": -0.00283,
+    "delta_se": 0.0013
+   },
+   "t1_development": {
+    "value": 0.5225,
+    "ci95": [
+     0.50985,
+     0.53512
+    ],
+    "delta_vs_ref": 0.00283,
+    "delta_se": 0.0013
+   },
+   "t2_development": {
+    "value": 0.56383,
+    "ci95": [
+     0.55125,
+     0.57634
+    ],
+    "delta_vs_ref": 0.00867,
+    "delta_se": 0.00159
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32933,
+    "ci95": [
+     0.31755,
+     0.34133
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00103
+   },
+   "premium_engine_by_t3": {
+    "value": 0.50883,
+    "ci95": [
+     0.49618,
+     0.52147
+    ],
+    "delta_vs_ref": 0.00383,
+    "delta_se": 0.0013
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57433,
+    "ci95": [
+     0.56178,
+     0.58679
+    ],
+    "delta_vs_ref": 0.003,
+    "delta_se": 0.00127
+   },
+   "det_win_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t3": {
+    "value": 0.01333,
+    "ci95": [
+     0.01073,
+     0.01656
+    ],
+    "delta_vs_ref": 0.00217,
+    "delta_se": 0.00073
+   },
+   "det_protected_by_t3": {
+    "value": 0.005,
+    "ci95": [
+     0.0035,
+     0.00713
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00041
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00133,
+    "ci95": [
+     0.00068,
+     0.00263
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0015,
+    "ci95": [
+     0.00079,
+     0.00285
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.0005
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01183,
+    "ci95": [
+     0.00939,
+     0.0149
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00053
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0175,
+    "ci95": [
+     0.01448,
+     0.02114
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00065
+   },
+   "det_win_by_t4": {
+    "value": 0.04433,
+    "ci95": [
+     0.03941,
+     0.04984
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00185
+   },
+   "det_protected_by_t4": {
+    "value": 0.01583,
+    "ci95": [
+     0.01297,
+     0.01932
+    ],
+    "delta_vs_ref": 0.002,
+    "delta_se": 0.00108
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.006,
+    "ci95": [
+     0.00434,
+     0.00829
+    ],
+    "delta_vs_ref": 0.00083,
+    "delta_se": 0.00044
+   },
+   "oracle_line_by_t4": {
+    "value": 0.00833,
+    "ci95": [
+     0.00633,
+     0.01097
+    ],
+    "delta_vs_ref": 0.00833,
+    "delta_se": 0.00117
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03717,
+    "ci95": [
+     0.03267,
+     0.04226
+    ],
+    "delta_vs_ref": -0.00733,
+    "delta_se": 0.00152
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04917,
+    "ci95": [
+     0.04398,
+     0.05493
+    ],
+    "delta_vs_ref": -0.003,
+    "delta_se": 0.00176
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 202,
+    "inf_oracle": 223,
+    "oracle_hermit": 46
+   },
+   "first_win_mean_cards": 2.996,
+   "first_win_mean_spells": 2.639
+  },
+  "G_oracle_only": {
+   "description": "Oracle alone (Thrasios-infinite outlet only)",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 33,
+    "interaction": 20,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 11,
+    "blue_cards": 28,
+    "roles": {
+     "body": 33,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 20,
+     "copy": 4,
+     "combo_component": 11,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.64817,
+    "ci95": [
+     0.63599,
+     0.66015
+    ],
+    "delta_vs_ref": -0.01233,
+    "delta_se": 0.00142
+   },
+   "mean_mulligans": {
+    "value": 0.396,
+    "delta_vs_ref": 0.01433,
+    "delta_se": 0.00172
+   },
+   "kept_hand_fm0": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.04967,
+    "ci95": [
+     0.04445,
+     0.05546
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00041
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.95033,
+    "ci95": [
+     0.94454,
+     0.95555
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00041
+   },
+   "t1_has_W": {
+    "value": 0.60983,
+    "ci95": [
+     0.59742,
+     0.6221
+    ],
+    "delta_vs_ref": -0.00183,
+    "delta_se": 0.00114
+   },
+   "t1_has_U": {
+    "value": 0.76717,
+    "ci95": [
+     0.7563,
+     0.77769
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00118
+   },
+   "t1_has_B": {
+    "value": 0.54183,
+    "ci95": [
+     0.5292,
+     0.55441
+    ],
+    "delta_vs_ref": -0.00333,
+    "delta_se": 0.00118
+   },
+   "t1_has_G": {
+    "value": 0.78683,
+    "ci95": [
+     0.77629,
+     0.79701
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.00097
+   },
+   "t2_all_four_colors": {
+    "value": 0.64733,
+    "ci95": [
+     0.63515,
+     0.65933
+    ],
+    "delta_vs_ref": -0.00317,
+    "delta_se": 0.00109
+   },
+   "t2_three_plus_colors": {
+    "value": 0.79333,
+    "ci95": [
+     0.7829,
+     0.80339
+    ],
+    "delta_vs_ref": -0.003,
+    "delta_se": 0.00094
+   },
+   "t1_mana_ge2": {
+    "value": 0.168,
+    "ci95": [
+     0.15875,
+     0.17767
+    ],
+    "delta_vs_ref": -0.00067,
+    "delta_se": 0.00075
+   },
+   "t2_mana_ge3": {
+    "value": 0.42583,
+    "ci95": [
+     0.41337,
+     0.43839
+    ],
+    "delta_vs_ref": -0.00067,
+    "delta_se": 0.00094
+   },
+   "t1_development": {
+    "value": 0.52217,
+    "ci95": [
+     0.50952,
+     0.53479
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00096
+   },
+   "t2_development": {
+    "value": 0.55767,
+    "ci95": [
+     0.54507,
+     0.57019
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00099
+   },
+   "premium_engine_by_t2": {
+    "value": 0.32817,
+    "ci95": [
+     0.3164,
+     0.34015
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.00076
+   },
+   "premium_engine_by_t3": {
+    "value": 0.50783,
+    "ci95": [
+     0.49518,
+     0.52047
+    ],
+    "delta_vs_ref": 0.00283,
+    "delta_se": 0.00109
+   },
+   "premium_engine_by_t4": {
+    "value": 0.57333,
+    "ci95": [
+     0.56078,
+     0.5858
+    ],
+    "delta_vs_ref": 0.002,
+    "delta_se": 0.00105
+   },
+   "det_win_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t3": {
+    "value": 0.01183,
+    "ci95": [
+     0.00939,
+     0.0149
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00053
+   },
+   "det_protected_by_t3": {
+    "value": 0.00417,
+    "ci95": [
+     0.00282,
+     0.00614
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00133,
+    "ci95": [
+     0.00068,
+     0.00263
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01183,
+    "ci95": [
+     0.00939,
+     0.0149
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00053
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.01617,
+    "ci95": [
+     0.01327,
+     0.01968
+    ],
+    "delta_vs_ref": -0.00083,
+    "delta_se": 0.00037
+   },
+   "det_win_by_t4": {
+    "value": 0.037,
+    "ci95": [
+     0.03251,
+     0.04208
+    ],
+    "delta_vs_ref": -0.0075,
+    "delta_se": 0.00148
+   },
+   "det_protected_by_t4": {
+    "value": 0.01233,
+    "ci95": [
+     0.00984,
+     0.01545
+    ],
+    "delta_vs_ref": -0.0015,
+    "delta_se": 0.00083
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.005,
+    "ci95": [
+     0.0035,
+     0.00713
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t4": {
+    "value": 0.037,
+    "ci95": [
+     0.03251,
+     0.04208
+    ],
+    "delta_vs_ref": -0.0075,
+    "delta_se": 0.00148
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04183,
+    "ci95": [
+     0.03705,
+     0.0472
+    ],
+    "delta_vs_ref": -0.01033,
+    "delta_se": 0.00135
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 201,
+    "inf_oracle": 222
+   },
+   "first_win_mean_cards": 3.108,
+   "first_win_mean_spells": 2.982
+  }
+ },
+ "strict": {
+  "BASELINE_v8": {
+   "description": "frozen Moxfield v8 (Deathrite, Strix)",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 32,
+    "interaction": 21,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 10,
+    "blue_cards": 28,
+    "roles": {
+     "body": 32,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 21,
+     "copy": 4,
+     "combo_component": 10,
+     "timing": 3,
+     "outlet": 4,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.31333,
+    "ci95": [
+     0.30172,
+     0.32519
+    ],
+    "delta_vs_ref": -0.00617,
+    "delta_se": 0.00128
+   },
+   "mean_mulligans": {
+    "value": 1.04517,
+    "delta_vs_ref": 0.01983,
+    "delta_se": 0.00285
+   },
+   "kept_hand_fm0": {
+    "value": 0.00283,
+    "ci95": [
+     0.00177,
+     0.00453
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "kept_hand_fm1": {
+    "value": 0.02067,
+    "ci95": [
+     0.01736,
+     0.02459
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.0005
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.9765,
+    "ci95": [
+     0.97235,
+     0.98004
+    ],
+    "delta_vs_ref": -0.0015,
+    "delta_se": 0.00055
+   },
+   "t1_has_W": {
+    "value": 0.59867,
+    "ci95": [
+     0.5862,
+     0.611
+    ],
+    "delta_vs_ref": -0.0025,
+    "delta_se": 0.00166
+   },
+   "t1_has_U": {
+    "value": 0.72467,
+    "ci95": [
+     0.71322,
+     0.73582
+    ],
+    "delta_vs_ref": -0.008,
+    "delta_se": 0.00161
+   },
+   "t1_has_B": {
+    "value": 0.5485,
+    "ci95": [
+     0.53588,
+     0.56106
+    ],
+    "delta_vs_ref": 0.01233,
+    "delta_se": 0.00194
+   },
+   "t1_has_G": {
+    "value": 0.77967,
+    "ci95": [
+     0.769,
+     0.78997
+    ],
+    "delta_vs_ref": 0.00083,
+    "delta_se": 0.00134
+   },
+   "t2_all_four_colors": {
+    "value": 0.6295,
+    "ci95": [
+     0.6172,
+     0.64163
+    ],
+    "delta_vs_ref": 0.009,
+    "delta_se": 0.00197
+   },
+   "t2_three_plus_colors": {
+    "value": 0.77467,
+    "ci95": [
+     0.76392,
+     0.78506
+    ],
+    "delta_vs_ref": -0.00033,
+    "delta_se": 0.00141
+   },
+   "t1_mana_ge2": {
+    "value": 0.15233,
+    "ci95": [
+     0.14346,
+     0.16165
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.00094
+   },
+   "t2_mana_ge3": {
+    "value": 0.41317,
+    "ci95": [
+     0.40077,
+     0.42568
+    ],
+    "delta_vs_ref": -0.01983,
+    "delta_se": 0.00234
+   },
+   "t1_development": {
+    "value": 0.59833,
+    "ci95": [
+     0.58587,
+     0.61067
+    ],
+    "delta_vs_ref": 0.00483,
+    "delta_se": 0.0018
+   },
+   "t2_development": {
+    "value": 0.6265,
+    "ci95": [
+     0.61418,
+     0.63866
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00191
+   },
+   "premium_engine_by_t2": {
+    "value": 0.409,
+    "ci95": [
+     0.39662,
+     0.42149
+    ],
+    "delta_vs_ref": 0.00133,
+    "delta_se": 0.00143
+   },
+   "premium_engine_by_t3": {
+    "value": 0.56517,
+    "ci95": [
+     0.55259,
+     0.57766
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00174
+   },
+   "premium_engine_by_t4": {
+    "value": 0.62583,
+    "ci95": [
+     0.61351,
+     0.63799
+    ],
+    "delta_vs_ref": 0.00383,
+    "delta_se": 0.0018
+   },
+   "det_win_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "det_win_by_t3": {
+    "value": 0.00917,
+    "ci95": [
+     0.00705,
+     0.01191
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00044
+   },
+   "det_protected_by_t3": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00183,
+    "ci95": [
+     0.00102,
+     0.00328
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t3": {
+    "value": 0.00917,
+    "ci95": [
+     0.00705,
+     0.01191
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00044
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.01467,
+    "ci95": [
+     0.01192,
+     0.01803
+    ],
+    "delta_vs_ref": -0.00083,
+    "delta_se": 0.0005
+   },
+   "det_win_by_t4": {
+    "value": 0.0295,
+    "ci95": [
+     0.02551,
+     0.03409
+    ],
+    "delta_vs_ref": -0.0095,
+    "delta_se": 0.0013
+   },
+   "det_protected_by_t4": {
+    "value": 0.0095,
+    "ci95": [
+     0.00734,
+     0.01229
+    ],
+    "delta_vs_ref": -0.00317,
+    "delta_se": 0.00073
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.0065,
+    "ci95": [
+     0.00476,
+     0.00887
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.00033
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t4": {
+    "value": 0.0295,
+    "ci95": [
+     0.02551,
+     0.03409
+    ],
+    "delta_vs_ref": -0.0095,
+    "delta_se": 0.0013
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.03783,
+    "ci95": [
+     0.03329,
+     0.04296
+    ],
+    "delta_vs_ref": -0.01017,
+    "delta_se": 0.00132
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 177
+   },
+   "first_win_mean_cards": 3.119,
+   "first_win_mean_spells": 4.763
+  },
+  "A_oracle_less": {
+   "description": "DRS->Avacyn's Pilgrim; Strix->Spellseeker",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 33,
+    "interaction": 20,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 14,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 10,
+    "blue_cards": 28,
+    "roles": {
+     "body": 33,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 14,
+     "interaction": 20,
+     "copy": 4,
+     "combo_component": 10,
+     "timing": 3,
+     "outlet": 4,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.3195,
+    "ci95": [
+     0.30782,
+     0.33141
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "mean_mulligans": {
+    "value": 1.02533,
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm0": {
+    "value": 0.0025,
+    "ci95": [
+     0.00152,
+     0.00412
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm1": {
+    "value": 0.0195,
+    "ci95": [
+     0.0163,
+     0.02332
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.978,
+    "ci95": [
+     0.97397,
+     0.98142
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_W": {
+    "value": 0.60117,
+    "ci95": [
+     0.58872,
+     0.61349
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_U": {
+    "value": 0.73267,
+    "ci95": [
+     0.72132,
+     0.74371
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_B": {
+    "value": 0.53617,
+    "ci95": [
+     0.52353,
+     0.54876
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_has_G": {
+    "value": 0.77883,
+    "ci95": [
+     0.76815,
+     0.78915
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_all_four_colors": {
+    "value": 0.6205,
+    "ci95": [
+     0.60815,
+     0.6327
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_three_plus_colors": {
+    "value": 0.775,
+    "ci95": [
+     0.76426,
+     0.78539
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_mana_ge2": {
+    "value": 0.15233,
+    "ci95": [
+     0.14346,
+     0.16165
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_mana_ge3": {
+    "value": 0.433,
+    "ci95": [
+     0.42051,
+     0.44558
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t1_development": {
+    "value": 0.5935,
+    "ci95": [
+     0.58102,
+     0.60586
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "t2_development": {
+    "value": 0.62383,
+    "ci95": [
+     0.6115,
+     0.63601
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "premium_engine_by_t2": {
+    "value": 0.40767,
+    "ci95": [
+     0.3953,
+     0.42016
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "premium_engine_by_t3": {
+    "value": 0.56267,
+    "ci95": [
+     0.55008,
+     0.57517
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "premium_engine_by_t4": {
+    "value": 0.622,
+    "ci95": [
+     0.60966,
+     0.63419
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00283,
+    "ci95": [
+     0.00177,
+     0.00453
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t3": {
+    "value": 0.00933,
+    "ci95": [
+     0.00719,
+     0.0121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t3": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00167,
+    "ci95": [
+     0.00091,
+     0.00307
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t3": {
+    "value": 0.00933,
+    "ci95": [
+     0.00719,
+     0.0121
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0155,
+    "ci95": [
+     0.01267,
+     0.01895
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t4": {
+    "value": 0.039,
+    "ci95": [
+     0.03439,
+     0.0442
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t4": {
+    "value": 0.01267,
+    "ci95": [
+     0.01013,
+     0.01582
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.0065,
+    "ci95": [
+     0.00476,
+     0.00887
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t4": {
+    "value": 0.039,
+    "ci95": [
+     0.03439,
+     0.0442
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.048,
+    "ci95": [
+     0.04287,
+     0.0537
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 234
+   },
+   "first_win_mean_cards": 3.526,
+   "first_win_mean_spells": 4.974
+  },
+  "B_oracle_consult": {
+   "description": "Oracle + Consultation",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 32,
+    "interaction": 19,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 12,
+    "blue_cards": 27,
+    "roles": {
+     "body": 32,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 19,
+     "copy": 4,
+     "combo_component": 12,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.31233,
+    "ci95": [
+     0.30073,
+     0.32418
+    ],
+    "delta_vs_ref": -0.00717,
+    "delta_se": 0.00138
+   },
+   "mean_mulligans": {
+    "value": 1.0525,
+    "delta_vs_ref": 0.02717,
+    "delta_se": 0.00305
+   },
+   "kept_hand_fm0": {
+    "value": 0.00267,
+    "ci95": [
+     0.00164,
+     0.00433
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "kept_hand_fm1": {
+    "value": 0.02133,
+    "ci95": [
+     0.01797,
+     0.02531
+    ],
+    "delta_vs_ref": 0.00183,
+    "delta_se": 0.00055
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.976,
+    "ci95": [
+     0.97181,
+     0.97958
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00058
+   },
+   "t1_has_W": {
+    "value": 0.59883,
+    "ci95": [
+     0.58637,
+     0.61117
+    ],
+    "delta_vs_ref": -0.00233,
+    "delta_se": 0.00175
+   },
+   "t1_has_U": {
+    "value": 0.72717,
+    "ci95": [
+     0.71575,
+     0.73829
+    ],
+    "delta_vs_ref": -0.0055,
+    "delta_se": 0.00185
+   },
+   "t1_has_B": {
+    "value": 0.54367,
+    "ci95": [
+     0.53104,
+     0.55624
+    ],
+    "delta_vs_ref": 0.0075,
+    "delta_se": 0.00191
+   },
+   "t1_has_G": {
+    "value": 0.77667,
+    "ci95": [
+     0.76595,
+     0.78703
+    ],
+    "delta_vs_ref": -0.00217,
+    "delta_se": 0.00155
+   },
+   "t2_all_four_colors": {
+    "value": 0.61683,
+    "ci95": [
+     0.60446,
+     0.62906
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00155
+   },
+   "t2_three_plus_colors": {
+    "value": 0.77383,
+    "ci95": [
+     0.76307,
+     0.78424
+    ],
+    "delta_vs_ref": -0.00117,
+    "delta_se": 0.0013
+   },
+   "t1_mana_ge2": {
+    "value": 0.15067,
+    "ci95": [
+     0.14184,
+     0.15994
+    ],
+    "delta_vs_ref": -0.00167,
+    "delta_se": 0.00111
+   },
+   "t2_mana_ge3": {
+    "value": 0.4295,
+    "ci95": [
+     0.41702,
+     0.44207
+    ],
+    "delta_vs_ref": -0.0035,
+    "delta_se": 0.00162
+   },
+   "t1_development": {
+    "value": 0.5895,
+    "ci95": [
+     0.577,
+     0.60189
+    ],
+    "delta_vs_ref": -0.004,
+    "delta_se": 0.00165
+   },
+   "t2_development": {
+    "value": 0.62267,
+    "ci95": [
+     0.61033,
+     0.63485
+    ],
+    "delta_vs_ref": -0.00117,
+    "delta_se": 0.00172
+   },
+   "premium_engine_by_t2": {
+    "value": 0.40983,
+    "ci95": [
+     0.39745,
+     0.42233
+    ],
+    "delta_vs_ref": 0.00217,
+    "delta_se": 0.0013
+   },
+   "premium_engine_by_t3": {
+    "value": 0.566,
+    "ci95": [
+     0.55342,
+     0.57849
+    ],
+    "delta_vs_ref": 0.00333,
+    "delta_se": 0.00155
+   },
+   "premium_engine_by_t4": {
+    "value": 0.626,
+    "ci95": [
+     0.61368,
+     0.63816
+    ],
+    "delta_vs_ref": 0.004,
+    "delta_se": 0.00163
+   },
+   "det_win_by_t2": {
+    "value": 0.00233,
+    "ci95": [
+     0.00139,
+     0.00391
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00053
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.00167,
+    "ci95": [
+     0.00091,
+     0.00307
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00053
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00433,
+    "ci95": [
+     0.00296,
+     0.00634
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.0005
+   },
+   "det_win_by_t3": {
+    "value": 0.01817,
+    "ci95": [
+     0.01508,
+     0.02187
+    ],
+    "delta_vs_ref": 0.00883,
+    "delta_se": 0.00125
+   },
+   "det_protected_by_t3": {
+    "value": 0.0055,
+    "ci95": [
+     0.00392,
+     0.00771
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00064
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00167,
+    "ci95": [
+     0.00091,
+     0.00307
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.00867,
+    "ci95": [
+     0.00662,
+     0.01135
+    ],
+    "delta_vs_ref": 0.00867,
+    "delta_se": 0.0012
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01,
+    "ci95": [
+     0.00778,
+     0.01285
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00047
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0225,
+    "ci95": [
+     0.01904,
+     0.02657
+    ],
+    "delta_vs_ref": 0.007,
+    "delta_se": 0.00115
+   },
+   "det_win_by_t4": {
+    "value": 0.05283,
+    "ci95": [
+     0.04745,
+     0.05879
+    ],
+    "delta_vs_ref": 0.01383,
+    "delta_se": 0.00217
+   },
+   "det_protected_by_t4": {
+    "value": 0.01817,
+    "ci95": [
+     0.01508,
+     0.02187
+    ],
+    "delta_vs_ref": 0.0055,
+    "delta_se": 0.00128
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00717,
+    "ci95": [
+     0.00533,
+     0.00964
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00041
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0215,
+    "ci95": [
+     0.01812,
+     0.02549
+    ],
+    "delta_vs_ref": 0.0215,
+    "delta_se": 0.00187
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03433,
+    "ci95": [
+     0.03002,
+     0.03925
+    ],
+    "delta_vs_ref": -0.00467,
+    "delta_se": 0.00137
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05817,
+    "ci95": [
+     0.05252,
+     0.06438
+    ],
+    "delta_vs_ref": 0.01017,
+    "delta_se": 0.00206
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 180,
+    "inf_oracle": 200,
+    "oracle_consult": 128
+   },
+   "first_win_mean_cards": 2.874,
+   "first_win_mean_spells": 2.505
+  },
+  "B2_oracle_pact": {
+   "description": "Oracle + Tainted Pact",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 32,
+    "interaction": 19,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 14,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 12,
+    "blue_cards": 27,
+    "roles": {
+     "body": 32,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 14,
+     "interaction": 19,
+     "copy": 4,
+     "combo_component": 12,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.31233,
+    "ci95": [
+     0.30073,
+     0.32418
+    ],
+    "delta_vs_ref": -0.00717,
+    "delta_se": 0.00138
+   },
+   "mean_mulligans": {
+    "value": 1.0525,
+    "delta_vs_ref": 0.02717,
+    "delta_se": 0.00305
+   },
+   "kept_hand_fm0": {
+    "value": 0.00267,
+    "ci95": [
+     0.00164,
+     0.00433
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "kept_hand_fm1": {
+    "value": 0.02133,
+    "ci95": [
+     0.01797,
+     0.02531
+    ],
+    "delta_vs_ref": 0.00183,
+    "delta_se": 0.00055
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.976,
+    "ci95": [
+     0.97181,
+     0.97958
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00058
+   },
+   "t1_has_W": {
+    "value": 0.59917,
+    "ci95": [
+     0.58671,
+     0.6115
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00173
+   },
+   "t1_has_U": {
+    "value": 0.72717,
+    "ci95": [
+     0.71575,
+     0.73829
+    ],
+    "delta_vs_ref": -0.0055,
+    "delta_se": 0.00185
+   },
+   "t1_has_B": {
+    "value": 0.54317,
+    "ci95": [
+     0.53054,
+     0.55574
+    ],
+    "delta_vs_ref": 0.007,
+    "delta_se": 0.00188
+   },
+   "t1_has_G": {
+    "value": 0.77683,
+    "ci95": [
+     0.76612,
+     0.78719
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00155
+   },
+   "t2_all_four_colors": {
+    "value": 0.61683,
+    "ci95": [
+     0.60446,
+     0.62906
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00155
+   },
+   "t2_three_plus_colors": {
+    "value": 0.77383,
+    "ci95": [
+     0.76307,
+     0.78424
+    ],
+    "delta_vs_ref": -0.00117,
+    "delta_se": 0.0013
+   },
+   "t1_mana_ge2": {
+    "value": 0.15083,
+    "ci95": [
+     0.142,
+     0.16011
+    ],
+    "delta_vs_ref": -0.0015,
+    "delta_se": 0.00109
+   },
+   "t2_mana_ge3": {
+    "value": 0.42967,
+    "ci95": [
+     0.41719,
+     0.44223
+    ],
+    "delta_vs_ref": -0.00333,
+    "delta_se": 0.00162
+   },
+   "t1_development": {
+    "value": 0.5895,
+    "ci95": [
+     0.577,
+     0.60189
+    ],
+    "delta_vs_ref": -0.004,
+    "delta_se": 0.00165
+   },
+   "t2_development": {
+    "value": 0.62267,
+    "ci95": [
+     0.61033,
+     0.63485
+    ],
+    "delta_vs_ref": -0.00117,
+    "delta_se": 0.00172
+   },
+   "premium_engine_by_t2": {
+    "value": 0.40983,
+    "ci95": [
+     0.39745,
+     0.42233
+    ],
+    "delta_vs_ref": 0.00217,
+    "delta_se": 0.0013
+   },
+   "premium_engine_by_t3": {
+    "value": 0.566,
+    "ci95": [
+     0.55342,
+     0.57849
+    ],
+    "delta_vs_ref": 0.00333,
+    "delta_se": 0.00155
+   },
+   "premium_engine_by_t4": {
+    "value": 0.62617,
+    "ci95": [
+     0.61385,
+     0.63832
+    ],
+    "delta_vs_ref": 0.00417,
+    "delta_se": 0.00164
+   },
+   "det_win_by_t2": {
+    "value": 0.001,
+    "ci95": [
+     0.00046,
+     0.00218
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.00033,
+    "ci95": [
+     9e-05,
+     0.00121
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00317,
+    "ci95": [
+     0.00203,
+     0.00494
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_win_by_t3": {
+    "value": 0.01333,
+    "ci95": [
+     0.01073,
+     0.01656
+    ],
+    "delta_vs_ref": 0.004,
+    "delta_se": 0.00088
+   },
+   "det_protected_by_t3": {
+    "value": 0.00417,
+    "ci95": [
+     0.00282,
+     0.00614
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00044
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00167,
+    "ci95": [
+     0.00091,
+     0.00307
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.00367,
+    "ci95": [
+     0.00242,
+     0.00555
+    ],
+    "delta_vs_ref": 0.00367,
+    "delta_se": 0.00078
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01,
+    "ci95": [
+     0.00778,
+     0.01285
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00047
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.01833,
+    "ci95": [
+     0.01523,
+     0.02205
+    ],
+    "delta_vs_ref": 0.00283,
+    "delta_se": 0.0008
+   },
+   "det_win_by_t4": {
+    "value": 0.04767,
+    "ci95": [
+     0.04256,
+     0.05335
+    ],
+    "delta_vs_ref": 0.00867,
+    "delta_se": 0.00197
+   },
+   "det_protected_by_t4": {
+    "value": 0.01633,
+    "ci95": [
+     0.01342,
+     0.01986
+    ],
+    "delta_vs_ref": 0.00367,
+    "delta_se": 0.00115
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00683,
+    "ci95": [
+     0.00504,
+     0.00926
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00033
+   },
+   "oracle_line_by_t4": {
+    "value": 0.01567,
+    "ci95": [
+     0.01282,
+     0.01913
+    ],
+    "delta_vs_ref": 0.01567,
+    "delta_se": 0.0016
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03433,
+    "ci95": [
+     0.03002,
+     0.03925
+    ],
+    "delta_vs_ref": -0.00467,
+    "delta_se": 0.00137
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.05333,
+    "ci95": [
+     0.04793,
+     0.05931
+    ],
+    "delta_vs_ref": 0.00533,
+    "delta_se": 0.00185
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 185,
+    "inf_oracle": 206,
+    "oracle_pact": 92
+   },
+   "first_win_mean_cards": 2.934,
+   "first_win_mean_spells": 2.559
+  },
+  "C_oracle_core3": {
+   "description": "Oracle + Consult + Pact",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 31,
+    "interaction": 18,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 14,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 13,
+    "blue_cards": 26,
+    "roles": {
+     "body": 31,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 14,
+     "interaction": 18,
+     "copy": 4,
+     "combo_component": 13,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.31033,
+    "ci95": [
+     0.29875,
+     0.32216
+    ],
+    "delta_vs_ref": -0.00917,
+    "delta_se": 0.00162
+   },
+   "mean_mulligans": {
+    "value": 1.0585,
+    "delta_vs_ref": 0.03317,
+    "delta_se": 0.00354
+   },
+   "kept_hand_fm0": {
+    "value": 0.00267,
+    "ci95": [
+     0.00164,
+     0.00433
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "kept_hand_fm1": {
+    "value": 0.02217,
+    "ci95": [
+     0.01874,
+     0.02621
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00067
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.97517,
+    "ci95": [
+     0.97091,
+     0.97881
+    ],
+    "delta_vs_ref": -0.00283,
+    "delta_se": 0.00069
+   },
+   "t1_has_W": {
+    "value": 0.60067,
+    "ci95": [
+     0.58821,
+     0.61299
+    ],
+    "delta_vs_ref": -0.0005,
+    "delta_se": 0.00215
+   },
+   "t1_has_U": {
+    "value": 0.722,
+    "ci95": [
+     0.71052,
+     0.73319
+    ],
+    "delta_vs_ref": -0.01067,
+    "delta_se": 0.00218
+   },
+   "t1_has_B": {
+    "value": 0.55083,
+    "ci95": [
+     0.53822,
+     0.56338
+    ],
+    "delta_vs_ref": 0.01467,
+    "delta_se": 0.00231
+   },
+   "t1_has_G": {
+    "value": 0.77133,
+    "ci95": [
+     0.76053,
+     0.78178
+    ],
+    "delta_vs_ref": -0.0075,
+    "delta_se": 0.00192
+   },
+   "t2_all_four_colors": {
+    "value": 0.61683,
+    "ci95": [
+     0.60446,
+     0.62906
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00186
+   },
+   "t2_three_plus_colors": {
+    "value": 0.77333,
+    "ci95": [
+     0.76257,
+     0.78375
+    ],
+    "delta_vs_ref": -0.00167,
+    "delta_se": 0.00155
+   },
+   "t1_mana_ge2": {
+    "value": 0.1495,
+    "ci95": [
+     0.1407,
+     0.15875
+    ],
+    "delta_vs_ref": -0.00283,
+    "delta_se": 0.00132
+   },
+   "t2_mana_ge3": {
+    "value": 0.42683,
+    "ci95": [
+     0.41437,
+     0.43939
+    ],
+    "delta_vs_ref": -0.00617,
+    "delta_se": 0.00188
+   },
+   "t1_development": {
+    "value": 0.58667,
+    "ci95": [
+     0.57415,
+     0.59907
+    ],
+    "delta_vs_ref": -0.00683,
+    "delta_se": 0.00193
+   },
+   "t2_development": {
+    "value": 0.62067,
+    "ci95": [
+     0.60832,
+     0.63286
+    ],
+    "delta_vs_ref": -0.00317,
+    "delta_se": 0.00202
+   },
+   "premium_engine_by_t2": {
+    "value": 0.41,
+    "ci95": [
+     0.39762,
+     0.4225
+    ],
+    "delta_vs_ref": 0.00233,
+    "delta_se": 0.00165
+   },
+   "premium_engine_by_t3": {
+    "value": 0.56517,
+    "ci95": [
+     0.55259,
+     0.57766
+    ],
+    "delta_vs_ref": 0.0025,
+    "delta_se": 0.00188
+   },
+   "premium_engine_by_t4": {
+    "value": 0.62467,
+    "ci95": [
+     0.61234,
+     0.63684
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00193
+   },
+   "det_win_by_t2": {
+    "value": 0.00233,
+    "ci95": [
+     0.00139,
+     0.00391
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00053
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.00167,
+    "ci95": [
+     0.00091,
+     0.00307
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00053
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00433,
+    "ci95": [
+     0.00296,
+     0.00634
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.0005
+   },
+   "det_win_by_t3": {
+    "value": 0.02067,
+    "ci95": [
+     0.01736,
+     0.02459
+    ],
+    "delta_vs_ref": 0.01133,
+    "delta_se": 0.00141
+   },
+   "det_protected_by_t3": {
+    "value": 0.00633,
+    "ci95": [
+     0.00462,
+     0.00868
+    ],
+    "delta_vs_ref": 0.00333,
+    "delta_se": 0.00074
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00167,
+    "ci95": [
+     0.00091,
+     0.00307
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t3": {
+    "value": 0.01133,
+    "ci95": [
+     0.00895,
+     0.01434
+    ],
+    "delta_vs_ref": 0.01133,
+    "delta_se": 0.00137
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01,
+    "ci95": [
+     0.00778,
+     0.01285
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00047
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.025,
+    "ci95": [
+     0.02134,
+     0.02926
+    ],
+    "delta_vs_ref": 0.0095,
+    "delta_se": 0.00134
+   },
+   "det_win_by_t4": {
+    "value": 0.06333,
+    "ci95": [
+     0.05745,
+     0.06978
+    ],
+    "delta_vs_ref": 0.02433,
+    "delta_se": 0.00254
+   },
+   "det_protected_by_t4": {
+    "value": 0.02117,
+    "ci95": [
+     0.01782,
+     0.02513
+    ],
+    "delta_vs_ref": 0.0085,
+    "delta_se": 0.0015
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00783,
+    "ci95": [
+     0.0059,
+     0.0104
+    ],
+    "delta_vs_ref": 0.00133,
+    "delta_se": 0.00053
+   },
+   "oracle_line_by_t4": {
+    "value": 0.033,
+    "ci95": [
+     0.02877,
+     0.03783
+    ],
+    "delta_vs_ref": 0.033,
+    "delta_se": 0.00231
+   },
+   "infinite_line_by_t4": {
+    "value": 0.0345,
+    "ci95": [
+     0.03017,
+     0.03942
+    ],
+    "delta_vs_ref": -0.0045,
+    "delta_se": 0.0014
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.06833,
+    "ci95": [
+     0.06222,
+     0.075
+    ],
+    "delta_vs_ref": 0.02033,
+    "delta_se": 0.00246
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 181,
+    "inf_oracle": 201,
+    "oracle_consult": 127,
+    "oracle_pact": 79
+   },
+   "first_win_mean_cards": 2.805,
+   "first_win_mean_spells": 2.355
+  },
+  "D_core3_spellseeker": {
+   "description": "Oracle + Consult + Pact + Spellseeker",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 31,
+    "interaction": 17,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 15,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 13,
+    "blue_cards": 26,
+    "roles": {
+     "body": 31,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 15,
+     "interaction": 17,
+     "copy": 4,
+     "combo_component": 13,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.3145,
+    "ci95": [
+     0.30287,
+     0.32636
+    ],
+    "delta_vs_ref": -0.005,
+    "delta_se": 0.00196
+   },
+   "mean_mulligans": {
+    "value": 1.04283,
+    "delta_vs_ref": 0.0175,
+    "delta_se": 0.00429
+   },
+   "kept_hand_fm0": {
+    "value": 0.0025,
+    "ci95": [
+     0.00152,
+     0.00412
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.00024
+   },
+   "kept_hand_fm1": {
+    "value": 0.02117,
+    "ci95": [
+     0.01782,
+     0.02513
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00078
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.97633,
+    "ci95": [
+     0.97217,
+     0.97989
+    ],
+    "delta_vs_ref": -0.00167,
+    "delta_se": 0.00082
+   },
+   "t1_has_W": {
+    "value": 0.60183,
+    "ci95": [
+     0.58939,
+     0.61415
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00249
+   },
+   "t1_has_U": {
+    "value": 0.72333,
+    "ci95": [
+     0.71187,
+     0.73451
+    ],
+    "delta_vs_ref": -0.00933,
+    "delta_se": 0.00242
+   },
+   "t1_has_B": {
+    "value": 0.55067,
+    "ci95": [
+     0.53805,
+     0.56322
+    ],
+    "delta_vs_ref": 0.0145,
+    "delta_se": 0.00261
+   },
+   "t1_has_G": {
+    "value": 0.76917,
+    "ci95": [
+     0.75833,
+     0.77965
+    ],
+    "delta_vs_ref": -0.00967,
+    "delta_se": 0.0022
+   },
+   "t2_all_four_colors": {
+    "value": 0.61717,
+    "ci95": [
+     0.6048,
+     0.62939
+    ],
+    "delta_vs_ref": -0.00333,
+    "delta_se": 0.00225
+   },
+   "t2_three_plus_colors": {
+    "value": 0.774,
+    "ci95": [
+     0.76324,
+     0.78441
+    ],
+    "delta_vs_ref": -0.001,
+    "delta_se": 0.0019
+   },
+   "t1_mana_ge2": {
+    "value": 0.14983,
+    "ci95": [
+     0.14103,
+     0.15909
+    ],
+    "delta_vs_ref": -0.0025,
+    "delta_se": 0.00154
+   },
+   "t2_mana_ge3": {
+    "value": 0.4265,
+    "ci95": [
+     0.41404,
+     0.43906
+    ],
+    "delta_vs_ref": -0.0065,
+    "delta_se": 0.00223
+   },
+   "t1_development": {
+    "value": 0.58617,
+    "ci95": [
+     0.57365,
+     0.59857
+    ],
+    "delta_vs_ref": -0.00733,
+    "delta_se": 0.00228
+   },
+   "t2_development": {
+    "value": 0.61767,
+    "ci95": [
+     0.6053,
+     0.62988
+    ],
+    "delta_vs_ref": -0.00617,
+    "delta_se": 0.00237
+   },
+   "premium_engine_by_t2": {
+    "value": 0.40717,
+    "ci95": [
+     0.3948,
+     0.41965
+    ],
+    "delta_vs_ref": -0.0005,
+    "delta_se": 0.00197
+   },
+   "premium_engine_by_t3": {
+    "value": 0.55983,
+    "ci95": [
+     0.54724,
+     0.57235
+    ],
+    "delta_vs_ref": -0.00283,
+    "delta_se": 0.00222
+   },
+   "premium_engine_by_t4": {
+    "value": 0.6195,
+    "ci95": [
+     0.60714,
+     0.6317
+    ],
+    "delta_vs_ref": -0.0025,
+    "delta_se": 0.00232
+   },
+   "det_win_by_t2": {
+    "value": 0.0025,
+    "ci95": [
+     0.00152,
+     0.00412
+    ],
+    "delta_vs_ref": 0.00183,
+    "delta_se": 0.00055
+   },
+   "det_protected_by_t2": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.00183,
+    "ci95": [
+     0.00102,
+     0.00328
+    ],
+    "delta_vs_ref": 0.00183,
+    "delta_se": 0.00055
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.0045,
+    "ci95": [
+     0.00309,
+     0.00654
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00053
+   },
+   "det_win_by_t3": {
+    "value": 0.0215,
+    "ci95": [
+     0.01812,
+     0.02549
+    ],
+    "delta_vs_ref": 0.01217,
+    "delta_se": 0.00145
+   },
+   "det_protected_by_t3": {
+    "value": 0.00617,
+    "ci95": [
+     0.00448,
+     0.00849
+    ],
+    "delta_vs_ref": 0.00317,
+    "delta_se": 0.00076
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.0015,
+    "ci95": [
+     0.00079,
+     0.00285
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t3": {
+    "value": 0.01233,
+    "ci95": [
+     0.00984,
+     0.01545
+    ],
+    "delta_vs_ref": 0.01233,
+    "delta_se": 0.00142
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01017,
+    "ci95": [
+     0.00792,
+     0.01304
+    ],
+    "delta_vs_ref": 0.00083,
+    "delta_se": 0.0005
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.02583,
+    "ci95": [
+     0.02211,
+     0.03016
+    ],
+    "delta_vs_ref": 0.01033,
+    "delta_se": 0.00139
+   },
+   "det_win_by_t4": {
+    "value": 0.07567,
+    "ci95": [
+     0.06924,
+     0.08263
+    ],
+    "delta_vs_ref": 0.03667,
+    "delta_se": 0.00262
+   },
+   "det_protected_by_t4": {
+    "value": 0.02367,
+    "ci95": [
+     0.02011,
+     0.02783
+    ],
+    "delta_vs_ref": 0.011,
+    "delta_se": 0.0015
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00783,
+    "ci95": [
+     0.0059,
+     0.0104
+    ],
+    "delta_vs_ref": 0.00133,
+    "delta_se": 0.00053
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0425,
+    "ci95": [
+     0.03768,
+     0.0479
+    ],
+    "delta_vs_ref": 0.0425,
+    "delta_se": 0.0026
+   },
+   "infinite_line_by_t4": {
+    "value": 0.04083,
+    "ci95": [
+     0.03611,
+     0.04614
+    ],
+    "delta_vs_ref": 0.00183,
+    "delta_se": 0.00119
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.0805,
+    "ci95": [
+     0.07388,
+     0.08766
+    ],
+    "delta_vs_ref": 0.0325,
+    "delta_se": 0.00254
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 218,
+    "inf_oracle": 236,
+    "oracle_consult": 188,
+    "oracle_pact": 103
+   },
+   "first_win_mean_cards": 3.048,
+   "first_win_mean_spells": 2.432
+  },
+  "F_oracle_hermit_shangchi": {
+   "description": "Oracle + Hermit Druid + Shang-Chi",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 33,
+    "interaction": 18,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 13,
+    "blue_cards": 26,
+    "roles": {
+     "body": 33,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 18,
+     "copy": 4,
+     "combo_component": 13,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.305,
+    "ci95": [
+     0.29348,
+     0.31677
+    ],
+    "delta_vs_ref": -0.0145,
+    "delta_se": 0.00154
+   },
+   "mean_mulligans": {
+    "value": 1.07033,
+    "delta_vs_ref": 0.045,
+    "delta_se": 0.00349
+   },
+   "kept_hand_fm0": {
+    "value": 0.00283,
+    "ci95": [
+     0.00177,
+     0.00453
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "kept_hand_fm1": {
+    "value": 0.02183,
+    "ci95": [
+     0.01843,
+     0.02585
+    ],
+    "delta_vs_ref": 0.00233,
+    "delta_se": 0.00062
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.97533,
+    "ci95": [
+     0.97109,
+     0.97896
+    ],
+    "delta_vs_ref": -0.00267,
+    "delta_se": 0.00067
+   },
+   "t1_has_W": {
+    "value": 0.6025,
+    "ci95": [
+     0.59006,
+     0.61481
+    ],
+    "delta_vs_ref": 0.00133,
+    "delta_se": 0.00205
+   },
+   "t1_has_U": {
+    "value": 0.7225,
+    "ci95": [
+     0.71103,
+     0.73368
+    ],
+    "delta_vs_ref": -0.01017,
+    "delta_se": 0.00211
+   },
+   "t1_has_B": {
+    "value": 0.53883,
+    "ci95": [
+     0.5262,
+     0.55142
+    ],
+    "delta_vs_ref": 0.00267,
+    "delta_se": 0.00194
+   },
+   "t1_has_G": {
+    "value": 0.77983,
+    "ci95": [
+     0.76917,
+     0.79014
+    ],
+    "delta_vs_ref": 0.001,
+    "delta_se": 0.00181
+   },
+   "t2_all_four_colors": {
+    "value": 0.61683,
+    "ci95": [
+     0.60446,
+     0.62906
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00175
+   },
+   "t2_three_plus_colors": {
+    "value": 0.772,
+    "ci95": [
+     0.76121,
+     0.78244
+    ],
+    "delta_vs_ref": -0.003,
+    "delta_se": 0.00151
+   },
+   "t1_mana_ge2": {
+    "value": 0.14883,
+    "ci95": [
+     0.14005,
+     0.15806
+    ],
+    "delta_vs_ref": -0.0035,
+    "delta_se": 0.0013
+   },
+   "t2_mana_ge3": {
+    "value": 0.42867,
+    "ci95": [
+     0.41619,
+     0.44123
+    ],
+    "delta_vs_ref": -0.00433,
+    "delta_se": 0.00186
+   },
+   "t1_development": {
+    "value": 0.59117,
+    "ci95": [
+     0.57867,
+     0.60354
+    ],
+    "delta_vs_ref": -0.00233,
+    "delta_se": 0.00184
+   },
+   "t2_development": {
+    "value": 0.62983,
+    "ci95": [
+     0.61754,
+     0.64196
+    ],
+    "delta_vs_ref": 0.006,
+    "delta_se": 0.00211
+   },
+   "premium_engine_by_t2": {
+    "value": 0.41233,
+    "ci95": [
+     0.39994,
+     0.42484
+    ],
+    "delta_vs_ref": 0.00467,
+    "delta_se": 0.00158
+   },
+   "premium_engine_by_t3": {
+    "value": 0.56717,
+    "ci95": [
+     0.55459,
+     0.57966
+    ],
+    "delta_vs_ref": 0.0045,
+    "delta_se": 0.0018
+   },
+   "premium_engine_by_t4": {
+    "value": 0.627,
+    "ci95": [
+     0.61469,
+     0.63915
+    ],
+    "delta_vs_ref": 0.005,
+    "delta_se": 0.00185
+   },
+   "det_win_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00283,
+    "ci95": [
+     0.00177,
+     0.00453
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t3": {
+    "value": 0.0105,
+    "ci95": [
+     0.00822,
+     0.01341
+    ],
+    "delta_vs_ref": 0.00117,
+    "delta_se": 0.00055
+   },
+   "det_protected_by_t3": {
+    "value": 0.00333,
+    "ci95": [
+     0.00216,
+     0.00514
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00183,
+    "ci95": [
+     0.00102,
+     0.00328
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0005,
+    "ci95": [
+     0.00017,
+     0.00147
+    ],
+    "delta_vs_ref": 0.0005,
+    "delta_se": 0.00029
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01,
+    "ci95": [
+     0.00778,
+     0.01285
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00047
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.0155,
+    "ci95": [
+     0.01267,
+     0.01895
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.00047
+   },
+   "det_win_by_t4": {
+    "value": 0.03883,
+    "ci95": [
+     0.03423,
+     0.04402
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00161
+   },
+   "det_protected_by_t4": {
+    "value": 0.01333,
+    "ci95": [
+     0.01073,
+     0.01656
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00094
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00667,
+    "ci95": [
+     0.0049,
+     0.00906
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00029
+   },
+   "oracle_line_by_t4": {
+    "value": 0.00517,
+    "ci95": [
+     0.00364,
+     0.00732
+    ],
+    "delta_vs_ref": 0.00517,
+    "delta_se": 0.00093
+   },
+   "infinite_line_by_t4": {
+    "value": 0.0345,
+    "ci95": [
+     0.03017,
+     0.03942
+    ],
+    "delta_vs_ref": -0.0045,
+    "delta_se": 0.00138
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04433,
+    "ci95": [
+     0.03941,
+     0.04984
+    ],
+    "delta_vs_ref": -0.00367,
+    "delta_se": 0.00149
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 186,
+    "inf_oracle": 207,
+    "oracle_hermit": 28
+   },
+   "first_win_mean_cards": 3.052,
+   "first_win_mean_spells": 2.691
+  },
+  "G_oracle_only": {
+   "description": "Oracle alone (Thrasios-infinite outlet only)",
+   "structure": {
+    "lands_incl_mdfc": 28,
+    "mana_density_functional": 28,
+    "fast_mana_rocks_excl_amber": 5,
+    "mox_amber": 1,
+    "esg": 1,
+    "dorks": 5,
+    "creatures": 33,
+    "interaction": 20,
+    "free_counters": 9,
+    "proactive_protection": 4,
+    "tutor_access": 13,
+    "card_advantage": 13,
+    "premium_engines": 8,
+    "timing": 3,
+    "combo_components": 11,
+    "blue_cards": 28,
+    "roles": {
+     "body": 33,
+     "card_advantage": 13,
+     "engine": 10,
+     "mana": 41,
+     "tutor_access": 13,
+     "interaction": 20,
+     "copy": 4,
+     "combo_component": 11,
+     "timing": 3,
+     "outlet": 5,
+     "protection": 4
+    }
+   },
+   "n": 6000,
+   "keep7": {
+    "value": 0.31133,
+    "ci95": [
+     0.29974,
+     0.32317
+    ],
+    "delta_vs_ref": -0.00817,
+    "delta_se": 0.00116
+   },
+   "mean_mulligans": {
+    "value": 1.05267,
+    "delta_vs_ref": 0.02733,
+    "delta_se": 0.00267
+   },
+   "kept_hand_fm0": {
+    "value": 0.00283,
+    "ci95": [
+     0.00177,
+     0.00453
+    ],
+    "delta_vs_ref": 0.00033,
+    "delta_se": 0.00024
+   },
+   "kept_hand_fm1": {
+    "value": 0.02117,
+    "ci95": [
+     0.01782,
+     0.02513
+    ],
+    "delta_vs_ref": 0.00167,
+    "delta_se": 0.00053
+   },
+   "kept_hand_fm2plus": {
+    "value": 0.976,
+    "ci95": [
+     0.97181,
+     0.97958
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00058
+   },
+   "t1_has_W": {
+    "value": 0.59917,
+    "ci95": [
+     0.58671,
+     0.6115
+    ],
+    "delta_vs_ref": -0.002,
+    "delta_se": 0.00143
+   },
+   "t1_has_U": {
+    "value": 0.7325,
+    "ci95": [
+     0.72115,
+     0.74355
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00144
+   },
+   "t1_has_B": {
+    "value": 0.53767,
+    "ci95": [
+     0.52503,
+     0.55025
+    ],
+    "delta_vs_ref": 0.0015,
+    "delta_se": 0.00152
+   },
+   "t1_has_G": {
+    "value": 0.77833,
+    "ci95": [
+     0.76765,
+     0.78866
+    ],
+    "delta_vs_ref": -0.0005,
+    "delta_se": 0.00132
+   },
+   "t2_all_four_colors": {
+    "value": 0.61933,
+    "ci95": [
+     0.60697,
+     0.63154
+    ],
+    "delta_vs_ref": -0.00117,
+    "delta_se": 0.00134
+   },
+   "t2_three_plus_colors": {
+    "value": 0.77367,
+    "ci95": [
+     0.76291,
+     0.78408
+    ],
+    "delta_vs_ref": -0.00133,
+    "delta_se": 0.00108
+   },
+   "t1_mana_ge2": {
+    "value": 0.151,
+    "ci95": [
+     0.14216,
+     0.16028
+    ],
+    "delta_vs_ref": -0.00133,
+    "delta_se": 0.00088
+   },
+   "t2_mana_ge3": {
+    "value": 0.4305,
+    "ci95": [
+     0.41802,
+     0.44307
+    ],
+    "delta_vs_ref": -0.0025,
+    "delta_se": 0.00142
+   },
+   "t1_development": {
+    "value": 0.59283,
+    "ci95": [
+     0.58035,
+     0.6052
+    ],
+    "delta_vs_ref": -0.00067,
+    "delta_se": 0.00137
+   },
+   "t2_development": {
+    "value": 0.624,
+    "ci95": [
+     0.61167,
+     0.63617
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00146
+   },
+   "premium_engine_by_t2": {
+    "value": 0.41067,
+    "ci95": [
+     0.39828,
+     0.42317
+    ],
+    "delta_vs_ref": 0.003,
+    "delta_se": 0.00108
+   },
+   "premium_engine_by_t3": {
+    "value": 0.56667,
+    "ci95": [
+     0.55409,
+     0.57916
+    ],
+    "delta_vs_ref": 0.004,
+    "delta_se": 0.00133
+   },
+   "premium_engine_by_t4": {
+    "value": 0.62683,
+    "ci95": [
+     0.61452,
+     0.63899
+    ],
+    "delta_vs_ref": 0.00483,
+    "delta_se": 0.00142
+   },
+   "det_win_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_protected_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t2": {
+    "value": 0.00017,
+    "ci95": [
+     3e-05,
+     0.00094
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "oracle_line_by_t2": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t2": {
+    "value": 0.00067,
+    "ci95": [
+     0.00026,
+     0.00171
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "any_incl_nondet_by_t2": {
+    "value": 0.00283,
+    "ci95": [
+     0.00177,
+     0.00453
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_win_by_t3": {
+    "value": 0.01,
+    "ci95": [
+     0.00778,
+     0.01285
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00047
+   },
+   "det_protected_by_t3": {
+    "value": 0.003,
+    "ci95": [
+     0.0019,
+     0.00474
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "det_instant_window_by_t3": {
+    "value": 0.00183,
+    "ci95": [
+     0.00102,
+     0.00328
+    ],
+    "delta_vs_ref": 0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t3": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t3": {
+    "value": 0.01,
+    "ci95": [
+     0.00778,
+     0.01285
+    ],
+    "delta_vs_ref": 0.00067,
+    "delta_se": 0.00047
+   },
+   "any_incl_nondet_by_t3": {
+    "value": 0.015,
+    "ci95": [
+     0.01222,
+     0.0184
+    ],
+    "delta_vs_ref": -0.0005,
+    "delta_se": 0.00029
+   },
+   "det_win_by_t4": {
+    "value": 0.03433,
+    "ci95": [
+     0.03002,
+     0.03925
+    ],
+    "delta_vs_ref": -0.00467,
+    "delta_se": 0.00131
+   },
+   "det_protected_by_t4": {
+    "value": 0.01117,
+    "ci95": [
+     0.0088,
+     0.01416
+    ],
+    "delta_vs_ref": -0.0015,
+    "delta_se": 0.00073
+   },
+   "det_instant_window_by_t4": {
+    "value": 0.00633,
+    "ci95": [
+     0.00462,
+     0.00868
+    ],
+    "delta_vs_ref": -0.00017,
+    "delta_se": 0.00017
+   },
+   "oracle_line_by_t4": {
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.00064
+    ],
+    "delta_vs_ref": 0.0,
+    "delta_se": 0.0
+   },
+   "infinite_line_by_t4": {
+    "value": 0.03433,
+    "ci95": [
+     0.03002,
+     0.03925
+    ],
+    "delta_vs_ref": -0.00467,
+    "delta_se": 0.00131
+   },
+   "any_incl_nondet_by_t4": {
+    "value": 0.04017,
+    "ci95": [
+     0.03549,
+     0.04544
+    ],
+    "delta_vs_ref": -0.00783,
+    "delta_se": 0.00114
+   },
+   "first_win_family_counts": {
+    "inf_bowmasters": 185,
+    "inf_oracle": 206
+   },
+   "first_win_mean_cards": 3.112,
+   "first_win_mean_spells": 2.942
+  }
+ }
+}
