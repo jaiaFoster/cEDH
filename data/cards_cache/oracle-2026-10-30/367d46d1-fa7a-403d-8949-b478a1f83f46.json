@@ -1,0 +1,82 @@
+{
+  "scryfall_id": "367d46d1-fa7a-403d-8949-b478a1f83f46",
+  "mtgjson_uuid": null,
+  "name": "Snapback",
+  "oracle_text": "You may exile a blue card from your hand rather than pay this spell's mana cost.\nReturn target creature to its owner's hand.",
+  "type_line": "Instant",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{1}{U}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "You may exile a blue card from your hand rather than pay this spell's mana cost.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": "You may exile a blue card from your hand rather than pay this spell's mana cost."
+    },
+    {
+      "kind": "static",
+      "text": "Return target creature to its owner's hand.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2021-03-19",
+      "text": "To determine the total cost of a spell, start with the mana cost or alternative cost you're paying (such as the alternative cost of Snapback), add any cost increases, then apply any cost reductions. The mana value of the spell is determined by only its mana cost, no matter what the total cost to cast that spell was.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

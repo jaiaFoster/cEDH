@@ -1,0 +1,77 @@
+{
+  "scryfall_id": "39c66895-9c2d-49db-8261-e300a69b6cd5",
+  "mtgjson_uuid": null,
+  "name": "Hermit Druid",
+  "oracle_text": "{G}, {T}: Reveal cards from the top of your library until you reveal a basic land card. Put that card into your hand and all other cards revealed this way into your graveyard.",
+  "type_line": "Creature \u2014 Human Druid",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{1}{G}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Druid"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "1",
+    "toughness": "1",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "activated",
+      "text": "{G}, {T}: Reveal cards from the top of your library until you reveal a basic land card. Put that card into your hand and all other cards revealed this way into your graveyard.",
+      "cost": "{G}, {T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2025-01-24",
+      "text": "If you reveal all of the cards in your library without revealing any basic land cards, you\u2019ll put all of the revealed cards into your graveyard. (Yes, that\u2019s your whole library. Hopefully you have a plan.)",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "banned",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "banned",
+    "oldschool": "not_legal",
+    "premodern": "legal",
+    "predh": "legal",
+    "tlr": "banned"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

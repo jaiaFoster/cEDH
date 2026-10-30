@@ -1,0 +1,82 @@
+{
+  "scryfall_id": "7a5be94c-08b8-4964-a79d-e22ea6e94be8",
+  "mtgjson_uuid": null,
+  "name": "Laboratory Maniac",
+  "oracle_text": "If you would draw a card while your library has no cards in it, you win the game instead.",
+  "type_line": "Creature \u2014 Human Wizard",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{2}{U}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Wizard"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "replacement",
+      "text": "If you would draw a card while your library has no cards in it, you win the game instead.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2021-03-19",
+      "text": "If for some reason you can't win the game (because your opponent has cast Angel's Grace this turn, for example), you won't lose for having tried to draw a card from a library with no cards in it. The draw was still replaced.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-03-19",
+      "text": "If two or more players each control a Laboratory Maniac and each player is instructed to draw a number of cards, first the player whose turn it is draws that many cards. If this causes that player to win the game instead, the game is immediately over. If the game isn't over yet, repeat this process for each other player in turn order.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

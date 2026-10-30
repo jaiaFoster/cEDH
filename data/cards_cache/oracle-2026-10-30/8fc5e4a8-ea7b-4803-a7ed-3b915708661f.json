@@ -1,0 +1,115 @@
+{
+  "scryfall_id": "8fc5e4a8-ea7b-4803-a7ed-3b915708661f",
+  "mtgjson_uuid": null,
+  "name": "Teferi, Mage of Zhalfir",
+  "oracle_text": "Flash\nCreature cards you own that aren't on the battlefield have flash.\nEach opponent can cast spells only any time they could cast a sorcery.",
+  "type_line": "Legendary Creature \u2014 Human Wizard",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{2}{U}{U}{U}",
+  "mana_value": 5.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Wizard"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "3",
+    "toughness": "4",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Flash",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Creature cards you own that aren't on the battlefield have flash.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Each opponent can cast spells only any time they could cast a sorcery.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2021-03-19",
+      "text": "While you control Teferi, you may exile creature cards in your hand with suspend any time you could cast an instant.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-03-19",
+      "text": "If a spell on the stack has split second while you control Teferi, you can't suspend creature cards since split second stops you from casting them, even though suspending them is a special action.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-03-19",
+      "text": "Teferi's last ability means that in order for an opponent to cast a spell, it must be that opponent's turn, during a main phase, and the stack must be empty. This is true even if a rule or effect allows a sorcery to be cast at another time.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-03-19",
+      "text": "If a spell or ability lets an opponent cast a spell as part of its effect (such as suspend and rebound do), that opponent can't cast that spell since the resolving ability is still on the stack. This is true even if the spell is an instant.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-03-19",
+      "text": "If an effect allows an opponent to cast spells any time they could cast an instant (for example, if your opponent also controls Teferi), the restriction of Teferi's last ability takes precedence over that permission.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

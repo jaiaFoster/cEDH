@@ -1,0 +1,117 @@
+{
+  "scryfall_id": "50b9575a-53d9-4df7-b86c-cda021107d3f",
+  "mtgjson_uuid": null,
+  "name": "Into the Flood Maw",
+  "oracle_text": "Gift a tapped Fish (You may promise an opponent a gift as you cast this spell. If you do, they create a tapped 1/1 blue Fish creature token before its other effects.)\nReturn target creature an opponent controls to its owner's hand. If the gift was promised, instead return target nonland permanent an opponent controls to its owner's hand.",
+  "type_line": "Instant",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{U}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Gift a tapped Fish (You may promise an opponent a gift as you cast this spell. If you do, they create a tapped 1/1 blue Fish creature token before its other effects.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "replacement",
+      "text": "Return target creature an opponent controls to its owner's hand. If the gift was promised, instead return target nonland permanent an opponent controls to its owner's hand.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-07-26",
+      "text": "As an additional cost to cast a spell with gift, you can promise the listed gift to an opponent. That opponent is chosen as part of that additional cost. The gift isn\u2019t given at this time; rather, it\u2019s given at a later time based on whether or not the spell is a permanent spell.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "For permanent spells with gift, an ability triggers when that permanent enters if the gift was promised. When that ability resolves, the gift is given to the appropriate opponent.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "For instants and sorceries with gift, the gift is given to the appropriate opponent as part of the resolution of the spell. This happens before any of the spell\u2019s other effects would take place.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "If a spell for which the gift was promised is countered, doesn\u2019t resolve (perhaps because all of its targets are illegal), or is otherwise removed from the stack, the gift won\u2019t be given. None of its other effects will happen either.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "You can\u2019t pay a gift cost more than once.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "If you copy a spell for which the gift was promised, the gift was also promised to the same opponent for the copy. If a card or token enters as a copy of a permanent that\u2019s already on the battlefield, the gift isn\u2019t promised for that new permanent, even if it was promised for the original.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "Some instant or sorcery spells require alternative or additional targets if the gift was promised. You ignore these targeting requirements if the gifts aren\u2019t promised for those spells. On the other hand, you can promise a gift for a permanent spell even if you won\u2019t be able to choose targets for an enters ability of that permanent once the spell resolves.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "In the main set, there are four different kinds of gifts. \u201cGift a Food\u201d causes the chosen opponent to create a Food token, while \u201cGift a Treasure\u201d causes the chosen opponent to create a Treasure token. \u201cGift a card\u201d causes them to draw a card, and \u201cGift a tapped Fish\u201d causes them to create a tapped 1/1 blue Fish creature token. The Commander decks contain two more kinds of gifts: \u201cGift an Octopus,\u201d which causes the chosen opponent to create an 8/8 blue Octopus creature token, and \u201cGift an extra turn,\u201d which causes them to take an extra turn after the current turn ends.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

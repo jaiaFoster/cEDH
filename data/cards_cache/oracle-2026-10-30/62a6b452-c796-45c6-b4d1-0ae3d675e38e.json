@@ -1,0 +1,106 @@
+{
+  "scryfall_id": "62a6b452-c796-45c6-b4d1-0ae3d675e38e",
+  "mtgjson_uuid": null,
+  "name": "Talion, the Kindly Lord",
+  "oracle_text": "Flying\nAs Talion enters, choose a number between 1 and 10.\nWhenever an opponent casts a spell with mana value, power, or toughness equal to the chosen number, that player loses 2 life and you draw a card.",
+  "type_line": "Legendary Creature \u2014 Faerie Noble",
+  "color_identity": [
+    "B",
+    "U"
+  ],
+  "mana_cost": "{2}{U}{B}",
+  "mana_value": 4.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Faerie",
+      "Noble"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "3",
+    "toughness": "4",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Flying",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "As Talion enters, choose a number between 1 and 10.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "Whenever an opponent casts a spell with mana value, power, or toughness equal to the chosen number, that player loses 2 life and you draw a card.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2023-09-01",
+      "text": "The numbers you may choose include 1 and 10.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "Effects that increase or reduce the cost to cast a spell don't affect that spell's mana value.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "For spells with {X} in their mana costs, use the value chosen for X to determine if the spell's mana value is the chosen number. For example, if the chosen number is 4, a spell with mana cost {X}{R}{R} cast with X equal to 2 would cause Talion's last ability to trigger.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

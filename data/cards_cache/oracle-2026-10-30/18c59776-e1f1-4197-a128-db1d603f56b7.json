@@ -1,0 +1,102 @@
+{
+  "scryfall_id": "18c59776-e1f1-4197-a128-db1d603f56b7",
+  "mtgjson_uuid": null,
+  "name": "Beseech the Mirror",
+  "oracle_text": "Bargain (You may sacrifice an artifact, enchantment, or token as you cast this spell.)\nSearch your library for a card, exile it face down, then shuffle. If this spell was bargained, you may cast the exiled card without paying its mana cost if that spell's mana value is 4 or less. Put the exiled card into your hand if it wasn't cast this way.",
+  "type_line": "Sorcery",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{1}{B}{B}{B}",
+  "mana_value": 4.0,
+  "characteristics": {
+    "card_types": [
+      "Sorcery"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Bargain (You may sacrifice an artifact, enchantment, or token as you cast this spell.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Search your library for a card, exile it face down, then shuffle. If this spell was bargained, you may cast the exiled card without paying its mana cost if that spell's mana value is 4 or less. Put the exiled card into your hand if it wasn't cast this way.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2023-09-01",
+      "text": "Bargain means \"As an additional cost to cast this spell, you may sacrifice an artifact, enchantment, or token.\"",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "Bargain represents an optional additional cost. A spell cast with that additional cost paid is \"bargained.\"",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "You may sacrifice only one artifact, enchantment, or token to pay a spell's bargain cost.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "If you copy a bargained spell, the copy is also bargained. If a card or token enters the battlefield as a copy of a permanent that's already on the battlefield, the new permanent isn't bargained, even if the original was.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "Some instant and sorcery spells require additional targets if they're bargained. You ignore those targeting requirements if those spells aren't bargained, and you can't bargain those spells unless you can choose the appropriate targets. On the other hand, you can bargain a permanent spell even if you won't be able to choose targets for an enters-the-battlefield ability of that permanent once the spell resolves.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

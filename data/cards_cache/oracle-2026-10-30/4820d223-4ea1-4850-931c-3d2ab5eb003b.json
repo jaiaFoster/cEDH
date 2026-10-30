@@ -1,0 +1,89 @@
+{
+  "scryfall_id": "4820d223-4ea1-4850-931c-3d2ab5eb003b",
+  "mtgjson_uuid": null,
+  "name": "Birthing Ritual",
+  "oracle_text": "At the beginning of your end step, if you control a creature, look at the top seven cards of your library. Then you may sacrifice a creature. If you do, you may put a creature card with mana value X or less from among those cards onto the battlefield, where X is 1 plus the sacrificed creature's mana value. Put the rest on the bottom of your library in a random order.",
+  "type_line": "Enchantment",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{1}{G}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Enchantment"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "triggered",
+      "text": "At the beginning of your end step, if you control a creature, look at the top seven cards of your library. Then you may sacrifice a creature. If you do, you may put a creature card with mana value X or less from among those cards onto the battlefield, where X is 1 plus the sacrificed creature's mana value. Put the rest on the bottom of your library in a random order.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-06-07",
+      "text": "Birthing Ritual's ability checks if you control a creature at the beginning of your end step. If you don't, the ability won't trigger.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If Birthing Ritual's ability does trigger but you control no creatures when it tries to resolve, the ability will do nothing.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Use the mana value of the sacrificed creature as it last existed on the battlefield to determine the value of X.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If one of the revealed creature cards has {X} in its mana cost, X is 0 when determining that card's mana value.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

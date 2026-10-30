@@ -1,0 +1,82 @@
+{
+  "scryfall_id": "ee793ed2-7d59-4640-8868-ad486600df2c",
+  "mtgjson_uuid": null,
+  "name": "Grand Abolisher",
+  "oracle_text": "During your turn, your opponents can't cast spells or activate abilities of artifacts, creatures, or enchantments.",
+  "type_line": "Creature \u2014 Human Cleric",
+  "color_identity": [
+    "W"
+  ],
+  "mana_cost": "{W}{W}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Cleric"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "During your turn, your opponents can't cast spells or activate abilities of artifacts, creatures, or enchantments.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2011-09-22",
+      "text": "Grand Abolisher doesn't stop your opponents from activating abilities of artifact, creature, or entorchantment cards in zones other than the battlefield (like cycling abilities, for example).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2011-09-22",
+      "text": "Grand Abolisher doesn't affect triggered abilities or static abilities.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

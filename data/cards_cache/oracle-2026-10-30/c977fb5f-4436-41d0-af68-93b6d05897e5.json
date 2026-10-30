@@ -1,0 +1,84 @@
+{
+  "scryfall_id": "c977fb5f-4436-41d0-af68-93b6d05897e5",
+  "mtgjson_uuid": null,
+  "name": "The Queen of Dale",
+  "oracle_text": "Whenever an opponent casts their first noncreature spell each turn, you recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)",
+  "type_line": "Legendary Creature \u2014 Human Noble",
+  "color_identity": [
+    "W"
+  ],
+  "mana_cost": "{1}{W}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Noble"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "1",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "triggered",
+      "text": "Whenever an opponent casts their first noncreature spell each turn, you recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2026-06-29",
+      "text": "Once a spell or ability that causes you to recruit begins to resolve, no player may take any other actions until it's done. Any responses made to the spell or ability must be made before you draw, discard, and potentially create a token.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2026-06-29",
+      "text": "If a noncreature spell was already cast by an opponent the turn The Queen of Dale enters, that opponent already cast their first noncreature spell this turn, and The Queen of Dale's ability won't trigger for that opponent that turn.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

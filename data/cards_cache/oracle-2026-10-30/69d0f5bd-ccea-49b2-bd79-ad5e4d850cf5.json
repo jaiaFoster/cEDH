@@ -1,0 +1,87 @@
+{
+  "scryfall_id": "69d0f5bd-ccea-49b2-bd79-ad5e4d850cf5",
+  "mtgjson_uuid": null,
+  "name": "Wishclaw Talisman",
+  "oracle_text": "This artifact enters with three wish counters on it.\n{1}, {T}, Remove a wish counter from this artifact: Search your library for a card, put it into your hand, then shuffle. An opponent gains control of this artifact. Activate only during your turn.",
+  "type_line": "Artifact",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{1}{B}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Artifact"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "This artifact enters with three wish counters on it.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{1}, {T}, Remove a wish counter from this artifact: Search your library for a card, put it into your hand, then shuffle. An opponent gains control of this artifact. Activate only during your turn.",
+      "cost": "{1}, {T}, Remove a wish counter from this artifact",
+      "timing_restriction": "activate only during your turn",
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2019-10-04",
+      "text": "Once Wishclaw Talisman runs out of wish counters, it remains on the battlefield. You can't activate its last ability at all.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "You choose which opponent gains control of Wishclaw Talisman while its ability is resolving. If that player later leaves the game, you regain control of Wishclaw Talisman.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

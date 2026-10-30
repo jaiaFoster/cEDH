@@ -1,0 +1,123 @@
+{
+  "scryfall_id": "3573b9a2-7911-475c-8ae7-25bd0dbb7159",
+  "mtgjson_uuid": null,
+  "name": "Dauthi Voidwalker",
+  "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nIf a card would be put into an opponent's graveyard from anywhere, instead exile it with a void counter on it.\n{T}, Sacrifice this creature: Choose an exiled card an opponent owns with a void counter on it. You may play it this turn without paying its mana cost.",
+  "type_line": "Creature \u2014 Dauthi Rogue",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{B}{B}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Dauthi",
+      "Rogue"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "3",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Shadow (This creature can block or be blocked by only creatures with shadow.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "replacement",
+      "text": "If a card would be put into an opponent's graveyard from anywhere, instead exile it with a void counter on it.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{T}, Sacrifice this creature: Choose an exiled card an opponent owns with a void counter on it. You may play it this turn without paying its mana cost.",
+      "cost": "{T}, Sacrifice this creature",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2021-06-18",
+      "text": "If an attacking creature has multiple evasion abilities, such as shadow and flying, a creature can block it only if that creature satisfies all of the appropriate evasion abilities.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-06-18",
+      "text": "If your opponent discards a card while you control Dauthi Voidwalker, abilities that function when that card is discarded still work, even though that card never reaches that player's graveyard. In addition, spells or abilities that check the characteristics of the discarded card can find that card in exile.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-06-18",
+      "text": "While Dauthi Voidwalker is on the battlefield, nontoken creatures your opponents control won't die. They'll be exiled instead. Abilities that would trigger when those creatures die won't trigger.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-06-18",
+      "text": "Tokens still die while Dauthi Voidwalker is on the battlefield.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-06-18",
+      "text": "If a card has {X} in its mana cost, you must choose 0 as the value of X when casting it without paying its mana cost.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-06-18",
+      "text": "Playing a card with Dauthi Voidwalker's last ability is still subject to normal timing restrictions.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2021-06-18",
+      "text": "If you cast a card this way, you may not cast it for any other alternative costs it has, but you may pay for additional costs, such as kicker costs. If the spell requires an additional cost, you must pay that cost.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

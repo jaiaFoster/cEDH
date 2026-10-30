@@ -1,0 +1,105 @@
+{
+  "scryfall_id": "c89c6895-b0f8-444a-9c89-c6b4fd027b3e",
+  "mtgjson_uuid": null,
+  "name": "Necropotence",
+  "oracle_text": "Skip your draw step.\nWhenever you discard a card, exile that card from your graveyard.\nPay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
+  "type_line": "Enchantment",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{B}{B}{B}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Enchantment"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Skip your draw step.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "Whenever you discard a card, exile that card from your graveyard.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "Pay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
+      "cost": "Pay 1 life",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2023-09-01",
+      "text": "You can't look at the cards exiled by the last ability while they're face down.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2017-11-17",
+      "text": "If a discarded card isn't put into your graveyard (due to an effect such as that of Obstinate Baloth) or leaves your graveyard (perhaps because another effect returned it to your hand), it won't be exiled.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2017-11-17",
+      "text": "If you discard a card with madness and wish to cast it, Necropotence's ability won't exile that card. If you don't wish to cast it, you choose whether it ends up exiled or in your graveyard.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2017-11-17",
+      "text": "Necropotence's last ability creates a delayed triggered ability that will put the exiled card into your hand. That ability still triggers even if Necropotence is removed from the battlefield before your end step.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "banned",
+    "timeless": "restricted",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "banned",
+    "pauper": "not_legal",
+    "vintage": "restricted",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "banned",
+    "predh": "legal",
+    "tlr": "banned"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

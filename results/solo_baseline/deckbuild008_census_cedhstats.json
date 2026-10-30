@@ -1,0 +1,3715 @@
+{
+ "task": "SIM-DECKBUILD-008",
+ "artifact": "census_cedhstats_crosscheck",
+ "source": "https://cedhstats.org/decklists (Thrasios / Tymna, min_players=16)",
+ "retrieved": "2026-10-30",
+ "oracle_ids": {
+  "Thassa's Oracle": "1de1b591-a73f-4974-b507-8c63e07a0868",
+  "Demonic Consultation": "9a1412db-45ad-46ea-8f12-a85d203113d8",
+  "Tainted Pact": "1a85ba2b-ae10-4917-954a-7709b75a9740",
+  "Spellseeker": "47a785ed-8095-4685-8daa-02c4e2b0ffcd",
+  "Demonic Tutor": "82004860-e589-4e38-8d61-8c0210e4ea39",
+  "Vampiric Tutor": "ededbdae-d9dc-4206-9335-d7158f2d7700",
+  "Imperial Seal": "16cd0b90-f70c-4efa-b252-8de8784ef9a3",
+  "Mystical Tutor": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+  "Enlightened Tutor": "c5229c17-b7be-4b05-b683-f2277edc4849",
+  "Worldly Tutor": "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+  "Gamble": "a54f0869-94c8-42af-9080-166efb9486a4",
+  "Survival of the Fittest": "119d719d-e965-45b4-9bc9-ac03211b10c2",
+  "Birthing Pod": "f8b9dd54-0837-47f4-ad14-7a0322d46d5f",
+  "Chord of Calling": "6789a170-f2c5-4fc0-8a45-2b2361e67410",
+  "Finale of Devastation": "69872a9a-fe54-4e58-940c-89395af71acd",
+  "Eldritch Evolution": "0f77c0c9-4dc4-489a-b547-e93287c4d1a5",
+  "Neoform": "420c6dcf-966d-4a4c-a0ef-23037ab8b325",
+  "Nature's Rhythm": "0259f063-3e3f-4e07-9066-f748d4819829",
+  "Green Sun's Zenith": "0d96b60b-a060-48ee-bb83-93f1c4a10669",
+  "Summoner's Pact": "782dcbc4-5a11-42f5-b8d9-4572e36d45b3",
+  "Ranger-Captain of Eos": "cada3481-cc2b-4412-b9b5-0436af53aad2",
+  "Intuition": "3c9faba7-f2d3-4978-be94-020dc8003dc0",
+  "Lim-D\u00fbl's Vault": "3f8e7a45-4c6e-4ee6-93d0-b7de9715ec97",
+  "Borne Upon a Wind": "ce19962d-94f9-4b2b-b668-963c0acce308",
+  "High Fae Trickster": "28c1a4a0-f58c-4d07-a918-51ff8a74f050",
+  "Emergence Zone": "7536eb66-959d-4dca-9b75-895572ef733c",
+  "Teferi, Mage of Zhalfir": "2b6cbd55-5adc-4a34-ac45-8531705a7ee1",
+  "Crop Rotation": "28b46183-c62f-47b1-9fee-3ba148202cab",
+  "Alchemist's Refuge": "357ed28b-899f-404b-94ff-6fb2ef81d87b",
+  "Leyline of Anticipation": "9dc65ffe-17fc-4280-b4bd-78073ac7e12b",
+  "Vedalken Orrery": "60d640a4-032b-4279-ac75-8f200ca776fb",
+  "Silence": "8aed54cb-d1bb-45ad-adbe-38e55d84ff31",
+  "Grand Abolisher": "c749f23c-40c0-4159-b84c-a70cbb062c14",
+  "Voice of Victory": "b12cbda1-ac09-49eb-96b3-a4df27bc37ea",
+  "Allosaurus Shepherd": "98295bdc-db58-4e1f-ad4c-63092aea207e",
+  "Veil of Summer": "002965be-a36f-4a09-9ce0-c6535bca1703",
+  "Autumn's Veil": "03f5946b-e000-4b39-a49f-1c31668b51bd",
+  "Deflecting Swat": "ae120613-97d6-4393-b39d-c3e6c076f5d6",
+  "Fierce Guardianship": "d09c9cba-fdd2-479b-ad5d-d05181c3e3f9",
+  "Flare of Denial": "437cfd16-94bc-43ba-afd8-e9e9d028a4ca",
+  "Pact of Negation": "f3e213a4-ba5a-468a-93b3-c0a34e1bd725",
+  "Force of Will": "956381ba-6d37-4a8a-846c-bad79222dbee",
+  "Force of Negation": "ac2173f9-f223-440a-9231-fd98762bdc6f",
+  "Mindbreak Trap": "48712d36-5c13-4ded-87a4-68106da4a5cd",
+  "Misdirection": "c39e5fb0-6de3-4105-ad3c-0ecb8951a1d5",
+  "Swan Song": "8ddfc283-c9b4-41a5-af88-cf0068e986cc",
+  "Flusterstorm": "86bf58f2-7f25-4e10-b797-25e0e8e67769",
+  "Mental Misstep": "1a0770e6-b093-4439-baff-6889a50ba12e",
+  "Snapback": "e88de17c-086d-4e2a-b5b2-2f9f57ca7c0f",
+  "Cloud of Faeries": "adc1f3b4-cce7-42c9-a208-dbab1d1924f5",
+  "Orim's Chant": "26d3a818-7faf-443a-a6bd-9773edaedf17",
+  "Destiny Spinner": "7dd189f8-a23f-4b43-b0ef-fb174a9664ba",
+  "Hermit Druid": "16f6438d-2a29-41cb-bf0c-4d02bd66112b",
+  "Divining Witch": "ebd77c52-97ea-421f-99eb-c6e2263cdecf",
+  "Shang-Chi, Master of Kung Fu": "700ef9c8-698b-45f7-a1fd-dec74e553224",
+  "Tasha's Hideous Laughter": "e352f5b9-6406-4914-bc79-f24608be6bc9",
+  "Jace, Wielder of Mysteries": "5277a68e-1ceb-4b40-8e10-3d0564f5d7be",
+  "Laboratory Maniac": "aa286dd5-aa19-446d-9003-684d81eb57ca",
+  "Devoted Druid": "cb814e16-acf7-41d5-a357-1323dcc369f3",
+  "Swift Reconfiguration": "5d47e820-913f-441a-a6cc-37ab3181d79a",
+  "Hazel's Brewmaster": "e8180024-1979-4677-9a0d-e08d4b7c825a",
+  "Machine God's Effigy": "64ebdd6f-acde-4aab-a86b-2798bad5f70c",
+  "The Cabbage Merchant": "e31808bb-fb6e-487b-a973-db44961c84ee",
+  "Mockingbird": "b9df2cdf-397c-458d-89cf-911568737ffa",
+  "Flash Photography": "a92ae7b0-cbbb-44a8-bfd8-2a68f4c1ce1a",
+  "Abhorrent Oculus": "b1a0e129-27f0-4a09-b00d-497e18777306",
+  "Oboro Breezecaller": "257ee9a0-5ee0-49c4-8619-e75e1134d7ac",
+  "Gaea's Cradle": "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+  "Kinnan, Bonder Prodigy": "8d11aa49-d4cd-48b1-aa0f-8548fa733416",
+  "Delney, Streetwise Lookout": "245d0ccf-87b6-460a-8b99-9e2079f2d375",
+  "Faerie Mastermind": "a984db23-40ea-428d-829f-e944267280f8",
+  "The Queen of Dale": "a2ec1dd0-86c7-423d-b562-ed95b79bf8f7",
+  "Strix Serenade": "7ca3aa03-e62d-464a-9111-e754abe17f76",
+  "Deathrite Shaman": "22f1a4a4-c423-4d1c-8775-0ed604a9fa51",
+  "Training Grounds": "8de3eabe-9a8f-4865-beef-a4888c081d39",
+  "Biomancer's Familiar": "923d44a9-774d-459c-9cec-1d5b081b51f0",
+  "Seedborn Muse": "463865bc-087e-477b-9e86-84e77f1ad931",
+  "Formidable Speaker": "5bd06f9e-9a42-455d-ad26-24bc04e51c7c",
+  "Springheart Nantuko": "8a3ad2ef-8bcb-40c0-85de-f03328c2b644",
+  "Derevi, Empyrial Tactician": "afa49a09-146f-4439-850e-dd1938c93cef",
+  "Badgermole Cub": "2b0afb89-0944-4861-b9c3-e909e2ac215e",
+  "Clever Impersonator": "d4ec0df9-a4a3-48cf-a0aa-b1aea5c49142",
+  "Volatile Stormdrake": "08d64b16-9221-4532-890c-d5cdbf181e28"
+ },
+ "periods": {
+  "6m": {
+   "n_oracle": 950,
+   "n_no_oracle": 290,
+   "oracle_inclusion": 0.7661290322580645,
+   "rows": [
+    {
+     "card": "Demonic Consultation",
+     "k_with_oracle": 804,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.8463157894736842,
+     "p_with_oracle_ci95": [
+      0.8219910183477749,
+      0.8678509847688852
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 84.63157894736842,
+     "log_or": 8.067946294827227,
+     "log_or_ci95": [
+      5.288122242513624,
+      10.84777034714083
+     ],
+     "fisher_p": 9.87846826309307e-173
+    },
+    {
+     "card": "Tainted Pact",
+     "k_with_oracle": 910,
+     "k_without_oracle": 9,
+     "p_with_oracle": 0.9578947368421052,
+     "p_with_oracle_ci95": [
+      0.9431726810715113,
+      0.9689284476693614
+     ],
+     "p_without_oracle": 0.03103448275862069,
+     "p_without_oracle_ci95": [
+      0.016411454010723175,
+      0.05791975028438004
+     ],
+     "diff_pp": 92.68602540834846,
+     "log_or": 6.5015325740284196,
+     "log_or_ci95": [
+      5.782436349440488,
+      7.220628798616351
+     ],
+     "fisher_p": 1.0075045792959825e-219
+    },
+    {
+     "card": "Spellseeker",
+     "k_with_oracle": 209,
+     "k_without_oracle": 40,
+     "p_with_oracle": 0.22,
+     "p_with_oracle_ci95": [
+      0.19481437266616275,
+      0.2474410290693036
+     ],
+     "p_without_oracle": 0.13793103448275862,
+     "p_without_oracle_ci95": [
+      0.10295378601137602,
+      0.182375452598814
+     ],
+     "diff_pp": 8.206896551724139,
+     "log_or": 0.5582055241966317,
+     "log_or_ci95": [
+      0.192544626642909,
+      0.9238664217503545
+     ],
+     "fisher_p": 0.001925567804976974
+    },
+    {
+     "card": "Demonic Tutor",
+     "k_with_oracle": 947,
+     "k_without_oracle": 288,
+     "p_with_oracle": 0.9968421052631579,
+     "p_with_oracle_ci95": [
+      0.9907566626503898,
+      0.998925481638557
+     ],
+     "p_without_oracle": 0.993103448275862,
+     "p_without_oracle_ci95": [
+      0.9752067986156324,
+      0.9981067145152517
+     ],
+     "diff_pp": 0.37386569872958075,
+     "log_or": 0.8526596143872142,
+     "log_or_ci95": [
+      -0.7757169484303074,
+      2.481036177204736
+     ],
+     "fisher_p": 0.3331423445770775
+    },
+    {
+     "card": "Vampiric Tutor",
+     "k_with_oracle": 946,
+     "k_without_oracle": 290,
+     "p_with_oracle": 0.9957894736842106,
+     "p_with_oracle_ci95": [
+      0.9892239065838563,
+      0.9983614535010886
+     ],
+     "p_without_oracle": 1.0,
+     "p_without_oracle_ci95": [
+      0.9869262895383091,
+      1.0
+     ],
+     "diff_pp": -0.42105263157894424,
+     "log_or": -1.0160571829788079,
+     "log_or_ci95": [
+      -3.9408087498662976,
+      1.908694383908682
+     ],
+     "fisher_p": 0.5786210773506805
+    },
+    {
+     "card": "Imperial Seal",
+     "k_with_oracle": 645,
+     "k_without_oracle": 217,
+     "p_with_oracle": 0.6789473684210526,
+     "p_with_oracle_ci95": [
+      0.6485884075958263,
+      0.7078649070845148
+     ],
+     "p_without_oracle": 0.7482758620689656,
+     "p_without_oracle_ci95": [
+      0.6952998228230008,
+      0.7947601278442976
+     ],
+     "diff_pp": -6.932849364791293,
+     "log_or": -0.33683801263490054,
+     "log_or_ci95": [
+      -0.6342524479906677,
+      -0.03942357727913337
+     ],
+     "fisher_p": 0.028656270149893342
+    },
+    {
+     "card": "Mystical Tutor",
+     "k_with_oracle": 219,
+     "k_without_oracle": 15,
+     "p_with_oracle": 0.2305263157894737,
+     "p_with_oracle_ci95": [
+      0.20486106616843403,
+      0.2583621776070524
+     ],
+     "p_without_oracle": 0.05172413793103448,
+     "p_without_oracle_ci95": [
+      0.03159253434792463,
+      0.08357699916945344
+     ],
+     "diff_pp": 17.88021778584392,
+     "log_or": 1.6740026167228153,
+     "log_or_ci95": [
+      1.1405773341406205,
+      2.20742789930501
+     ],
+     "fisher_p": 9.015164220802086e-14
+    },
+    {
+     "card": "Enlightened Tutor",
+     "k_with_oracle": 904,
+     "k_without_oracle": 282,
+     "p_with_oracle": 0.9515789473684211,
+     "p_with_oracle_ci95": [
+      0.9360168183754358,
+      0.963503605141425
+     ],
+     "p_without_oracle": 0.9724137931034482,
+     "p_without_oracle_ci95": [
+      0.9465183002778627,
+      0.9859568836307465
+     ],
+     "diff_pp": -2.083484573502714,
+     "log_or": -0.5356823948481857,
+     "log_or_ci95": [
+      -1.2789278370899395,
+      0.20756304739356812
+     ],
+     "fisher_p": 0.14136744891803577
+    },
+    {
+     "card": "Worldly Tutor",
+     "k_with_oracle": 219,
+     "k_without_oracle": 22,
+     "p_with_oracle": 0.2305263157894737,
+     "p_with_oracle_ci95": [
+      0.20486106616843403,
+      0.2583621776070524
+     ],
+     "p_without_oracle": 0.07586206896551724,
+     "p_without_oracle_ci95": [
+      0.050628781249080636,
+      0.1121854696942848
+     ],
+     "diff_pp": 15.466424682395646,
+     "log_or": 1.275590616793592,
+     "log_or_ci95": [
+      0.819741209684987,
+      1.731440023902197
+     ],
+     "fisher_p": 5.840619540344983e-10
+    },
+    {
+     "card": "Gamble",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      -4.336808689942018e-19,
+      0.0040275030990470535
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.0,
+     "log_or": -1.185384585636518,
+     "log_or_ci95": [
+      -5.1075862325012675,
+      2.7368170612282317
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Survival of the Fittest",
+     "k_with_oracle": 490,
+     "k_without_oracle": 189,
+     "p_with_oracle": 0.5157894736842106,
+     "p_with_oracle_ci95": [
+      0.4840103375164143,
+      0.5474414255436159
+     ],
+     "p_without_oracle": 0.6517241379310345,
+     "p_without_oracle_ci95": [
+      0.5952299666334981,
+      0.7042511143298509
+     ],
+     "diff_pp": -13.593466424682388,
+     "log_or": -0.5612178027305829,
+     "log_or_ci95": [
+      -0.8337885572710595,
+      -0.2886470481901063
+     ],
+     "fisher_p": 5.044164935779501e-05
+    },
+    {
+     "card": "Birthing Pod",
+     "k_with_oracle": 95,
+     "k_without_oracle": 31,
+     "p_with_oracle": 0.1,
+     "p_with_oracle_ci95": [
+      0.08250418036569299,
+      0.12071782211354468
+     ],
+     "p_without_oracle": 0.10689655172413794,
+     "p_without_oracle_ci95": [
+      0.07633495422932327,
+      0.14773679054745445
+     ],
+     "diff_pp": -0.6896551724137931,
+     "log_or": -0.08379068907120761,
+     "log_or_ci95": [
+      -0.5097907601251196,
+      0.34220938198270434
+     ],
+     "fisher_p": 0.7394642554687347
+    },
+    {
+     "card": "Chord of Calling",
+     "k_with_oracle": 824,
+     "k_without_oracle": 276,
+     "p_with_oracle": 0.8673684210526316,
+     "p_with_oracle_ci95": [
+      0.8443130494993947,
+      0.8874646376973054
+     ],
+     "p_without_oracle": 0.9517241379310345,
+     "p_without_oracle_ci95": [
+      0.9206082506520797,
+      0.9710286040342547
+     ],
+     "diff_pp": -8.435571687840293,
+     "log_or": -1.0735273377037822,
+     "log_or_ci95": [
+      -1.6337587988331277,
+      -0.5132958765744366
+     ],
+     "fisher_p": 2.9125101695998475e-05
+    },
+    {
+     "card": "Finale of Devastation",
+     "k_with_oracle": 856,
+     "k_without_oracle": 281,
+     "p_with_oracle": 0.9010526315789473,
+     "p_with_oracle_ci95": [
+      0.8804192879779649,
+      0.9184554937467995
+     ],
+     "p_without_oracle": 0.9689655172413794,
+     "p_without_oracle_ci95": [
+      0.9420802497156201,
+      0.9835885459892769
+     ],
+     "diff_pp": -6.791288566243203,
+     "log_or": -1.1845861657087724,
+     "log_or_ci95": [
+      -1.8651469061733885,
+      -0.5040254252441562
+     ],
+     "fisher_p": 8.68129479044012e-05
+    },
+    {
+     "card": "Eldritch Evolution",
+     "k_with_oracle": 723,
+     "k_without_oracle": 261,
+     "p_with_oracle": 0.7610526315789473,
+     "p_with_oracle_ci95": [
+      0.7329177962389205,
+      0.7870846863535769
+     ],
+     "p_without_oracle": 0.9,
+     "p_without_oracle_ci95": [
+      0.8600720800236347,
+      0.9294689516070126
+     ],
+     "diff_pp": -13.89473684210527,
+     "log_or": -1.02509371247867,
+     "log_or_ci95": [
+      -1.433884928056262,
+      -0.6163024969010782
+     ],
+     "fisher_p": 8.585284589389686e-08
+    },
+    {
+     "card": "Neoform",
+     "k_with_oracle": 538,
+     "k_without_oracle": 228,
+     "p_with_oracle": 0.5663157894736842,
+     "p_with_oracle_ci95": [
+      0.5345965956312619,
+      0.5975008092208645
+     ],
+     "p_without_oracle": 0.7862068965517242,
+     "p_without_oracle_ci95": [
+      0.7354384840382517,
+      0.829491736869884
+     ],
+     "diff_pp": -21.989110707803995,
+     "log_or": -1.029818362770196,
+     "log_or_ci95": [
+      -1.3375921660132413,
+      -0.7220445595271507
+     ],
+     "fisher_p": 5.363094999307759e-12
+    },
+    {
+     "card": "Nature's Rhythm",
+     "k_with_oracle": 707,
+     "k_without_oracle": 270,
+     "p_with_oracle": 0.7442105263157894,
+     "p_with_oracle_ci95": [
+      0.7155205101782297,
+      0.7709334251502357
+     ],
+     "p_without_oracle": 0.9310344827586207,
+     "p_without_oracle_ci95": [
+      0.8958830100772942,
+      0.9549155153867653
+     ],
+     "diff_pp": -18.682395644283122,
+     "log_or": -1.5132265251474255,
+     "log_or_ci95": [
+      -1.9852470597403389,
+      -1.0412059905545121
+     ],
+     "fisher_p": 1.8538946520069282e-13
+    },
+    {
+     "card": "Green Sun's Zenith",
+     "k_with_oracle": 315,
+     "k_without_oracle": 209,
+     "p_with_oracle": 0.33157894736842103,
+     "p_with_oracle_ci95": [
+      0.30237259970993957,
+      0.3621419276497394
+     ],
+     "p_without_oracle": 0.7206896551724138,
+     "p_without_oracle_ci95": [
+      0.6664233833752609,
+      0.7691854616623377
+     ],
+     "diff_pp": -38.91107078039928,
+     "log_or": -1.6443741277636164,
+     "log_or_ci95": [
+      -1.9336740090325444,
+      -1.3550742464946883
+     ],
+     "fisher_p": 1.0190036471116218e-31
+    },
+    {
+     "card": "Summoner's Pact",
+     "k_with_oracle": 72,
+     "k_without_oracle": 11,
+     "p_with_oracle": 0.07578947368421053,
+     "p_with_oracle_ci95": [
+      0.060615234670879224,
+      0.09438073111631229
+     ],
+     "p_without_oracle": 0.03793103448275862,
+     "p_without_oracle_ci95": [
+      0.02130963093454989,
+      0.06663434976797827
+     ],
+     "diff_pp": 3.785843920145191,
+     "log_or": 0.6960259114594267,
+     "log_or_ci95": [
+      0.05950630271611501,
+      1.3325455202027383
+     ],
+     "fisher_p": 0.022454631423726248
+    },
+    {
+     "card": "Ranger-Captain of Eos",
+     "k_with_oracle": 817,
+     "k_without_oracle": 261,
+     "p_with_oracle": 0.86,
+     "p_with_oracle_ci95": [
+      0.83648171456717,
+      0.8806184832015161
+     ],
+     "p_without_oracle": 0.9,
+     "p_without_oracle_ci95": [
+      0.8600720800236347,
+      0.9294689516070126
+     ],
+     "diff_pp": -4.0000000000000036,
+     "log_or": -0.3698945952280992,
+     "log_or_ci95": [
+      -0.7922565189904287,
+      0.05246732853423036
+     ],
+     "fisher_p": 0.09017932876541335
+    },
+    {
+     "card": "Intuition",
+     "k_with_oracle": 19,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.02,
+     "p_with_oracle_ci95": [
+      0.012840549028949488,
+      0.031025853946135683
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 2.0,
+     "log_or": 2.498369032379969,
+     "log_or_ci95": [
+      -0.3118895545659326,
+      5.308627619325871
+     ],
+     "fisher_p": 0.011122933075935376
+    },
+    {
+     "card": "Lim-D\u00fbl's Vault",
+     "k_with_oracle": 82,
+     "k_without_oracle": 8,
+     "p_with_oracle": 0.0863157894736842,
+     "p_with_oracle_ci95": [
+      0.07008200236741764,
+      0.10588180545979393
+     ],
+     "p_without_oracle": 0.027586206896551724,
+     "p_without_oracle_ci95": [
+      0.014043116369253497,
+      0.05348169972213723
+     ],
+     "diff_pp": 5.872958257713249,
+     "log_or": 1.1496430947497005,
+     "log_or_ci95": [
+      0.43093617797223704,
+      1.868350011527164
+     ],
+     "fisher_p": 0.0004047977573796232
+    },
+    {
+     "card": "Borne Upon a Wind",
+     "k_with_oracle": 599,
+     "k_without_oracle": 195,
+     "p_with_oracle": 0.6305263157894737,
+     "p_with_oracle_ci95": [
+      0.5993651007387995,
+      0.6606361405574495
+     ],
+     "p_without_oracle": 0.6724137931034483,
+     "p_without_oracle_ci95": [
+      0.6164486944499317,
+      0.7238707157356923
+     ],
+     "diff_pp": -4.1887477313974575,
+     "log_or": -0.18254786872188655,
+     "log_or_ci95": [
+      -0.4604209931863136,
+      0.09532525574254047
+     ],
+     "fisher_p": 0.2084938837841019
+    },
+    {
+     "card": "High Fae Trickster",
+     "k_with_oracle": 457,
+     "k_without_oracle": 241,
+     "p_with_oracle": 0.48105263157894734,
+     "p_with_oracle_ci95": [
+      0.4494203358669831,
+      0.5128375484609808
+     ],
+     "p_without_oracle": 0.8310344827586207,
+     "p_without_oracle_ci95": [
+      0.7836428364127933,
+      0.8697704311436044
+     ],
+     "diff_pp": -34.99818511796733,
+     "log_or": -1.660642777675943,
+     "log_or_ci95": [
+      -1.9918476451503255,
+      -1.3294379102015603
+     ],
+     "fisher_p": 9.337895714980861e-28
+    },
+    {
+     "card": "Emergence Zone",
+     "k_with_oracle": 672,
+     "k_without_oracle": 259,
+     "p_with_oracle": 0.7073684210526315,
+     "p_with_oracle_ci95": [
+      0.6776475388380736,
+      0.7354189493503216
+     ],
+     "p_without_oracle": 0.8931034482758621,
+     "p_without_oracle_ci95": [
+      0.8522632094525455,
+      0.9236650457706768
+     ],
+     "diff_pp": -18.573502722323056,
+     "log_or": -1.2271851046657005,
+     "log_or_ci95": [
+      -1.622489697793223,
+      -0.831880511538178
+     ],
+     "fisher_p": 1.4261841184092804e-11
+    },
+    {
+     "card": "Teferi, Mage of Zhalfir",
+     "k_with_oracle": 97,
+     "k_without_oracle": 147,
+     "p_with_oracle": 0.10210526315789474,
+     "p_with_oracle_ci95": [
+      0.08442544457754805,
+      0.12299012630969361
+     ],
+     "p_without_oracle": 0.506896551724138,
+     "p_without_oracle_ci95": [
+      0.4496415919782303,
+      0.5639711844291947
+     ],
+     "diff_pp": -40.47912885662432,
+     "log_or": -2.1969863048108924,
+     "log_or_ci95": [
+      -2.507980676159142,
+      -1.8859919334626427
+     ],
+     "fisher_p": 1.4155134539035758e-45
+    },
+    {
+     "card": "Crop Rotation",
+     "k_with_oracle": 843,
+     "k_without_oracle": 284,
+     "p_with_oracle": 0.8873684210526316,
+     "p_with_oracle_ci95": [
+      0.8656845354377083,
+      0.90593205163503
+     ],
+     "p_without_oracle": 0.9793103448275862,
+     "p_without_oracle_ci95": [
+      0.9556037527796775,
+      0.9904842075363567
+     ],
+     "diff_pp": -9.194192377495458,
+     "log_or": -1.7188620222464885,
+     "log_or_ci95": [
+      -2.52186173775893,
+      -0.9158623067340474
+     ],
+     "fisher_p": 1.4523500209779003e-07
+    },
+    {
+     "card": "Alchemist's Refuge",
+     "k_with_oracle": 15,
+     "k_without_oracle": 7,
+     "p_with_oracle": 0.015789473684210527,
+     "p_with_oracle_ci95": [
+      0.009591554212868574,
+      0.02588771194620857
+     ],
+     "p_without_oracle": 0.02413793103448276,
+     "p_without_oracle_ci95": [
+      0.011740421834928148,
+      0.04897800605275011
+     ],
+     "diff_pp": -0.8348457350272231,
+     "log_or": -0.4679320191634013,
+     "log_or_ci95": [
+      -1.349813858775423,
+      0.4139498204486204
+     ],
+     "fisher_p": 0.31993486716922587
+    },
+    {
+     "card": "Leyline of Anticipation",
+     "k_with_oracle": 9,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.009473684210526316,
+     "p_with_oracle_ci95": [
+      0.00499197438095776,
+      0.017906586554107352
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.9473684210526316,
+     "log_or": 1.7685682073611992,
+     "log_or_ci95": [
+      -1.0783394731145364,
+      4.615475887836935
+     ],
+     "fisher_p": 0.1269917960198851
+    },
+    {
+     "card": "Vedalken Orrery",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      -4.336808689942018e-19,
+      0.0040275030990470535
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.0,
+     "log_or": -1.185384585636518,
+     "log_or_ci95": [
+      -5.1075862325012675,
+      2.7368170612282317
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Silence",
+     "k_with_oracle": 946,
+     "k_without_oracle": 288,
+     "p_with_oracle": 0.9957894736842106,
+     "p_with_oracle_ci95": [
+      0.9892239065838563,
+      0.9983614535010886
+     ],
+     "p_without_oracle": 0.993103448275862,
+     "p_without_oracle_ci95": [
+      0.9752067986156324,
+      0.9981067145152517
+     ],
+     "diff_pp": 0.26860254083485025,
+     "log_or": 0.6002892197991043,
+     "log_or_ci95": [
+      -0.9513883893890249,
+      2.1519668289872333
+     ],
+     "fisher_p": 0.6290462595780278
+    },
+    {
+     "card": "Grand Abolisher",
+     "k_with_oracle": 631,
+     "k_without_oracle": 71,
+     "p_with_oracle": 0.6642105263157895,
+     "p_with_oracle_ci95": [
+      0.6335706563054093,
+      0.6935276795189036
+     ],
+     "p_without_oracle": 0.24482758620689654,
+     "p_without_oracle_ci95": [
+      0.19888596555137447,
+      0.2974413073739023
+     ],
+     "diff_pp": 41.938294010889294,
+     "log_or": 1.8029954507882204,
+     "log_or_ci95": [
+      1.5041019132632323,
+      2.101888988313209
+     ],
+     "fisher_p": 6.494065798964399e-37
+    },
+    {
+     "card": "Voice of Victory",
+     "k_with_oracle": 796,
+     "k_without_oracle": 117,
+     "p_with_oracle": 0.8378947368421052,
+     "p_with_oracle_ci95": [
+      0.8131053302682729,
+      0.859962399216371
+     ],
+     "p_without_oracle": 0.40344827586206894,
+     "p_without_oracle_ci95": [
+      0.34860223436957277,
+      0.4608188959264779
+     ],
+     "diff_pp": 43.44464609800363,
+     "log_or": 2.0297722988150033,
+     "log_or_ci95": [
+      1.7390420444298003,
+      2.3205025532002064
+     ],
+     "fisher_p": 1.0173296969663478e-44
+    },
+    {
+     "card": "Allosaurus Shepherd",
+     "k_with_oracle": 1,
+     "k_without_oracle": 1,
+     "p_with_oracle": 0.0010526315789473684,
+     "p_with_oracle_ci95": [
+      0.0001858347131650363,
+      0.005938452589884022
+     ],
+     "p_without_oracle": 0.0034482758620689655,
+     "p_without_oracle_ci95": [
+      0.0006089492549414596,
+      0.019271149410461944
+     ],
+     "diff_pp": -0.2395644283121597,
+     "log_or": -1.1877802332392906,
+     "log_or_ci95": [
+      -3.454815528004896,
+      1.079255061526315
+     ],
+     "fisher_p": 0.4131909187946298
+    },
+    {
+     "card": "Veil of Summer",
+     "k_with_oracle": 801,
+     "k_without_oracle": 253,
+     "p_with_oracle": 0.8431578947368421,
+     "p_with_oracle_ci95": [
+      0.8186561834701636,
+      0.8648954670344904
+     ],
+     "p_without_oracle": 0.8724137931034482,
+     "p_without_oracle_ci95": [
+      0.8290883168210503,
+      0.906001609179897
+     ],
+     "diff_pp": -2.9255898366606137,
+     "log_or": -0.23183431083600614,
+     "log_or_ci95": [
+      -0.6166540627569557,
+      0.15298544108494344
+     ],
+     "fisher_p": 0.25941675506139944
+    },
+    {
+     "card": "Autumn's Veil",
+     "k_with_oracle": 47,
+     "k_without_oracle": 3,
+     "p_with_oracle": 0.049473684210526316,
+     "p_with_oracle_ci95": [
+      0.03740690111059378,
+      0.06516945957654756
+     ],
+     "p_without_oracle": 0.010344827586206896,
+     "p_without_oracle_ci95": [
+      0.0035242288902490176,
+      0.029968646182579335
+     ],
+     "diff_pp": 3.912885662431942,
+     "log_or": 1.4629134927503495,
+     "log_or_ci95": [
+      0.3692545945229164,
+      2.5565723909777827
+     ],
+     "fisher_p": 0.0017642646388194173
+    },
+    {
+     "card": "Deflecting Swat",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      -4.336808689942018e-19,
+      0.0040275030990470535
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.0,
+     "log_or": -1.185384585636518,
+     "log_or_ci95": [
+      -5.1075862325012675,
+      2.7368170612282317
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Fierce Guardianship",
+     "k_with_oracle": 932,
+     "k_without_oracle": 288,
+     "p_with_oracle": 0.9810526315789474,
+     "p_with_oracle_ci95": [
+      0.9702484901144764,
+      0.9879818911144403
+     ],
+     "p_without_oracle": 0.993103448275862,
+     "p_without_oracle_ci95": [
+      0.9752067986156324,
+      0.9981067145152517
+     ],
+     "diff_pp": -1.2050816696914657,
+     "log_or": -0.8283059346403078,
+     "log_or_ci95": [
+      -2.1556075219100355,
+      0.49899565262942003
+     ],
+     "fisher_p": 0.19018149709417745
+    },
+    {
+     "card": "Flare of Denial",
+     "k_with_oracle": 198,
+     "k_without_oracle": 54,
+     "p_with_oracle": 0.20842105263157895,
+     "p_with_oracle_ci95": [
+      0.18379144538641537,
+      0.23539933010502892
+     ],
+     "p_without_oracle": 0.18620689655172415,
+     "p_without_oracle_ci95": [
+      0.14561101243076613,
+      0.23500766103139853
+     ],
+     "diff_pp": 2.22141560798548,
+     "log_or": 0.13513560976700367,
+     "log_or_ci95": [
+      -0.1983158710892296,
+      0.46858709062323695
+     ],
+     "fisher_p": 0.45328971184989153
+    },
+    {
+     "card": "Pact of Negation",
+     "k_with_oracle": 897,
+     "k_without_oracle": 283,
+     "p_with_oracle": 0.9442105263157895,
+     "p_with_oracle_ci95": [
+      0.9277464015490152,
+      0.9570965325398314
+     ],
+     "p_without_oracle": 0.9758620689655172,
+     "p_without_oracle_ci95": [
+      0.9510219939472498,
+      0.9882595781650719
+     ],
+     "diff_pp": -3.1651542649727693,
+     "log_or": -0.8123776361650689,
+     "log_or_ci95": [
+      -1.5881674868048912,
+      -0.03658778552524655
+     ],
+     "fisher_p": 0.028038217493090965
+    },
+    {
+     "card": "Force of Will",
+     "k_with_oracle": 947,
+     "k_without_oracle": 283,
+     "p_with_oracle": 0.9968421052631579,
+     "p_with_oracle_ci95": [
+      0.9907566626503898,
+      0.998925481638557
+     ],
+     "p_without_oracle": 0.9758620689655172,
+     "p_without_oracle_ci95": [
+      0.9510219939472498,
+      0.9882595781650719
+     ],
+     "diff_pp": 2.098003629764067,
+     "log_or": 1.9687548658356715,
+     "log_or_ci95": [
+      0.6930517617710203,
+      3.2444579699003224
+     ],
+     "fisher_p": 0.0022218225522133866
+    },
+    {
+     "card": "Force of Negation",
+     "k_with_oracle": 681,
+     "k_without_oracle": 264,
+     "p_with_oracle": 0.716842105263158,
+     "p_with_oracle_ci95": [
+      0.6873634714040812,
+      0.7445740746203323
+     ],
+     "p_without_oracle": 0.9103448275862069,
+     "p_without_oracle_ci95": [
+      0.8718769419244268,
+      0.9380832543173581
+     ],
+     "diff_pp": -19.3502722323049,
+     "log_or": -1.3729686575186422,
+     "log_or_ci95": [
+      -1.7965032700450376,
+      -0.9494340449922467
+     ],
+     "fisher_p": 5.734645315931477e-13
+    },
+    {
+     "card": "Mindbreak Trap",
+     "k_with_oracle": 930,
+     "k_without_oracle": 287,
+     "p_with_oracle": 0.9789473684210527,
+     "p_with_oracle_ci95": [
+      0.9677057596094205,
+      0.9863310532114924
+     ],
+     "p_without_oracle": 0.9896551724137931,
+     "p_without_oracle_ci95": [
+      0.9700313538174207,
+      0.996475771109751
+     ],
+     "diff_pp": -1.0707803992740406,
+     "log_or": -0.5931627018040943,
+     "log_or_ci95": [
+      -1.734427676275181,
+      0.5481022726669925
+     ],
+     "fisher_p": 0.3224953388737646
+    },
+    {
+     "card": "Misdirection",
+     "k_with_oracle": 243,
+     "k_without_oracle": 174,
+     "p_with_oracle": 0.2557894736842105,
+     "p_with_oracle_ci95": [
+      0.22906657484976425,
+      0.2844794898217703
+     ],
+     "p_without_oracle": 0.6,
+     "p_without_oracle_ci95": [
+      0.5426622824453702,
+      0.6547229754622916
+     ],
+     "diff_pp": -34.421052631578945,
+     "log_or": -1.4706541556314747,
+     "log_or_ci95": [
+      -1.7466911489981776,
+      -1.1946171622647719
+     ],
+     "fisher_p": 4.3208298158005986e-26
+    },
+    {
+     "card": "Swan Song",
+     "k_with_oracle": 842,
+     "k_without_oracle": 273,
+     "p_with_oracle": 0.8863157894736842,
+     "p_with_oracle_ci95": [
+      0.8645551384782828,
+      0.9049646643904534
+     ],
+     "p_without_oracle": 0.9413793103448276,
+     "p_without_oracle_ci95": [
+      0.9081359149497624,
+      0.9630817751254347
+     ],
+     "diff_pp": -5.506352087114341,
+     "log_or": -0.699477251686565,
+     "log_or_ci95": [
+      -1.2224803909639643,
+      -0.17647411240916588
+     ],
+     "fisher_p": 0.00526597390331182
+    },
+    {
+     "card": "Flusterstorm",
+     "k_with_oracle": 938,
+     "k_without_oracle": 283,
+     "p_with_oracle": 0.9873684210526316,
+     "p_with_oracle_ci95": [
+      0.9780513609290286,
+      0.9927597255239003
+     ],
+     "p_without_oracle": 0.9758620689655172,
+     "p_without_oracle_ci95": [
+      0.9510219939472498,
+      0.9882595781650719
+     ],
+     "diff_pp": 1.1506352087114369,
+     "log_or": 0.686245109092766,
+     "log_or_ci95": [
+      -0.22873319177242457,
+      1.6012234099579565
+     ],
+     "fisher_p": 0.17404991796337993
+    },
+    {
+     "card": "Mental Misstep",
+     "k_with_oracle": 913,
+     "k_without_oracle": 281,
+     "p_with_oracle": 0.9610526315789474,
+     "p_with_oracle_ci95": [
+      0.9467780363222016,
+      0.971613445030677
+     ],
+     "p_without_oracle": 0.9689655172413794,
+     "p_without_oracle_ci95": [
+      0.9420802497156201,
+      0.9835885459892769
+     ],
+     "diff_pp": -0.7912885662431979,
+     "log_or": -0.19589820613155368,
+     "log_or_ci95": [
+      -0.9202419571721954,
+      0.5284455449090879
+     ],
+     "fisher_p": 0.5989557515956953
+    },
+    {
+     "card": "Snapback",
+     "k_with_oracle": 91,
+     "k_without_oracle": 23,
+     "p_with_oracle": 0.09578947368421052,
+     "p_with_oracle_ci95": [
+      0.07866942488531577,
+      0.11616544077791384
+     ],
+     "p_without_oracle": 0.07931034482758621,
+     "p_without_oracle_ci95": [
+      0.05342728501190026,
+      0.11619335413517766
+     ],
+     "diff_pp": 1.6479128856624308,
+     "log_or": 0.19210729264451973,
+     "log_or_ci95": [
+      -0.28148296982812415,
+      0.6656975551171637
+     ],
+     "fisher_p": 0.48583742333737845
+    },
+    {
+     "card": "Cloud of Faeries",
+     "k_with_oracle": 318,
+     "k_without_oracle": 100,
+     "p_with_oracle": 0.33473684210526317,
+     "p_with_oracle_ci95": [
+      0.30544714015980495,
+      0.3653577398118801
+     ],
+     "p_without_oracle": 0.3448275862068966,
+     "p_without_oracle_ci95": [
+      0.2924710826458213,
+      0.40124144818711743
+     ],
+     "diff_pp": -1.0090744101633409,
+     "log_or": -0.046563278521832105,
+     "log_or_ci95": [
+      -0.3231965542459376,
+      0.23006999720227334
+     ],
+     "fisher_p": 0.7766271753121311
+    },
+    {
+     "card": "Orim's Chant",
+     "k_with_oracle": 515,
+     "k_without_oracle": 214,
+     "p_with_oracle": 0.5421052631578948,
+     "p_with_oracle_ci95": [
+      0.5103166334914113,
+      0.5735547346686689
+     ],
+     "p_without_oracle": 0.7379310344827587,
+     "p_without_oracle_ci95": [
+      0.6844419694077868,
+      0.7851988166483741
+     ],
+     "diff_pp": -19.58257713248639,
+     "log_or": -0.8623764903711244,
+     "log_or_ci95": [
+      -1.152893027016387,
+      -0.5718599537258616
+     ],
+     "fisher_p": 1.685854675347765e-09
+    },
+    {
+     "card": "Destiny Spinner",
+     "k_with_oracle": 2,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.002105263157894737,
+     "p_with_oracle_ci95": [
+      0.0005775169811057398,
+      0.007643554525945324
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.21052631578947367,
+     "log_or": 0.42615969935099735,
+     "log_or_ci95": [
+      -2.6131024283516116,
+      3.465421827053606
+     ],
+     "fisher_p": 0.9999999999992931
+    },
+    {
+     "card": "Hermit Druid",
+     "k_with_oracle": 35,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.03684210526315789,
+     "p_with_oracle_ci95": [
+      0.026608111340136204,
+      0.05080683889898106
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 3.684210526315789,
+     "log_or": 3.114813089218716,
+     "log_or_ci95": [
+      0.3203839242826869,
+      5.909242254154744
+     ],
+     "fisher_p": 0.00013598786533466648
+    },
+    {
+     "card": "Divining Witch",
+     "k_with_oracle": 1,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0010526315789473684,
+     "p_with_oracle_ci95": [
+      0.0001858347131650363,
+      0.005938452589884022
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.10526315789473684,
+     "log_or": -0.08571966529226495,
+     "log_or_ci95": [
+      -3.2890830043402874,
+      3.1176436737557576
+     ],
+     "fisher_p": 0.9999999999988095
+    },
+    {
+     "card": "Shang-Chi, Master of Kung Fu",
+     "k_with_oracle": 158,
+     "k_without_oracle": 88,
+     "p_with_oracle": 0.16631578947368422,
+     "p_with_oracle_ci95": [
+      0.1439903366706541,
+      0.19132907066070995
+     ],
+     "p_without_oracle": 0.30344827586206896,
+     "p_without_oracle_ci95": [
+      0.2533875305248751,
+      0.35864834186351385
+     ],
+     "diff_pp": -13.713248638838474,
+     "log_or": -0.7817005779013904,
+     "log_or_ci95": [
+      -1.0841298135446507,
+      -0.47927134225812995
+     ],
+     "fisher_p": 8.623699176737426e-07
+    },
+    {
+     "card": "Tasha's Hideous Laughter",
+     "k_with_oracle": 1,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0010526315789473684,
+     "p_with_oracle_ci95": [
+      0.0001858347131650363,
+      0.005938452589884022
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.10526315789473684,
+     "log_or": -0.08571966529226495,
+     "log_or_ci95": [
+      -3.2890830043402874,
+      3.1176436737557576
+     ],
+     "fisher_p": 0.9999999999988095
+    },
+    {
+     "card": "Jace, Wielder of Mysteries",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      -4.336808689942018e-19,
+      0.0040275030990470535
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      -8.673617379884035e-19,
+      0.013073710461690924
+     ],
+     "diff_pp": 0.0,
+     "log_or": -1.185384585636518,
+     "log_or_ci95": [
+      -5.1075862325012675,
+      2.7368170612282317
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Laboratory Maniac",
+     "k_with_oracle": 8,
+     "k_without_oracle": 1,
+     "p_with_oracle": 0.008421052631578947,
+     "p_with_oracle_ci95": [
+      0.004273086293304304,
+      0.016528690437758797
+     ],
+     "p_without_oracle": 0.0034482758620689655,
+     "p_without_oracle_ci95": [
+      0.0006089492549414596,
+      0.019271149410461944
+     ],
+     "diff_pp": 0.49727767695099817,
+     "log_or": 0.5542204330789905,
+     "log_or_ci95": [
+      -1.1865740267834757,
+      2.2950148929414564
+     ],
+     "fisher_p": 0.6938856376806457
+    },
+    {
+     "card": "Devoted Druid",
+     "k_with_oracle": 875,
+     "k_without_oracle": 266,
+     "p_with_oracle": 0.9210526315789473,
+     "p_with_oracle_ci95": [
+      0.9021599134233317,
+      0.9365537681774708
+     ],
+     "p_without_oracle": 0.9172413793103448,
+     "p_without_oracle_ci95": [
+      0.8798149927788206,
+      0.943757979870389
+     ],
+     "diff_pp": 0.3811252268602572,
+     "log_or": 0.06396136941570968,
+     "log_or_ci95": [
+      -0.41194305504254464,
+      0.5398657938739639
+     ],
+     "fisher_p": 0.8055516839431786
+    },
+    {
+     "card": "Swift Reconfiguration",
+     "k_with_oracle": 834,
+     "k_without_oracle": 116,
+     "p_with_oracle": 0.8778947368421053,
+     "p_with_oracle_ci95": [
+      0.8555389728070155,
+      0.8972065564297047
+     ],
+     "p_without_oracle": 0.4,
+     "p_without_oracle_ci95": [
+      0.34527702453770837,
+      0.45733771755462993
+     ],
+     "diff_pp": 47.78947368421053,
+     "log_or": 2.3729749387328614,
+     "log_or_ci95": [
+      2.068724072767696,
+      2.677225804698027
+     ],
+     "fisher_p": 7.091950368134711e-57
+    },
+    {
+     "card": "Hazel's Brewmaster",
+     "k_with_oracle": 781,
+     "k_without_oracle": 264,
+     "p_with_oracle": 0.8221052631578948,
+     "p_with_oracle_ci95": [
+      0.7965037035118926,
+      0.8451122629127213
+     ],
+     "p_without_oracle": 0.9103448275862069,
+     "p_without_oracle_ci95": [
+      0.8718769419244268,
+      0.9380832543173581
+     ],
+     "diff_pp": -8.823956442831216,
+     "log_or": -0.7723342952651512,
+     "log_or_ci95": [
+      -1.2048502222157684,
+      -0.33981836831453405
+     ],
+     "fisher_p": 0.00020984949609959512
+    },
+    {
+     "card": "Machine God's Effigy",
+     "k_with_oracle": 80,
+     "k_without_oracle": 5,
+     "p_with_oracle": 0.08421052631578947,
+     "p_with_oracle_ci95": [
+      0.06818196372127035,
+      0.1035882756979372
+     ],
+     "p_without_oracle": 0.017241379310344827,
+     "p_without_oracle_ci95": [
+      0.007386292454953418,
+      0.03971935902529989
+     ],
+     "diff_pp": 6.696914700544465,
+     "log_or": 1.5686833620739136,
+     "log_or_ci95": [
+      0.6945762438705022,
+      2.442790480277325
+     ],
+     "fisher_p": 1.493904698746284e-05
+    },
+    {
+     "card": "The Cabbage Merchant",
+     "k_with_oracle": 732,
+     "k_without_oracle": 251,
+     "p_with_oracle": 0.7705263157894737,
+     "p_with_oracle_ci95": [
+      0.7427288662535506,
+      0.796144674174965
+     ],
+     "p_without_oracle": 0.8655172413793103,
+     "p_without_oracle_ci95": [
+      0.8214374521282538,
+      0.9000396974652686
+     ],
+     "diff_pp": -9.499092558983657,
+     "log_or": -0.6414649912771402,
+     "log_or_ci95": [
+      -1.0093734665490257,
+      -0.2735565160052546
+     ],
+     "fisher_p": 0.0003609964416317014
+    },
+    {
+     "card": "Mockingbird",
+     "k_with_oracle": 880,
+     "k_without_oracle": 279,
+     "p_with_oracle": 0.9263157894736842,
+     "p_with_oracle_ci95": [
+      0.9079301283347376,
+      0.9412674742860749
+     ],
+     "p_without_oracle": 0.9620689655172414,
+     "p_without_oracle_ci95": [
+      0.9333656502320218,
+      0.9786903690654503
+     ],
+     "diff_pp": -3.575317604355721,
+     "log_or": -0.6657780391079116,
+     "log_or_ci95": [
+      -1.3034695581554898,
+      -0.028086520060333298
+     ],
+     "fisher_p": 0.029922203399971228
+    },
+    {
+     "card": "Flash Photography",
+     "k_with_oracle": 359,
+     "k_without_oracle": 208,
+     "p_with_oracle": 0.3778947368421053,
+     "p_with_oracle_ci95": [
+      0.3476120335942116,
+      0.4091609987415557
+     ],
+     "p_without_oracle": 0.7172413793103448,
+     "p_without_oracle_ci95": [
+      0.6628309290675316,
+      0.7659715277663544
+     ],
+     "diff_pp": -33.93466424682396,
+     "log_or": -1.425088254155561,
+     "log_or_ci95": [
+      -1.7117420798776735,
+      -1.1384344284334484
+     ],
+     "fisher_p": 1.7837905506526616e-24
+    },
+    {
+     "card": "Abhorrent Oculus",
+     "k_with_oracle": 144,
+     "k_without_oracle": 70,
+     "p_with_oracle": 0.15157894736842106,
+     "p_with_oracle_ci95": [
+      0.1301805210338277,
+      0.1757839074415083
+     ],
+     "p_without_oracle": 0.2413793103448276,
+     "p_without_oracle_ci95": [
+      0.19571526955702198,
+      0.2938056151645423
+     ],
+     "diff_pp": -8.980036297640654,
+     "log_or": -0.579139404944099,
+     "log_or_ci95": [
+      -0.9004830958642752,
+      -0.25779571402392276
+     ],
+     "fisher_p": 0.0006992390351602723
+    },
+    {
+     "card": "Oboro Breezecaller",
+     "k_with_oracle": 362,
+     "k_without_oracle": 131,
+     "p_with_oracle": 0.38105263157894737,
+     "p_with_oracle_ci95": [
+      0.3507076395064983,
+      0.41235574544127496
+     ],
+     "p_without_oracle": 0.4517241379310345,
+     "p_without_oracle_ci95": [
+      0.39544871961987615,
+      0.5092618455281493
+     ],
+     "diff_pp": -7.067150635208713,
+     "log_or": -0.29151538179852193,
+     "log_or_ci95": [
+      -0.5568910672142421,
+      -0.02613969638280178
+     ],
+     "fisher_p": 0.03365846470966149
+    },
+    {
+     "card": "Gaea's Cradle",
+     "k_with_oracle": 856,
+     "k_without_oracle": 288,
+     "p_with_oracle": 0.9010526315789473,
+     "p_with_oracle_ci95": [
+      0.8804192879779649,
+      0.9184554937467995
+     ],
+     "p_without_oracle": 0.993103448275862,
+     "p_without_oracle_ci95": [
+      0.9752067986156324,
+      0.9981067145152517
+     ],
+     "diff_pp": -9.205081669691474,
+     "log_or": -2.5441498708095214,
+     "log_or_ci95": [
+      -3.8071197254267894,
+      -1.2811800161922533
+     ],
+     "fisher_p": 1.998209583607367e-09
+    },
+    {
+     "card": "Kinnan, Bonder Prodigy",
+     "k_with_oracle": 598,
+     "k_without_oracle": 236,
+     "p_with_oracle": 0.6294736842105263,
+     "p_with_oracle_ci95": [
+      0.5982987963606566,
+      0.65960566073159
+     ],
+     "p_without_oracle": 0.8137931034482758,
+     "p_without_oracle_ci95": [
+      0.7649923389686015,
+      0.8543889875692339
+     ],
+     "diff_pp": -18.431941923774954,
+     "log_or": -0.9383716035170847,
+     "log_or_ci95": [
+      -1.260937092480484,
+      -0.6158061145536856
+     ],
+     "fisher_p": 1.5606292480341428e-09
+    },
+    {
+     "card": "Delney, Streetwise Lookout",
+     "k_with_oracle": 215,
+     "k_without_oracle": 88,
+     "p_with_oracle": 0.22631578947368422,
+     "p_with_oracle_ci95": [
+      0.20083951878702005,
+      0.25399658817245835
+     ],
+     "p_without_oracle": 0.30344827586206896,
+     "p_without_oracle_ci95": [
+      0.2533875305248751,
+      0.35864834186351385
+     ],
+     "diff_pp": -7.713248638838474,
+     "log_or": -0.3998522959649797,
+     "log_or_ci95": [
+      -0.692133560240116,
+      -0.10757103168984344
+     ],
+     "fisher_p": 0.009855535293676627
+    },
+    {
+     "card": "Faerie Mastermind",
+     "k_with_oracle": 741,
+     "k_without_oracle": 283,
+     "p_with_oracle": 0.78,
+     "p_with_oracle_ci95": [
+      0.7525589709306965,
+      0.8051856273338373
+     ],
+     "p_without_oracle": 0.9758620689655172,
+     "p_without_oracle_ci95": [
+      0.9510219939472498,
+      0.9882595781650719
+     ],
+     "diff_pp": -19.586206896551715,
+     "log_or": -2.3683576804097477,
+     "log_or_ci95": [
+      -3.109493155938014,
+      -1.6272222048814813
+     ],
+     "fisher_p": 1.3173594406241666e-18
+    },
+    {
+     "card": "The Queen of Dale",
+     "k_with_oracle": 206,
+     "k_without_oracle": 91,
+     "p_with_oracle": 0.2168421052631579,
+     "p_with_oracle_ci95": [
+      0.19180509911083204,
+      0.2441599500126283
+     ],
+     "p_without_oracle": 0.3137931034482759,
+     "p_without_oracle_ci95": [
+      0.2631139691887881,
+      0.36934106781073833
+     ],
+     "diff_pp": -9.6950998185118,
+     "log_or": -0.5029371756745337,
+     "log_or_ci95": [
+      -0.7944919780209719,
+      -0.2113823733280954
+     ],
+     "fisher_p": 0.0009423623584054186
+    },
+    {
+     "card": "Strix Serenade",
+     "k_with_oracle": 17,
+     "k_without_oracle": 3,
+     "p_with_oracle": 0.017894736842105262,
+     "p_with_oracle_ci95": [
+      0.011202094060976726,
+      0.02847074050610443
+     ],
+     "p_without_oracle": 0.010344827586206896,
+     "p_without_oracle_ci95": [
+      0.0035242288902490176,
+      0.029968646182579335
+     ],
+     "diff_pp": 0.7549909255898366,
+     "log_or": 0.43171980968972823,
+     "log_or_ci95": [
+      -0.7235279352064684,
+      1.5869675545859248
+     ],
+     "fisher_p": 0.5934137284196473
+    },
+    {
+     "card": "Deathrite Shaman",
+     "k_with_oracle": 784,
+     "k_without_oracle": 235,
+     "p_with_oracle": 0.8252631578947368,
+     "p_with_oracle_ci95": [
+      0.7998181711869595,
+      0.8480881478496604
+     ],
+     "p_without_oracle": 0.8103448275862069,
+     "p_without_oracle_ci95": [
+      0.7612795857051722,
+      0.8512953526289506
+     ],
+     "diff_pp": 1.491833030852996,
+     "log_or": 0.10472337004850513,
+     "log_or_ci95": [
+      -0.23217438034719473,
+      0.441621120444205
+     ],
+     "fisher_p": 0.5989401392997925
+    },
+    {
+     "card": "Training Grounds",
+     "k_with_oracle": 553,
+     "k_without_oracle": 150,
+     "p_with_oracle": 0.5821052631578948,
+     "p_with_oracle_ci95": [
+      0.5504722738079392,
+      0.6130768941042174
+     ],
+     "p_without_oracle": 0.5172413793103449,
+     "p_without_oracle_ci95": [
+      0.4598793617027438,
+      0.5741525793158188
+     ],
+     "diff_pp": 6.486388384754993,
+     "log_or": 0.262311222639175,
+     "log_or_ci95": [
+      -0.0012658870228514085,
+      0.5258883323012014
+     ],
+     "fisher_p": 0.057921646274648214
+    },
+    {
+     "card": "Biomancer's Familiar",
+     "k_with_oracle": 445,
+     "k_without_oracle": 164,
+     "p_with_oracle": 0.46842105263157896,
+     "p_with_oracle_ci95": [
+      0.436880025685949,
+      0.5002164481939908
+     ],
+     "p_without_oracle": 0.5655172413793104,
+     "p_without_oracle_ci95": [
+      0.5079769841000598,
+      0.6213443917704774
+     ],
+     "diff_pp": -9.70961887477314,
+     "log_or": -0.3890190535875138,
+     "log_or_ci95": [
+      -0.653488891901669,
+      -0.12454921527335866
+     ],
+     "fisher_p": 0.0039263655900667604
+    },
+    {
+     "card": "Seedborn Muse",
+     "k_with_oracle": 356,
+     "k_without_oracle": 47,
+     "p_with_oracle": 0.37473684210526315,
+     "p_with_oracle_ci95": [
+      0.34451780961870254,
+      0.4059648701050587
+     ],
+     "p_without_oracle": 0.16206896551724137,
+     "p_without_oracle_ci95": [
+      0.12411997534960509,
+      0.2088539806865722
+     ],
+     "diff_pp": 21.266787658802176,
+     "log_or": 1.123000755205563,
+     "log_or_ci95": [
+      0.7855245957746589,
+      1.460476914636467
+     ],
+     "fisher_p": 2.220326911537367e-12
+    },
+    {
+     "card": "Formidable Speaker",
+     "k_with_oracle": 346,
+     "k_without_oracle": 92,
+     "p_with_oracle": 0.3642105263157895,
+     "p_with_oracle_ci95": [
+      0.3342138005572197,
+      0.39530103712652154
+     ],
+     "p_without_oracle": 0.31724137931034485,
+     "p_without_oracle_ci95": [
+      0.26636284919113234,
+      0.3728985760121066
+     ],
+     "diff_pp": 4.696914700544463,
+     "log_or": 0.20706160418397612,
+     "log_or_ci95": [
+      -0.0728059220636012,
+      0.48692913043155345
+     ],
+     "fisher_p": 0.1603659732241603
+    },
+    {
+     "card": "Springheart Nantuko",
+     "k_with_oracle": 168,
+     "k_without_oracle": 48,
+     "p_with_oracle": 0.17684210526315788,
+     "p_with_oracle_ci95": [
+      0.15389546081657093,
+      0.20239178855481313
+     ],
+     "p_without_oracle": 0.16551724137931034,
+     "p_without_oracle_ci95": [
+      0.12717155555409088,
+      0.2126087886857989
+     ],
+     "diff_pp": 1.1324863883847542,
+     "log_or": 0.0738797398122086,
+     "log_or_ci95": [
+      -0.27648878465145144,
+      0.4242482642758686
+     ],
+     "fisher_p": 0.7236056983067478
+    },
+    {
+     "card": "Derevi, Empyrial Tactician",
+     "k_with_oracle": 314,
+     "k_without_oracle": 105,
+     "p_with_oracle": 0.33052631578947367,
+     "p_with_oracle_ci95": [
+      0.3013480877128327,
+      0.3610696554428442
+     ],
+     "p_without_oracle": 0.3620689655172414,
+     "p_without_oracle_ci95": [
+      0.3088908531976749,
+      0.41885361865382614
+     ],
+     "diff_pp": -3.1542649727767715,
+     "log_or": -0.1406564127255973,
+     "log_or_ci95": [
+      -0.4151981311177311,
+      0.13388530566653645
+     ],
+     "fisher_p": 0.3216640597935171
+    },
+    {
+     "card": "Badgermole Cub",
+     "k_with_oracle": 518,
+     "k_without_oracle": 129,
+     "p_with_oracle": 0.5452631578947369,
+     "p_with_oracle_ci95": [
+      0.5134793153886286,
+      0.5766824053834578
+     ],
+     "p_without_oracle": 0.44482758620689655,
+     "p_without_oracle_ci95": [
+      0.3887232699705132,
+      0.5023745187700873
+     ],
+     "diff_pp": 10.043557168784034,
+     "log_or": 0.40218196282076674,
+     "log_or_ci95": [
+      0.1380925110869493,
+      0.6662714145545842
+     ],
+     "fisher_p": 0.00310083327521583
+    },
+    {
+     "card": "Clever Impersonator",
+     "k_with_oracle": 287,
+     "k_without_oracle": 192,
+     "p_with_oracle": 0.3021052631578947,
+     "p_with_oracle_ci95": [
+      0.2737512192264157,
+      0.33205335042120704
+     ],
+     "p_without_oracle": 0.6620689655172414,
+     "p_without_oracle_ci95": [
+      0.6058250965923981,
+      0.7140751489820882
+     ],
+     "diff_pp": -35.99637023593466,
+     "log_or": -1.5063455990846528,
+     "log_or_ci95": [
+      -1.7858261312438293,
+      -1.2268650669254764
+     ],
+     "fisher_p": 1.5958474545241253e-27
+    },
+    {
+     "card": "Volatile Stormdrake",
+     "k_with_oracle": 156,
+     "k_without_oracle": 187,
+     "p_with_oracle": 0.16421052631578947,
+     "p_with_oracle_ci95": [
+      0.14201328338572125,
+      0.18911255553763875
+     ],
+     "p_without_oracle": 0.6448275862068965,
+     "p_without_oracle_ci95": [
+      0.5881820633507243,
+      0.6976862412051997
+     ],
+     "diff_pp": -48.061705989110706,
+     "log_or": -2.2188642087016044,
+     "log_or_ci95": [
+      -2.5138008946070247,
+      -1.923927522796184
+     ],
+     "fisher_p": 3.071366270030256e-53
+    }
+   ]
+  },
+  "1m": {
+   "n_oracle": 143,
+   "n_no_oracle": 91,
+   "oracle_inclusion": 0.6111111111111112,
+   "rows": [
+    {
+     "card": "Demonic Consultation",
+     "k_with_oracle": 120,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.8391608391608392,
+     "p_with_oracle_ci95": [
+      0.7702066931311735,
+      0.8903690565201514
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 83.91608391608392,
+     "log_or": 6.844135484622018,
+     "log_or_ci95": [
+      4.029790527477568,
+      9.658480441766468
+     ],
+     "fisher_p": 1.672809942998903e-43
+    },
+    {
+     "card": "Tainted Pact",
+     "k_with_oracle": 136,
+     "k_without_oracle": 1,
+     "p_with_oracle": 0.951048951048951,
+     "p_with_oracle_ci95": [
+      0.9024087816159931,
+      0.9760888648275214
+     ],
+     "p_without_oracle": 0.01098901098901099,
+     "p_without_oracle_ci95": [
+      0.0019424213233478899,
+      0.05965080359061392
+     ],
+     "diff_pp": 94.00599400599401,
+     "log_or": 7.001306336680465,
+     "log_or_ci95": [
+      5.228209551807141,
+      8.774403121553789
+     ],
+     "fisher_p": 4.0477779121177845e-55
+    },
+    {
+     "card": "Spellseeker",
+     "k_with_oracle": 34,
+     "k_without_oracle": 9,
+     "p_with_oracle": 0.23776223776223776,
+     "p_with_oracle_ci95": [
+      0.17542483344265192,
+      0.3138207209506535
+     ],
+     "p_without_oracle": 0.0989010989010989,
+     "p_without_oracle_ci95": [
+      0.052908040587209215,
+      0.17738752591525386
+     ],
+     "diff_pp": 13.886113886113888,
+     "log_or": 1.0065412695148988,
+     "log_or_ci95": [
+      0.23363918935611072,
+      1.7794433496736868
+     ],
+     "fisher_p": 0.008950712880777862
+    },
+    {
+     "card": "Demonic Tutor",
+     "k_with_oracle": 142,
+     "k_without_oracle": 90,
+     "p_with_oracle": 0.993006993006993,
+     "p_with_oracle_ci95": [
+      0.9614538318329731,
+      0.998764525907613
+     ],
+     "p_without_oracle": 0.989010989010989,
+     "p_without_oracle_ci95": [
+      0.9403491964093862,
+      0.9980575786766521
+     ],
+     "diff_pp": 0.39960039960039717,
+     "log_or": 0.4539921490028248,
+     "log_or_ci95": [
+      -1.8245030887822118,
+      2.732487386787861
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Vampiric Tutor",
+     "k_with_oracle": 142,
+     "k_without_oracle": 91,
+     "p_with_oracle": 0.993006993006993,
+     "p_with_oracle_ci95": [
+      0.9614538318329731,
+      0.998764525907613
+     ],
+     "p_without_oracle": 1.0,
+     "p_without_oracle_ci95": [
+      0.959494567784601,
+      1.0
+     ],
+     "diff_pp": -0.6993006993006978,
+     "log_or": -0.65560926124088,
+     "log_or_ci95": [
+      -3.8670279450333633,
+      2.555809422551603
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Imperial Seal",
+     "k_with_oracle": 90,
+     "k_without_oracle": 73,
+     "p_with_oracle": 0.6293706293706294,
+     "p_with_oracle_ci95": [
+      0.5477941733888139,
+      0.7041780197771554
+     ],
+     "p_without_oracle": 0.8021978021978022,
+     "p_without_oracle_ci95": [
+      0.7088578689746323,
+      0.8710564302358408
+     ],
+     "diff_pp": -17.282717282717286,
+     "log_or": -0.8538464773305923,
+     "log_or_ci95": [
+      -1.465544889116896,
+      -0.24214806554428847
+     ],
+     "fisher_p": 0.005567042977941834
+    },
+    {
+     "card": "Mystical Tutor",
+     "k_with_oracle": 31,
+     "k_without_oracle": 6,
+     "p_with_oracle": 0.21678321678321677,
+     "p_with_oracle_ci95": [
+      0.15713427867091181,
+      0.291250920073858
+     ],
+     "p_without_oracle": 0.06593406593406594,
+     "p_without_oracle_ci95": [
+      0.030565869950639868,
+      0.13646631845613524
+     ],
+     "diff_pp": 15.084915084915085,
+     "log_or": 1.3037485232282358,
+     "log_or_ci95": [
+      0.4137769001533522,
+      2.1937201463031193
+     ],
+     "fisher_p": 0.0017153666872549882
+    },
+    {
+     "card": "Enlightened Tutor",
+     "k_with_oracle": 138,
+     "k_without_oracle": 89,
+     "p_with_oracle": 0.965034965034965,
+     "p_with_oracle_ci95": [
+      0.9207633838960194,
+      0.9849744996465188
+     ],
+     "p_without_oracle": 0.978021978021978,
+     "p_without_oracle_ci95": [
+      0.9233668616945964,
+      0.9939521206928791
+     ],
+     "diff_pp": -1.2987012987012991,
+     "log_or": -0.3518256600176866,
+     "log_or_ci95": [
+      -1.8703027972891646,
+      1.1666514772537915
+     ],
+     "fisher_p": 0.7085637471204431
+    },
+    {
+     "card": "Worldly Tutor",
+     "k_with_oracle": 26,
+     "k_without_oracle": 13,
+     "p_with_oracle": 0.18181818181818182,
+     "p_with_oracle_ci95": [
+      0.12720512869796607,
+      0.2530794772992445
+     ],
+     "p_without_oracle": 0.14285714285714285,
+     "p_without_oracle_ci95": [
+      0.08542677254433866,
+      0.229219964752375
+     ],
+     "diff_pp": 3.8961038961038974,
+     "log_or": 0.2711153387519419,
+     "log_or_ci95": [
+      -0.44383993845199116,
+      0.986070615955875
+     ],
+     "fisher_p": 0.47643741898886327
+    },
+    {
+     "card": "Gamble",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Survival of the Fittest",
+     "k_with_oracle": 69,
+     "k_without_oracle": 52,
+     "p_with_oracle": 0.4825174825174825,
+     "p_with_oracle_ci95": [
+      0.4021503867827656,
+      0.5637993168434547
+     ],
+     "p_without_oracle": 0.5714285714285714,
+     "p_without_oracle_ci95": [
+      0.4688956326088688,
+      0.6681750199317885
+     ],
+     "diff_pp": -8.891108891108889,
+     "log_or": -0.3539848705052693,
+     "log_or_ci95": [
+      -0.8805482098585619,
+      0.1725784688480233
+     ],
+     "fisher_p": 0.22717836198152222
+    },
+    {
+     "card": "Birthing Pod",
+     "k_with_oracle": 12,
+     "k_without_oracle": 6,
+     "p_with_oracle": 0.08391608391608392,
+     "p_with_oracle_ci95": [
+      0.04865348029310678,
+      0.14094946601093786
+     ],
+     "p_without_oracle": 0.06593406593406594,
+     "p_without_oracle_ci95": [
+      0.030565869950639868,
+      0.13646631845613524
+     ],
+     "diff_pp": 1.7982017982017984,
+     "log_or": 0.2234359917315593,
+     "log_or_ci95": [
+      -0.7627121041345533,
+      1.2095840875976718
+     ],
+     "fisher_p": 0.8022141580272466
+    },
+    {
+     "card": "Chord of Calling",
+     "k_with_oracle": 127,
+     "k_without_oracle": 86,
+     "p_with_oracle": 0.8881118881118881,
+     "p_with_oracle_ci95": [
+      0.8259703656182174,
+      0.9299462138796906
+     ],
+     "p_without_oracle": 0.945054945054945,
+     "p_without_oracle_ci95": [
+      0.8777503545818438,
+      0.9763052497099437
+     ],
+     "diff_pp": -5.69430569430569,
+     "log_or": -0.7106403380074625,
+     "log_or_ci95": [
+      -1.7135554522963252,
+      0.2922747762814003
+     ],
+     "fisher_p": 0.16384884858802357
+    },
+    {
+     "card": "Finale of Devastation",
+     "k_with_oracle": 132,
+     "k_without_oracle": 87,
+     "p_with_oracle": 0.9230769230769231,
+     "p_with_oracle_ci95": [
+      0.8675099224545965,
+      0.9565072497908708
+     ],
+     "p_without_oracle": 0.9560439560439561,
+     "p_without_oracle_ci95": [
+      0.8923674847182562,
+      0.9827759122720942
+     ],
+     "diff_pp": -3.296703296703296,
+     "log_or": -0.5233257865302221,
+     "log_or_ci95": [
+      -1.6461072747767562,
+      0.599455701716312
+     ],
+     "fisher_p": 0.41618117295064844
+    },
+    {
+     "card": "Eldritch Evolution",
+     "k_with_oracle": 107,
+     "k_without_oracle": 80,
+     "p_with_oracle": 0.7482517482517482,
+     "p_with_oracle_ci95": [
+      0.6712570716199378,
+      0.8122571368877332
+     ],
+     "p_without_oracle": 0.8791208791208791,
+     "p_without_oracle_ci95": [
+      0.7963832247464426,
+      0.931145623353969
+     ],
+     "diff_pp": -13.086913086913087,
+     "log_or": -0.8657315620760417,
+     "log_or_ci95": [
+      -1.5887523377564228,
+      -0.14271078639566082
+     ],
+     "fisher_p": 0.018607619565970093
+    },
+    {
+     "card": "Neoform",
+     "k_with_oracle": 85,
+     "k_without_oracle": 70,
+     "p_with_oracle": 0.5944055944055944,
+     "p_with_oracle_ci95": [
+      0.5124794070008641,
+      0.6713921934175459
+     ],
+     "p_without_oracle": 0.7692307692307693,
+     "p_without_oracle_ci95": [
+      0.672831372058367,
+      0.8438195490564182
+     ],
+     "diff_pp": -17.48251748251749,
+     "log_or": -0.8080701529797022,
+     "log_or_ci95": [
+      -1.394388513710209,
+      -0.2217517922491954
+     ],
+     "fisher_p": 0.006959364580747292
+    },
+    {
+     "card": "Nature's Rhythm",
+     "k_with_oracle": 119,
+     "k_without_oracle": 84,
+     "p_with_oracle": 0.8321678321678322,
+     "p_with_oracle_ci95": [
+      0.76240938397508,
+      0.8845462471267332
+     ],
+     "p_without_oracle": 0.9230769230769231,
+     "p_without_oracle_ci95": [
+      0.8496390398894708,
+      0.9622409790051917
+     ],
+     "diff_pp": -9.090909090909093,
+     "log_or": -0.8372052599999794,
+     "log_or_ci95": [
+      -1.7012789464188822,
+      0.026868426418923397
+     ],
+     "fisher_p": 0.04957931392531877
+    },
+    {
+     "card": "Green Sun's Zenith",
+     "k_with_oracle": 50,
+     "k_without_oracle": 65,
+     "p_with_oracle": 0.34965034965034963,
+     "p_with_oracle_ci95": [
+      0.27635373999034973,
+      0.43081371119514533
+     ],
+     "p_without_oracle": 0.7142857142857143,
+     "p_without_oracle_ci95": [
+      0.6142727836093079,
+      0.796939174012664
+     ],
+     "diff_pp": -36.463536463536464,
+     "log_or": -1.520893509662357,
+     "log_or_ci95": [
+      -2.087262945243051,
+      -0.954524074081663
+     ],
+     "fisher_p": 5.918704546505892e-08
+    },
+    {
+     "card": "Summoner's Pact",
+     "k_with_oracle": 7,
+     "k_without_oracle": 5,
+     "p_with_oracle": 0.04895104895104895,
+     "p_with_oracle_ci95": [
+      0.02391113517247849,
+      0.09759121838400686
+     ],
+     "p_without_oracle": 0.054945054945054944,
+     "p_without_oracle_ci95": [
+      0.023694750290056278,
+      0.12224964541815614
+     ],
+     "diff_pp": -0.5994005994005992,
+     "log_or": -0.1460252723833412,
+     "log_or_ci95": [
+      -1.278827643074404,
+      0.9867770983077216
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Ranger-Captain of Eos",
+     "k_with_oracle": 121,
+     "k_without_oracle": 72,
+     "p_with_oracle": 0.8461538461538461,
+     "p_with_oracle_ci95": [
+      0.7780415908097098,
+      0.8961542773911271
+     ],
+     "p_without_oracle": 0.7912087912087912,
+     "p_without_oracle_ci95": [
+      0.6967662422964306,
+      0.8620602642154799
+     ],
+     "diff_pp": 5.494505494505497,
+     "log_or": 0.37322685727930066,
+     "log_or_ci95": [
+      -0.2993418003205665,
+      1.0457955148791678
+     ],
+     "fisher_p": 0.29450333921314903
+    },
+    {
+     "card": "Intuition",
+     "k_with_oracle": 3,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.02097902097902098,
+     "p_with_oracle_ci95": [
+      0.007159887536964584,
+      0.05986199182147335
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 2.097902097902098,
+     "log_or": 1.5170416325629885,
+     "log_or_ci95": [
+      -1.4578746768830437,
+      4.491957942009021
+     ],
+     "fisher_p": 0.2839771101573461
+    },
+    {
+     "card": "Lim-D\u00fbl's Vault",
+     "k_with_oracle": 6,
+     "k_without_oracle": 7,
+     "p_with_oracle": 0.04195804195804196,
+     "p_with_oracle_ci95": [
+      0.01936911089693883,
+      0.08851312411003467
+     ],
+     "p_without_oracle": 0.07692307692307693,
+     "p_without_oracle_ci95": [
+      0.03775902099480837,
+      0.15036096011052938
+     ],
+     "diff_pp": -3.4965034965034967,
+     "log_or": -0.6299732263841711,
+     "log_or_ci95": [
+      -1.7146991590202072,
+      0.45475270625186504
+     ],
+     "fisher_p": 0.2600072253862488
+    },
+    {
+     "card": "Borne Upon a Wind",
+     "k_with_oracle": 99,
+     "k_without_oracle": 63,
+     "p_with_oracle": 0.6923076923076923,
+     "p_with_oracle_ci95": [
+      0.612455640064088,
+      0.7620976200474879
+     ],
+     "p_without_oracle": 0.6923076923076923,
+     "p_without_oracle_ci95": [
+      0.5913030988143508,
+      0.7777332734104956
+     ],
+     "diff_pp": 0.0,
+     "log_or": 0.003532636368311479,
+     "log_or_ci95": [
+      -0.5623540619779096,
+      0.5694193347145325
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "High Fae Trickster",
+     "k_with_oracle": 63,
+     "k_without_oracle": 73,
+     "p_with_oracle": 0.4405594405594406,
+     "p_with_oracle_ci95": [
+      0.36180032711402477,
+      0.5224286652151245
+     ],
+     "p_without_oracle": 0.8021978021978022,
+     "p_without_oracle_ci95": [
+      0.7088578689746323,
+      0.8710564302358408
+     ],
+     "diff_pp": -36.163836163836166,
+     "log_or": -1.6167319526603836,
+     "log_or_ci95": [
+      -2.2234774492620732,
+      -1.009986456058694
+     ],
+     "fisher_p": 3.6803747521738816e-08
+    },
+    {
+     "card": "Emergence Zone",
+     "k_with_oracle": 97,
+     "k_without_oracle": 83,
+     "p_with_oracle": 0.6783216783216783,
+     "p_with_oracle_ci95": [
+      0.5979581341609327,
+      0.7493548888516196
+     ],
+     "p_without_oracle": 0.9120879120879121,
+     "p_without_oracle_ci95": [
+      0.8360118928653627,
+      0.9547803333307369
+     ],
+     "diff_pp": -23.376623376623375,
+     "log_or": -1.544380402950048,
+     "log_or_ci95": [
+      -2.3317660811343033,
+      -0.7569947247657928
+     ],
+     "fisher_p": 2.5900537239809876e-05
+    },
+    {
+     "card": "Teferi, Mage of Zhalfir",
+     "k_with_oracle": 29,
+     "k_without_oracle": 50,
+     "p_with_oracle": 0.20279720279720279,
+     "p_with_oracle_ci95": [
+      0.14507437781527893,
+      0.27607058383046723
+     ],
+     "p_without_oracle": 0.5494505494505495,
+     "p_without_oracle_ci95": [
+      0.4472910565435856,
+      0.6476040105999464
+     ],
+     "diff_pp": -34.66533466533467,
+     "log_or": -1.5524644686931817,
+     "log_or_ci95": [
+      -2.1290187006125425,
+      -0.9759102367738208
+     ],
+     "fisher_p": 9.368308340570009e-08
+    },
+    {
+     "card": "Crop Rotation",
+     "k_with_oracle": 123,
+     "k_without_oracle": 88,
+     "p_with_oracle": 0.8601398601398601,
+     "p_with_oracle_ci95": [
+      0.7938323518793072,
+      0.9076037534205533
+     ],
+     "p_without_oracle": 0.967032967032967,
+     "p_without_oracle_ci95": [
+      0.9075053921522588,
+      0.9887257975366542
+     ],
+     "diff_pp": -10.689310689310695,
+     "log_or": -1.4344233135948465,
+     "log_or_ci95": [
+      -2.6004032038289076,
+      -0.2684434233607855
+     ],
+     "fisher_p": 0.006698153278147216
+    },
+    {
+     "card": "Alchemist's Refuge",
+     "k_with_oracle": 3,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.02097902097902098,
+     "p_with_oracle_ci95": [
+      0.007159887536964584,
+      0.05986199182147335
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 2.097902097902098,
+     "log_or": 1.5170416325629885,
+     "log_or_ci95": [
+      -1.4578746768830437,
+      4.491957942009021
+     ],
+     "fisher_p": 0.2839771101573461
+    },
+    {
+     "card": "Leyline of Anticipation",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Vedalken Orrery",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Silence",
+     "k_with_oracle": 142,
+     "k_without_oracle": 90,
+     "p_with_oracle": 0.993006993006993,
+     "p_with_oracle_ci95": [
+      0.9614538318329731,
+      0.998764525907613
+     ],
+     "p_without_oracle": 0.989010989010989,
+     "p_without_oracle_ci95": [
+      0.9403491964093862,
+      0.9980575786766521
+     ],
+     "diff_pp": 0.39960039960039717,
+     "log_or": 0.4539921490028248,
+     "log_or_ci95": [
+      -1.8245030887822118,
+      2.732487386787861
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Grand Abolisher",
+     "k_with_oracle": 84,
+     "k_without_oracle": 26,
+     "p_with_oracle": 0.5874125874125874,
+     "p_with_oracle_ci95": [
+      0.5054657671294023,
+      0.6647857147394958
+     ],
+     "p_without_oracle": 0.2857142857142857,
+     "p_without_oracle_ci95": [
+      0.2030608259873361,
+      0.3857272163906922
+     ],
+     "diff_pp": 30.16983016983017,
+     "log_or": 1.255680631460574,
+     "log_or_ci95": [
+      0.6956414835511778,
+      1.81571977936997
+     ],
+     "fisher_p": 8.00045610966471e-06
+    },
+    {
+     "card": "Voice of Victory",
+     "k_with_oracle": 105,
+     "k_without_oracle": 36,
+     "p_with_oracle": 0.7342657342657343,
+     "p_with_oracle_ci95": [
+      0.6564279437044778,
+      0.7998460277041695
+     ],
+     "p_without_oracle": 0.3956043956043956,
+     "p_without_oracle_ci95": [
+      0.3013302288475036,
+      0.49833574051615126
+     ],
+     "diff_pp": 33.86613386613387,
+     "log_or": 1.4271234717863257,
+     "log_or_ci95": [
+      0.8697524809637772,
+      1.984494462608874
+     ],
+     "fisher_p": 3.212130355145259e-07
+    },
+    {
+     "card": "Allosaurus Shepherd",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Veil of Summer",
+     "k_with_oracle": 105,
+     "k_without_oracle": 73,
+     "p_with_oracle": 0.7342657342657343,
+     "p_with_oracle_ci95": [
+      0.6564279437044778,
+      0.7998460277041695
+     ],
+     "p_without_oracle": 0.8021978021978022,
+     "p_without_oracle_ci95": [
+      0.7088578689746323,
+      0.8710564302358408
+     ],
+     "diff_pp": -6.793206793206796,
+     "log_or": -0.3714619625121292,
+     "log_or_ci95": [
+      -1.0008392810140903,
+      0.2579153559898319
+     ],
+     "fisher_p": 0.27274775098578147
+    },
+    {
+     "card": "Autumn's Veil",
+     "k_with_oracle": 2,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.013986013986013986,
+     "p_with_oracle_ci95": [
+      0.003843806098051971,
+      0.04955795471087411
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 1.3986013986013985,
+     "log_or": 1.1734771676322837,
+     "log_or_ci95": [
+      -1.8743046185297971,
+      4.221258953794365
+     ],
+     "fisher_p": 0.5226514067715323
+    },
+    {
+     "card": "Deflecting Swat",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Fierce Guardianship",
+     "k_with_oracle": 139,
+     "k_without_oracle": 90,
+     "p_with_oracle": 0.972027972027972,
+     "p_with_oracle_ci95": [
+      0.9302882153718061,
+      0.9890697867202441
+     ],
+     "p_without_oracle": 0.989010989010989,
+     "p_without_oracle_ci95": [
+      0.9403491964093862,
+      0.9980575786766521
+     ],
+     "diff_pp": -1.6983016983017074,
+     "log_or": -0.6658975381125698,
+     "log_or_ci95": [
+      -2.5326440462369497,
+      1.2008489700118103
+     ],
+     "fisher_p": 0.6510784307417525
+    },
+    {
+     "card": "Flare of Denial",
+     "k_with_oracle": 21,
+     "k_without_oracle": 18,
+     "p_with_oracle": 0.14685314685314685,
+     "p_with_oracle_ci95": [
+      0.09810008302918252,
+      0.21408393022046882
+     ],
+     "p_without_oracle": 0.1978021978021978,
+     "p_without_oracle_ci95": [
+      0.12894356976415927,
+      0.2911421310253677
+     ],
+     "diff_pp": -5.094905094905094,
+     "log_or": -0.36054342071665274,
+     "log_or_ci95": [
+      -1.0460795543289976,
+      0.32499271289569204
+     ],
+     "fisher_p": 0.3687944152769491
+    },
+    {
+     "card": "Pact of Negation",
+     "k_with_oracle": 132,
+     "k_without_oracle": 87,
+     "p_with_oracle": 0.9230769230769231,
+     "p_with_oracle_ci95": [
+      0.8675099224545965,
+      0.9565072497908708
+     ],
+     "p_without_oracle": 0.9560439560439561,
+     "p_without_oracle_ci95": [
+      0.8923674847182562,
+      0.9827759122720942
+     ],
+     "diff_pp": -3.296703296703296,
+     "log_or": -0.5233257865302221,
+     "log_or_ci95": [
+      -1.6461072747767562,
+      0.599455701716312
+     ],
+     "fisher_p": 0.41618117295064844
+    },
+    {
+     "card": "Force of Will",
+     "k_with_oracle": 142,
+     "k_without_oracle": 90,
+     "p_with_oracle": 0.993006993006993,
+     "p_with_oracle_ci95": [
+      0.9614538318329731,
+      0.998764525907613
+     ],
+     "p_without_oracle": 0.989010989010989,
+     "p_without_oracle_ci95": [
+      0.9403491964093862,
+      0.9980575786766521
+     ],
+     "diff_pp": 0.39960039960039717,
+     "log_or": 0.4539921490028248,
+     "log_or_ci95": [
+      -1.8245030887822118,
+      2.732487386787861
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Force of Negation",
+     "k_with_oracle": 116,
+     "k_without_oracle": 89,
+     "p_with_oracle": 0.8111888111888111,
+     "p_with_oracle_ci95": [
+      0.739225873872594,
+      0.8668694015806834
+     ],
+     "p_without_oracle": 0.978021978021978,
+     "p_without_oracle_ci95": [
+      0.9233668616945964,
+      0.9939521206928791
+     ],
+     "diff_pp": -16.683316683316683,
+     "log_or": -2.134242625073425,
+     "log_or_ci95": [
+      -3.4579618391738385,
+      -0.8105234109730115
+     ],
+     "fisher_p": 6.793247337546205e-05
+    },
+    {
+     "card": "Mindbreak Trap",
+     "k_with_oracle": 139,
+     "k_without_oracle": 90,
+     "p_with_oracle": 0.972027972027972,
+     "p_with_oracle_ci95": [
+      0.9302882153718061,
+      0.9890697867202441
+     ],
+     "p_without_oracle": 0.989010989010989,
+     "p_without_oracle_ci95": [
+      0.9403491964093862,
+      0.9980575786766521
+     ],
+     "diff_pp": -1.6983016983017074,
+     "log_or": -0.6658975381125698,
+     "log_or_ci95": [
+      -2.5326440462369497,
+      1.2008489700118103
+     ],
+     "fisher_p": 0.6510784307417525
+    },
+    {
+     "card": "Misdirection",
+     "k_with_oracle": 45,
+     "k_without_oracle": 53,
+     "p_with_oracle": 0.3146853146853147,
+     "p_with_oracle_ci95": [
+      0.2442641903306046,
+      0.3948026681073313
+     ],
+     "p_without_oracle": 0.5824175824175825,
+     "p_without_oracle_ci95": [
+      0.47976979126386426,
+      0.6783886539753556
+     ],
+     "diff_pp": -26.773226773226778,
+     "log_or": -1.1013676348293608,
+     "log_or_ci95": [
+      -1.6445243434481989,
+      -0.5582109262105229
+     ],
+     "fisher_p": 7.382765077615125e-05
+    },
+    {
+     "card": "Swan Song",
+     "k_with_oracle": 129,
+     "k_without_oracle": 86,
+     "p_with_oracle": 0.9020979020979021,
+     "p_with_oracle_ci95": [
+      0.84237297882786,
+      0.9407838377690716
+     ],
+     "p_without_oracle": 0.945054945054945,
+     "p_without_oracle_ci95": [
+      0.8777503545818438,
+      0.9763052497099437
+     ],
+     "diff_pp": -4.295704295704295,
+     "log_or": -0.5658640899863446,
+     "log_or_ci95": [
+      -1.5844351890588229,
+      0.4527070090861337
+     ],
+     "fisher_p": 0.32779524375191593
+    },
+    {
+     "card": "Flusterstorm",
+     "k_with_oracle": 141,
+     "k_without_oracle": 86,
+     "p_with_oracle": 0.986013986013986,
+     "p_with_oracle_ci95": [
+      0.9504420452891259,
+      0.996156193901948
+     ],
+     "p_without_oracle": 0.945054945054945,
+     "p_without_oracle_ci95": [
+      0.8777503545818438,
+      0.9763052497099437
+     ],
+     "diff_pp": 4.0959040959041015,
+     "log_or": 1.2806126635097288,
+     "log_or_ci95": [
+      -0.2381609880177602,
+      2.799386315037218
+     ],
+     "fisher_p": 0.11269277906023605
+    },
+    {
+     "card": "Mental Misstep",
+     "k_with_oracle": 136,
+     "k_without_oracle": 90,
+     "p_with_oracle": 0.951048951048951,
+     "p_with_oracle_ci95": [
+      0.9024087816159931,
+      0.9760888648275214
+     ],
+     "p_without_oracle": 0.989010989010989,
+     "p_without_oracle_ci95": [
+      0.9403491964093862,
+      0.9980575786766521
+     ],
+     "diff_pp": -3.796203796203801,
+     "log_or": -1.1984631485149664,
+     "log_or_ci95": [
+      -2.9715599333882907,
+      0.574633636358358
+     ],
+     "fisher_p": 0.15480968403100445
+    },
+    {
+     "card": "Snapback",
+     "k_with_oracle": 13,
+     "k_without_oracle": 11,
+     "p_with_oracle": 0.09090909090909091,
+     "p_with_oracle_ci95": [
+      0.05389726148031915,
+      0.14932580337323734
+     ],
+     "p_without_oracle": 0.12087912087912088,
+     "p_without_oracle_ci95": [
+      0.06885437664603104,
+      0.20361677525355731
+     ],
+     "diff_pp": -2.9970029970029968,
+     "log_or": -0.322773392263051,
+     "log_or_ci95": [
+      -1.1569043315640468,
+      0.5113575470379448
+     ],
+     "fisher_p": 0.5105459983159519
+    },
+    {
+     "card": "Cloud of Faeries",
+     "k_with_oracle": 43,
+     "k_without_oracle": 30,
+     "p_with_oracle": 0.3006993006993007,
+     "p_with_oracle_ci95": [
+      0.2315600256429578,
+      0.3802665956959543
+     ],
+     "p_without_oracle": 0.32967032967032966,
+     "p_without_oracle_ci95": [
+      0.24170756721723363,
+      0.43143164595504524
+     ],
+     "diff_pp": -2.897102897102899,
+     "log_or": -0.13608629820538581,
+     "log_or_ci95": [
+      -0.6972962930478812,
+      0.4251236966371095
+     ],
+     "fisher_p": 0.6659346640747041
+    },
+    {
+     "card": "Orim's Chant",
+     "k_with_oracle": 64,
+     "k_without_oracle": 64,
+     "p_with_oracle": 0.44755244755244755,
+     "p_with_oracle_ci95": [
+      0.36848638099977826,
+      0.5293627298788828
+     ],
+     "p_without_oracle": 0.7032967032967034,
+     "p_without_oracle_ci95": [
+      0.6027577176380822,
+      0.7873664472853271
+     ],
+     "diff_pp": -25.57442557442558,
+     "log_or": -1.0615710169877606,
+     "log_or_ci95": [
+      -1.6157694813289414,
+      -0.5073725526465799
+     ],
+     "fisher_p": 0.00015288209900188776
+    },
+    {
+     "card": "Destiny Spinner",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Hermit Druid",
+     "k_with_oracle": 2,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.013986013986013986,
+     "p_with_oracle_ci95": [
+      0.003843806098051971,
+      0.04955795471087411
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 1.3986013986013985,
+     "log_or": 1.1734771676322837,
+     "log_or_ci95": [
+      -1.8743046185297971,
+      4.221258953794365
+     ],
+     "fisher_p": 0.5226514067715323
+    },
+    {
+     "card": "Divining Witch",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Shang-Chi, Master of Kung Fu",
+     "k_with_oracle": 48,
+     "k_without_oracle": 30,
+     "p_with_oracle": 0.3356643356643357,
+     "p_with_oracle_ci95": [
+      0.2634630119889868,
+      0.4164642020974846
+     ],
+     "p_without_oracle": 0.32967032967032966,
+     "p_without_oracle_ci95": [
+      0.24170756721723363,
+      0.43143164595504524
+     ],
+     "diff_pp": 0.5994005994006013,
+     "log_or": 0.02374804165585909,
+     "log_or_ci95": [
+      -0.5310974904016803,
+      0.5785935737133985
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Tasha's Hideous Laughter",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Jace, Wielder of Mysteries",
+     "k_with_oracle": 0,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.0,
+     "p_with_oracle_ci95": [
+      0.0,
+      0.02616152370990237
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 0.0,
+     "log_or": -0.4499960629182002,
+     "log_or_ci95": [
+      -4.378756100278698,
+      3.4787639744422982
+     ],
+     "fisher_p": 0.9999999999998863
+    },
+    {
+     "card": "Laboratory Maniac",
+     "k_with_oracle": 2,
+     "k_without_oracle": 0,
+     "p_with_oracle": 0.013986013986013986,
+     "p_with_oracle_ci95": [
+      0.003843806098051971,
+      0.04955795471087411
+     ],
+     "p_without_oracle": 0.0,
+     "p_without_oracle_ci95": [
+      0.0,
+      0.04050543221539915
+     ],
+     "diff_pp": 1.3986013986013985,
+     "log_or": 1.1734771676322837,
+     "log_or_ci95": [
+      -1.8743046185297971,
+      4.221258953794365
+     ],
+     "fisher_p": 0.5226514067715323
+    },
+    {
+     "card": "Devoted Druid",
+     "k_with_oracle": 138,
+     "k_without_oracle": 82,
+     "p_with_oracle": 0.965034965034965,
+     "p_with_oracle_ci95": [
+      0.9207633838960194,
+      0.9849744996465188
+     ],
+     "p_without_oracle": 0.9010989010989011,
+     "p_without_oracle_ci95": [
+      0.8226124740847462,
+      0.9470919594127909
+     ],
+     "diff_pp": 6.3936063936063885,
+     "log_or": 1.0646157386548278,
+     "log_or_ci95": [
+      -0.020351407041999448,
+      2.149582884351655
+     ],
+     "fisher_p": 0.05210798112420052
+    },
+    {
+     "card": "Swift Reconfiguration",
+     "k_with_oracle": 133,
+     "k_without_oracle": 49,
+     "p_with_oracle": 0.9300699300699301,
+     "p_with_oracle_ci95": [
+      0.8760619719770455,
+      0.9615753188179337
+     ],
+     "p_without_oracle": 0.5384615384615384,
+     "p_without_oracle_ci95": [
+      0.4365598988443711,
+      0.6372473756005981
+     ],
+     "diff_pp": 39.16083916083917,
+     "log_or": 2.390257627032553,
+     "log_or_ci95": [
+      1.6401633891713439,
+      3.1403518648937623
+     ],
+     "fisher_p": 2.9871341726377842e-12
+    },
+    {
+     "card": "Hazel's Brewmaster",
+     "k_with_oracle": 125,
+     "k_without_oracle": 79,
+     "p_with_oracle": 0.8741258741258742,
+     "p_with_oracle_ci95": [
+      0.8098005956847941,
+      0.9188757467140901
+     ],
+     "p_without_oracle": 0.8681318681318682,
+     "p_without_oracle_ci95": [
+      0.7835113710706528,
+      0.9229296843311962
+     ],
+     "diff_pp": 0.5994005994006013,
+     "log_or": 0.06450664913552856,
+     "log_or_ci95": [
+      -0.7061517870074929,
+      0.8351650852785499
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Machine God's Effigy",
+     "k_with_oracle": 17,
+     "k_without_oracle": 3,
+     "p_with_oracle": 0.11888111888111888,
+     "p_with_oracle_ci95": [
+      0.07556207461182213,
+      0.1821414644397818
+     ],
+     "p_without_oracle": 0.03296703296703297,
+     "p_without_oracle_ci95": [
+      0.01127420246334579,
+      0.09249460784774133
+     ],
+     "diff_pp": 8.591408591408593,
+     "log_or": 1.2521981562804092,
+     "log_or_ci95": [
+      0.0728354940551037,
+      2.431560818505715
+     ],
+     "fisher_p": 0.02898111323136533
+    },
+    {
+     "card": "The Cabbage Merchant",
+     "k_with_oracle": 102,
+     "k_without_oracle": 77,
+     "p_with_oracle": 0.7132867132867133,
+     "p_with_oracle_ci95": [
+      0.6343488049956663,
+      0.7810648107644453
+     ],
+     "p_without_oracle": 0.8461538461538461,
+     "p_without_oracle_ci95": [
+      0.7581767476900746,
+      0.9060887223146491
+     ],
+     "diff_pp": -13.286713286713281,
+     "log_or": -0.7719599155909623,
+     "log_or_ci95": [
+      -1.4387092405861859,
+      -0.10521059059573867
+     ],
+     "fisher_p": 0.026262904751095165
+    },
+    {
+     "card": "Mockingbird",
+     "k_with_oracle": 132,
+     "k_without_oracle": 87,
+     "p_with_oracle": 0.9230769230769231,
+     "p_with_oracle_ci95": [
+      0.8675099224545965,
+      0.9565072497908708
+     ],
+     "p_without_oracle": 0.9560439560439561,
+     "p_without_oracle_ci95": [
+      0.8923674847182562,
+      0.9827759122720942
+     ],
+     "diff_pp": -3.296703296703296,
+     "log_or": -0.5233257865302221,
+     "log_or_ci95": [
+      -1.6461072747767562,
+      0.599455701716312
+     ],
+     "fisher_p": 0.41618117295064844
+    },
+    {
+     "card": "Flash Photography",
+     "k_with_oracle": 62,
+     "k_without_oracle": 63,
+     "p_with_oracle": 0.43356643356643354,
+     "p_with_oracle_ci95": [
+      0.35513000316071885,
+      0.5154788706189185
+     ],
+     "p_without_oracle": 0.6923076923076923,
+     "p_without_oracle_ci95": [
+      0.5913030988143508,
+      0.7777332734104956
+     ],
+     "diff_pp": -25.874125874125873,
+     "log_or": -1.0665722821285022,
+     "log_or_ci95": [
+      -1.6178366620501823,
+      -0.5153079022068222
+     ],
+     "fisher_p": 0.0001537593892264812
+    },
+    {
+     "card": "Abhorrent Oculus",
+     "k_with_oracle": 15,
+     "k_without_oracle": 22,
+     "p_with_oracle": 0.1048951048951049,
+     "p_with_oracle_ci95": [
+      0.06460354458062817,
+      0.16585975737195202
+     ],
+     "p_without_oracle": 0.24175824175824176,
+     "p_without_oracle_ci95": [
+      0.16541685277480106,
+      0.33902001880897653
+     ],
+     "diff_pp": -13.686313686313687,
+     "log_or": -0.9872774370497015,
+     "log_or_ci95": [
+      -1.6970333662650503,
+      -0.2775215078343527
+     ],
+     "fisher_p": 0.009321570519792648
+    },
+    {
+     "card": "Oboro Breezecaller",
+     "k_with_oracle": 56,
+     "k_without_oracle": 44,
+     "p_with_oracle": 0.3916083916083916,
+     "p_with_oracle_ci95": [
+      0.3154437198309632,
+      0.473444442651603
+     ],
+     "p_without_oracle": 0.4835164835164835,
+     "p_without_oracle_ci95": [
+      0.3836068307058106,
+      0.5847614802463456
+     ],
+     "diff_pp": -9.19080919080919,
+     "log_or": -0.3721576333427725,
+     "log_or_ci95": [
+      -0.9004575478944473,
+      0.15614228120890228
+     ],
+     "fisher_p": 0.17746022815161439
+    },
+    {
+     "card": "Gaea's Cradle",
+     "k_with_oracle": 130,
+     "k_without_oracle": 89,
+     "p_with_oracle": 0.9090909090909091,
+     "p_with_oracle_ci95": [
+      0.8506741966267627,
+      0.9461027385196809
+     ],
+     "p_without_oracle": 0.978021978021978,
+     "p_without_oracle_ci95": [
+      0.9233668616945964,
+      0.9939521206928791
+     ],
+     "diff_pp": -6.893106893106893,
+     "log_or": -1.3092643520882903,
+     "log_or_ci95": [
+      -2.6853324521050066,
+      0.06680374792842625
+     ],
+     "fisher_p": 0.0524011833634214
+    },
+    {
+     "card": "Kinnan, Bonder Prodigy",
+     "k_with_oracle": 110,
+     "k_without_oracle": 75,
+     "p_with_oracle": 0.7692307692307693,
+     "p_with_oracle_ci95": [
+      0.6936769312209806,
+      0.8306976329352259
+     ],
+     "p_without_oracle": 0.8241758241758241,
+     "p_without_oracle_ci95": [
+      0.7333142298436154,
+      0.888775654763983
+     ],
+     "diff_pp": -5.494505494505486,
+     "log_or": -0.3273021932216573,
+     "log_or_ci95": [
+      -0.9854409319044221,
+      0.3308365454611074
+     ],
+     "fisher_p": 0.32898524532461576
+    },
+    {
+     "card": "Delney, Streetwise Lookout",
+     "k_with_oracle": 32,
+     "k_without_oracle": 21,
+     "p_with_oracle": 0.22377622377622378,
+     "p_with_oracle_ci95": [
+      0.16320524601406688,
+      0.29880007128021485
+     ],
+     "p_without_oracle": 0.23076923076923078,
+     "p_without_oracle_ci95": [
+      0.15618045094358188,
+      0.32716862794163315
+     ],
+     "diff_pp": -0.6993006993007006,
+     "log_or": -0.045224726879875776,
+     "log_or_ci95": [
+      -0.6663742567771104,
+      0.5759248030173588
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Faerie Mastermind",
+     "k_with_oracle": 113,
+     "k_without_oracle": 89,
+     "p_with_oracle": 0.7902097902097902,
+     "p_with_oracle_ci95": [
+      0.7163252595975614,
+      0.8489096602071805
+     ],
+     "p_without_oracle": 0.978021978021978,
+     "p_without_oracle_ci95": [
+      0.9233668616945964,
+      0.9939521206928791
+     ],
+     "diff_pp": -18.78121878121878,
+     "log_or": -2.2638717400985633,
+     "log_or_ci95": [
+      -3.582721124760751,
+      -0.9450223554363757
+     ],
+     "fisher_p": 2.0059446041029448e-05
+    },
+    {
+     "card": "The Queen of Dale",
+     "k_with_oracle": 71,
+     "k_without_oracle": 47,
+     "p_with_oracle": 0.4965034965034965,
+     "p_with_oracle_ci95": [
+      0.4157242744569096,
+      0.5774656662683346
+     ],
+     "p_without_oracle": 0.5164835164835165,
+     "p_without_oracle_ci95": [
+      0.41523851975365456,
+      0.6163931692941895
+     ],
+     "diff_pp": -1.9980019980020025,
+     "log_or": -0.07912963402906809,
+     "log_or_ci95": [
+      -0.6025034362936565,
+      0.44424416823552043
+     ],
+     "fisher_p": 0.7897487946749858
+    },
+    {
+     "card": "Strix Serenade",
+     "k_with_oracle": 1,
+     "k_without_oracle": 3,
+     "p_with_oracle": 0.006993006993006993,
+     "p_with_oracle_ci95": [
+      0.0012354740923871538,
+      0.03854616816702707
+     ],
+     "p_without_oracle": 0.03296703296703297,
+     "p_without_oracle_ci95": [
+      0.01127420246334579,
+      0.09249460784774133
+     ],
+     "diff_pp": -2.5974025974025974,
+     "log_or": -1.323637308082025,
+     "log_or_ci95": [
+      -3.2547077813590657,
+      0.6074331651950158
+     ],
+     "fisher_p": 0.3018269120089417
+    },
+    {
+     "card": "Deathrite Shaman",
+     "k_with_oracle": 122,
+     "k_without_oracle": 67,
+     "p_with_oracle": 0.8531468531468531,
+     "p_with_oracle_ci95": [
+      0.7859160697795311,
+      0.9018999169708175
+     ],
+     "p_without_oracle": 0.7362637362637363,
+     "p_without_oracle_ci95": [
+      0.6374922768443272,
+      0.81589526617477
+     ],
+     "diff_pp": 11.688311688311682,
+     "log_or": 0.7266036145233619,
+     "log_or_ci95": [
+      0.07564150935898717,
+      1.3775657196877367
+     ],
+     "fisher_p": 0.04030291005291922
+    },
+    {
+     "card": "Training Grounds",
+     "k_with_oracle": 74,
+     "k_without_oracle": 37,
+     "p_with_oracle": 0.5174825174825175,
+     "p_with_oracle_ci95": [
+      0.43620068315654525,
+      0.5978496132172344
+     ],
+     "p_without_oracle": 0.4065934065934066,
+     "p_without_oracle_ci95": [
+      0.311446242328006,
+      0.5093075197342115
+     ],
+     "diff_pp": 11.088911088911091,
+     "log_or": 0.44333214150760064,
+     "log_or_ci95": [
+      -0.08560137121038541,
+      0.9722656542255868
+     ],
+     "fisher_p": 0.10829373506363081
+    },
+    {
+     "card": "Biomancer's Familiar",
+     "k_with_oracle": 57,
+     "k_without_oracle": 37,
+     "p_with_oracle": 0.3986013986013986,
+     "p_with_oracle_ci95": [
+      0.3220175729028133,
+      0.48049070812926475
+     ],
+     "p_without_oracle": 0.4065934065934066,
+     "p_without_oracle_ci95": [
+      0.311446242328006,
+      0.5093075197342115
+     ],
+     "diff_pp": -0.7992007992007999,
+     "log_or": -0.03449969744169564,
+     "log_or_ci95": [
+      -0.5675594835233437,
+      0.49856008863995244
+     ],
+     "fisher_p": 1.0
+    },
+    {
+     "card": "Seedborn Muse",
+     "k_with_oracle": 44,
+     "k_without_oracle": 13,
+     "p_with_oracle": 0.3076923076923077,
+     "p_with_oracle_ci95": [
+      0.237902379952512,
+      0.387544359935912
+     ],
+     "p_without_oracle": 0.14285714285714285,
+     "p_without_oracle_ci95": [
+      0.08542677254433866,
+      0.229219964752375
+     ],
+     "diff_pp": 16.483516483516485,
+     "log_or": 0.9557404843516264,
+     "log_or_ci95": [
+      0.27866022493287157,
+      1.6328207437703812
+     ],
+     "fisher_p": 0.004752989248090175
+    },
+    {
+     "card": "Formidable Speaker",
+     "k_with_oracle": 49,
+     "k_without_oracle": 32,
+     "p_with_oracle": 0.34265734265734266,
+     "p_with_oracle_ci95": [
+      0.2698994070063999,
+      0.4236479256295833
+     ],
+     "p_without_oracle": 0.3516483516483517,
+     "p_without_oracle_ci95": [
+      0.2613712913278969,
+      0.4539435072415074
+     ],
+     "diff_pp": -0.899100899100902,
+     "log_or": -0.04189094170916014,
+     "log_or_ci95": [
+      -0.5905508686815631,
+      0.5067689852632428
+     ],
+     "fisher_p": 0.8889355832270988
+    },
+    {
+     "card": "Springheart Nantuko",
+     "k_with_oracle": 14,
+     "k_without_oracle": 6,
+     "p_with_oracle": 0.0979020979020979,
+     "p_with_oracle_ci95": [
+      0.05921616223092841,
+      0.15762702117213995
+     ],
+     "p_without_oracle": 0.06593406593406594,
+     "p_without_oracle_ci95": [
+      0.030565869950639868,
+      0.13646631845613524
+     ],
+     "diff_pp": 3.196803196803197,
+     "log_or": 0.3871819673280594,
+     "log_or_ci95": [
+      -0.5774678005497851,
+      1.3518317352059037
+     ],
+     "fisher_p": 0.4769654553736041
+    },
+    {
+     "card": "Derevi, Empyrial Tactician",
+     "k_with_oracle": 38,
+     "k_without_oracle": 32,
+     "p_with_oracle": 0.26573426573426573,
+     "p_with_oracle_ci95": [
+      0.20015397229583065,
+      0.34357205629552223
+     ],
+     "p_without_oracle": 0.3516483516483517,
+     "p_without_oracle_ci95": [
+      0.2613712913278969,
+      0.4539435072415074
+     ],
+     "diff_pp": -8.591408591408594,
+     "log_or": -0.4033164884064904,
+     "log_or_ci95": [
+      -0.968084468314548,
+      0.16145149150156718
+     ],
+     "fisher_p": 0.18807086624304273
+    },
+    {
+     "card": "Badgermole Cub",
+     "k_with_oracle": 77,
+     "k_without_oracle": 36,
+     "p_with_oracle": 0.5384615384615384,
+     "p_with_oracle_ci95": [
+      0.45681604952562543,
+      0.6180946024966897
+     ],
+     "p_without_oracle": 0.3956043956043956,
+     "p_without_oracle_ci95": [
+      0.3013302288475036,
+      0.49833574051615126
+     ],
+     "diff_pp": 14.285714285714285,
+     "log_or": 0.5721467488614358,
+     "log_or_ci95": [
+      0.04129386302845173,
+      1.1029996346944198
+     ],
+     "fisher_p": 0.043897624211571354
+    },
+    {
+     "card": "Clever Impersonator",
+     "k_with_oracle": 55,
+     "k_without_oracle": 61,
+     "p_with_oracle": 0.38461538461538464,
+     "p_with_oracle_ci95": [
+      0.308886394769347,
+      0.4663816491637075
+     ],
+     "p_without_oracle": 0.6703296703296703,
+     "p_without_oracle_ci95": [
+      0.5685683540449548,
+      0.7582924327827664
+     ],
+     "diff_pp": -28.571428571428566,
+     "log_or": -1.1679300224606013,
+     "log_or_ci95": [
+      -1.716605761521114,
+      -0.6192542834000884
+     ],
+     "fisher_p": 2.848178530408165e-05
+    },
+    {
+     "card": "Volatile Stormdrake",
+     "k_with_oracle": 35,
+     "k_without_oracle": 58,
+     "p_with_oracle": 0.24475524475524477,
+     "p_with_oracle_ci95": [
+      0.18157189677413066,
+      0.3212937761686867
+     ],
+     "p_without_oracle": 0.6373626373626373,
+     "p_without_oracle_ci95": [
+      0.5348810130309676,
+      0.7287163957010656
+     ],
+     "diff_pp": -39.26073926073925,
+     "log_or": -1.6746987919059342,
+     "log_or_ci95": [
+      -2.2438767421587467,
+      -1.1055208416531217
+     ],
+     "fisher_p": 2.602930695700296e-09
+    }
+   ]
+  }
+ }
+}

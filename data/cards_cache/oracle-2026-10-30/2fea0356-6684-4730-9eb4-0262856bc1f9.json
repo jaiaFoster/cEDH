@@ -1,0 +1,115 @@
+{
+  "scryfall_id": "2fea0356-6684-4730-9eb4-0262856bc1f9",
+  "mtgjson_uuid": null,
+  "name": "The Cabbage Merchant",
+  "oracle_text": "Whenever an opponent casts a noncreature spell, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\nWhenever a creature deals combat damage to you, sacrifice a Food token.\nTap two untapped Foods you control: Add one mana of any color.",
+  "type_line": "Legendary Creature \u2014 Human Citizen",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{2}{G}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Human",
+      "Citizen"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "triggered",
+      "text": "Whenever an opponent casts a noncreature spell, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "Whenever a creature deals combat damage to you, sacrifice a Food token.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "mana",
+      "text": "Tap two untapped Foods you control: Add one mana of any color.",
+      "cost": "Tap two untapped Foods you control",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2025-10-02",
+      "text": "Food is an artifact type. Even though it appears on some creatures, it's never a creature type.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2025-10-02",
+      "text": "If an effect refers to a Food, it means any Food artifact, not just a Food artifact token. For example, you can sacrifice Tough Cookie (an Artifact Creature \u2014 Food Golem) to activate Bosco, Just a Bear's ability (an ability with \"Sacrifice a Food\" in its cost). You can't sacrifice a Food to pay multiple costs. For example, you can't sacrifice a Food token to activate its own ability and also to activate Bosco, Just a Bear's ability.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2025-10-02",
+      "text": "Whatever you do, don't eat the delicious cards.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2025-10-02",
+      "text": "Food sacrificed due to The Cabbage Merchant's second triggered ability is not being sacrificed to the Food's own ability, so you will not gain any life.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2025-10-02",
+      "text": "Some spells and abilities that create Food tokens may require targets. If each target chosen is an illegal target as that spell or ability tries to resolve, it won't resolve. You won't create any Food tokens.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

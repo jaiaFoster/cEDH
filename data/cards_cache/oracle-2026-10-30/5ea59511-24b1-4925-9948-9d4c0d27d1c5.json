@@ -1,0 +1,115 @@
+{
+  "scryfall_id": "5ea59511-24b1-4925-9948-9d4c0d27d1c5",
+  "mtgjson_uuid": null,
+  "name": "Gilded Goose",
+  "oracle_text": "Flying\nWhen this creature enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\n{1}{G}, {T}: Create a Food token.\n{T}, Sacrifice a Food: Add one mana of any color.",
+  "type_line": "Creature \u2014 Bird",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{G}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Bird"
+    ],
+    "supertypes": [],
+    "is_mana_source": true,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "0",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Flying",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "triggered",
+      "text": "When this creature enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{1}{G}, {T}: Create a Food token.",
+      "cost": "{1}{G}, {T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "mana",
+      "text": "{T}, Sacrifice a Food: Add one mana of any color.",
+      "cost": "{T}, Sacrifice a Food",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-11-08",
+      "text": "If an effect refers to a Food, it means any Food artifact, not just a Food artifact token. For example, you can sacrifice Tough Cookie (an Artifact Creature \u2014 Food Golem) to activate Maraleaf Rider's ability (an ability with \"Sacrifice a Food\" in its cost).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "You can't sacrifice a Food to pay multiple costs. For example, you can't sacrifice a Food token to activate its own ability and also to activate Maraleaf Rider's ability.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "Whatever you do, don't eat the delicious cards.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "Food is an artifact type. Even though it appears on some creatures, it's never a creature type.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

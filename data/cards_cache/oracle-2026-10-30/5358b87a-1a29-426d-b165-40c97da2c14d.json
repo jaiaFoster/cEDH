@@ -1,0 +1,117 @@
+{
+  "scryfall_id": "5358b87a-1a29-426d-b165-40c97da2c14d",
+  "mtgjson_uuid": null,
+  "name": "Sink into Stupor // Soporific Springs",
+  "oracle_text": "Return target spell or nonland permanent an opponent controls to its owner's hand. // As this land enters, you may pay 3 life. If you don't, it enters tapped.\n{T}: Add {U}.",
+  "type_line": "Instant // Land",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{1}{U}{U}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": true,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Return target spell or nonland permanent an opponent controls to its owner's hand. // As this land enters, you may pay 3 life. If you don't, it enters tapped.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "mana",
+      "text": "{T}: Add {U}.",
+      "cost": "{T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-06-07",
+      "text": "If a spell is returned to its owner's hand, it's removed from the stack and thus will not resolve. The spell isn't countered; it just no longer exists. This works even against a spell that can't be countered.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If a copy of a spell is returned to its owner's hand, it's moved there, then it will cease to exist as a state-based action. It can't be recast.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "To determine whether it is legal to play a modal double-faced card, consider only the characteristics of the face you're playing and ignore the other face's characteristics. For example, if an effect stops you from casting creature spells, you can't cast Disciple of Freyalise, but you can still play Garden of Freyalise.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If an effect allows you to play a specific modal double-faced card, you may cast it as a spell or play it as a land, as determined by which face you choose to play. If an effect allows you to cast (rather than \"play\") a specific modal double-faced card, you can't play it as a land.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If an effect allows you to play a land or cast a spell from among a group of cards, you may play or cast a modal double-faced card with any face that fits the criteria of that effect. For example, if an effect allows you to play lands from your graveyard, you can play Garden of Freyalise, but you can't cast Disciple of Freyalise.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "If an effect allows you to put a card with particular characteristics onto the battlefield without instructing you to play or cast it, you consider only the characteristics of a modal double-faced card's front face to see if that card qualifies. If it does, it enters the battlefield with its front face up. For example, if an effect allows you to put a creature card from your graveyard onto the battlefield, you can put Disciple of Freyalise onto the battlefield. However, an effect that lets you return a land card from your graveyard to your hand won't let you return Garden of Freyalise to your hand, as that card has only its front face's characteristics while in the graveyard.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "The mana value of a modal double-faced card is based on the characteristics of the face that's being considered. On the stack or the battlefield, consider whichever face is up. In all other zones, consider only the front face. This is different than how the mana value of a transforming double-faced card is determined.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "A modal double-faced card can't be transformed or be put onto the battlefield transformed. Ignore any instruction to transform a modal double-faced card or to put one onto the battlefield transformed.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

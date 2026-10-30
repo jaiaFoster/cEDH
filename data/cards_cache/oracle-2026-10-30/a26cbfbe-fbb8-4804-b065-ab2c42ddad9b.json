@@ -1,0 +1,104 @@
+{
+  "scryfall_id": "a26cbfbe-fbb8-4804-b065-ab2c42ddad9b",
+  "mtgjson_uuid": null,
+  "name": "Mirrormade",
+  "oracle_text": "You may have this enchantment enter as a copy of any artifact or enchantment on the battlefield.",
+  "type_line": "Enchantment",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{1}{U}{U}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Enchantment"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "You may have this enchantment enter as a copy of any artifact or enchantment on the battlefield.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2019-10-04",
+      "text": "Mirrormade copies exactly what was printed on the original permanent (unless that permanent is copying something else or is a token; see below). It doesn't copy whether that permanent is tapped or untapped, whether it has any counters on it or any Auras attached to it, or any non-copy effects that have changed its types, color, or so on. Notably, if Mirrormade copies an artifact creature or enchantment creature that's normally not a creature (such as one affected by Bring to Life), Mirrormade won't be a creature.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "If the chosen permanent has {X} in its mana cost, X is considered to be 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "If the chosen permanent is copying something else (for example, if the chosen permanent is another Mirrormade), then Mirrormade enters the battlefield as whatever the chosen permanent copied.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "If the chosen permanent is a token, Mirrormade copies the original characteristics of that token as stated by the effect that created the token. Mirrormade doesn't become a token in this case.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "Any enters-the-battlefield abilities of the copied permanent will trigger when Mirrormade enters the battlefield. Any \"as [this permanent] enters the battlefield\" or \"[this permanent] enters the battlefield with\" abilities of the chosen permanent will also work.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "If Mirrormade somehow enters the battlefield at the same time as another artifact or enchantment, it can't become a copy of that permanent. You may choose only a permanent that's already on the battlefield.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-10-04",
+      "text": "If Mirrormade copies an Aura this way, you choose what the Aura will enchant just before it enters the battlefield. You can't choose any permanent cards entering the battlefield at the same time as that Aura. This doesn't target the player or permanent it will enchant, so an opponent's permanent with hexproof may be chosen this way. The chosen recipient must be able to legally be enchanted by the Aura, so a player or permanent with protection from one of the Aura's qualities can't be chosen this way. If there's nothing legal for Mirrormade to enchant, it stays in its current zone (unless it's a spell, in which case it's put into its owner's graveyard).",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

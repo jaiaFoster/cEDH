@@ -1,0 +1,103 @@
+{
+  "scryfall_id": "92d8f67e-4f2f-4a1f-b190-7c3f39e477e4",
+  "mtgjson_uuid": null,
+  "name": "Neoform",
+  "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield with an additional +1/+1 counter on it, then shuffle.",
+  "type_line": "Sorcery",
+  "color_identity": [
+    "G",
+    "U"
+  ],
+  "mana_cost": "{G}{U}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Sorcery"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "As an additional cost to cast this spell, sacrifice a creature.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": "As an additional cost to cast this spell, sacrifice a creature."
+    },
+    {
+      "kind": "static",
+      "text": "Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield with an additional +1/+1 counter on it, then shuffle.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2019-05-03",
+      "text": "You must sacrifice exactly one creature to cast this spell; you can't cast it without sacrificing one, and you can't sacrifice additional creatures.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-05-03",
+      "text": "Players can respond to Neoform only after it's been cast and all its costs have been paid. No one can try to destroy the creature you sacrificed to stop you from casting this spell.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-05-03",
+      "text": "If a creature or a creature card in your library has {X} in its mana cost, X is considered to be 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-05-03",
+      "text": "Tokens that aren't a copy of something else don't have a mana cost. Anything without a mana cost normally has a mana value of 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-05-03",
+      "text": "A creature put onto the battlefield this way enters the battlefield with one +1/+1 counter if it would otherwise enter with no +1/+1 counters.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

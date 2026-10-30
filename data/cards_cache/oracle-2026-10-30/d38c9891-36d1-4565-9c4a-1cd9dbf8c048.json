@@ -1,0 +1,100 @@
+{
+  "scryfall_id": "d38c9891-36d1-4565-9c4a-1cd9dbf8c048",
+  "mtgjson_uuid": null,
+  "name": "Biomancer's Familiar",
+  "oracle_text": "Activated abilities of creatures you control cost {2} less to activate. This effect can't reduce the mana in that cost to less than one mana.\n{T}: The next time target creature adapts this turn, it adapts as though it had no +1/+1 counters on it.",
+  "type_line": "Creature \u2014 Mutant",
+  "color_identity": [
+    "G",
+    "U"
+  ],
+  "mana_cost": "{G}{U}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Mutant"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "2",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Activated abilities of creatures you control cost {2} less to activate. This effect can't reduce the mana in that cost to less than one mana.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{T}: The next time target creature adapts this turn, it adapts as though it had no +1/+1 counters on it.",
+      "cost": "{T}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2019-01-25",
+      "text": "Activated abilities contain a colon. They\u2019re generally written \u201c[Cost]: [Effect].\u201d Some keyword abilities are activated abilities and will have colons in their reminder text. Triggered abilities (starting with \u201cwhen,\u201d \u201cwhenever,\u201d or \u201cat\u201d) are unaffected by the cost reduction ability of Biomancer\u2019s Familiar.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-01-25",
+      "text": "Biomancer\u2019s Familiar affects only abilities of creatures you control on the battlefield. The costs of activated abilities of creature cards that work in other zones (such as cycling) won\u2019t be reduced.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-01-25",
+      "text": "An ability that has only one generic mana and some amount of other mana symbols in its activation cost will have its cost reduced by {1}.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2019-01-25",
+      "text": "The last ability of Biomancer\u2019s Familiar doesn\u2019t add or remove any counters. It just lets the creature adapt despite already having +1/+1 counters on it.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

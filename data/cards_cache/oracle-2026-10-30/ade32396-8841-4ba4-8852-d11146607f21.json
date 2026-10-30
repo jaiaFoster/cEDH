@@ -1,0 +1,115 @@
+{
+  "scryfall_id": "ade32396-8841-4ba4-8852-d11146607f21",
+  "mtgjson_uuid": null,
+  "name": "Mockingbird",
+  "oracle_text": "Flying\nYou may have this creature enter as a copy of any creature on the battlefield with mana value less than or equal to the amount of mana spent to cast this creature, except it's a Bird in addition to its other types and it has flying.",
+  "type_line": "Creature \u2014 Bird Bard",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{X}{U}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Creature"
+    ],
+    "subtypes": [
+      "Bird",
+      "Bard"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "1",
+    "toughness": "1",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Flying",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "You may have this creature enter as a copy of any creature on the battlefield with mana value less than or equal to the amount of mana spent to cast this creature, except it's a Bird in addition to its other types and it has flying.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-07-26",
+      "text": "Mockingbird\u2019s second ability counts all mana spent to cast Mockingbird, not just mana spent on {X}. If there are any additional costs to cast it, the mana spent to pay those costs counts as well.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "Mockingbird copies exactly what was printed on the original creature, except it\u2019s a Bird in addition to its other types and it has flying, and nothing else (unless that creature is copying something else or is a token; see below). It doesn\u2019t copy whether that creature is tapped or untapped, whether it has any counters on it or Auras and Equipment attached to it, or any non-copy effects that have changed its power, toughness, types, color, and so on.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "If the copied creature has {X} in its mana cost, X is 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "If the copied creature is a token, Mockingbird copies the original characteristics of that token as stated by the effect that created that token, with the noted exceptions.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "If the copied creature is copying something else, then Mockingbird enters as whatever that creature copied, with the noted exceptions.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "Any \u201centers\u201d abilities of the copied creature will trigger when Mockingbird enters. Any \u201cas [this creature] enters\u201d or \u201c[this creature] enters with\u201d abilities of the copied creature will also work.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-07-26",
+      "text": "You can choose not to have Mockingbird enter as a copy of another creature. If you do, it will just be a 1/1 Bird Bard creature with flying, an ability that didn\u2019t do anything, and the opportunity for a good self-deprecating joke or two.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

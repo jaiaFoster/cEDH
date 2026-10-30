@@ -1,0 +1,84 @@
+{
+  "scryfall_id": "a9f2c53e-ff58-4aa8-89a6-4f45628cc571",
+  "mtgjson_uuid": null,
+  "name": "Ad Nauseam",
+  "oracle_text": "Reveal the top card of your library and put that card into your hand. You lose life equal to its mana value. You may repeat this process any number of times.",
+  "type_line": "Instant",
+  "color_identity": [
+    "B"
+  ],
+  "mana_cost": "{3}{B}{B}",
+  "mana_value": 5.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Reveal the top card of your library and put that card into your hand. You lose life equal to its mana value. You may repeat this process any number of times.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2026-03-20",
+      "text": "Each time you put the revealed card into your hand and lose the appropriate amount of life, you decide whether to continue by revealing another card. You don't decide in advance how many cards to put into your hand this way.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2026-03-20",
+      "text": "If a card in a player's library has {X} in its mana cost, X is 0 for the purpose of determining its mana value.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2026-03-20",
+      "text": "You may continue to reveal cards with Ad Nauseam even if your life total has been reduced to 0 or less. If you continue, you will continue to lose life, dropping your life total into negative numbers. As soon as you stop, you'll lose the game as a state-based action.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "banned",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "not_legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

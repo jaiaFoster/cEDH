@@ -1,0 +1,127 @@
+{
+  "scryfall_id": "ee241079-1e5a-4224-b9cb-4fd3e0da687c",
+  "mtgjson_uuid": null,
+  "name": "Orim's Chant",
+  "oracle_text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget player can't cast spells this turn. If this spell was kicked, creatures can't attack this turn.",
+  "type_line": "Instant",
+  "color_identity": [
+    "W"
+  ],
+  "mana_cost": "{W}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Kicker {W} (You may pay an additional {W} as you cast this spell.)",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "static",
+      "text": "Target player can't cast spells this turn. If this spell was kicked, creatures can't attack this turn.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2024-11-08",
+      "text": "To determine a spell's total cost, start with the mana cost (or an alternative cost if another card's effect allows you to pay one instead), add any cost increases (such as kicker), then apply any cost reductions. The spell's mana value remains unchanged, no matter what the total cost to cast it was.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "The kicker ability doesn't let you pay a kicker cost more than once.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If you put a permanent with a kicker ability onto the battlefield without casting it, you can't kick it.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If you copy a kicked spell on the stack, the copy is also kicked. If the copied spell is a permanent spell, the token the copy of that spell becomes when it enters is also kicked.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If a card or token enters as a copy of a permanent, the new permanent isn't kicked, even if the original was.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-11-08",
+      "text": "If a spell's kicker cost was paid, the spell is \"kicked.\"",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Orim's Chant also won't affect creatures that are already attacking. It does not remove them from combat.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "The target opponent can still activate abilities, including abilities of cards in their hands (like cycling). Their triggered abilities work as normal, they can still play lands, and so on.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "A player who can't cast a spell can't suspend a card.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2024-06-07",
+      "text": "Orim's Chant won't affect spells that your opponents cast before you cast Orim's Chant, including any spells that are still on the stack. Orim's Chant also won't stop your opponents from casting spells after you cast Orim's Chant but before Orim's Chant resolves.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

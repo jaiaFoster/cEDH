@@ -1,0 +1,110 @@
+{
+  "scryfall_id": "2cc3804b-3304-4add-81b4-0482bfed8074",
+  "mtgjson_uuid": null,
+  "name": "Destiny Spinner",
+  "oracle_text": "Creature and enchantment spells you control can't be countered.\n{3}{G}: Target land you control becomes an X/X Elemental creature with trample and haste until end of turn, where X is the number of enchantments you control. It's still a land.",
+  "type_line": "Enchantment Creature \u2014 Human",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{1}{G}",
+  "mana_value": 2.0,
+  "characteristics": {
+    "card_types": [
+      "Enchantment",
+      "Creature"
+    ],
+    "subtypes": [
+      "Human"
+    ],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": true,
+    "is_permanent": true,
+    "power": "2",
+    "toughness": "3",
+    "produces_convoke_eligible": true,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Creature and enchantment spells you control can't be countered.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    },
+    {
+      "kind": "activated",
+      "text": "{3}{G}: Target land you control becomes an X/X Elemental creature with trample and haste until end of turn, where X is the number of enchantments you control. It's still a land.",
+      "cost": "{3}{G}",
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2020-01-24",
+      "text": "Destiny Spinner's first ability applies only while it's on the battlefield. While it's a spell, it can be countered.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-01-24",
+      "text": "A spell or ability that counters spells can still target spells that can't be countered. When that spell or ability resolves, the uncounterable spell won't be countered, but any additional effects of the countering spell or ability will still happen.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-01-24",
+      "text": "The value of X is determined only as Destiny Spinner's activated ability resolves. Once that happens, the creature's base power and toughness won't change later in the turn even if the number of enchantments you control changes.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-01-24",
+      "text": "If you activate Destiny Spinner's ability more than once in a turn, the value of X may be different each time. If you choose the same land as the target more than once, the most recent effect (and most recent value of X) applies.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-01-24",
+      "text": "Destiny Spinner's activated ability doesn't untap the land that becomes a creature.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2020-01-24",
+      "text": "If you control no enchantments at the time Destiny Spinner's activated ability resolves, the land becomes a 0/0 creature and is put into its owner's graveyard unless another effect is raising its toughness.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

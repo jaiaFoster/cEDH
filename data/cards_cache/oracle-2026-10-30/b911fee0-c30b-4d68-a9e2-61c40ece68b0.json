@@ -1,0 +1,104 @@
+{
+  "scryfall_id": "b911fee0-c30b-4d68-a9e2-61c40ece68b0",
+  "mtgjson_uuid": null,
+  "name": "Autumn's Veil",
+  "oracle_text": "Spells you control can't be countered by blue or black spells this turn, and creatures you control can't be the targets of blue or black spells this turn.",
+  "type_line": "Instant",
+  "color_identity": [
+    "G"
+  ],
+  "mana_cost": "{G}",
+  "mana_value": 1.0,
+  "characteristics": {
+    "card_types": [
+      "Instant"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": false,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "Spells you control can't be countered by blue or black spells this turn, and creatures you control can't be the targets of blue or black spells this turn.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2010-08-15",
+      "text": "After Autumn\u2019s Veil resolves, no new blue or black spell may be cast that turn targeting a creature you control.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2010-08-15",
+      "text": "Keep in mind that an Aura spell targets the permanent it will enchant (but an Aura on the battlefield doesn\u2019t target the permanent it\u2019s attached to).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2010-08-15",
+      "text": "Autumn\u2019s Veil itself may be countered by blue or black spells. Its effect doesn\u2019t apply until after it resolves.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2010-08-15",
+      "text": "After Autumn\u2019s Veil resolves, any spell you control that turn can still be targeted by spells that try to counter it (such as Cancel), regardless of their color. If those spells are blue or black at the time they would resolve, they will resolve, but the part of their effect that would counter the spell you control simply won\u2019t do anything. Any other effects those spells have will work as normal.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2010-08-15",
+      "text": "If a creature you control is being targeted by a spell when Autumn\u2019s Veil resolves, nothing happens right away. When that spell would resolve, its color is checked. If it\u2019s blue or black, that creature will be an illegal target for that spell, and will be unable to be affected by it. If all that spell\u2019s targets have become illegal by the time it would resolve, it won\u2019t resolve.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2010-08-15",
+      "text": "Autumn\u2019s Veil affects any spells and creatures you happen to control at any point during the rest of the turn, not just spells and creatures you control as it resolves. That\u2019s because it doesn\u2019t grant an ability to those spells or creatures; rather, it affects the game rules and states something that\u2019s now true about those spells and creatures.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2010-08-15",
+      "text": "Autumn\u2019s Veil has no effect on abilities. After it resolves, spells you control may be countered by abilities from blue or black sources, and creatures you control may be targeted by abilities from blue or black sources.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "competitivebrawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}

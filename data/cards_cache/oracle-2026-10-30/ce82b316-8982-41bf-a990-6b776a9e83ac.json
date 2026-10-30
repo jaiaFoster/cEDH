@@ -1,0 +1,109 @@
+{
+  "scryfall_id": "ce82b316-8982-41bf-a990-6b776a9e83ac",
+  "mtgjson_uuid": null,
+  "name": "Copy Enchantment",
+  "oracle_text": "You may have this enchantment enter as a copy of any enchantment on the battlefield.",
+  "type_line": "Enchantment",
+  "color_identity": [
+    "U"
+  ],
+  "mana_cost": "{2}{U}",
+  "mana_value": 3.0,
+  "characteristics": {
+    "card_types": [
+      "Enchantment"
+    ],
+    "subtypes": [],
+    "supertypes": [],
+    "is_mana_source": false,
+    "is_creature": false,
+    "is_permanent": true,
+    "power": null,
+    "toughness": null,
+    "produces_convoke_eligible": false,
+    "notes": [
+      "Ability `kind` classification is a rule-based heuristic text-line parser (sim/ingestion/scryfall.py), not manually reviewed. Verify before Level 4 exact-line validation use."
+    ]
+  },
+  "abilities": [
+    {
+      "kind": "static",
+      "text": "You may have this enchantment enter as a copy of any enchantment on the battlefield.",
+      "cost": null,
+      "timing_restriction": null,
+      "zone_restriction": null,
+      "alternative_cost": null
+    }
+  ],
+  "tutor_restrictions": null,
+  "commander_interactions": [],
+  "rulings": [
+    {
+      "date": "2023-09-01",
+      "text": "Copy Enchantment copies exactly what was printed on the original permanent and nothing more (unless that permanent is itself copying something or is a token; see below). It doesn't copy whether that permanent is tapped or untapped, whether it has any counters on it or Auras attached to it, or any noncopy effects that have changed its power, toughness, types, color, and so on.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "If the chosen permanent has {X} in its mana cost, X is 0.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "If the chosen permanent is copying something else (for example, if the chosen permanent is another Copy Enchantment), then your Copy Enchantment enters the battlefield as whatever the chosen permanent copied.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "If the chosen permanent is a token, Copy Enchantment copies the original characteristics of that token as stated by the effect that created the token. Copy Enchantment does not become a token.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "If Copy Enchantment copies an Aura this way, you choose what the Aura will enchant just before it enters the battlefield. You can't choose any permanents entering the battlefield at the same time as that Aura. This doesn't target the player or permanent it will enchant, so an opponent's permanent with hexproof may be chosen this way. The chosen recipient must be able to legally be enchanted by the Aura, so a player or permanent with protection from one of the Aura's qualities can't be chosen this way. If there's nothing legal for the Aura to enchant, Copy Enchantment stays in its current zone (unless it's a spell, in which case it's put into its owner's graveyard).",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "Any enters-the-battlefield abilities of the copied permanent will trigger when Copy Enchantment enters the battlefield. Any \"as [this enchantment] enters the battlefield\" or \"[this enchantment] enters the battlefield with\" abilities of the chosen permanent will also work.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "If Copy Enchantment somehow enters the battlefield at the same time as another permanent, Copy Enchantment can't become a copy of that permanent. You may choose only a permanent that's already on the battlefield.",
+      "source": "scryfall_rulings"
+    },
+    {
+      "date": "2023-09-01",
+      "text": "You can choose not to copy anything. In that case, Copy Enchantment simply enters the battlefield as an enchantment with an irrelevant ability. We're sure you had your reasons.",
+      "source": "scryfall_rulings"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "competitivebrawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal",
+    "tlr": "legal"
+  },
+  "source_pull_date": "2026-10-30",
+  "source_version": "scryfall-live-2026-10-30"
+}
