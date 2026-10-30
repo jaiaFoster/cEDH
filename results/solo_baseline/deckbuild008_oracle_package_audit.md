@@ -390,7 +390,66 @@ recommended cuts are re-verified in §16.
 
 ## 9. Conversion surface area (§10)
 
-<!--FILL_CSA-->
+[MEASURED-MC states]
+
+**Method:**
+
+- States are snapshots taken from 300 pilot-policy goldfish games per variant, at each of the pilot's turns,
+  main phase and the following opponent's-turn instant window.
+- **CSA** = the number of library cards that, put into hand, give a deterministic win *now* with the mana on board.
+- "Protected" CSA counts only draws that also leave a shield or counter-backup.
+- Library ≈ 87–91 cards.
+- Per-state values are in `deckbuild008_conversion_surface.json`.
+
+**Columns** (each cell is T3 main | T4 main | T4 instant window):
+
+- **Already winning:** share of states that already have a deterministic win.
+- **Mean winning draws:** average number of library cards that would give a win now (raw CSA).
+- **Mean protected winning draws:** the same, counting only protected wins.
+- **P(any winning draw exists):** share of states where at least one such card is left in the library.
+- **P(next draw wins):** chance that the next draw is one of them.
+
+| Variant | Already winning | Mean winning draws (raw CSA) | Mean protected winning draws | P(any winning draw exists) | P(next draw wins) |
+|---|---|---|---|---|---|
+| BASELINE v8 | 0.7% \| 4.7% \| 0.7% | 0.65 \| 1.35 \| 0.07 | 0.14 \| 0.52 \| 0.01 | 14.1% \| 34.3% \| 5.7% | 0.73% \| 1.55% \| 0.08% |
+| A Oracle-less | 0.7% \| 6.0% \| 0.7% | 0.61 \| 1.55 \| 0.06 | 0.15 \| 0.40 \| 0.01 | 15.1% \| 35.1% \| 5.4% | 0.69% \| 1.77% \| 0.07% |
+| B Oracle + Consult | 1.7% \| 7.0% \| 0.7% | 1.09 \| 2.29 \| 0.07 | 0.29 \| 0.67 \| 0.01 | 21.4% \| 40.9% \| 5.7% | 1.23% \| 2.62% \| 0.08% |
+| C core 3 | 2.0% \| 8.3% \| 0.7% | 1.26 \| 2.72 \| 0.08 | 0.31 \| 0.81 \| 0.01 | 22.1% \| 42.2% \| 6.4% | 1.42% \| 3.12% \| 0.09% |
+| D2 Oracle + Consult + Spellseeker | 1.7% \| 8.7% \| 0.7% | 1.14 \| 2.88 \| 0.07 | 0.29 \| 0.93 \| 0.01 | 21.4% \| 40.9% \| 6.0% | 1.29% \| 3.30% \| 0.08% |
+| **D = Build 3 package** | 2.3% \| **10.7%** \| 0.7% | 1.32 \| **3.40** \| 0.08 | 0.31 \| **1.18** \| 0.01 | 22.9% \| 42.2% \| 6.4% | 1.49% \| **3.90%** \| 0.09% |
+| E D + Borne | 2.3% \| 10.7% \| 1.0% | 1.29 \| 3.31 \| 0.07 | 0.31 \| 1.18 \| 0.01 | 22.9% \| 42.2% \| 5.7% | 1.46% \| 3.80% \| 0.08% |
+| F Oracle + Hermit + Shang-Chi | 0.7% \| 5.7% \| 0.7% | 0.71 \| 1.64 \| 0.07 | 0.15 \| 0.48 \| 0.01 | 15.1% \| 35.7% \| 6.0% | 0.80% \| 1.88% \| 0.08% |
+
+**Readings:**
+
+- The package **doubles the T4 main-phase winning surface** (1.55 → 3.40 winning draws per state; protected
+  0.40 → 1.18) and the chance that the next draw wins (1.77% → 3.90%).
+- **Deterministic vs non-deterministic:** non-deterministic surface (Finale combat) is ≈0.5–0.6 draws in every variant.
+  The package adds deterministic surface only.
+- **The instant window is the weak spot for every variant** (≈0.07 winning draws). An opponent's-turn win needs a
+  flash enabler *on board*, and goldfish states rarely have one. Borne raises the T4 instant "already winning" share
+  from 0.7% to 1.0% (n=300, not significant) and does not raise CSA.
+
+**Synthetic state classes** (`deckbuild008_tournament_scenarios.json`, n=250 sampled states each).
+
+- Each cell is P(det. win now) / mean winning draws if not already winning.
+- "Enabler" = a timing enabler (High Fae) on board.
+
+| State class | Timing | v8 | A | B | **D** | E (Borne) | F (Hermit+SC) |
+|---|---|---|---|---|---|---|---|
+| Post-fight | main, no enabler | 2% / 1.45 | 4% / 1.70 | 2% / 1.93 | **5% / 3.34** | 5% / 3.25 | 3% / 1.72 |
+| Post-fight | instant, no enabler | 1% / 0.50 | 1% / 0.48 | 1% / 0.65 | **2% / 1.06** | 2% / 1.00 | 0% / 0.55 |
+| Post-fight | instant, enabler | 2% / 1.29 | 3% / 1.56 | 3% / 1.75 | **6% / 2.94** | 5% / 3.13 | 3% / 1.53 |
+| Low hand, high mana | main, enabler | 0% / 0.52 | 0% / 0.77 | 0% / 0.74 | 0% / **1.54** | 0% / 1.65 | 0% / 0.60 |
+| Low hand, high mana | instant, no enabler | 0% / 0.08 | 0% / 0.08 | 0% / 0.12 | 0% / 0.18 | 0% / 0.20 | 0% / 0.08 |
+| High board, low colour | main, no enabler | 0% / 0.68 | 0% / 1.08 | 0% / 0.75 | 2% / 1.11 | 2% / 1.22 | **2% / 1.64** |
+| High board, low colour | instant, enabler | 0% / 0.98 | 2% / 1.09 | 0% / 1.05 | 1% / 1.05 | 3% / 1.07 | **3% / 1.85** |
+
+- **With vs without a timing enabler:** the enabler roughly triples instant-window CSA for every variant. The package's
+  instant gain is conditional on already having High Fae / Teferi / Zone.
+- **Where the creature-pure package wins:** high-board, low-colour states. Its outlet needs only G/B creature mana,
+  while Consult/Pact need UUB / UU+BB. This is the one state class where Hermit + Shang-Chi beats Build 3, and it is a
+  minority class.
 
 ## 10. Single-card ablation (§12 input) [MEASURED-MC]
 
@@ -478,7 +537,75 @@ Leave-one-out loss in deterministic win by T4 when the card is replaced by an un
 
 ### 11.5 Tutor leverage, dead cards, role multiplicity, resilience
 
-<!--FILL_STATES-->
+[MEASURED-MC states, 300 games per variant]
+
+**Tutor leverage at T3–T4** is P(a held tutor sets up a deterministic win within one more turn). In the tutor-held
+states, A → D:
+
+| Tutor | States held | A | D (Build 3) | Note |
+|---|---|---|---|---|
+| Nature's Rhythm | 60 / 62 | 78% | **89%** | finds Oracle at X=2 |
+| Chord of Calling | 50 / 50 | 60% | **74%** | instant |
+| Finale of Devastation | 56 / 59 | 63% | **83%** | |
+| Survival of the Fittest | 15 / 14 | 67% | **86%** | small n |
+| Eldritch Evolution | 61 / 59 | 49% | 58% | |
+| Birthing Pod | 70 / 65 | 40% | 48% | sorcery speed, rung-limited |
+| Neoform | 83 / 79 | 39% | 44% | |
+| Vampiric Tutor | 41 / 43 | 63% | 72% | |
+| Demonic Tutor | 35 / 39 | 71% | 72% | already finds the best card either way |
+| Imperial Seal | 21 / 21 | 86% | 90% | |
+| Enlightened Tutor | 66 / 65 | 56% | 59% | cannot find Oracle/Consult/Pact |
+| Spellseeker | 52 / 64 | 58% | 66% | |
+| Tainted Pact (as tutor/outlet) | — / 50 | — | 76% | immediate win 14% |
+
+- Every tutor has engine access 1.00 except Spellseeker (instants/sorceries only), Crop Rotation (lands; its value is
+  Emergence Zone / Cradle timing, which the goldfish does not score) and Ranger-Captain.
+- The creature-X tutors (Rhythm, Chord, Finale, Survival) gain the most, matching the leave-one-out ranking.
+
+**Dead / stranded package cards at end of T4** (held, and no line even with unlimited mana — i.e. missing the other
+half):
+
+| Card | States held | Dead |
+|---|---|---|
+| Spellseeker | 34 | 29% (in A: 26 held, 38% dead) |
+| Thassa's Oracle | 25 | 28% |
+| Demonic Consultation | 27 | 26% |
+| Tainted Pact | 28 | 18% |
+
+- [INTERPRETATION] Roughly one in four held package cards is a stranded half-combo at T4. That is the price of a
+  2-card combo, and it is why the 4-card package (more halves, more tutors to each) strands less than a 2-card one.
+
+**Resilience: states with a deterministic win at T4** (n = det-winning states out of 300). Each cell is P(still a
+deterministic win after the disruption), with 95% Wilson CIs.
+
+| Disruption | v8 (n=16) | A (n=20) | C core 3 (n=31) | **D (n=39)** | F Hermit+SC (n=19) |
+|---|---|---|---|---|---|
+| Creature board wipe | 0% [0–19] | 0% [0–16] | 10% [3–25] | **13% [6–27]** | 0% [0–17] |
+| All artifacts removed | 75% [51–90] | 75% [53–89] | 71% [53–84] | 69% [54–81] | 68% [46–85] |
+| Graveyard exiled | 100% | 100% | 100% | 100% [91–100] | 100% |
+| Creature activated abilities suppressed | 75% | 75% | 71% | 67% [51–79] | 63% |
+| **Lose Thrasios** | 0% [0–19] | 0% [0–16] | 42% [26–59] | **46% [32–61]** | 11% [3–31] |
+| Lose Birthing Pod | 81% | 80% | 77% | 79% [64–89] | 84% |
+| Single used piece removed (mean over pieces) | 7% | 13% | 17% | **18%** | 15% |
+
+**Readings:**
+
+- **Thrasios removal is the decisive one.** Every Oracle-less deterministic win routes through Thrasios digging to
+  Bowmasters/Mastermind. The Consult/Pact lines survive Thrasios loss nearly half the time.
+- **Graveyard hate never touches any measured line.** The deck's lines exile or ignore the graveyard; Hermit's
+  Finale-from-graveyard route is the exception, and it is not needed.
+- **Counterspells** are covered by the protected-win metric (§11.4): protected det. win by T4 nearly doubles
+  (1.47% → 2.75%).
+- **Small cost under artifact removal and ability suppression.** The package adds outlets that need the infinite
+  engine less, but the extra winning states it creates lean slightly more on Swift / Effigy / Talon. The differences
+  are within CIs.
+
+**Role multiplicity:**
+
+- Oracle is a Pod/Chord rung-2 blue creature and pitch-able to Force of Will / Misdirection / Commandeer / Subtlety.
+- Spellseeker is a rung-3 creature and a tutor for protection.
+- Consultation and Pact are instant tutors in a pinch.
+- Each recommended cut fills one role (theft or policing) that the deck has other copies of.
 
 ## 12. Cut optimisation and Pareto frontier (§12)
 
@@ -543,7 +670,42 @@ entirely by role counts, and there are many incomparable trade-offs.
 
 ## 13. Tournament-derived scenarios (§13) [SCENARIO]
 
-<!--FILL_SCENARIOS-->
+[SCENARIO] **These are not claims that any game would have gone differently.** Logs are used only as generators of
+plausible states:
+
+- Unknown hand cards are sampled from each variant's library.
+- Board details missing from the narrative are filled with the stated assumptions.
+- n = 250 sampled states per scenario per variant.
+
+Each cell is P(deterministic win now) / mean winning draws if not already winning. Uncertainty labels are in
+`deckbuild008_tournament_scenarios.json`.
+
+| Scenario (source; uncertainty) | v8 | A | B | **D** | E (Borne) | F |
+|---|---|---|---|---|---|---|
+| S01 AZMS R1: big mana, few cards (board reconstructed; Thrasios assumed) | 0 / 1.3 | 0 / 2.1 | 0 / 1.5 | 0 / **2.6** | 0 / 2.6 | 0 / 1.3 |
+| S02 AZMS R2: Pod + Effigy-as-Badgermole + Delney/Derevi, no outlet in hand (lands approximated; 2 unknown cards) | 0 / 0.0 | 0 / 0.0 | 0 / 0.7 | **19% [14–24] / 9.8** | 18% / 9.9 | 0 / 0.4 |
+| S03 Geekery R4: Cradle board, low colour (land set assumed) | 2% / 2.2 | 2% / 2.3 | 2% / 2.2 | 2% / 2.5 | 2% / 2.5 | 2% / 2.3 |
+| S04 Nature's Rhythm countered, Druid in play (2 lands left assumed) | 5% / 2.2 | 5% / 2.3 | 6% / 3.1 | 6% / 3.2 | 6% / 3.2 | 6% / 3.1 |
+| S05 Shields down after stopping an opponent's Oracle, our instant window (resources assumed) | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 |
+| S06 = S05 with High Fae on board | 0 / 0.6 | 0 / 0.6 | 1% / 1.0 | 1% / **1.3** | 1% / 1.3 | 0 / 0.6 |
+| S07 = S05 with Teferi on board | 0 / 0.1 | 0 / 0.1 | 0 / 0.2 | 0 / 0.3 | 0 / 0.3 | 0 / 0.1 |
+| S08 Crop Rotation for Emergence Zone on opponent's turn | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 |
+| S09 Engine partly destroyed (Pod, Druid, Badgermole in graveyard) | 0 / 0.0 | 0 / 0.0 | 12% / 4.1 | **12% / 4.2** | 12% / 4.2 | 12% / 3.8 |
+| S10 Mulligan to five, T3 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 | 0 / 0.1 |
+| S11 Empty board, tutors + mana, Thrasios in command zone | 3% / 2.0 | 3% / 2.0 | 4% / 4.2 | 4% / **5.2** | 4% / 5.2 | 3% / 2.0 |
+| S12 Geekery R2: Druid + Enlightened → Swift (the actual win) | 100% | 100% | 100% | 100% | 100% | 100% |
+| S13 Geekery R3: T2–3 Oculus about to be stolen by Gilded Drake (Borne removed: not registered) | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 / 0 |
+
+**Readings:**
+
+- **The package matters most where the deck has built an engine but holds no outlet** (S02: 0 → 19% immediate
+  deterministic wins; 0 → 9.8 winning draws).
+- **After the engine is partially destroyed** (S09: 0 → 12%): Oracle + Consult converts from mana and tutors alone.
+- **From an empty board with tutors** (S11: 2.0 → 5.2 winning draws).
+- **It does not help** in shields-down instant windows without an enabler (S05/S08), at five cards (S10), or in the
+  Geekery R3 theft spot (S13). There the problem is protecting Oculus, which no package change addresses.
+- **Borne's only visible effect** is in the instant-window rows, and it is within noise.
+- S12 is a sanity check: the logged winning line is found by every variant.
 
 ## 14. Builds (§16) [MEASURED-MC exact verification, n=15,000 paired vs Build 1]
 

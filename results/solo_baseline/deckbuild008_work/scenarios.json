@@ -1,0 +1,3068 @@
+{
+ "BASELINE_v8": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.304,
+   "p_next_draw_wins_if_not_winning": 0.0148
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.016,
+   "family_counts": {
+    "inf_bowmasters": 4
+   },
+   "csa_mean_win_draws_if_not_winning": 2.232,
+   "p_next_draw_wins_if_not_winning": 0.026
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.048,
+   "p_det_now_ci95": [
+    0.02767,
+    0.08201
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 2.168,
+   "p_next_draw_wins_if_not_winning": 0.0244
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.056,
+   "p_next_draw_wins_if_not_winning": 0.0006
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.556,
+   "p_next_draw_wins_if_not_winning": 0.0062
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.128,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.052,
+   "p_next_draw_wins_if_not_winning": 0.0006
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.12,
+   "family_counts": {
+    "inf_finale": 30
+   },
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.06,
+   "p_next_draw_wins_if_not_winning": 0.0007
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7
+   },
+   "csa_mean_win_draws_if_not_winning": 2.0,
+   "p_next_draw_wins_if_not_winning": 0.0222
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 4,
+    "inf_finale": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 1.447,
+   "p_next_draw_wins_if_not_winning": 0.0164
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 0.5,
+   "p_next_draw_wins_if_not_winning": 0.0057
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.02,
+   "p_det_now_ci95": [
+    0.00857,
+    0.04596
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_finale": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 1.371,
+   "p_next_draw_wins_if_not_winning": 0.0158
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.02,
+   "p_det_now_ci95": [
+    0.00857,
+    0.04596
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.02,
+   "family_counts": {
+    "inf_bowmasters": 5
+   },
+   "csa_mean_win_draws_if_not_winning": 1.294,
+   "p_next_draw_wins_if_not_winning": 0.0149
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.516,
+   "p_next_draw_wins_if_not_winning": 0.0057
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.08,
+   "p_next_draw_wins_if_not_winning": 0.0009
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.524,
+   "p_next_draw_wins_if_not_winning": 0.0059
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.524,
+   "p_next_draw_wins_if_not_winning": 0.0059
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.679,
+   "p_next_draw_wins_if_not_winning": 0.0078
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.12,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 2,
+    "inf_finale": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.004,
+   "p_next_draw_wins_if_not_winning": 0.0117
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.976,
+   "p_next_draw_wins_if_not_winning": 0.0113
+  }
+ },
+ "A_oracle_less": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 2.148,
+   "p_next_draw_wins_if_not_winning": 0.0244
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.08,
+   "family_counts": {
+    "inf_finale": 20
+   },
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.328,
+   "p_next_draw_wins_if_not_winning": 0.0268
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.048,
+   "p_det_now_ci95": [
+    0.02767,
+    0.08201
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 2.277,
+   "p_next_draw_wins_if_not_winning": 0.0256
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.056,
+   "p_next_draw_wins_if_not_winning": 0.0006
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.556,
+   "p_next_draw_wins_if_not_winning": 0.0062
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.128,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.052,
+   "p_next_draw_wins_if_not_winning": 0.0006
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.12,
+   "family_counts": {
+    "inf_finale": 30
+   },
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.06,
+   "p_next_draw_wins_if_not_winning": 0.0007
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7
+   },
+   "csa_mean_win_draws_if_not_winning": 2.0,
+   "p_next_draw_wins_if_not_winning": 0.0222
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.044,
+   "p_det_now_ci95": [
+    0.02474,
+    0.07706
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.044,
+   "family_counts": {
+    "inf_bowmasters": 11,
+    "inf_finale": 10
+   },
+   "csa_mean_win_draws_if_not_winning": 1.699,
+   "p_next_draw_wins_if_not_winning": 0.0193
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 0.476,
+   "p_next_draw_wins_if_not_winning": 0.0054
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.032,
+   "p_det_now_ci95": [
+    0.0163,
+    0.06186
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.032,
+   "family_counts": {
+    "inf_bowmasters": 8,
+    "inf_finale": 8
+   },
+   "csa_mean_win_draws_if_not_winning": 1.657,
+   "p_next_draw_wins_if_not_winning": 0.019
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 7
+   },
+   "csa_mean_win_draws_if_not_winning": 1.564,
+   "p_next_draw_wins_if_not_winning": 0.018
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.668,
+   "p_next_draw_wins_if_not_winning": 0.0074
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.076,
+   "p_next_draw_wins_if_not_winning": 0.0008
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.768,
+   "p_next_draw_wins_if_not_winning": 0.0086
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.732,
+   "p_next_draw_wins_if_not_winning": 0.0082
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.084,
+   "p_next_draw_wins_if_not_winning": 0.0125
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.2,
+   "p_next_draw_wins_if_not_winning": 0.0023
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.02,
+   "p_det_now_ci95": [
+    0.00857,
+    0.04596
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.02,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_finale": 4
+   },
+   "csa_mean_win_draws_if_not_winning": 1.22,
+   "p_next_draw_wins_if_not_winning": 0.0142
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.02,
+   "p_det_now_ci95": [
+    0.00857,
+    0.04596
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.02,
+   "family_counts": {
+    "inf_bowmasters": 5
+   },
+   "csa_mean_win_draws_if_not_winning": 1.09,
+   "p_next_draw_wins_if_not_winning": 0.0127
+  }
+ },
+ "B_oracle_consult": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.464,
+   "p_next_draw_wins_if_not_winning": 0.0166
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.711,
+   "p_next_draw_wins_if_not_winning": 0.0083
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.18,
+   "p_next_draw_wins_if_not_winning": 0.0251
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.06,
+   "p_det_now_ci95": [
+    0.03669,
+    0.09662
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15,
+    "inf_oracle": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 3.132,
+   "p_next_draw_wins_if_not_winning": 0.0352
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.12,
+   "p_next_draw_wins_if_not_winning": 0.0013
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.004,
+   "p_next_draw_wins_if_not_winning": 0.0113
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.228,
+   "p_next_draw_wins_if_not_winning": 0.0026
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.088,
+   "p_next_draw_wins_if_not_winning": 0.001
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.124,
+   "p_det_now_ci95": [
+    0.08875,
+    0.17063
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.124,
+   "family_counts": {
+    "inf_finale": 30,
+    "inf_oracle": 31,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 4.087,
+   "p_next_draw_wins_if_not_winning": 0.0475
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.104,
+   "p_next_draw_wins_if_not_winning": 0.0011
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.036,
+   "p_det_now_ci95": [
+    0.01905,
+    0.06699
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.036,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7,
+    "inf_oracle": 7,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 4.154,
+   "p_next_draw_wins_if_not_winning": 0.0462
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250,
+    "inf_oracle": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 4,
+    "inf_finale": 6,
+    "inf_oracle": 6,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.926,
+   "p_next_draw_wins_if_not_winning": 0.0219
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 2,
+    "inf_oracle": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 0.649,
+   "p_next_draw_wins_if_not_winning": 0.0074
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_finale": 6,
+    "inf_oracle": 6,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.86,
+   "p_next_draw_wins_if_not_winning": 0.0214
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_oracle": 6,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.745,
+   "p_next_draw_wins_if_not_winning": 0.0201
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.676,
+   "p_next_draw_wins_if_not_winning": 0.0075
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.12,
+   "p_next_draw_wins_if_not_winning": 0.0013
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.736,
+   "p_next_draw_wins_if_not_winning": 0.0083
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.736,
+   "p_next_draw_wins_if_not_winning": 0.0083
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.747,
+   "p_next_draw_wins_if_not_winning": 0.0086
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.152,
+   "p_next_draw_wins_if_not_winning": 0.0017
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 2,
+    "inf_finale": 2,
+    "inf_oracle": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.113,
+   "p_next_draw_wins_if_not_winning": 0.0129
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.052,
+   "p_next_draw_wins_if_not_winning": 0.0122
+  }
+ },
+ "C_oracle_core3": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.696,
+   "p_next_draw_wins_if_not_winning": 0.0193
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.956,
+   "p_next_draw_wins_if_not_winning": 0.0111
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.213,
+   "p_next_draw_wins_if_not_winning": 0.0254
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.06,
+   "p_det_now_ci95": [
+    0.03669,
+    0.09662
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15,
+    "inf_oracle": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 3.132,
+   "p_next_draw_wins_if_not_winning": 0.0352
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.128,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.012,
+   "p_det_now_ci95": [
+    0.00409,
+    0.03468
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.012,
+   "family_counts": {
+    "oracle_consult": 2,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.186,
+   "p_next_draw_wins_if_not_winning": 0.0133
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.301,
+   "p_next_draw_wins_if_not_winning": 0.0034
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.133,
+   "p_next_draw_wins_if_not_winning": 0.0015
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.124,
+   "p_det_now_ci95": [
+    0.08875,
+    0.17063
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.124,
+   "family_counts": {
+    "inf_finale": 30,
+    "inf_oracle": 31,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 4.123,
+   "p_next_draw_wins_if_not_winning": 0.0479
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.124,
+   "p_next_draw_wins_if_not_winning": 0.0013
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.04,
+   "p_det_now_ci95": [
+    0.02187,
+    0.07205
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.04,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7,
+    "inf_oracle": 7,
+    "oracle_consult": 2,
+    "oracle_pact": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 5.154,
+   "p_next_draw_wins_if_not_winning": 0.0573
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250,
+    "inf_oracle": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.032,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_finale": 7,
+    "inf_oracle": 6,
+    "oracle_consult": 1,
+    "oracle_pact": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 2.457,
+   "p_next_draw_wins_if_not_winning": 0.0279
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.016,
+   "family_counts": {
+    "inf_bowmasters": 4,
+    "inf_oracle": 4
+   },
+   "csa_mean_win_draws_if_not_winning": 0.951,
+   "p_next_draw_wins_if_not_winning": 0.0108
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.044,
+   "p_det_now_ci95": [
+    0.02474,
+    0.07706
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.044,
+   "family_counts": {
+    "oracle_pact": 3,
+    "inf_bowmasters": 9,
+    "inf_finale": 9,
+    "inf_oracle": 7,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 2.259,
+   "p_next_draw_wins_if_not_winning": 0.026
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.044,
+   "p_det_now_ci95": [
+    0.02474,
+    0.07706
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.044,
+   "family_counts": {
+    "oracle_pact": 3,
+    "inf_bowmasters": 9,
+    "inf_oracle": 7,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 2.163,
+   "p_next_draw_wins_if_not_winning": 0.0248
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.764,
+   "p_next_draw_wins_if_not_winning": 0.0085
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.18,
+   "p_next_draw_wins_if_not_winning": 0.002
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.052,
+   "p_next_draw_wins_if_not_winning": 0.0118
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.052,
+   "p_next_draw_wins_if_not_winning": 0.0118
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.016,
+   "family_counts": {
+    "inf_bowmasters": 4,
+    "inf_finale": 3,
+    "inf_oracle": 4,
+    "oracle_consult": 2,
+    "oracle_pact": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 0.809,
+   "p_next_draw_wins_if_not_winning": 0.0093
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1,
+    "oracle_consult": 1,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.137,
+   "p_next_draw_wins_if_not_winning": 0.0016
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_finale": 1,
+    "inf_oracle": 1,
+    "oracle_consult": 1,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.992,
+   "p_next_draw_wins_if_not_winning": 0.0115
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1,
+    "oracle_consult": 1,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.908,
+   "p_next_draw_wins_if_not_winning": 0.0105
+  }
+ },
+ "D_core3_spellseeker": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 2.648,
+   "p_next_draw_wins_if_not_winning": 0.0301
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.188,
+   "p_det_now_ci95": [
+    0.14443,
+    0.24102
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.188,
+   "family_counts": {
+    "inf_finale": 20,
+    "inf_oracle": 20,
+    "oracle_consult": 33,
+    "oracle_pact": 31
+   },
+   "csa_mean_win_draws_if_not_winning": 9.828,
+   "p_next_draw_wins_if_not_winning": 0.1143
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.5,
+   "p_next_draw_wins_if_not_winning": 0.0287
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.06,
+   "p_det_now_ci95": [
+    0.03669,
+    0.09662
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15,
+    "inf_oracle": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 3.221,
+   "p_next_draw_wins_if_not_winning": 0.0362
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.128,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.012,
+   "p_det_now_ci95": [
+    0.00409,
+    0.03468
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.012,
+   "family_counts": {
+    "oracle_consult": 2,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.255,
+   "p_next_draw_wins_if_not_winning": 0.0141
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.305,
+   "p_next_draw_wins_if_not_winning": 0.0034
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.133,
+   "p_next_draw_wins_if_not_winning": 0.0015
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.124,
+   "p_det_now_ci95": [
+    0.08875,
+    0.17063
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.124,
+   "family_counts": {
+    "inf_finale": 30,
+    "inf_oracle": 31,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 4.192,
+   "p_next_draw_wins_if_not_winning": 0.0487
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.124,
+   "p_next_draw_wins_if_not_winning": 0.0013
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.04,
+   "p_det_now_ci95": [
+    0.02187,
+    0.07205
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.04,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7,
+    "inf_oracle": 7,
+    "oracle_consult": 2,
+    "oracle_pact": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 5.154,
+   "p_next_draw_wins_if_not_winning": 0.0573
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250,
+    "inf_oracle": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.052,
+   "p_det_now_ci95": [
+    0.03064,
+    0.08692
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.052,
+   "family_counts": {
+    "inf_bowmasters": 11,
+    "inf_finale": 11,
+    "inf_oracle": 9,
+    "oracle_consult": 3,
+    "oracle_pact": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 3.338,
+   "p_next_draw_wins_if_not_winning": 0.0379
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.02,
+   "p_det_now_ci95": [
+    0.00857,
+    0.04596
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.02,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_oracle": 5
+   },
+   "csa_mean_win_draws_if_not_winning": 1.061,
+   "p_next_draw_wins_if_not_winning": 0.0121
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.068,
+   "p_det_now_ci95": [
+    0.04289,
+    0.10619
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.068,
+   "family_counts": {
+    "oracle_pact": 4,
+    "inf_bowmasters": 15,
+    "inf_finale": 15,
+    "inf_oracle": 13,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 3.107,
+   "p_next_draw_wins_if_not_winning": 0.0357
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.056,
+   "p_det_now_ci95": [
+    0.03365,
+    0.09179
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.056,
+   "family_counts": {
+    "oracle_pact": 4,
+    "inf_bowmasters": 12,
+    "inf_oracle": 10,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 2.941,
+   "p_next_draw_wins_if_not_winning": 0.0338
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.12,
+   "p_next_draw_wins_if_not_winning": 0.0124
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.18,
+   "p_next_draw_wins_if_not_winning": 0.002
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.54,
+   "p_next_draw_wins_if_not_winning": 0.0173
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.436,
+   "p_next_draw_wins_if_not_winning": 0.0161
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.02,
+   "p_det_now_ci95": [
+    0.00857,
+    0.04596
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.02,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_finale": 4,
+    "inf_oracle": 5,
+    "oracle_consult": 3,
+    "oracle_pact": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.11,
+   "p_next_draw_wins_if_not_winning": 0.0128
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1,
+    "oracle_consult": 1,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.157,
+   "p_next_draw_wins_if_not_winning": 0.0018
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.012,
+   "p_det_now_ci95": [
+    0.00409,
+    0.03468
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.012,
+   "family_counts": {
+    "inf_bowmasters": 2,
+    "inf_finale": 1,
+    "inf_oracle": 2,
+    "oracle_consult": 3,
+    "oracle_pact": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.251,
+   "p_next_draw_wins_if_not_winning": 0.0145
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.012,
+   "p_det_now_ci95": [
+    0.00409,
+    0.03468
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.012,
+   "family_counts": {
+    "inf_bowmasters": 2,
+    "inf_oracle": 2,
+    "oracle_consult": 3,
+    "oracle_pact": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.049,
+   "p_next_draw_wins_if_not_winning": 0.0122
+  }
+ },
+ "D2_oracle_consult_spellseeker": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 2.52,
+   "p_next_draw_wins_if_not_winning": 0.0286
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.168,
+   "p_det_now_ci95": [
+    0.12676,
+    0.21929
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.168,
+   "family_counts": {
+    "inf_finale": 20,
+    "inf_oracle": 20,
+    "oracle_consult": 33
+   },
+   "csa_mean_win_draws_if_not_winning": 8.784,
+   "p_next_draw_wins_if_not_winning": 0.1021
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.459,
+   "p_next_draw_wins_if_not_winning": 0.0283
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.06,
+   "p_det_now_ci95": [
+    0.03669,
+    0.09662
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15,
+    "inf_oracle": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 3.221,
+   "p_next_draw_wins_if_not_winning": 0.0362
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.12,
+   "p_next_draw_wins_if_not_winning": 0.0013
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.077,
+   "p_next_draw_wins_if_not_winning": 0.0121
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.228,
+   "p_next_draw_wins_if_not_winning": 0.0026
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.088,
+   "p_next_draw_wins_if_not_winning": 0.001
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.124,
+   "p_det_now_ci95": [
+    0.08875,
+    0.17063
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.124,
+   "family_counts": {
+    "inf_finale": 30,
+    "inf_oracle": 31,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 4.151,
+   "p_next_draw_wins_if_not_winning": 0.0483
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.104,
+   "p_next_draw_wins_if_not_winning": 0.0011
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.036,
+   "p_det_now_ci95": [
+    0.01905,
+    0.06699
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.036,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7,
+    "inf_oracle": 7,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 4.154,
+   "p_next_draw_wins_if_not_winning": 0.0462
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250,
+    "inf_oracle": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.056,
+   "p_det_now_ci95": [
+    0.03365,
+    0.09179
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.056,
+   "family_counts": {
+    "inf_bowmasters": 13,
+    "inf_finale": 12,
+    "inf_oracle": 13,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 2.525,
+   "p_next_draw_wins_if_not_winning": 0.0287
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 2,
+    "inf_oracle": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 0.75,
+   "p_next_draw_wins_if_not_winning": 0.0085
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.048,
+   "p_det_now_ci95": [
+    0.02767,
+    0.08201
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.048,
+   "family_counts": {
+    "inf_bowmasters": 10,
+    "inf_finale": 10,
+    "inf_oracle": 10,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 2.513,
+   "p_next_draw_wins_if_not_winning": 0.0289
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.044,
+   "p_det_now_ci95": [
+    0.02474,
+    0.07706
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.044,
+   "family_counts": {
+    "inf_bowmasters": 9,
+    "inf_oracle": 9,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 2.226,
+   "p_next_draw_wins_if_not_winning": 0.0256
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.968,
+   "p_next_draw_wins_if_not_winning": 0.0108
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.124,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.18,
+   "p_next_draw_wins_if_not_winning": 0.0133
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.076,
+   "p_next_draw_wins_if_not_winning": 0.0121
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.016,
+   "family_counts": {
+    "inf_bowmasters": 4,
+    "inf_finale": 3,
+    "inf_oracle": 4,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.016,
+   "p_next_draw_wins_if_not_winning": 0.0117
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.149,
+   "p_next_draw_wins_if_not_winning": 0.0017
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_finale": 6,
+    "inf_oracle": 6,
+    "oracle_consult": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.361,
+   "p_next_draw_wins_if_not_winning": 0.0158
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.012,
+   "p_det_now_ci95": [
+    0.00409,
+    0.03468
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.012,
+   "family_counts": {
+    "inf_bowmasters": 3,
+    "inf_oracle": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.296,
+   "p_next_draw_wins_if_not_winning": 0.0151
+  }
+ },
+ "E_D_plus_Borne_Upon_a_Wind": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 2.648,
+   "p_next_draw_wins_if_not_winning": 0.0301
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.184,
+   "p_det_now_ci95": [
+    0.14087,
+    0.23669
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.184,
+   "family_counts": {
+    "inf_finale": 20,
+    "inf_oracle": 20,
+    "oracle_consult": 32,
+    "oracle_pact": 31
+   },
+   "csa_mean_win_draws_if_not_winning": 9.892,
+   "p_next_draw_wins_if_not_winning": 0.115
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.5,
+   "p_next_draw_wins_if_not_winning": 0.0287
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.06,
+   "p_det_now_ci95": [
+    0.03669,
+    0.09662
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15,
+    "inf_oracle": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 3.221,
+   "p_next_draw_wins_if_not_winning": 0.0362
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.14,
+   "p_next_draw_wins_if_not_winning": 0.0016
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.012,
+   "p_det_now_ci95": [
+    0.00409,
+    0.03468
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.012,
+   "family_counts": {
+    "oracle_consult": 2,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.255,
+   "p_next_draw_wins_if_not_winning": 0.0141
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.305,
+   "p_next_draw_wins_if_not_winning": 0.0034
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.133,
+   "p_next_draw_wins_if_not_winning": 0.0015
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.124,
+   "p_det_now_ci95": [
+    0.08875,
+    0.17063
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.124,
+   "family_counts": {
+    "inf_finale": 30,
+    "inf_oracle": 31,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 4.192,
+   "p_next_draw_wins_if_not_winning": 0.0487
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.124,
+   "p_next_draw_wins_if_not_winning": 0.0013
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.04,
+   "p_det_now_ci95": [
+    0.02187,
+    0.07205
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.04,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7,
+    "inf_oracle": 7,
+    "oracle_consult": 2,
+    "oracle_pact": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 5.154,
+   "p_next_draw_wins_if_not_winning": 0.0573
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250,
+    "inf_oracle": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.052,
+   "p_det_now_ci95": [
+    0.03064,
+    0.08692
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.052,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 12,
+    "inf_oracle": 12,
+    "oracle_consult": 5,
+    "oracle_pact": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 3.249,
+   "p_next_draw_wins_if_not_winning": 0.0369
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_oracle": 6,
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.004,
+   "p_next_draw_wins_if_not_winning": 0.0114
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.056,
+   "p_det_now_ci95": [
+    0.03365,
+    0.09179
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.056,
+   "family_counts": {
+    "oracle_pact": 5,
+    "inf_bowmasters": 11,
+    "inf_finale": 12,
+    "inf_oracle": 12,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 3.381,
+   "p_next_draw_wins_if_not_winning": 0.0389
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.052,
+   "p_det_now_ci95": [
+    0.03064,
+    0.08692
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.052,
+   "family_counts": {
+    "oracle_pact": 5,
+    "inf_bowmasters": 10,
+    "inf_oracle": 11,
+    "oracle_consult": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 3.135,
+   "p_next_draw_wins_if_not_winning": 0.036
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.212,
+   "p_next_draw_wins_if_not_winning": 0.0135
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.204,
+   "p_next_draw_wins_if_not_winning": 0.0023
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.652,
+   "p_next_draw_wins_if_not_winning": 0.0186
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.536,
+   "p_next_draw_wins_if_not_winning": 0.0173
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.016,
+   "family_counts": {
+    "oracle_pact": 3,
+    "inf_bowmasters": 2,
+    "inf_finale": 2,
+    "inf_oracle": 1,
+    "oracle_consult": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.22,
+   "p_next_draw_wins_if_not_winning": 0.014
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "oracle_pact": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.173,
+   "p_next_draw_wins_if_not_winning": 0.002
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.036,
+   "p_det_now_ci95": [
+    0.01905,
+    0.06699
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.036,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_finale": 4,
+    "inf_oracle": 4,
+    "oracle_consult": 2,
+    "oracle_pact": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.257,
+   "p_next_draw_wins_if_not_winning": 0.0146
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.032,
+   "p_det_now_ci95": [
+    0.0163,
+    0.06186
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.032,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_oracle": 4,
+    "oracle_consult": 2,
+    "oracle_pact": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.074,
+   "p_next_draw_wins_if_not_winning": 0.0125
+  }
+ },
+ "F_oracle_hermit_shangchi": {
+  "S01_azms8_r1_mana_rich_low_cards": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 1.304,
+   "p_next_draw_wins_if_not_winning": 0.0148
+  },
+  "S02_azms8_r2_pod_engine_no_outlet": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.373,
+   "p_next_draw_wins_if_not_winning": 0.0043
+  },
+  "S03_geekery_r4_cradle_board_low_colour": {
+   "n": 250,
+   "p_det_now": 0.024,
+   "p_det_now_ci95": [
+    0.01104,
+    0.05136
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.024,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6
+   },
+   "csa_mean_win_draws_if_not_winning": 2.266,
+   "p_next_draw_wins_if_not_winning": 0.0261
+  },
+  "S04_natures_rhythm_countered": {
+   "n": 250,
+   "p_det_now": 0.06,
+   "p_det_now_ci95": [
+    0.03669,
+    0.09662
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.06,
+   "family_counts": {
+    "inf_bowmasters": 12,
+    "inf_finale": 15,
+    "inf_oracle": 15
+   },
+   "csa_mean_win_draws_if_not_winning": 3.128,
+   "p_next_draw_wins_if_not_winning": 0.0351
+  },
+  "S05_shields_down_after_stopping_a_win": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.056,
+   "p_next_draw_wins_if_not_winning": 0.0006
+  },
+  "S06_shields_down_high_fae_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.556,
+   "p_next_draw_wins_if_not_winning": 0.0062
+  },
+  "S07_shields_down_teferi_active": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.128,
+   "p_next_draw_wins_if_not_winning": 0.0014
+  },
+  "S08_crop_rotation_for_emergence_zone": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.052,
+   "p_next_draw_wins_if_not_winning": 0.0006
+  },
+  "S09_engine_partially_disrupted": {
+   "n": 250,
+   "p_det_now": 0.124,
+   "p_det_now_ci95": [
+    0.08875,
+    0.17063
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.124,
+   "family_counts": {
+    "inf_finale": 30,
+    "inf_oracle": 31
+   },
+   "csa_mean_win_draws_if_not_winning": 3.845,
+   "p_next_draw_wins_if_not_winning": 0.0447
+  },
+  "S10_low_card_mulligan_state": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.06,
+   "p_next_draw_wins_if_not_winning": 0.0007
+  },
+  "S11_empty_board_tutors_and_mana": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 7,
+    "inf_finale": 7,
+    "inf_oracle": 7
+   },
+   "csa_mean_win_draws_if_not_winning": 2.0,
+   "p_next_draw_wins_if_not_winning": 0.0222
+  },
+  "S12_geekery_r2_druid_plus_enlightened": {
+   "n": 250,
+   "p_det_now": 1.0,
+   "p_det_now_ci95": [
+    0.98487,
+    1.0
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 1.0,
+   "family_counts": {
+    "inf_bowmasters": 250,
+    "inf_finale": 250,
+    "inf_oracle": 250
+   },
+   "csa_mean_win_draws_if_not_winning": null,
+   "p_next_draw_wins_if_not_winning": null
+  },
+  "S13_geekery_r3_oculus_threatened": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.0,
+   "p_next_draw_wins_if_not_winning": 0.0
+  },
+  "post_fight|none|main": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 4,
+    "inf_finale": 5,
+    "inf_oracle": 5,
+    "oracle_hermit": 3
+   },
+   "csa_mean_win_draws_if_not_winning": 1.724,
+   "p_next_draw_wins_if_not_winning": 0.0196
+  },
+  "post_fight|none|instant": {
+   "n": 250,
+   "p_det_now": 0.004,
+   "p_det_now_ci95": [
+    0.00071,
+    0.02231
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.004,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.554,
+   "p_next_draw_wins_if_not_winning": 0.0063
+  },
+  "post_fight|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.032,
+   "p_det_now_ci95": [
+    0.0163,
+    0.06186
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.032,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_finale": 6,
+    "inf_oracle": 6,
+    "oracle_hermit": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.64,
+   "p_next_draw_wins_if_not_winning": 0.0188
+  },
+  "post_fight|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.032,
+   "p_det_now_ci95": [
+    0.0163,
+    0.06186
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.032,
+   "family_counts": {
+    "inf_bowmasters": 6,
+    "inf_oracle": 6,
+    "oracle_hermit": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.533,
+   "p_next_draw_wins_if_not_winning": 0.0176
+  },
+  "low_hand_high_mana|none|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.592,
+   "p_next_draw_wins_if_not_winning": 0.0066
+  },
+  "low_hand_high_mana|none|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.076,
+   "p_next_draw_wins_if_not_winning": 0.0008
+  },
+  "low_hand_high_mana|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.6,
+   "p_next_draw_wins_if_not_winning": 0.0067
+  },
+  "low_hand_high_mana|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.0,
+   "p_det_now_ci95": [
+    0.0,
+    0.01513
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.0,
+   "family_counts": {},
+   "csa_mean_win_draws_if_not_winning": 0.6,
+   "p_next_draw_wins_if_not_winning": 0.0067
+  },
+  "high_board_low_colour|none|main": {
+   "n": 250,
+   "p_det_now": 0.016,
+   "p_det_now_ci95": [
+    0.00624,
+    0.04041
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.016,
+   "family_counts": {
+    "oracle_hermit": 3,
+    "inf_bowmasters": 1,
+    "inf_finale": 1,
+    "inf_oracle": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 1.642,
+   "p_next_draw_wins_if_not_winning": 0.0189
+  },
+  "high_board_low_colour|none|instant": {
+   "n": 250,
+   "p_det_now": 0.008,
+   "p_det_now_ci95": [
+    0.0022,
+    0.0287
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.008,
+   "family_counts": {
+    "inf_bowmasters": 1,
+    "inf_oracle": 1,
+    "oracle_hermit": 1
+   },
+   "csa_mean_win_draws_if_not_winning": 0.407,
+   "p_next_draw_wins_if_not_winning": 0.0047
+  },
+  "high_board_low_colour|enabler|main": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_finale": 4,
+    "inf_oracle": 4,
+    "oracle_hermit": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.959,
+   "p_next_draw_wins_if_not_winning": 0.0227
+  },
+  "high_board_low_colour|enabler|instant": {
+   "n": 250,
+   "p_det_now": 0.028,
+   "p_det_now_ci95": [
+    0.01363,
+    0.05666
+   ],
+   "p_protected_now": 0.0,
+   "p_nondet_or_det_now": 0.028,
+   "family_counts": {
+    "inf_bowmasters": 5,
+    "inf_oracle": 4,
+    "oracle_hermit": 2
+   },
+   "csa_mean_win_draws_if_not_winning": 1.848,
+   "p_next_draw_wins_if_not_winning": 0.0215
+  }
+ }
+}

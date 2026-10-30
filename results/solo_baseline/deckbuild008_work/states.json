@@ -959,5 +959,1020 @@
     "p_dead_even_with_unlimited_mana": 0.2857
    }
   }
+ },
+ "D_core3_spellseeker": {
+  "t1_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.79,
+   "csa_win_draws_mean": 0.003,
+   "csa_piece_draws_mean": 0.003,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.107,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0033
+  },
+  "t1_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.39,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t2_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0033,
+   "p_already_protected": 0.0,
+   "mean_library": 89.39,
+   "csa_win_draws_mean": 0.157,
+   "csa_piece_draws_mean": 0.14,
+   "csa_tutor_draws_mean": 0.017,
+   "csa_protected_draws_mean": 0.084,
+   "csa_nondet_draws_mean": 0.435,
+   "p_next_draw_wins": 0.0018,
+   "p_any_winning_draw_exists": 0.0535
+  },
+  "t2_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 89.19,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t3_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0233,
+   "p_already_protected": 0.0033,
+   "mean_library": 88.19,
+   "csa_win_draws_mean": 1.317,
+   "csa_piece_draws_mean": 1.143,
+   "csa_tutor_draws_mean": 0.174,
+   "csa_protected_draws_mean": 0.307,
+   "csa_nondet_draws_mean": 0.447,
+   "p_next_draw_wins": 0.0149,
+   "p_any_winning_draw_exists": 0.2287
+  },
+  "t3_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 88.11,
+   "csa_win_draws_mean": 0.03,
+   "csa_piece_draws_mean": 0.03,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.003,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0003,
+   "p_any_winning_draw_exists": 0.03
+  },
+  "t4_main": {
+   "n_states": 300,
+   "p_already_winning": 0.1067,
+   "p_already_protected": 0.03,
+   "mean_library": 87.11,
+   "csa_win_draws_mean": 3.403,
+   "csa_piece_draws_mean": 2.802,
+   "csa_tutor_draws_mean": 0.601,
+   "csa_protected_draws_mean": 1.183,
+   "csa_nondet_draws_mean": 0.601,
+   "p_next_draw_wins": 0.039,
+   "p_any_winning_draw_exists": 0.4216
+  },
+  "t4_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0067,
+   "p_already_protected": 0.0033,
+   "mean_library": 87.0,
+   "csa_win_draws_mean": 0.077,
+   "csa_piece_draws_mean": 0.047,
+   "csa_tutor_draws_mean": 0.03,
+   "csa_protected_draws_mean": 0.013,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0009,
+   "p_any_winning_draw_exists": 0.0638
+  },
+  "tutor_leverage_t3_t4": {
+   "Birthing Pod": {
+    "n_states_held": 65,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.4769,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 50,
+    "immediate_win": 0.02,
+    "one_turn_setup_win": 0.74,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 64,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 39,
+    "immediate_win": 0.0769,
+    "one_turn_setup_win": 0.7179,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 59,
+    "immediate_win": 0.0339,
+    "one_turn_setup_win": 0.5763,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 65,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.5846,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 59,
+    "immediate_win": 0.0339,
+    "one_turn_setup_win": 0.8305,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 21,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.9048,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 62,
+    "immediate_win": 0.0806,
+    "one_turn_setup_win": 0.8871,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 79,
+    "immediate_win": 0.0633,
+    "one_turn_setup_win": 0.443,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 68,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0147,
+    "engine_access": 0.8088,
+    "protection_access": 0.0
+   },
+   "Spellseeker": {
+    "n_states_held": 64,
+    "immediate_win": 0.0469,
+    "one_turn_setup_win": 0.6562,
+    "engine_access": 0.0,
+    "protection_access": 1.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 14,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.8571,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Tainted Pact": {
+    "n_states_held": 50,
+    "immediate_win": 0.14,
+    "one_turn_setup_win": 0.76,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 43,
+    "immediate_win": 0.0465,
+    "one_turn_setup_win": 0.7209,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
+  "resilience_given_det_win": {
+   "board_wipe_creatures": {
+    "n": 39,
+    "p_still_det": 0.1282
+   },
+   "artifact_removal_all": {
+    "n": 39,
+    "p_still_det": 0.6923
+   },
+   "graveyard_exiled": {
+    "n": 39,
+    "p_still_det": 1.0
+   },
+   "creature_abilities_suppressed": {
+    "n": 39,
+    "p_still_det": 0.6667
+   },
+   "lose_thrasios": {
+    "n": 39,
+    "p_still_det": 0.4615
+   },
+   "lose_pod": {
+    "n": 39,
+    "p_still_det": 0.7949
+   },
+   "single_piece_loss_survival": {
+    "n": 39,
+    "p_still_det": 0.1834
+   }
+  },
+  "dead_card_t4": {
+   "Spellseeker": {
+    "held_at_end_t4": 34,
+    "p_dead_even_with_unlimited_mana": 0.2941
+   },
+   "Thassa's Oracle": {
+    "held_at_end_t4": 25,
+    "p_dead_even_with_unlimited_mana": 0.28
+   },
+   "Demonic Consultation": {
+    "held_at_end_t4": 27,
+    "p_dead_even_with_unlimited_mana": 0.2593
+   },
+   "Tainted Pact": {
+    "held_at_end_t4": 28,
+    "p_dead_even_with_unlimited_mana": 0.1786
+   }
+  }
+ },
+ "D2_oracle_consult_spellseeker": {
+  "t1_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.78,
+   "csa_win_draws_mean": 0.003,
+   "csa_piece_draws_mean": 0.003,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.107,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0033
+  },
+  "t1_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.38,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t2_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 89.38,
+   "csa_win_draws_mean": 0.14,
+   "csa_piece_draws_mean": 0.127,
+   "csa_tutor_draws_mean": 0.013,
+   "csa_protected_draws_mean": 0.083,
+   "csa_nondet_draws_mean": 0.43,
+   "p_next_draw_wins": 0.0016,
+   "p_any_winning_draw_exists": 0.05
+  },
+  "t2_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 89.19,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t3_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0167,
+   "p_already_protected": 0.0033,
+   "mean_library": 88.19,
+   "csa_win_draws_mean": 1.139,
+   "csa_piece_draws_mean": 0.976,
+   "csa_tutor_draws_mean": 0.163,
+   "csa_protected_draws_mean": 0.292,
+   "csa_nondet_draws_mean": 0.437,
+   "p_next_draw_wins": 0.0129,
+   "p_any_winning_draw_exists": 0.2136
+  },
+  "t3_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 88.1,
+   "csa_win_draws_mean": 0.03,
+   "csa_piece_draws_mean": 0.03,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.003,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0003,
+   "p_any_winning_draw_exists": 0.03
+  },
+  "t4_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0867,
+   "p_already_protected": 0.0233,
+   "mean_library": 87.1,
+   "csa_win_draws_mean": 2.883,
+   "csa_piece_draws_mean": 2.332,
+   "csa_tutor_draws_mean": 0.551,
+   "csa_protected_draws_mean": 0.927,
+   "csa_nondet_draws_mean": 0.591,
+   "p_next_draw_wins": 0.033,
+   "p_any_winning_draw_exists": 0.4088
+  },
+  "t4_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0067,
+   "p_already_protected": 0.0033,
+   "mean_library": 87.0,
+   "csa_win_draws_mean": 0.074,
+   "csa_piece_draws_mean": 0.047,
+   "csa_tutor_draws_mean": 0.027,
+   "csa_protected_draws_mean": 0.01,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0008,
+   "p_any_winning_draw_exists": 0.0604
+  },
+  "tutor_leverage_t3_t4": {
+   "Birthing Pod": {
+    "n_states_held": 71,
+    "immediate_win": 0.0141,
+    "one_turn_setup_win": 0.493,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 50,
+    "immediate_win": 0.02,
+    "one_turn_setup_win": 0.74,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 62,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 37,
+    "immediate_win": 0.0811,
+    "one_turn_setup_win": 0.7027,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 61,
+    "immediate_win": 0.0164,
+    "one_turn_setup_win": 0.5902,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 62,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.5323,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 60,
+    "immediate_win": 0.0167,
+    "one_turn_setup_win": 0.8333,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 21,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.9048,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 59,
+    "immediate_win": 0.0678,
+    "one_turn_setup_win": 0.8305,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 79,
+    "immediate_win": 0.0633,
+    "one_turn_setup_win": 0.3797,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 70,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0143,
+    "engine_access": 0.8143,
+    "protection_access": 0.0
+   },
+   "Spellseeker": {
+    "n_states_held": 52,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.6346,
+    "engine_access": 0.0,
+    "protection_access": 1.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 16,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.75,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 41,
+    "immediate_win": 0.0488,
+    "one_turn_setup_win": 0.6341,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
+  "resilience_given_det_win": {
+   "board_wipe_creatures": {
+    "n": 31,
+    "p_still_det": 0.0645
+   },
+   "artifact_removal_all": {
+    "n": 31,
+    "p_still_det": 0.6452
+   },
+   "graveyard_exiled": {
+    "n": 31,
+    "p_still_det": 1.0
+   },
+   "creature_abilities_suppressed": {
+    "n": 31,
+    "p_still_det": 0.6774
+   },
+   "lose_thrasios": {
+    "n": 31,
+    "p_still_det": 0.3548
+   },
+   "lose_pod": {
+    "n": 31,
+    "p_still_det": 0.7419
+   },
+   "single_piece_loss_survival": {
+    "n": 31,
+    "p_still_det": 0.18
+   }
+  },
+  "dead_card_t4": {
+   "Thassa's Oracle": {
+    "held_at_end_t4": 24,
+    "p_dead_even_with_unlimited_mana": 0.2917
+   },
+   "Demonic Consultation": {
+    "held_at_end_t4": 26,
+    "p_dead_even_with_unlimited_mana": 0.2692
+   },
+   "Spellseeker": {
+    "held_at_end_t4": 29,
+    "p_dead_even_with_unlimited_mana": 0.3103
+   }
+  }
+ },
+ "E_D_plus_Borne_Upon_a_Wind": {
+  "t1_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.8,
+   "csa_win_draws_mean": 0.003,
+   "csa_piece_draws_mean": 0.003,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.107,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0033
+  },
+  "t1_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.4,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t2_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0033,
+   "p_already_protected": 0.0,
+   "mean_library": 89.4,
+   "csa_win_draws_mean": 0.157,
+   "csa_piece_draws_mean": 0.14,
+   "csa_tutor_draws_mean": 0.017,
+   "csa_protected_draws_mean": 0.084,
+   "csa_nondet_draws_mean": 0.438,
+   "p_next_draw_wins": 0.0018,
+   "p_any_winning_draw_exists": 0.0535
+  },
+  "t2_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 89.2,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t3_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0233,
+   "p_already_protected": 0.0033,
+   "mean_library": 88.2,
+   "csa_win_draws_mean": 1.294,
+   "csa_piece_draws_mean": 1.119,
+   "csa_tutor_draws_mean": 0.174,
+   "csa_protected_draws_mean": 0.314,
+   "csa_nondet_draws_mean": 0.454,
+   "p_next_draw_wins": 0.0146,
+   "p_any_winning_draw_exists": 0.2287
+  },
+  "t3_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 88.12,
+   "csa_win_draws_mean": 0.033,
+   "csa_piece_draws_mean": 0.03,
+   "csa_tutor_draws_mean": 0.003,
+   "csa_protected_draws_mean": 0.003,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0004,
+   "p_any_winning_draw_exists": 0.03
+  },
+  "t4_main": {
+   "n_states": 300,
+   "p_already_winning": 0.1067,
+   "p_already_protected": 0.03,
+   "mean_library": 87.12,
+   "csa_win_draws_mean": 3.31,
+   "csa_piece_draws_mean": 2.701,
+   "csa_tutor_draws_mean": 0.608,
+   "csa_protected_draws_mean": 1.183,
+   "csa_nondet_draws_mean": 0.604,
+   "p_next_draw_wins": 0.038,
+   "p_any_winning_draw_exists": 0.4216
+  },
+  "t4_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.01,
+   "p_already_protected": 0.0033,
+   "mean_library": 87.01,
+   "csa_win_draws_mean": 0.067,
+   "csa_piece_draws_mean": 0.044,
+   "csa_tutor_draws_mean": 0.024,
+   "csa_protected_draws_mean": 0.013,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0008,
+   "p_any_winning_draw_exists": 0.0572
+  },
+  "tutor_leverage_t3_t4": {
+   "Birthing Pod": {
+    "n_states_held": 65,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.4769,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 50,
+    "immediate_win": 0.02,
+    "one_turn_setup_win": 0.74,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 64,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 39,
+    "immediate_win": 0.0769,
+    "one_turn_setup_win": 0.7179,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 59,
+    "immediate_win": 0.0339,
+    "one_turn_setup_win": 0.5763,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 63,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.5714,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 59,
+    "immediate_win": 0.0339,
+    "one_turn_setup_win": 0.8305,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 21,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.9048,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 59,
+    "immediate_win": 0.0847,
+    "one_turn_setup_win": 0.8814,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 77,
+    "immediate_win": 0.0649,
+    "one_turn_setup_win": 0.4286,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 70,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0143,
+    "engine_access": 0.8143,
+    "protection_access": 0.0
+   },
+   "Spellseeker": {
+    "n_states_held": 66,
+    "immediate_win": 0.0455,
+    "one_turn_setup_win": 0.6667,
+    "engine_access": 0.0,
+    "protection_access": 1.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 14,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.8571,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Tainted Pact": {
+    "n_states_held": 50,
+    "immediate_win": 0.14,
+    "one_turn_setup_win": 0.76,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 43,
+    "immediate_win": 0.0465,
+    "one_turn_setup_win": 0.7209,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
+  "resilience_given_det_win": {
+   "board_wipe_creatures": {
+    "n": 39,
+    "p_still_det": 0.1282
+   },
+   "artifact_removal_all": {
+    "n": 39,
+    "p_still_det": 0.6923
+   },
+   "graveyard_exiled": {
+    "n": 39,
+    "p_still_det": 1.0
+   },
+   "creature_abilities_suppressed": {
+    "n": 39,
+    "p_still_det": 0.6667
+   },
+   "lose_thrasios": {
+    "n": 39,
+    "p_still_det": 0.4615
+   },
+   "lose_pod": {
+    "n": 39,
+    "p_still_det": 0.7949
+   },
+   "single_piece_loss_survival": {
+    "n": 39,
+    "p_still_det": 0.1834
+   }
+  },
+  "dead_card_t4": {
+   "Spellseeker": {
+    "held_at_end_t4": 35,
+    "p_dead_even_with_unlimited_mana": 0.2857
+   },
+   "Thassa's Oracle": {
+    "held_at_end_t4": 25,
+    "p_dead_even_with_unlimited_mana": 0.32
+   },
+   "Demonic Consultation": {
+    "held_at_end_t4": 28,
+    "p_dead_even_with_unlimited_mana": 0.25
+   },
+   "Tainted Pact": {
+    "held_at_end_t4": 28,
+    "p_dead_even_with_unlimited_mana": 0.1786
+   }
+  }
+ },
+ "F_oracle_hermit_shangchi": {
+  "t1_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.8,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.107,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t1_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 90.4,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t2_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 89.4,
+   "csa_win_draws_mean": 0.023,
+   "csa_piece_draws_mean": 0.023,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.003,
+   "csa_nondet_draws_mean": 0.433,
+   "p_next_draw_wins": 0.0003,
+   "p_any_winning_draw_exists": 0.02
+  },
+  "t2_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 89.21,
+   "csa_win_draws_mean": 0.0,
+   "csa_piece_draws_mean": 0.0,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.0,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0,
+   "p_any_winning_draw_exists": 0.0
+  },
+  "t3_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0067,
+   "p_already_protected": 0.0,
+   "mean_library": 88.21,
+   "csa_win_draws_mean": 0.711,
+   "csa_piece_draws_mean": 0.644,
+   "csa_tutor_draws_mean": 0.067,
+   "csa_protected_draws_mean": 0.154,
+   "csa_nondet_draws_mean": 0.436,
+   "p_next_draw_wins": 0.008,
+   "p_any_winning_draw_exists": 0.151
+  },
+  "t3_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0,
+   "p_already_protected": 0.0,
+   "mean_library": 88.12,
+   "csa_win_draws_mean": 0.03,
+   "csa_piece_draws_mean": 0.03,
+   "csa_tutor_draws_mean": 0.0,
+   "csa_protected_draws_mean": 0.003,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0003,
+   "p_any_winning_draw_exists": 0.03
+  },
+  "t4_main": {
+   "n_states": 300,
+   "p_already_winning": 0.0567,
+   "p_already_protected": 0.0133,
+   "mean_library": 87.12,
+   "csa_win_draws_mean": 1.64,
+   "csa_piece_draws_mean": 1.272,
+   "csa_tutor_draws_mean": 0.367,
+   "csa_protected_draws_mean": 0.484,
+   "csa_nondet_draws_mean": 0.647,
+   "p_next_draw_wins": 0.0188,
+   "p_any_winning_draw_exists": 0.3569
+  },
+  "t4_instant": {
+   "n_states": 300,
+   "p_already_winning": 0.0067,
+   "p_already_protected": 0.0033,
+   "mean_library": 87.01,
+   "csa_win_draws_mean": 0.07,
+   "csa_piece_draws_mean": 0.044,
+   "csa_tutor_draws_mean": 0.027,
+   "csa_protected_draws_mean": 0.013,
+   "csa_nondet_draws_mean": 0.0,
+   "p_next_draw_wins": 0.0008,
+   "p_any_winning_draw_exists": 0.0604
+  },
+  "tutor_leverage_t3_t4": {
+   "Birthing Pod": {
+    "n_states_held": 72,
+    "immediate_win": 0.0139,
+    "one_turn_setup_win": 0.1667,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 50,
+    "immediate_win": 0.02,
+    "one_turn_setup_win": 0.3,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 62,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 37,
+    "immediate_win": 0.0811,
+    "one_turn_setup_win": 0.7027,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 59,
+    "immediate_win": 0.0339,
+    "one_turn_setup_win": 0.3559,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 64,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.5,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 58,
+    "immediate_win": 0.0345,
+    "one_turn_setup_win": 0.2414,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 21,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.8571,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 60,
+    "immediate_win": 0.0167,
+    "one_turn_setup_win": 0.4333,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 81,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0617,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 70,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0143,
+    "engine_access": 0.8143,
+    "protection_access": 0.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 16,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.375,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 41,
+    "immediate_win": 0.0488,
+    "one_turn_setup_win": 0.6341,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
+  "resilience_given_det_win": {
+   "board_wipe_creatures": {
+    "n": 19,
+    "p_still_det": 0.0
+   },
+   "artifact_removal_all": {
+    "n": 19,
+    "p_still_det": 0.6842
+   },
+   "graveyard_exiled": {
+    "n": 19,
+    "p_still_det": 1.0
+   },
+   "creature_abilities_suppressed": {
+    "n": 19,
+    "p_still_det": 0.6316
+   },
+   "lose_thrasios": {
+    "n": 19,
+    "p_still_det": 0.1053
+   },
+   "lose_pod": {
+    "n": 19,
+    "p_still_det": 0.8421
+   },
+   "single_piece_loss_survival": {
+    "n": 19,
+    "p_still_det": 0.1487
+   }
+  },
+  "dead_card_t4": {
+   "Thassa's Oracle": {
+    "held_at_end_t4": 23,
+    "p_dead_even_with_unlimited_mana": 0.8696
+   },
+   "Shang-Chi, Master of Kung Fu": {
+    "held_at_end_t4": 10,
+    "p_dead_even_with_unlimited_mana": 0.7
+   },
+   "Hermit Druid": {
+    "held_at_end_t4": 12,
+    "p_dead_even_with_unlimited_mana": 1.0
+   }
+  }
  }
 }
