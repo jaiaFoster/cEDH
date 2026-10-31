@@ -86,21 +86,24 @@ def main():
         "role": "subject",
         "cards": cards,
         "source": {
-            "type": "moxfield_public_deck",
+            # decklist.schema.json enum: the pilot's own public Moxfield list is user-supplied.
+            "type": "user_supplied",
             "reference": mox["source"]["url"],
+            "date": mox["moxfield_updated_at"][:10],
+            "platform": "moxfield_public_deck",
             "moxfield_version": mox["moxfield_version"],
             "moxfield_updated_at": mox["moxfield_updated_at"],
             "moxfield_content_hash": mox["content_hash"],
             "live_refetch": "2026-10-30 (unchanged)",
+            "reconciliation": {
+                "topdeck_registrations": reconciliation,
+                "borne_upon_a_wind": (
+                    "Named in the Geekery/Flagstaff round-3 photo transcription only. Absent from all "
+                    "11 stored Moxfield snapshots and from both TopDeck registrations; not baseline. "
+                    "Evaluated as a candidate add (variant E)."),
+            },
         },
-        "reconciliation": {
-            "topdeck_registrations": reconciliation,
-            "borne_upon_a_wind": (
-                "Named in the Geekery/Flagstaff round-3 photo transcription only. Absent from all "
-                "11 stored Moxfield snapshots and from both TopDeck registrations; not baseline. "
-                "Evaluated as a candidate add (variant E)."),
-        },
-        "ingested": {"oracle_data_version": "scryfall-live-2026-10-30",
+        "ingested": {"oracle_data_version": "scryfall-live-2026-10-30", "ingested_date": "2026-10-30",
                      "cards_cache_path": "data/cards_cache/oracle-2026-10-30/"},
         "deck_hash": deck_hash,
     }

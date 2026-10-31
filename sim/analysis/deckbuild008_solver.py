@@ -68,6 +68,28 @@ LEGENDARY_COLORS = {
     "Teferi, Mage of Zhalfir": "U", SHANG: "G",
 }
 COST_REDUCERS = {"Training Grounds", "Biomancer's Familiar"}
+SKYTURTLE = "Colossal Skyturtle"
+
+# DECKBUILD-008b rule extensions. Both default OFF so DECKBUILD-008 results reproduce exactly.
+#  FAIR_PACT_TUTOR: Tainted Pact is also a fair instant tutor ("any" card to hand). In a singleton
+#    library with no duplicate names it always finds the named card, but every card above it is
+#    exiled; a line that still needs to draw its outlet from the library after Pact is therefore
+#    NOT deterministic (reported as the nondeterministic family "pact_exposed").
+#  SKYTURTLE_REGROWTH: Colossal Skyturtle's channel {2}{G} (discard it: return target card from your
+#    graveyard to your hand) is a delivery option for a line piece in the graveyard. Channel is an
+#    activated ability from hand: instant speed, not a spell.
+FAIR_PACT_TUTOR = False
+SKYTURTLE_REGROWTH = False
+
+
+def enable_008b_rules(fair_pact=True, skyturtle=True):
+    global FAIR_PACT_TUTOR, SKYTURTLE_REGROWTH
+    FAIR_PACT_TUTOR = fair_pact
+    SKYTURTLE_REGROWTH = skyturtle
+    if fair_pact:
+        dc.TUTORS[PACT] = {"dest": "hand", "speed": "instant", "find": "any", "exiles_above": True}
+    else:
+        dc.TUTORS.pop(PACT, None)
 
 
 @dataclass
@@ -293,6 +315,12 @@ class Ctx:
         self.shang = SHANG in self.bfnames and any(p.name == SHANG and not p.tapped for p in snap.bf)
         self._cache = {}
 
+    def reachable(self, piece):
+        """In hand or library, or (008b) in the graveyard with Skyturtle's channel regrowth in hand."""
+        if piece in self.hand or piece in self.lib:
+            return True
+        return SKYTURTLE_REGROWTH and piece in self.gy and SKYTURTLE in self.hand
+
     # Thrasios available to draw? (on battlefield, or castable from command zone)
     def thrasios_opt(self):
         if self.thr_on_bf:
@@ -336,6 +364,10 @@ class Ctx:
         out = []
         if piece in self.hand:
             out.append(Opt())
+        elif SKYTURTLE_REGROWTH and piece in self.gy and SKYTURTLE in self.hand and \
+                SKYTURTLE not in reserved and piece != SKYTURTLE:
+            out.append(Opt((G,), 2, frozenset({SKYTURTLE}), 0, False, 0,
+                           path=(f"Skyturtle channel regrow {piece}",)))
         elif piece in self.lib:
             for tutor in dc.TUTORS:
                 if tutor == piece or tutor in reserved:
@@ -524,10 +556,10 @@ def _active_opts(ctx, creature, reserved):
 
 def oracle_lines(ctx):
     """Yield (family, total_opt) for every Oracle line combination."""
-    if ORACLE not in ctx.hand and ORACLE not in ctx.lib and ORACLE not in ctx.bfnames:
+    if not ctx.reachable(ORACLE) and ORACLE not in ctx.bfnames:
         return
     res = frozenset({ORACLE})
-    oracle_in = ctx.enter_opts(ORACLE, ctx.depth, frozenset()) if ORACLE in ctx.hand | ctx.lib else []
+    oracle_in = ctx.enter_opts(ORACLE, ctx.depth, frozenset()) if ctx.reachable(ORACLE) else []
     if ORACLE in ctx.bfnames:  # re-trigger by copying the Oracle already in play
         for cp in ("Mockingbird", "Clever Impersonator", "Flash Photography"):
             if cp in ctx.hand:
@@ -536,7 +568,7 @@ def oracle_lines(ctx):
     if not oracle_in:
         return
     for piece, fam in ((CONSULT, "oracle_consult"), (PACT, "oracle_pact")):
-        if piece in ctx.hand or piece in ctx.lib:
+        if ctx.reachable(piece):
             for t in _combine([oracle_in, ctx.cast_opts(piece, ctx.depth, res | {piece})]):
                 yield fam, t
     for creature, fam, act in ((HERMIT, "oracle_hermit", Opt((G,), 0, cab=1)),
@@ -565,11 +597,11 @@ def engine_lines(ctx):
     """Yield (engine, opt, infinite_blue) for infinite-mana engines assemblable now."""
     res = frozenset({DRUID})
     druid_bf = [Opt()] if any(p.name == DRUID for p in ctx.s.bf) else \
-        (ctx.enter_opts(DRUID, ctx.depth, frozenset({SWIFT, HAZEL, EFFIGY})) if DRUID in ctx.hand | ctx.lib else [])
-    if druid_bf and (SWIFT in ctx.hand or SWIFT in ctx.lib):
+        (ctx.enter_opts(DRUID, ctx.depth, frozenset({SWIFT, HAZEL, EFFIGY})) if ctx.reachable(DRUID) else [])
+    if druid_bf and ctx.reachable(SWIFT):
         for t in _combine([druid_bf, ctx.cast_opts(SWIFT, ctx.depth, res | {SWIFT})]):
             yield "E1_druid_swift", t + Opt(uses=frozenset({DRUID})), False
-    if druid_bf and (EFFIGY in ctx.hand or EFFIGY in ctx.lib):
+    if druid_bf and ctx.reachable(EFFIGY):
         for t in _combine([druid_bf, ctx.enter_opts(EFFIGY, ctx.depth, res | {EFFIGY})]):
             yield "E3_druid_effigy", t + Opt(uses=frozenset({DRUID})), True
     if HAZEL in ctx.hand or HAZEL in ctx.lib:
@@ -597,6 +629,7 @@ def kill_after_infinite(ctx, eopt, inf_blue, units):
     """Given an assembled infinite-mana engine `eopt`, which kill outlets complete the win?"""
     kills = []
     used = eopt.uses
+    pact_tutored = FAIR_PACT_TUTOR and any(st.startswith(PACT + " -> ") for st in eopt.path)
     thr = ctx.thrasios_opt()
     reachable = set(ctx.hand) | (ctx.lib if (thr is not None) else set())
     reachable -= used
@@ -614,7 +647,8 @@ def kill_after_infinite(ctx, eopt, inf_blue, units):
         need_after = 0 if inf_blue else max(0, 2 - free_blue())
         tot = eopt + Opt(tuple([U] * (need_first + need_after)))
         if pay(units, tot.pips, tot.generic):
-            kills.append(("inf_oracle", tot + Opt(spells=1 + (1 if THRASIOS not in ctx.bfnames else 0))))
+            fam = "pact_exposed" if (pact_tutored and ORACLE in ctx.lib) else "inf_oracle"
+            kills.append((fam, tot + Opt(spells=1 + (1 if THRASIOS not in ctx.bfnames else 0))))
     # K2: Bowmasters + Faerie Mastermind with infinite blue (Oracle-less deterministic kill).
     have_bm = BOWMASTERS in reachable or BOWMASTERS in ctx.bfnames
     have_fm = MASTERMIND in reachable or MASTERMIND in ctx.bfnames
@@ -631,7 +665,8 @@ def kill_after_infinite(ctx, eopt, inf_blue, units):
             if not inf_blue and THRASIOS not in ctx.bfnames:
                 tot = tot + Opt((U,))
             if pay(units, tot.pips, tot.generic):
-                kills.append(("inf_bowmasters", tot + Opt(spells=3)))
+                exposed = pact_tutored and ((BOWMASTERS in ctx.lib) or (MASTERMIND in ctx.lib))
+                kills.append(("pact_exposed" if exposed else "inf_bowmasters", tot + Opt(spells=3)))
     # K3: Finale X>=10 combat (nondeterministic), own main phase only.
     if ctx.s.timing == "main" and (FINALE in reachable):
         if pay(units, eopt.pips, eopt.generic):
@@ -641,7 +676,7 @@ def kill_after_infinite(ctx, eopt, inf_blue, units):
 
 DET_FAMILIES = ("oracle_consult", "oracle_pact", "oracle_hermit", "oracle_witch", "inf_oracle",
                 "inf_bowmasters")
-NONDET_FAMILIES = ("inf_finale",)
+NONDET_FAMILIES = ("inf_finale", "pact_exposed")
 
 
 def _units_for(ctx, snap):

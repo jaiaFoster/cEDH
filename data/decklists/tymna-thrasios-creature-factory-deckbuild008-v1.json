@@ -500,32 +500,35 @@
     }
   ],
   "source": {
-    "type": "moxfield_public_deck",
+    "type": "user_supplied",
     "reference": "https://moxfield.com/decks/gvyGvOx0g0uJ7ultPy-pbw",
+    "date": "2026-10-15",
+    "platform": "moxfield_public_deck",
     "moxfield_version": 8,
     "moxfield_updated_at": "2026-10-15T15:50:53.06Z",
     "moxfield_content_hash": "635940777a53f5e8a7b27156cf7caec22694f7935b1faf0f83f5677a96f39148",
-    "live_refetch": "2026-10-30 (unchanged)"
-  },
-  "reconciliation": {
-    "topdeck_registrations": {
-      "azms-cedh-qualifier-8": {
-        "date": "2026-10-17",
-        "identical_to_moxfield_v8": true,
-        "imported_from": "https://moxfield.com/decks/gvyGvOx0g0uJ7ultPy-pbw",
-        "mainboard_count": 98
+    "live_refetch": "2026-10-30 (unchanged)",
+    "reconciliation": {
+      "topdeck_registrations": {
+        "azms-cedh-qualifier-8": {
+          "date": "2026-10-17",
+          "identical_to_moxfield_v8": true,
+          "imported_from": "https://moxfield.com/decks/gvyGvOx0g0uJ7ultPy-pbw",
+          "mainboard_count": 98
+        },
+        "eye-of-the-tiger-lion-cedh-tournament-win-a-lions-eye": {
+          "date": "2026-10-18",
+          "identical_to_moxfield_v8": true,
+          "imported_from": "https://moxfield.com/decks/gvyGvOx0g0uJ7ultPy-pbw",
+          "mainboard_count": 98
+        }
       },
-      "eye-of-the-tiger-lion-cedh-tournament-win-a-lions-eye": {
-        "date": "2026-10-18",
-        "identical_to_moxfield_v8": true,
-        "imported_from": "https://moxfield.com/decks/gvyGvOx0g0uJ7ultPy-pbw",
-        "mainboard_count": 98
-      }
-    },
-    "borne_upon_a_wind": "Named in the Geekery/Flagstaff round-3 photo transcription only. Absent from all 11 stored Moxfield snapshots and from both TopDeck registrations; not baseline. Evaluated as a candidate add (variant E)."
+      "borne_upon_a_wind": "Named in the Geekery/Flagstaff round-3 photo transcription only. Absent from all 11 stored Moxfield snapshots and from both TopDeck registrations; not baseline. Evaluated as a candidate add (variant E)."
+    }
   },
   "ingested": {
     "oracle_data_version": "scryfall-live-2026-10-30",
+    "ingested_date": "2026-10-30",
     "cards_cache_path": "data/cards_cache/oracle-2026-10-30/"
   },
   "deck_hash": "bcc611f4d4d9804a3cdec581ea25b9c8224b75177648a85614ab1a470145de75"

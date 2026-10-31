@@ -42,7 +42,7 @@ def test_frozen_baseline_hash_and_size():
 
 def test_registrations_match_moxfield_v8_and_borne_absent():
     d = json.loads((REPO_ROOT / "data/decklists/tymna-thrasios-creature-factory-deckbuild008-v1.json").read_text())
-    regs = d["reconciliation"]["topdeck_registrations"]
+    regs = d["source"]["reconciliation"]["topdeck_registrations"]
     assert set(regs) == {"azms-cedh-qualifier-8", "eye-of-the-tiger-lion-cedh-tournament-win-a-lions-eye"}
     assert all(r["identical_to_moxfield_v8"] for r in regs.values())
     assert "Borne Upon a Wind" not in BASE

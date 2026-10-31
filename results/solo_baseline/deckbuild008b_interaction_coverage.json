@@ -1,0 +1,3422 @@
+{
+ "task": "SIM-DECKBUILD-008b",
+ "artifact": "deckbuild008b_interaction_coverage.json",
+ "evidence_type": "STRUCTURAL (Oracle-text categories, exact hypergeometric) + qualitative audit",
+ "category_definitions": {
+  "free_counter": [
+   "Commandeer",
+   "Fierce Guardianship",
+   "Flare of Denial",
+   "Force of Negation",
+   "Force of Will",
+   "Mindbreak Trap",
+   "Pact of Negation",
+   "Subtlety"
+  ],
+  "paid_counter": [
+   "Flusterstorm",
+   "Mental Misstep",
+   "Strix Serenade",
+   "Swan Song"
+  ],
+  "creature_spell_answer": [
+   "Flare of Denial",
+   "Force of Will",
+   "Mindbreak Trap",
+   "Pact of Negation",
+   "Sink into Stupor // Soporific Springs",
+   "Strix Serenade",
+   "Subtlety"
+  ],
+  "artifact_spell_answer": [
+   "Commandeer",
+   "Fierce Guardianship",
+   "Flare of Denial",
+   "Force of Negation",
+   "Force of Will",
+   "Mindbreak Trap",
+   "Pact of Negation",
+   "Sink into Stupor // Soporific Springs",
+   "Strix Serenade"
+  ],
+  "creature_theft": [
+   "Gilded Drake",
+   "Volatile Stormdrake"
+  ],
+  "resolved_creature_answer": [
+   "Colossal Skyturtle",
+   "Gilded Drake",
+   "Otawara, Soaring City",
+   "Sink into Stupor // Soporific Springs",
+   "Volatile Stormdrake"
+  ],
+  "resolved_artifact_enchantment_answer": [
+   "Boseiju, Who Endures",
+   "Otawara, Soaring City",
+   "Sink into Stupor // Soporific Springs"
+  ],
+  "spell_redirect": [
+   "Misdirection"
+  ],
+  "graveyard_interaction": [
+   "Endurance"
+  ],
+  "proactive_protection": [
+   "Grand Abolisher",
+   "Ranger-Captain of Eos",
+   "Silence",
+   "Voice of Victory"
+  ],
+  "regrowth_of_spent_resources": [
+   "Colossal Skyturtle"
+  ],
+  "flexible_catch_all": [
+   "Flare of Denial",
+   "Force of Will",
+   "Mindbreak Trap",
+   "Pact of Negation",
+   "Sink into Stupor // Soporific Springs"
+  ]
+ },
+ "hypergeometric_note": "on the draw, no mulligan: 7 + t cards seen by turn t",
+ "configs": {
+  "V8_frozen": {
+   "adds_vs_v8": [],
+   "cuts_vs_v8": [],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Strix Serenade",
+      "Swan Song"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Strix Serenade",
+      "Subtlety"
+     ],
+     "n_cards": 7,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5019,
+     "p_seen_by_t3": 0.5411,
+     "p_seen_by_t4": 0.5776,
+     "p_card_or_tutor_seen_by_t2": 0.8342,
+     "p_card_or_tutor_seen_by_t3": 0.8659,
+     "p_card_or_tutor_seen_by_t4": 0.8918
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Strix Serenade"
+     ],
+     "n_cards": 9,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5961,
+     "p_seen_by_t3": 0.6369,
+     "p_seen_by_t4": 0.6741,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 2,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.1761,
+     "p_seen_by_t3": 0.1946,
+     "p_seen_by_t4": 0.2129,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Colossal Skyturtle",
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.4479,
+     "p_card_or_tutor_seen_by_t3": 0.4852,
+     "p_card_or_tutor_seen_by_t4": 0.5203
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3241,
+     "p_card_or_tutor_seen_by_t3": 0.3545,
+     "p_card_or_tutor_seen_by_t4": 0.3838
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.6741,
+     "p_card_or_tutor_seen_by_t3": 0.7143,
+     "p_card_or_tutor_seen_by_t4": 0.7501
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.7661,
+     "p_card_or_tutor_seen_by_t3": 0.8029,
+     "p_card_or_tutor_seen_by_t4": 0.8342
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [
+      "Colossal Skyturtle"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 6,
+     "tutors": [
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Imperial Seal",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    }
+   }
+  },
+  "A_oracle_less": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Spellseeker"
+   ],
+   "cuts_vs_v8": [
+    "Deathrite Shaman",
+    "Strix Serenade"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8692,
+     "p_card_or_tutor_seen_by_t3": 0.8971,
+     "p_card_or_tutor_seen_by_t4": 0.9193
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8342,
+     "p_card_or_tutor_seen_by_t3": 0.8659,
+     "p_card_or_tutor_seen_by_t4": 0.8918
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 2,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.1761,
+     "p_seen_by_t3": 0.1946,
+     "p_seen_by_t4": 0.2129,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Colossal Skyturtle",
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.4479,
+     "p_card_or_tutor_seen_by_t3": 0.4852,
+     "p_card_or_tutor_seen_by_t4": 0.5203
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3241,
+     "p_card_or_tutor_seen_by_t3": 0.3545,
+     "p_card_or_tutor_seen_by_t4": 0.3838
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.6741,
+     "p_card_or_tutor_seen_by_t3": 0.7143,
+     "p_card_or_tutor_seen_by_t4": 0.7501
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.7911,
+     "p_card_or_tutor_seen_by_t3": 0.8263,
+     "p_card_or_tutor_seen_by_t4": 0.8559
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [
+      "Colossal Skyturtle"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 6,
+     "tutors": [
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Imperial Seal",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.5961,
+     "p_card_or_tutor_seen_by_t3": 0.6369,
+     "p_card_or_tutor_seen_by_t4": 0.6741
+    }
+   }
+  },
+  "B_oracle_pact_seeker": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Spellseeker",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Colossal Skyturtle",
+    "Deathrite Shaman",
+    "Strix Serenade",
+    "Volatile Stormdrake"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8841,
+     "p_card_or_tutor_seen_by_t3": 0.9102,
+     "p_card_or_tutor_seen_by_t4": 0.9306
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.7661,
+     "p_card_or_tutor_seen_by_t3": 0.8029,
+     "p_card_or_tutor_seen_by_t4": 0.8342
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [],
+     "n_cards": 0,
+     "n_direct_tutors": 0,
+     "tutors": [],
+     "p_seen_by_t2": 0.0,
+     "p_seen_by_t3": 0.0,
+     "p_seen_by_t4": 0.0,
+     "p_card_or_tutor_seen_by_t2": 0.0,
+     "p_card_or_tutor_seen_by_t3": 0.0,
+     "p_card_or_tutor_seen_by_t4": 0.0
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.6369,
+     "p_card_or_tutor_seen_by_t3": 0.6777,
+     "p_card_or_tutor_seen_by_t4": 0.7143
+    }
+   }
+  },
+  "C_oracle_consult_seeker": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Demonic Consultation",
+    "Spellseeker",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Colossal Skyturtle",
+    "Deathrite Shaman",
+    "Strix Serenade",
+    "Volatile Stormdrake"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8692,
+     "p_card_or_tutor_seen_by_t3": 0.8971,
+     "p_card_or_tutor_seen_by_t4": 0.9193
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8342,
+     "p_card_or_tutor_seen_by_t3": 0.8659,
+     "p_card_or_tutor_seen_by_t4": 0.8918
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.6741,
+     "p_card_or_tutor_seen_by_t3": 0.7143,
+     "p_card_or_tutor_seen_by_t4": 0.7501
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.4479,
+     "p_card_or_tutor_seen_by_t3": 0.4852,
+     "p_card_or_tutor_seen_by_t4": 0.5203
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 3,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3241,
+     "p_card_or_tutor_seen_by_t3": 0.3545,
+     "p_card_or_tutor_seen_by_t4": 0.3838
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 10,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.6741,
+     "p_card_or_tutor_seen_by_t3": 0.7143,
+     "p_card_or_tutor_seen_by_t4": 0.7501
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.7911,
+     "p_card_or_tutor_seen_by_t3": 0.8263,
+     "p_card_or_tutor_seen_by_t4": 0.8559
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [],
+     "n_cards": 0,
+     "n_direct_tutors": 0,
+     "tutors": [],
+     "p_seen_by_t2": 0.0,
+     "p_seen_by_t3": 0.0,
+     "p_seen_by_t4": 0.0,
+     "p_card_or_tutor_seen_by_t2": 0.0,
+     "p_card_or_tutor_seen_by_t3": 0.0,
+     "p_card_or_tutor_seen_by_t4": 0.0
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.5961,
+     "p_card_or_tutor_seen_by_t3": 0.6369,
+     "p_card_or_tutor_seen_by_t4": 0.6741
+    }
+   }
+  },
+  "D_oracle_consult_pact": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Demonic Consultation",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Colossal Skyturtle",
+    "Deathrite Shaman",
+    "Strix Serenade",
+    "Volatile Stormdrake"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8692,
+     "p_card_or_tutor_seen_by_t3": 0.8971,
+     "p_card_or_tutor_seen_by_t4": 0.9193
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8342,
+     "p_card_or_tutor_seen_by_t3": 0.8659,
+     "p_card_or_tutor_seen_by_t4": 0.8918
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.7661,
+     "p_card_or_tutor_seen_by_t3": 0.8029,
+     "p_card_or_tutor_seen_by_t4": 0.8342
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.7911,
+     "p_card_or_tutor_seen_by_t3": 0.8263,
+     "p_card_or_tutor_seen_by_t4": 0.8559
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [],
+     "n_cards": 0,
+     "n_direct_tutors": 0,
+     "tutors": [],
+     "p_seen_by_t2": 0.0,
+     "p_seen_by_t3": 0.0,
+     "p_seen_by_t4": 0.0,
+     "p_card_or_tutor_seen_by_t2": 0.0,
+     "p_card_or_tutor_seen_by_t3": 0.0,
+     "p_card_or_tutor_seen_by_t4": 0.0
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.5961,
+     "p_card_or_tutor_seen_by_t3": 0.6369,
+     "p_card_or_tutor_seen_by_t4": 0.6741
+    }
+   }
+  },
+  "E_all_four": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Demonic Consultation",
+    "Spellseeker",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Colossal Skyturtle",
+    "Deathrite Shaman",
+    "Strix Serenade",
+    "The Queen of Dale",
+    "Volatile Stormdrake"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8841,
+     "p_card_or_tutor_seen_by_t3": 0.9102,
+     "p_card_or_tutor_seen_by_t4": 0.9306
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.7661,
+     "p_card_or_tutor_seen_by_t3": 0.8029,
+     "p_card_or_tutor_seen_by_t4": 0.8342
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [],
+     "n_cards": 0,
+     "n_direct_tutors": 0,
+     "tutors": [],
+     "p_seen_by_t2": 0.0,
+     "p_seen_by_t3": 0.0,
+     "p_seen_by_t4": 0.0,
+     "p_card_or_tutor_seen_by_t2": 0.0,
+     "p_card_or_tutor_seen_by_t3": 0.0,
+     "p_card_or_tutor_seen_by_t4": 0.0
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.6369,
+     "p_card_or_tutor_seen_by_t3": 0.6777,
+     "p_card_or_tutor_seen_by_t4": 0.7143
+    }
+   }
+  },
+  "B_keep_interaction": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Spellseeker",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Deathrite Shaman",
+    "Gleaming Splendor",
+    "Strix Serenade",
+    "The Queen of Dale"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8841,
+     "p_card_or_tutor_seen_by_t3": 0.9102,
+     "p_card_or_tutor_seen_by_t4": 0.9306
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 2,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.1761,
+     "p_seen_by_t3": 0.1946,
+     "p_seen_by_t4": 0.2129,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Colossal Skyturtle",
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.8342,
+     "p_card_or_tutor_seen_by_t3": 0.8659,
+     "p_card_or_tutor_seen_by_t4": 0.8918
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [
+      "Colossal Skyturtle"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 7,
+     "tutors": [
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Imperial Seal",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.6369,
+     "p_card_or_tutor_seen_by_t3": 0.6777,
+     "p_card_or_tutor_seen_by_t4": 0.7143
+    }
+   }
+  },
+  "B_keep_stormdrake": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Spellseeker",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Colossal Skyturtle",
+    "Deathrite Shaman",
+    "Strix Serenade",
+    "The Queen of Dale"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8841,
+     "p_card_or_tutor_seen_by_t3": 0.9102,
+     "p_card_or_tutor_seen_by_t4": 0.9306
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 2,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.1761,
+     "p_seen_by_t3": 0.1946,
+     "p_seen_by_t4": 0.2129,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs",
+      "Volatile Stormdrake"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.7911,
+     "p_card_or_tutor_seen_by_t3": 0.8263,
+     "p_card_or_tutor_seen_by_t4": 0.8559
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [],
+     "n_cards": 0,
+     "n_direct_tutors": 0,
+     "tutors": [],
+     "p_seen_by_t2": 0.0,
+     "p_seen_by_t3": 0.0,
+     "p_seen_by_t4": 0.0,
+     "p_card_or_tutor_seen_by_t2": 0.0,
+     "p_card_or_tutor_seen_by_t3": 0.0,
+     "p_card_or_tutor_seen_by_t4": 0.0
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.6369,
+     "p_card_or_tutor_seen_by_t3": 0.6777,
+     "p_card_or_tutor_seen_by_t4": 0.7143
+    }
+   }
+  },
+  "B_keep_skyturtle": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Spellseeker",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Deathrite Shaman",
+    "Strix Serenade",
+    "The Queen of Dale",
+    "Volatile Stormdrake"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8841,
+     "p_card_or_tutor_seen_by_t3": 0.9102,
+     "p_card_or_tutor_seen_by_t4": 0.9306
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Colossal Skyturtle",
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [
+      "Colossal Skyturtle"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 7,
+     "tutors": [
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Imperial Seal",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.6369,
+     "p_card_or_tutor_seen_by_t3": 0.6777,
+     "p_card_or_tutor_seen_by_t4": 0.7143
+    }
+   }
+  },
+  "E_008_build3": {
+   "adds_vs_v8": [
+    "Avacyn's Pilgrim",
+    "Demonic Consultation",
+    "Spellseeker",
+    "Tainted Pact",
+    "Thassa's Oracle"
+   ],
+   "cuts_vs_v8": [
+    "Deathrite Shaman",
+    "Gleaming Splendor",
+    "Strix Serenade",
+    "The Queen of Dale",
+    "Volatile Stormdrake"
+   ],
+   "coverage": {
+    "free_counter": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Subtlety"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.8841,
+     "p_card_or_tutor_seen_by_t3": 0.9102,
+     "p_card_or_tutor_seen_by_t4": 0.9306
+    },
+    "paid_counter": {
+     "cards": [
+      "Flusterstorm",
+      "Mental Misstep",
+      "Swan Song"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "creature_spell_answer": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs",
+      "Subtlety"
+     ],
+     "n_cards": 6,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.4479,
+     "p_seen_by_t3": 0.4852,
+     "p_seen_by_t4": 0.5203,
+     "p_card_or_tutor_seen_by_t2": 0.8526,
+     "p_card_or_tutor_seen_by_t3": 0.8824,
+     "p_card_or_tutor_seen_by_t4": 0.9065
+    },
+    "artifact_spell_answer": {
+     "cards": [
+      "Commandeer",
+      "Fierce Guardianship",
+      "Flare of Denial",
+      "Force of Negation",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 8,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.5512,
+     "p_seen_by_t3": 0.5915,
+     "p_seen_by_t4": 0.6287,
+     "p_card_or_tutor_seen_by_t2": 0.7384,
+     "p_card_or_tutor_seen_by_t3": 0.7766,
+     "p_card_or_tutor_seen_by_t4": 0.8096
+    },
+    "creature_theft": {
+     "cards": [
+      "Gilded Drake"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "resolved_creature_answer": {
+     "cards": [
+      "Colossal Skyturtle",
+      "Gilded Drake",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "resolved_artifact_enchantment_answer": {
+     "cards": [
+      "Boseiju, Who Endures",
+      "Otawara, Soaring City",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 3,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.2533,
+     "p_seen_by_t3": 0.2785,
+     "p_seen_by_t4": 0.3031,
+     "p_card_or_tutor_seen_by_t2": 0.5019,
+     "p_card_or_tutor_seen_by_t3": 0.5411,
+     "p_card_or_tutor_seen_by_t4": 0.5776
+    },
+    "spell_redirect": {
+     "cards": [
+      "Misdirection"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 4,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.3888,
+     "p_card_or_tutor_seen_by_t3": 0.4231,
+     "p_card_or_tutor_seen_by_t4": 0.4559
+    },
+    "graveyard_interaction": {
+     "cards": [
+      "Endurance"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 11,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.7078,
+     "p_card_or_tutor_seen_by_t3": 0.7472,
+     "p_card_or_tutor_seen_by_t4": 0.7817
+    },
+    "proactive_protection": {
+     "cards": [
+      "Grand Abolisher",
+      "Ranger-Captain of Eos",
+      "Silence",
+      "Voice of Victory"
+     ],
+     "n_cards": 4,
+     "n_direct_tutors": 12,
+     "tutors": [
+      "Birthing Pod",
+      "Chord of Calling",
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Finale of Devastation",
+      "Imperial Seal",
+      "Nature's Rhythm",
+      "Neoform",
+      "Spellseeker",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3241,
+     "p_seen_by_t3": 0.3545,
+     "p_seen_by_t4": 0.3838,
+     "p_card_or_tutor_seen_by_t2": 0.8138,
+     "p_card_or_tutor_seen_by_t3": 0.8473,
+     "p_card_or_tutor_seen_by_t4": 0.875
+    },
+    "regrowth_of_spent_resources": {
+     "cards": [
+      "Colossal Skyturtle"
+     ],
+     "n_cards": 1,
+     "n_direct_tutors": 7,
+     "tutors": [
+      "Demonic Tutor",
+      "Eldritch Evolution",
+      "Enlightened Tutor",
+      "Imperial Seal",
+      "Survival of the Fittest",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.0918,
+     "p_seen_by_t3": 0.102,
+     "p_seen_by_t4": 0.1122,
+     "p_card_or_tutor_seen_by_t2": 0.5512,
+     "p_card_or_tutor_seen_by_t3": 0.5915,
+     "p_card_or_tutor_seen_by_t4": 0.6287
+    },
+    "flexible_catch_all": {
+     "cards": [
+      "Flare of Denial",
+      "Force of Will",
+      "Mindbreak Trap",
+      "Pact of Negation",
+      "Sink into Stupor // Soporific Springs"
+     ],
+     "n_cards": 5,
+     "n_direct_tutors": 5,
+     "tutors": [
+      "Demonic Tutor",
+      "Imperial Seal",
+      "Spellseeker",
+      "Tainted Pact",
+      "Vampiric Tutor"
+     ],
+     "p_seen_by_t2": 0.3888,
+     "p_seen_by_t3": 0.4231,
+     "p_seen_by_t4": 0.4559,
+     "p_card_or_tutor_seen_by_t2": 0.6369,
+     "p_card_or_tutor_seen_by_t3": 0.6777,
+     "p_card_or_tutor_seen_by_t4": 0.7143
+    }
+   }
+  }
+ },
+ "cut_audit": {
+  "Strix Serenade": {
+   "cost": "{U} instant",
+   "text": "Counter target artifact, creature, or planeswalker spell. Its controller creates a 2/2 blue Bird.",
+   "unique_coverage": "the deck's only 1-mana hard counter for CREATURE spells. Remaining creature-spell answers: Force of Will, Pact of Negation, Flare of Denial (pitch a blue creature), Mindbreak Trap (conditional), Subtlety (evoke, top/bottom), Sink into Stupor (3-mana bounce). Every remaining one costs a card, a creature, a future turn, or 4+ mana. Artifact-spell coverage stays wide (9 answers incl. FoN, Fierce Guardianship).",
+   "goldfish_value": "0 (counters only opponents' spells)",
+   "tournament_evidence": "Geekery R3: Strix (paid with Lotho Treasure) countered Kinnan's Phyrexian Metamorph.",
+   "census": "1.1% of Oracle T&T lists / 0.5% of non-Oracle lists (DECKBUILD-008): pilot tech in both."
+  },
+  "Volatile Stormdrake": {
+   "cost": "{1}{U} creature \u2014 Drake (no flash)",
+   "text": "Flying, hexproof from activated and triggered abilities. ETB: exchange control of this and target creature an opponent controls. If you do, you get EEEE, then sacrifice that creature unless you pay E equal to its mana value.",
+   "vs_gilded_drake": [
+    {
+     "situation": "target MV <= 4 (almost every cEDH engine creature: Kinnan, Thrasios, Tymna, Rograkh, Dockside, Bowmasters, Oculus, Hermit, Druid...)",
+     "stormdrake": "steal and keep",
+     "gilded_drake": "steal and keep",
+     "edge": "equal"
+    },
+    {
+     "situation": "target MV >= 5",
+     "stormdrake": "steal, then sacrifice it (removal, not theft)",
+     "gilded_drake": "steal and keep",
+     "edge": "Gilded"
+    },
+    {
+     "situation": "target gains hexproof / is sacrificed / bounced in response",
+     "stormdrake": "ability fizzles; you KEEP a 2-mana flyer",
+     "gilded_drake": "'still resolves... if you don't or can't make an exchange, sacrifice this creature' -> you lose it",
+     "edge": "Stormdrake"
+    },
+    {
+     "situation": "no opposing creature (e.g. cast as Pod / Chord / Neoform fodder or Cradle count)",
+     "stormdrake": "no exchange; keeps a body",
+     "gilded_drake": "sacrificed (up to one target, no exchange)",
+     "edge": "Stormdrake (real fair floor)"
+    },
+    {
+     "situation": "what the opponent receives",
+     "stormdrake": "a flyer with hexproof from activated and triggered abilities (harder for THEM to sacrifice/bounce with their own abilities)",
+     "gilded_drake": "a 3/3 flyer",
+     "edge": "context"
+    }
+   ],
+   "tutor_access": "both are 2-MV blue creatures: Chord (X=2, instant), Survival (instant), Finale / Nature's Rhythm (X=2), Pod from a 1-drop, Neoform from a 1-drop, Eldritch, DT / Vampiric / Seal / Pact. Cutting Stormdrake halves the number of theft TARGETS, not the number of tutors that reach theft.",
+   "one_drake_enough": "with one Drake the category survives through tutors (the same ~11 tutors still reach Gilded), but a fair-floor theft card that never bricks is replaced by one that is sacrificed when there is no target and fails if the target escapes."
+  },
+  "Colossal Skyturtle": {
+   "cost": "{4}{G}{G}{U} enchantment creature (7 MV) \u2014 used for its channel abilities",
+   "text": "Channel {2}{G}: return target card from your graveyard to your hand. Channel {1}{U}: return target creature to its owner's hand. Flying, ward {2}.",
+   "roles": {
+    "instant_bounce": "{1}{U}, an ACTIVATED ability from hand: cannot be hit by ordinary counterspells (Stifle effects only). The only remaining creature bounce is Otawara ({3}{U} minus legends) and Sink into Stupor ({1}{U}{U}, counterable spell).",
+    "regrowth": "{2}{G}: the deck's ONLY regrowth \u2014 rebuys a spent Force of Will / Pact of Negation / Silence / tutor, or a destroyed Devoted Druid / Swift / Effigy (now a measured solver delivery option under the 008b rules).",
+    "pitch": "blue (Force of Will, Force of Negation, Misdirection, Subtlety, Commandeer) AND green (Endurance evoke) pitch fuel.",
+    "survival_typing": "a creature card: Survival of the Fittest fetches it to hand at instant speed, so Survival + Skyturtle is a repeatable bounce / regrowth access line.",
+    "endurance_recursion": "Skyturtle can return Endurance (or anything) to hand; Endurance can put the graveyard back into the library. No deterministic win line in this deck depends on that loop; it is grind / anti-graveyard-hate value.",
+    "tutor_x_caveat": "Chord / Finale / Nature's Rhythm put it onto the battlefield (7 MV) \u2014 its useful modes need it in HAND (Survival, DT, Vampiric, Seal, Pact, Worldly)."
+   },
+   "what_is_lost": "the deck's only regrowth and its only uncounterable instant creature bounce."
+  }
+ },
+ "theft_tutor_access": {
+  "A_oracle_less": {
+   "Gilded Drake": [
+    "Birthing Pod",
+    "Chord of Calling",
+    "Demonic Tutor",
+    "Eldritch Evolution",
+    "Finale of Devastation",
+    "Imperial Seal",
+    "Nature's Rhythm",
+    "Neoform",
+    "Survival of the Fittest",
+    "Vampiric Tutor"
+   ],
+   "Volatile Stormdrake": [
+    "Birthing Pod",
+    "Chord of Calling",
+    "Demonic Tutor",
+    "Eldritch Evolution",
+    "Finale of Devastation",
+    "Imperial Seal",
+    "Nature's Rhythm",
+    "Neoform",
+    "Survival of the Fittest",
+    "Vampiric Tutor"
+   ]
+  },
+  "B_oracle_pact_seeker": {
+   "Gilded Drake": [
+    "Birthing Pod",
+    "Chord of Calling",
+    "Demonic Tutor",
+    "Eldritch Evolution",
+    "Finale of Devastation",
+    "Imperial Seal",
+    "Nature's Rhythm",
+    "Neoform",
+    "Survival of the Fittest",
+    "Tainted Pact",
+    "Vampiric Tutor"
+   ]
+  }
+ },
+ "proposed_build_losses": {
+  "free_counter": {
+   "before_A": 8,
+   "after_B": 8
+  },
+  "paid_counter": {
+   "before_A": 3,
+   "after_B": 3
+  },
+  "creature_spell_answer": {
+   "before_A": 6,
+   "after_B": 6
+  },
+  "artifact_spell_answer": {
+   "before_A": 8,
+   "after_B": 8
+  },
+  "creature_theft": {
+   "before_A": 2,
+   "after_B": 1
+  },
+  "resolved_creature_answer": {
+   "before_A": 5,
+   "after_B": 3
+  },
+  "resolved_artifact_enchantment_answer": {
+   "before_A": 3,
+   "after_B": 3
+  },
+  "spell_redirect": {
+   "before_A": 1,
+   "after_B": 1
+  },
+  "graveyard_interaction": {
+   "before_A": 1,
+   "after_B": 1
+  },
+  "proactive_protection": {
+   "before_A": 4,
+   "after_B": 4
+  },
+  "regrowth_of_spent_resources": {
+   "before_A": 1,
+   "after_B": 0
+  },
+  "flexible_catch_all": {
+   "before_A": 5,
+   "after_B": 5
+  }
+ }
+}
