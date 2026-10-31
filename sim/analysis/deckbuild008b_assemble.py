@@ -26,20 +26,26 @@ def pool_reps(per_rep):
     """Pool replicate summaries: value = mean of reps; paired delta = mean of rep deltas with
     SE = sqrt(sum se^2)/R; consistency z = (rep0 - rep1) / sqrt(se0^2 + se1^2)."""
     reps = [per_rep[k] for k in sorted(per_rep)]
-    out = {"replicates": len(reps), "n_total": sum(r["n"] for r in reps)}
+    out = {"replicates": len(reps), "n_total": sum(r["n"] for r in reps), "n_by_replicate": [r["n"] for r in reps]}
     for m, row in reps[0].items():
         if not isinstance(row, dict) or "value" not in row:
             continue
+        ns = [r["n"] for r in reps]
+        N = sum(ns)
         vals = [r[m]["value"] for r in reps]
-        o = {"value": round(sum(vals) / len(vals), 5), "by_replicate": vals}
+        o = {"value": round(sum(n * v for n, v in zip(ns, vals)) / N, 5), "by_replicate": vals}
         if "delta_vs_ref" in row:
             ds = [r[m]["delta_vs_ref"] for r in reps]
             ses = [r[m]["delta_se"] for r in reps]
-            o["delta_vs_ref"] = round(sum(ds) / len(ds), 5)
-            o["delta_se"] = round(math.sqrt(sum(s * s for s in ses)) / len(ses), 5)
+            pooled = sum(n * d for n, d in zip(ns, ds)) / N
+            o["delta_vs_ref"] = round(pooled, 5)
+            o["delta_se"] = round(math.sqrt(sum((n * s) ** 2 for n, s in zip(ns, ses))) / N, 5)
             o["delta_by_replicate"] = ds
-            if len(ds) == 2 and (ses[0] or ses[1]):
-                o["replicate_consistency_z"] = round((ds[0] - ds[1]) / math.sqrt(ses[0] ** 2 + ses[1] ** 2), 2)
+            # heterogeneity across replicates: chi-square of replicate deltas around the pooled delta
+            if len(ds) >= 2 and all(ses):
+                q = sum(((d - pooled) / s) ** 2 for d, s in zip(ds, ses))
+                o["replicate_heterogeneity_Q"] = round(q, 2)
+                o["replicate_df"] = len(ds) - 1
         out[m] = o
     out["first_win_family_counts"] = {}
     for r in reps:
@@ -129,6 +135,11 @@ def assemble():
                 scen[k] = v
     cov = json.loads((OUT / "deckbuild008b_interaction_coverage.json").read_text()) \
         if (OUT / "deckbuild008b_interaction_coverage.json").exists() else {}
+    for k, v in _load("variants_rep2").items():  # extra independent replicate for decision-critical builds
+        if k.startswith("_"):
+            continue
+        tgt = head if k in head else sec
+        tgt.setdefault(k, {}).update(v)
     variants = {}
     for src in (head, sec):
         for k, v in src.items():

@@ -65025,5 +65025,8983 @@
     }
    }
   }
+ },
+ "_parent::C_oracle_consult_seeker::forced=Spellseeker": {
+  "n": 8000,
+  "keep7": {
+   "value": 0.63862,
+   "ci95": [
+    0.62803,
+    0.64908
+   ]
+  },
+  "mean_mulligans": {
+   "value": 0.49838,
+   "se": 0.0083
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00019,
+    0.00129
+   ]
+  },
+  "kept_hand_fm1": {
+   "value": 0.01625,
+   "ci95": [
+    0.0137,
+    0.01926
+   ]
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98325,
+   "ci95": [
+    0.9802,
+    0.98584
+   ]
+  },
+  "t1_has_W": {
+   "value": 0.60388,
+   "ci95": [
+    0.59311,
+    0.61454
+   ]
+  },
+  "t1_has_U": {
+   "value": 0.78375,
+   "ci95": [
+    0.77459,
+    0.79263
+   ]
+  },
+  "t1_has_B": {
+   "value": 0.52787,
+   "ci95": [
+    0.51692,
+    0.5388
+   ]
+  },
+  "t1_has_G": {
+   "value": 0.76462,
+   "ci95": [
+    0.7552,
+    0.77379
+   ]
+  },
+  "t2_all_four_colors": {
+   "value": 0.627,
+   "ci95": [
+    0.61634,
+    0.63753
+   ]
+  },
+  "t2_three_plus_colors": {
+   "value": 0.7865,
+   "ci95": [
+    0.77738,
+    0.79534
+   ]
+  },
+  "t1_mana_ge2": {
+   "value": 0.14125,
+   "ci95": [
+    0.13379,
+    0.14905
+   ]
+  },
+  "t2_mana_ge3": {
+   "value": 0.39687,
+   "ci95": [
+    0.38621,
+    0.40764
+   ]
+  },
+  "t1_development": {
+   "value": 0.49175,
+   "ci95": [
+    0.4808,
+    0.50271
+   ]
+  },
+  "t2_development": {
+   "value": 0.5075,
+   "ci95": [
+    0.49654,
+    0.51845
+   ]
+  },
+  "premium_engine_by_t2": {
+   "value": 0.28525,
+   "ci95": [
+    0.27546,
+    0.29525
+   ]
+  },
+  "premium_engine_by_t3": {
+   "value": 0.44862,
+   "ci95": [
+    0.43775,
+    0.45955
+   ]
+  },
+  "premium_engine_by_t4": {
+   "value": 0.521,
+   "ci95": [
+    0.51005,
+    0.53193
+   ]
+  },
+  "det_win_by_t2": {
+   "value": 0.001,
+   "ci95": [
+    0.00051,
+    0.00197
+   ]
+  },
+  "det_protected_by_t2": {
+   "value": 0.00013,
+   "ci95": [
+    2e-05,
+    0.00071
+   ]
+  },
+  "det_instant_window_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "oracle_line_by_t2": {
+   "value": 0.00075,
+   "ci95": [
+    0.00034,
+    0.00164
+   ]
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ]
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.002,
+   "ci95": [
+    0.00123,
+    0.00325
+   ]
+  },
+  "det_win_by_t3": {
+   "value": 0.01675,
+   "ci95": [
+    0.01416,
+    0.0198
+   ]
+  },
+  "det_protected_by_t3": {
+   "value": 0.004,
+   "ci95": [
+    0.00283,
+    0.00564
+   ]
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00063,
+   "ci95": [
+    0.00027,
+    0.00146
+   ]
+  },
+  "oracle_line_by_t3": {
+   "value": 0.00887,
+   "ci95": [
+    0.00704,
+    0.01118
+   ]
+  },
+  "infinite_line_by_t3": {
+   "value": 0.00825,
+   "ci95": [
+    0.00649,
+    0.01048
+   ]
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.02025,
+   "ci95": [
+    0.01739,
+    0.02357
+   ]
+  },
+  "det_win_by_t4": {
+   "value": 0.0695,
+   "ci95": [
+    0.06413,
+    0.07528
+   ]
+  },
+  "det_protected_by_t4": {
+   "value": 0.024,
+   "ci95": [
+    0.02087,
+    0.02759
+   ]
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.005,
+   "ci95": [
+    0.00367,
+    0.0068
+   ]
+  },
+  "oracle_line_by_t4": {
+   "value": 0.04375,
+   "ci95": [
+    0.03948,
+    0.04846
+   ]
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03425,
+   "ci95": [
+    0.03048,
+    0.03846
+   ]
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.072,
+   "ci95": [
+    0.06654,
+    0.07787
+   ]
+  },
+  "oracle_any_by_t2": {
+   "value": 0.001,
+   "ci95": [
+    0.00051,
+    0.00197
+   ]
+  },
+  "non_oracle_det_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ]
+  },
+  "oracle_any_by_t3": {
+   "value": 0.01675,
+   "ci95": [
+    0.01416,
+    0.0198
+   ]
+  },
+  "non_oracle_det_by_t3": {
+   "value": 0.0075,
+   "ci95": [
+    0.00583,
+    0.00964
+   ]
+  },
+  "oracle_any_by_t4": {
+   "value": 0.0695,
+   "ci95": [
+    0.06413,
+    0.07528
+   ]
+  },
+  "non_oracle_det_by_t4": {
+   "value": 0.03238,
+   "ci95": [
+    0.02872,
+    0.03648
+   ]
+  },
+  "bricks_in_kept_hand_mean": {
+   "value": 1.34925,
+   "se": 0.01408
+  },
+  "kept_hand_0_bricks": {
+   "value": 0.29325,
+   "ci95": [
+    0.28337,
+    0.30332
+   ]
+  },
+  "kept_hand_1_brick": {
+   "value": 0.32,
+   "ci95": [
+    0.30987,
+    0.33031
+   ]
+  },
+  "kept_hand_2plus_bricks": {
+   "value": 0.38675,
+   "ci95": [
+    0.37613,
+    0.39747
+   ]
+  },
+  "early_dead_in_kept_hand_mean": {
+   "value": 2.38488,
+   "se": 0.01658
+  },
+  "stranded_cards_in_hand_t1": {
+   "value": 2.41162,
+   "se": 0.01718
+  },
+  "secondary_only_cards_in_hand_t1": {
+   "value": 1.8825,
+   "se": 0.01417
+  },
+  "stranded_cards_in_hand_t2": {
+   "value": 1.57062,
+   "se": 0.01716
+  },
+  "secondary_only_cards_in_hand_t2": {
+   "value": 1.22713,
+   "se": 0.01296
+  },
+  "stranded_cards_in_hand_t3": {
+   "value": 1.04713,
+   "se": 0.01659
+  },
+  "secondary_only_cards_in_hand_t3": {
+   "value": 0.82925,
+   "se": 0.01107
+  },
+  "stranded_cards_in_hand_t4": {
+   "value": 0.83788,
+   "se": 0.01589
+  },
+  "secondary_only_cards_in_hand_t4": {
+   "value": 0.66638,
+   "se": 0.01058
+  },
+  "access_free_counter_in_hand_t3": {
+   "value": 0.46,
+   "ci95": [
+    0.4491,
+    0.47094
+   ]
+  },
+  "access_free_counter_hand_or_tutor_t3": {
+   "value": 0.80988,
+   "ci95": [
+    0.80113,
+    0.81832
+   ]
+  },
+  "access_free_counter_in_hand_t4": {
+   "value": 0.51487,
+   "ci95": [
+    0.50392,
+    0.52582
+   ]
+  },
+  "access_free_counter_hand_or_tutor_t4": {
+   "value": 0.86625,
+   "ci95": [
+    0.85861,
+    0.87353
+   ]
+  },
+  "access_paid_counter_in_hand_t3": {
+   "value": 0.22837,
+   "ci95": [
+    0.21931,
+    0.2377
+   ]
+  },
+  "access_paid_counter_hand_or_tutor_t3": {
+   "value": 0.68137,
+   "ci95": [
+    0.67108,
+    0.6915
+   ]
+  },
+  "access_paid_counter_in_hand_t4": {
+   "value": 0.253,
+   "ci95": [
+    0.24359,
+    0.26264
+   ]
+  },
+  "access_paid_counter_hand_or_tutor_t4": {
+   "value": 0.73188,
+   "ci95": [
+    0.72206,
+    0.74147
+   ]
+  },
+  "access_creature_spell_answer_in_hand_t3": {
+   "value": 0.35,
+   "ci95": [
+    0.33962,
+    0.36052
+   ]
+  },
+  "access_creature_spell_answer_hand_or_tutor_t3": {
+   "value": 0.78675,
+   "ci95": [
+    0.77764,
+    0.79559
+   ]
+  },
+  "access_creature_spell_answer_in_hand_t4": {
+   "value": 0.38675,
+   "ci95": [
+    0.37613,
+    0.39747
+   ]
+  },
+  "access_creature_spell_answer_hand_or_tutor_t4": {
+   "value": 0.84513,
+   "ci95": [
+    0.83703,
+    0.85289
+   ]
+  },
+  "access_artifact_spell_answer_in_hand_t3": {
+   "value": 0.43238,
+   "ci95": [
+    0.42155,
+    0.44326
+   ]
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t3": {
+   "value": 0.76275,
+   "ci95": [
+    0.7533,
+    0.77194
+   ]
+  },
+  "access_artifact_spell_answer_in_hand_t4": {
+   "value": 0.47737,
+   "ci95": [
+    0.46644,
+    0.48833
+   ]
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t4": {
+   "value": 0.815,
+   "ci95": [
+    0.80634,
+    0.82336
+   ]
+  },
+  "access_creature_theft_in_hand_t3": {
+   "value": 0.0755,
+   "ci95": [
+    0.06991,
+    0.0815
+   ]
+  },
+  "access_creature_theft_hand_or_tutor_t3": {
+   "value": 0.35037,
+   "ci95": [
+    0.33999,
+    0.3609
+   ]
+  },
+  "access_creature_theft_in_hand_t4": {
+   "value": 0.08725,
+   "ci95": [
+    0.08126,
+    0.09363
+   ]
+  },
+  "access_creature_theft_hand_or_tutor_t4": {
+   "value": 0.43138,
+   "ci95": [
+    0.42056,
+    0.44226
+   ]
+  },
+  "access_resolved_creature_answer_in_hand_t3": {
+   "value": 0.16525,
+   "ci95": [
+    0.15727,
+    0.17355
+   ]
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t3": {
+   "value": 0.45787,
+   "ci95": [
+    0.44698,
+    0.46881
+   ]
+  },
+  "access_resolved_creature_answer_in_hand_t4": {
+   "value": 0.1475,
+   "ci95": [
+    0.1399,
+    0.15544
+   ]
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t4": {
+   "value": 0.517,
+   "ci95": [
+    0.50604,
+    0.52794
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t3": {
+   "value": 0.15513,
+   "ci95": [
+    0.14736,
+    0.16322
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t3": {
+   "value": 0.29962,
+   "ci95": [
+    0.28968,
+    0.30976
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t4": {
+   "value": 0.107,
+   "ci95": [
+    0.10041,
+    0.11396
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t4": {
+   "value": 0.29325,
+   "ci95": [
+    0.28337,
+    0.30332
+   ]
+  },
+  "access_spell_redirect_in_hand_t3": {
+   "value": 0.07187,
+   "ci95": [
+    0.06642,
+    0.07774
+   ]
+  },
+  "access_spell_redirect_hand_or_tutor_t3": {
+   "value": 0.16562,
+   "ci95": [
+    0.15764,
+    0.17393
+   ]
+  },
+  "access_spell_redirect_in_hand_t4": {
+   "value": 0.08175,
+   "ci95": [
+    0.07594,
+    0.08796
+   ]
+  },
+  "access_spell_redirect_hand_or_tutor_t4": {
+   "value": 0.20225,
+   "ci95": [
+    0.19359,
+    0.21119
+   ]
+  },
+  "access_graveyard_interaction_in_hand_t3": {
+   "value": 0.069,
+   "ci95": [
+    0.06365,
+    0.07476
+   ]
+  },
+  "access_graveyard_interaction_hand_or_tutor_t3": {
+   "value": 0.34525,
+   "ci95": [
+    0.33491,
+    0.35574
+   ]
+  },
+  "access_graveyard_interaction_in_hand_t4": {
+   "value": 0.07913,
+   "ci95": [
+    0.07341,
+    0.08524
+   ]
+  },
+  "access_graveyard_interaction_hand_or_tutor_t4": {
+   "value": 0.42525,
+   "ci95": [
+    0.41445,
+    0.43612
+   ]
+  },
+  "access_proactive_protection_in_hand_t3": {
+   "value": 0.19737,
+   "ci95": [
+    0.1888,
+    0.20624
+   ]
+  },
+  "access_proactive_protection_hand_or_tutor_t3": {
+   "value": 0.71813,
+   "ci95": [
+    0.70816,
+    0.72788
+   ]
+  },
+  "access_proactive_protection_in_hand_t4": {
+   "value": 0.22412,
+   "ci95": [
+    0.21512,
+    0.23339
+   ]
+  },
+  "access_proactive_protection_hand_or_tutor_t4": {
+   "value": 0.78475,
+   "ci95": [
+    0.77561,
+    0.79362
+   ]
+  },
+  "access_regrowth_of_spent_resources_in_hand_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "access_regrowth_of_spent_resources_in_hand_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "access_flexible_catch_all_in_hand_t3": {
+   "value": 0.2935,
+   "ci95": [
+    0.28362,
+    0.30358
+   ]
+  },
+  "access_flexible_catch_all_hand_or_tutor_t3": {
+   "value": 0.71362,
+   "ci95": [
+    0.70362,
+    0.72343
+   ]
+  },
+  "access_flexible_catch_all_in_hand_t4": {
+   "value": 0.32362,
+   "ci95": [
+    0.31346,
+    0.33396
+   ]
+  },
+  "access_flexible_catch_all_hand_or_tutor_t4": {
+   "value": 0.76825,
+   "ci95": [
+    0.75888,
+    0.77737
+   ]
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 246,
+   "inf_oracle": 264,
+   "oracle_consult": 342
+  },
+  "focus_card_quality": {
+   "Thassa's Oracle": {
+    "t1": {
+     "p_in_hand": 0.05187,
+     "n_held": 415,
+     "material": 0.0675,
+     "secondary_only": 0.3687,
+     "stranded": 0.5639,
+     "roles": {
+      "body": 0.2024,
+      "combo_pair": 0.0675,
+      "pitch": 0.2145
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06187,
+     "n_held": 495,
+     "material": 0.0727,
+     "secondary_only": 0.6283,
+     "stranded": 0.299,
+     "roles": {
+      "body": 0.5414,
+      "combo_live": 0.004,
+      "combo_pair": 0.0727,
+      "pitch": 0.2747
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.0715,
+     "n_held": 572,
+     "material": 0.0892,
+     "secondary_only": 0.7203,
+     "stranded": 0.1906,
+     "roles": {
+      "body": 0.6853,
+      "combo_live": 0.028,
+      "combo_pair": 0.0822,
+      "pitch": 0.3007
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.082,
+     "n_held": 656,
+     "material": 0.1143,
+     "secondary_only": 0.7424,
+     "stranded": 0.1433,
+     "roles": {
+      "body": 0.7256,
+      "combo_live": 0.0579,
+      "combo_pair": 0.0915,
+      "pitch": 0.3445
+     }
+    }
+   },
+   "Demonic Consultation": {
+    "t1": {
+     "p_in_hand": 0.06,
+     "n_held": 480,
+     "material": 0.0583,
+     "secondary_only": 0.7042,
+     "stranded": 0.2375,
+     "roles": {
+      "combo_pair": 0.0583,
+      "fair_risky": 0.7521
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06775,
+     "n_held": 542,
+     "material": 0.0738,
+     "secondary_only": 0.7103,
+     "stranded": 0.2159,
+     "roles": {
+      "combo_live": 0.0111,
+      "combo_pair": 0.0664,
+      "fair_risky": 0.7694
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07838,
+     "n_held": 627,
+     "material": 0.1276,
+     "secondary_only": 0.7033,
+     "stranded": 0.1691,
+     "roles": {
+      "combo_live": 0.0718,
+      "combo_pair": 0.075,
+      "fair_risky": 0.8182
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.089,
+     "n_held": 712,
+     "material": 0.243,
+     "secondary_only": 0.6166,
+     "stranded": 0.1404,
+     "roles": {
+      "combo_live": 0.191,
+      "combo_pair": 0.0843,
+      "fair_risky": 0.8497
+     }
+    }
+   },
+   "Spellseeker": {
+    "t1": {
+     "p_in_hand": 0.6575,
+     "n_held": 5260,
+     "material": 0.0485,
+     "secondary_only": 0.3625,
+     "stranded": 0.589,
+     "roles": {
+      "body": 0.108,
+      "development": 0.0485,
+      "fair_tutor": 0.0485,
+      "pitch": 0.2951
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.66,
+     "n_held": 5280,
+     "material": 0.4756,
+     "secondary_only": 0.2411,
+     "stranded": 0.2833,
+     "roles": {
+      "body": 0.1388,
+      "development": 0.4756,
+      "fair_tutor": 0.4756,
+      "pitch": 0.3277
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.66312,
+     "n_held": 5305,
+     "material": 0.7972,
+     "secondary_only": 0.1152,
+     "stranded": 0.0877,
+     "roles": {
+      "body": 0.2334,
+      "combo_live": 0.0066,
+      "development": 0.7972,
+      "fair_tutor": 0.7972,
+      "pitch": 0.3668
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.66763,
+     "n_held": 5341,
+     "material": 0.8616,
+     "secondary_only": 0.088,
+     "stranded": 0.0504,
+     "roles": {
+      "body": 0.3365,
+      "combo_live": 0.0521,
+      "development": 0.8616,
+      "fair_tutor": 0.8616,
+      "pitch": 0.3981
+     }
+    }
+   },
+   "Hazel's Brewmaster": {
+    "t1": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.0278,
+     "secondary_only": 0.1291,
+     "stranded": 0.843,
+     "roles": {
+      "body": 0.1316,
+      "combo_pair": 0.0278
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05987,
+     "n_held": 479,
+     "material": 0.0397,
+     "secondary_only": 0.2463,
+     "stranded": 0.714,
+     "roles": {
+      "body": 0.261,
+      "combo_pair": 0.0397
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.072,
+     "n_held": 576,
+     "material": 0.0538,
+     "secondary_only": 0.4844,
+     "stranded": 0.4618,
+     "roles": {
+      "body": 0.5139,
+      "combo_pair": 0.0538
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08263,
+     "n_held": 661,
+     "material": 0.0605,
+     "secondary_only": 0.652,
+     "stranded": 0.2874,
+     "roles": {
+      "body": 0.6959,
+      "combo_pair": 0.0605
+     }
+    }
+   },
+   "Oboro Breezecaller": {
+    "t1": {
+     "p_in_hand": 0.06012,
+     "n_held": 481,
+     "material": 0.0707,
+     "secondary_only": 0.4096,
+     "stranded": 0.5198,
+     "roles": {
+      "body": 0.2703,
+      "combo_pair": 0.0707,
+      "development": 0.0083,
+      "pitch": 0.2121
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06963,
+     "n_held": 557,
+     "material": 0.0718,
+     "secondary_only": 0.8546,
+     "stranded": 0.0736,
+     "roles": {
+      "body": 0.833,
+      "combo_pair": 0.0718,
+      "development": 0.0575,
+      "pitch": 0.246
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06825,
+     "n_held": 546,
+     "material": 0.0733,
+     "secondary_only": 0.881,
+     "stranded": 0.0458,
+     "roles": {
+      "body": 0.87,
+      "combo_pair": 0.0733,
+      "development": 0.0623,
+      "pitch": 0.2967
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06137,
+     "n_held": 491,
+     "material": 0.0754,
+     "secondary_only": 0.89,
+     "stranded": 0.0346,
+     "roles": {
+      "body": 0.8819,
+      "combo_pair": 0.0754,
+      "development": 0.0652,
+      "pitch": 0.3544
+     }
+    }
+   },
+   "Swift Reconfiguration": {
+    "t1": {
+     "p_in_hand": 0.05862,
+     "n_held": 469,
+     "material": 0.0704,
+     "secondary_only": 0.0,
+     "stranded": 0.9296,
+     "roles": {
+      "combo_pair": 0.0704
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06863,
+     "n_held": 549,
+     "material": 0.0729,
+     "secondary_only": 0.0,
+     "stranded": 0.9271,
+     "roles": {
+      "combo_live": 0.0036,
+      "combo_pair": 0.0729
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.0795,
+     "n_held": 636,
+     "material": 0.1116,
+     "secondary_only": 0.0,
+     "stranded": 0.8884,
+     "roles": {
+      "combo_live": 0.0723,
+      "combo_pair": 0.0708
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08937,
+     "n_held": 715,
+     "material": 0.2042,
+     "secondary_only": 0.0,
+     "stranded": 0.7958,
+     "roles": {
+      "combo_live": 0.186,
+      "combo_pair": 0.0783
+     }
+    }
+   },
+   "Machine God's Effigy": {
+    "t1": {
+     "p_in_hand": 0.0455,
+     "n_held": 364,
+     "material": 0.0275,
+     "secondary_only": 0.0,
+     "stranded": 0.9725,
+     "roles": {
+      "combo_pair": 0.022,
+      "development": 0.0055
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05675,
+     "n_held": 454,
+     "material": 0.1652,
+     "secondary_only": 0.0,
+     "stranded": 0.8348,
+     "roles": {
+      "combo_pair": 0.0264,
+      "development": 0.141
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06913,
+     "n_held": 553,
+     "material": 0.4629,
+     "secondary_only": 0.0,
+     "stranded": 0.5371,
+     "roles": {
+      "combo_live": 0.009,
+      "combo_pair": 0.0452,
+      "development": 0.443
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08038,
+     "n_held": 643,
+     "material": 0.6501,
+     "secondary_only": 0.0,
+     "stranded": 0.3499,
+     "roles": {
+      "combo_live": 0.0435,
+      "combo_pair": 0.0607,
+      "development": 0.633
+     }
+    }
+   },
+   "Devoted Druid": {
+    "t1": {
+     "p_in_hand": 0.056,
+     "n_held": 448,
+     "material": 0.3281,
+     "secondary_only": 0.058,
+     "stranded": 0.6138,
+     "roles": {
+      "body": 0.067,
+      "combo_pair": 0.1138,
+      "development": 0.2299,
+      "pitch": 0.029
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06513,
+     "n_held": 521,
+     "material": 0.856,
+     "secondary_only": 0.0269,
+     "stranded": 0.1171,
+     "roles": {
+      "body": 0.094,
+      "combo_live": 0.0019,
+      "combo_pair": 0.1324,
+      "development": 0.8273,
+      "pitch": 0.0461
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06313,
+     "n_held": 505,
+     "material": 0.8792,
+     "secondary_only": 0.0297,
+     "stranded": 0.0911,
+     "roles": {
+      "body": 0.1881,
+      "combo_live": 0.0277,
+      "combo_pair": 0.1564,
+      "development": 0.8515,
+      "pitch": 0.0614
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05575,
+     "n_held": 446,
+     "material": 0.8767,
+     "secondary_only": 0.0381,
+     "stranded": 0.0852,
+     "roles": {
+      "body": 0.2982,
+      "combo_live": 0.065,
+      "combo_pair": 0.1771,
+      "development": 0.8475,
+      "pitch": 0.065
+     }
+    }
+   },
+   "Orcish Bowmasters": {
+    "t1": {
+     "p_in_hand": 0.06388,
+     "n_held": 511,
+     "material": 0.229,
+     "secondary_only": 0.1018,
+     "stranded": 0.6693,
+     "roles": {
+      "body": 0.1213,
+      "combo_pair": 0.0411,
+      "interaction_held": 0.1957
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07312,
+     "n_held": 585,
+     "material": 0.7761,
+     "secondary_only": 0.0342,
+     "stranded": 0.1897,
+     "roles": {
+      "body": 0.135,
+      "combo_pair": 0.0547,
+      "interaction_held": 0.7607
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08288,
+     "n_held": 663,
+     "material": 0.8205,
+     "secondary_only": 0.0468,
+     "stranded": 0.1327,
+     "roles": {
+      "body": 0.2594,
+      "combo_pair": 0.0724,
+      "interaction_held": 0.8024
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09325,
+     "n_held": 746,
+     "material": 0.8566,
+     "secondary_only": 0.0442,
+     "stranded": 0.0992,
+     "roles": {
+      "body": 0.3525,
+      "combo_live": 0.004,
+      "combo_pair": 0.0871,
+      "interaction_held": 0.8418
+     }
+    }
+   },
+   "Faerie Mastermind": {
+    "t1": {
+     "p_in_hand": 0.05887,
+     "n_held": 471,
+     "material": 0.259,
+     "secondary_only": 0.2123,
+     "stranded": 0.5287,
+     "roles": {
+      "body": 0.0828,
+      "combo_pair": 0.0446,
+      "development": 0.2229,
+      "pitch": 0.2229
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06913,
+     "n_held": 553,
+     "material": 0.8571,
+     "secondary_only": 0.0579,
+     "stranded": 0.085,
+     "roles": {
+      "body": 0.1085,
+      "combo_pair": 0.0579,
+      "development": 0.8481,
+      "pitch": 0.2622
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06738,
+     "n_held": 539,
+     "material": 0.8868,
+     "secondary_only": 0.0519,
+     "stranded": 0.0612,
+     "roles": {
+      "body": 0.2041,
+      "combo_pair": 0.0686,
+      "development": 0.8794,
+      "pitch": 0.295
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06338,
+     "n_held": 507,
+     "material": 0.8856,
+     "secondary_only": 0.0631,
+     "stranded": 0.0513,
+     "roles": {
+      "body": 0.3254,
+      "combo_live": 0.002,
+      "combo_pair": 0.0888,
+      "development": 0.8718,
+      "pitch": 0.3333
+     }
+    }
+   },
+   "Gilded Drake": {
+    "t1": {
+     "p_in_hand": 0.06888,
+     "n_held": 551,
+     "material": 0.2015,
+     "secondary_only": 0.2069,
+     "stranded": 0.5917,
+     "roles": {
+      "body": 0.1162,
+      "interaction_held": 0.2015,
+      "pitch": 0.1724
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07562,
+     "n_held": 605,
+     "material": 0.8446,
+     "secondary_only": 0.0628,
+     "stranded": 0.0926,
+     "roles": {
+      "body": 0.1455,
+      "interaction_held": 0.8446,
+      "pitch": 0.2198
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.084,
+     "n_held": 672,
+     "material": 0.8988,
+     "secondary_only": 0.0417,
+     "stranded": 0.0595,
+     "roles": {
+      "body": 0.2068,
+      "interaction_held": 0.8988,
+      "pitch": 0.2515
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09413,
+     "n_held": 753,
+     "material": 0.927,
+     "secondary_only": 0.0359,
+     "stranded": 0.0372,
+     "roles": {
+      "body": 0.2895,
+      "interaction_held": 0.927,
+      "pitch": 0.2948
+     }
+    }
+   },
+   "Imperial Seal": {
+    "t1": {
+     "p_in_hand": 0.06087,
+     "n_held": 487,
+     "material": 0.7515,
+     "secondary_only": 0.0,
+     "stranded": 0.2485,
+     "roles": {
+      "fair_tutor": 0.7515
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.04425,
+     "n_held": 354,
+     "material": 0.661,
+     "secondary_only": 0.0,
+     "stranded": 0.339,
+     "roles": {
+      "fair_tutor": 0.661
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.048,
+     "n_held": 384,
+     "material": 0.7161,
+     "secondary_only": 0.0,
+     "stranded": 0.2839,
+     "roles": {
+      "fair_tutor": 0.7161
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05738,
+     "n_held": 459,
+     "material": 0.7647,
+     "secondary_only": 0.0,
+     "stranded": 0.2353,
+     "roles": {
+      "combo_live": 0.0109,
+      "fair_tutor": 0.7647
+     }
+    }
+   },
+   "Demonic Tutor": {
+    "t1": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.2075,
+     "secondary_only": 0.0,
+     "stranded": 0.7925,
+     "roles": {
+      "fair_tutor": 0.2075
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.069,
+     "n_held": 552,
+     "material": 0.7409,
+     "secondary_only": 0.0,
+     "stranded": 0.2591,
+     "roles": {
+      "fair_tutor": 0.7409
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.05038,
+     "n_held": 403,
+     "material": 0.67,
+     "secondary_only": 0.0,
+     "stranded": 0.33,
+     "roles": {
+      "combo_live": 0.0099,
+      "fair_tutor": 0.67
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06062,
+     "n_held": 485,
+     "material": 0.7464,
+     "secondary_only": 0.0,
+     "stranded": 0.2536,
+     "roles": {
+      "combo_live": 0.0515,
+      "fair_tutor": 0.7464
+     }
+    }
+   },
+   "Vampiric Tutor": {
+    "t1": {
+     "p_in_hand": 0.06725,
+     "n_held": 538,
+     "material": 0.7602,
+     "secondary_only": 0.0,
+     "stranded": 0.2398,
+     "roles": {
+      "fair_tutor": 0.7602
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.6405,
+     "secondary_only": 0.0,
+     "stranded": 0.3595,
+     "roles": {
+      "fair_tutor": 0.6405
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.05087,
+     "n_held": 407,
+     "material": 0.6904,
+     "secondary_only": 0.0,
+     "stranded": 0.3096,
+     "roles": {
+      "fair_tutor": 0.6904
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.061,
+     "n_held": 488,
+     "material": 0.752,
+     "secondary_only": 0.0,
+     "stranded": 0.248,
+     "roles": {
+      "combo_live": 0.0164,
+      "fair_tutor": 0.752
+     }
+    }
+   },
+   "Enlightened Tutor": {
+    "t1": {
+     "p_in_hand": 0.06125,
+     "n_held": 490,
+     "material": 0.7265,
+     "secondary_only": 0.0,
+     "stranded": 0.2735,
+     "roles": {
+      "fair_tutor": 0.7265
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07087,
+     "n_held": 567,
+     "material": 0.7954,
+     "secondary_only": 0.0,
+     "stranded": 0.2046,
+     "roles": {
+      "fair_tutor": 0.7954
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08075,
+     "n_held": 646,
+     "material": 0.8421,
+     "secondary_only": 0.0,
+     "stranded": 0.1579,
+     "roles": {
+      "combo_live": 0.0015,
+      "fair_tutor": 0.8421
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09187,
+     "n_held": 735,
+     "material": 0.8748,
+     "secondary_only": 0.0,
+     "stranded": 0.1252,
+     "roles": {
+      "combo_live": 0.015,
+      "fair_tutor": 0.8748
+     }
+    }
+   },
+   "Crop Rotation": {
+    "t1": {
+     "p_in_hand": 0.05638,
+     "n_held": 451,
+     "material": 0.0377,
+     "secondary_only": 0.0488,
+     "stranded": 0.9135,
+     "roles": {
+      "fair_tutor": 0.0377,
+      "pitch": 0.051
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.0655,
+     "n_held": 524,
+     "material": 0.8702,
+     "secondary_only": 0.0076,
+     "stranded": 0.1221,
+     "roles": {
+      "fair_tutor": 0.8702,
+      "pitch": 0.0515
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07587,
+     "n_held": 607,
+     "material": 0.9143,
+     "secondary_only": 0.0033,
+     "stranded": 0.0824,
+     "roles": {
+      "fair_tutor": 0.9143,
+      "pitch": 0.0692
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08712,
+     "n_held": 697,
+     "material": 0.9311,
+     "secondary_only": 0.0029,
+     "stranded": 0.066,
+     "roles": {
+      "fair_tutor": 0.9311,
+      "pitch": 0.0717
+     }
+    }
+   },
+   "Birthing Pod": {
+    "t1": {
+     "p_in_hand": 0.05337,
+     "n_held": 427,
+     "material": 0.0351,
+     "secondary_only": 0.0281,
+     "stranded": 0.9368,
+     "roles": {
+      "development": 0.0351,
+      "fair_tutor": 0.0351,
+      "pitch": 0.0304
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.11188,
+     "n_held": 895,
+     "material": 0.3888,
+     "secondary_only": 0.0324,
+     "stranded": 0.5788,
+     "roles": {
+      "development": 0.3888,
+      "fair_tutor": 0.3888,
+      "pitch": 0.0447
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.1315,
+     "n_held": 1052,
+     "material": 0.7624,
+     "secondary_only": 0.0209,
+     "stranded": 0.2167,
+     "roles": {
+      "combo_live": 0.0029,
+      "development": 0.7624,
+      "fair_tutor": 0.7624,
+      "pitch": 0.0713
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.6253,
+     "secondary_only": 0.0354,
+     "stranded": 0.3392,
+     "roles": {
+      "combo_live": 0.0177,
+      "development": 0.6253,
+      "fair_tutor": 0.6253,
+      "pitch": 0.0911
+     }
+    }
+   }
+  },
+  "dead_opening_draw": {
+   "Thassa's Oracle": {
+    "opening_7": {
+     "n": 225,
+     "p_dead": 0.8489,
+     "ci95": [
+      0.79626,
+      0.8898
+     ],
+     "p_early_dead": 0.9333
+    },
+    "kept_6_after_second_7": {
+     "n": 97,
+     "p_dead": 0.866,
+     "ci95": [
+      0.7841,
+      0.91998
+     ],
+     "p_early_dead": 0.9278
+    },
+    "kept_5": {
+     "n": 34,
+     "p_dead": 0.8235,
+     "ci95": [
+      0.66486,
+      0.91651
+     ],
+     "p_early_dead": 0.8235
+    },
+    "all_kept_hands": {
+     "n": 357,
+     "p_dead": 0.8515,
+     "ci95": [
+      0.81092,
+      0.88467
+     ]
+    }
+   },
+   "Demonic Consultation": {
+    "opening_7": {
+     "n": 249,
+     "p_dead": 0.747,
+     "ci95": [
+      0.68952,
+      0.79695
+     ],
+     "p_early_dead": 0.9237
+    },
+    "kept_6_after_second_7": {
+     "n": 117,
+     "p_dead": 0.7607,
+     "ci95": [
+      0.67587,
+      0.82892
+     ],
+     "p_early_dead": 0.9316
+    },
+    "kept_5": {
+     "n": 41,
+     "p_dead": 0.8049,
+     "ci95": [
+      0.65986,
+      0.89766
+     ],
+     "p_early_dead": 0.8293
+    },
+    "all_kept_hands": {
+     "n": 411,
+     "p_dead": 0.7591,
+     "ci95": [
+      0.7155,
+      0.79794
+     ]
+    }
+   },
+   "Spellseeker": {
+    "opening_7": {
+     "n": 5109,
+     "p_dead": 0.1341,
+     "ci95": [
+      0.12501,
+      0.1437
+     ],
+     "p_early_dead": 0.5226
+    },
+    "kept_6_after_second_7": {
+     "n": 111,
+     "p_dead": 0.1351,
+     "ci95": [
+      0.08363,
+      0.21105
+     ],
+     "p_early_dead": 0.5045
+    },
+    "kept_5": {
+     "n": 37,
+     "p_dead": 0.2432,
+     "ci95": [
+      0.13361,
+      0.40118
+     ],
+     "p_early_dead": 0.5676
+    },
+    "all_kept_hands": {
+     "n": 5259,
+     "p_dead": 0.1348,
+     "ci95": [
+      0.12585,
+      0.14431
+     ]
+    }
+   },
+   "Hazel's Brewmaster": {
+    "opening_7": {
+     "n": 269,
+     "p_dead": 0.9405,
+     "ci95": [
+      0.90558,
+      0.96306
+     ],
+     "p_early_dead": 0.9628
+    },
+    "kept_6_after_second_7": {
+     "n": 56,
+     "p_dead": 0.9643,
+     "ci95": [
+      0.87881,
+      0.99015
+     ],
+     "p_early_dead": 0.9821
+    },
+    "all_kept_hands": {
+     "n": 332,
+     "p_dead": 0.9458,
+     "ci95": [
+      0.91593,
+      0.96543
+     ]
+    }
+   },
+   "Oboro Breezecaller": {
+    "opening_7": {
+     "n": 282,
+     "p_dead": 0.9007,
+     "ci95": [
+      0.86024,
+      0.93041
+     ],
+     "p_early_dead": 0.9113
+    },
+    "kept_6_after_second_7": {
+     "n": 96,
+     "p_dead": 0.9167,
+     "ci95": [
+      0.8441,
+      0.95717
+     ],
+     "p_early_dead": 0.9271
+    },
+    "kept_5": {
+     "n": 35,
+     "p_dead": 0.9714,
+     "ci95": [
+      0.85467,
+      0.99494
+     ],
+     "p_early_dead": 1.0
+    },
+    "all_kept_hands": {
+     "n": 415,
+     "p_dead": 0.9108,
+     "ci95": [
+      0.87952,
+      0.93463
+     ]
+    }
+   },
+   "Swift Reconfiguration": {
+    "opening_7": {
+     "n": 257,
+     "p_dead": 0.7821,
+     "ci95": [
+      0.72768,
+      0.82822
+     ],
+     "p_early_dead": 0.9377
+    },
+    "kept_6_after_second_7": {
+     "n": 95,
+     "p_dead": 0.6842,
+     "ci95": [
+      0.58513,
+      0.76897
+     ],
+     "p_early_dead": 0.8947
+    },
+    "kept_5": {
+     "n": 48,
+     "p_dead": 0.7708,
+     "ci95": [
+      0.6346,
+      0.86692
+     ],
+     "p_early_dead": 0.8542
+    },
+    "all_kept_hands": {
+     "n": 402,
+     "p_dead": 0.7562,
+     "ci95": [
+      0.71195,
+      0.79564
+     ]
+    }
+   },
+   "Machine God's Effigy": {
+    "opening_7": {
+     "n": 226,
+     "p_dead": 0.2965,
+     "ci95": [
+      0.24072,
+      0.359
+     ],
+     "p_early_dead": 0.8274
+    },
+    "kept_6_after_second_7": {
+     "n": 74,
+     "p_dead": 0.2703,
+     "ci95": [
+      0.1823,
+      0.38091
+     ],
+     "p_early_dead": 0.7973
+    },
+    "all_kept_hands": {
+     "n": 309,
+     "p_dead": 0.2913,
+     "ci95": [
+      0.24341,
+      0.34424
+     ]
+    }
+   },
+   "Devoted Druid": {
+    "opening_7": {
+     "n": 236,
+     "p_dead": 0.0508,
+     "ci95": [
+      0.02932,
+      0.08676
+     ],
+     "p_early_dead": 0.1102
+    },
+    "kept_6_after_second_7": {
+     "n": 100,
+     "p_dead": 0.09,
+     "ci95": [
+      0.04807,
+      0.16226
+     ],
+     "p_early_dead": 0.16
+    },
+    "kept_5": {
+     "n": 48,
+     "p_dead": 0.0625,
+     "ci95": [
+      0.02148,
+      0.16836
+     ],
+     "p_early_dead": 0.1875
+    },
+    "all_kept_hands": {
+     "n": 387,
+     "p_dead": 0.062,
+     "ci95": [
+      0.04202,
+      0.09062
+     ]
+    }
+   },
+   "Orcish Bowmasters": {
+    "opening_7": {
+     "n": 285,
+     "p_dead": 0.1193,
+     "ci95": [
+      0.08664,
+      0.16208
+     ],
+     "p_early_dead": 0.2175
+    },
+    "kept_6_after_second_7": {
+     "n": 118,
+     "p_dead": 0.1102,
+     "ci95": [
+      0.06552,
+      0.1794
+     ],
+     "p_early_dead": 0.178
+    },
+    "kept_5": {
+     "n": 38,
+     "p_dead": 0.1316,
+     "ci95": [
+      0.05754,
+      0.27327
+     ],
+     "p_early_dead": 0.2632
+    },
+    "all_kept_hands": {
+     "n": 446,
+     "p_dead": 0.1188,
+     "ci95": [
+      0.09201,
+      0.15217
+     ]
+    }
+   },
+   "Faerie Mastermind": {
+    "opening_7": {
+     "n": 262,
+     "p_dead": 0.0534,
+     "ci95": [
+      0.03209,
+      0.08768
+     ],
+     "p_early_dead": 0.1107
+    },
+    "kept_6_after_second_7": {
+     "n": 109,
+     "p_dead": 0.0734,
+     "ci95": [
+      0.03766,
+      0.13818
+     ],
+     "p_early_dead": 0.1651
+    },
+    "kept_5": {
+     "n": 33,
+     "p_dead": 0.1212,
+     "ci95": [
+      0.04816,
+      0.27326
+     ],
+     "p_early_dead": 0.2424
+    },
+    "all_kept_hands": {
+     "n": 407,
+     "p_dead": 0.0639,
+     "ci95": [
+      0.04396,
+      0.09196
+     ]
+    }
+   },
+   "Gilded Drake": {
+    "opening_7": {
+     "n": 310,
+     "p_dead": 0.0323,
+     "ci95": [
+      0.01761,
+      0.05835
+     ],
+     "p_early_dead": 0.1
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.0606,
+     "ci95": [
+      0.02807,
+      0.12597
+     ],
+     "p_early_dead": 0.1111
+    },
+    "kept_5": {
+     "n": 68,
+     "p_dead": 0.0735,
+     "ci95": [
+      0.03181,
+      0.16085
+     ],
+     "p_early_dead": 0.25
+    },
+    "all_kept_hands": {
+     "n": 483,
+     "p_dead": 0.0497,
+     "ci95": [
+      0.03362,
+      0.07287
+     ]
+    }
+   },
+   "Imperial Seal": {
+    "opening_7": {
+     "n": 230,
+     "p_dead": 0.0957,
+     "ci95": [
+      0.06402,
+      0.14057
+     ],
+     "p_early_dead": 0.1565
+    },
+    "kept_6_after_second_7": {
+     "n": 136,
+     "p_dead": 0.125,
+     "ci95": [
+      0.07953,
+      0.19108
+     ],
+     "p_early_dead": 0.1765
+    },
+    "kept_5": {
+     "n": 71,
+     "p_dead": 0.1408,
+     "ci95": [
+      0.07834,
+      0.24022
+     ],
+     "p_early_dead": 0.2535
+    },
+    "all_kept_hands": {
+     "n": 442,
+     "p_dead": 0.1131,
+     "ci95": [
+      0.08687,
+      0.14605
+     ]
+    }
+   },
+   "Demonic Tutor": {
+    "opening_7": {
+     "n": 274,
+     "p_dead": 0.1095,
+     "ci95": [
+      0.07778,
+      0.152
+     ],
+     "p_early_dead": 0.1971
+    },
+    "kept_6_after_second_7": {
+     "n": 130,
+     "p_dead": 0.1,
+     "ci95": [
+      0.05937,
+      0.16359
+     ],
+     "p_early_dead": 0.1923
+    },
+    "kept_5": {
+     "n": 42,
+     "p_dead": 0.1667,
+     "ci95": [
+      0.08316,
+      0.30604
+     ],
+     "p_early_dead": 0.2857
+    },
+    "all_kept_hands": {
+     "n": 454,
+     "p_dead": 0.1167,
+     "ci95": [
+      0.09037,
+      0.14955
+     ]
+    }
+   },
+   "Vampiric Tutor": {
+    "opening_7": {
+     "n": 261,
+     "p_dead": 0.1379,
+     "ci95": [
+      0.10132,
+      0.18504
+     ],
+     "p_early_dead": 0.1762
+    },
+    "kept_6_after_second_7": {
+     "n": 157,
+     "p_dead": 0.121,
+     "ci95": [
+      0.07886,
+      0.18128
+     ],
+     "p_early_dead": 0.1783
+    },
+    "kept_5": {
+     "n": 63,
+     "p_dead": 0.127,
+     "ci95": [
+      0.06577,
+      0.23107
+     ],
+     "p_early_dead": 0.1905
+    },
+    "all_kept_hands": {
+     "n": 482,
+     "p_dead": 0.1307,
+     "ci95": [
+      0.10351,
+      0.16374
+     ]
+    }
+   },
+   "Enlightened Tutor": {
+    "opening_7": {
+     "n": 210,
+     "p_dead": 0.1095,
+     "ci95": [
+      0.0741,
+      0.15898
+     ],
+     "p_early_dead": 0.1857
+    },
+    "kept_6_after_second_7": {
+     "n": 136,
+     "p_dead": 0.0735,
+     "ci95": [
+      0.04043,
+      0.13006
+     ],
+     "p_early_dead": 0.125
+    },
+    "kept_5": {
+     "n": 59,
+     "p_dead": 0.0678,
+     "ci95": [
+      0.02668,
+      0.16176
+     ],
+     "p_early_dead": 0.2034
+    },
+    "all_kept_hands": {
+     "n": 412,
+     "p_dead": 0.0922,
+     "ci95": [
+      0.06793,
+      0.12407
+     ]
+    }
+   },
+   "Crop Rotation": {
+    "opening_7": {
+     "n": 251,
+     "p_dead": 0.0518,
+     "ci95": [
+      0.03051,
+      0.08658
+     ],
+     "p_early_dead": 0.1394
+    },
+    "kept_6_after_second_7": {
+     "n": 102,
+     "p_dead": 0.0392,
+     "ci95": [
+      0.01535,
+      0.09653
+     ],
+     "p_early_dead": 0.0882
+    },
+    "kept_5": {
+     "n": 38,
+     "p_dead": 0.0263,
+     "ci95": [
+      0.00466,
+      0.13495
+     ],
+     "p_early_dead": 0.0789
+    },
+    "all_kept_hands": {
+     "n": 394,
+     "p_dead": 0.0482,
+     "ci95": [
+      0.03109,
+      0.07409
+     ]
+    }
+   },
+   "Birthing Pod": {
+    "opening_7": {
+     "n": 253,
+     "p_dead": 0.2134,
+     "ci95": [
+      0.16743,
+      0.26802
+     ],
+     "p_early_dead": 0.5573
+    },
+    "kept_6_after_second_7": {
+     "n": 89,
+     "p_dead": 0.1461,
+     "ci95": [
+      0.08739,
+      0.23403
+     ],
+     "p_early_dead": 0.4944
+    },
+    "kept_5": {
+     "n": 29,
+     "p_dead": 0.3448,
+     "ci95": [
+      0.19941,
+      0.52655
+     ],
+     "p_early_dead": 0.5517
+    },
+    "all_kept_hands": {
+     "n": 373,
+     "p_dead": 0.2064,
+     "ci95": [
+      0.16845,
+      0.2504
+     ]
+    }
+   }
+  }
+ },
+ "C_forced_spellseeker": {
+  "parent": "C_oracle_consult_seeker",
+  "blanked": [],
+  "forced_opening": [
+   "Spellseeker"
+  ],
+  "n": 8000,
+  "keep7": {
+   "value": 0.63862,
+   "ci95": [
+    0.62803,
+    0.64908
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.49838,
+   "se": 0.0083,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00019,
+    0.00129
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.01625,
+   "ci95": [
+    0.0137,
+    0.01926
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98325,
+   "ci95": [
+    0.9802,
+    0.98584
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.60388,
+   "ci95": [
+    0.59311,
+    0.61454
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_U": {
+   "value": 0.78375,
+   "ci95": [
+    0.77459,
+    0.79263
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_B": {
+   "value": 0.52787,
+   "ci95": [
+    0.51692,
+    0.5388
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_G": {
+   "value": 0.76462,
+   "ci95": [
+    0.7552,
+    0.77379
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_all_four_colors": {
+   "value": 0.627,
+   "ci95": [
+    0.61634,
+    0.63753
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_three_plus_colors": {
+   "value": 0.7865,
+   "ci95": [
+    0.77738,
+    0.79534
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_mana_ge2": {
+   "value": 0.14125,
+   "ci95": [
+    0.13379,
+    0.14905
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.39687,
+   "ci95": [
+    0.38621,
+    0.40764
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_development": {
+   "value": 0.49175,
+   "ci95": [
+    0.4808,
+    0.50271
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_development": {
+   "value": 0.5075,
+   "ci95": [
+    0.49654,
+    0.51845
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t2": {
+   "value": 0.28525,
+   "ci95": [
+    0.27546,
+    0.29525
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t3": {
+   "value": 0.44862,
+   "ci95": [
+    0.43775,
+    0.45955
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t4": {
+   "value": 0.521,
+   "ci95": [
+    0.51005,
+    0.53193
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t2": {
+   "value": 0.001,
+   "ci95": [
+    0.00051,
+    0.00197
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t2": {
+   "value": 0.00013,
+   "ci95": [
+    2e-05,
+    0.00071
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.00075,
+   "ci95": [
+    0.00034,
+    0.00164
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.002,
+   "ci95": [
+    0.00123,
+    0.00325
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t3": {
+   "value": 0.01675,
+   "ci95": [
+    0.01416,
+    0.0198
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t3": {
+   "value": 0.004,
+   "ci95": [
+    0.00283,
+    0.00564
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00063,
+   "ci95": [
+    0.00027,
+    0.00146
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.00887,
+   "ci95": [
+    0.00704,
+    0.01118
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.00825,
+   "ci95": [
+    0.00649,
+    0.01048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.02025,
+   "ci95": [
+    0.01739,
+    0.02357
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t4": {
+   "value": 0.0695,
+   "ci95": [
+    0.06413,
+    0.07528
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t4": {
+   "value": 0.024,
+   "ci95": [
+    0.02087,
+    0.02759
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.005,
+   "ci95": [
+    0.00367,
+    0.0068
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t4": {
+   "value": 0.04375,
+   "ci95": [
+    0.03948,
+    0.04846
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03425,
+   "ci95": [
+    0.03048,
+    0.03846
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.072,
+   "ci95": [
+    0.06654,
+    0.07787
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_any_by_t2": {
+   "value": 0.001,
+   "ci95": [
+    0.00051,
+    0.00197
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "non_oracle_det_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_any_by_t3": {
+   "value": 0.01675,
+   "ci95": [
+    0.01416,
+    0.0198
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "non_oracle_det_by_t3": {
+   "value": 0.0075,
+   "ci95": [
+    0.00583,
+    0.00964
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_any_by_t4": {
+   "value": 0.0695,
+   "ci95": [
+    0.06413,
+    0.07528
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "non_oracle_det_by_t4": {
+   "value": 0.03238,
+   "ci95": [
+    0.02872,
+    0.03648
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "bricks_in_kept_hand_mean": {
+   "value": 1.34925,
+   "se": 0.01408,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_0_bricks": {
+   "value": 0.29325,
+   "ci95": [
+    0.28337,
+    0.30332
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_1_brick": {
+   "value": 0.32,
+   "ci95": [
+    0.30987,
+    0.33031
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_2plus_bricks": {
+   "value": 0.38675,
+   "ci95": [
+    0.37613,
+    0.39747
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "early_dead_in_kept_hand_mean": {
+   "value": 2.38488,
+   "se": 0.01658,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t1": {
+   "value": 2.41162,
+   "se": 0.01718,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t1": {
+   "value": 1.8825,
+   "se": 0.01417,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t2": {
+   "value": 1.57062,
+   "se": 0.01716,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t2": {
+   "value": 1.22713,
+   "se": 0.01296,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t3": {
+   "value": 1.04713,
+   "se": 0.01659,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t3": {
+   "value": 0.82925,
+   "se": 0.01107,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t4": {
+   "value": 0.83788,
+   "se": 0.01589,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t4": {
+   "value": 0.66638,
+   "se": 0.01058,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_in_hand_t3": {
+   "value": 0.46,
+   "ci95": [
+    0.4491,
+    0.47094
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_hand_or_tutor_t3": {
+   "value": 0.80988,
+   "ci95": [
+    0.80113,
+    0.81832
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_in_hand_t4": {
+   "value": 0.51487,
+   "ci95": [
+    0.50392,
+    0.52582
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_hand_or_tutor_t4": {
+   "value": 0.86625,
+   "ci95": [
+    0.85861,
+    0.87353
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_in_hand_t3": {
+   "value": 0.22837,
+   "ci95": [
+    0.21931,
+    0.2377
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_hand_or_tutor_t3": {
+   "value": 0.68137,
+   "ci95": [
+    0.67108,
+    0.6915
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_in_hand_t4": {
+   "value": 0.253,
+   "ci95": [
+    0.24359,
+    0.26264
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_hand_or_tutor_t4": {
+   "value": 0.73188,
+   "ci95": [
+    0.72206,
+    0.74147
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_in_hand_t3": {
+   "value": 0.35,
+   "ci95": [
+    0.33962,
+    0.36052
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_hand_or_tutor_t3": {
+   "value": 0.78675,
+   "ci95": [
+    0.77764,
+    0.79559
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_in_hand_t4": {
+   "value": 0.38675,
+   "ci95": [
+    0.37613,
+    0.39747
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_hand_or_tutor_t4": {
+   "value": 0.84513,
+   "ci95": [
+    0.83703,
+    0.85289
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_in_hand_t3": {
+   "value": 0.43238,
+   "ci95": [
+    0.42155,
+    0.44326
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t3": {
+   "value": 0.76275,
+   "ci95": [
+    0.7533,
+    0.77194
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_in_hand_t4": {
+   "value": 0.47737,
+   "ci95": [
+    0.46644,
+    0.48833
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t4": {
+   "value": 0.815,
+   "ci95": [
+    0.80634,
+    0.82336
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_in_hand_t3": {
+   "value": 0.0755,
+   "ci95": [
+    0.06991,
+    0.0815
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_hand_or_tutor_t3": {
+   "value": 0.35037,
+   "ci95": [
+    0.33999,
+    0.3609
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_in_hand_t4": {
+   "value": 0.08725,
+   "ci95": [
+    0.08126,
+    0.09363
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_hand_or_tutor_t4": {
+   "value": 0.43138,
+   "ci95": [
+    0.42056,
+    0.44226
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_in_hand_t3": {
+   "value": 0.16525,
+   "ci95": [
+    0.15727,
+    0.17355
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t3": {
+   "value": 0.45787,
+   "ci95": [
+    0.44698,
+    0.46881
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_in_hand_t4": {
+   "value": 0.1475,
+   "ci95": [
+    0.1399,
+    0.15544
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t4": {
+   "value": 0.517,
+   "ci95": [
+    0.50604,
+    0.52794
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t3": {
+   "value": 0.15513,
+   "ci95": [
+    0.14736,
+    0.16322
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t3": {
+   "value": 0.29962,
+   "ci95": [
+    0.28968,
+    0.30976
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t4": {
+   "value": 0.107,
+   "ci95": [
+    0.10041,
+    0.11396
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t4": {
+   "value": 0.29325,
+   "ci95": [
+    0.28337,
+    0.30332
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_in_hand_t3": {
+   "value": 0.07187,
+   "ci95": [
+    0.06642,
+    0.07774
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_hand_or_tutor_t3": {
+   "value": 0.16562,
+   "ci95": [
+    0.15764,
+    0.17393
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_in_hand_t4": {
+   "value": 0.08175,
+   "ci95": [
+    0.07594,
+    0.08796
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_hand_or_tutor_t4": {
+   "value": 0.20225,
+   "ci95": [
+    0.19359,
+    0.21119
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_in_hand_t3": {
+   "value": 0.069,
+   "ci95": [
+    0.06365,
+    0.07476
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_hand_or_tutor_t3": {
+   "value": 0.34525,
+   "ci95": [
+    0.33491,
+    0.35574
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_in_hand_t4": {
+   "value": 0.07913,
+   "ci95": [
+    0.07341,
+    0.08524
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_hand_or_tutor_t4": {
+   "value": 0.42525,
+   "ci95": [
+    0.41445,
+    0.43612
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_in_hand_t3": {
+   "value": 0.19737,
+   "ci95": [
+    0.1888,
+    0.20624
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_hand_or_tutor_t3": {
+   "value": 0.71813,
+   "ci95": [
+    0.70816,
+    0.72788
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_in_hand_t4": {
+   "value": 0.22412,
+   "ci95": [
+    0.21512,
+    0.23339
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_hand_or_tutor_t4": {
+   "value": 0.78475,
+   "ci95": [
+    0.77561,
+    0.79362
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_in_hand_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_in_hand_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_in_hand_t3": {
+   "value": 0.2935,
+   "ci95": [
+    0.28362,
+    0.30358
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_hand_or_tutor_t3": {
+   "value": 0.71362,
+   "ci95": [
+    0.70362,
+    0.72343
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_in_hand_t4": {
+   "value": 0.32362,
+   "ci95": [
+    0.31346,
+    0.33396
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_hand_or_tutor_t4": {
+   "value": 0.76825,
+   "ci95": [
+    0.75888,
+    0.77737
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 246,
+   "inf_oracle": 264,
+   "oracle_consult": 342
+  },
+  "focus_card_quality": {
+   "Thassa's Oracle": {
+    "t1": {
+     "p_in_hand": 0.05187,
+     "n_held": 415,
+     "material": 0.0675,
+     "secondary_only": 0.3687,
+     "stranded": 0.5639,
+     "roles": {
+      "body": 0.2024,
+      "combo_pair": 0.0675,
+      "pitch": 0.2145
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06187,
+     "n_held": 495,
+     "material": 0.0727,
+     "secondary_only": 0.6283,
+     "stranded": 0.299,
+     "roles": {
+      "body": 0.5414,
+      "combo_live": 0.004,
+      "combo_pair": 0.0727,
+      "pitch": 0.2747
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.0715,
+     "n_held": 572,
+     "material": 0.0892,
+     "secondary_only": 0.7203,
+     "stranded": 0.1906,
+     "roles": {
+      "body": 0.6853,
+      "combo_live": 0.028,
+      "combo_pair": 0.0822,
+      "pitch": 0.3007
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.082,
+     "n_held": 656,
+     "material": 0.1143,
+     "secondary_only": 0.7424,
+     "stranded": 0.1433,
+     "roles": {
+      "body": 0.7256,
+      "combo_live": 0.0579,
+      "combo_pair": 0.0915,
+      "pitch": 0.3445
+     }
+    }
+   },
+   "Demonic Consultation": {
+    "t1": {
+     "p_in_hand": 0.06,
+     "n_held": 480,
+     "material": 0.0583,
+     "secondary_only": 0.7042,
+     "stranded": 0.2375,
+     "roles": {
+      "combo_pair": 0.0583,
+      "fair_risky": 0.7521
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06775,
+     "n_held": 542,
+     "material": 0.0738,
+     "secondary_only": 0.7103,
+     "stranded": 0.2159,
+     "roles": {
+      "combo_live": 0.0111,
+      "combo_pair": 0.0664,
+      "fair_risky": 0.7694
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07838,
+     "n_held": 627,
+     "material": 0.1276,
+     "secondary_only": 0.7033,
+     "stranded": 0.1691,
+     "roles": {
+      "combo_live": 0.0718,
+      "combo_pair": 0.075,
+      "fair_risky": 0.8182
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.089,
+     "n_held": 712,
+     "material": 0.243,
+     "secondary_only": 0.6166,
+     "stranded": 0.1404,
+     "roles": {
+      "combo_live": 0.191,
+      "combo_pair": 0.0843,
+      "fair_risky": 0.8497
+     }
+    }
+   },
+   "Spellseeker": {
+    "t1": {
+     "p_in_hand": 0.6575,
+     "n_held": 5260,
+     "material": 0.0485,
+     "secondary_only": 0.3625,
+     "stranded": 0.589,
+     "roles": {
+      "body": 0.108,
+      "development": 0.0485,
+      "fair_tutor": 0.0485,
+      "pitch": 0.2951
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.66,
+     "n_held": 5280,
+     "material": 0.4756,
+     "secondary_only": 0.2411,
+     "stranded": 0.2833,
+     "roles": {
+      "body": 0.1388,
+      "development": 0.4756,
+      "fair_tutor": 0.4756,
+      "pitch": 0.3277
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.66312,
+     "n_held": 5305,
+     "material": 0.7972,
+     "secondary_only": 0.1152,
+     "stranded": 0.0877,
+     "roles": {
+      "body": 0.2334,
+      "combo_live": 0.0066,
+      "development": 0.7972,
+      "fair_tutor": 0.7972,
+      "pitch": 0.3668
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.66763,
+     "n_held": 5341,
+     "material": 0.8616,
+     "secondary_only": 0.088,
+     "stranded": 0.0504,
+     "roles": {
+      "body": 0.3365,
+      "combo_live": 0.0521,
+      "development": 0.8616,
+      "fair_tutor": 0.8616,
+      "pitch": 0.3981
+     }
+    }
+   },
+   "Hazel's Brewmaster": {
+    "t1": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.0278,
+     "secondary_only": 0.1291,
+     "stranded": 0.843,
+     "roles": {
+      "body": 0.1316,
+      "combo_pair": 0.0278
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05987,
+     "n_held": 479,
+     "material": 0.0397,
+     "secondary_only": 0.2463,
+     "stranded": 0.714,
+     "roles": {
+      "body": 0.261,
+      "combo_pair": 0.0397
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.072,
+     "n_held": 576,
+     "material": 0.0538,
+     "secondary_only": 0.4844,
+     "stranded": 0.4618,
+     "roles": {
+      "body": 0.5139,
+      "combo_pair": 0.0538
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08263,
+     "n_held": 661,
+     "material": 0.0605,
+     "secondary_only": 0.652,
+     "stranded": 0.2874,
+     "roles": {
+      "body": 0.6959,
+      "combo_pair": 0.0605
+     }
+    }
+   },
+   "Oboro Breezecaller": {
+    "t1": {
+     "p_in_hand": 0.06012,
+     "n_held": 481,
+     "material": 0.0707,
+     "secondary_only": 0.4096,
+     "stranded": 0.5198,
+     "roles": {
+      "body": 0.2703,
+      "combo_pair": 0.0707,
+      "development": 0.0083,
+      "pitch": 0.2121
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06963,
+     "n_held": 557,
+     "material": 0.0718,
+     "secondary_only": 0.8546,
+     "stranded": 0.0736,
+     "roles": {
+      "body": 0.833,
+      "combo_pair": 0.0718,
+      "development": 0.0575,
+      "pitch": 0.246
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06825,
+     "n_held": 546,
+     "material": 0.0733,
+     "secondary_only": 0.881,
+     "stranded": 0.0458,
+     "roles": {
+      "body": 0.87,
+      "combo_pair": 0.0733,
+      "development": 0.0623,
+      "pitch": 0.2967
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06137,
+     "n_held": 491,
+     "material": 0.0754,
+     "secondary_only": 0.89,
+     "stranded": 0.0346,
+     "roles": {
+      "body": 0.8819,
+      "combo_pair": 0.0754,
+      "development": 0.0652,
+      "pitch": 0.3544
+     }
+    }
+   },
+   "Swift Reconfiguration": {
+    "t1": {
+     "p_in_hand": 0.05862,
+     "n_held": 469,
+     "material": 0.0704,
+     "secondary_only": 0.0,
+     "stranded": 0.9296,
+     "roles": {
+      "combo_pair": 0.0704
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06863,
+     "n_held": 549,
+     "material": 0.0729,
+     "secondary_only": 0.0,
+     "stranded": 0.9271,
+     "roles": {
+      "combo_live": 0.0036,
+      "combo_pair": 0.0729
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.0795,
+     "n_held": 636,
+     "material": 0.1116,
+     "secondary_only": 0.0,
+     "stranded": 0.8884,
+     "roles": {
+      "combo_live": 0.0723,
+      "combo_pair": 0.0708
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08937,
+     "n_held": 715,
+     "material": 0.2042,
+     "secondary_only": 0.0,
+     "stranded": 0.7958,
+     "roles": {
+      "combo_live": 0.186,
+      "combo_pair": 0.0783
+     }
+    }
+   },
+   "Machine God's Effigy": {
+    "t1": {
+     "p_in_hand": 0.0455,
+     "n_held": 364,
+     "material": 0.0275,
+     "secondary_only": 0.0,
+     "stranded": 0.9725,
+     "roles": {
+      "combo_pair": 0.022,
+      "development": 0.0055
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05675,
+     "n_held": 454,
+     "material": 0.1652,
+     "secondary_only": 0.0,
+     "stranded": 0.8348,
+     "roles": {
+      "combo_pair": 0.0264,
+      "development": 0.141
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06913,
+     "n_held": 553,
+     "material": 0.4629,
+     "secondary_only": 0.0,
+     "stranded": 0.5371,
+     "roles": {
+      "combo_live": 0.009,
+      "combo_pair": 0.0452,
+      "development": 0.443
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08038,
+     "n_held": 643,
+     "material": 0.6501,
+     "secondary_only": 0.0,
+     "stranded": 0.3499,
+     "roles": {
+      "combo_live": 0.0435,
+      "combo_pair": 0.0607,
+      "development": 0.633
+     }
+    }
+   },
+   "Devoted Druid": {
+    "t1": {
+     "p_in_hand": 0.056,
+     "n_held": 448,
+     "material": 0.3281,
+     "secondary_only": 0.058,
+     "stranded": 0.6138,
+     "roles": {
+      "body": 0.067,
+      "combo_pair": 0.1138,
+      "development": 0.2299,
+      "pitch": 0.029
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06513,
+     "n_held": 521,
+     "material": 0.856,
+     "secondary_only": 0.0269,
+     "stranded": 0.1171,
+     "roles": {
+      "body": 0.094,
+      "combo_live": 0.0019,
+      "combo_pair": 0.1324,
+      "development": 0.8273,
+      "pitch": 0.0461
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06313,
+     "n_held": 505,
+     "material": 0.8792,
+     "secondary_only": 0.0297,
+     "stranded": 0.0911,
+     "roles": {
+      "body": 0.1881,
+      "combo_live": 0.0277,
+      "combo_pair": 0.1564,
+      "development": 0.8515,
+      "pitch": 0.0614
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05575,
+     "n_held": 446,
+     "material": 0.8767,
+     "secondary_only": 0.0381,
+     "stranded": 0.0852,
+     "roles": {
+      "body": 0.2982,
+      "combo_live": 0.065,
+      "combo_pair": 0.1771,
+      "development": 0.8475,
+      "pitch": 0.065
+     }
+    }
+   },
+   "Orcish Bowmasters": {
+    "t1": {
+     "p_in_hand": 0.06388,
+     "n_held": 511,
+     "material": 0.229,
+     "secondary_only": 0.1018,
+     "stranded": 0.6693,
+     "roles": {
+      "body": 0.1213,
+      "combo_pair": 0.0411,
+      "interaction_held": 0.1957
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07312,
+     "n_held": 585,
+     "material": 0.7761,
+     "secondary_only": 0.0342,
+     "stranded": 0.1897,
+     "roles": {
+      "body": 0.135,
+      "combo_pair": 0.0547,
+      "interaction_held": 0.7607
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08288,
+     "n_held": 663,
+     "material": 0.8205,
+     "secondary_only": 0.0468,
+     "stranded": 0.1327,
+     "roles": {
+      "body": 0.2594,
+      "combo_pair": 0.0724,
+      "interaction_held": 0.8024
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09325,
+     "n_held": 746,
+     "material": 0.8566,
+     "secondary_only": 0.0442,
+     "stranded": 0.0992,
+     "roles": {
+      "body": 0.3525,
+      "combo_live": 0.004,
+      "combo_pair": 0.0871,
+      "interaction_held": 0.8418
+     }
+    }
+   },
+   "Faerie Mastermind": {
+    "t1": {
+     "p_in_hand": 0.05887,
+     "n_held": 471,
+     "material": 0.259,
+     "secondary_only": 0.2123,
+     "stranded": 0.5287,
+     "roles": {
+      "body": 0.0828,
+      "combo_pair": 0.0446,
+      "development": 0.2229,
+      "pitch": 0.2229
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06913,
+     "n_held": 553,
+     "material": 0.8571,
+     "secondary_only": 0.0579,
+     "stranded": 0.085,
+     "roles": {
+      "body": 0.1085,
+      "combo_pair": 0.0579,
+      "development": 0.8481,
+      "pitch": 0.2622
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06738,
+     "n_held": 539,
+     "material": 0.8868,
+     "secondary_only": 0.0519,
+     "stranded": 0.0612,
+     "roles": {
+      "body": 0.2041,
+      "combo_pair": 0.0686,
+      "development": 0.8794,
+      "pitch": 0.295
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06338,
+     "n_held": 507,
+     "material": 0.8856,
+     "secondary_only": 0.0631,
+     "stranded": 0.0513,
+     "roles": {
+      "body": 0.3254,
+      "combo_live": 0.002,
+      "combo_pair": 0.0888,
+      "development": 0.8718,
+      "pitch": 0.3333
+     }
+    }
+   },
+   "Gilded Drake": {
+    "t1": {
+     "p_in_hand": 0.06888,
+     "n_held": 551,
+     "material": 0.2015,
+     "secondary_only": 0.2069,
+     "stranded": 0.5917,
+     "roles": {
+      "body": 0.1162,
+      "interaction_held": 0.2015,
+      "pitch": 0.1724
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07562,
+     "n_held": 605,
+     "material": 0.8446,
+     "secondary_only": 0.0628,
+     "stranded": 0.0926,
+     "roles": {
+      "body": 0.1455,
+      "interaction_held": 0.8446,
+      "pitch": 0.2198
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.084,
+     "n_held": 672,
+     "material": 0.8988,
+     "secondary_only": 0.0417,
+     "stranded": 0.0595,
+     "roles": {
+      "body": 0.2068,
+      "interaction_held": 0.8988,
+      "pitch": 0.2515
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09413,
+     "n_held": 753,
+     "material": 0.927,
+     "secondary_only": 0.0359,
+     "stranded": 0.0372,
+     "roles": {
+      "body": 0.2895,
+      "interaction_held": 0.927,
+      "pitch": 0.2948
+     }
+    }
+   },
+   "Imperial Seal": {
+    "t1": {
+     "p_in_hand": 0.06087,
+     "n_held": 487,
+     "material": 0.7515,
+     "secondary_only": 0.0,
+     "stranded": 0.2485,
+     "roles": {
+      "fair_tutor": 0.7515
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.04425,
+     "n_held": 354,
+     "material": 0.661,
+     "secondary_only": 0.0,
+     "stranded": 0.339,
+     "roles": {
+      "fair_tutor": 0.661
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.048,
+     "n_held": 384,
+     "material": 0.7161,
+     "secondary_only": 0.0,
+     "stranded": 0.2839,
+     "roles": {
+      "fair_tutor": 0.7161
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05738,
+     "n_held": 459,
+     "material": 0.7647,
+     "secondary_only": 0.0,
+     "stranded": 0.2353,
+     "roles": {
+      "combo_live": 0.0109,
+      "fair_tutor": 0.7647
+     }
+    }
+   },
+   "Demonic Tutor": {
+    "t1": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.2075,
+     "secondary_only": 0.0,
+     "stranded": 0.7925,
+     "roles": {
+      "fair_tutor": 0.2075
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.069,
+     "n_held": 552,
+     "material": 0.7409,
+     "secondary_only": 0.0,
+     "stranded": 0.2591,
+     "roles": {
+      "fair_tutor": 0.7409
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.05038,
+     "n_held": 403,
+     "material": 0.67,
+     "secondary_only": 0.0,
+     "stranded": 0.33,
+     "roles": {
+      "combo_live": 0.0099,
+      "fair_tutor": 0.67
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06062,
+     "n_held": 485,
+     "material": 0.7464,
+     "secondary_only": 0.0,
+     "stranded": 0.2536,
+     "roles": {
+      "combo_live": 0.0515,
+      "fair_tutor": 0.7464
+     }
+    }
+   },
+   "Vampiric Tutor": {
+    "t1": {
+     "p_in_hand": 0.06725,
+     "n_held": 538,
+     "material": 0.7602,
+     "secondary_only": 0.0,
+     "stranded": 0.2398,
+     "roles": {
+      "fair_tutor": 0.7602
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.6405,
+     "secondary_only": 0.0,
+     "stranded": 0.3595,
+     "roles": {
+      "fair_tutor": 0.6405
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.05087,
+     "n_held": 407,
+     "material": 0.6904,
+     "secondary_only": 0.0,
+     "stranded": 0.3096,
+     "roles": {
+      "fair_tutor": 0.6904
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.061,
+     "n_held": 488,
+     "material": 0.752,
+     "secondary_only": 0.0,
+     "stranded": 0.248,
+     "roles": {
+      "combo_live": 0.0164,
+      "fair_tutor": 0.752
+     }
+    }
+   },
+   "Enlightened Tutor": {
+    "t1": {
+     "p_in_hand": 0.06125,
+     "n_held": 490,
+     "material": 0.7265,
+     "secondary_only": 0.0,
+     "stranded": 0.2735,
+     "roles": {
+      "fair_tutor": 0.7265
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07087,
+     "n_held": 567,
+     "material": 0.7954,
+     "secondary_only": 0.0,
+     "stranded": 0.2046,
+     "roles": {
+      "fair_tutor": 0.7954
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08075,
+     "n_held": 646,
+     "material": 0.8421,
+     "secondary_only": 0.0,
+     "stranded": 0.1579,
+     "roles": {
+      "combo_live": 0.0015,
+      "fair_tutor": 0.8421
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09187,
+     "n_held": 735,
+     "material": 0.8748,
+     "secondary_only": 0.0,
+     "stranded": 0.1252,
+     "roles": {
+      "combo_live": 0.015,
+      "fair_tutor": 0.8748
+     }
+    }
+   },
+   "Crop Rotation": {
+    "t1": {
+     "p_in_hand": 0.05638,
+     "n_held": 451,
+     "material": 0.0377,
+     "secondary_only": 0.0488,
+     "stranded": 0.9135,
+     "roles": {
+      "fair_tutor": 0.0377,
+      "pitch": 0.051
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.0655,
+     "n_held": 524,
+     "material": 0.8702,
+     "secondary_only": 0.0076,
+     "stranded": 0.1221,
+     "roles": {
+      "fair_tutor": 0.8702,
+      "pitch": 0.0515
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07587,
+     "n_held": 607,
+     "material": 0.9143,
+     "secondary_only": 0.0033,
+     "stranded": 0.0824,
+     "roles": {
+      "fair_tutor": 0.9143,
+      "pitch": 0.0692
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08712,
+     "n_held": 697,
+     "material": 0.9311,
+     "secondary_only": 0.0029,
+     "stranded": 0.066,
+     "roles": {
+      "fair_tutor": 0.9311,
+      "pitch": 0.0717
+     }
+    }
+   },
+   "Birthing Pod": {
+    "t1": {
+     "p_in_hand": 0.05337,
+     "n_held": 427,
+     "material": 0.0351,
+     "secondary_only": 0.0281,
+     "stranded": 0.9368,
+     "roles": {
+      "development": 0.0351,
+      "fair_tutor": 0.0351,
+      "pitch": 0.0304
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.11188,
+     "n_held": 895,
+     "material": 0.3888,
+     "secondary_only": 0.0324,
+     "stranded": 0.5788,
+     "roles": {
+      "development": 0.3888,
+      "fair_tutor": 0.3888,
+      "pitch": 0.0447
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.1315,
+     "n_held": 1052,
+     "material": 0.7624,
+     "secondary_only": 0.0209,
+     "stranded": 0.2167,
+     "roles": {
+      "combo_live": 0.0029,
+      "development": 0.7624,
+      "fair_tutor": 0.7624,
+      "pitch": 0.0713
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.6253,
+     "secondary_only": 0.0354,
+     "stranded": 0.3392,
+     "roles": {
+      "combo_live": 0.0177,
+      "development": 0.6253,
+      "fair_tutor": 0.6253,
+      "pitch": 0.0911
+     }
+    }
+   }
+  },
+  "dead_opening_draw": {
+   "Thassa's Oracle": {
+    "opening_7": {
+     "n": 225,
+     "p_dead": 0.8489,
+     "ci95": [
+      0.79626,
+      0.8898
+     ],
+     "p_early_dead": 0.9333
+    },
+    "kept_6_after_second_7": {
+     "n": 97,
+     "p_dead": 0.866,
+     "ci95": [
+      0.7841,
+      0.91998
+     ],
+     "p_early_dead": 0.9278
+    },
+    "kept_5": {
+     "n": 34,
+     "p_dead": 0.8235,
+     "ci95": [
+      0.66486,
+      0.91651
+     ],
+     "p_early_dead": 0.8235
+    },
+    "all_kept_hands": {
+     "n": 357,
+     "p_dead": 0.8515,
+     "ci95": [
+      0.81092,
+      0.88467
+     ]
+    }
+   },
+   "Demonic Consultation": {
+    "opening_7": {
+     "n": 249,
+     "p_dead": 0.747,
+     "ci95": [
+      0.68952,
+      0.79695
+     ],
+     "p_early_dead": 0.9237
+    },
+    "kept_6_after_second_7": {
+     "n": 117,
+     "p_dead": 0.7607,
+     "ci95": [
+      0.67587,
+      0.82892
+     ],
+     "p_early_dead": 0.9316
+    },
+    "kept_5": {
+     "n": 41,
+     "p_dead": 0.8049,
+     "ci95": [
+      0.65986,
+      0.89766
+     ],
+     "p_early_dead": 0.8293
+    },
+    "all_kept_hands": {
+     "n": 411,
+     "p_dead": 0.7591,
+     "ci95": [
+      0.7155,
+      0.79794
+     ]
+    }
+   },
+   "Spellseeker": {
+    "opening_7": {
+     "n": 5109,
+     "p_dead": 0.1341,
+     "ci95": [
+      0.12501,
+      0.1437
+     ],
+     "p_early_dead": 0.5226
+    },
+    "kept_6_after_second_7": {
+     "n": 111,
+     "p_dead": 0.1351,
+     "ci95": [
+      0.08363,
+      0.21105
+     ],
+     "p_early_dead": 0.5045
+    },
+    "kept_5": {
+     "n": 37,
+     "p_dead": 0.2432,
+     "ci95": [
+      0.13361,
+      0.40118
+     ],
+     "p_early_dead": 0.5676
+    },
+    "all_kept_hands": {
+     "n": 5259,
+     "p_dead": 0.1348,
+     "ci95": [
+      0.12585,
+      0.14431
+     ]
+    }
+   },
+   "Hazel's Brewmaster": {
+    "opening_7": {
+     "n": 269,
+     "p_dead": 0.9405,
+     "ci95": [
+      0.90558,
+      0.96306
+     ],
+     "p_early_dead": 0.9628
+    },
+    "kept_6_after_second_7": {
+     "n": 56,
+     "p_dead": 0.9643,
+     "ci95": [
+      0.87881,
+      0.99015
+     ],
+     "p_early_dead": 0.9821
+    },
+    "all_kept_hands": {
+     "n": 332,
+     "p_dead": 0.9458,
+     "ci95": [
+      0.91593,
+      0.96543
+     ]
+    }
+   },
+   "Oboro Breezecaller": {
+    "opening_7": {
+     "n": 282,
+     "p_dead": 0.9007,
+     "ci95": [
+      0.86024,
+      0.93041
+     ],
+     "p_early_dead": 0.9113
+    },
+    "kept_6_after_second_7": {
+     "n": 96,
+     "p_dead": 0.9167,
+     "ci95": [
+      0.8441,
+      0.95717
+     ],
+     "p_early_dead": 0.9271
+    },
+    "kept_5": {
+     "n": 35,
+     "p_dead": 0.9714,
+     "ci95": [
+      0.85467,
+      0.99494
+     ],
+     "p_early_dead": 1.0
+    },
+    "all_kept_hands": {
+     "n": 415,
+     "p_dead": 0.9108,
+     "ci95": [
+      0.87952,
+      0.93463
+     ]
+    }
+   },
+   "Swift Reconfiguration": {
+    "opening_7": {
+     "n": 257,
+     "p_dead": 0.7821,
+     "ci95": [
+      0.72768,
+      0.82822
+     ],
+     "p_early_dead": 0.9377
+    },
+    "kept_6_after_second_7": {
+     "n": 95,
+     "p_dead": 0.6842,
+     "ci95": [
+      0.58513,
+      0.76897
+     ],
+     "p_early_dead": 0.8947
+    },
+    "kept_5": {
+     "n": 48,
+     "p_dead": 0.7708,
+     "ci95": [
+      0.6346,
+      0.86692
+     ],
+     "p_early_dead": 0.8542
+    },
+    "all_kept_hands": {
+     "n": 402,
+     "p_dead": 0.7562,
+     "ci95": [
+      0.71195,
+      0.79564
+     ]
+    }
+   },
+   "Machine God's Effigy": {
+    "opening_7": {
+     "n": 226,
+     "p_dead": 0.2965,
+     "ci95": [
+      0.24072,
+      0.359
+     ],
+     "p_early_dead": 0.8274
+    },
+    "kept_6_after_second_7": {
+     "n": 74,
+     "p_dead": 0.2703,
+     "ci95": [
+      0.1823,
+      0.38091
+     ],
+     "p_early_dead": 0.7973
+    },
+    "all_kept_hands": {
+     "n": 309,
+     "p_dead": 0.2913,
+     "ci95": [
+      0.24341,
+      0.34424
+     ]
+    }
+   },
+   "Devoted Druid": {
+    "opening_7": {
+     "n": 236,
+     "p_dead": 0.0508,
+     "ci95": [
+      0.02932,
+      0.08676
+     ],
+     "p_early_dead": 0.1102
+    },
+    "kept_6_after_second_7": {
+     "n": 100,
+     "p_dead": 0.09,
+     "ci95": [
+      0.04807,
+      0.16226
+     ],
+     "p_early_dead": 0.16
+    },
+    "kept_5": {
+     "n": 48,
+     "p_dead": 0.0625,
+     "ci95": [
+      0.02148,
+      0.16836
+     ],
+     "p_early_dead": 0.1875
+    },
+    "all_kept_hands": {
+     "n": 387,
+     "p_dead": 0.062,
+     "ci95": [
+      0.04202,
+      0.09062
+     ]
+    }
+   },
+   "Orcish Bowmasters": {
+    "opening_7": {
+     "n": 285,
+     "p_dead": 0.1193,
+     "ci95": [
+      0.08664,
+      0.16208
+     ],
+     "p_early_dead": 0.2175
+    },
+    "kept_6_after_second_7": {
+     "n": 118,
+     "p_dead": 0.1102,
+     "ci95": [
+      0.06552,
+      0.1794
+     ],
+     "p_early_dead": 0.178
+    },
+    "kept_5": {
+     "n": 38,
+     "p_dead": 0.1316,
+     "ci95": [
+      0.05754,
+      0.27327
+     ],
+     "p_early_dead": 0.2632
+    },
+    "all_kept_hands": {
+     "n": 446,
+     "p_dead": 0.1188,
+     "ci95": [
+      0.09201,
+      0.15217
+     ]
+    }
+   },
+   "Faerie Mastermind": {
+    "opening_7": {
+     "n": 262,
+     "p_dead": 0.0534,
+     "ci95": [
+      0.03209,
+      0.08768
+     ],
+     "p_early_dead": 0.1107
+    },
+    "kept_6_after_second_7": {
+     "n": 109,
+     "p_dead": 0.0734,
+     "ci95": [
+      0.03766,
+      0.13818
+     ],
+     "p_early_dead": 0.1651
+    },
+    "kept_5": {
+     "n": 33,
+     "p_dead": 0.1212,
+     "ci95": [
+      0.04816,
+      0.27326
+     ],
+     "p_early_dead": 0.2424
+    },
+    "all_kept_hands": {
+     "n": 407,
+     "p_dead": 0.0639,
+     "ci95": [
+      0.04396,
+      0.09196
+     ]
+    }
+   },
+   "Gilded Drake": {
+    "opening_7": {
+     "n": 310,
+     "p_dead": 0.0323,
+     "ci95": [
+      0.01761,
+      0.05835
+     ],
+     "p_early_dead": 0.1
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.0606,
+     "ci95": [
+      0.02807,
+      0.12597
+     ],
+     "p_early_dead": 0.1111
+    },
+    "kept_5": {
+     "n": 68,
+     "p_dead": 0.0735,
+     "ci95": [
+      0.03181,
+      0.16085
+     ],
+     "p_early_dead": 0.25
+    },
+    "all_kept_hands": {
+     "n": 483,
+     "p_dead": 0.0497,
+     "ci95": [
+      0.03362,
+      0.07287
+     ]
+    }
+   },
+   "Imperial Seal": {
+    "opening_7": {
+     "n": 230,
+     "p_dead": 0.0957,
+     "ci95": [
+      0.06402,
+      0.14057
+     ],
+     "p_early_dead": 0.1565
+    },
+    "kept_6_after_second_7": {
+     "n": 136,
+     "p_dead": 0.125,
+     "ci95": [
+      0.07953,
+      0.19108
+     ],
+     "p_early_dead": 0.1765
+    },
+    "kept_5": {
+     "n": 71,
+     "p_dead": 0.1408,
+     "ci95": [
+      0.07834,
+      0.24022
+     ],
+     "p_early_dead": 0.2535
+    },
+    "all_kept_hands": {
+     "n": 442,
+     "p_dead": 0.1131,
+     "ci95": [
+      0.08687,
+      0.14605
+     ]
+    }
+   },
+   "Demonic Tutor": {
+    "opening_7": {
+     "n": 274,
+     "p_dead": 0.1095,
+     "ci95": [
+      0.07778,
+      0.152
+     ],
+     "p_early_dead": 0.1971
+    },
+    "kept_6_after_second_7": {
+     "n": 130,
+     "p_dead": 0.1,
+     "ci95": [
+      0.05937,
+      0.16359
+     ],
+     "p_early_dead": 0.1923
+    },
+    "kept_5": {
+     "n": 42,
+     "p_dead": 0.1667,
+     "ci95": [
+      0.08316,
+      0.30604
+     ],
+     "p_early_dead": 0.2857
+    },
+    "all_kept_hands": {
+     "n": 454,
+     "p_dead": 0.1167,
+     "ci95": [
+      0.09037,
+      0.14955
+     ]
+    }
+   },
+   "Vampiric Tutor": {
+    "opening_7": {
+     "n": 261,
+     "p_dead": 0.1379,
+     "ci95": [
+      0.10132,
+      0.18504
+     ],
+     "p_early_dead": 0.1762
+    },
+    "kept_6_after_second_7": {
+     "n": 157,
+     "p_dead": 0.121,
+     "ci95": [
+      0.07886,
+      0.18128
+     ],
+     "p_early_dead": 0.1783
+    },
+    "kept_5": {
+     "n": 63,
+     "p_dead": 0.127,
+     "ci95": [
+      0.06577,
+      0.23107
+     ],
+     "p_early_dead": 0.1905
+    },
+    "all_kept_hands": {
+     "n": 482,
+     "p_dead": 0.1307,
+     "ci95": [
+      0.10351,
+      0.16374
+     ]
+    }
+   },
+   "Enlightened Tutor": {
+    "opening_7": {
+     "n": 210,
+     "p_dead": 0.1095,
+     "ci95": [
+      0.0741,
+      0.15898
+     ],
+     "p_early_dead": 0.1857
+    },
+    "kept_6_after_second_7": {
+     "n": 136,
+     "p_dead": 0.0735,
+     "ci95": [
+      0.04043,
+      0.13006
+     ],
+     "p_early_dead": 0.125
+    },
+    "kept_5": {
+     "n": 59,
+     "p_dead": 0.0678,
+     "ci95": [
+      0.02668,
+      0.16176
+     ],
+     "p_early_dead": 0.2034
+    },
+    "all_kept_hands": {
+     "n": 412,
+     "p_dead": 0.0922,
+     "ci95": [
+      0.06793,
+      0.12407
+     ]
+    }
+   },
+   "Crop Rotation": {
+    "opening_7": {
+     "n": 251,
+     "p_dead": 0.0518,
+     "ci95": [
+      0.03051,
+      0.08658
+     ],
+     "p_early_dead": 0.1394
+    },
+    "kept_6_after_second_7": {
+     "n": 102,
+     "p_dead": 0.0392,
+     "ci95": [
+      0.01535,
+      0.09653
+     ],
+     "p_early_dead": 0.0882
+    },
+    "kept_5": {
+     "n": 38,
+     "p_dead": 0.0263,
+     "ci95": [
+      0.00466,
+      0.13495
+     ],
+     "p_early_dead": 0.0789
+    },
+    "all_kept_hands": {
+     "n": 394,
+     "p_dead": 0.0482,
+     "ci95": [
+      0.03109,
+      0.07409
+     ]
+    }
+   },
+   "Birthing Pod": {
+    "opening_7": {
+     "n": 253,
+     "p_dead": 0.2134,
+     "ci95": [
+      0.16743,
+      0.26802
+     ],
+     "p_early_dead": 0.5573
+    },
+    "kept_6_after_second_7": {
+     "n": 89,
+     "p_dead": 0.1461,
+     "ci95": [
+      0.08739,
+      0.23403
+     ],
+     "p_early_dead": 0.4944
+    },
+    "kept_5": {
+     "n": 29,
+     "p_dead": 0.3448,
+     "ci95": [
+      0.19941,
+      0.52655
+     ],
+     "p_early_dead": 0.5517
+    },
+    "all_kept_hands": {
+     "n": 373,
+     "p_dead": 0.2064,
+     "ci95": [
+      0.16845,
+      0.2504
+     ]
+    }
+   }
+  }
+ },
+ "_parent::A_oracle_less::forced=Spellseeker": {
+  "n": 8000,
+  "keep7": {
+   "value": 0.64812,
+   "ci95": [
+    0.63759,
+    0.65852
+   ]
+  },
+  "mean_mulligans": {
+   "value": 0.48475,
+   "se": 0.00821
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00019,
+    0.00129
+   ]
+  },
+  "kept_hand_fm1": {
+   "value": 0.01775,
+   "ci95": [
+    0.01508,
+    0.02088
+   ]
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98175,
+   "ci95": [
+    0.97858,
+    0.98446
+   ]
+  },
+  "t1_has_W": {
+   "value": 0.59762,
+   "ci95": [
+    0.58683,
+    0.60832
+   ]
+  },
+  "t1_has_U": {
+   "value": 0.7865,
+   "ci95": [
+    0.77738,
+    0.79534
+   ]
+  },
+  "t1_has_B": {
+   "value": 0.52312,
+   "ci95": [
+    0.51217,
+    0.53406
+   ]
+  },
+  "t1_has_G": {
+   "value": 0.77338,
+   "ci95": [
+    0.76407,
+    0.78242
+   ]
+  },
+  "t2_all_four_colors": {
+   "value": 0.62962,
+   "ci95": [
+    0.61898,
+    0.64014
+   ]
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78575,
+   "ci95": [
+    0.77662,
+    0.7946
+   ]
+  },
+  "t1_mana_ge2": {
+   "value": 0.14675,
+   "ci95": [
+    0.13917,
+    0.15467
+   ]
+  },
+  "t2_mana_ge3": {
+   "value": 0.39325,
+   "ci95": [
+    0.3826,
+    0.404
+   ]
+  },
+  "t1_development": {
+   "value": 0.49338,
+   "ci95": [
+    0.48243,
+    0.50433
+   ]
+  },
+  "t2_development": {
+   "value": 0.51275,
+   "ci95": [
+    0.50179,
+    0.52369
+   ]
+  },
+  "premium_engine_by_t2": {
+   "value": 0.28463,
+   "ci95": [
+    0.27484,
+    0.29461
+   ]
+  },
+  "premium_engine_by_t3": {
+   "value": 0.44625,
+   "ci95": [
+    0.43539,
+    0.45717
+   ]
+  },
+  "premium_engine_by_t4": {
+   "value": 0.51938,
+   "ci95": [
+    0.50842,
+    0.53031
+   ]
+  },
+  "det_win_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ]
+  },
+  "det_protected_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "det_instant_window_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ]
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00112,
+   "ci95": [
+    0.00059,
+    0.00214
+   ]
+  },
+  "det_win_by_t3": {
+   "value": 0.00737,
+   "ci95": [
+    0.00572,
+    0.0095
+   ]
+  },
+  "det_protected_by_t3": {
+   "value": 0.00125,
+   "ci95": [
+    0.00068,
+    0.0023
+   ]
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00063,
+   "ci95": [
+    0.00027,
+    0.00146
+   ]
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "infinite_line_by_t3": {
+   "value": 0.00737,
+   "ci95": [
+    0.00572,
+    0.0095
+   ]
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01275,
+   "ci95": [
+    0.01051,
+    0.01545
+   ]
+  },
+  "det_win_by_t4": {
+   "value": 0.03188,
+   "ci95": [
+    0.02824,
+    0.03595
+   ]
+  },
+  "det_protected_by_t4": {
+   "value": 0.01112,
+   "ci95": [
+    0.00905,
+    0.01367
+   ]
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00363,
+   "ci95": [
+    0.00253,
+    0.0052
+   ]
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03188,
+   "ci95": [
+    0.02824,
+    0.03595
+   ]
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.03812,
+   "ci95": [
+    0.03415,
+    0.04255
+   ]
+  },
+  "oracle_any_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "non_oracle_det_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ]
+  },
+  "oracle_any_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "non_oracle_det_by_t3": {
+   "value": 0.00737,
+   "ci95": [
+    0.00572,
+    0.0095
+   ]
+  },
+  "oracle_any_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ]
+  },
+  "non_oracle_det_by_t4": {
+   "value": 0.03188,
+   "ci95": [
+    0.02824,
+    0.03595
+   ]
+  },
+  "bricks_in_kept_hand_mean": {
+   "value": 1.29025,
+   "se": 0.01408
+  },
+  "kept_hand_0_bricks": {
+   "value": 0.31675,
+   "ci95": [
+    0.30665,
+    0.32703
+   ]
+  },
+  "kept_hand_1_brick": {
+   "value": 0.32112,
+   "ci95": [
+    0.31098,
+    0.33144
+   ]
+  },
+  "kept_hand_2plus_bricks": {
+   "value": 0.36212,
+   "ci95": [
+    0.35166,
+    0.37272
+   ]
+  },
+  "early_dead_in_kept_hand_mean": {
+   "value": 2.32563,
+   "se": 0.01667
+  },
+  "stranded_cards_in_hand_t1": {
+   "value": 2.43825,
+   "se": 0.01739
+  },
+  "secondary_only_cards_in_hand_t1": {
+   "value": 1.84813,
+   "se": 0.01439
+  },
+  "stranded_cards_in_hand_t2": {
+   "value": 1.55987,
+   "se": 0.01711
+  },
+  "secondary_only_cards_in_hand_t2": {
+   "value": 1.14488,
+   "se": 0.01292
+  },
+  "stranded_cards_in_hand_t3": {
+   "value": 1.02487,
+   "se": 0.01647
+  },
+  "secondary_only_cards_in_hand_t3": {
+   "value": 0.73662,
+   "se": 0.01082
+  },
+  "stranded_cards_in_hand_t4": {
+   "value": 0.81425,
+   "se": 0.01572
+  },
+  "secondary_only_cards_in_hand_t4": {
+   "value": 0.56725,
+   "se": 0.01042
+  },
+  "access_free_counter_in_hand_t3": {
+   "value": 0.46163,
+   "ci95": [
+    0.45072,
+    0.47257
+   ]
+  },
+  "access_free_counter_hand_or_tutor_t3": {
+   "value": 0.81412,
+   "ci95": [
+    0.80545,
+    0.8225
+   ]
+  },
+  "access_free_counter_in_hand_t4": {
+   "value": 0.51912,
+   "ci95": [
+    0.50817,
+    0.53006
+   ]
+  },
+  "access_free_counter_hand_or_tutor_t4": {
+   "value": 0.87013,
+   "ci95": [
+    0.86258,
+    0.87731
+   ]
+  },
+  "access_paid_counter_in_hand_t3": {
+   "value": 0.23062,
+   "ci95": [
+    0.22152,
+    0.23998
+   ]
+  },
+  "access_paid_counter_hand_or_tutor_t3": {
+   "value": 0.68925,
+   "ci95": [
+    0.67902,
+    0.6993
+   ]
+  },
+  "access_paid_counter_in_hand_t4": {
+   "value": 0.25538,
+   "ci95": [
+    0.24594,
+    0.26505
+   ]
+  },
+  "access_paid_counter_hand_or_tutor_t4": {
+   "value": 0.73825,
+   "ci95": [
+    0.7285,
+    0.74777
+   ]
+  },
+  "access_creature_spell_answer_in_hand_t3": {
+   "value": 0.35275,
+   "ci95": [
+    0.34235,
+    0.36329
+   ]
+  },
+  "access_creature_spell_answer_hand_or_tutor_t3": {
+   "value": 0.79463,
+   "ci95": [
+    0.78563,
+    0.80334
+   ]
+  },
+  "access_creature_spell_answer_in_hand_t4": {
+   "value": 0.387,
+   "ci95": [
+    0.37638,
+    0.39773
+   ]
+  },
+  "access_creature_spell_answer_hand_or_tutor_t4": {
+   "value": 0.84975,
+   "ci95": [
+    0.84175,
+    0.85741
+   ]
+  },
+  "access_artifact_spell_answer_in_hand_t3": {
+   "value": 0.43475,
+   "ci95": [
+    0.42392,
+    0.44564
+   ]
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t3": {
+   "value": 0.77112,
+   "ci95": [
+    0.76179,
+    0.7802
+   ]
+  },
+  "access_artifact_spell_answer_in_hand_t4": {
+   "value": 0.48275,
+   "ci95": [
+    0.47181,
+    0.49371
+   ]
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t4": {
+   "value": 0.82037,
+   "ci95": [
+    0.81181,
+    0.82863
+   ]
+  },
+  "access_creature_theft_in_hand_t3": {
+   "value": 0.14025,
+   "ci95": [
+    0.13281,
+    0.14803
+   ]
+  },
+  "access_creature_theft_hand_or_tutor_t3": {
+   "value": 0.3975,
+   "ci95": [
+    0.38683,
+    0.40827
+   ]
+  },
+  "access_creature_theft_in_hand_t4": {
+   "value": 0.16012,
+   "ci95": [
+    0.15225,
+    0.16832
+   ]
+  },
+  "access_creature_theft_hand_or_tutor_t4": {
+   "value": 0.47675,
+   "ci95": [
+    0.46582,
+    0.4877
+   ]
+  },
+  "access_resolved_creature_answer_in_hand_t3": {
+   "value": 0.274,
+   "ci95": [
+    0.26434,
+    0.28388
+   ]
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t3": {
+   "value": 0.56863,
+   "ci95": [
+    0.55774,
+    0.57944
+   ]
+  },
+  "access_resolved_creature_answer_in_hand_t4": {
+   "value": 0.27287,
+   "ci95": [
+    0.26322,
+    0.28274
+   ]
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t4": {
+   "value": 0.6305,
+   "ci95": [
+    0.61986,
+    0.64101
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t3": {
+   "value": 0.15388,
+   "ci95": [
+    0.14613,
+    0.16195
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t3": {
+   "value": 0.29788,
+   "ci95": [
+    0.28795,
+    0.30799
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t4": {
+   "value": 0.10662,
+   "ci95": [
+    0.10005,
+    0.11358
+   ]
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t4": {
+   "value": 0.291,
+   "ci95": [
+    0.28115,
+    0.30105
+   ]
+  },
+  "access_spell_redirect_in_hand_t3": {
+   "value": 0.06988,
+   "ci95": [
+    0.06449,
+    0.07567
+   ]
+  },
+  "access_spell_redirect_hand_or_tutor_t3": {
+   "value": 0.16237,
+   "ci95": [
+    0.15446,
+    0.17062
+   ]
+  },
+  "access_spell_redirect_in_hand_t4": {
+   "value": 0.08038,
+   "ci95": [
+    0.07462,
+    0.08654
+   ]
+  },
+  "access_spell_redirect_hand_or_tutor_t4": {
+   "value": 0.19937,
+   "ci95": [
+    0.19077,
+    0.20827
+   ]
+  },
+  "access_graveyard_interaction_in_hand_t3": {
+   "value": 0.07,
+   "ci95": [
+    0.06461,
+    0.0758
+   ]
+  },
+  "access_graveyard_interaction_hand_or_tutor_t3": {
+   "value": 0.34537,
+   "ci95": [
+    0.33503,
+    0.35587
+   ]
+  },
+  "access_graveyard_interaction_in_hand_t4": {
+   "value": 0.07925,
+   "ci95": [
+    0.07353,
+    0.08537
+   ]
+  },
+  "access_graveyard_interaction_hand_or_tutor_t4": {
+   "value": 0.42288,
+   "ci95": [
+    0.41209,
+    0.43374
+   ]
+  },
+  "access_proactive_protection_in_hand_t3": {
+   "value": 0.19662,
+   "ci95": [
+    0.18806,
+    0.20548
+   ]
+  },
+  "access_proactive_protection_hand_or_tutor_t3": {
+   "value": 0.72475,
+   "ci95": [
+    0.71486,
+    0.73443
+   ]
+  },
+  "access_proactive_protection_in_hand_t4": {
+   "value": 0.22287,
+   "ci95": [
+    0.21389,
+    0.23213
+   ]
+  },
+  "access_proactive_protection_hand_or_tutor_t4": {
+   "value": 0.78663,
+   "ci95": [
+    0.77751,
+    0.79546
+   ]
+  },
+  "access_regrowth_of_spent_resources_in_hand_t3": {
+   "value": 0.06525,
+   "ci95": [
+    0.06004,
+    0.07087
+   ]
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t3": {
+   "value": 0.38825,
+   "ci95": [
+    0.37763,
+    0.39898
+   ]
+  },
+  "access_regrowth_of_spent_resources_in_hand_t4": {
+   "value": 0.07625,
+   "ci95": [
+    0.07064,
+    0.08227
+   ]
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t4": {
+   "value": 0.47275,
+   "ci95": [
+    0.46183,
+    0.4837
+   ]
+  },
+  "access_flexible_catch_all_in_hand_t3": {
+   "value": 0.29525,
+   "ci95": [
+    0.28535,
+    0.30534
+   ]
+  },
+  "access_flexible_catch_all_hand_or_tutor_t3": {
+   "value": 0.72275,
+   "ci95": [
+    0.71284,
+    0.73245
+   ]
+  },
+  "access_flexible_catch_all_in_hand_t4": {
+   "value": 0.32525,
+   "ci95": [
+    0.31507,
+    0.3356
+   ]
+  },
+  "access_flexible_catch_all_hand_or_tutor_t4": {
+   "value": 0.7735,
+   "ci95": [
+    0.7642,
+    0.78254
+   ]
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 255
+  },
+  "focus_card_quality": {
+   "Spellseeker": {
+    "t1": {
+     "p_in_hand": 0.668,
+     "n_held": 5344,
+     "material": 0.0481,
+     "secondary_only": 0.3591,
+     "stranded": 0.5928,
+     "roles": {
+      "body": 0.1076,
+      "development": 0.0481,
+      "fair_tutor": 0.0481,
+      "pitch": 0.2915
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.67075,
+     "n_held": 5366,
+     "material": 0.4758,
+     "secondary_only": 0.2382,
+     "stranded": 0.2861,
+     "roles": {
+      "body": 0.1385,
+      "development": 0.4758,
+      "fair_tutor": 0.4758,
+      "pitch": 0.3245
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.67375,
+     "n_held": 5390,
+     "material": 0.8004,
+     "secondary_only": 0.1137,
+     "stranded": 0.0859,
+     "roles": {
+      "body": 0.2299,
+      "combo_live": 0.0013,
+      "development": 0.8004,
+      "fair_tutor": 0.8004,
+      "pitch": 0.3629
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.67788,
+     "n_held": 5423,
+     "material": 0.8613,
+     "secondary_only": 0.0889,
+     "stranded": 0.0498,
+     "roles": {
+      "body": 0.3336,
+      "combo_live": 0.0168,
+      "development": 0.8613,
+      "fair_tutor": 0.8613,
+      "pitch": 0.3957
+     }
+    }
+   },
+   "Hazel's Brewmaster": {
+    "t1": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.0354,
+     "secondary_only": 0.1241,
+     "stranded": 0.8405,
+     "roles": {
+      "body": 0.1266,
+      "combo_pair": 0.0354
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05987,
+     "n_held": 479,
+     "material": 0.0438,
+     "secondary_only": 0.2276,
+     "stranded": 0.7286,
+     "roles": {
+      "body": 0.2422,
+      "combo_pair": 0.0438
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.072,
+     "n_held": 576,
+     "material": 0.059,
+     "secondary_only": 0.4688,
+     "stranded": 0.4722,
+     "roles": {
+      "body": 0.4965,
+      "combo_pair": 0.059
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08263,
+     "n_held": 661,
+     "material": 0.0726,
+     "secondary_only": 0.6218,
+     "stranded": 0.3056,
+     "roles": {
+      "body": 0.6641,
+      "combo_pair": 0.0726
+     }
+    }
+   },
+   "Oboro Breezecaller": {
+    "t1": {
+     "p_in_hand": 0.06125,
+     "n_held": 490,
+     "material": 0.0735,
+     "secondary_only": 0.4204,
+     "stranded": 0.5061,
+     "roles": {
+      "body": 0.2816,
+      "combo_pair": 0.0735,
+      "development": 0.0102,
+      "pitch": 0.202
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07087,
+     "n_held": 567,
+     "material": 0.0705,
+     "secondary_only": 0.8483,
+     "stranded": 0.0811,
+     "roles": {
+      "body": 0.8183,
+      "combo_pair": 0.0705,
+      "development": 0.0564,
+      "pitch": 0.2381
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06975,
+     "n_held": 558,
+     "material": 0.0735,
+     "secondary_only": 0.8692,
+     "stranded": 0.0573,
+     "roles": {
+      "body": 0.853,
+      "combo_pair": 0.0735,
+      "development": 0.0663,
+      "pitch": 0.2903
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.0692,
+     "secondary_only": 0.8814,
+     "stranded": 0.0494,
+     "roles": {
+      "body": 0.8755,
+      "combo_pair": 0.0692,
+      "development": 0.0632,
+      "pitch": 0.3478
+     }
+    }
+   },
+   "Swift Reconfiguration": {
+    "t1": {
+     "p_in_hand": 0.05925,
+     "n_held": 474,
+     "material": 0.0717,
+     "secondary_only": 0.0,
+     "stranded": 0.9283,
+     "roles": {
+      "combo_pair": 0.0717
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06963,
+     "n_held": 557,
+     "material": 0.079,
+     "secondary_only": 0.0,
+     "stranded": 0.921,
+     "roles": {
+      "combo_live": 0.0036,
+      "combo_pair": 0.079
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08063,
+     "n_held": 645,
+     "material": 0.1209,
+     "secondary_only": 0.0,
+     "stranded": 0.8791,
+     "roles": {
+      "combo_live": 0.0667,
+      "combo_pair": 0.0868
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09012,
+     "n_held": 721,
+     "material": 0.2191,
+     "secondary_only": 0.0,
+     "stranded": 0.7809,
+     "roles": {
+      "combo_live": 0.1914,
+      "combo_pair": 0.0888
+     }
+    }
+   },
+   "Machine God's Effigy": {
+    "t1": {
+     "p_in_hand": 0.0425,
+     "n_held": 340,
+     "material": 0.0353,
+     "secondary_only": 0.0,
+     "stranded": 0.9647,
+     "roles": {
+      "combo_pair": 0.0324,
+      "development": 0.0029
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05462,
+     "n_held": 437,
+     "material": 0.1716,
+     "secondary_only": 0.0,
+     "stranded": 0.8284,
+     "roles": {
+      "combo_pair": 0.0343,
+      "development": 0.1419
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06688,
+     "n_held": 535,
+     "material": 0.4748,
+     "secondary_only": 0.0,
+     "stranded": 0.5252,
+     "roles": {
+      "combo_live": 0.0075,
+      "combo_pair": 0.0486,
+      "development": 0.4523
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.07775,
+     "n_held": 622,
+     "material": 0.6624,
+     "secondary_only": 0.0,
+     "stranded": 0.3376,
+     "roles": {
+      "combo_live": 0.0402,
+      "combo_pair": 0.0579,
+      "development": 0.6463
+     }
+    }
+   },
+   "Devoted Druid": {
+    "t1": {
+     "p_in_hand": 0.05663,
+     "n_held": 453,
+     "material": 0.3377,
+     "secondary_only": 0.053,
+     "stranded": 0.6093,
+     "roles": {
+      "body": 0.0706,
+      "combo_pair": 0.1236,
+      "development": 0.234,
+      "pitch": 0.0287
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.066,
+     "n_held": 528,
+     "material": 0.8617,
+     "secondary_only": 0.0208,
+     "stranded": 0.1174,
+     "roles": {
+      "body": 0.1042,
+      "combo_live": 0.0019,
+      "combo_pair": 0.142,
+      "development": 0.8277,
+      "pitch": 0.0417
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.8834,
+     "secondary_only": 0.0217,
+     "stranded": 0.0949,
+     "roles": {
+      "body": 0.17,
+      "combo_live": 0.0296,
+      "combo_pair": 0.1759,
+      "development": 0.8478,
+      "pitch": 0.0474
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.0565,
+     "n_held": 452,
+     "material": 0.8628,
+     "secondary_only": 0.0354,
+     "stranded": 0.1018,
+     "roles": {
+      "body": 0.2898,
+      "combo_live": 0.0597,
+      "combo_pair": 0.1925,
+      "development": 0.8186,
+      "pitch": 0.0575
+     }
+    }
+   },
+   "Orcish Bowmasters": {
+    "t1": {
+     "p_in_hand": 0.06313,
+     "n_held": 505,
+     "material": 0.2614,
+     "secondary_only": 0.0931,
+     "stranded": 0.6455,
+     "roles": {
+      "body": 0.1208,
+      "combo_pair": 0.0396,
+      "interaction_held": 0.2277
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.073,
+     "n_held": 584,
+     "material": 0.7551,
+     "secondary_only": 0.0342,
+     "stranded": 0.2106,
+     "roles": {
+      "body": 0.1336,
+      "combo_pair": 0.0497,
+      "interaction_held": 0.7466
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08225,
+     "n_held": 658,
+     "material": 0.8116,
+     "secondary_only": 0.0456,
+     "stranded": 0.1429,
+     "roles": {
+      "body": 0.2462,
+      "combo_pair": 0.0729,
+      "interaction_held": 0.7979
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09325,
+     "n_held": 746,
+     "material": 0.8445,
+     "secondary_only": 0.0576,
+     "stranded": 0.0979,
+     "roles": {
+      "body": 0.3552,
+      "combo_pair": 0.0858,
+      "interaction_held": 0.8298
+     }
+    }
+   },
+   "Faerie Mastermind": {
+    "t1": {
+     "p_in_hand": 0.05838,
+     "n_held": 467,
+     "material": 0.2548,
+     "secondary_only": 0.227,
+     "stranded": 0.5182,
+     "roles": {
+      "body": 0.1028,
+      "combo_pair": 0.0428,
+      "development": 0.2184,
+      "pitch": 0.2184
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06913,
+     "n_held": 553,
+     "material": 0.8662,
+     "secondary_only": 0.0452,
+     "stranded": 0.0886,
+     "roles": {
+      "body": 0.1284,
+      "combo_pair": 0.0524,
+      "development": 0.8608,
+      "pitch": 0.2604
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06625,
+     "n_held": 530,
+     "material": 0.883,
+     "secondary_only": 0.0453,
+     "stranded": 0.0717,
+     "roles": {
+      "body": 0.2245,
+      "combo_pair": 0.0736,
+      "development": 0.8736,
+      "pitch": 0.3019
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.061,
+     "n_held": 488,
+     "material": 0.8791,
+     "secondary_only": 0.0594,
+     "stranded": 0.0615,
+     "roles": {
+      "body": 0.332,
+      "combo_pair": 0.0963,
+      "development": 0.8627,
+      "pitch": 0.3176
+     }
+    }
+   },
+   "Gilded Drake": {
+    "t1": {
+     "p_in_hand": 0.06788,
+     "n_held": 543,
+     "material": 0.2081,
+     "secondary_only": 0.1934,
+     "stranded": 0.5985,
+     "roles": {
+      "body": 0.0921,
+      "interaction_held": 0.2081,
+      "pitch": 0.1731
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07525,
+     "n_held": 602,
+     "material": 0.8405,
+     "secondary_only": 0.0515,
+     "stranded": 0.108,
+     "roles": {
+      "body": 0.1312,
+      "interaction_held": 0.8405,
+      "pitch": 0.2259
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08325,
+     "n_held": 666,
+     "material": 0.8994,
+     "secondary_only": 0.0435,
+     "stranded": 0.0571,
+     "roles": {
+      "body": 0.2087,
+      "interaction_held": 0.8994,
+      "pitch": 0.2553
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09337,
+     "n_held": 747,
+     "material": 0.921,
+     "secondary_only": 0.0388,
+     "stranded": 0.0402,
+     "roles": {
+      "body": 0.3052,
+      "interaction_held": 0.921,
+      "pitch": 0.3012
+     }
+    }
+   },
+   "Volatile Stormdrake": {
+    "t1": {
+     "p_in_hand": 0.062,
+     "n_held": 496,
+     "material": 0.2218,
+     "secondary_only": 0.1875,
+     "stranded": 0.5907,
+     "roles": {
+      "body": 0.0988,
+      "interaction_held": 0.2218,
+      "pitch": 0.1552
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.068,
+     "n_held": 544,
+     "material": 0.8529,
+     "secondary_only": 0.0533,
+     "stranded": 0.0938,
+     "roles": {
+      "body": 0.1305,
+      "interaction_held": 0.8529,
+      "pitch": 0.204
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07762,
+     "n_held": 621,
+     "material": 0.8953,
+     "secondary_only": 0.0467,
+     "stranded": 0.058,
+     "roles": {
+      "body": 0.2238,
+      "interaction_held": 0.8953,
+      "pitch": 0.2625
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08712,
+     "n_held": 697,
+     "material": 0.9154,
+     "secondary_only": 0.0531,
+     "stranded": 0.0316,
+     "roles": {
+      "body": 0.3515,
+      "interaction_held": 0.9154,
+      "pitch": 0.3228
+     }
+    }
+   },
+   "Colossal Skyturtle": {
+    "t1": {
+     "p_in_hand": 0.05187,
+     "n_held": 415,
+     "material": 0.2675,
+     "secondary_only": 0.2337,
+     "stranded": 0.4988,
+     "roles": {
+      "body": 0.0867,
+      "interaction_held": 0.2675,
+      "pitch": 0.241
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.058,
+     "n_held": 464,
+     "material": 0.8901,
+     "secondary_only": 0.0474,
+     "stranded": 0.0625,
+     "roles": {
+      "body": 0.1013,
+      "interaction_held": 0.8901,
+      "pitch": 0.3039
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06975,
+     "n_held": 558,
+     "material": 0.9355,
+     "secondary_only": 0.0251,
+     "stranded": 0.0394,
+     "roles": {
+      "body": 0.19,
+      "interaction_held": 0.9355,
+      "pitch": 0.3387
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.07963,
+     "n_held": 637,
+     "material": 0.9576,
+     "secondary_only": 0.022,
+     "stranded": 0.0204,
+     "roles": {
+      "body": 0.303,
+      "interaction_held": 0.9576,
+      "pitch": 0.3956
+     }
+    }
+   },
+   "Imperial Seal": {
+    "t1": {
+     "p_in_hand": 0.062,
+     "n_held": 496,
+     "material": 0.7702,
+     "secondary_only": 0.0,
+     "stranded": 0.2298,
+     "roles": {
+      "fair_tutor": 0.7702
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.046,
+     "n_held": 368,
+     "material": 0.6712,
+     "secondary_only": 0.0,
+     "stranded": 0.3288,
+     "roles": {
+      "fair_tutor": 0.6712
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.0485,
+     "n_held": 388,
+     "material": 0.7165,
+     "secondary_only": 0.0,
+     "stranded": 0.2835,
+     "roles": {
+      "fair_tutor": 0.7165
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05725,
+     "n_held": 458,
+     "material": 0.762,
+     "secondary_only": 0.0,
+     "stranded": 0.238,
+     "roles": {
+      "combo_live": 0.0109,
+      "fair_tutor": 0.762
+     }
+    }
+   },
+   "Demonic Tutor": {
+    "t1": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.2134,
+     "secondary_only": 0.0,
+     "stranded": 0.7866,
+     "roles": {
+      "fair_tutor": 0.2134
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06975,
+     "n_held": 558,
+     "material": 0.7366,
+     "secondary_only": 0.0,
+     "stranded": 0.2634,
+     "roles": {
+      "fair_tutor": 0.7366
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.05075,
+     "n_held": 406,
+     "material": 0.6675,
+     "secondary_only": 0.0,
+     "stranded": 0.3325,
+     "roles": {
+      "combo_live": 0.0099,
+      "fair_tutor": 0.6675
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06075,
+     "n_held": 486,
+     "material": 0.7428,
+     "secondary_only": 0.0,
+     "stranded": 0.2572,
+     "roles": {
+      "combo_live": 0.0391,
+      "fair_tutor": 0.7428
+     }
+    }
+   },
+   "Vampiric Tutor": {
+    "t1": {
+     "p_in_hand": 0.06525,
+     "n_held": 522,
+     "material": 0.7605,
+     "secondary_only": 0.0,
+     "stranded": 0.2395,
+     "roles": {
+      "fair_tutor": 0.7605
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.0475,
+     "n_held": 380,
+     "material": 0.6395,
+     "secondary_only": 0.0,
+     "stranded": 0.3605,
+     "roles": {
+      "fair_tutor": 0.6395
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.04713,
+     "n_held": 377,
+     "material": 0.687,
+     "secondary_only": 0.0,
+     "stranded": 0.313,
+     "roles": {
+      "fair_tutor": 0.687
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05725,
+     "n_held": 458,
+     "material": 0.7664,
+     "secondary_only": 0.0,
+     "stranded": 0.2336,
+     "roles": {
+      "combo_live": 0.0131,
+      "fair_tutor": 0.7664
+     }
+    }
+   },
+   "Enlightened Tutor": {
+    "t1": {
+     "p_in_hand": 0.05925,
+     "n_held": 474,
+     "material": 0.7468,
+     "secondary_only": 0.0,
+     "stranded": 0.2532,
+     "roles": {
+      "fair_tutor": 0.7468
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.0695,
+     "n_held": 556,
+     "material": 0.7914,
+     "secondary_only": 0.0,
+     "stranded": 0.2086,
+     "roles": {
+      "fair_tutor": 0.7914
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07838,
+     "n_held": 627,
+     "material": 0.8373,
+     "secondary_only": 0.0,
+     "stranded": 0.1627,
+     "roles": {
+      "combo_live": 0.0032,
+      "fair_tutor": 0.8373
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08962,
+     "n_held": 717,
+     "material": 0.8773,
+     "secondary_only": 0.0,
+     "stranded": 0.1227,
+     "roles": {
+      "combo_live": 0.0084,
+      "fair_tutor": 0.8773
+     }
+    }
+   },
+   "Crop Rotation": {
+    "t1": {
+     "p_in_hand": 0.05875,
+     "n_held": 470,
+     "material": 0.0404,
+     "secondary_only": 0.0489,
+     "stranded": 0.9106,
+     "roles": {
+      "fair_tutor": 0.0404,
+      "pitch": 0.0532
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06713,
+     "n_held": 537,
+     "material": 0.8603,
+     "secondary_only": 0.0093,
+     "stranded": 0.1304,
+     "roles": {
+      "fair_tutor": 0.8603,
+      "pitch": 0.0596
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07675,
+     "n_held": 614,
+     "material": 0.9088,
+     "secondary_only": 0.0065,
+     "stranded": 0.0847,
+     "roles": {
+      "fair_tutor": 0.9088,
+      "pitch": 0.0684
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.0875,
+     "n_held": 700,
+     "material": 0.93,
+     "secondary_only": 0.0029,
+     "stranded": 0.0671,
+     "roles": {
+      "fair_tutor": 0.93,
+      "pitch": 0.0686
+     }
+    }
+   },
+   "Birthing Pod": {
+    "t1": {
+     "p_in_hand": 0.0535,
+     "n_held": 428,
+     "material": 0.035,
+     "secondary_only": 0.0304,
+     "stranded": 0.9346,
+     "roles": {
+      "development": 0.035,
+      "fair_tutor": 0.035,
+      "pitch": 0.0327
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.113,
+     "n_held": 904,
+     "material": 0.3872,
+     "secondary_only": 0.0398,
+     "stranded": 0.573,
+     "roles": {
+      "development": 0.3872,
+      "fair_tutor": 0.3872,
+      "pitch": 0.0542
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.136,
+     "n_held": 1088,
+     "material": 0.7629,
+     "secondary_only": 0.0138,
+     "stranded": 0.2233,
+     "roles": {
+      "development": 0.7629,
+      "fair_tutor": 0.7629,
+      "pitch": 0.0689
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.052,
+     "n_held": 416,
+     "material": 0.613,
+     "secondary_only": 0.0216,
+     "stranded": 0.3654,
+     "roles": {
+      "combo_live": 0.0096,
+      "development": 0.613,
+      "fair_tutor": 0.613,
+      "pitch": 0.0745
+     }
+    }
+   }
+  },
+  "dead_opening_draw": {
+   "Spellseeker": {
+    "opening_7": {
+     "n": 5185,
+     "p_dead": 0.1346,
+     "ci95": [
+      0.1256,
+      0.14418
+     ],
+     "p_early_dead": 0.5232
+    },
+    "kept_6_after_second_7": {
+     "n": 121,
+     "p_dead": 0.1322,
+     "ci95": [
+      0.08306,
+      0.20404
+     ],
+     "p_early_dead": 0.4793
+    },
+    "kept_5": {
+     "n": 32,
+     "p_dead": 0.2812,
+     "ci95": [
+      0.15564,
+      0.45375
+     ],
+     "p_early_dead": 0.625
+    },
+    "all_kept_hands": {
+     "n": 5339,
+     "p_dead": 0.1354,
+     "ci95": [
+      0.1265,
+      0.14486
+     ]
+    }
+   },
+   "Hazel's Brewmaster": {
+    "opening_7": {
+     "n": 272,
+     "p_dead": 0.9412,
+     "ci95": [
+      0.90659,
+      0.96347
+     ],
+     "p_early_dead": 0.9632
+    },
+    "kept_6_after_second_7": {
+     "n": 52,
+     "p_dead": 0.9231,
+     "ci95": [
+      0.81826,
+      0.96968
+     ],
+     "p_early_dead": 0.9231
+    },
+    "all_kept_hands": {
+     "n": 327,
+     "p_dead": 0.9388,
+     "ci95": [
+      0.90742,
+      0.96006
+     ]
+    }
+   },
+   "Oboro Breezecaller": {
+    "opening_7": {
+     "n": 288,
+     "p_dead": 0.9028,
+     "ci95": [
+      0.86307,
+      0.93188
+     ],
+     "p_early_dead": 0.9132
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.9293,
+     "ci95": [
+      0.86118,
+      0.96533
+     ],
+     "p_early_dead": 0.9293
+    },
+    "kept_5": {
+     "n": 37,
+     "p_dead": 0.9189,
+     "ci95": [
+      0.78699,
+      0.97204
+     ],
+     "p_early_dead": 0.9189
+    },
+    "all_kept_hands": {
+     "n": 425,
+     "p_dead": 0.9106,
+     "ci95": [
+      0.87965,
+      0.93417
+     ]
+    }
+   },
+   "Swift Reconfiguration": {
+    "opening_7": {
+     "n": 262,
+     "p_dead": 0.7786,
+     "ci95": [
+      0.72453,
+      0.82467
+     ],
+     "p_early_dead": 0.9351
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.7273,
+     "ci95": [
+      0.63229,
+      0.80528
+     ],
+     "p_early_dead": 0.9091
+    },
+    "kept_5": {
+     "n": 47,
+     "p_dead": 0.6809,
+     "ci95": [
+      0.53832,
+      0.79605
+     ],
+     "p_early_dead": 0.8085
+    },
+    "all_kept_hands": {
+     "n": 411,
+     "p_dead": 0.7567,
+     "ci95": [
+      0.71295,
+      0.79567
+     ]
+    }
+   },
+   "Machine God's Effigy": {
+    "opening_7": {
+     "n": 228,
+     "p_dead": 0.2939,
+     "ci95": [
+      0.23854,
+      0.35601
+     ],
+     "p_early_dead": 0.8246
+    },
+    "kept_6_after_second_7": {
+     "n": 57,
+     "p_dead": 0.2632,
+     "ci95": [
+      0.16646,
+      0.38977
+     ],
+     "p_early_dead": 0.807
+    },
+    "all_kept_hands": {
+     "n": 294,
+     "p_dead": 0.2993,
+     "ci95": [
+      0.24983,
+      0.35398
+     ]
+    }
+   },
+   "Devoted Druid": {
+    "opening_7": {
+     "n": 245,
+     "p_dead": 0.0531,
+     "ci95": [
+      0.03127,
+      0.08865
+     ],
+     "p_early_dead": 0.1102
+    },
+    "kept_6_after_second_7": {
+     "n": 102,
+     "p_dead": 0.0392,
+     "ci95": [
+      0.01535,
+      0.09653
+     ],
+     "p_early_dead": 0.098
+    },
+    "kept_5": {
+     "n": 45,
+     "p_dead": 0.1111,
+     "ci95": [
+      0.0484,
+      0.23499
+     ],
+     "p_early_dead": 0.2444
+    },
+    "all_kept_hands": {
+     "n": 393,
+     "p_dead": 0.056,
+     "ci95": [
+      0.03726,
+      0.0833
+     ]
+    }
+   },
+   "Orcish Bowmasters": {
+    "opening_7": {
+     "n": 289,
+     "p_dead": 0.1246,
+     "ci95": [
+      0.09135,
+      0.16763
+     ],
+     "p_early_dead": 0.2284
+    },
+    "kept_6_after_second_7": {
+     "n": 111,
+     "p_dead": 0.1261,
+     "ci95": [
+      0.07664,
+      0.20063
+     ],
+     "p_early_dead": 0.1982
+    },
+    "kept_5": {
+     "n": 48,
+     "p_dead": 0.1667,
+     "ci95": [
+      0.08695,
+      0.29578
+     ],
+     "p_early_dead": 0.3542
+    },
+    "all_kept_hands": {
+     "n": 454,
+     "p_dead": 0.1278,
+     "ci95": [
+      0.10014,
+      0.16161
+     ]
+    }
+   },
+   "Faerie Mastermind": {
+    "opening_7": {
+     "n": 266,
+     "p_dead": 0.0526,
+     "ci95": [
+      0.03161,
+      0.08639
+     ],
+     "p_early_dead": 0.0977
+    },
+    "kept_6_after_second_7": {
+     "n": 101,
+     "p_dead": 0.0693,
+     "ci95": [
+      0.03397,
+      0.1362
+     ],
+     "p_early_dead": 0.1485
+    },
+    "kept_5": {
+     "n": 33,
+     "p_dead": 0.1212,
+     "ci95": [
+      0.04816,
+      0.27326
+     ],
+     "p_early_dead": 0.303
+    },
+    "all_kept_hands": {
+     "n": 405,
+     "p_dead": 0.0691,
+     "ci95": [
+      0.04826,
+      0.09811
+     ]
+    }
+   },
+   "Gilded Drake": {
+    "opening_7": {
+     "n": 310,
+     "p_dead": 0.0355,
+     "ci95": [
+      0.01993,
+      0.06241
+     ],
+     "p_early_dead": 0.0968
+    },
+    "kept_6_after_second_7": {
+     "n": 93,
+     "p_dead": 0.1075,
+     "ci95": [
+      0.05946,
+      0.18673
+     ],
+     "p_early_dead": 0.2258
+    },
+    "kept_5": {
+     "n": 61,
+     "p_dead": 0.0656,
+     "ci95": [
+      0.02579,
+      0.15683
+     ],
+     "p_early_dead": 0.2295
+    },
+    "all_kept_hands": {
+     "n": 467,
+     "p_dead": 0.0557,
+     "ci95": [
+      0.03827,
+      0.08033
+     ]
+    }
+   },
+   "Volatile Stormdrake": {
+    "opening_7": {
+     "n": 292,
+     "p_dead": 0.0719,
+     "ci95": [
+      0.04752,
+      0.10744
+     ],
+     "p_early_dead": 0.1199
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.0505,
+     "ci95": [
+      0.02176,
+      0.11283
+     ],
+     "p_early_dead": 0.1414
+    },
+    "kept_5": {
+     "n": 36,
+     "p_dead": 0.0278,
+     "ci95": [
+      0.00492,
+      0.1417
+     ],
+     "p_early_dead": 0.1667
+    },
+    "all_kept_hands": {
+     "n": 429,
+     "p_dead": 0.0653,
+     "ci95": [
+      0.04554,
+      0.09271
+     ]
+    }
+   },
+   "Colossal Skyturtle": {
+    "opening_7": {
+     "n": 298,
+     "p_dead": 0.0436,
+     "ci95": [
+      0.02567,
+      0.0732
+     ],
+     "p_early_dead": 0.1107
+    },
+    "kept_6_after_second_7": {
+     "n": 40,
+     "p_dead": 0.025,
+     "ci95": [
+      0.00443,
+      0.12882
+     ],
+     "p_early_dead": 0.05
+    },
+    "all_kept_hands": {
+     "n": 351,
+     "p_dead": 0.0399,
+     "ci95": [
+      0.02391,
+      0.06583
+     ]
+    }
+   },
+   "Imperial Seal": {
+    "opening_7": {
+     "n": 237,
+     "p_dead": 0.097,
+     "ci95": [
+      0.06554,
+      0.14141
+     ],
+     "p_early_dead": 0.1435
+    },
+    "kept_6_after_second_7": {
+     "n": 139,
+     "p_dead": 0.1151,
+     "ci95": [
+      0.07211,
+      0.17881
+     ],
+     "p_early_dead": 0.1583
+    },
+    "kept_5": {
+     "n": 62,
+     "p_dead": 0.129,
+     "ci95": [
+      0.06686,
+      0.2345
+     ],
+     "p_early_dead": 0.2097
+    },
+    "all_kept_hands": {
+     "n": 447,
+     "p_dead": 0.1119,
+     "ci95": [
+      0.08588,
+      0.14445
+     ]
+    }
+   },
+   "Demonic Tutor": {
+    "opening_7": {
+     "n": 272,
+     "p_dead": 0.1103,
+     "ci95": [
+      0.07836,
+      0.15309
+     ],
+     "p_early_dead": 0.1949
+    },
+    "kept_6_after_second_7": {
+     "n": 132,
+     "p_dead": 0.1288,
+     "ci95": [
+      0.08199,
+      0.19659
+     ],
+     "p_early_dead": 0.2197
+    },
+    "kept_5": {
+     "n": 40,
+     "p_dead": 0.125,
+     "ci95": [
+      0.05459,
+      0.26112
+     ],
+     "p_early_dead": 0.225
+    },
+    "all_kept_hands": {
+     "n": 449,
+     "p_dead": 0.1203,
+     "ci95": [
+      0.09336,
+      0.15362
+     ]
+    }
+   },
+   "Vampiric Tutor": {
+    "opening_7": {
+     "n": 268,
+     "p_dead": 0.1455,
+     "ci95": [
+      0.10831,
+      0.19275
+     ],
+     "p_early_dead": 0.1828
+    },
+    "kept_6_after_second_7": {
+     "n": 135,
+     "p_dead": 0.1037,
+     "ci95": [
+      0.06278,
+      0.16655
+     ],
+     "p_early_dead": 0.1556
+    },
+    "kept_5": {
+     "n": 57,
+     "p_dead": 0.0877,
+     "ci95": [
+      0.03805,
+      0.18945
+     ],
+     "p_early_dead": 0.1404
+    },
+    "all_kept_hands": {
+     "n": 464,
+     "p_dead": 0.1272,
+     "ci95": [
+      0.09987,
+      0.16056
+     ]
+    }
+   },
+   "Enlightened Tutor": {
+    "opening_7": {
+     "n": 219,
+     "p_dead": 0.1096,
+     "ci95": [
+      0.07476,
+      0.15788
+     ],
+     "p_early_dead": 0.1826
+    },
+    "kept_6_after_second_7": {
+     "n": 130,
+     "p_dead": 0.0615,
+     "ci95": [
+      0.03151,
+      0.11674
+     ],
+     "p_early_dead": 0.1077
+    },
+    "kept_5": {
+     "n": 56,
+     "p_dead": 0.125,
+     "ci95": [
+      0.06189,
+      0.23626
+     ],
+     "p_early_dead": 0.2321
+    },
+    "all_kept_hands": {
+     "n": 414,
+     "p_dead": 0.0942,
+     "ci95": [
+      0.06968,
+      0.12619
+     ]
+    }
+   },
+   "Crop Rotation": {
+    "opening_7": {
+     "n": 250,
+     "p_dead": 0.052,
+     "ci95": [
+      0.03064,
+      0.08692
+     ],
+     "p_early_dead": 0.132
+    },
+    "kept_6_after_second_7": {
+     "n": 112,
+     "p_dead": 0.0536,
+     "ci95": [
+      0.02478,
+      0.11197
+     ],
+     "p_early_dead": 0.1071
+    },
+    "kept_5": {
+     "n": 46,
+     "p_dead": 0.087,
+     "ci95": [
+      0.03434,
+      0.20325
+     ],
+     "p_early_dead": 0.1739
+    },
+    "all_kept_hands": {
+     "n": 411,
+     "p_dead": 0.056,
+     "ci95": [
+      0.03758,
+      0.08257
+     ]
+    }
+   },
+   "Birthing Pod": {
+    "opening_7": {
+     "n": 258,
+     "p_dead": 0.2093,
+     "ci95": [
+      0.16411,
+      0.26303
+     ],
+     "p_early_dead": 0.5698
+    },
+    "kept_6_after_second_7": {
+     "n": 85,
+     "p_dead": 0.1529,
+     "ci95": [
+      0.09161,
+      0.24428
+     ],
+     "p_early_dead": 0.4118
+    },
+    "kept_5": {
+     "n": 26,
+     "p_dead": 0.3846,
+     "ci95": [
+      0.22428,
+      0.57465
+     ],
+     "p_early_dead": 0.5769
+    },
+    "all_kept_hands": {
+     "n": 369,
+     "p_dead": 0.2087,
+     "ci95": [
+      0.17032,
+      0.25303
+     ]
+    }
+   }
+  }
+ },
+ "A_forced_spellseeker": {
+  "parent": "A_oracle_less",
+  "blanked": [],
+  "forced_opening": [
+   "Spellseeker"
+  ],
+  "n": 8000,
+  "keep7": {
+   "value": 0.64812,
+   "ci95": [
+    0.63759,
+    0.65852
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "mean_mulligans": {
+   "value": 0.48475,
+   "se": 0.00821,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm0": {
+   "value": 0.0005,
+   "ci95": [
+    0.00019,
+    0.00129
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm1": {
+   "value": 0.01775,
+   "ci95": [
+    0.01508,
+    0.02088
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_fm2plus": {
+   "value": 0.98175,
+   "ci95": [
+    0.97858,
+    0.98446
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_W": {
+   "value": 0.59762,
+   "ci95": [
+    0.58683,
+    0.60832
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_U": {
+   "value": 0.7865,
+   "ci95": [
+    0.77738,
+    0.79534
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_B": {
+   "value": 0.52312,
+   "ci95": [
+    0.51217,
+    0.53406
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_has_G": {
+   "value": 0.77338,
+   "ci95": [
+    0.76407,
+    0.78242
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_all_four_colors": {
+   "value": 0.62962,
+   "ci95": [
+    0.61898,
+    0.64014
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_three_plus_colors": {
+   "value": 0.78575,
+   "ci95": [
+    0.77662,
+    0.7946
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_mana_ge2": {
+   "value": 0.14675,
+   "ci95": [
+    0.13917,
+    0.15467
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_mana_ge3": {
+   "value": 0.39325,
+   "ci95": [
+    0.3826,
+    0.404
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t1_development": {
+   "value": 0.49338,
+   "ci95": [
+    0.48243,
+    0.50433
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "t2_development": {
+   "value": 0.51275,
+   "ci95": [
+    0.50179,
+    0.52369
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t2": {
+   "value": 0.28463,
+   "ci95": [
+    0.27484,
+    0.29461
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t3": {
+   "value": 0.44625,
+   "ci95": [
+    0.43539,
+    0.45717
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "premium_engine_by_t4": {
+   "value": 0.51938,
+   "ci95": [
+    0.50842,
+    0.53031
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t2": {
+   "value": 0.00112,
+   "ci95": [
+    0.00059,
+    0.00214
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t3": {
+   "value": 0.00737,
+   "ci95": [
+    0.00572,
+    0.0095
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t3": {
+   "value": 0.00125,
+   "ci95": [
+    0.00068,
+    0.0023
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t3": {
+   "value": 0.00063,
+   "ci95": [
+    0.00027,
+    0.00146
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t3": {
+   "value": 0.00737,
+   "ci95": [
+    0.00572,
+    0.0095
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t3": {
+   "value": 0.01275,
+   "ci95": [
+    0.01051,
+    0.01545
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_win_by_t4": {
+   "value": 0.03188,
+   "ci95": [
+    0.02824,
+    0.03595
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_protected_by_t4": {
+   "value": 0.01112,
+   "ci95": [
+    0.00905,
+    0.01367
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "det_instant_window_by_t4": {
+   "value": 0.00363,
+   "ci95": [
+    0.00253,
+    0.0052
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_line_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "infinite_line_by_t4": {
+   "value": 0.03188,
+   "ci95": [
+    0.02824,
+    0.03595
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "any_incl_nondet_by_t4": {
+   "value": 0.03812,
+   "ci95": [
+    0.03415,
+    0.04255
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_any_by_t2": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "non_oracle_det_by_t2": {
+   "value": 0.00025,
+   "ci95": [
+    7e-05,
+    0.00091
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_any_by_t3": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "non_oracle_det_by_t3": {
+   "value": 0.00737,
+   "ci95": [
+    0.00572,
+    0.0095
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "oracle_any_by_t4": {
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.00048
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "non_oracle_det_by_t4": {
+   "value": 0.03188,
+   "ci95": [
+    0.02824,
+    0.03595
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "bricks_in_kept_hand_mean": {
+   "value": 1.29025,
+   "se": 0.01408,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_0_bricks": {
+   "value": 0.31675,
+   "ci95": [
+    0.30665,
+    0.32703
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_1_brick": {
+   "value": 0.32112,
+   "ci95": [
+    0.31098,
+    0.33144
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "kept_hand_2plus_bricks": {
+   "value": 0.36212,
+   "ci95": [
+    0.35166,
+    0.37272
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "early_dead_in_kept_hand_mean": {
+   "value": 2.32563,
+   "se": 0.01667,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t1": {
+   "value": 2.43825,
+   "se": 0.01739,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t1": {
+   "value": 1.84813,
+   "se": 0.01439,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t2": {
+   "value": 1.55987,
+   "se": 0.01711,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t2": {
+   "value": 1.14488,
+   "se": 0.01292,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t3": {
+   "value": 1.02487,
+   "se": 0.01647,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t3": {
+   "value": 0.73662,
+   "se": 0.01082,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "stranded_cards_in_hand_t4": {
+   "value": 0.81425,
+   "se": 0.01572,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "secondary_only_cards_in_hand_t4": {
+   "value": 0.56725,
+   "se": 0.01042,
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_in_hand_t3": {
+   "value": 0.46163,
+   "ci95": [
+    0.45072,
+    0.47257
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_hand_or_tutor_t3": {
+   "value": 0.81412,
+   "ci95": [
+    0.80545,
+    0.8225
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_in_hand_t4": {
+   "value": 0.51912,
+   "ci95": [
+    0.50817,
+    0.53006
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_free_counter_hand_or_tutor_t4": {
+   "value": 0.87013,
+   "ci95": [
+    0.86258,
+    0.87731
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_in_hand_t3": {
+   "value": 0.23062,
+   "ci95": [
+    0.22152,
+    0.23998
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_hand_or_tutor_t3": {
+   "value": 0.68925,
+   "ci95": [
+    0.67902,
+    0.6993
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_in_hand_t4": {
+   "value": 0.25538,
+   "ci95": [
+    0.24594,
+    0.26505
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_paid_counter_hand_or_tutor_t4": {
+   "value": 0.73825,
+   "ci95": [
+    0.7285,
+    0.74777
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_in_hand_t3": {
+   "value": 0.35275,
+   "ci95": [
+    0.34235,
+    0.36329
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_hand_or_tutor_t3": {
+   "value": 0.79463,
+   "ci95": [
+    0.78563,
+    0.80334
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_in_hand_t4": {
+   "value": 0.387,
+   "ci95": [
+    0.37638,
+    0.39773
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_spell_answer_hand_or_tutor_t4": {
+   "value": 0.84975,
+   "ci95": [
+    0.84175,
+    0.85741
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_in_hand_t3": {
+   "value": 0.43475,
+   "ci95": [
+    0.42392,
+    0.44564
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t3": {
+   "value": 0.77112,
+   "ci95": [
+    0.76179,
+    0.7802
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_in_hand_t4": {
+   "value": 0.48275,
+   "ci95": [
+    0.47181,
+    0.49371
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_artifact_spell_answer_hand_or_tutor_t4": {
+   "value": 0.82037,
+   "ci95": [
+    0.81181,
+    0.82863
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_in_hand_t3": {
+   "value": 0.14025,
+   "ci95": [
+    0.13281,
+    0.14803
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_hand_or_tutor_t3": {
+   "value": 0.3975,
+   "ci95": [
+    0.38683,
+    0.40827
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_in_hand_t4": {
+   "value": 0.16012,
+   "ci95": [
+    0.15225,
+    0.16832
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_creature_theft_hand_or_tutor_t4": {
+   "value": 0.47675,
+   "ci95": [
+    0.46582,
+    0.4877
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_in_hand_t3": {
+   "value": 0.274,
+   "ci95": [
+    0.26434,
+    0.28388
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t3": {
+   "value": 0.56863,
+   "ci95": [
+    0.55774,
+    0.57944
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_in_hand_t4": {
+   "value": 0.27287,
+   "ci95": [
+    0.26322,
+    0.28274
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_creature_answer_hand_or_tutor_t4": {
+   "value": 0.6305,
+   "ci95": [
+    0.61986,
+    0.64101
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t3": {
+   "value": 0.15388,
+   "ci95": [
+    0.14613,
+    0.16195
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t3": {
+   "value": 0.29788,
+   "ci95": [
+    0.28795,
+    0.30799
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_in_hand_t4": {
+   "value": 0.10662,
+   "ci95": [
+    0.10005,
+    0.11358
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_resolved_artifact_enchantment_answer_hand_or_tutor_t4": {
+   "value": 0.291,
+   "ci95": [
+    0.28115,
+    0.30105
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_in_hand_t3": {
+   "value": 0.06988,
+   "ci95": [
+    0.06449,
+    0.07567
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_hand_or_tutor_t3": {
+   "value": 0.16237,
+   "ci95": [
+    0.15446,
+    0.17062
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_in_hand_t4": {
+   "value": 0.08038,
+   "ci95": [
+    0.07462,
+    0.08654
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_spell_redirect_hand_or_tutor_t4": {
+   "value": 0.19937,
+   "ci95": [
+    0.19077,
+    0.20827
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_in_hand_t3": {
+   "value": 0.07,
+   "ci95": [
+    0.06461,
+    0.0758
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_hand_or_tutor_t3": {
+   "value": 0.34537,
+   "ci95": [
+    0.33503,
+    0.35587
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_in_hand_t4": {
+   "value": 0.07925,
+   "ci95": [
+    0.07353,
+    0.08537
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_graveyard_interaction_hand_or_tutor_t4": {
+   "value": 0.42288,
+   "ci95": [
+    0.41209,
+    0.43374
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_in_hand_t3": {
+   "value": 0.19662,
+   "ci95": [
+    0.18806,
+    0.20548
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_hand_or_tutor_t3": {
+   "value": 0.72475,
+   "ci95": [
+    0.71486,
+    0.73443
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_in_hand_t4": {
+   "value": 0.22287,
+   "ci95": [
+    0.21389,
+    0.23213
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_proactive_protection_hand_or_tutor_t4": {
+   "value": 0.78663,
+   "ci95": [
+    0.77751,
+    0.79546
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_in_hand_t3": {
+   "value": 0.06525,
+   "ci95": [
+    0.06004,
+    0.07087
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t3": {
+   "value": 0.38825,
+   "ci95": [
+    0.37763,
+    0.39898
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_in_hand_t4": {
+   "value": 0.07625,
+   "ci95": [
+    0.07064,
+    0.08227
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_regrowth_of_spent_resources_hand_or_tutor_t4": {
+   "value": 0.47275,
+   "ci95": [
+    0.46183,
+    0.4837
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_in_hand_t3": {
+   "value": 0.29525,
+   "ci95": [
+    0.28535,
+    0.30534
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_hand_or_tutor_t3": {
+   "value": 0.72275,
+   "ci95": [
+    0.71284,
+    0.73245
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_in_hand_t4": {
+   "value": 0.32525,
+   "ci95": [
+    0.31507,
+    0.3356
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "access_flexible_catch_all_hand_or_tutor_t4": {
+   "value": 0.7735,
+   "ci95": [
+    0.7642,
+    0.78254
+   ],
+   "delta_vs_ref": 0.0,
+   "delta_se": 0.0
+  },
+  "first_win_family_counts": {
+   "inf_bowmasters": 255
+  },
+  "focus_card_quality": {
+   "Spellseeker": {
+    "t1": {
+     "p_in_hand": 0.668,
+     "n_held": 5344,
+     "material": 0.0481,
+     "secondary_only": 0.3591,
+     "stranded": 0.5928,
+     "roles": {
+      "body": 0.1076,
+      "development": 0.0481,
+      "fair_tutor": 0.0481,
+      "pitch": 0.2915
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.67075,
+     "n_held": 5366,
+     "material": 0.4758,
+     "secondary_only": 0.2382,
+     "stranded": 0.2861,
+     "roles": {
+      "body": 0.1385,
+      "development": 0.4758,
+      "fair_tutor": 0.4758,
+      "pitch": 0.3245
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.67375,
+     "n_held": 5390,
+     "material": 0.8004,
+     "secondary_only": 0.1137,
+     "stranded": 0.0859,
+     "roles": {
+      "body": 0.2299,
+      "combo_live": 0.0013,
+      "development": 0.8004,
+      "fair_tutor": 0.8004,
+      "pitch": 0.3629
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.67788,
+     "n_held": 5423,
+     "material": 0.8613,
+     "secondary_only": 0.0889,
+     "stranded": 0.0498,
+     "roles": {
+      "body": 0.3336,
+      "combo_live": 0.0168,
+      "development": 0.8613,
+      "fair_tutor": 0.8613,
+      "pitch": 0.3957
+     }
+    }
+   },
+   "Hazel's Brewmaster": {
+    "t1": {
+     "p_in_hand": 0.04938,
+     "n_held": 395,
+     "material": 0.0354,
+     "secondary_only": 0.1241,
+     "stranded": 0.8405,
+     "roles": {
+      "body": 0.1266,
+      "combo_pair": 0.0354
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05987,
+     "n_held": 479,
+     "material": 0.0438,
+     "secondary_only": 0.2276,
+     "stranded": 0.7286,
+     "roles": {
+      "body": 0.2422,
+      "combo_pair": 0.0438
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.072,
+     "n_held": 576,
+     "material": 0.059,
+     "secondary_only": 0.4688,
+     "stranded": 0.4722,
+     "roles": {
+      "body": 0.4965,
+      "combo_pair": 0.059
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08263,
+     "n_held": 661,
+     "material": 0.0726,
+     "secondary_only": 0.6218,
+     "stranded": 0.3056,
+     "roles": {
+      "body": 0.6641,
+      "combo_pair": 0.0726
+     }
+    }
+   },
+   "Oboro Breezecaller": {
+    "t1": {
+     "p_in_hand": 0.06125,
+     "n_held": 490,
+     "material": 0.0735,
+     "secondary_only": 0.4204,
+     "stranded": 0.5061,
+     "roles": {
+      "body": 0.2816,
+      "combo_pair": 0.0735,
+      "development": 0.0102,
+      "pitch": 0.202
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07087,
+     "n_held": 567,
+     "material": 0.0705,
+     "secondary_only": 0.8483,
+     "stranded": 0.0811,
+     "roles": {
+      "body": 0.8183,
+      "combo_pair": 0.0705,
+      "development": 0.0564,
+      "pitch": 0.2381
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06975,
+     "n_held": 558,
+     "material": 0.0735,
+     "secondary_only": 0.8692,
+     "stranded": 0.0573,
+     "roles": {
+      "body": 0.853,
+      "combo_pair": 0.0735,
+      "development": 0.0663,
+      "pitch": 0.2903
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.0692,
+     "secondary_only": 0.8814,
+     "stranded": 0.0494,
+     "roles": {
+      "body": 0.8755,
+      "combo_pair": 0.0692,
+      "development": 0.0632,
+      "pitch": 0.3478
+     }
+    }
+   },
+   "Swift Reconfiguration": {
+    "t1": {
+     "p_in_hand": 0.05925,
+     "n_held": 474,
+     "material": 0.0717,
+     "secondary_only": 0.0,
+     "stranded": 0.9283,
+     "roles": {
+      "combo_pair": 0.0717
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06963,
+     "n_held": 557,
+     "material": 0.079,
+     "secondary_only": 0.0,
+     "stranded": 0.921,
+     "roles": {
+      "combo_live": 0.0036,
+      "combo_pair": 0.079
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08063,
+     "n_held": 645,
+     "material": 0.1209,
+     "secondary_only": 0.0,
+     "stranded": 0.8791,
+     "roles": {
+      "combo_live": 0.0667,
+      "combo_pair": 0.0868
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09012,
+     "n_held": 721,
+     "material": 0.2191,
+     "secondary_only": 0.0,
+     "stranded": 0.7809,
+     "roles": {
+      "combo_live": 0.1914,
+      "combo_pair": 0.0888
+     }
+    }
+   },
+   "Machine God's Effigy": {
+    "t1": {
+     "p_in_hand": 0.0425,
+     "n_held": 340,
+     "material": 0.0353,
+     "secondary_only": 0.0,
+     "stranded": 0.9647,
+     "roles": {
+      "combo_pair": 0.0324,
+      "development": 0.0029
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.05462,
+     "n_held": 437,
+     "material": 0.1716,
+     "secondary_only": 0.0,
+     "stranded": 0.8284,
+     "roles": {
+      "combo_pair": 0.0343,
+      "development": 0.1419
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06688,
+     "n_held": 535,
+     "material": 0.4748,
+     "secondary_only": 0.0,
+     "stranded": 0.5252,
+     "roles": {
+      "combo_live": 0.0075,
+      "combo_pair": 0.0486,
+      "development": 0.4523
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.07775,
+     "n_held": 622,
+     "material": 0.6624,
+     "secondary_only": 0.0,
+     "stranded": 0.3376,
+     "roles": {
+      "combo_live": 0.0402,
+      "combo_pair": 0.0579,
+      "development": 0.6463
+     }
+    }
+   },
+   "Devoted Druid": {
+    "t1": {
+     "p_in_hand": 0.05663,
+     "n_held": 453,
+     "material": 0.3377,
+     "secondary_only": 0.053,
+     "stranded": 0.6093,
+     "roles": {
+      "body": 0.0706,
+      "combo_pair": 0.1236,
+      "development": 0.234,
+      "pitch": 0.0287
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.066,
+     "n_held": 528,
+     "material": 0.8617,
+     "secondary_only": 0.0208,
+     "stranded": 0.1174,
+     "roles": {
+      "body": 0.1042,
+      "combo_live": 0.0019,
+      "combo_pair": 0.142,
+      "development": 0.8277,
+      "pitch": 0.0417
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.8834,
+     "secondary_only": 0.0217,
+     "stranded": 0.0949,
+     "roles": {
+      "body": 0.17,
+      "combo_live": 0.0296,
+      "combo_pair": 0.1759,
+      "development": 0.8478,
+      "pitch": 0.0474
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.0565,
+     "n_held": 452,
+     "material": 0.8628,
+     "secondary_only": 0.0354,
+     "stranded": 0.1018,
+     "roles": {
+      "body": 0.2898,
+      "combo_live": 0.0597,
+      "combo_pair": 0.1925,
+      "development": 0.8186,
+      "pitch": 0.0575
+     }
+    }
+   },
+   "Orcish Bowmasters": {
+    "t1": {
+     "p_in_hand": 0.06313,
+     "n_held": 505,
+     "material": 0.2614,
+     "secondary_only": 0.0931,
+     "stranded": 0.6455,
+     "roles": {
+      "body": 0.1208,
+      "combo_pair": 0.0396,
+      "interaction_held": 0.2277
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.073,
+     "n_held": 584,
+     "material": 0.7551,
+     "secondary_only": 0.0342,
+     "stranded": 0.2106,
+     "roles": {
+      "body": 0.1336,
+      "combo_pair": 0.0497,
+      "interaction_held": 0.7466
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08225,
+     "n_held": 658,
+     "material": 0.8116,
+     "secondary_only": 0.0456,
+     "stranded": 0.1429,
+     "roles": {
+      "body": 0.2462,
+      "combo_pair": 0.0729,
+      "interaction_held": 0.7979
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09325,
+     "n_held": 746,
+     "material": 0.8445,
+     "secondary_only": 0.0576,
+     "stranded": 0.0979,
+     "roles": {
+      "body": 0.3552,
+      "combo_pair": 0.0858,
+      "interaction_held": 0.8298
+     }
+    }
+   },
+   "Faerie Mastermind": {
+    "t1": {
+     "p_in_hand": 0.05838,
+     "n_held": 467,
+     "material": 0.2548,
+     "secondary_only": 0.227,
+     "stranded": 0.5182,
+     "roles": {
+      "body": 0.1028,
+      "combo_pair": 0.0428,
+      "development": 0.2184,
+      "pitch": 0.2184
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06913,
+     "n_held": 553,
+     "material": 0.8662,
+     "secondary_only": 0.0452,
+     "stranded": 0.0886,
+     "roles": {
+      "body": 0.1284,
+      "combo_pair": 0.0524,
+      "development": 0.8608,
+      "pitch": 0.2604
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06625,
+     "n_held": 530,
+     "material": 0.883,
+     "secondary_only": 0.0453,
+     "stranded": 0.0717,
+     "roles": {
+      "body": 0.2245,
+      "combo_pair": 0.0736,
+      "development": 0.8736,
+      "pitch": 0.3019
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.061,
+     "n_held": 488,
+     "material": 0.8791,
+     "secondary_only": 0.0594,
+     "stranded": 0.0615,
+     "roles": {
+      "body": 0.332,
+      "combo_pair": 0.0963,
+      "development": 0.8627,
+      "pitch": 0.3176
+     }
+    }
+   },
+   "Gilded Drake": {
+    "t1": {
+     "p_in_hand": 0.06788,
+     "n_held": 543,
+     "material": 0.2081,
+     "secondary_only": 0.1934,
+     "stranded": 0.5985,
+     "roles": {
+      "body": 0.0921,
+      "interaction_held": 0.2081,
+      "pitch": 0.1731
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.07525,
+     "n_held": 602,
+     "material": 0.8405,
+     "secondary_only": 0.0515,
+     "stranded": 0.108,
+     "roles": {
+      "body": 0.1312,
+      "interaction_held": 0.8405,
+      "pitch": 0.2259
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.08325,
+     "n_held": 666,
+     "material": 0.8994,
+     "secondary_only": 0.0435,
+     "stranded": 0.0571,
+     "roles": {
+      "body": 0.2087,
+      "interaction_held": 0.8994,
+      "pitch": 0.2553
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.09337,
+     "n_held": 747,
+     "material": 0.921,
+     "secondary_only": 0.0388,
+     "stranded": 0.0402,
+     "roles": {
+      "body": 0.3052,
+      "interaction_held": 0.921,
+      "pitch": 0.3012
+     }
+    }
+   },
+   "Volatile Stormdrake": {
+    "t1": {
+     "p_in_hand": 0.062,
+     "n_held": 496,
+     "material": 0.2218,
+     "secondary_only": 0.1875,
+     "stranded": 0.5907,
+     "roles": {
+      "body": 0.0988,
+      "interaction_held": 0.2218,
+      "pitch": 0.1552
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.068,
+     "n_held": 544,
+     "material": 0.8529,
+     "secondary_only": 0.0533,
+     "stranded": 0.0938,
+     "roles": {
+      "body": 0.1305,
+      "interaction_held": 0.8529,
+      "pitch": 0.204
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07762,
+     "n_held": 621,
+     "material": 0.8953,
+     "secondary_only": 0.0467,
+     "stranded": 0.058,
+     "roles": {
+      "body": 0.2238,
+      "interaction_held": 0.8953,
+      "pitch": 0.2625
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08712,
+     "n_held": 697,
+     "material": 0.9154,
+     "secondary_only": 0.0531,
+     "stranded": 0.0316,
+     "roles": {
+      "body": 0.3515,
+      "interaction_held": 0.9154,
+      "pitch": 0.3228
+     }
+    }
+   },
+   "Colossal Skyturtle": {
+    "t1": {
+     "p_in_hand": 0.05187,
+     "n_held": 415,
+     "material": 0.2675,
+     "secondary_only": 0.2337,
+     "stranded": 0.4988,
+     "roles": {
+      "body": 0.0867,
+      "interaction_held": 0.2675,
+      "pitch": 0.241
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.058,
+     "n_held": 464,
+     "material": 0.8901,
+     "secondary_only": 0.0474,
+     "stranded": 0.0625,
+     "roles": {
+      "body": 0.1013,
+      "interaction_held": 0.8901,
+      "pitch": 0.3039
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.06975,
+     "n_held": 558,
+     "material": 0.9355,
+     "secondary_only": 0.0251,
+     "stranded": 0.0394,
+     "roles": {
+      "body": 0.19,
+      "interaction_held": 0.9355,
+      "pitch": 0.3387
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.07963,
+     "n_held": 637,
+     "material": 0.9576,
+     "secondary_only": 0.022,
+     "stranded": 0.0204,
+     "roles": {
+      "body": 0.303,
+      "interaction_held": 0.9576,
+      "pitch": 0.3956
+     }
+    }
+   },
+   "Imperial Seal": {
+    "t1": {
+     "p_in_hand": 0.062,
+     "n_held": 496,
+     "material": 0.7702,
+     "secondary_only": 0.0,
+     "stranded": 0.2298,
+     "roles": {
+      "fair_tutor": 0.7702
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.046,
+     "n_held": 368,
+     "material": 0.6712,
+     "secondary_only": 0.0,
+     "stranded": 0.3288,
+     "roles": {
+      "fair_tutor": 0.6712
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.0485,
+     "n_held": 388,
+     "material": 0.7165,
+     "secondary_only": 0.0,
+     "stranded": 0.2835,
+     "roles": {
+      "fair_tutor": 0.7165
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05725,
+     "n_held": 458,
+     "material": 0.762,
+     "secondary_only": 0.0,
+     "stranded": 0.238,
+     "roles": {
+      "combo_live": 0.0109,
+      "fair_tutor": 0.762
+     }
+    }
+   },
+   "Demonic Tutor": {
+    "t1": {
+     "p_in_hand": 0.06325,
+     "n_held": 506,
+     "material": 0.2134,
+     "secondary_only": 0.0,
+     "stranded": 0.7866,
+     "roles": {
+      "fair_tutor": 0.2134
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06975,
+     "n_held": 558,
+     "material": 0.7366,
+     "secondary_only": 0.0,
+     "stranded": 0.2634,
+     "roles": {
+      "fair_tutor": 0.7366
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.05075,
+     "n_held": 406,
+     "material": 0.6675,
+     "secondary_only": 0.0,
+     "stranded": 0.3325,
+     "roles": {
+      "combo_live": 0.0099,
+      "fair_tutor": 0.6675
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.06075,
+     "n_held": 486,
+     "material": 0.7428,
+     "secondary_only": 0.0,
+     "stranded": 0.2572,
+     "roles": {
+      "combo_live": 0.0391,
+      "fair_tutor": 0.7428
+     }
+    }
+   },
+   "Vampiric Tutor": {
+    "t1": {
+     "p_in_hand": 0.06525,
+     "n_held": 522,
+     "material": 0.7605,
+     "secondary_only": 0.0,
+     "stranded": 0.2395,
+     "roles": {
+      "fair_tutor": 0.7605
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.0475,
+     "n_held": 380,
+     "material": 0.6395,
+     "secondary_only": 0.0,
+     "stranded": 0.3605,
+     "roles": {
+      "fair_tutor": 0.6395
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.04713,
+     "n_held": 377,
+     "material": 0.687,
+     "secondary_only": 0.0,
+     "stranded": 0.313,
+     "roles": {
+      "fair_tutor": 0.687
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.05725,
+     "n_held": 458,
+     "material": 0.7664,
+     "secondary_only": 0.0,
+     "stranded": 0.2336,
+     "roles": {
+      "combo_live": 0.0131,
+      "fair_tutor": 0.7664
+     }
+    }
+   },
+   "Enlightened Tutor": {
+    "t1": {
+     "p_in_hand": 0.05925,
+     "n_held": 474,
+     "material": 0.7468,
+     "secondary_only": 0.0,
+     "stranded": 0.2532,
+     "roles": {
+      "fair_tutor": 0.7468
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.0695,
+     "n_held": 556,
+     "material": 0.7914,
+     "secondary_only": 0.0,
+     "stranded": 0.2086,
+     "roles": {
+      "fair_tutor": 0.7914
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07838,
+     "n_held": 627,
+     "material": 0.8373,
+     "secondary_only": 0.0,
+     "stranded": 0.1627,
+     "roles": {
+      "combo_live": 0.0032,
+      "fair_tutor": 0.8373
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.08962,
+     "n_held": 717,
+     "material": 0.8773,
+     "secondary_only": 0.0,
+     "stranded": 0.1227,
+     "roles": {
+      "combo_live": 0.0084,
+      "fair_tutor": 0.8773
+     }
+    }
+   },
+   "Crop Rotation": {
+    "t1": {
+     "p_in_hand": 0.05875,
+     "n_held": 470,
+     "material": 0.0404,
+     "secondary_only": 0.0489,
+     "stranded": 0.9106,
+     "roles": {
+      "fair_tutor": 0.0404,
+      "pitch": 0.0532
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.06713,
+     "n_held": 537,
+     "material": 0.8603,
+     "secondary_only": 0.0093,
+     "stranded": 0.1304,
+     "roles": {
+      "fair_tutor": 0.8603,
+      "pitch": 0.0596
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.07675,
+     "n_held": 614,
+     "material": 0.9088,
+     "secondary_only": 0.0065,
+     "stranded": 0.0847,
+     "roles": {
+      "fair_tutor": 0.9088,
+      "pitch": 0.0684
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.0875,
+     "n_held": 700,
+     "material": 0.93,
+     "secondary_only": 0.0029,
+     "stranded": 0.0671,
+     "roles": {
+      "fair_tutor": 0.93,
+      "pitch": 0.0686
+     }
+    }
+   },
+   "Birthing Pod": {
+    "t1": {
+     "p_in_hand": 0.0535,
+     "n_held": 428,
+     "material": 0.035,
+     "secondary_only": 0.0304,
+     "stranded": 0.9346,
+     "roles": {
+      "development": 0.035,
+      "fair_tutor": 0.035,
+      "pitch": 0.0327
+     }
+    },
+    "t2": {
+     "p_in_hand": 0.113,
+     "n_held": 904,
+     "material": 0.3872,
+     "secondary_only": 0.0398,
+     "stranded": 0.573,
+     "roles": {
+      "development": 0.3872,
+      "fair_tutor": 0.3872,
+      "pitch": 0.0542
+     }
+    },
+    "t3": {
+     "p_in_hand": 0.136,
+     "n_held": 1088,
+     "material": 0.7629,
+     "secondary_only": 0.0138,
+     "stranded": 0.2233,
+     "roles": {
+      "development": 0.7629,
+      "fair_tutor": 0.7629,
+      "pitch": 0.0689
+     }
+    },
+    "t4": {
+     "p_in_hand": 0.052,
+     "n_held": 416,
+     "material": 0.613,
+     "secondary_only": 0.0216,
+     "stranded": 0.3654,
+     "roles": {
+      "combo_live": 0.0096,
+      "development": 0.613,
+      "fair_tutor": 0.613,
+      "pitch": 0.0745
+     }
+    }
+   }
+  },
+  "dead_opening_draw": {
+   "Spellseeker": {
+    "opening_7": {
+     "n": 5185,
+     "p_dead": 0.1346,
+     "ci95": [
+      0.1256,
+      0.14418
+     ],
+     "p_early_dead": 0.5232
+    },
+    "kept_6_after_second_7": {
+     "n": 121,
+     "p_dead": 0.1322,
+     "ci95": [
+      0.08306,
+      0.20404
+     ],
+     "p_early_dead": 0.4793
+    },
+    "kept_5": {
+     "n": 32,
+     "p_dead": 0.2812,
+     "ci95": [
+      0.15564,
+      0.45375
+     ],
+     "p_early_dead": 0.625
+    },
+    "all_kept_hands": {
+     "n": 5339,
+     "p_dead": 0.1354,
+     "ci95": [
+      0.1265,
+      0.14486
+     ]
+    }
+   },
+   "Hazel's Brewmaster": {
+    "opening_7": {
+     "n": 272,
+     "p_dead": 0.9412,
+     "ci95": [
+      0.90659,
+      0.96347
+     ],
+     "p_early_dead": 0.9632
+    },
+    "kept_6_after_second_7": {
+     "n": 52,
+     "p_dead": 0.9231,
+     "ci95": [
+      0.81826,
+      0.96968
+     ],
+     "p_early_dead": 0.9231
+    },
+    "all_kept_hands": {
+     "n": 327,
+     "p_dead": 0.9388,
+     "ci95": [
+      0.90742,
+      0.96006
+     ]
+    }
+   },
+   "Oboro Breezecaller": {
+    "opening_7": {
+     "n": 288,
+     "p_dead": 0.9028,
+     "ci95": [
+      0.86307,
+      0.93188
+     ],
+     "p_early_dead": 0.9132
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.9293,
+     "ci95": [
+      0.86118,
+      0.96533
+     ],
+     "p_early_dead": 0.9293
+    },
+    "kept_5": {
+     "n": 37,
+     "p_dead": 0.9189,
+     "ci95": [
+      0.78699,
+      0.97204
+     ],
+     "p_early_dead": 0.9189
+    },
+    "all_kept_hands": {
+     "n": 425,
+     "p_dead": 0.9106,
+     "ci95": [
+      0.87965,
+      0.93417
+     ]
+    }
+   },
+   "Swift Reconfiguration": {
+    "opening_7": {
+     "n": 262,
+     "p_dead": 0.7786,
+     "ci95": [
+      0.72453,
+      0.82467
+     ],
+     "p_early_dead": 0.9351
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.7273,
+     "ci95": [
+      0.63229,
+      0.80528
+     ],
+     "p_early_dead": 0.9091
+    },
+    "kept_5": {
+     "n": 47,
+     "p_dead": 0.6809,
+     "ci95": [
+      0.53832,
+      0.79605
+     ],
+     "p_early_dead": 0.8085
+    },
+    "all_kept_hands": {
+     "n": 411,
+     "p_dead": 0.7567,
+     "ci95": [
+      0.71295,
+      0.79567
+     ]
+    }
+   },
+   "Machine God's Effigy": {
+    "opening_7": {
+     "n": 228,
+     "p_dead": 0.2939,
+     "ci95": [
+      0.23854,
+      0.35601
+     ],
+     "p_early_dead": 0.8246
+    },
+    "kept_6_after_second_7": {
+     "n": 57,
+     "p_dead": 0.2632,
+     "ci95": [
+      0.16646,
+      0.38977
+     ],
+     "p_early_dead": 0.807
+    },
+    "all_kept_hands": {
+     "n": 294,
+     "p_dead": 0.2993,
+     "ci95": [
+      0.24983,
+      0.35398
+     ]
+    }
+   },
+   "Devoted Druid": {
+    "opening_7": {
+     "n": 245,
+     "p_dead": 0.0531,
+     "ci95": [
+      0.03127,
+      0.08865
+     ],
+     "p_early_dead": 0.1102
+    },
+    "kept_6_after_second_7": {
+     "n": 102,
+     "p_dead": 0.0392,
+     "ci95": [
+      0.01535,
+      0.09653
+     ],
+     "p_early_dead": 0.098
+    },
+    "kept_5": {
+     "n": 45,
+     "p_dead": 0.1111,
+     "ci95": [
+      0.0484,
+      0.23499
+     ],
+     "p_early_dead": 0.2444
+    },
+    "all_kept_hands": {
+     "n": 393,
+     "p_dead": 0.056,
+     "ci95": [
+      0.03726,
+      0.0833
+     ]
+    }
+   },
+   "Orcish Bowmasters": {
+    "opening_7": {
+     "n": 289,
+     "p_dead": 0.1246,
+     "ci95": [
+      0.09135,
+      0.16763
+     ],
+     "p_early_dead": 0.2284
+    },
+    "kept_6_after_second_7": {
+     "n": 111,
+     "p_dead": 0.1261,
+     "ci95": [
+      0.07664,
+      0.20063
+     ],
+     "p_early_dead": 0.1982
+    },
+    "kept_5": {
+     "n": 48,
+     "p_dead": 0.1667,
+     "ci95": [
+      0.08695,
+      0.29578
+     ],
+     "p_early_dead": 0.3542
+    },
+    "all_kept_hands": {
+     "n": 454,
+     "p_dead": 0.1278,
+     "ci95": [
+      0.10014,
+      0.16161
+     ]
+    }
+   },
+   "Faerie Mastermind": {
+    "opening_7": {
+     "n": 266,
+     "p_dead": 0.0526,
+     "ci95": [
+      0.03161,
+      0.08639
+     ],
+     "p_early_dead": 0.0977
+    },
+    "kept_6_after_second_7": {
+     "n": 101,
+     "p_dead": 0.0693,
+     "ci95": [
+      0.03397,
+      0.1362
+     ],
+     "p_early_dead": 0.1485
+    },
+    "kept_5": {
+     "n": 33,
+     "p_dead": 0.1212,
+     "ci95": [
+      0.04816,
+      0.27326
+     ],
+     "p_early_dead": 0.303
+    },
+    "all_kept_hands": {
+     "n": 405,
+     "p_dead": 0.0691,
+     "ci95": [
+      0.04826,
+      0.09811
+     ]
+    }
+   },
+   "Gilded Drake": {
+    "opening_7": {
+     "n": 310,
+     "p_dead": 0.0355,
+     "ci95": [
+      0.01993,
+      0.06241
+     ],
+     "p_early_dead": 0.0968
+    },
+    "kept_6_after_second_7": {
+     "n": 93,
+     "p_dead": 0.1075,
+     "ci95": [
+      0.05946,
+      0.18673
+     ],
+     "p_early_dead": 0.2258
+    },
+    "kept_5": {
+     "n": 61,
+     "p_dead": 0.0656,
+     "ci95": [
+      0.02579,
+      0.15683
+     ],
+     "p_early_dead": 0.2295
+    },
+    "all_kept_hands": {
+     "n": 467,
+     "p_dead": 0.0557,
+     "ci95": [
+      0.03827,
+      0.08033
+     ]
+    }
+   },
+   "Volatile Stormdrake": {
+    "opening_7": {
+     "n": 292,
+     "p_dead": 0.0719,
+     "ci95": [
+      0.04752,
+      0.10744
+     ],
+     "p_early_dead": 0.1199
+    },
+    "kept_6_after_second_7": {
+     "n": 99,
+     "p_dead": 0.0505,
+     "ci95": [
+      0.02176,
+      0.11283
+     ],
+     "p_early_dead": 0.1414
+    },
+    "kept_5": {
+     "n": 36,
+     "p_dead": 0.0278,
+     "ci95": [
+      0.00492,
+      0.1417
+     ],
+     "p_early_dead": 0.1667
+    },
+    "all_kept_hands": {
+     "n": 429,
+     "p_dead": 0.0653,
+     "ci95": [
+      0.04554,
+      0.09271
+     ]
+    }
+   },
+   "Colossal Skyturtle": {
+    "opening_7": {
+     "n": 298,
+     "p_dead": 0.0436,
+     "ci95": [
+      0.02567,
+      0.0732
+     ],
+     "p_early_dead": 0.1107
+    },
+    "kept_6_after_second_7": {
+     "n": 40,
+     "p_dead": 0.025,
+     "ci95": [
+      0.00443,
+      0.12882
+     ],
+     "p_early_dead": 0.05
+    },
+    "all_kept_hands": {
+     "n": 351,
+     "p_dead": 0.0399,
+     "ci95": [
+      0.02391,
+      0.06583
+     ]
+    }
+   },
+   "Imperial Seal": {
+    "opening_7": {
+     "n": 237,
+     "p_dead": 0.097,
+     "ci95": [
+      0.06554,
+      0.14141
+     ],
+     "p_early_dead": 0.1435
+    },
+    "kept_6_after_second_7": {
+     "n": 139,
+     "p_dead": 0.1151,
+     "ci95": [
+      0.07211,
+      0.17881
+     ],
+     "p_early_dead": 0.1583
+    },
+    "kept_5": {
+     "n": 62,
+     "p_dead": 0.129,
+     "ci95": [
+      0.06686,
+      0.2345
+     ],
+     "p_early_dead": 0.2097
+    },
+    "all_kept_hands": {
+     "n": 447,
+     "p_dead": 0.1119,
+     "ci95": [
+      0.08588,
+      0.14445
+     ]
+    }
+   },
+   "Demonic Tutor": {
+    "opening_7": {
+     "n": 272,
+     "p_dead": 0.1103,
+     "ci95": [
+      0.07836,
+      0.15309
+     ],
+     "p_early_dead": 0.1949
+    },
+    "kept_6_after_second_7": {
+     "n": 132,
+     "p_dead": 0.1288,
+     "ci95": [
+      0.08199,
+      0.19659
+     ],
+     "p_early_dead": 0.2197
+    },
+    "kept_5": {
+     "n": 40,
+     "p_dead": 0.125,
+     "ci95": [
+      0.05459,
+      0.26112
+     ],
+     "p_early_dead": 0.225
+    },
+    "all_kept_hands": {
+     "n": 449,
+     "p_dead": 0.1203,
+     "ci95": [
+      0.09336,
+      0.15362
+     ]
+    }
+   },
+   "Vampiric Tutor": {
+    "opening_7": {
+     "n": 268,
+     "p_dead": 0.1455,
+     "ci95": [
+      0.10831,
+      0.19275
+     ],
+     "p_early_dead": 0.1828
+    },
+    "kept_6_after_second_7": {
+     "n": 135,
+     "p_dead": 0.1037,
+     "ci95": [
+      0.06278,
+      0.16655
+     ],
+     "p_early_dead": 0.1556
+    },
+    "kept_5": {
+     "n": 57,
+     "p_dead": 0.0877,
+     "ci95": [
+      0.03805,
+      0.18945
+     ],
+     "p_early_dead": 0.1404
+    },
+    "all_kept_hands": {
+     "n": 464,
+     "p_dead": 0.1272,
+     "ci95": [
+      0.09987,
+      0.16056
+     ]
+    }
+   },
+   "Enlightened Tutor": {
+    "opening_7": {
+     "n": 219,
+     "p_dead": 0.1096,
+     "ci95": [
+      0.07476,
+      0.15788
+     ],
+     "p_early_dead": 0.1826
+    },
+    "kept_6_after_second_7": {
+     "n": 130,
+     "p_dead": 0.0615,
+     "ci95": [
+      0.03151,
+      0.11674
+     ],
+     "p_early_dead": 0.1077
+    },
+    "kept_5": {
+     "n": 56,
+     "p_dead": 0.125,
+     "ci95": [
+      0.06189,
+      0.23626
+     ],
+     "p_early_dead": 0.2321
+    },
+    "all_kept_hands": {
+     "n": 414,
+     "p_dead": 0.0942,
+     "ci95": [
+      0.06968,
+      0.12619
+     ]
+    }
+   },
+   "Crop Rotation": {
+    "opening_7": {
+     "n": 250,
+     "p_dead": 0.052,
+     "ci95": [
+      0.03064,
+      0.08692
+     ],
+     "p_early_dead": 0.132
+    },
+    "kept_6_after_second_7": {
+     "n": 112,
+     "p_dead": 0.0536,
+     "ci95": [
+      0.02478,
+      0.11197
+     ],
+     "p_early_dead": 0.1071
+    },
+    "kept_5": {
+     "n": 46,
+     "p_dead": 0.087,
+     "ci95": [
+      0.03434,
+      0.20325
+     ],
+     "p_early_dead": 0.1739
+    },
+    "all_kept_hands": {
+     "n": 411,
+     "p_dead": 0.056,
+     "ci95": [
+      0.03758,
+      0.08257
+     ]
+    }
+   },
+   "Birthing Pod": {
+    "opening_7": {
+     "n": 258,
+     "p_dead": 0.2093,
+     "ci95": [
+      0.16411,
+      0.26303
+     ],
+     "p_early_dead": 0.5698
+    },
+    "kept_6_after_second_7": {
+     "n": 85,
+     "p_dead": 0.1529,
+     "ci95": [
+      0.09161,
+      0.24428
+     ],
+     "p_early_dead": 0.4118
+    },
+    "kept_5": {
+     "n": 26,
+     "p_dead": 0.3846,
+     "ci95": [
+      0.22428,
+      0.57465
+     ],
+     "p_early_dead": 0.5769
+    },
+    "all_kept_hands": {
+     "n": 369,
+     "p_dead": 0.2087,
+     "ci95": [
+      0.17032,
+      0.25303
+     ]
+    }
+   }
+  }
  }
 }

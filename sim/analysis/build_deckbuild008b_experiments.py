@@ -301,13 +301,13 @@ def load(name):
 
 # ---- phases -------------------------------------------------------------------------------------
 
-def phase_variants(keys, n, reps, procs, tag):
+def phase_variants(keys, n, reps, procs, tag, rep_offset=0):
     res = {"_design": {"n_per_replicate": n, "replicates": reps, "base_seed": BASE_SEED_B,
                        "seed_rule": "replicate r, game i: BASE_SEED_B + r*1_000_000 + i; on the play iff seed % 4 == 0",
                        "reference": "A_oracle_less (same replicate, same seeds)",
                        "rules": "fair Tainted Pact tutor + Skyturtle channel regrowth ON (008b) except *_legacy_model"}}
     with mp.Pool(procs) as pool:
-        for r in range(reps):
+        for r in range(rep_offset, rep_offset + reps):
             seed0 = BASE_SEED_B + r * 1_000_000
             t0 = time.time()
             ref = run_cfg(build("A_oracle_less"), n, seed0, pool)
@@ -329,11 +329,12 @@ def main():
     ap.add_argument("--reps", type=int, default=2)
     ap.add_argument("--procs", type=int, default=4)
     ap.add_argument("--tag", default="headline")
+    ap.add_argument("--rep-offset", type=int, default=0)
     a = ap.parse_args()
     t0 = time.time()
     keys = [k for k in a.keys.split(",") if k]
     if a.phase == "variants":
-        phase_variants(keys, a.n, a.reps, a.procs, a.tag)
+        phase_variants(keys, a.n, a.reps, a.procs, a.tag, a.rep_offset)
     else:
         import deckbuild008b_phases as ph
         ph.run_phase(a.phase, a, keys)
