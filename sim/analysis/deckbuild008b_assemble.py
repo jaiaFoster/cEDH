@@ -123,6 +123,10 @@ def assemble():
     abl = _load("ablations")
     audit = _load("audit_main")
     scen = _load("scenarios_main")
+    for part in ("scenarios_s1", "scenarios_s2"):  # worker-session splits by config (identical seeds)
+        for k, v in _load(part).items():
+            if not k.startswith("_") or k not in scen:
+                scen[k] = v
     cov = json.loads((OUT / "deckbuild008b_interaction_coverage.json").read_text()) \
         if (OUT / "deckbuild008b_interaction_coverage.json").exists() else {}
     variants = {}
