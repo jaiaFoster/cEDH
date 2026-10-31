@@ -35,7 +35,8 @@ and the between-replicate SE.
 | G Oracle alone − Strix | 3.84% | −0.18 ± 0.06 | 1.41% | — | 135 (+4.3 ± 0.2) | 1 | — | none | All brick, no gain: reject |
 | V8 frozen (Deathrite, Strix) | 3.42% | −0.60 ± 0.07 | 1.22% | — | 130 | 0 | — | — | Reference |
 
-<!--FILL_DECISION_NOTES-->
+State-level conversion surface (winning draws per non-winning T4 main-phase state, 1,200 games each): B 1.79,
+C 2.21. P(any winning draw exists) 36.3% vs 38.7%.
 
 ---
 
@@ -66,7 +67,11 @@ and the between-replicate SE.
 5. **How often is Pact useful fairly?**
    - Brick classifier [MC]: castable and usable as a fair tutor in **79% / 85% / 88%** of the T2 / T3 / T4 states
      where it is held. Dead in **9.6%** of kept hands (Oracle 85%, Consultation 71%).
-   - <!--FILL_PACT_ANSWER-->
+   - Search audit [STATE, real library order]: whenever Pact is castable, an acceptable "stop a win" or "protect
+     our win" hit exists in 100% of states. Pact exiles ~9–11 cards first and takes Oracle with it only 9–13% of the
+     time.
+   - Engine and mana searches always hit too (11 / 7 cards exiled, Oracle lost 16% / 12%).
+   - "Win right now" through Pact alone exists in 6.6% of castable states.
 6. **How costly is spending Pact before Oracle?**
    - Measured [MC ablation, n = 8,000 paired]: a B deck whose Pact is gone from the start converts 4.11% by T4 vs
      6.02% (−1.91pp), still **≥ the Oracle-less deck** (3.81% on the same seeds).
@@ -76,13 +81,16 @@ and the between-replicate SE.
    - So spending Pact does **not** cost the deck its ability to win. It returns it to the pre-package baseline and
      turns Oracle into a brick until Thrasios-infinite or a Pod/creature line finds it.
    - With Oracle *in hand* and Pact gone, det. T4 is 3.18% vs 6.90% with Pact live (forced-opening design).
-   - <!--FILL_SPENT_ANSWER-->
+   - Inside a single state the cost is concentrated in the next turn: next-turn winning draws 2.75 (Pact live) →
+     0.87 (spent) → 0.41 (spent fairly, exile included).
 7. **Is Spellseeker still clearly worth its slot without Consultation? Yes.**
    - Removing it from B costs −1.04 ± 0.12pp det. T4, including −0.64pp of *non-Oracle* deterministic wins
      (Spellseeker → Finale / Rhythm / Neoform / DT feeds the Druid lines too).
    - It is dead in 13.6% of kept hands (materially useful in 77% / 84% of T3 / T4 held states).
    - B vs F (Oracle + Pact, Skyturtle kept): +0.94pp for Spellseeker at +0.4 bricks per 100 hands.
-   - <!--FILL_SEEKER_ANSWER-->
+   - [STATE] With Spellseeker in hand, a high-quality fair target exists in 100% of states, and Silence is still
+     available in 94%.
+   - It gives immediate win access in 3.8% of states and next-turn win access in 10.7% (C: 6.3% / 14.9%).
 8. **Are Strix, Stormdrake, Skyturtle defensible cuts? Strix yes; Stormdrake and Skyturtle only if the pilot values
    Gleaming Splendor and Queen of Dale more than creature answers.**
    - All three are among the deck's *best* standalone cards by the brick metric (dead in 3.7% / 5.7% / 4.0% of kept
@@ -157,8 +165,8 @@ and the between-replicate SE.
   - Headline A–F: 3 independent replicates × 20,000 paired games for A/B/C/E, 2 × 20,000 for D/F.
   - Controls: 2 × 10,000 (B′ has an extra 20,000).
   - Seeds 9,000,000 + 1,000,000·r + i; paired within each replicate.
-  - Ablations n = 8,000 paired; state audit 1,200 games per build; scenarios 500 states per cell.
-  - The state audit and scenarios ran on separate cloud worker sessions, same code commit and seeds.
+  - Ablations n = 8,000 paired; state audit 1,200 games per build (B, C); scenarios 500 states per cell.
+  - Scenarios ran on separate cloud worker sessions, same code commit and seeds.
 
 ## 3. Conversion [MC]
 
@@ -277,7 +285,46 @@ From `deckbuild008b_work/cut_candidates.json`:
 
 ## 6. Tainted Pact fair-use audit [STATE]
 
-<!--FILL_PACT_AUDIT-->
+Source: `deckbuild008b_fair_pact_analysis.json`. Method:
+
+- The audit covers 1,200 goldfish games of B. Pact was in hand in 686 T2–T4 states, and **castable in 56%** of them.
+- For every state where Pact is castable, each fair-search class is applied to the **real library order** (the
+  goldfish library is the actual future order).
+- The pilot stops on the first *acceptable* card, not on one named card.
+- The closed form for a uniformly random order is E[exiled] = (N − k)/(k + 1), with P(a specific card exiled) =
+  1/(k + 1). It is pinned by `test_pact_closed_form_matches_simulation` and agrees with the real-order walk.
+
+| Fair-search class (acceptable hits, state-conditioned) | States | Acceptable cards in library (mean k) | P(hit) | Cards exiled before hit (closed form) | **P(Oracle exiled)** | P(any Druid-axis piece exiled) | P(any free counter exiled) | P(any protection exiled) |
+|---|---|---|---|---|---|---|---|---|
+| **Stop an opponent's win** — counter castable after paying `{1}{B}` (opponent's turn) | 95 | 7.5 | 100% | 10.7 (10.2) | **12.6%** | 32.6% | 16.8% | 26.3% |
+| **Protect our win** — Silence / Abolisher / Voice / Ranger-Captain / castable counter | 289 | 8.9 | 100% | 9.4 (8.9) | **9.3%** | 39.8% | 19.4% | 19.4% |
+| **Find an engine** — Pod / Survival / Rhystic / Remora / Tithe / Kinnan / Oculus | 289 | 6.4 | 100% | 11.3 (11.1) | **15.9%** | 39.8% | 53.3% | 34.6% |
+| **Find mana / colour** — fast mana, dorks, Cradle | 289 | 10.8 | 100% | 7.1 (6.6) | **12.1%** | 24.9% | 36.3% | 25.3% |
+| **Find a card that wins right now** | 289 | 1.2 | **6.6%** | 22.1 given a hit | — | — | — | — |
+
+Readings:
+
+- **Pact is a reliable fair tutor.** For every fair class with a broad acceptable set, it always finds a hit, exiling
+  ~7–11 cards. That is typically ~0.4–0.6 Druid-axis pieces and ~0.3–1.1 free counters. Oracle is lost **9–16%** of
+  the time.
+- **"Pact for the win now" is rarely available.** Only 6.6% of castable-Pact states have any card that would win this
+  window. When one exists it is usually deep (22 cards exiled), and 79% of those hits still convert after the exile
+  (5.2% of states).
+- **Residual conversion after a fair Pact** (206 T3/T4 main-phase states; next-turn state, conversion surface =
+  winning draws per state):
+
+  | Next-turn state | P(already winning) | Mean winning draws |
+  |---|---|---|
+  | Pact still live | 13.1% | 2.75 |
+  | Pact spent, nothing exiled | 1.9% | 0.87 |
+  | Pact spent fairly for an engine | 1.9% | 0.41 |
+
+  Spending Pact gives up most of the *immediate* conversion surface it represents. The exile itself costs a further
+  ~0.46 winning draws, the pieces Pact walks past. The engine found by the search is not visible inside a one-turn
+  surface.
+- [QUAL] **Fair Pact is worth using when the class is "stop a win" or "protect our win"**: ~9–13% Oracle risk, and the
+  game is decided by that stack. As an engine or mana tutor it is a real but expensive card: it spends the deck's
+  compact kill to find something a Demonic Tutor would also find.
 
 ## 7. The "spent Pact" question [MC ablations, n = 8,000 paired]
 
@@ -301,7 +348,13 @@ From `deckbuild008b_work/cut_candidates.json`:
 - **Consultation is less spendable.** In C the same "partner spent" state costs −3.09pp, because Consultation was the
   cheaper, more frequently used kill; and Consultation has no comparable fair mode.
 
-<!--FILL_SPENT_STATE-->
+**State-level view** (from the per-state audit; resilience of a deterministic-win state at T3/T4, n = 90 states in B):
+
+| Event | B | C | Note |
+|---|---|---|---|
+| Pact spent | 67% still deterministic [57–76] | — | C has no Pact |
+| Pact spent and Oracle exiled | 51% [41–61] | — | |
+| Oracle lost | 51% [41–61] | 42% [33–51] | B is *less* Oracle-dependent than C |
 
 ## 8. Spellseeker audit [STATE + STRUCT]
 
@@ -316,7 +369,34 @@ Legal targets in B: every instant/sorcery with MV ≤ 2 in the list. Pinned by
 
 In C, Demonic Consultation replaces Tainted Pact as the win target.
 
-<!--FILL_SEEKER_AUDIT-->
+Measured [STATE]: 347 T2–T4 main-phase states with Spellseeker in hand in B, and 350 in C.
+
+| Spellseeker in hand | B (no Consultation) | C (Consultation) |
+|---|---|---|
+| Castable now | 72.6% | 72.9% |
+| Stranded (not castable now) | 27.4% | 27.1% |
+| ≥ 1 high-quality fair target in library (tutor / protection / interaction) | **100%** | 100% |
+| Tutor target available | 100% | 100% |
+| Protection target (Silence) available | 93.7% | 93.7% |
+| Interaction target available | 100% | 100% |
+| Tainted Pact still in library | 93.4% | — |
+| **Immediate win access** (cast it, fetch, win this window) | **3.8%** | 6.3% |
+| **Next-turn win access** (fetch now, win next turn without drawing) | **10.7%** | 14.9% |
+| Mean legal targets | 12.9 | 12.9 |
+
+- Spellseeker's fair floor is unchanged by removing Consultation: it always has a protection, interaction or tutor
+  target.
+- Its *win* access drops by ~1/3 because Pact (2 mana) is a costlier fetched partner than Consultation (1 mana).
+- **Tutor leverage at T3–T4** (P(one-turn setup win | held)):
+
+  | Tutor | B | C |
+  |---|---|---|
+  | Spellseeker | 75.1% | 74.5% |
+  | Tainted Pact (as a tutor) | 61.8% (highest immediate-win rate of any tutor, 10.4%) | — |
+  | Demonic Tutor | 77.2% | 76.8% |
+  | Vampiric Tutor | 77.8% | 76.5% |
+  | Nature's Rhythm | 78.1% | 78.2% |
+  | Chord of Calling | 74.7% | 73.1% |
 
 ## 9. Interaction opportunity cost [STRUCT + MC + QUAL]
 
@@ -463,7 +543,30 @@ Each cell is P(deterministic win now) / mean winning draws if not already winnin
 - [QUAL] **Healthy resilience, not overloading.** Oracle adds an axis that survives the loss of the Druid axis or of
   the Bowmasters kill. The overlap it creates is with Bowmasters/Mastermind, whose fair value stays.
 
-<!--FILL_RESILIENCE-->
+**Resilience given a deterministic-win state at T3/T4** [STATE]. Each cell is P(still deterministic after the
+event), with Wilson 95% CIs.
+
+| Event | B (n = 90) | C (n = 110) |
+|---|---|---|
+| Creature board wipe | 8% [4–15] | 10% [6–17] |
+| All artifacts removed | 73% [63–81] | 71% [62–79] |
+| Graveyard exiled | 100% | 100% |
+| Creature activated abilities suppressed | 48% [38–58] | 55% [45–64] |
+| Lose Thrasios | 38% [28–48] | 49% [40–58] |
+| Lose Birthing Pod | 84% [76–90] | 80% [72–87] |
+| Lose Oracle | 51% [41–61] | 42% [33–51] |
+| Pact spent | 67% [57–76] | — |
+| Pact spent and Oracle exiled | 51% [41–61] | — |
+| Druid axis disabled | 41% [31–51] | 55% [45–64] |
+| Oboro axis disabled | 100% | 100% |
+| Bowmasters axis disabled | 100% | 100% |
+| Single used piece removed (mean) | 14% | 14% |
+
+- B's winning states are slightly *more* Thrasios- and Druid-dependent than C's: Pact lines need more mana and more
+  often run through an infinite engine.
+- They are *less* Oracle-dependent than C's.
+- All B-vs-C differences overlap their 95% CIs. The direction is consistent, though: B leans on the Druid axis, C on
+  Oracle.
 
 ## 12. Falsification tests
 
@@ -471,7 +574,7 @@ Each cell is P(deterministic win now) / mean winning draws if not already winnin
 |---|---|
 | Does cutting Stormdrake create unacceptable creature-answer holes? | **Partly confirmed.** Resolved-creature answers in hand at T4 halve (28% → 14.5%). Not "unacceptable" — theft tutor reach is intact — but it is the largest real cost, and it is avoidable (B′). |
 | Does cutting Skyturtle worsen recovery after a stack fight? | **Not in conversion terms** (goldfish recovery value of regrowth ≈ 0; post-fight cells unchanged). **Yes in grind terms:** the deck's only regrowth is gone. |
-| Is Pact too often spent fairly, leaving Oracle stranded? | Spending it returns the deck to Oracle-less strength (4.11% vs 3.81%), not below. Oracle held with Pact gone is a brick (3.18% T4 with Oracle forced). <!--FILL_FALSIFY_PACT--> |
+| Is Pact too often spent fairly, leaving Oracle stranded? | Spending it returns the deck to Oracle-less strength (4.11% vs 3.81%), not below. Oracle held with Pact gone is a brick (3.18% T4 with Oracle forced). Fair Pact loses Oracle only 9–16% of the time. The real cost of a fair Pact is next-turn conversion (2.75 → 0.41 winning draws), so it should be spent fairly on the stack, not for value. |
 | Does Oracle create enough dead hands to negate the gain? | Oracle costs +4.3 bricks per 100 kept hands; keep-7 does not fall (+0.3pp in B). The conversion gain (+2.1pp T4, +33% post-fight CSA) is not negated. |
 | Is B materially worse than Oracle + Consult + Spellseeker? | **Yes in raw conversion** (−1.21pp T4, −0.49pp T3). In narrow windows only ~1pp worse. C costs +3.0 bricks per 100 hands, −0.96pp keep-7 vs B, and −5pp theft-tutor access. |
 | Is the four-card package still obviously better after brick cost? | **On conversion, yes** (+2.40pp T4 over B). On the brick axis it is C's burden (+3.3 per 100 vs B). Whether that is "better" is the pilot's brick-budget decision, not a measured fact. |
@@ -492,8 +595,9 @@ Each cell is P(deterministic win now) / mean winning draws if not already winnin
   - Pilots will sometimes stop earlier on a "good enough" card. The real-order walk gives the cost of the *first
     acceptable* hit.
 - **Replicate heterogeneity** slightly exceeds paired SE; ± uses the larger. Access metrics are noisier still.
-- **The state audit and scenarios ran on separate cloud worker sessions.** They used identical code (commit
-  `8459e3d` or later, no code changes) and identical seeds.
+- **Where the runs happened.** Scenarios ran on two cloud worker sessions; the B/C state audit ran locally. Both used
+  identical code (commit `8459e3d` or later, no code changes) and identical seeds. The per-state audit for A/D/E/F
+  (worker run) is merged into the JSON artifacts if present. The report's state-level tables use B and C only.
 
 ## 14. Artifacts
 

@@ -24,7 +24,162 @@
   "dork_swap": "Deathrite Shaman -> Avacyn's Pilgrim in every config except V8_frozen"
  },
  "method": "per-state audit on goldfish states (real library order); closed form E[exiled] = (N-k)/(k+1), P(specific card exiled) = 1/(k+1)",
- "state_audit": {},
+ "state_audit": {
+  "B_oracle_pact_seeker": {
+   "n_states_pact_in_hand": 686,
+   "p_castable": 0.5598,
+   "classes": {
+    "find_conversion_now": {
+     "n_states": 289,
+     "p_any_acceptable": 0.0657,
+     "mean_k_acceptable": 1.1592,
+     "p_hit": 0.0657,
+     "mean_exiled_given_hit": 22.0526,
+     "closed_form_mean_exiled": 25.478,
+     "p_oracle_exiled": 0.8581,
+     "p_hit_without_exiling_oracle": 0.0588,
+     "p_any_critical_exiled": {
+      "druid_axis": 0.9654,
+      "oboro_axis": 0.9619,
+      "bowmasters_axis": 0.9585,
+      "engines": 0.9758,
+      "protection": 0.9792,
+      "free_counters": 0.9689
+     },
+     "mean_critical_exiled": {
+      "druid_axis": 3.5156,
+      "oboro_axis": 2.5952,
+      "bowmasters_axis": 1.7266,
+      "engines": 5.2491,
+      "protection": 3.5398,
+      "free_counters": 7.1419
+     },
+     "p_converts_after_exile": 0.0519
+    },
+    "find_engine": {
+     "n_states": 289,
+     "p_any_acceptable": 1.0,
+     "mean_k_acceptable": 6.436,
+     "p_hit": 1.0,
+     "mean_exiled_given_hit": 11.3287,
+     "closed_form_mean_exiled": 11.0842,
+     "p_oracle_exiled": 0.1592,
+     "p_hit_without_exiling_oracle": 0.8408,
+     "p_any_critical_exiled": {
+      "druid_axis": 0.3979,
+      "oboro_axis": 0.2803,
+      "bowmasters_axis": 0.2042,
+      "engines": 0.0,
+      "protection": 0.346,
+      "free_counters": 0.5329
+     },
+     "mean_critical_exiled": {
+      "druid_axis": 0.5813,
+      "oboro_axis": 0.346,
+      "bowmasters_axis": 0.2457,
+      "engines": 0.0,
+      "protection": 0.4533,
+      "free_counters": 1.0692
+     }
+    },
+    "find_mana": {
+     "n_states": 289,
+     "p_any_acceptable": 1.0,
+     "mean_k_acceptable": 10.782,
+     "p_hit": 1.0,
+     "mean_exiled_given_hit": 7.1315,
+     "closed_form_mean_exiled": 6.6018,
+     "p_oracle_exiled": 0.1211,
+     "p_hit_without_exiling_oracle": 0.8789,
+     "p_any_critical_exiled": {
+      "druid_axis": 0.2491,
+      "oboro_axis": 0.128,
+      "bowmasters_axis": 0.1038,
+      "engines": 0.3218,
+      "protection": 0.2526,
+      "free_counters": 0.3633
+     },
+     "mean_critical_exiled": {
+      "druid_axis": 0.3529,
+      "oboro_axis": 0.128,
+      "bowmasters_axis": 0.1107,
+      "engines": 0.4671,
+      "protection": 0.346,
+      "free_counters": 0.609
+     }
+    },
+    "protect_our_win": {
+     "n_states": 289,
+     "p_any_acceptable": 1.0,
+     "mean_k_acceptable": 8.9412,
+     "p_hit": 1.0,
+     "mean_exiled_given_hit": 9.3702,
+     "closed_form_mean_exiled": 8.9462,
+     "p_oracle_exiled": 0.0934,
+     "p_hit_without_exiling_oracle": 0.9066,
+     "p_any_critical_exiled": {
+      "druid_axis": 0.3979,
+      "oboro_axis": 0.2215,
+      "bowmasters_axis": 0.1522,
+      "engines": 0.3772,
+      "protection": 0.1938,
+      "free_counters": 0.1938
+     },
+     "mean_critical_exiled": {
+      "druid_axis": 0.5225,
+      "oboro_axis": 0.308,
+      "bowmasters_axis": 0.1834,
+      "engines": 0.6367,
+      "protection": 0.2526,
+      "free_counters": 0.2872
+     }
+    },
+    "stop_opponent_win": {
+     "n_states": 95,
+     "p_any_acceptable": 1.0,
+     "mean_k_acceptable": 7.5053,
+     "p_hit": 1.0,
+     "mean_exiled_given_hit": 10.7158,
+     "closed_form_mean_exiled": 10.1688,
+     "p_oracle_exiled": 0.1263,
+     "p_hit_without_exiling_oracle": 0.8737,
+     "p_any_critical_exiled": {
+      "druid_axis": 0.3263,
+      "oboro_axis": 0.3053,
+      "bowmasters_axis": 0.2211,
+      "engines": 0.3895,
+      "protection": 0.2632,
+      "free_counters": 0.1684
+     },
+     "mean_critical_exiled": {
+      "druid_axis": 0.4526,
+      "oboro_axis": 0.4316,
+      "bowmasters_axis": 0.3053,
+      "engines": 0.6947,
+      "protection": 0.3895,
+      "free_counters": 0.3053
+     }
+    }
+   },
+   "residual_next_turn": {
+    "n_states": 206,
+    "pact_live": {
+     "p_already_winning": 0.1311,
+     "mean_win_draws": 2.7476
+    },
+    "pact_spent_no_exile": {
+     "p_already_winning": 0.0194,
+     "mean_win_draws": 0.8738
+    },
+    "pact_spent_fair_engine": {
+     "p_already_winning": 0.0194,
+     "mean_win_draws": 0.4126
+    },
+    "p_oracle_exiled_by_engine_search": 0.165
+   }
+  },
+  "C_oracle_consult_seeker": null
+ },
  "spent_pact_ablations": {
   "B_pact_spent": {
    "parent": "B_oracle_pact_seeker",

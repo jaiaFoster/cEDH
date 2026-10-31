@@ -128,6 +128,9 @@ def assemble():
     sec = _load("variants_secondary")
     abl = _load("ablations")
     audit = _load("audit_main")
+    for k, v in _load("audit_local").items():  # local hedge run of the same phase (identical seeds)
+        if k not in audit:
+            audit[k] = v
     scen = _load("scenarios_main")
     for part in ("scenarios_s1", "scenarios_s2"):  # worker-session splits by config (identical seeds)
         for k, v in _load(part).items():
