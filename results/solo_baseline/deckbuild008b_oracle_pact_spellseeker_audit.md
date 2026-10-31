@@ -596,8 +596,12 @@ event), with Wilson 95% CIs.
     acceptable* hit.
 - **Replicate heterogeneity** slightly exceeds paired SE; ± uses the larger. Access metrics are noisier still.
 - **Where the runs happened.** Scenarios ran on two cloud worker sessions; the B/C state audit ran locally. Both used
-  identical code (commit `8459e3d` or later, no code changes) and identical seeds. The per-state audit for A/D/E/F
-  (worker run) is merged into the JSON artifacts if present. The report's state-level tables use B and C only.
+  identical code (commit `8459e3d` or later, no code changes) and identical seeds. A worker reran the full per-state
+  audit (A–F) and reproduced the local B/C numbers exactly. A/D/E/F state results are in the JSON artifacts, e.g.
+  T4 main-phase conversion surface (winning draws per non-winning state): A 1.28 · F 1.49 · **B 1.79** · D 2.16 ·
+  C 2.21 · E 2.73.
+- **Moxfield sync.** On 2026-10-31 the live Moxfield list moved to version 10. It is card-for-card the primary build B
+  evaluated here (−Deathrite, Strix, Stormdrake, Skyturtle; +Pilgrim, Oracle, Pact, Spellseeker).
 
 ## 14. Artifacts
 

@@ -24,6 +24,158 @@
   "dork_swap": "Deathrite Shaman -> Avacyn's Pilgrim in every config except V8_frozen"
  },
  "goldfish_states": {
+  "A_oracle_less": {
+   "t2_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0,
+    "p_already_protected": 0.0,
+    "csa_win_draws_mean": 0.045,
+    "csa_protected_draws_mean": 0.0008,
+    "csa_nondet_draws_mean": 0.2225,
+    "p_any_winning_draw_exists": 0.0175,
+    "p_next_draw_wins": 0.0005
+   },
+   "t3_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.005,
+    "p_already_protected": 0.0008,
+    "csa_win_draws_mean": 0.4188,
+    "csa_protected_draws_mean": 0.0988,
+    "csa_nondet_draws_mean": 0.7261,
+    "p_any_winning_draw_exists": 0.1441,
+    "p_next_draw_wins": 0.0048
+   },
+   "t3_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0017,
+    "p_already_protected": 0.0,
+    "csa_win_draws_mean": 0.0109,
+    "csa_protected_draws_mean": 0.0058,
+    "csa_nondet_draws_mean": 0.0,
+    "p_any_winning_draw_exists": 0.0109,
+    "p_next_draw_wins": 0.0001
+   },
+   "t4_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0325,
+    "p_already_protected": 0.01,
+    "csa_win_draws_mean": 1.2756,
+    "csa_protected_draws_mean": 0.5116,
+    "csa_nondet_draws_mean": 0.9742,
+    "p_any_winning_draw_exists": 0.3152,
+    "p_next_draw_wins": 0.0147
+   },
+   "t4_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0025,
+    "p_already_protected": 0.0008,
+    "csa_win_draws_mean": 0.0794,
+    "csa_protected_draws_mean": 0.0309,
+    "csa_nondet_draws_mean": 0.0,
+    "p_any_winning_draw_exists": 0.066,
+    "p_next_draw_wins": 0.0009
+   },
+   "tutor_leverage_t3_t4": {
+    "Birthing Pod": {
+     "n_states_held": 224,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.3571,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Chord of Calling": {
+     "n_states_held": 249,
+     "immediate_win": 0.0161,
+     "one_turn_setup_win": 0.6345,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Crop Rotation": {
+     "n_states_held": 203,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0,
+     "engine_access": 0.0,
+     "protection_access": 0.0
+    },
+    "Demonic Tutor": {
+     "n_states_held": 183,
+     "immediate_win": 0.0273,
+     "one_turn_setup_win": 0.694,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Eldritch Evolution": {
+     "n_states_held": 247,
+     "immediate_win": 0.0405,
+     "one_turn_setup_win": 0.4696,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Enlightened Tutor": {
+     "n_states_held": 275,
+     "immediate_win": 0.0073,
+     "one_turn_setup_win": 0.5382,
+     "engine_access": 1.0,
+     "protection_access": 0.0
+    },
+    "Finale of Devastation": {
+     "n_states_held": 268,
+     "immediate_win": 0.0075,
+     "one_turn_setup_win": 0.5896,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Imperial Seal": {
+     "n_states_held": 139,
+     "immediate_win": 0.0144,
+     "one_turn_setup_win": 0.6331,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Nature's Rhythm": {
+     "n_states_held": 249,
+     "immediate_win": 0.008,
+     "one_turn_setup_win": 0.6988,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Neoform": {
+     "n_states_held": 235,
+     "immediate_win": 0.017,
+     "one_turn_setup_win": 0.3319,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Ranger-Captain of Eos": {
+     "n_states_held": 243,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0782,
+     "engine_access": 0.8765,
+     "protection_access": 0.0
+    },
+    "Spellseeker": {
+     "n_states_held": 251,
+     "immediate_win": 0.008,
+     "one_turn_setup_win": 0.5976,
+     "engine_access": 0.0,
+     "protection_access": 0.992
+    },
+    "Survival of the Fittest": {
+     "n_states_held": 84,
+     "immediate_win": 0.0119,
+     "one_turn_setup_win": 0.5595,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Vampiric Tutor": {
+     "n_states_held": 156,
+     "immediate_win": 0.0128,
+     "one_turn_setup_win": 0.7051,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    }
+   }
+  },
   "B_oracle_pact_seeker": {
    "t2_main": {
     "n_states": 1200,
@@ -60,7 +212,7 @@
     "p_already_winning": 0.0608,
     "p_already_protected": 0.0183,
     "csa_win_draws_mean": 1.7897,
-    "csa_protected_draws_mean": 0.5945,
+    "csa_protected_draws_mean": 0.5954,
     "csa_nondet_draws_mean": 0.6051,
     "p_any_winning_draw_exists": 0.3629,
     "p_next_draw_wins": 0.0206
@@ -149,21 +301,21 @@
     "Ranger-Captain of Eos": {
      "n_states_held": 233,
      "immediate_win": 0.0,
-     "one_turn_setup_win": 0.0215,
+     "one_turn_setup_win": 0.0815,
      "engine_access": 0.8712,
      "protection_access": 0.0
     },
     "Spellseeker": {
      "n_states_held": 241,
      "immediate_win": 0.0166,
-     "one_turn_setup_win": 0.751,
+     "one_turn_setup_win": 0.7427,
      "engine_access": 0.0,
      "protection_access": 0.9917
     },
     "Survival of the Fittest": {
      "n_states_held": 84,
      "immediate_win": 0.0119,
-     "one_turn_setup_win": 0.6786,
+     "one_turn_setup_win": 0.6548,
      "engine_access": 1.0,
      "protection_access": 1.0
     },
@@ -219,7 +371,7 @@
     "p_already_winning": 0.0758,
     "p_already_protected": 0.0225,
     "csa_win_draws_mean": 2.2083,
-    "csa_protected_draws_mean": 0.6691,
+    "csa_protected_draws_mean": 0.67,
     "csa_nondet_draws_mean": 0.321,
     "p_any_winning_draw_exists": 0.3868,
     "p_next_draw_wins": 0.0254
@@ -308,21 +460,21 @@
     "Ranger-Captain of Eos": {
      "n_states_held": 236,
      "immediate_win": 0.0,
-     "one_turn_setup_win": 0.0212,
+     "one_turn_setup_win": 0.072,
      "engine_access": 0.8729,
      "protection_access": 0.0
     },
     "Spellseeker": {
      "n_states_held": 243,
      "immediate_win": 0.0247,
-     "one_turn_setup_win": 0.7449,
+     "one_turn_setup_win": 0.7366,
      "engine_access": 0.0,
      "protection_access": 0.9918
     },
     "Survival of the Fittest": {
      "n_states_held": 84,
      "immediate_win": 0.0119,
-     "one_turn_setup_win": 0.6786,
+     "one_turn_setup_win": 0.6548,
      "engine_access": 1.0,
      "protection_access": 1.0
     },
@@ -330,6 +482,469 @@
      "n_states_held": 153,
      "immediate_win": 0.0131,
      "one_turn_setup_win": 0.7647,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    }
+   }
+  },
+  "D_oracle_consult_pact": {
+   "t2_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0008,
+    "p_already_protected": 0.0,
+    "csa_win_draws_mean": 0.1601,
+    "csa_protected_draws_mean": 0.0083,
+    "csa_nondet_draws_mean": 0.2277,
+    "p_any_winning_draw_exists": 0.0534,
+    "p_next_draw_wins": 0.0018
+   },
+   "t3_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0175,
+    "p_already_protected": 0.0033,
+    "csa_win_draws_mean": 0.9644,
+    "csa_protected_draws_mean": 0.173,
+    "csa_nondet_draws_mean": 0.6599,
+    "p_any_winning_draw_exists": 0.2383,
+    "p_next_draw_wins": 0.011
+   },
+   "t3_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0025,
+    "p_already_protected": 0.0008,
+    "csa_win_draws_mean": 0.0125,
+    "csa_protected_draws_mean": 0.005,
+    "csa_nondet_draws_mean": 0.0025,
+    "p_any_winning_draw_exists": 0.0117,
+    "p_next_draw_wins": 0.0001
+   },
+   "t4_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0708,
+    "p_already_protected": 0.0192,
+    "csa_win_draws_mean": 2.157,
+    "csa_protected_draws_mean": 0.7013,
+    "csa_nondet_draws_mean": 0.6484,
+    "p_any_winning_draw_exists": 0.4009,
+    "p_next_draw_wins": 0.0249
+   },
+   "t4_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0075,
+    "p_already_protected": 0.0017,
+    "csa_win_draws_mean": 0.115,
+    "csa_protected_draws_mean": 0.0386,
+    "csa_nondet_draws_mean": 0.0831,
+    "p_any_winning_draw_exists": 0.0798,
+    "p_next_draw_wins": 0.0013
+   },
+   "tutor_leverage_t3_t4": {
+    "Birthing Pod": {
+     "n_states_held": 215,
+     "immediate_win": 0.0047,
+     "one_turn_setup_win": 0.1116,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Chord of Calling": {
+     "n_states_held": 243,
+     "immediate_win": 0.0329,
+     "one_turn_setup_win": 0.4115,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Crop Rotation": {
+     "n_states_held": 201,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0,
+     "engine_access": 0.0,
+     "protection_access": 0.0
+    },
+    "Demonic Tutor": {
+     "n_states_held": 185,
+     "immediate_win": 0.0649,
+     "one_turn_setup_win": 0.7405,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Eldritch Evolution": {
+     "n_states_held": 245,
+     "immediate_win": 0.1061,
+     "one_turn_setup_win": 0.3714,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Enlightened Tutor": {
+     "n_states_held": 282,
+     "immediate_win": 0.0071,
+     "one_turn_setup_win": 0.4645,
+     "engine_access": 1.0,
+     "protection_access": 0.0
+    },
+    "Finale of Devastation": {
+     "n_states_held": 268,
+     "immediate_win": 0.0187,
+     "one_turn_setup_win": 0.4067,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Imperial Seal": {
+     "n_states_held": 136,
+     "immediate_win": 0.0147,
+     "one_turn_setup_win": 0.7132,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Nature's Rhythm": {
+     "n_states_held": 248,
+     "immediate_win": 0.004,
+     "one_turn_setup_win": 0.4516,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Neoform": {
+     "n_states_held": 231,
+     "immediate_win": 0.026,
+     "one_turn_setup_win": 0.1299,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Ranger-Captain of Eos": {
+     "n_states_held": 236,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0339,
+     "engine_access": 0.8729,
+     "protection_access": 0.0
+    },
+    "Survival of the Fittest": {
+     "n_states_held": 84,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.381,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Tainted Pact": {
+     "n_states_held": 261,
+     "immediate_win": 0.0805,
+     "one_turn_setup_win": 0.5977,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Vampiric Tutor": {
+     "n_states_held": 153,
+     "immediate_win": 0.0131,
+     "one_turn_setup_win": 0.7778,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    }
+   }
+  },
+  "E_all_four": {
+   "t2_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0008,
+    "p_already_protected": 0.0,
+    "csa_win_draws_mean": 0.1593,
+    "csa_protected_draws_mean": 0.0083,
+    "csa_nondet_draws_mean": 0.2319,
+    "p_any_winning_draw_exists": 0.0534,
+    "p_next_draw_wins": 0.0018
+   },
+   "t3_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0183,
+    "p_already_protected": 0.0033,
+    "csa_win_draws_mean": 1.0985,
+    "csa_protected_draws_mean": 0.1851,
+    "csa_nondet_draws_mean": 0.6927,
+    "p_any_winning_draw_exists": 0.2445,
+    "p_next_draw_wins": 0.0125
+   },
+   "t3_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0025,
+    "p_already_protected": 0.0008,
+    "csa_win_draws_mean": 0.0175,
+    "csa_protected_draws_mean": 0.0067,
+    "csa_nondet_draws_mean": 0.0033,
+    "p_any_winning_draw_exists": 0.0159,
+    "p_next_draw_wins": 0.0002
+   },
+   "t4_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0875,
+    "p_already_protected": 0.025,
+    "csa_win_draws_mean": 2.726,
+    "csa_protected_draws_mean": 0.8119,
+    "csa_nondet_draws_mean": 0.7288,
+    "p_any_winning_draw_exists": 0.4082,
+    "p_next_draw_wins": 0.0314
+   },
+   "t4_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0083,
+    "p_already_protected": 0.0017,
+    "csa_win_draws_mean": 0.1193,
+    "csa_protected_draws_mean": 0.0437,
+    "csa_nondet_draws_mean": 0.0866,
+    "p_any_winning_draw_exists": 0.0849,
+    "p_next_draw_wins": 0.0014
+   },
+   "tutor_leverage_t3_t4": {
+    "Birthing Pod": {
+     "n_states_held": 213,
+     "immediate_win": 0.0047,
+     "one_turn_setup_win": 0.4272,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Chord of Calling": {
+     "n_states_held": 236,
+     "immediate_win": 0.0381,
+     "one_turn_setup_win": 0.7669,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Crop Rotation": {
+     "n_states_held": 201,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0,
+     "engine_access": 0.0,
+     "protection_access": 0.0
+    },
+    "Demonic Tutor": {
+     "n_states_held": 185,
+     "immediate_win": 0.0649,
+     "one_turn_setup_win": 0.7892,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Eldritch Evolution": {
+     "n_states_held": 247,
+     "immediate_win": 0.1093,
+     "one_turn_setup_win": 0.587,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Enlightened Tutor": {
+     "n_states_held": 283,
+     "immediate_win": 0.0071,
+     "one_turn_setup_win": 0.5194,
+     "engine_access": 1.0,
+     "protection_access": 0.0
+    },
+    "Finale of Devastation": {
+     "n_states_held": 268,
+     "immediate_win": 0.0373,
+     "one_turn_setup_win": 0.7164,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Imperial Seal": {
+     "n_states_held": 130,
+     "immediate_win": 0.0154,
+     "one_turn_setup_win": 0.7385,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Nature's Rhythm": {
+     "n_states_held": 245,
+     "immediate_win": 0.0204,
+     "one_turn_setup_win": 0.8,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Neoform": {
+     "n_states_held": 227,
+     "immediate_win": 0.0485,
+     "one_turn_setup_win": 0.4273,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Ranger-Captain of Eos": {
+     "n_states_held": 236,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0932,
+     "engine_access": 0.8729,
+     "protection_access": 0.0
+    },
+    "Spellseeker": {
+     "n_states_held": 258,
+     "immediate_win": 0.0194,
+     "one_turn_setup_win": 0.7519,
+     "engine_access": 0.0,
+     "protection_access": 1.0
+    },
+    "Survival of the Fittest": {
+     "n_states_held": 84,
+     "immediate_win": 0.0119,
+     "one_turn_setup_win": 0.7024,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Tainted Pact": {
+     "n_states_held": 259,
+     "immediate_win": 0.0811,
+     "one_turn_setup_win": 0.6718,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Vampiric Tutor": {
+     "n_states_held": 151,
+     "immediate_win": 0.0132,
+     "one_turn_setup_win": 0.7881,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    }
+   }
+  },
+  "F_oracle_pact": {
+   "t2_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0,
+    "p_already_protected": 0.0,
+    "csa_win_draws_mean": 0.0625,
+    "csa_protected_draws_mean": 0.0017,
+    "csa_nondet_draws_mean": 0.225,
+    "p_any_winning_draw_exists": 0.025,
+    "p_next_draw_wins": 0.0007
+   },
+   "t3_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0142,
+    "p_already_protected": 0.0025,
+    "csa_win_draws_mean": 0.5511,
+    "csa_protected_draws_mean": 0.1361,
+    "csa_nondet_draws_mean": 0.6052,
+    "p_any_winning_draw_exists": 0.1699,
+    "p_next_draw_wins": 0.0063
+   },
+   "t3_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0025,
+    "p_already_protected": 0.0008,
+    "csa_win_draws_mean": 0.01,
+    "csa_protected_draws_mean": 0.005,
+    "csa_nondet_draws_mean": 0.0025,
+    "p_any_winning_draw_exists": 0.01,
+    "p_next_draw_wins": 0.0001
+   },
+   "t4_main": {
+    "n_states": 1200,
+    "p_already_winning": 0.0492,
+    "p_already_protected": 0.015,
+    "csa_win_draws_mean": 1.4908,
+    "csa_protected_draws_mean": 0.5443,
+    "csa_nondet_draws_mean": 0.6547,
+    "p_any_winning_draw_exists": 0.3585,
+    "p_next_draw_wins": 0.0172
+   },
+   "t4_instant": {
+    "n_states": 1200,
+    "p_already_winning": 0.0042,
+    "p_already_protected": 0.0017,
+    "csa_win_draws_mean": 0.0979,
+    "csa_protected_draws_mean": 0.0368,
+    "csa_nondet_draws_mean": 0.1155,
+    "p_any_winning_draw_exists": 0.0728,
+    "p_next_draw_wins": 0.0011
+   },
+   "tutor_leverage_t3_t4": {
+    "Birthing Pod": {
+     "n_states_held": 221,
+     "immediate_win": 0.0045,
+     "one_turn_setup_win": 0.0905,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Chord of Calling": {
+     "n_states_held": 251,
+     "immediate_win": 0.0239,
+     "one_turn_setup_win": 0.3745,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Crop Rotation": {
+     "n_states_held": 202,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0,
+     "engine_access": 0.0,
+     "protection_access": 0.0
+    },
+    "Demonic Tutor": {
+     "n_states_held": 186,
+     "immediate_win": 0.0376,
+     "one_turn_setup_win": 0.7258,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Eldritch Evolution": {
+     "n_states_held": 249,
+     "immediate_win": 0.0763,
+     "one_turn_setup_win": 0.3213,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Enlightened Tutor": {
+     "n_states_held": 281,
+     "immediate_win": 0.0071,
+     "one_turn_setup_win": 0.4698,
+     "engine_access": 1.0,
+     "protection_access": 0.0
+    },
+    "Finale of Devastation": {
+     "n_states_held": 268,
+     "immediate_win": 0.0112,
+     "one_turn_setup_win": 0.3619,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Imperial Seal": {
+     "n_states_held": 136,
+     "immediate_win": 0.0147,
+     "one_turn_setup_win": 0.7059,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Nature's Rhythm": {
+     "n_states_held": 246,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.4024,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Neoform": {
+     "n_states_held": 231,
+     "immediate_win": 0.026,
+     "one_turn_setup_win": 0.1212,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Ranger-Captain of Eos": {
+     "n_states_held": 237,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.0422,
+     "engine_access": 0.8734,
+     "protection_access": 0.0
+    },
+    "Survival of the Fittest": {
+     "n_states_held": 84,
+     "immediate_win": 0.0,
+     "one_turn_setup_win": 0.3333,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Tainted Pact": {
+     "n_states_held": 245,
+     "immediate_win": 0.102,
+     "one_turn_setup_win": 0.551,
+     "engine_access": 1.0,
+     "protection_access": 1.0
+    },
+    "Vampiric Tutor": {
+     "n_states_held": 158,
+     "immediate_win": 0.0127,
+     "one_turn_setup_win": 0.7342,
      "engine_access": 1.0,
      "protection_access": 1.0
     }
@@ -1555,6 +2170,19 @@
   }
  },
  "spellseeker_audit": {
+  "A_oracle_less": {
+   "n_states": 358,
+   "castable": 0.7458,
+   "has_hq_target": 1.0,
+   "has_tutor_target": 1.0,
+   "has_protection_target": 0.9246,
+   "has_interaction_target": 1.0,
+   "pact_target": 0.0,
+   "immediate_win": 0.0223,
+   "next_turn_win": 0.0503,
+   "stranded_not_castable": 0.2542,
+   "mean_targets": 12.0196
+  },
   "B_oracle_pact_seeker": {
    "n_states": 347,
    "castable": 0.7262,
@@ -1580,9 +2208,124 @@
    "next_turn_win": 0.1486,
    "stranded_not_castable": 0.2714,
    "mean_targets": 12.9057
-  }
+  },
+  "D_oracle_consult_pact": null,
+  "E_all_four": {
+   "n_states": 369,
+   "castable": 0.7317,
+   "has_hq_target": 1.0,
+   "has_tutor_target": 1.0,
+   "has_protection_target": 0.8997,
+   "has_interaction_target": 1.0,
+   "pact_target": 0.9377,
+   "immediate_win": 0.0542,
+   "next_turn_win": 0.1789,
+   "stranded_not_castable": 0.2683,
+   "mean_targets": 13.7615
+  },
+  "F_oracle_pact": null
  },
  "tutor_leverage": {
+  "A_oracle_less": {
+   "Birthing Pod": {
+    "n_states_held": 224,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.3571,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 249,
+    "immediate_win": 0.0161,
+    "one_turn_setup_win": 0.6345,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 203,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 183,
+    "immediate_win": 0.0273,
+    "one_turn_setup_win": 0.694,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 247,
+    "immediate_win": 0.0405,
+    "one_turn_setup_win": 0.4696,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 275,
+    "immediate_win": 0.0073,
+    "one_turn_setup_win": 0.5382,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 268,
+    "immediate_win": 0.0075,
+    "one_turn_setup_win": 0.5896,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 139,
+    "immediate_win": 0.0144,
+    "one_turn_setup_win": 0.6331,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 249,
+    "immediate_win": 0.008,
+    "one_turn_setup_win": 0.6988,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 235,
+    "immediate_win": 0.017,
+    "one_turn_setup_win": 0.3319,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 243,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0782,
+    "engine_access": 0.8765,
+    "protection_access": 0.0
+   },
+   "Spellseeker": {
+    "n_states_held": 251,
+    "immediate_win": 0.008,
+    "one_turn_setup_win": 0.5976,
+    "engine_access": 0.0,
+    "protection_access": 0.992
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 84,
+    "immediate_win": 0.0119,
+    "one_turn_setup_win": 0.5595,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 156,
+    "immediate_win": 0.0128,
+    "one_turn_setup_win": 0.7051,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
   "B_oracle_pact_seeker": {
    "Birthing Pod": {
     "n_states_held": 213,
@@ -1657,21 +2400,21 @@
    "Ranger-Captain of Eos": {
     "n_states_held": 233,
     "immediate_win": 0.0,
-    "one_turn_setup_win": 0.0215,
+    "one_turn_setup_win": 0.0815,
     "engine_access": 0.8712,
     "protection_access": 0.0
    },
    "Spellseeker": {
     "n_states_held": 241,
     "immediate_win": 0.0166,
-    "one_turn_setup_win": 0.751,
+    "one_turn_setup_win": 0.7427,
     "engine_access": 0.0,
     "protection_access": 0.9917
    },
    "Survival of the Fittest": {
     "n_states_held": 84,
     "immediate_win": 0.0119,
-    "one_turn_setup_win": 0.6786,
+    "one_turn_setup_win": 0.6548,
     "engine_access": 1.0,
     "protection_access": 1.0
    },
@@ -1764,21 +2507,21 @@
    "Ranger-Captain of Eos": {
     "n_states_held": 236,
     "immediate_win": 0.0,
-    "one_turn_setup_win": 0.0212,
+    "one_turn_setup_win": 0.072,
     "engine_access": 0.8729,
     "protection_access": 0.0
    },
    "Spellseeker": {
     "n_states_held": 243,
     "immediate_win": 0.0247,
-    "one_turn_setup_win": 0.7449,
+    "one_turn_setup_win": 0.7366,
     "engine_access": 0.0,
     "protection_access": 0.9918
    },
    "Survival of the Fittest": {
     "n_states_held": 84,
     "immediate_win": 0.0119,
-    "one_turn_setup_win": 0.6786,
+    "one_turn_setup_win": 0.6548,
     "engine_access": 1.0,
     "protection_access": 1.0
    },
@@ -1789,9 +2532,422 @@
     "engine_access": 1.0,
     "protection_access": 1.0
    }
+  },
+  "D_oracle_consult_pact": {
+   "Birthing Pod": {
+    "n_states_held": 215,
+    "immediate_win": 0.0047,
+    "one_turn_setup_win": 0.1116,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 243,
+    "immediate_win": 0.0329,
+    "one_turn_setup_win": 0.4115,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 201,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 185,
+    "immediate_win": 0.0649,
+    "one_turn_setup_win": 0.7405,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 245,
+    "immediate_win": 0.1061,
+    "one_turn_setup_win": 0.3714,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 282,
+    "immediate_win": 0.0071,
+    "one_turn_setup_win": 0.4645,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 268,
+    "immediate_win": 0.0187,
+    "one_turn_setup_win": 0.4067,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 136,
+    "immediate_win": 0.0147,
+    "one_turn_setup_win": 0.7132,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 248,
+    "immediate_win": 0.004,
+    "one_turn_setup_win": 0.4516,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 231,
+    "immediate_win": 0.026,
+    "one_turn_setup_win": 0.1299,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 236,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0339,
+    "engine_access": 0.8729,
+    "protection_access": 0.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 84,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.381,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Tainted Pact": {
+    "n_states_held": 261,
+    "immediate_win": 0.0805,
+    "one_turn_setup_win": 0.5977,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 153,
+    "immediate_win": 0.0131,
+    "one_turn_setup_win": 0.7778,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
+  "E_all_four": {
+   "Birthing Pod": {
+    "n_states_held": 213,
+    "immediate_win": 0.0047,
+    "one_turn_setup_win": 0.4272,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 236,
+    "immediate_win": 0.0381,
+    "one_turn_setup_win": 0.7669,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 201,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 185,
+    "immediate_win": 0.0649,
+    "one_turn_setup_win": 0.7892,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 247,
+    "immediate_win": 0.1093,
+    "one_turn_setup_win": 0.587,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 283,
+    "immediate_win": 0.0071,
+    "one_turn_setup_win": 0.5194,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 268,
+    "immediate_win": 0.0373,
+    "one_turn_setup_win": 0.7164,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 130,
+    "immediate_win": 0.0154,
+    "one_turn_setup_win": 0.7385,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 245,
+    "immediate_win": 0.0204,
+    "one_turn_setup_win": 0.8,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 227,
+    "immediate_win": 0.0485,
+    "one_turn_setup_win": 0.4273,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 236,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0932,
+    "engine_access": 0.8729,
+    "protection_access": 0.0
+   },
+   "Spellseeker": {
+    "n_states_held": 258,
+    "immediate_win": 0.0194,
+    "one_turn_setup_win": 0.7519,
+    "engine_access": 0.0,
+    "protection_access": 1.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 84,
+    "immediate_win": 0.0119,
+    "one_turn_setup_win": 0.7024,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Tainted Pact": {
+    "n_states_held": 259,
+    "immediate_win": 0.0811,
+    "one_turn_setup_win": 0.6718,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 151,
+    "immediate_win": 0.0132,
+    "one_turn_setup_win": 0.7881,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
+  },
+  "F_oracle_pact": {
+   "Birthing Pod": {
+    "n_states_held": 221,
+    "immediate_win": 0.0045,
+    "one_turn_setup_win": 0.0905,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Chord of Calling": {
+    "n_states_held": 251,
+    "immediate_win": 0.0239,
+    "one_turn_setup_win": 0.3745,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Crop Rotation": {
+    "n_states_held": 202,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0,
+    "engine_access": 0.0,
+    "protection_access": 0.0
+   },
+   "Demonic Tutor": {
+    "n_states_held": 186,
+    "immediate_win": 0.0376,
+    "one_turn_setup_win": 0.7258,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Eldritch Evolution": {
+    "n_states_held": 249,
+    "immediate_win": 0.0763,
+    "one_turn_setup_win": 0.3213,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Enlightened Tutor": {
+    "n_states_held": 281,
+    "immediate_win": 0.0071,
+    "one_turn_setup_win": 0.4698,
+    "engine_access": 1.0,
+    "protection_access": 0.0
+   },
+   "Finale of Devastation": {
+    "n_states_held": 268,
+    "immediate_win": 0.0112,
+    "one_turn_setup_win": 0.3619,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Imperial Seal": {
+    "n_states_held": 136,
+    "immediate_win": 0.0147,
+    "one_turn_setup_win": 0.7059,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Nature's Rhythm": {
+    "n_states_held": 246,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.4024,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Neoform": {
+    "n_states_held": 231,
+    "immediate_win": 0.026,
+    "one_turn_setup_win": 0.1212,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Ranger-Captain of Eos": {
+    "n_states_held": 237,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.0422,
+    "engine_access": 0.8734,
+    "protection_access": 0.0
+   },
+   "Survival of the Fittest": {
+    "n_states_held": 84,
+    "immediate_win": 0.0,
+    "one_turn_setup_win": 0.3333,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Tainted Pact": {
+    "n_states_held": 245,
+    "immediate_win": 0.102,
+    "one_turn_setup_win": 0.551,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   },
+   "Vampiric Tutor": {
+    "n_states_held": 158,
+    "immediate_win": 0.0127,
+    "one_turn_setup_win": 0.7342,
+    "engine_access": 1.0,
+    "protection_access": 1.0
+   }
   }
  },
  "resilience": {
+  "A_oracle_less": {
+   "board_wipe_creatures": {
+    "n": 45,
+    "p_still_det": 0.0,
+    "ci95": [
+     0.0,
+     0.07865
+    ]
+   },
+   "artifact_removal_all": {
+    "n": 45,
+    "p_still_det": 0.7111,
+    "ci95": [
+     0.56631,
+     0.8227
+    ]
+   },
+   "graveyard_exiled": {
+    "n": 45,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.92135,
+     1.0
+    ]
+   },
+   "creature_abilities_suppressed": {
+    "n": 45,
+    "p_still_det": 0.4667,
+    "ci95": [
+     0.32935,
+     0.60923
+    ]
+   },
+   "lose_thrasios": {
+    "n": 45,
+    "p_still_det": 0.0,
+    "ci95": [
+     0.0,
+     0.07865
+    ]
+   },
+   "lose_pod": {
+    "n": 45,
+    "p_still_det": 0.8889,
+    "ci95": [
+     0.76501,
+     0.9516
+    ]
+   },
+   "lose_oracle": {
+    "n": 45,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.92135,
+     1.0
+    ]
+   },
+   "pact_spent": {
+    "n": 45,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.92135,
+     1.0
+    ]
+   },
+   "pact_spent_oracle_exiled": {
+    "n": 45,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.92135,
+     1.0
+    ]
+   },
+   "druid_axis_disabled": {
+    "n": 45,
+    "p_still_det": 0.0,
+    "ci95": [
+     0.0,
+     0.07865
+    ]
+   },
+   "oboro_axis_disabled": {
+    "n": 45,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.92135,
+     1.0
+    ]
+   },
+   "bowmasters_axis_disabled": {
+    "n": 45,
+    "p_still_det": 0.0,
+    "ci95": [
+     0.0,
+     0.07865
+    ]
+   },
+   "single_piece_loss_survival": {
+    "n": 45,
+    "p_still_det": 0.0767,
+    "ci95": [
+     0.02293,
+     0.17857
+    ]
+   }
+  },
   "B_oracle_pact_seeker": {
    "board_wipe_creatures": {
     "n": 90,
@@ -2001,6 +3157,324 @@
     "ci95": [
      0.09156,
      0.22328
+    ]
+   }
+  },
+  "D_oracle_consult_pact": {
+   "board_wipe_creatures": {
+    "n": 106,
+    "p_still_det": 0.1132,
+    "ci95": [
+     0.06596,
+     0.18751
+    ]
+   },
+   "artifact_removal_all": {
+    "n": 106,
+    "p_still_det": 0.7642,
+    "ci95": [
+     0.67498,
+     0.83484
+    ]
+   },
+   "graveyard_exiled": {
+    "n": 106,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.96503,
+     1.0
+    ]
+   },
+   "creature_abilities_suppressed": {
+    "n": 106,
+    "p_still_det": 0.5849,
+    "ci95": [
+     0.48974,
+     0.67413
+    ]
+   },
+   "lose_thrasios": {
+    "n": 106,
+    "p_still_det": 0.5,
+    "ci95": [
+     0.40649,
+     0.59351
+    ]
+   },
+   "lose_pod": {
+    "n": 106,
+    "p_still_det": 0.8491,
+    "ci95": [
+     0.7688,
+     0.9049
+    ]
+   },
+   "lose_oracle": {
+    "n": 106,
+    "p_still_det": 0.3491,
+    "ci95": [
+     0.26504,
+     0.44364
+    ]
+   },
+   "pact_spent": {
+    "n": 106,
+    "p_still_det": 0.8208,
+    "ci95": [
+     0.73693,
+     0.88214
+    ]
+   },
+   "pact_spent_oracle_exiled": {
+    "n": 106,
+    "p_still_det": 0.3491,
+    "ci95": [
+     0.26504,
+     0.44364
+    ]
+   },
+   "druid_axis_disabled": {
+    "n": 106,
+    "p_still_det": 0.566,
+    "ci95": [
+     0.47101,
+     0.65644
+    ]
+   },
+   "oboro_axis_disabled": {
+    "n": 106,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.96503,
+     1.0
+    ]
+   },
+   "bowmasters_axis_disabled": {
+    "n": 106,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.96503,
+     1.0
+    ]
+   },
+   "single_piece_loss_survival": {
+    "n": 106,
+    "p_still_det": 0.121,
+    "ci95": [
+     0.07309,
+     0.19859
+    ]
+   }
+  },
+  "E_all_four": {
+   "board_wipe_creatures": {
+    "n": 127,
+    "p_still_det": 0.0945,
+    "ci95": [
+     0.05488,
+     0.15791
+    ]
+   },
+   "artifact_removal_all": {
+    "n": 127,
+    "p_still_det": 0.7087,
+    "ci95": [
+     0.62444,
+     0.78063
+    ]
+   },
+   "graveyard_exiled": {
+    "n": 127,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.97064,
+     1.0
+    ]
+   },
+   "creature_abilities_suppressed": {
+    "n": 127,
+    "p_still_det": 0.5669,
+    "ci95": [
+     0.48004,
+     0.64989
+    ]
+   },
+   "lose_thrasios": {
+    "n": 127,
+    "p_still_det": 0.5433,
+    "ci95": [
+     0.45667,
+     0.6274
+    ]
+   },
+   "lose_pod": {
+    "n": 127,
+    "p_still_det": 0.7953,
+    "ci95": [
+     0.71693,
+     0.85629
+    ]
+   },
+   "lose_oracle": {
+    "n": 127,
+    "p_still_det": 0.3622,
+    "ci95": [
+     0.28379,
+     0.44871
+    ]
+   },
+   "pact_spent": {
+    "n": 127,
+    "p_still_det": 0.8504,
+    "ci95": [
+     0.77813,
+     0.90208
+    ]
+   },
+   "pact_spent_oracle_exiled": {
+    "n": 127,
+    "p_still_det": 0.3622,
+    "ci95": [
+     0.28379,
+     0.44871
+    ]
+   },
+   "druid_axis_disabled": {
+    "n": 127,
+    "p_still_det": 0.6063,
+    "ci95": [
+     0.5194,
+     0.68695
+    ]
+   },
+   "oboro_axis_disabled": {
+    "n": 127,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.97064,
+     1.0
+    ]
+   },
+   "bowmasters_axis_disabled": {
+    "n": 127,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.97064,
+     1.0
+    ]
+   },
+   "single_piece_loss_survival": {
+    "n": 127,
+    "p_still_det": 0.1853,
+    "ci95": [
+     0.13041,
+     0.26581
+    ]
+   }
+  },
+  "F_oracle_pact": {
+   "board_wipe_creatures": {
+    "n": 76,
+    "p_still_det": 0.0921,
+    "ci95": [
+     0.04533,
+     0.17813
+    ]
+   },
+   "artifact_removal_all": {
+    "n": 76,
+    "p_still_det": 0.7632,
+    "ci95": [
+     0.65638,
+     0.84461
+    ]
+   },
+   "graveyard_exiled": {
+    "n": 76,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.95188,
+     1.0
+    ]
+   },
+   "creature_abilities_suppressed": {
+    "n": 76,
+    "p_still_det": 0.5395,
+    "ci95": [
+     0.42822,
+     0.64692
+    ]
+   },
+   "lose_thrasios": {
+    "n": 76,
+    "p_still_det": 0.3553,
+    "ci95": [
+     0.25702,
+     0.46744
+    ]
+   },
+   "lose_pod": {
+    "n": 76,
+    "p_still_det": 0.8684,
+    "ci95": [
+     0.77446,
+     0.92693
+    ]
+   },
+   "lose_oracle": {
+    "n": 76,
+    "p_still_det": 0.4737,
+    "ci95": [
+     0.36542,
+     0.58448
+    ]
+   },
+   "pact_spent": {
+    "n": 76,
+    "p_still_det": 0.6842,
+    "ci95": [
+     0.573,
+     0.77769
+    ]
+   },
+   "pact_spent_oracle_exiled": {
+    "n": 76,
+    "p_still_det": 0.4737,
+    "ci95": [
+     0.36542,
+     0.58448
+    ]
+   },
+   "druid_axis_disabled": {
+    "n": 76,
+    "p_still_det": 0.3684,
+    "ci95": [
+     0.26875,
+     0.48075
+    ]
+   },
+   "oboro_axis_disabled": {
+    "n": 76,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.95188,
+     1.0
+    ]
+   },
+   "bowmasters_axis_disabled": {
+    "n": 76,
+    "p_still_det": 1.0,
+    "ci95": [
+     0.95188,
+     1.0
+    ]
+   },
+   "single_piece_loss_survival": {
+    "n": 76,
+    "p_still_det": 0.0929,
+    "ci95": [
+     0.04533,
+     0.17813
     ]
    }
   }
