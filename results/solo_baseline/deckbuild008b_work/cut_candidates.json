@@ -1,0 +1,1213 @@
+{
+ "_design": {
+  "n": 6000,
+  "seed0": 12000000,
+  "classifier": "deckbuild008b_analysis"
+ },
+ "V8_frozen": {
+  "Strix Serenade": {
+   "dead_in_kept_hand": {
+    "n": 351,
+    "p_dead": 0.037,
+    "ci95": [
+     0.02177,
+     0.06233
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0885,
+    "n_held": 531,
+    "material": 0.9322,
+    "secondary_only": 0.0207,
+    "stranded": 0.0471,
+    "roles": {
+     "interaction_held": 0.9322,
+     "pitch": 0.2938
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.099,
+    "n_held": 594,
+    "material": 0.9444,
+    "secondary_only": 0.0236,
+    "stranded": 0.032,
+    "roles": {
+     "interaction_held": 0.9444,
+     "pitch": 0.3401
+    }
+   }
+  },
+  "Volatile Stormdrake": {
+   "dead_in_kept_hand": {
+    "n": 368,
+    "p_dead": 0.0571,
+    "ci95": [
+     0.03762,
+     0.08566
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0885,
+    "n_held": 531,
+    "material": 0.9002,
+    "secondary_only": 0.0527,
+    "stranded": 0.0471,
+    "roles": {
+     "body": 0.2787,
+     "interaction_held": 0.9002,
+     "pitch": 0.2881
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.097,
+    "n_held": 582,
+    "material": 0.9364,
+    "secondary_only": 0.0412,
+    "stranded": 0.0223,
+    "roles": {
+     "body": 0.3849,
+     "interaction_held": 0.9364,
+     "pitch": 0.3162
+    }
+   }
+  },
+  "Colossal Skyturtle": {
+   "dead_in_kept_hand": {
+    "n": 298,
+    "p_dead": 0.0403,
+    "ci95": [
+     0.02318,
+     0.06906
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07067,
+    "n_held": 424,
+    "material": 0.9127,
+    "secondary_only": 0.0448,
+    "stranded": 0.0425,
+    "roles": {
+     "body": 0.3042,
+     "interaction_held": 0.9127,
+     "pitch": 0.3679
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.08083,
+    "n_held": 485,
+    "material": 0.9485,
+    "secondary_only": 0.0289,
+    "stranded": 0.0227,
+    "roles": {
+     "body": 0.4206,
+     "combo_live": 0.0021,
+     "interaction_held": 0.9485,
+     "pitch": 0.4165
+    }
+   }
+  },
+  "Gilded Drake": {
+   "dead_in_kept_hand": {
+    "n": 383,
+    "p_dead": 0.0705,
+    "ci95": [
+     0.0489,
+     0.10062
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08867,
+    "n_held": 532,
+    "material": 0.8947,
+    "secondary_only": 0.047,
+    "stranded": 0.0583,
+    "roles": {
+     "body": 0.3064,
+     "interaction_held": 0.8947,
+     "pitch": 0.2763
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.09567,
+    "n_held": 574,
+    "material": 0.9164,
+    "secondary_only": 0.0453,
+    "stranded": 0.0383,
+    "roles": {
+     "body": 0.4042,
+     "interaction_held": 0.9164,
+     "pitch": 0.3171
+    }
+   }
+  },
+  "The Queen of Dale": {
+   "dead_in_kept_hand": {
+    "n": 333,
+    "p_dead": 0.1471,
+    "ci95": [
+     0.11313,
+     0.18922
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0705,
+    "n_held": 423,
+    "material": 0.7849,
+    "secondary_only": 0.0757,
+    "stranded": 0.1395,
+    "roles": {
+     "body": 0.2884,
+     "development": 0.7849
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.069,
+    "n_held": 414,
+    "material": 0.8019,
+    "secondary_only": 0.0797,
+    "stranded": 0.1184,
+    "roles": {
+     "body": 0.4034,
+     "combo_live": 0.0048,
+     "development": 0.8019
+    }
+   }
+  },
+  "Gleaming Splendor": {
+   "dead_in_kept_hand": {
+    "n": 300,
+    "p_dead": 0.1067,
+    "ci95": [
+     0.07658,
+     0.1467
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06667,
+    "n_held": 400,
+    "material": 0.7975,
+    "secondary_only": 0.0,
+    "stranded": 0.2025,
+    "roles": {
+     "development": 0.7975
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.06467,
+    "n_held": 388,
+    "material": 0.8119,
+    "secondary_only": 0.0,
+    "stranded": 0.1881,
+    "roles": {
+     "development": 0.8119
+    }
+   }
+  },
+  "Lotho, Corrupt Shirriff": {
+   "dead_in_kept_hand": {
+    "n": 326,
+    "p_dead": 0.2791,
+    "ci95": [
+     0.23323,
+     0.33019
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07733,
+    "n_held": 464,
+    "material": 0.5884,
+    "secondary_only": 0.1228,
+    "stranded": 0.2888,
+    "roles": {
+     "body": 0.2888,
+     "development": 0.5884
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.08267,
+    "n_held": 496,
+    "material": 0.6573,
+    "secondary_only": 0.127,
+    "stranded": 0.2157,
+    "roles": {
+     "body": 0.4012,
+     "development": 0.6573
+    }
+   }
+  },
+  "Esper Sentinel": {
+   "dead_in_kept_hand": {
+    "n": 482,
+    "p_dead": 0.1577,
+    "ci95": [
+     0.12786,
+     0.1929
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0275,
+    "n_held": 165,
+    "material": 0.5697,
+    "secondary_only": 0.0909,
+    "stranded": 0.3394,
+    "roles": {
+     "body": 0.3333,
+     "combo_live": 0.0061,
+     "development": 0.5697
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.02283,
+    "n_held": 137,
+    "material": 0.5401,
+    "secondary_only": 0.1241,
+    "stranded": 0.3358,
+    "roles": {
+     "body": 0.3066,
+     "development": 0.5401
+    }
+   }
+  },
+  "Delney, Streetwise Lookout": {
+   "dead_in_kept_hand": {
+    "n": 299,
+    "p_dead": 0.2308,
+    "ci95": [
+     0.18661,
+     0.28176
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.068,
+    "n_held": 408,
+    "material": 0.7181,
+    "secondary_only": 0.1029,
+    "stranded": 0.1789,
+    "roles": {
+     "body": 0.3235,
+     "development": 0.7181
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.07183,
+    "n_held": 431,
+    "material": 0.7657,
+    "secondary_only": 0.0742,
+    "stranded": 0.1601,
+    "roles": {
+     "body": 0.4107,
+     "development": 0.7657
+    }
+   }
+  },
+  "Clever Impersonator": {
+   "dead_in_kept_hand": {
+    "n": 254,
+    "p_dead": 0.5,
+    "ci95": [
+     0.43897,
+     0.56103
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06317,
+    "n_held": 379,
+    "material": 0.3113,
+    "secondary_only": 0.3668,
+    "stranded": 0.3219,
+    "roles": {
+     "body": 0.2797,
+     "interaction_held": 0.3113,
+     "pitch": 0.3193
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.074,
+    "n_held": 444,
+    "material": 0.4752,
+    "secondary_only": 0.3221,
+    "stranded": 0.2027,
+    "roles": {
+     "body": 0.3806,
+     "interaction_held": 0.4752,
+     "pitch": 0.3446
+    }
+   }
+  },
+  "Endurance": {
+   "dead_in_kept_hand": {
+    "n": 304,
+    "p_dead": 0.0362,
+    "ci95": [
+     0.02032,
+     0.06362
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.078,
+    "n_held": 468,
+    "material": 0.9359,
+    "secondary_only": 0.0128,
+    "stranded": 0.0513,
+    "roles": {
+     "body": 0.2735,
+     "interaction_held": 0.9359
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.088,
+    "n_held": 528,
+    "material": 0.964,
+    "secondary_only": 0.0152,
+    "stranded": 0.0208,
+    "roles": {
+     "body": 0.3958,
+     "combo_live": 0.0019,
+     "interaction_held": 0.964
+    }
+   }
+  },
+  "Mental Misstep": {
+   "dead_in_kept_hand": {
+    "n": 381,
+    "p_dead": 0.0,
+    "ci95": [
+     0.0,
+     0.00998
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08717,
+    "n_held": 523,
+    "material": 1.0,
+    "secondary_only": 0.0,
+    "stranded": 0.0,
+    "roles": {
+     "interaction_held": 1.0,
+     "pitch": 0.2925
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.0965,
+    "n_held": 579,
+    "material": 1.0,
+    "secondary_only": 0.0,
+    "stranded": 0.0,
+    "roles": {
+     "interaction_held": 1.0,
+     "pitch": 0.3282
+    }
+   }
+  },
+  "Swan Song": {
+   "dead_in_kept_hand": {
+    "n": 406,
+    "p_dead": 0.0345,
+    "ci95": [
+     0.02065,
+     0.05704
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.09317,
+    "n_held": 559,
+    "material": 0.9445,
+    "secondary_only": 0.0197,
+    "stranded": 0.0358,
+    "roles": {
+     "interaction_held": 0.9445,
+     "pitch": 0.3077
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.10567,
+    "n_held": 634,
+    "material": 0.959,
+    "secondary_only": 0.0142,
+    "stranded": 0.0268,
+    "roles": {
+     "interaction_held": 0.959,
+     "pitch": 0.3312
+    }
+   }
+  },
+  "Flusterstorm": {
+   "dead_in_kept_hand": {
+    "n": 382,
+    "p_dead": 0.0445,
+    "ci95": [
+     0.02797,
+     0.07011
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08583,
+    "n_held": 515,
+    "material": 0.9146,
+    "secondary_only": 0.0272,
+    "stranded": 0.0583,
+    "roles": {
+     "interaction_held": 0.9146,
+     "pitch": 0.2777
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.09733,
+    "n_held": 584,
+    "material": 0.9315,
+    "secondary_only": 0.0257,
+    "stranded": 0.0428,
+    "roles": {
+     "interaction_held": 0.9315,
+     "pitch": 0.3202
+    }
+   }
+  },
+  "Faerie Mastermind": {
+   "dead_in_kept_hand": {
+    "n": 323,
+    "p_dead": 0.0619,
+    "ci95": [
+     0.04044,
+     0.0937
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06717,
+    "n_held": 403,
+    "material": 0.8859,
+    "secondary_only": 0.0496,
+    "stranded": 0.0645,
+    "roles": {
+     "body": 0.2581,
+     "combo_pair": 0.0794,
+     "development": 0.8809,
+     "pitch": 0.2903
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.06317,
+    "n_held": 379,
+    "material": 0.8839,
+    "secondary_only": 0.0607,
+    "stranded": 0.0554,
+    "roles": {
+     "body": 0.3747,
+     "combo_pair": 0.0765,
+     "development": 0.8734,
+     "pitch": 0.343
+    }
+   }
+  },
+  "Orcish Bowmasters": {
+   "dead_in_kept_hand": {
+    "n": 371,
+    "p_dead": 0.1051,
+    "ci95": [
+     0.07786,
+     0.14048
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.086,
+    "n_held": 516,
+    "material": 0.8469,
+    "secondary_only": 0.0504,
+    "stranded": 0.1027,
+    "roles": {
+     "body": 0.2713,
+     "combo_pair": 0.0756,
+     "interaction_held": 0.8411
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.09517,
+    "n_held": 571,
+    "material": 0.8827,
+    "secondary_only": 0.042,
+    "stranded": 0.0753,
+    "roles": {
+     "body": 0.3905,
+     "combo_pair": 0.0841,
+     "interaction_held": 0.8739
+    }
+   }
+  },
+  "Oboro Breezecaller": {
+   "dead_in_kept_hand": {
+    "n": 322,
+    "p_dead": 0.8975,
+    "ci95": [
+     0.85957,
+     0.92609
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.068,
+    "n_held": 408,
+    "material": 0.0956,
+    "secondary_only": 0.8505,
+    "stranded": 0.0539,
+    "roles": {
+     "body": 0.826,
+     "combo_pair": 0.0956,
+     "development": 0.0686,
+     "pitch": 0.3113
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.06467,
+    "n_held": 388,
+    "material": 0.1082,
+    "secondary_only": 0.8376,
+    "stranded": 0.0541,
+    "roles": {
+     "body": 0.8351,
+     "combo_pair": 0.1082,
+     "development": 0.0851,
+     "pitch": 0.3789
+    }
+   }
+  },
+  "Derevi, Empyrial Tactician": {
+   "dead_in_kept_hand": {
+    "n": 290,
+    "p_dead": 0.4345,
+    "ci95": [
+     0.37866,
+     0.49202
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0725,
+    "n_held": 435,
+    "material": 0.4506,
+    "secondary_only": 0.2966,
+    "stranded": 0.2529,
+    "roles": {
+     "body": 0.2713,
+     "development": 0.4506,
+     "pitch": 0.3264
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.0805,
+    "n_held": 483,
+    "material": 0.5839,
+    "secondary_only": 0.2526,
+    "stranded": 0.1636,
+    "roles": {
+     "body": 0.3892,
+     "development": 0.5839,
+     "pitch": 0.3561
+    }
+   }
+  }
+ },
+ "A_oracle_less": {
+  "Volatile Stormdrake": {
+   "dead_in_kept_hand": {
+    "n": 374,
+    "p_dead": 0.0588,
+    "ci95": [
+     0.03916,
+     0.08745
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08917,
+    "n_held": 535,
+    "material": 0.9084,
+    "secondary_only": 0.0486,
+    "stranded": 0.043,
+    "roles": {
+     "body": 0.2841,
+     "interaction_held": 0.9084,
+     "pitch": 0.2916
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.09767,
+    "n_held": 586,
+    "material": 0.9334,
+    "secondary_only": 0.041,
+    "stranded": 0.0256,
+    "roles": {
+     "body": 0.3925,
+     "interaction_held": 0.9334,
+     "pitch": 0.3191
+    }
+   }
+  },
+  "Colossal Skyturtle": {
+   "dead_in_kept_hand": {
+    "n": 301,
+    "p_dead": 0.0332,
+    "ci95": [
+     0.01814,
+     0.06007
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07117,
+    "n_held": 427,
+    "material": 0.9227,
+    "secondary_only": 0.0375,
+    "stranded": 0.0398,
+    "roles": {
+     "body": 0.3044,
+     "interaction_held": 0.9227,
+     "pitch": 0.363
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.08133,
+    "n_held": 488,
+    "material": 0.9529,
+    "secondary_only": 0.0266,
+    "stranded": 0.0205,
+    "roles": {
+     "body": 0.4201,
+     "combo_live": 0.002,
+     "interaction_held": 0.9529,
+     "pitch": 0.4139
+    }
+   }
+  },
+  "Gilded Drake": {
+   "dead_in_kept_hand": {
+    "n": 389,
+    "p_dead": 0.0643,
+    "ci95": [
+     0.04391,
+     0.09315
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08917,
+    "n_held": 535,
+    "material": 0.9028,
+    "secondary_only": 0.0467,
+    "stranded": 0.0505,
+    "roles": {
+     "body": 0.3028,
+     "interaction_held": 0.9028,
+     "pitch": 0.2804
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.096,
+    "n_held": 576,
+    "material": 0.9219,
+    "secondary_only": 0.0434,
+    "stranded": 0.0347,
+    "roles": {
+     "body": 0.3924,
+     "interaction_held": 0.9219,
+     "pitch": 0.3212
+    }
+   }
+  },
+  "The Queen of Dale": {
+   "dead_in_kept_hand": {
+    "n": 337,
+    "p_dead": 0.1395,
+    "ci95": [
+     0.10653,
+     0.18053
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07117,
+    "n_held": 427,
+    "material": 0.8056,
+    "secondary_only": 0.0703,
+    "stranded": 0.1241,
+    "roles": {
+     "body": 0.2927,
+     "development": 0.8056
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.06683,
+    "n_held": 401,
+    "material": 0.813,
+    "secondary_only": 0.0773,
+    "stranded": 0.1097,
+    "roles": {
+     "body": 0.4165,
+     "combo_live": 0.005,
+     "development": 0.813
+    }
+   }
+  },
+  "Gleaming Splendor": {
+   "dead_in_kept_hand": {
+    "n": 305,
+    "p_dead": 0.1082,
+    "ci95": [
+     0.07809,
+     0.14806
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06667,
+    "n_held": 400,
+    "material": 0.8075,
+    "secondary_only": 0.0,
+    "stranded": 0.1925,
+    "roles": {
+     "development": 0.8075
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.06467,
+    "n_held": 388,
+    "material": 0.817,
+    "secondary_only": 0.0,
+    "stranded": 0.183,
+    "roles": {
+     "development": 0.817
+    }
+   }
+  },
+  "Lotho, Corrupt Shirriff": {
+   "dead_in_kept_hand": {
+    "n": 329,
+    "p_dead": 0.2796,
+    "ci95": [
+     0.23389,
+     0.33046
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07767,
+    "n_held": 466,
+    "material": 0.5901,
+    "secondary_only": 0.1202,
+    "stranded": 0.2897,
+    "roles": {
+     "body": 0.2833,
+     "development": 0.5901
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.08267,
+    "n_held": 496,
+    "material": 0.6573,
+    "secondary_only": 0.121,
+    "stranded": 0.2218,
+    "roles": {
+     "body": 0.3952,
+     "development": 0.6573
+    }
+   }
+  },
+  "Esper Sentinel": {
+   "dead_in_kept_hand": {
+    "n": 470,
+    "p_dead": 0.1553,
+    "ci95": [
+     0.12538,
+     0.19085
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.02667,
+    "n_held": 160,
+    "material": 0.5813,
+    "secondary_only": 0.0875,
+    "stranded": 0.3312,
+    "roles": {
+     "body": 0.3375,
+     "combo_live": 0.0063,
+     "development": 0.5813
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.02267,
+    "n_held": 136,
+    "material": 0.5515,
+    "secondary_only": 0.1176,
+    "stranded": 0.3309,
+    "roles": {
+     "body": 0.3088,
+     "development": 0.5515
+    }
+   }
+  },
+  "Delney, Streetwise Lookout": {
+   "dead_in_kept_hand": {
+    "n": 302,
+    "p_dead": 0.2185,
+    "ci95": [
+     0.17563,
+     0.26853
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06783,
+    "n_held": 407,
+    "material": 0.7322,
+    "secondary_only": 0.1007,
+    "stranded": 0.1671,
+    "roles": {
+     "body": 0.3292,
+     "development": 0.7322
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.07017,
+    "n_held": 421,
+    "material": 0.7767,
+    "secondary_only": 0.0736,
+    "stranded": 0.1496,
+    "roles": {
+     "body": 0.4204,
+     "development": 0.7767
+    }
+   }
+  },
+  "Clever Impersonator": {
+   "dead_in_kept_hand": {
+    "n": 261,
+    "p_dead": 0.5096,
+    "ci95": [
+     0.44923,
+     0.56965
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0635,
+    "n_held": 381,
+    "material": 0.3176,
+    "secondary_only": 0.3832,
+    "stranded": 0.2992,
+    "roles": {
+     "body": 0.2835,
+     "interaction_held": 0.3176,
+     "pitch": 0.3307
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.07483,
+    "n_held": 449,
+    "material": 0.4722,
+    "secondary_only": 0.3363,
+    "stranded": 0.1915,
+    "roles": {
+     "body": 0.3875,
+     "combo_live": 0.0022,
+     "interaction_held": 0.4722,
+     "pitch": 0.3541
+    }
+   }
+  },
+  "Endurance": {
+   "dead_in_kept_hand": {
+    "n": 304,
+    "p_dead": 0.0329,
+    "ci95": [
+     0.01796,
+     0.05948
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07767,
+    "n_held": 466,
+    "material": 0.9399,
+    "secondary_only": 0.0129,
+    "stranded": 0.0472,
+    "roles": {
+     "body": 0.2704,
+     "interaction_held": 0.9399
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.08783,
+    "n_held": 527,
+    "material": 0.9639,
+    "secondary_only": 0.0133,
+    "stranded": 0.0228,
+    "roles": {
+     "body": 0.3947,
+     "combo_live": 0.0019,
+     "interaction_held": 0.9639
+    }
+   }
+  },
+  "Mental Misstep": {
+   "dead_in_kept_hand": {
+    "n": 389,
+    "p_dead": 0.0,
+    "ci95": [
+     0.0,
+     0.00978
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08833,
+    "n_held": 530,
+    "material": 1.0,
+    "secondary_only": 0.0,
+    "stranded": 0.0,
+    "roles": {
+     "interaction_held": 1.0,
+     "pitch": 0.2925
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.09717,
+    "n_held": 583,
+    "material": 1.0,
+    "secondary_only": 0.0,
+    "stranded": 0.0,
+    "roles": {
+     "interaction_held": 1.0,
+     "pitch": 0.331
+    }
+   }
+  },
+  "Swan Song": {
+   "dead_in_kept_hand": {
+    "n": 414,
+    "p_dead": 0.0314,
+    "ci95": [
+     0.01844,
+     0.05298
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.0945,
+    "n_held": 567,
+    "material": 0.9453,
+    "secondary_only": 0.0194,
+    "stranded": 0.0353,
+    "roles": {
+     "interaction_held": 0.9453,
+     "pitch": 0.3122
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.10683,
+    "n_held": 641,
+    "material": 0.9563,
+    "secondary_only": 0.014,
+    "stranded": 0.0296,
+    "roles": {
+     "interaction_held": 0.9563,
+     "pitch": 0.3385
+    }
+   }
+  },
+  "Flusterstorm": {
+   "dead_in_kept_hand": {
+    "n": 389,
+    "p_dead": 0.0411,
+    "ci95": [
+     0.02547,
+     0.06576
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08567,
+    "n_held": 514,
+    "material": 0.9163,
+    "secondary_only": 0.0272,
+    "stranded": 0.0564,
+    "roles": {
+     "interaction_held": 0.9163,
+     "pitch": 0.284
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.09683,
+    "n_held": 581,
+    "material": 0.9329,
+    "secondary_only": 0.0258,
+    "stranded": 0.0413,
+    "roles": {
+     "interaction_held": 0.9329,
+     "pitch": 0.3253
+    }
+   }
+  },
+  "Faerie Mastermind": {
+   "dead_in_kept_hand": {
+    "n": 322,
+    "p_dead": 0.0652,
+    "ci95": [
+     0.04305,
+     0.09764
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06633,
+    "n_held": 398,
+    "material": 0.8869,
+    "secondary_only": 0.0503,
+    "stranded": 0.0628,
+    "roles": {
+     "body": 0.2638,
+     "combo_pair": 0.0804,
+     "development": 0.8819,
+     "pitch": 0.2864
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.0615,
+    "n_held": 369,
+    "material": 0.8916,
+    "secondary_only": 0.0623,
+    "stranded": 0.0461,
+    "roles": {
+     "body": 0.3686,
+     "combo_pair": 0.084,
+     "development": 0.878,
+     "pitch": 0.3442
+    }
+   }
+  },
+  "Orcish Bowmasters": {
+   "dead_in_kept_hand": {
+    "n": 380,
+    "p_dead": 0.1132,
+    "ci95": [
+     0.0851,
+     0.14896
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.08767,
+    "n_held": 526,
+    "material": 0.8441,
+    "secondary_only": 0.0513,
+    "stranded": 0.1046,
+    "roles": {
+     "body": 0.27,
+     "combo_pair": 0.0741,
+     "interaction_held": 0.8365
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.097,
+    "n_held": 582,
+    "material": 0.8746,
+    "secondary_only": 0.0481,
+    "stranded": 0.0773,
+    "roles": {
+     "body": 0.39,
+     "combo_pair": 0.0842,
+     "interaction_held": 0.8625
+    }
+   }
+  },
+  "Oboro Breezecaller": {
+   "dead_in_kept_hand": {
+    "n": 324,
+    "p_dead": 0.8951,
+    "ci95": [
+     0.85694,
+     0.92393
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.06817,
+    "n_held": 409,
+    "material": 0.0978,
+    "secondary_only": 0.8557,
+    "stranded": 0.0465,
+    "roles": {
+     "body": 0.8313,
+     "combo_pair": 0.0978,
+     "development": 0.0709,
+     "pitch": 0.3203
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.064,
+    "n_held": 384,
+    "material": 0.1094,
+    "secondary_only": 0.8411,
+    "stranded": 0.0495,
+    "roles": {
+     "body": 0.8385,
+     "combo_pair": 0.1094,
+     "development": 0.0859,
+     "pitch": 0.3854
+    }
+   }
+  },
+  "Derevi, Empyrial Tactician": {
+   "dead_in_kept_hand": {
+    "n": 290,
+    "p_dead": 0.4276,
+    "ci95": [
+     0.37196,
+     0.48511
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.07333,
+    "n_held": 440,
+    "material": 0.4659,
+    "secondary_only": 0.2932,
+    "stranded": 0.2409,
+    "roles": {
+     "body": 0.2682,
+     "development": 0.4659,
+     "pitch": 0.3227
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.081,
+    "n_held": 486,
+    "material": 0.5926,
+    "secondary_only": 0.251,
+    "stranded": 0.1564,
+    "roles": {
+     "body": 0.3827,
+     "development": 0.5926,
+     "pitch": 0.358
+    }
+   }
+  },
+  "Spellseeker": {
+   "dead_in_kept_hand": {
+    "n": 409,
+    "p_dead": 0.1394,
+    "ci95": [
+     0.10914,
+     0.1763
+    ]
+   },
+   "t3": {
+    "p_in_hand": 0.09817,
+    "n_held": 589,
+    "material": 0.7589,
+    "secondary_only": 0.1273,
+    "stranded": 0.1138,
+    "roles": {
+     "body": 0.2224,
+     "development": 0.7589,
+     "fair_tutor": 0.7589,
+     "pitch": 0.3362
+    }
+   },
+   "t4": {
+    "p_in_hand": 0.10917,
+    "n_held": 655,
+    "material": 0.8275,
+    "secondary_only": 0.1069,
+    "stranded": 0.0656,
+    "roles": {
+     "body": 0.3099,
+     "combo_live": 0.0107,
+     "development": 0.8275,
+     "fair_tutor": 0.8275,
+     "pitch": 0.3802
+    }
+   }
+  }
+ }
+}
