@@ -23,7 +23,13 @@ import {
   getMoxfield,
   normalizeName,
 } from "./scoring.mjs";
-import { resolveCard, evaluate, evaluateSavedDeck, teamEvaluation } from "./legality.mjs";
+import {
+  resolveCard,
+  evaluate,
+  evaluateSavedDeck,
+  teamEvaluation,
+} from "./legality.mjs";
+import { catalogManifest } from "./card-catalog.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
 import { installRulingRoutes } from "./rulings.mjs";
@@ -88,22 +94,59 @@ async function currentPrices(c = pool) {
     [],
   );
 }
+async function importStates(c, team) {
+  return (
+    await c.query(
+      "SELECT DISTINCT ON(slot) id,team_id,slot,source_url,state,message,issues,created_at FROM deck_import_attempts WHERE team_id=$1 ORDER BY slot,created_at DESC,id DESC",
+      [team],
+    )
+  ).rows;
+}
+const pendingImport = (a) =>
+  ["awaiting_decklist", "needs_review"].includes(a?.state);
+async function recordImport(c, team, slot, state, data = {}, actor = "public") {
+  const record = (
+    await c.query(
+      "INSERT INTO deck_import_attempts(id,team_id,slot,source_url,state,message,raw_deck,source_text,issues,deck_version_id,actor) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING id,team_id,slot,source_url,state,message,issues,created_at",
+      [
+        id(),
+        team,
+        slot,
+        data.source_url || null,
+        state,
+        data.message || "",
+        data.raw ? JSON.stringify(data.raw) : null,
+        data.source_text || null,
+        JSON.stringify(data.issues || []),
+        data.deck_version_id || null,
+        actor,
+      ],
+    )
+  ).rows[0];
+  await audit(c, actor, "deck.import." + state, record.id, { team, slot });
+  return record;
+}
 async function deckPair(c, team, prices) {
+  const pending = new Set(
+    (await importStates(c, team)).filter(pendingImport).map((a) => a.slot),
+  );
   const r = await c.query(
     "SELECT DISTINCT ON(slot) * FROM deck_versions WHERE team_id=$1 ORDER BY slot,created_at DESC,id DESC",
     [team],
   );
-  return r.rows.map((d) => {
-    const v = evaluateSavedDeck(d, prices);
-    return {
-      version_id: d.id,
-      slot: d.slot,
-      source_url: d.source_url,
-      deck: v.deck,
-      score: v.score,
-      submitted_at: d.created_at,
-    };
-  });
+  return r.rows
+    .filter((d) => !pending.has(d.slot))
+    .map((d) => {
+      const v = evaluateSavedDeck(d, prices);
+      return {
+        version_id: d.id,
+        slot: d.slot,
+        source_url: d.source_url,
+        deck: v.deck,
+        score: v.score,
+        submitted_at: d.created_at,
+      };
+    });
 }
 async function registrationSnapshot(c, reg, decks, actor) {
   const score = teamEvaluation(decks.map((d) => d.score));
@@ -159,7 +202,10 @@ async function sync(c, event) {
   });
   return data;
 }
-export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
+export function createApp({
+  scryfallClient = defaultScryfallClient,
+  moxfieldOptions = {},
+} = {}) {
   const app = express();
   app.set("trust proxy", 1);
   app.disable("x-powered-by");
@@ -298,7 +344,7 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
       teams: teams.rows,
       rules: rules.rows[0],
       price: { id: price.id, name: price.name },
-      catalogVersion: "2026-10-20",
+      catalogVersion: catalogManifest.version,
       mockEnabled: process.env.ALLOW_MOCK === "true",
     });
   });
@@ -333,7 +379,7 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
       req.body.decks.map(async (d) => {
         const raw = d.text?.trim()
           ? parseExport(d.text)
-          : await getMoxfield(deckIdFromURL(d.link));
+          : await getMoxfield(deckIdFromURL(d.link), moxfieldOptions);
         return evaluate(raw, prices);
       }),
     );
@@ -373,10 +419,15 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
       const current = evaluateSavedDeck(d, version.prices);
       return { ...d, current_deck: current.deck, current_score: current.score };
     });
+    const imports = await importStates(pool, team.id);
+    const pending = new Set(imports.filter(pendingImport).map((a) => a.slot));
     res.json({
       ...team,
       decks,
-      team_score: teamEvaluation(decks.map((d) => d.current_score)),
+      imports,
+      team_score: teamEvaluation(
+        decks.filter((d) => !pending.has(d.slot)).map((d) => d.current_score),
+      ),
     });
   });
   app.patch("/api/teams/:id", async (req, res) => {
@@ -402,42 +453,175 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
     res.json(team);
   });
   app.post("/api/teams/:id/decks/:slot", async (req, res) => {
-    const slot = Number(req.params.slot);
+    const slot = Number(req.params.slot),
+      team = req.params.id,
+      actor = req.admin ? "admin" : "public";
     if (![1, 2].includes(slot)) throw fail("Slot must be 1 or 2");
-    let source_url = req.body.link ? String(req.body.link) : null;
-    if (source_url) deckIdFromURL(source_url);
-    const raw = req.body.text?.trim()
-      ? parseExport(req.body.text)
-      : await getMoxfield(deckIdFromURL(source_url));
-    const d = await transaction(async (c) => {
-      await one(c, "SELECT id FROM teams WHERE id=$1 FOR UPDATE", [
-        req.params.id,
-      ]);
-      const version = await currentPrices(c),
-        v = evaluate(raw, version.prices),
-        deckId = id();
+    await one(pool, "SELECT id FROM teams WHERE id=$1", [team]);
+    let source_url = req.body.link?.trim()
+      ? "https://moxfield.com/decks/" + deckIdFromURL(req.body.link)
+      : null;
+    let raw,
+      source_text = req.body.text?.trim() ? req.body.text : null,
+      upstream;
+    if (req.body.review_id) {
+      const previous = await one(
+        pool,
+        "SELECT * FROM deck_import_attempts WHERE id=$1 AND team_id=$2 AND slot=$3 AND state='needs_review'",
+        [req.body.review_id, team, slot],
+      );
+      if (!previous.raw_deck)
+        throw fail("That import is unavailable; paste the export again");
+      raw = structuredClone(previous.raw_deck);
+      source_text = previous.source_text;
+      source_url = previous.source_url;
+      const choices = req.body.choices || {};
+      for (const issue of previous.issues) {
+        const choice = choices[issue.index];
+        if (!choice) continue;
+        const card = resolveCard(choice);
+        if (
+          !card ||
+          (issue.candidates.length &&
+            !issue.candidates.some((c) => c.oracle_id === card.oracle_id))
+        )
+          throw fail(
+            "Choose one of the suggested cards for " + issue.submitted,
+          );
+        raw.cards[issue.index] = {
+          ...raw.cards[issue.index],
+          submitted_name:
+            raw.cards[issue.index].submitted_name ||
+            raw.cards[issue.index].name,
+          name: card.name,
+          match_method: "confirmed",
+        };
+      }
+    } else if (source_text) raw = parseExport(source_text);
+    else {
+      if (!source_url) throw fail("Paste a Moxfield link or a deck export");
+      try {
+        raw = await getMoxfield(deckIdFromURL(source_url), moxfieldOptions);
+      } catch (e) {
+        upstream = e.message;
+      }
+    }
+    const result = await transaction(async (c) => {
+      await one(c, "SELECT id FROM teams WHERE id=$1 FOR UPDATE", [team]);
+      if (req.body.review_id) {
+        const latest = (await importStates(c, team)).find(
+          (a) => a.slot === slot,
+        );
+        if (latest?.id !== req.body.review_id)
+          throw fail(
+            "This import was replaced. Reload the team before saving.",
+            409,
+          );
+      }
+      if (!source_url)
+        source_url =
+          (await importStates(c, team)).find((a) => a.slot === slot)
+            ?.source_url || null;
+      if (upstream)
+        return {
+          status: 201,
+          body: {
+            state: "awaiting_decklist",
+            import: await recordImport(
+              c,
+              team,
+              slot,
+              "awaiting_decklist",
+              {
+                source_url,
+                message:
+                  upstream +
+                  " Link saved; paste or upload the Moxfield text export to finish.",
+              },
+              actor,
+            ),
+            score: null,
+          },
+        };
+      const version = await currentPrices(c);
+      let v;
+      try {
+        v = evaluate(raw, version.prices);
+      } catch (e) {
+        if (e.code !== "card_resolution_required") throw e;
+        const attempt = await recordImport(
+          c,
+          team,
+          slot,
+          "needs_review",
+          {
+            source_url,
+            raw,
+            source_text,
+            issues: e.issues,
+            message: e.message,
+          },
+          actor,
+        );
+        return {
+          status: 422,
+          body: {
+            error: e.message,
+            code: e.code,
+            review_id: attempt.id,
+            issues: e.issues,
+          },
+        };
+      }
+      const deckId = id();
       await c.query(
         "INSERT INTO deck_versions(id,team_id,slot,source_url,source_text,deck,score,price_version_id,actor) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)",
         [
           deckId,
-          req.params.id,
+          team,
           slot,
           source_url,
-          req.body.text || null,
+          source_text,
           JSON.stringify(v.deck),
           JSON.stringify(v.score),
           version.id,
-          req.admin ? "admin" : "public",
+          actor,
         ],
       );
-      await audit(c, req.admin ? "admin" : "public", "deck.save", deckId, {
-        team: req.params.id,
+      await recordImport(
+        c,
+        team,
+        slot,
+        "imported",
+        { source_url, deck_version_id: deckId },
+        actor,
+      );
+      await audit(c, actor, "deck.save", deckId, {
+        team,
         slot,
         points: v.score.points,
       });
-      return { id: deckId, ...v };
+      return { status: 201, body: { id: deckId, state: "imported", ...v } };
     });
-    res.status(201).json(d);
+    res.status(result.status).json(result.body);
+  });
+  app.post("/api/teams/:id/decks/:slot/cancel-import", async (req, res) => {
+    const slot = Number(req.params.slot);
+    if (![1, 2].includes(slot)) throw fail("Slot must be 1 or 2");
+    const out = await transaction(async (c) => {
+      await one(c, "SELECT id FROM teams WHERE id=$1 FOR UPDATE", [
+        req.params.id,
+      ]);
+      return recordImport(
+        c,
+        req.params.id,
+        slot,
+        "cancelled",
+        {},
+        req.admin ? "admin" : "public",
+      );
+    });
+    res.json(out);
   });
   app.get("/api/events/:id", async (req, res) => {
     const e = await getEvent(pool, req.params.id);
@@ -693,6 +877,14 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
           p.id,
           d.id,
         ],
+      );
+      await recordImport(
+        c,
+        d.team_id,
+        d.slot,
+        "imported",
+        { source_url: d.source_url, deck_version_id: n },
+        "admin",
       );
       await audit(c, "admin", "deck.restore", n, { restored_from: d.id });
       return { id: n };
@@ -1031,6 +1223,7 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
       "ruling_versions",
       "teams",
       "deck_versions",
+      "deck_import_attempts",
       "events",
       "registrations",
       "registration_versions",
@@ -1041,7 +1234,7 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
       const out = {
         format: "commander-doubles-backup-v1",
         exported_at: new Date().toISOString(),
-        catalogVersion: "2026-10-20",
+        catalogVersion: catalogManifest.version,
       };
       for (const t of tables)
         out[t] = (await c.query("SELECT * FROM " + t)).rows;
@@ -1087,6 +1280,10 @@ export function createApp({ scryfallClient = defaultScryfallClient } = {}) {
         });
       } catch {}
     }
+    if (err.code === "card_resolution_required")
+      return res
+        .status(422)
+        .json({ error: err.message, code: err.code, issues: err.issues });
     let status = err.status || 400,
       message = err.message;
     if (err.code === "23505") {

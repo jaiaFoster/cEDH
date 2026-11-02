@@ -1,8 +1,5 @@
 // A deliberately bounded Scryfall-style subset; unsupported syntax is an error.
 // Static metadata is indexed once. Every request receives the selected published prices.
-import fs from "node:fs";
-import { gunzipSync } from "node:zlib";
-import { createHash } from "node:crypto";
 import { catalog, eligibility } from "./legality.mjs";
 import { normalizeName } from "./scoring.mjs";
 
@@ -249,24 +246,7 @@ export function compileQuery(query = "") {
   return (row) => predicates.every((p) => p(row));
 }
 
-const metaBytes = gunzipSync(
-  fs.readFileSync(new URL("./data/search-metadata.json.gz", import.meta.url)),
-);
-const metadata = JSON.parse(metaBytes);
-const provenance = JSON.parse(
-  fs.readFileSync(
-    new URL("./data/search-metadata.provenance.json", import.meta.url),
-  ),
-);
-const sha = (b) => createHash("sha256").update(b).digest("hex");
-if (
-  sha(fs.readFileSync(new URL("./data/oracle.jsonl.gz", import.meta.url))) !==
-    metadata.catalog_sha256 ||
-  sha(metaBytes) !== provenance.metadata_sha256
-)
-  throw Error(
-    "Search metadata/catalog checksum mismatch. Rebuild the metadata for the pinned catalog.",
-  );
+import { currentSearchMetadata as metadata } from "./card-catalog.mjs";
 export const searchIndex = catalog
   .filter((c) => c.oracle_id)
   .map((c) => {
@@ -347,15 +327,25 @@ export function parseFilters(params = {}) {
     !["0", "1", "true", "false"].includes(params.pointed)
   )
     bad("pointed must be 0 or 1.");
-  const source = choice(params.source || "local", ["local", "scryfall"], "search source");
-  if ((params.q || "").length > 2000) bad("Search is limited to 2,000 characters.", "invalid_query");
+  const source = choice(
+    params.source || "local",
+    ["local", "scryfall"],
+    "search source",
+  );
+  if ((params.q || "").length > 2000)
+    bad("Search is limited to 2,000 characters.", "invalid_query");
   const f = {
     source,
     query: params.q || "",
     predicate: source === "local" ? compileQuery(params.q || "") : () => true,
     sort: choice(params.sort || "name_asc", SORTS, "sort"),
     offset: integer(params.offset ?? "0", "Offset", 0, 1000000),
-    limit: integer(params.limit ?? (source === "scryfall" ? "175" : "100"), "Page size", 1, source === "scryfall" ? 175 : 100),
+    limit: integer(
+      params.limit ?? (source === "scryfall" ? "175" : "100"),
+      "Page size",
+      1,
+      source === "scryfall" ? 175 : 100,
+    ),
     points: choice(
       params.points ||
         (["1", "true"].includes(params.pointed) ? "pointed" : "all"),

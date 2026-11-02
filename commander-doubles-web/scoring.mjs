@@ -6,8 +6,6 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(ROOT, "public");
 const PORT = Number(process.env.PORT || 3000);
-const CACHE_MS = 60_000;
-const cache = new Map();
 const mime = {
   ".html": "text/html; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
@@ -84,7 +82,15 @@ export const PRICES = loadPrices(
 export function deckIdFromURL(link) {
   let u;
   try {
-    u = new URL(String(link).trim());
+    const input = String(link).trim();
+    u = new URL(
+      /^(?:www\.)?moxfield\.com\//i.test(input) ? "https://" + input : input,
+    );
+    if (
+      u.protocol === "http:" &&
+      ["moxfield.com", "www.moxfield.com"].includes(u.hostname)
+    )
+      u.protocol = "https:";
   } catch {
     throw Error("Use a complete https://moxfield.com/decks/... link");
   }
@@ -101,7 +107,8 @@ export function deckIdFromURL(link) {
   if (
     parts[0] !== "decks" ||
     !/^[A-Za-z0-9_-]{6,100}$/.test(parts[1] || "") ||
-    parts.length > 2
+    parts.length > 3 ||
+    (parts.length === 3 && parts[2] !== "primer")
   ) {
     throw Error(
       "Expected a Moxfield deck link like https://moxfield.com/decks/DECK_ID",
@@ -122,7 +129,13 @@ function entriesFromBoard(board, zone) {
     const count = Number(entry.quantity ?? entry.count ?? 1);
     if (!name || !Number.isInteger(count) || count < 1 || count > 100)
       throw Error("Unexpected card or count from Moxfield");
-    return { name: String(name), count, zone };
+    const printing = entry.card?.scryfall_id || entry.card?.scryfallId;
+    return {
+      name: String(name),
+      count,
+      zone,
+      ...(printing ? { printing_id: printing } : {}),
+    };
   });
 }
 export function decodeMoxfield(data) {
@@ -150,12 +163,16 @@ export function parseExport(text) {
   for (const original of text.split(/\r?\n/)) {
     let line = original.trim();
     if (!line || line.startsWith("#") || line.startsWith("//")) continue;
-    if (/^\[?(commander|commanders)\]?:?$/i.test(line)) {
+    if (/^\[?(commander|commanders|command zone)\]?:?$/i.test(line)) {
       zone = "command";
       commandFound = true;
       continue;
     }
-    if (/^\[?(mainboard|main|deck)\]?:?$/i.test(line)) {
+    if (
+      /^\[?(mainboard|main board|main deck|main|decklist|deck)\]?:?$/i.test(
+        line,
+      )
+    ) {
       zone = "main";
       continue;
     }
@@ -171,18 +188,26 @@ export function parseExport(text) {
     // Moxfield printing/foil tags can occur in either order.
     let marker;
     while ((marker = line.match(/\s+\*(CMDR|F|E)\*\s*$/i))) {
-      if (marker[1].toUpperCase() === "CMDR") inlineCommander = commandFound = true;
+      if (marker[1].toUpperCase() === "CMDR")
+        inlineCommander = commandFound = true;
       line = line.slice(0, marker.index).trim();
     }
     if (zone === "ignore" && !inlineCommander) continue;
     const match = line.match(
-      /^(\d+)x?\s+(.+?)(?:\s+\([A-Za-z0-9_-]+\)(?:\s+[A-Za-z0-9★†*-]+)?)?$/i,
+      /^(\d+)x?\s+(.+?)(?:\s+\(([A-Za-z0-9_-]+)\)(?:\s+([A-Za-z0-9★†*-]+))?)?$/i,
     );
     if (!match) throw Error("Could not read export line: " + line.slice(0, 80));
     const count = Number(match[1]);
     if (!Number.isInteger(count) || count < 1 || count > 100)
       throw Error("Invalid card count");
-    cards.push({ name: match[2].trim(), count, zone: inlineCommander ? "command" : zone });
+    cards.push({
+      name: match[2].trim(),
+      count,
+      zone: inlineCommander ? "command" : zone,
+      ...(match[3] && match[4]
+        ? { set_code: match[3], collector_number: match[4] }
+        : {}),
+    });
   }
   if (!commandFound)
     throw Error(
@@ -252,12 +277,25 @@ export function scoreTeam(decks) {
     label: within ? "Within points budget" : "Over budget or incomplete",
   };
 }
-export async function getMoxfield(
-  id,
-  { fetcher = fetch, timeout = 10000 } = {},
-) {
-  const current = cache.get(id);
-  if (current && Date.now() - current.at < CACHE_MS) return current.value;
+const providerCaches = new WeakMap();
+export async function getMoxfield(id, options = {}) {
+  if (!/^[A-Za-z0-9_-]{6,100}$/.test(id))
+    throw Error("Invalid Moxfield deck identifier");
+  const fetcher = options.fetcher || fetch;
+  let records = providerCaches.get(fetcher);
+  if (!records) providerCaches.set(fetcher, (records = new Map()));
+  const old = records.get(id);
+  if (old && Date.now() < old.until) return structuredClone(await old.promise);
+  if (records.size >= 100) records.clear();
+  const entry = { until: Date.now() + 60000, promise: null };
+  entry.promise = fetchMoxfield(id, options).catch((e) => {
+    entry.until = Date.now() + 15000;
+    throw e;
+  });
+  records.set(id, entry);
+  return structuredClone(await entry.promise);
+}
+async function fetchMoxfield(id, { fetcher = fetch, timeout = 10000 } = {}) {
   const endpoint =
     "https://api2.moxfield.com/v3/decks/all/" + encodeURIComponent(id);
   let response;
@@ -291,10 +329,11 @@ export async function getMoxfield(
   try {
     json = await response.json();
   } catch {
-    throw Error("Moxfield returned unreadable deck data. Use the pasted export option below.");
+    throw Error(
+      "Moxfield returned unreadable deck data. Use the pasted export option below.",
+    );
   }
   const value = decodeMoxfield(json);
-  if (cache.size > 100) cache.clear();
-  cache.set(id, { at: Date.now(), value });
+
   return value;
 }

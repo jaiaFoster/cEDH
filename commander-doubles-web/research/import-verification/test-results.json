@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-11-01 America/Phoenix",
+  "node": {
+    "tests": 122,
+    "pass": 122,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "expected": 33,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0
+  },
+  "rulings": {
+    "published_seed": 57,
+    "draft_seed": 3,
+    "initial_subjects": 30,
+    "additional_entries": 29,
+    "oracle_cards": 72,
+    "edition": "September 25, 2026",
+    "review_queue": 10
+  },
+  "offline_replay": {
+    "version": "scryfall-2026-11-01-v2-cb6989dcad",
+    "cards": 39287,
+    "printings": 547500,
+    "aliases": 288467,
+    "activated": true
+  },
+  "live_staging_feature_deployment": false,
+  "staging_limitation": "Railway OAuth refresh expired (invalid_grant); baseline read-only deployed import probes retained separately."
+}

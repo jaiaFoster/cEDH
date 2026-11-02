@@ -236,10 +236,11 @@ await test("PostgreSQL application acceptance: tournament one through tournament
       const banned = await post("/api/score", { decks: [{ text: raw.replace("Lotus Petla", "Black Lotus") }] });
       assert.equal(banned.decks[0].legal, false);
       assert.ok(banned.decks[0].errors.some(e => /banned/.test(e)));
-      await post("/api/score", { decks: [{ text: raw.replace("Lotus Petla", "Imaginary Unknown Card") }] }, false, 400);
+      await post("/api/score", { decks: [{ text: raw.replace("Lotus Petla", "Imaginary Unknown Card") }] }, false, 422);
       const team = await post("/api/teams", { name: "Import regression fixture" }, false, 201);
       subtest.after(async () => {
-        await q("DELETE FROM deck_versions WHERE team_id=$1", [team.id]);
+        await q("DELETE FROM deck_import_attempts WHERE team_id=$1", [team.id]);
+          await q("DELETE FROM deck_versions WHERE team_id=$1", [team.id]);
         await q("DELETE FROM teams WHERE id=$1", [team.id]);
       });
       const saved = await post(`/api/teams/${team.id}/decks/1`, { text: raw }, false, 201);
@@ -268,6 +269,7 @@ await test("PostgreSQL application acceptance: tournament one through tournament
           await q("DELETE FROM registrations WHERE id=$1", [reg.id]);
         }
         for (const team of [a, b]) {
+          await q("DELETE FROM deck_import_attempts WHERE team_id=$1", [team.id]);
           await q("DELETE FROM deck_versions WHERE team_id=$1", [team.id]);
           await q("DELETE FROM teams WHERE id=$1", [team.id]);
         }
@@ -364,7 +366,7 @@ await test("PostgreSQL application acceptance: tournament one through tournament
           "/api/score",
           { decks: [{ text: "Commander\n1 Fake Card\nDeck\n99 Island" }] },
           false,
-          400,
+          422,
         );
         const before = (await get("/api/teams/" + teams[0].id)).decks.find(
           (d) => d.slot === 1,
