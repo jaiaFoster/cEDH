@@ -228,3 +228,7 @@ Optional research refresh instructions and third-party access/licensing notes ar
 ## Printing-aware imports (November 1 continuation)
 
 See [PRINTING_IMPORTS.md](PRINTING_IMPORTS.md) for translated/flavor-name recognition, persistent Moxfield references, multi-card review, immutable bulk-catalog refresh, source provenance and actual live-import limitations. Migration 003 is additive. `data/active-catalog.json` selects the process-lifetime card snapshot; publishing prices is a separate operation. Existing event snapshots and accepted v3 prices are preserved.
+
+## Official rules and Winning & Losing FAQ
+
+The Rules page includes permanent Wizards source access, dated PDF/TXT links, a seven-section CR index and 32 additional **Winning & Losing** questions. Per-answer CR numbers open the official TXT with Find instructions. Existing entries and organizer versions are preserved; the existing protected rulings editor handles corrections. See [the research and maintenance notes](research/winning-losing/README.md) for provenance, offline checks and the source-refresh procedure. The application does not mirror the full Comprehensive Rules.

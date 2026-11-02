@@ -9,7 +9,7 @@
     "test:e2e": "playwright test",
     "migrate": "node db.mjs",
     "backup": "node scripts/backup.mjs",
-    "test:rulings-corpus": "node scripts/verify-rulings.mjs --check"
+    "test:rulings-corpus": "node scripts/verify-rulings.mjs --check && node scripts/build-winning-losing.mjs --check && node scripts/verify-winning-losing.mjs --check"
   },
   "engines": {
     "node": ">=22"

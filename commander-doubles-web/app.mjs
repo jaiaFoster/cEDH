@@ -32,7 +32,7 @@ import {
 import { catalogManifest } from "./card-catalog.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
-import { installRulingRoutes } from "./rulings.mjs";
+import { installRulingRoutes, officialRulesSources } from "./rulings.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const fail = (message, status = 400) =>
   Object.assign(new Error(message), { status });
@@ -344,6 +344,7 @@ export function createApp({
       teams: teams.rows,
       rules: rules.rows[0],
       price: { id: price.id, name: price.name },
+      officialRulesSources,
       catalogVersion: catalogManifest.version,
       mockEnabled: process.env.ALLOW_MOCK === "true",
     });

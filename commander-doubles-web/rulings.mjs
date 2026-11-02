@@ -5,6 +5,16 @@ import { resolveCard } from "./legality.mjs";
 export const rulingSeed = JSON.parse(
   fs.readFileSync(new URL("./data/rulings/entries.json", import.meta.url)),
 );
+export const winningLosingSeed = JSON.parse(
+  fs.readFileSync(
+    new URL("./data/rulings/winning-losing.json", import.meta.url),
+  ),
+);
+export const officialRulesSources = JSON.parse(
+  fs.readFileSync(
+    new URL("./data/rulings/official-sources.json", import.meta.url),
+  ),
+);
 export const rulingDraftSeed = JSON.parse(
   fs.readFileSync(new URL("./data/rulings/drafts.json", import.meta.url)),
 );
@@ -15,6 +25,7 @@ export const ruleIndex = JSON.parse(
 );
 export const categories = [
   "Fundamentals",
+  "Winning & Losing",
   "Shared turns",
   "Protection",
   "Friendly fire",
@@ -142,7 +153,11 @@ export function validateRuling(input, { publishing = false } = {}) {
   return x;
 }
 export async function seedRulings(c) {
-  for (const input of [...rulingSeed, ...rulingDraftSeed]) {
+  for (const input of [
+    ...rulingSeed,
+    ...winningLosingSeed,
+    ...rulingDraftSeed,
+  ]) {
     const content = validateRuling(input, {
       publishing: input.verification_status === "verified",
     });
@@ -194,6 +209,7 @@ export async function publicRulings(c, filters = {}) {
           ...r.content.cards.map((c) => c.name),
           ...r.content.exceptions,
           ...r.content.prerequisites,
+          ...r.content.rule_references.map((ref) => "CR " + ref),
         ]
           .join(" ")
           .toLocaleLowerCase()
@@ -209,6 +225,7 @@ export async function publicRulings(c, filters = {}) {
     categories,
     classifications,
     rules_edition: ruleIndex.edition,
+    official_sources: officialRulesSources,
   };
 }
 export function installRulingRoutes(app, { q, transaction, audit, admin }) {
@@ -234,6 +251,7 @@ export function installRulingRoutes(app, { q, transaction, audit, admin }) {
       classifications,
       evidence_types: evidenceTypes,
       rules_edition: ruleIndex.edition,
+      official_sources: officialRulesSources,
     });
   });
   app.get("/api/admin/rulings/export", async (req, res) => {

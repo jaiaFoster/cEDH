@@ -1,0 +1,461 @@
+[
+  {
+    "ruling_id": "win-loss-one-winner",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.1": "a4ee62515f02b77eec80e6281abf5f10822f895bdb7a7a953d573bf9adcb7f15",
+      "104.2b": "5a034400421420332f7f55837cf6bb59ed8fc4ba8d51ab1a8f6f42a908825310",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "104.3f": "1db4e1cc1876370d59d543cbf3a4f08ec4226dbf2e9d2456012254d8bc468b7c"
+    },
+    "oracle_text_hashes": {
+      "e4125377-34c0-4b54-bdf8-4e88f5d24565": "59ee137ca76f6858e7aec63d5f82210faa4617dd44132f63daa78f7b83767457"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-one-loser",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3e": "5cf8185d88e7e7205d2a663ec95e87be61d782674ac73f2f1867de087019331c",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "09d01406-b529-4c3b-900e-d8c889a4c400": "5edddaaad054065954fcbaf289a997fd1f2739a71377fd089a69302172b68dc2"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-mill",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3c": "3a8f7f6f585424d91fc84ca8ca080723027313fd526f85cc83256907f2c8a48f",
+      "121.4": "585a46669b543ecd947d4b26c097638a153ce9a91ae15ceba46414ab2e8d6eea",
+      "704.5b": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-last-card",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3c": "3a8f7f6f585424d91fc84ca8ca080723027313fd526f85cc83256907f2c8a48f",
+      "121.1": "397f6ed2cc76589f679bb58aaf94fa43176e187803c730233fb7c9ff04798791",
+      "121.4": "585a46669b543ecd947d4b26c097638a153ce9a91ae15ceba46414ab2e8d6eea",
+      "704.5b": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-draw-batch",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3c": "3a8f7f6f585424d91fc84ca8ca080723027313fd526f85cc83256907f2c8a48f",
+      "121.2": "5807cc325ac8bae7713d1e8424eadfb395e9de218f2aaff04cb215f12523831a",
+      "121.4": "585a46669b543ecd947d4b26c097638a153ce9a91ae15ceba46414ab2e8d6eea",
+      "704.3": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a",
+      "704.4": "459377da9a9f4f79a6d10badbfa84c7f6d1a30d570c3d22008839151b36b742f",
+      "704.5b": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-separate-libraries",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "121.1": "397f6ed2cc76589f679bb58aaf94fa43176e187803c730233fb7c9ff04798791",
+      "805.4b": "77fa1b10b7ef34f48b623c597bd963da731345d97ab8d300cfe6e8f2df13b837",
+      "810.4": "a1d38a3304d81348b88292838218e599cd9799fc26b1635a2523a3a2c1ab3a32",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-respond-empty-draw",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "121.4": "585a46669b543ecd947d4b26c097638a153ce9a91ae15ceba46414ab2e8d6eea",
+      "117.5": "f3a1c36355eb768f8f7e696fa5bb07d1039489dd2b38eea6ddfaee5e7011ccc9",
+      "704.3": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a",
+      "704.5b": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-laboratory-maniac",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "121.1": "397f6ed2cc76589f679bb58aaf94fa43176e187803c730233fb7c9ff04798791",
+      "121.6": "c574d0ba26ec2804efa707b49bf7e31630e431845242ade271cfdfe250bb82c9",
+      "614.6": "8be9726a9a7521f0855b4dd822d1de059fc15e83b7468d6adf18b10cf34e441c",
+      "810.4": "a1d38a3304d81348b88292838218e599cd9799fc26b1635a2523a3a2c1ab3a32",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "aa286dd5-aa19-446d-9003-684d81eb57ca": "72ae6ec008dac47b47383571d800472e010fe3254cadf44b1ee134eccb71e67b"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-oracle",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "109.5": "b6c911853bd9958a2e953084cb4fd23b3f862c1a7dec70a1dce61cb0b8e1a300",
+      "810.4": "a1d38a3304d81348b88292838218e599cd9799fc26b1635a2523a3a2c1ab3a32",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "1de1b591-a73f-4974-b507-8c63e07a0868": "82cfc8bf46425931d5e11657af31b5b8a395ba602aa4abb3d70f0e802c1ab56f"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-zero-life",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3b": "d484c1eeccfa819765e8555e0301321edbef0fc354a016d176a11701abcebe5d",
+      "119.6": "6030353ea6464ddc72c080da9b65d5ea07a390aecd96a648dce9e3c536c9884a",
+      "704.3": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a",
+      "704.6a": "7f5b2d1dc6f6eeb04e12121d430109177fda89806ee0dbdaf5bc528ca1dcfc9a",
+      "810.8c": "dec77068356944a0016b669a8e8268b64844c31e824fe26feba5cb5cd8ea8948",
+      "810.9": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-pay-to-zero",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "119.4": "3a3dc935b36b27200ab4b635c6c64b241fea3ad350a4d977533159db54c4af9a",
+      "810.9a": "21e7d935b2762dce9b5b41e2a8c418b7ed557e9365968e38d0584fa75429e8c6",
+      "810.9b": "b58d464ecc1e1cff989480f782b3f3d0c55b494589ed96c29784d12c7a32d1f8",
+      "704.6a": "7f5b2d1dc6f6eeb04e12121d430109177fda89806ee0dbdaf5bc528ca1dcfc9a",
+      "810.8c": "dec77068356944a0016b669a8e8268b64844c31e824fe26feba5cb5cd8ea8948"
+    },
+    "oracle_text_hashes": {
+      "5f15125e-ae89-471e-b055-226a783bc7c1": "a2084a492cd203941d6767aee73a70ca85b6f97bed1ded44ed7956b943d34547"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-commander-threshold",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3j": "ae4a9413c159a47e1782c6ef84c697946a4a3e7db3fe77ddf6f5ab1f0b7bb300",
+      "704.6c": "7d686fc7d133da5925cd374480adba584d925639383d792a8ef82d83ded400bf",
+      "903.10a": "fd7b2dbe4463de586b2c6a1fd64808ac765d58de9ea22d6d7196e233cdb6ff33",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-different-commanders",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "903.10a": "fd7b2dbe4463de586b2c6a1fd64808ac765d58de9ea22d6d7196e233cdb6ff33",
+      "704.6c": "7d686fc7d133da5925cd374480adba584d925639383d792a8ef82d83ded400bf",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "903.3": "96a72dceb135d48c4d3b60e10e427d8d12df3da77738b204622d84e5f773d109"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-poison",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "704.5c": "a8aead7a5a871826352f9f177fb5c090026bc05410e485408f67ec9b2b893bf9",
+      "704.6b": "7eba6334d912127a4b138839de046b358fa6c60e9ac99717c91b5ec6c3967545",
+      "810.8d": "4602302ee28b5f58568410d87dfe91959abdc84883998f8b41e28e39adaefe47",
+      "810.10": "6c82f5f273701aa96edbc6944fb2598bb82c79571104424a578019172113ad3d"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-life-does-not-reset",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "119.3": "f0684f89b26ad746a9e972d85a3d346804b5b38eec7e5bb20a6fcbfaf98b9f9d",
+      "903.10a": "fd7b2dbe4463de586b2c6a1fd64808ac765d58de9ea22d6d7196e233cdb6ff33",
+      "704.6b": "7eba6334d912127a4b138839de046b358fa6c60e9ac99717c91b5ec6c3967545",
+      "704.6c": "7d686fc7d133da5925cd374480adba584d925639383d792a8ef82d83ded400bf",
+      "810.9": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91",
+      "810.10": "6c82f5f273701aa96edbc6944fb2598bb82c79571104424a578019172113ad3d"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-concede",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.3a": "ae2735063d359e0ed3f03902c80250c79a478f9324668114128aee019c1bee29",
+      "810.8b": "2bbb64191bed82764875cbe623fff91b677d756a91ceb91f5aeed8b72165b1f6"
+    },
+    "oracle_text_hashes": {
+      "b148578c-c0bf-4785-b97c-4b6f83028008": "4553e1bc75043cef93847096c668c6049f17789f08567a623d6a9f459594ced3"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-platinum-angel",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "704.5b": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d"
+    },
+    "oracle_text_hashes": {
+      "b148578c-c0bf-4785-b97c-4b6f83028008": "4553e1bc75043cef93847096c668c6049f17789f08567a623d6a9f459594ced3"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-cant-win",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "101.2": "687120d8c3051c1c57cd7e17da7038fab7ddfbdb2b3c5a9d8df525579708ef6c",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "7282f643-191b-41be-9f6f-82360c915d6d": "fd42fadccc47f23d7d6f93279f42d00ee3e7f096237ee3a9cd202188afeaadf0",
+      "1de1b591-a73f-4974-b507-8c63e07a0868": "82cfc8bf46425931d5e11657af31b5b8a395ba602aa4abb3d70f0e802c1ab56f"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-cant-lose-life",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "119.3": "f0684f89b26ad746a9e972d85a3d346804b5b38eec7e5bb20a6fcbfaf98b9f9d",
+      "119.6": "6030353ea6464ddc72c080da9b65d5ea07a390aecd96a648dce9e3c536c9884a",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "810.8c": "dec77068356944a0016b669a8e8268b64844c31e824fe26feba5cb5cd8ea8948",
+      "810.9": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91"
+    },
+    "oracle_text_hashes": {
+      "b148578c-c0bf-4785-b97c-4b6f83028008": "4553e1bc75043cef93847096c668c6049f17789f08567a623d6a9f459594ced3"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-opponent-wins",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.1": "a4ee62515f02b77eec80e6281abf5f10822f895bdb7a7a953d573bf9adcb7f15",
+      "104.2b": "5a034400421420332f7f55837cf6bb59ed8fc4ba8d51ab1a8f6f42a908825310",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "785c306c-471c-4699-8ab2-43c253d569cf": "18be330e1246dd8b3254820d2726c21494851a7097140a954bed95dd7e70db03",
+      "1de1b591-a73f-4974-b507-8c63e07a0868": "82cfc8bf46425931d5e11657af31b5b8a395ba602aa4abb3d70f0e802c1ab56f"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-angels-grace",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "810.9": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91",
+      "109.5": "b6c911853bd9958a2e953084cb4fd23b3f862c1a7dec70a1dce61cb0b8e1a300"
+    },
+    "oracle_text_hashes": {
+      "66ca8a60-e028-4a5f-8177-860b888cb9d1": "de55ee4af4270cf848ff3c510c6fed7318f43995107038f61129ccd0ce234a33",
+      "f3e213a4-ba5a-468a-93b3-c0a34e1bd725": "56d2b1afac11196834b9b4d5039541dee132a30dfa65d31f8bcc645f9dae05a3"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-temporary-protection",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "101.2": "687120d8c3051c1c57cd7e17da7038fab7ddfbdb2b3c5a9d8df525579708ef6c",
+      "704.3": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a",
+      "704.6a": "7f5b2d1dc6f6eeb04e12121d430109177fda89806ee0dbdaf5bc528ca1dcfc9a",
+      "704.6b": "7eba6334d912127a4b138839de046b358fa6c60e9ac99717c91b5ec6c3967545",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "66ca8a60-e028-4a5f-8177-860b888cb9d1": "de55ee4af4270cf848ff3c510c6fed7318f43995107038f61129ccd0ce234a33",
+      "f3e213a4-ba5a-468a-93b3-c0a34e1bd725": "56d2b1afac11196834b9b4d5039541dee132a30dfa65d31f8bcc645f9dae05a3"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-teferis-protection",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "810.9g": "07263387d944fd07ff7d506e3105bb4471e24fe86440c76a0be8b8550a900cd5",
+      "810.9h": "0d5a90be5b00b05984c7653bdbb7837ee721552a538520d41479795f44d625f8",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "704.5b": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d"
+    },
+    "oracle_text_hashes": {
+      "0d4ecdb1-ec90-497f-a7a4-1c68092b8757": "e1f37af71d72884039dd826f862f2f0525d32c251d3155ad8ae95f52b15f782f"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-pact",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "810.4": "a1d38a3304d81348b88292838218e599cd9799fc26b1635a2523a3a2c1ab3a32",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "106.4": "080c2d92caa63bdfcb42d33bddc5eca23c7bec8b0712454754fbaf2be5771b56"
+    },
+    "oracle_text_hashes": {
+      "f3e213a4-ba5a-468a-93b3-c0a34e1bd725": "56d2b1afac11196834b9b4d5039541dee132a30dfa65d31f8bcc645f9dae05a3"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-extra-turn-loss",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "805.8": "0071ee54661678696fd0e3998a071bc43c6df2198cac5110ac54162097ebef7d",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "603.7": "fe4879a5591986b613ed0480397a1300ec46dd2b0fff1c69550224a24dc6f6c1"
+    },
+    "oracle_text_hashes": {
+      "8d0adc5c-3fdd-4e22-b783-5651f8e57b65": "4ff2666e8799fe2ff0d0c5fe40a6fc247549b760143d847b68a7e1a020f91c10"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-target-loses",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.1": "a4ee62515f02b77eec80e6281abf5f10822f895bdb7a7a953d573bf9adcb7f15",
+      "104.3e": "5cf8185d88e7e7205d2a663ec95e87be61d782674ac73f2f1867de087019331c",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "oracle_text_hashes": {
+      "b919cca5-88c0-4104-b54e-49644fbf78a5": "e976aac5deb4de15e07780e02ee6c01dd315e3629bd273949855ac8cfdf9b05c"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-life-threshold",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "810.9a": "21e7d935b2762dce9b5b41e2a8c418b7ed557e9365968e38d0584fa75429e8c6",
+      "603.4": "1cf8dd0b467f3ede01b6b843c1d45085805afed34f491a39987e7498bd73b34d",
+      "810.8a": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492",
+      "113.7a": "c932de76acc658ffaa6ee28acdd4ee2b969cc36353fc559393692d2e59da25f5"
+    },
+    "oracle_text_hashes": {
+      "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc": "988e4cf06d228c708b5974f4fe03f869a3c549e8bd15c7d3a85c07a5685707d6",
+      "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b": "00d79595ac6e9c5ee3d98ab02705a49a8ae61a1d6aaae618510c80f7b5f7ae0d"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-reservoir",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "119.4": "3a3dc935b36b27200ab4b635c6c64b241fea3ad350a4d977533159db54c4af9a",
+      "810.9": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91",
+      "810.9a": "21e7d935b2762dce9b5b41e2a8c418b7ed557e9365968e38d0584fa75429e8c6"
+    },
+    "oracle_text_hashes": {
+      "5f15125e-ae89-471e-b055-226a783bc7c1": "a2084a492cd203941d6767aee73a70ca85b6f97bed1ded44ed7956b943d34547"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-sorin",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "119.5": "6817544e8003e8ba8c7a687edc657b9e74f47e116d9ef4b3a90e13d600f0dad0",
+      "810.9a": "21e7d935b2762dce9b5b41e2a8c418b7ed557e9365968e38d0584fa75429e8c6",
+      "810.9c": "bb8f06141c21839b663b4ddb66896dbc793d33107f451946db8ecd9ffae54c2c"
+    },
+    "oracle_text_hashes": {
+      "c151e8b7-4b28-4f03-8a81-9bf623f893d7": "e0430456ff19181cf6c8acf26125816fcc12e2908b716768bfaa2a136c9539c2"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-simultaneous-loss",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.4d": "c3f0eec144c9c4d87f1666d3a421341027e9a14d84fde8adde5259660846caa8",
+      "704.3": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a",
+      "704.6a": "7f5b2d1dc6f6eeb04e12121d430109177fda89806ee0dbdaf5bc528ca1dcfc9a",
+      "810.8c": "dec77068356944a0016b669a8e8268b64844c31e824fe26feba5cb5cd8ea8948",
+      "810.9": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91"
+    },
+    "oracle_text_hashes": {
+      "9a40614b-50a3-422c-849e-53c8b7d3d204": "24ddce66e2420749946e9a82ce4d5d4ad82c1fb6c030a95cd16f4b0e21a985c5"
+    },
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-lifegain-trigger",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "119.6": "6030353ea6464ddc72c080da9b65d5ea07a390aecd96a648dce9e3c536c9884a",
+      "704.3": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a",
+      "704.4": "459377da9a9f4f79a6d10badbfa84c7f6d1a30d570c3d22008839151b36b742f",
+      "810.8c": "dec77068356944a0016b669a8e8268b64844c31e824fe26feba5cb5cd8ea8948"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  },
+  {
+    "ruling_id": "win-loss-loops",
+    "verified_on": "2026-11-02",
+    "rules_edition": "September 25, 2026",
+    "rule_references": {
+      "104.4b": "904b4ad89b1c4559cd78d50f3a3178c054b7d260087368559eff7ad6e4bd36b2",
+      "732.2a": "340e8ce65eba622a0f7f21fd3287e0a5fde315192ddd5f3a5c2f9d7e2858cc1e",
+      "732.4": "2b30e07188eedf5a09961675c4285c44139baaaf28bdec6ba4678349e732409c",
+      "732.5": "eabce08e391630f0a3ef113d2fc17ef7fecabd45b049b75eabb25d435f0f20f6"
+    },
+    "oracle_text_hashes": {},
+    "original_summary": true
+  }
+]
