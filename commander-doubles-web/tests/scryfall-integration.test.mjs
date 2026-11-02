@@ -1,3 +1,4 @@
+import { catalogManifest } from "../card-catalog.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
@@ -66,7 +67,7 @@ await test("live discovery uses published prices and never modifies catalog or s
     await get({ offset: "175", sort: "mv_desc" });
     assert.equal(requests.at(-1).page, 2);
     assert.equal(requests.at(-1).sort, "mv_desc");
-    assert.equal(searchIndex.length, 38940);
+    assert.equal(searchIndex.length, catalogManifest.cards);
     assert.deepEqual(
       (await q("SELECT prices FROM price_versions WHERE id=$1", [old.id]))
         .rows[0].prices,

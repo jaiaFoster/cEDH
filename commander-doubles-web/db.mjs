@@ -44,7 +44,17 @@ export async function migrate() {
       );
     if (!(await c.query("SELECT 1 FROM migrations WHERE version=2")).rowCount)
       await c.query(
-        fs.readFileSync(new URL("./migrations/002_rulings.sql", import.meta.url), "utf8"),
+        fs.readFileSync(
+          new URL("./migrations/002_rulings.sql", import.meta.url),
+          "utf8",
+        ),
+      );
+    if (!(await c.query("SELECT 1 FROM migrations WHERE version=3")).rowCount)
+      await c.query(
+        fs.readFileSync(
+          new URL("./migrations/003_deck_imports.sql", import.meta.url),
+          "utf8",
+        ),
       );
     await seedRulings(c);
     if (!(await c.query("SELECT id FROM price_versions LIMIT 1")).rowCount) {

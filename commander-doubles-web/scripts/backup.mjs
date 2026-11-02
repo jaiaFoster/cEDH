@@ -9,6 +9,7 @@ const tables = [
   "ruling_versions",
   "teams",
   "deck_versions",
+  "deck_import_attempts",
   "events",
   "registrations",
   "registration_versions",

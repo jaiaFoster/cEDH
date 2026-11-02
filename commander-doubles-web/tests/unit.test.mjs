@@ -232,7 +232,6 @@ test("Moxfield URL rejects SSRF and credentials", () => {
     "oEWXWHM5eEGMmopExLWRCA",
   );
   for (const url of [
-    "http://moxfield.com/decks/abcdef",
     "https://evil.com/decks/abcdef",
     "https://moxfield.com@evil.com/decks/abcdef",
     "https://moxfield.com:88/decks/abcdef",

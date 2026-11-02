@@ -224,3 +224,7 @@ npm run test:e2e
 ```
 
 Optional research refresh instructions and third-party access/licensing notes are in [research/rulings/README.md](research/rulings/README.md). The large Spellbook export uses a streaming Python parser only for research. Normal browsing, editing, tests and scoring need no paid API or Python installation. Refreshing evidence does not automatically verify changed reasoning or publish database edits.
+
+## Printing-aware imports (November 1 continuation)
+
+See [PRINTING_IMPORTS.md](PRINTING_IMPORTS.md) for translated/flavor-name recognition, persistent Moxfield references, multi-card review, immutable bulk-catalog refresh, source provenance and actual live-import limitations. Migration 003 is additive. `data/active-catalog.json` selects the process-lifetime card snapshot; publishing prices is a separate operation. Existing event snapshots and accepted v3 prices are preserved.

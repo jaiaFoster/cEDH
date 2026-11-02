@@ -42,7 +42,8 @@ async function api(url, method = "GET", body, { signal } = {}) {
     ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
   });
   const data = await response.json();
-  if (!response.ok) throw Error(data.error || "Request failed");
+  if (!response.ok)
+    throw Object.assign(Error(data.error || "Request failed"), data);
   return data;
 }
 const action = (title, fn, primary = false) =>
@@ -117,19 +118,37 @@ async function home() {
 }
 let homeTeamRequest = 0;
 async function homeTeam(event) {
-  const request = ++homeTeamRequest, target = $("#home-team-info"), picker = $("#home-team");
+  const request = ++homeTeamRequest,
+    target = $("#home-team-info"),
+    picker = $("#home-team");
   if (!target || !picker) return;
   const selected = picker.value;
   const team = state.teams.find((t) => t.id === selected);
-  target.innerHTML = team ? '<p role="status">Loading team…</p>' : empty("Ready when you are", "Choose a registered team or create your own.");
+  target.innerHTML = team
+    ? '<p role="status">Loading team…</p>'
+    : empty(
+        "Ready when you are",
+        "Choose a registered team or create your own.",
+      );
   if (!team) return;
   let extra = "";
   if (event) {
     const e = await api("/api/events/" + event.id);
-    const match = e.matches.find((m) => m.state === "open" && m.players.some((p) => p?.team_id === team.id));
-    extra = match ? `<h3 class="spaced">Your next match</h3>${matchCard(match)}` : '<p class="spaced">No open match for your team in this event.</p>';
+    const match = e.matches.find(
+      (m) =>
+        m.state === "open" && m.players.some((p) => p?.team_id === team.id),
+    );
+    extra = match
+      ? `<h3 class="spaced">Your next match</h3>${matchCard(match)}`
+      : '<p class="spaced">No open match for your team in this event.</p>';
   }
-  if (request !== homeTeamRequest || target !== $("#home-team-info") || !target.isConnected || picker.value !== selected) return;
+  if (
+    request !== homeTeamRequest ||
+    target !== $("#home-team-info") ||
+    !target.isConnected ||
+    picker.value !== selected
+  )
+    return;
   target.innerHTML = `<h3 class="spaced">${esc(team.name)}</h3><p>${team.players.filter(Boolean).map(esc).join(" + ") || "Player names optional"}</p>${extra}`;
 }
 const defaultPointFilters = () => ({
@@ -300,7 +319,7 @@ async function points() {
     ]) +
     '<button id="point-reset" type="button">Reset filters</button></div><p id="point-metadata-note" class="help">Prices: ' +
     esc(state.price.name) +
-    '. Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.</p></details></form>' +
+    ". Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.</p></details></form>" +
     '<div id="point-status" class="meta" role="status" aria-live="polite"></div><div id="point-table" aria-busy="true"></div></section>';
   const form = $("#points-search");
   function sourceControls() {
@@ -310,15 +329,29 @@ async function points() {
       $("#point-" + key).disabled = live;
     for (const option of $("#point-sort").options)
       option.disabled = live && /^(main|command)_/.test(option.value);
-    $("#point-limit").innerHTML = (live ? [["175", "175 (Scryfall page)"]] : [["50", "50"], ["100", "100"]])
-      .map(([value,label]) => `<option value="${value}">${label}</option>`).join("");
+    $("#point-limit").innerHTML = (
+      live
+        ? [["175", "175 (Scryfall page)"]]
+        : [
+            ["50", "50"],
+            ["100", "100"],
+          ]
+    )
+      .map(([value, label]) => `<option value="${value}">${label}</option>`)
+      .join("");
     $("#point-limit").value = pointFilters.limit;
     $("#point-limit").disabled = live;
     $("#point-query-help").hidden = live;
-    $("#card-search").setAttribute("aria-describedby", live ? "point-source-help" : "point-query-help");
-    $("#point-metadata-note").textContent = "Prices: " + state.price.name + (live
-      ? ". Card information: live Scryfall. Pending means league price verification is required. League deck checks and prices are unchanged."
-      : ". Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.");
+    $("#card-search").setAttribute(
+      "aria-describedby",
+      live ? "point-source-help" : "point-query-help",
+    );
+    $("#point-metadata-note").textContent =
+      "Prices: " +
+      state.price.name +
+      (live
+        ? ". Card information: live Scryfall. Pending means league price verification is required. League deck checks and prices are unchanged."
+        : ". Card metadata and legality: October 20, 2026. — means the card is not command-zone eligible; eligibility can require a legal pair. Price compliance does not certify deck legality.");
     form.querySelector(".catalog-help").hidden = live;
     $("#point-source-help").textContent = live
       ? "Live Scryfall search supports its full syntax and current card catalog. League prices are shown where verified; other cards are marked Pending, never free. Point filters and point sorting are available with this option off. Card information is live; deck checks still use the league catalog."
@@ -340,7 +373,11 @@ async function points() {
     $("#point-status").textContent = "Searching…";
     $("#point-table").innerHTML = "";
     $("#point-table").setAttribute("aria-busy", "true");
-    if (debounce) pointTimer = setTimeout(loadPoints, pointFilters.source === "scryfall" ? 500 : 200);
+    if (debounce)
+      pointTimer = setTimeout(
+        loadPoints,
+        pointFilters.source === "scryfall" ? 500 : 200,
+      );
     else loadPoints();
   }
   form.onsubmit = (e) => {
@@ -353,14 +390,40 @@ async function points() {
   form.onchange = (e) => {
     if (e.target.id === "point-source") {
       if (e.target.checked) {
-        localPointSettings = Object.fromEntries(["points", "zone", "min", "max", "sort", "limit"].map(k=>[k,pointFilters[k]]));
-        Object.assign(pointFilters, {source:"scryfall", points:"all", zone:"either", min:"", max:"", sort:"name_asc", limit:"175"});
+        localPointSettings = Object.fromEntries(
+          ["points", "zone", "min", "max", "sort", "limit"].map((k) => [
+            k,
+            pointFilters[k],
+          ]),
+        );
+        Object.assign(pointFilters, {
+          source: "scryfall",
+          points: "all",
+          zone: "either",
+          min: "",
+          max: "",
+          sort: "name_asc",
+          limit: "175",
+        });
       } else {
-        Object.assign(pointFilters, localPointSettings || {points:"pointed", zone:"either", min:"", max:"", sort:"main_desc", limit:"50"}, {source:"local"});
+        Object.assign(
+          pointFilters,
+          localPointSettings || {
+            points: "pointed",
+            zone: "either",
+            min: "",
+            max: "",
+            sort: "main_desc",
+            limit: "50",
+          },
+          { source: "local" },
+        );
       }
       for (const key of ["points", "zone", "min", "max", "sort"])
         $("#point-" + key).value = pointFilters[key];
-      sourceControls(); changed(false); return;
+      sourceControls();
+      changed(false);
+      return;
     }
     if (e.target.matches('select, input[type="checkbox"]')) changed(false);
   };
@@ -436,9 +499,16 @@ async function loadPoints() {
       (data.source === "scryfall" ? " · Live Scryfall results" : "");
     const identity = (c) =>
       c.identity.length ? c.identity.join(" / ") : "Colorless";
-    const command = (c) => c.priceKnown === false ? "Pending" : (c.commanderEligible || c.command ? c.command : "—");
+    const command = (c) =>
+      c.priceKnown === false
+        ? "Pending"
+        : c.commanderEligible || c.command
+          ? c.command
+          : "—";
     target.innerHTML =
-      (data.warnings || []).map(w=>'<p class="help">' + esc(w) + '</p>').join("") +
+      (data.warnings || [])
+        .map((w) => '<p class="help">' + esc(w) + "</p>")
+        .join("") +
       (data.cards.length
         ? '<div class="table-wrap"><table class="catalog-table"><caption class="sr-only">Matching cards and league prices</caption><thead><tr><th scope="col">Card</th><th class="num" scope="col">Main deck</th><th class="num" scope="col">Command zone</th></tr></thead><tbody>' +
           data.cards
@@ -457,7 +527,9 @@ async function loadPoints() {
                 " · Identity " +
                 esc(identity(c)) +
                 "</div>" +
-                (c.priceKnown === false ? '<span class="tag warn">League price review pending</span>' : "") +
+                (c.priceKnown === false
+                  ? '<span class="tag warn">League price review pending</span>'
+                  : "") +
                 (c.legal
                   ? ""
                   : '<span class="tag warn">Not Commander legal</span>') +
@@ -503,24 +575,48 @@ async function loadPoints() {
       target.setAttribute("aria-busy", "false");
   }
 }
-let teamDetailRequest = 0, teamDetailController;
-let adminTeamRequest = 0, adminTeamController;
+let teamDetailRequest = 0,
+  teamDetailController;
+let adminTeamRequest = 0,
+  adminTeamController;
 function selectTeamForEditing(id) {
   setTeam(id);
-  history.replaceState(null, "", id ? "/teams?team=" + encodeURIComponent(id) : "/teams");
+  history.replaceState(
+    null,
+    "",
+    id ? "/teams?team=" + encodeURIComponent(id) : "/teams",
+  );
 }
 function deckListMarkup(deck, title = "View full saved decklist") {
   const rows = deck?.cards || [];
-  const section = (zone) => rows.filter(c => c.zone === zone).map(c => `${c.count} ${c.name}`).join("\n");
+  const section = (zone) =>
+    rows
+      .filter((c) => c.zone === zone)
+      .map((c) => `${c.count} ${c.name}`)
+      .join("\n");
   return `<details class="saved-decklist"><summary>${esc(title)}</summary><pre tabindex="0">${esc("COMMANDER\n" + section("command") + "\n\nMAINBOARD\n" + section("main"))}</pre></details>`;
 }
+function pendingReferenceMarkup(team, slot) {
+  const attempt = team.imports?.find(
+    (a) =>
+      a.slot === slot &&
+      ["awaiting_decklist", "needs_review"].includes(a.state),
+  );
+  if (!attempt) return "";
+  return `<div class="import-notice"><strong>${attempt.state === "needs_review" ? "Awaiting card review" : "Saved, awaiting decklist"}</strong><p>${esc(attempt.message)}</p><p>No verified score is assigned to this reference.</p>${attempt.source_url ? `<a target="_blank" rel="noopener" href="${esc(attempt.source_url)}">Open pending Moxfield reference ↗</a>` : ""}</div>`;
+}
 function savedDeckMarkup(d, team, slot) {
-  if (!d) return empty("No deck submitted", `No saved deck for ${team.name} · player ${slot}.`);
-  return `<p class="meta">Saved for ${esc(team.name)} · player ${slot}<br>${esc(dt(d.created_at))} · ${esc(d.deck.name)}</p>${scoreMarkup(d.current_score)}${deckListMarkup(d.current_deck || d.deck)}${d.source_url ? `<p><a class="text-link" href="${esc(d.source_url)}" target="_blank" rel="noopener">Open submitted Moxfield deck ↗</a></p>` : ""}`;
+  if (!d)
+    return empty(
+      "No deck submitted",
+      `No saved deck for ${team.name} · player ${slot}.`,
+    );
+  return `${tag("Inventory imported & resolved")}<p class="meta">Saved for ${esc(team.name)} · player ${slot}<br>${esc(dt(d.created_at))} · ${esc(d.deck.name)}</p>${scoreMarkup(d.current_score)}${deckListMarkup(d.current_deck || d.deck)}${d.source_url ? `<p><a class="text-link" href="${esc(d.source_url)}" target="_blank" rel="noopener">Open submitted Moxfield deck ↗</a></p>` : ""}`;
 }
 async function teams() {
   const requested = new URLSearchParams(location.search).get("team");
-  const invalidRequest = requested !== null && !state.teams.some(t => t.id === requested);
+  const invalidRequest =
+    requested !== null && !state.teams.some((t) => t.id === requested);
   if (requested !== null) setTeam(invalidRequest ? "" : requested);
   main.innerHTML =
     head(
@@ -548,34 +644,62 @@ async function teams() {
       selectTeamForEditing(t.id);
       await reload();
       await teams();
-      notice("Team created. Both deck slots are empty; decks can be added later.");
+      notice(
+        "Team created. Both deck slots are empty; decks can be added later.",
+      );
     });
   };
   await teamDetail();
-  if (invalidRequest) notice("That team is unavailable. Choose an existing team or create a new one.", true);
+  if (invalidRequest)
+    notice(
+      "That team is unavailable. Choose an existing team or create a new one.",
+      true,
+    );
 }
 async function teamDetail() {
   const request = ++teamDetailRequest;
   teamDetailController?.abort();
   teamDetailController = new AbortController();
-  const target = $("#team-detail"), picker = $("#team-select");
+  const target = $("#team-detail"),
+    picker = $("#team-select");
   if (!target || !picker) return;
   const selected = picker.value;
   // The visible per-tab selection is authoritative. Browser storage only
   // supplies a default on initial navigation; another tab cannot retarget a form.
-  const current = () => request === teamDetailRequest && target.isConnected &&
-    target === $("#team-detail") && picker.value === selected;
+  const current = () =>
+    request === teamDetailRequest &&
+    target.isConnected &&
+    target === $("#team-detail") &&
+    picker.value === selected;
   target.removeAttribute("data-team-id");
   target.setAttribute("aria-busy", "true");
-  target.innerHTML = selected ? '<p role="status">Loading selected team…</p>' : empty(
-    "Pick your side", "Select a team to view its decks, or create a separate team for new players.");
-  if (!selected) { target.setAttribute("aria-busy", "false"); return; }
+  target.innerHTML = selected
+    ? '<p role="status">Loading selected team…</p>'
+    : empty(
+        "Pick your side",
+        "Select a team to view its decks, or create a separate team for new players.",
+      );
+  if (!selected) {
+    target.setAttribute("aria-busy", "false");
+    return;
+  }
   let t;
   try {
-    t = await api("/api/teams/" + encodeURIComponent(selected), "GET", undefined, { signal: teamDetailController.signal });
+    t = await api(
+      "/api/teams/" + encodeURIComponent(selected),
+      "GET",
+      undefined,
+      { signal: teamDetailController.signal },
+    );
     if (!current()) return;
-    if (t.id !== selected || t.decks.some(d => d.team_id !== selected))
-      throw Error("The returned decks do not belong to the selected team. Reload and try again.");
+    if (
+      t.id !== selected ||
+      t.decks.some((d) => d.team_id !== selected) ||
+      (t.imports || []).some((a) => a.team_id !== selected)
+    )
+      throw Error(
+        "The returned decks do not belong to the selected team. Reload and try again.",
+      );
   } catch (error) {
     if (!current() || error.name === "AbortError") return;
     target.innerHTML = empty("Unable to load this team", error.message);
@@ -584,20 +708,29 @@ async function teamDetail() {
   }
   target.dataset.teamId = t.id;
   target.setAttribute("aria-busy", "false");
-  target.innerHTML =
-    `<div class="divider"></div><h2>Editing existing team: ${esc(t.name)}</h2><p class="help">Changes here update this same team. Renaming the team or changing players keeps its existing decks. Use <a href="#create-team">Create a new team</a> for a separate pair.</p><form id="edit-team" data-team-id="${esc(t.id)}"><div class="fields">${field("edit-name", "Team name", t.name, "text", 'required maxlength="80"')}${field("edit-p1", "Player one", t.players[0] || "")}</div>${field("edit-p2", "Player two", t.players[1] || "")}<button class="small" type="submit">Save team details</button></form>${teamScore(t.team_score)}<p class="help">General decks are reusable. Saving here does not change event submissions; update those on the event page before the lock.</p>${[1, 2].map((slot) => deckForm(t, slot)).join("")}`;
+  target.innerHTML = `<div class="divider"></div><h2>Editing existing team: ${esc(t.name)}</h2><p class="help">Changes here update this same team. Renaming the team or changing players keeps its existing decks. Use <a href="#create-team">Create a new team</a> for a separate pair.</p><form id="edit-team" data-team-id="${esc(t.id)}"><div class="fields">${field("edit-name", "Team name", t.name, "text", 'required maxlength="80"')}${field("edit-p1", "Player one", t.players[0] || "")}</div>${field("edit-p2", "Player two", t.players[1] || "")}<button class="small" type="submit">Save team details</button></form>${teamScore(t.team_score)}<p class="help">General decks are reusable. Saving here does not change event submissions; update those on the event page before the lock.</p>${[1, 2].map((slot) => deckForm(t, slot)).join("")}`;
   const editForm = target.querySelector("#edit-team");
   editForm.onsubmit = async (e) => {
     e.preventDefault();
     if (!current() || !editForm.isConnected) return;
     const name = editForm.querySelector("#edit-name").value;
-    const players = [editForm.querySelector("#edit-p1").value, editForm.querySelector("#edit-p2").value];
-    if (name.trim() !== t.name && !window.confirm(`Rename existing team “${t.name}” to “${name.trim()}”? Its saved decks and registrations stay with this same team. To register a different pair, cancel and use Create a new team.`)) return;
+    const players = [
+      editForm.querySelector("#edit-p1").value,
+      editForm.querySelector("#edit-p2").value,
+    ];
+    if (
+      name.trim() !== t.name &&
+      !window.confirm(
+        `Rename existing team “${t.name}” to “${name.trim()}”? Its saved decks and registrations stay with this same team. To register a different pair, cancel and use Create a new team.`,
+      )
+    )
+      return;
     await busy(e.submitter, async () => {
       await api("/api/teams/" + t.id, "PATCH", { name, players });
       await reload();
       if (current()) {
-        picker.selectedOptions[0].textContent = state.teams.find(team => team.id === t.id)?.name || name.trim();
+        picker.selectedOptions[0].textContent =
+          state.teams.find((team) => team.id === t.id)?.name || name.trim();
         await teamDetail();
         notice("Team details saved");
       }
@@ -610,27 +743,122 @@ async function teamDetail() {
     const link = form.querySelector("#link-" + slot);
     let uploadRead = 0;
     upload.onchange = async (e) => {
-      const read = ++uploadRead, f = e.target.files[0];
+      const read = ++uploadRead,
+        f = e.target.files[0];
       if (f) {
         if (f.size > 50000) return notice("Export must be under 50 KB", true);
         try {
           const text = await f.text();
-          if (current() && form.isConnected && read === uploadRead) output.value = text;
+          if (current() && form.isConnected && read === uploadRead)
+            output.value = text;
         } catch {
           if (current() && form.isConnected && read === uploadRead)
-            notice("Could not read that export file. Try selecting it again or paste the text.", true);
+            notice(
+              "Could not read that export file. Try selecting it again or paste the text.",
+              true,
+            );
         }
       }
     };
+    const wireReview = () => {
+      const button = form.querySelector("[data-review-submit]");
+      if (button)
+        button.onclick = async () => {
+          const review = form.querySelector("[data-review-id]");
+          const choices = Object.fromEntries(
+            [...review.querySelectorAll("[data-match-index]")].map((el) => [
+              el.dataset.matchIndex,
+              el.value,
+            ]),
+          );
+          if (Object.values(choices).some((v) => !v.trim()))
+            return notice(
+              "Choose or enter a card name for every unresolved row.",
+              true,
+            );
+          if (!current() || !form.isConnected) return;
+          await busy(button, async () => {
+            try {
+              await api(`/api/teams/${t.id}/decks/${slot}`, "POST", {
+                review_id: review.dataset.reviewId,
+                choices,
+              });
+            } catch (error) {
+              if (current() && form.isConnected && error.review_id) {
+                form
+                  .querySelectorAll(".import-review")
+                  .forEach((el) => el.remove());
+                form.querySelector("[data-import-review]").innerHTML =
+                  importReview(
+                    {
+                      id: error.review_id,
+                      state: "needs_review",
+                      issues: error.issues,
+                    },
+                    slot,
+                  );
+                wireReview();
+              }
+              throw error;
+            }
+            if (current()) {
+              await teamDetail();
+              notice("Deck scored and saved with confirmed names.");
+            }
+          });
+        };
+    };
+    wireReview();
+    const cancel = form
+      .closest(".team-deck")
+      .querySelector("[data-cancel-import]");
+    if (cancel)
+      cancel.onclick = () =>
+        busy(cancel, async () => {
+          if (!current()) return;
+          await api(
+            `/api/teams/${t.id}/decks/${slot}/cancel-import`,
+            "POST",
+            {},
+          );
+          if (current()) await teamDetail();
+        });
     form.onsubmit = async (e) => {
       e.preventDefault();
       if (!current() || !form.isConnected) return;
       const submission = { link: link.value, text: output.value };
       await busy(e.submitter, async () => {
         try {
-          await api(`/api/teams/${t.id}/decks/${slot}`, "POST", submission);
+          const result = await api(
+            `/api/teams/${t.id}/decks/${slot}`,
+            "POST",
+            submission,
+          );
+          if (result.state === "awaiting_decklist") {
+            if (current()) {
+              await teamDetail();
+              notice(
+                "Moxfield link saved. Paste or upload its text export to finish.",
+              );
+            }
+            return;
+          }
         } catch (error) {
           if (!current() || !form.isConnected) return;
+          if (error.review_id) {
+            form
+              .querySelectorAll(".import-review")
+              .forEach((el) => el.remove());
+            form.querySelector("[data-import-review]").innerHTML = importReview(
+              {
+                id: error.review_id,
+                state: "needs_review",
+                issues: error.issues,
+              },
+              slot,
+            );
+            wireReview();
+          }
           if (/Moxfield/i.test(error.message) && !output.value.trim()) {
             form.querySelector("details").open = true;
             output.focus();
@@ -645,10 +873,19 @@ async function teamDetail() {
     };
   }
 }
-function deckForm(t, slot) {
-  const d = t.decks.find((d) => d.slot === slot);
-  return `<section class="spaced team-deck" data-team-id="${esc(t.id)}" data-slot="${slot}"><div class="divider"></div><span class="eyebrow">Player ${slot}</span><h3 class="spaced">${esc(t.players[slot - 1] || "Deck " + slot)}</h3>${savedDeckMarkup(d, t, slot)}<form id="deck-${slot}" data-team-id="${esc(t.id)}">${field("link-" + slot, "Public Moxfield deck URL", d?.source_url || "", "url", 'placeholder="https://moxfield.com/decks/…"')}<details ${d ? "" : "open"}><summary>Paste or upload a Moxfield text export</summary><p class="help">If Moxfield blocks automatic access, use its text export. Include COMMANDER and MAINBOARD (or DECK) headings, or mark commanders with *CMDR*. Minor unambiguous spelling differences are matched and shown for review. Sideboard and maybeboard are ignored.</p>${area("export-" + slot, "Deck export", "", 'placeholder="COMMANDER&#10;1 Your Commander&#10;&#10;MAINBOARD&#10;99 Island"')}<div class="field"><label for="upload-${slot}">Upload .txt export</label><input id="upload-${slot}" type="file" accept=".txt,text/plain"></div></details><div class="actions"><button type="submit" class="primary">Score & save player ${slot}</button></div></form></section>`;
+function importReview(attempt, slot) {
+  if (attempt?.state !== "needs_review") return "";
+  return `<div class="import-review import-notice" data-review-id="${esc(attempt.id)}"><h4>Review card names</h4><p>No score has been assigned to this import. Confirm these identities together.</p>${attempt.issues.map((i) => `<div class="field"><label for="match-${slot}-${i.index}">${esc(i.count)} ${esc(i.submitted)} · ${esc(i.zone)}</label>${i.candidates.length ? `<select id="match-${slot}-${i.index}" data-match-index="${i.index}" required><option value="">Choose the correct card</option>${i.candidates.map((c) => `<option value="${esc(c.name)}">${esc(c.name)}</option>`).join("")}</select>` : `<input id="match-${slot}-${i.index}" data-match-index="${i.index}" placeholder="Exact English card name"><p class="help">Not in the current catalog or no safe match. <a target="_blank" rel="noopener" href="https://scryfall.com/search?q=${encodeURIComponent(i.submitted)}">Look up the printing</a>; ask the organizer to refresh the catalog for a newly released card.</p>`}</div>`).join("")}<button type="button" data-review-submit>Confirm names & save deck</button></div>`;
 }
+function deckForm(t, slot) {
+  const d = t.decks.find((d) => d.slot === slot),
+    attempt = t.imports?.find((a) => a.slot === slot);
+  const pending = ["awaiting_decklist", "needs_review"].includes(
+    attempt?.state,
+  );
+  return `<section class="spaced team-deck" data-team-id="${esc(t.id)}" data-slot="${slot}"><div class="divider"></div><span class="eyebrow">Player ${slot}</span><h3 class="spaced">${esc(t.players[slot - 1] || "Deck " + slot)}</h3>${pending ? `<div class="import-notice"><strong>${attempt.state === "needs_review" ? "Saved, awaiting card review" : "Saved, awaiting decklist"}</strong><p>${esc(attempt.message)}</p><p>This reference has no verified score and cannot qualify for an event. ${d ? "Your previous deck is preserved below." : "Paste or upload the export to finish."}</p><a class="text-link" target="_blank" rel="noopener" href="${esc(attempt.source_url || "https://moxfield.com")}">Open Moxfield ↗</a><button type="button" class="small" data-cancel-import>Cancel pending import${d ? " & keep previous deck" : ""}</button></div>` : ""}${savedDeckMarkup(d, t, slot)}<form id="deck-${slot}" data-team-id="${esc(t.id)}">${field("link-" + slot, "Public Moxfield deck URL", pending ? attempt.source_url || "" : d?.source_url || "", "text", 'placeholder="https://moxfield.com/decks/…"')}${importReview(attempt, slot)}<details ${pending || !d ? "open" : ""}><summary>Paste or upload a Moxfield text export</summary><p class="help">In Moxfield, choose More → Export, then copy or download the text list. Include COMMANDER and MAINBOARD (or DECK) headings, or mark commanders with *CMDR*. Printed, translated and alternate names are recognized locally. Sideboards and maybeboards are ignored.</p>${area("export-" + slot, "Deck export", "", 'placeholder="COMMANDER&#10;1 Your Commander&#10;&#10;MAINBOARD&#10;99 Island"')}<div class="field"><label for="upload-${slot}">Upload .txt export</label><input id="upload-${slot}" type="file" accept=".txt,text/plain"></div></details><div class="actions"><button type="submit" class="primary">Score & save player ${slot}</button></div><div data-import-review></div></form></section>`;
+}
+
 async function eventPage(eventId) {
   const e = await api("/api/events/" + eventId);
   const selectedTeam = $("#event-team")?.value ?? teamId();
@@ -953,26 +1190,54 @@ async function adminTeam(team) {
   const request = ++adminTeamRequest;
   adminTeamController?.abort();
   adminTeamController = new AbortController();
-  const target = $("#admin-team-detail"), picker = $("#admin-team");
+  const target = $("#admin-team-detail"),
+    picker = $("#admin-team");
   if (!target || !picker) return;
-  const current = () => request === adminTeamRequest && target.isConnected &&
-    target === $("#admin-team-detail") && picker.value === team;
-  target.innerHTML = team ? '<p role="status">Loading team decks…</p>' : empty("Choose a team", "View its current decks and saved versions.");
+  const current = () =>
+    request === adminTeamRequest &&
+    target.isConnected &&
+    target === $("#admin-team-detail") &&
+    picker.value === team;
+  target.innerHTML = team
+    ? '<p role="status">Loading team decks…</p>'
+    : empty("Choose a team", "View its current decks and saved versions.");
   target.setAttribute("aria-busy", team ? "true" : "false");
   if (!team) return;
   try {
     const options = { signal: adminTeamController.signal };
     const [t, history] = await Promise.all([
       api("/api/teams/" + encodeURIComponent(team), "GET", undefined, options),
-      api("/api/admin/teams/" + encodeURIComponent(team) + "/history", "GET", undefined, options),
+      api(
+        "/api/admin/teams/" + encodeURIComponent(team) + "/history",
+        "GET",
+        undefined,
+        options,
+      ),
     ]);
     if (!current()) return;
-    if (t.id !== team || t.decks.some(d => d.team_id !== team) || history.some(d => d.team_id !== team))
+    if (
+      t.id !== team ||
+      t.decks.some((d) => d.team_id !== team) ||
+      history.some((d) => d.team_id !== team)
+    )
       throw Error("The returned decks do not belong to the selected team.");
-    target.innerHTML =
-      `<h3 class="spaced">${esc(t.name)}</h3><div class="actions">${!t.archived ? `<a class="button small" href="/teams?team=${encodeURIComponent(team)}">Edit team & decks</a>` : ""}${action(t.archived ? "Restore team" : "Archive team", (t.archived ? "unarchive:" : "archive:") + team)}</div><h3 class="spaced">Current saved decks</h3>${[1, 2].map(slot => `<section class="team-deck spaced" data-team-id="${esc(team)}" data-slot="${slot}"><h4>Player ${slot} · ${esc(t.players[slot - 1] || "Deck " + slot)}</h4>${savedDeckMarkup(t.decks.find(d => d.slot === slot), t, slot)}</section>`).join("")}<h3 class="spaced">Deck submission history</h3>${history.map((d) => `<details class="history-item"><summary>Player ${d.slot} · ${esc(dt(d.created_at))} · ${d.score.points} points · ${esc(d.actor)}</summary>${scoreMarkup(d.score)}${deckListMarkup(d.deck, "View historical decklist")}${action("Restore this deck version", "restore-deck:" + d.id)}</details>`).join("") || empty("No saved decks")}`;
+    target.innerHTML = `<h3 class="spaced">${esc(t.name)}</h3><div class="actions">${!t.archived ? `<a class="button small" href="/teams?team=${encodeURIComponent(team)}">Edit team & decks</a>` : ""}${action(t.archived ? "Restore team" : "Archive team", (t.archived ? "unarchive:" : "archive:") + team)}</div><h3 class="spaced">Current saved decks</h3>${[
+      1, 2,
+    ]
+      .map(
+        (slot) =>
+          `<section class="team-deck spaced" data-team-id="${esc(team)}" data-slot="${slot}"><h4>Player ${slot} · ${esc(t.players[slot - 1] || "Deck " + slot)}</h4>${savedDeckMarkup(
+            t.decks.find((d) => d.slot === slot),
+            t,
+            slot,
+          )}${pendingReferenceMarkup(t, slot)}</section>`,
+      )
+      .join(
+        "",
+      )}<h3 class="spaced">Deck submission history</h3>${history.map((d) => `<details class="history-item"><summary>Player ${d.slot} · ${esc(dt(d.created_at))} · ${d.score.points} points · ${esc(d.actor)}</summary>${scoreMarkup(d.score)}${deckListMarkup(d.deck, "View historical decklist")}${action("Restore this deck version", "restore-deck:" + d.id)}</details>`).join("") || empty("No saved decks")}`;
   } catch (error) {
-    if (current() && error.name !== "AbortError") target.innerHTML = empty("Unable to load this team", error.message);
+    if (current() && error.name !== "AbortError")
+      target.innerHTML = empty("Unable to load this team", error.message);
   } finally {
     if (current()) target.setAttribute("aria-busy", "false");
   }

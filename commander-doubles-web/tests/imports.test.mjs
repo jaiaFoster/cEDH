@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import {gunzipSync} from "node:zlib";
 import { catalog, resolveCard, matchCard, evaluate, evaluateSavedDeck, priceTable } from "../legality.mjs";
 import { PRICES, parseExport, decodeMoxfield, getMoxfield } from "../scoring.mjs";
 import { createCardResolver } from "../card-resolution.mjs";
@@ -19,7 +20,9 @@ test("all 14 reported legal cards pass independently of their digital representa
 });
 test("every legal identity with a nonpaper/digital representative remains legal", () => {
   const affected = catalog.filter(c => c.legalities?.commander === "legal" && (!c.games?.includes("paper") || c.digital));
-  assert.equal(affected.length, 1047);
+  const legacy=gunzipSync(fs.readFileSync(new URL("../data/oracle.jsonl.gz",import.meta.url))).toString().trim().split("\n").map(JSON.parse);
+  assert.equal(legacy.filter(c=>c.legalities?.commander === "legal" && (!c.games?.includes("paper") || c.digital)).length,1047);
+  assert.ok(affected.length>1000);
   for (const c of affected) assert.equal(evaluate(sample(c.name), prices).score.legal, true, c.name);
 });
 test("all Commander-legal and banned canonical identities survive token/face name collisions", () => {

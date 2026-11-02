@@ -1,3 +1,4 @@
+import { catalogManifest, currentSearchMetadata } from "../card-catalog.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -35,13 +36,17 @@ test("search metadata is complete, hash-verified and bound to the original scori
       ),
     );
   const hash = (b) => createHash("sha256").update(b).digest("hex");
-  assert.equal(searchIndex.length, 38940);
+  assert.equal(searchIndex.length, catalogManifest.cards);
+  assert.equal(
+    Object.keys(currentSearchMetadata.cards).length,
+    searchIndex.length,
+  );
   assert.equal(
     new Set(searchIndex.map((c) => c.oracle_id)).size,
     searchIndex.length,
   );
-  assert.equal(Object.keys(meta.cards).length, searchIndex.length);
-  assert.equal(proof.records, searchIndex.length);
+  assert.equal(Object.keys(meta.cards).length, 38940);
+  assert.equal(proof.records, 38940);
   assert.equal(hash(buf), proof.metadata_sha256);
   assert.equal(
     hash(fs.readFileSync(new URL("../data/oracle.jsonl.gz", import.meta.url))),

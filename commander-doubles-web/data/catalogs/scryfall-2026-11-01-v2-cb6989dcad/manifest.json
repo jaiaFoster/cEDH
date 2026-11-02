@@ -1,0 +1,51 @@
+{
+  "version": "scryfall-2026-11-01-v2-cb6989dcad",
+  "source": "https://scryfall.com/docs/api/bulk-data",
+  "updated_at": {
+    "oracle_cards": "2026-11-01T22:02:03.472+00:00",
+    "all_cards": "2026-11-01T22:22:11.875+00:00"
+  },
+  "archives": {
+    "oracle_cards": {
+      "url": "https://data.scryfall.io/oracle-cards/oracle-cards-20261101220203.jsonl.gz",
+      "sha256": "de52a058b9497983bdc058080745106a79e2a9d0f90f9e8a2d4065700b9608a4"
+    },
+    "all_cards": {
+      "url": "https://data.scryfall.io/all-cards/all-cards-20261101222211.jsonl.gz",
+      "sha256": "cb6989dcadce26dfe8b9f948940db16ab604441f09588522ccf1b9c24b4063a4"
+    }
+  },
+  "cards": 39287,
+  "printings": 547500,
+  "aliases": 288467,
+  "languages": {
+    "ar": 1,
+    "de": 59182,
+    "dw": 5,
+    "en": 117291,
+    "es": 54006,
+    "fr": 59516,
+    "grc": 3,
+    "he": 1,
+    "it": 53385,
+    "ja": 62863,
+    "ko": 15383,
+    "la": 1,
+    "ph": 49,
+    "pt": 39593,
+    "qya": 7,
+    "ru": 21761,
+    "sa": 1,
+    "zhs": 40870,
+    "zht": 23582
+  },
+  "files": {
+    "equivalent-names.json": "e754f993016a1f20e3601aa264b6a464009f9f7362f50c03a3cd143af010202e",
+    "names-exact.bin.gz": "d4fe4af2abc1b969938252a0a1b0887c1fa52171f41d0e03b993118408a85351",
+    "names-folded.bin.gz": "91d3b85ba104ea323e514c59ad9f6f44a09a1c2a2719a51d2c2ec17e3b10e5b1",
+    "oracle.jsonl.gz": "96278d1f9bb8a630cd8da342fcccec78ebe28267986144ac94e11eabec898405",
+    "printing-examples.json": "9616103e21a8eaca474d3c0d4db6af2b0771faf0ea33d3cd6cf71106cec91525",
+    "printings.bin.gz": "8f3c727b787756e501ecb6e361c1667d5e7cc8d8cc2a24e246861acd8f3fc345",
+    "set-collector.json.gz": "64b67d409ba315a0993a034f89daf36e53b0265d18702963863c794b8b8655ef"
+  }
+}
