@@ -1,0 +1,235 @@
+{
+  "verified_on": "2026-11-02",
+  "rules_edition": "September 25, 2026",
+  "full_rules_republished": false,
+  "catalog_version": "scryfall-2026-11-01-v2-cb6989dcad",
+  "sources": [
+    {
+      "url": "https://magic.wizards.com/en/rules",
+      "status": 200,
+      "retrieved_at": "2026-11-02T23:56:32.469Z",
+      "sha256": "48d1a70e763e11a71ed354e91b0b4a2e2272bf2a222506b683c46a3ff9211921",
+      "bytes": 150629
+    },
+    {
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "status": 200,
+      "retrieved_at": "2026-11-02T23:56:32.731Z",
+      "sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
+      "bytes": 977752
+    },
+    {
+      "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.pdf",
+      "status": 200,
+      "retrieved_at": "2026-11-02T23:56:33.008Z",
+      "sha256": "674241213075cd581dd3255567ebeec7b40ffae3a27c6a3bd99218af6b2b6659",
+      "bytes": 2527259
+    },
+    {
+      "url": "https://magic.wizards.com/en/formats/two-headed-giant",
+      "status": 200,
+      "retrieved_at": "2026-11-02T23:56:33.062Z",
+      "sha256": "94dd9363d4d92d355841ea37ddaef047bbabdd72a0c370cd30365bfb52e9ed32",
+      "bytes": 386052
+    },
+    {
+      "url": "https://api.scryfall.com/cards/collection",
+      "status": 200,
+      "retrieved_at": "2026-11-02T23:56:33.767Z",
+      "sha256": "35d12262db4f325479448f8ac336d3b53acb3e53f45dbacdb934270c4ad3a46c",
+      "bytes": 144713
+    }
+  ],
+  "rule_references": {
+    "101.2": {
+      "sha256": "687120d8c3051c1c57cd7e17da7038fab7ddfbdb2b3c5a9d8df525579708ef6c"
+    },
+    "102.3": {
+      "sha256": "12634f086cb58a5358dbd2ed5645299c56e24718e9bc6e7ea89adba112f7bdf1"
+    },
+    "102.4": {
+      "sha256": "4d0793daec794b3bd9f3e266ac989ee0e263c007942b4264e11f4863d807d641"
+    },
+    "104.1": {
+      "sha256": "a4ee62515f02b77eec80e6281abf5f10822f895bdb7a7a953d573bf9adcb7f15"
+    },
+    "104.2b": {
+      "sha256": "5a034400421420332f7f55837cf6bb59ed8fc4ba8d51ab1a8f6f42a908825310"
+    },
+    "104.3a": {
+      "sha256": "ae2735063d359e0ed3f03902c80250c79a478f9324668114128aee019c1bee29"
+    },
+    "104.3b": {
+      "sha256": "d484c1eeccfa819765e8555e0301321edbef0fc354a016d176a11701abcebe5d"
+    },
+    "104.3c": {
+      "sha256": "3a8f7f6f585424d91fc84ca8ca080723027313fd526f85cc83256907f2c8a48f"
+    },
+    "104.3e": {
+      "sha256": "5cf8185d88e7e7205d2a663ec95e87be61d782674ac73f2f1867de087019331c"
+    },
+    "104.3f": {
+      "sha256": "1db4e1cc1876370d59d543cbf3a4f08ec4226dbf2e9d2456012254d8bc468b7c"
+    },
+    "104.4a": {
+      "sha256": "f1190193a7733c151c19df5de8479f690bcfbc5a5dcc9523a2874dd5651f3fd6"
+    },
+    "104.4b": {
+      "sha256": "904b4ad89b1c4559cd78d50f3a3178c054b7d260087368559eff7ad6e4bd36b2"
+    },
+    "104.4d": {
+      "sha256": "c3f0eec144c9c4d87f1666d3a421341027e9a14d84fde8adde5259660846caa8"
+    },
+    "106.4": {
+      "sha256": "080c2d92caa63bdfcb42d33bddc5eca23c7bec8b0712454754fbaf2be5771b56"
+    },
+    "109.5": {
+      "sha256": "b6c911853bd9958a2e953084cb4fd23b3f862c1a7dec70a1dce61cb0b8e1a300"
+    },
+    "113.7a": {
+      "sha256": "c932de76acc658ffaa6ee28acdd4ee2b969cc36353fc559393692d2e59da25f5"
+    },
+    "117.5": {
+      "sha256": "f3a1c36355eb768f8f7e696fa5bb07d1039489dd2b38eea6ddfaee5e7011ccc9"
+    },
+    "119.3": {
+      "sha256": "f0684f89b26ad746a9e972d85a3d346804b5b38eec7e5bb20a6fcbfaf98b9f9d"
+    },
+    "119.4": {
+      "sha256": "3a3dc935b36b27200ab4b635c6c64b241fea3ad350a4d977533159db54c4af9a"
+    },
+    "119.5": {
+      "sha256": "6817544e8003e8ba8c7a687edc657b9e74f47e116d9ef4b3a90e13d600f0dad0"
+    },
+    "119.6": {
+      "sha256": "6030353ea6464ddc72c080da9b65d5ea07a390aecd96a648dce9e3c536c9884a"
+    },
+    "120.3a": {
+      "sha256": "13ff5dbff2bf50c9caa6a931a55ab247f707168487bf845cbd466a678d5c3d30"
+    },
+    "120.3b": {
+      "sha256": "df2fd2618945d0f06c04a8ba9b382d6392d23c94b2d11058e0205aaa8001b864"
+    },
+    "120.3g": {
+      "sha256": "56b6e83dd0a8827f7bdab913a24084aac4c2ffcabef8591eae3ceb6145ca33cd"
+    },
+    "121.1": {
+      "sha256": "397f6ed2cc76589f679bb58aaf94fa43176e187803c730233fb7c9ff04798791"
+    },
+    "121.2": {
+      "sha256": "5807cc325ac8bae7713d1e8424eadfb395e9de218f2aaff04cb215f12523831a"
+    },
+    "121.4": {
+      "sha256": "585a46669b543ecd947d4b26c097638a153ce9a91ae15ceba46414ab2e8d6eea"
+    },
+    "121.6": {
+      "sha256": "c574d0ba26ec2804efa707b49bf7e31630e431845242ade271cfdfe250bb82c9"
+    },
+    "603.4": {
+      "sha256": "1cf8dd0b467f3ede01b6b843c1d45085805afed34f491a39987e7498bd73b34d"
+    },
+    "603.7": {
+      "sha256": "fe4879a5591986b613ed0480397a1300ec46dd2b0fff1c69550224a24dc6f6c1"
+    },
+    "608.2c": {
+      "sha256": "b8b434e389952437a2ef58299140b2c8ba160c9e9f4b2a011bbf78ac2def3c70"
+    },
+    "614.6": {
+      "sha256": "8be9726a9a7521f0855b4dd822d1de059fc15e83b7468d6adf18b10cf34e441c"
+    },
+    "615.1": {
+      "sha256": "1aaf4ae0310bc671eb0f1052b25d336a9d077a4539313f8da5b1014a8ecfda2b"
+    },
+    "701.34a": {
+      "sha256": "0c15b477f8f0006d75d3852692f5359eefe8cfe0fa967f75de9e677dcf10a12d"
+    },
+    "701.34b": {
+      "sha256": "e6d8c4a951af42ae29bcfa4d719eb04433c9a55e20aed712aee5288674d1f65e"
+    },
+    "702.90b": {
+      "sha256": "e4b469d2c5dfa4278a2aa8608ab5a16f483f6d2eea1033967aa8a3f1ea7b650d"
+    },
+    "702.164a": {
+      "sha256": "efa7dedbe52b8c07366a384ecef3120bb68f5ff9d48ca9ac12e60a7c3d6c2585"
+    },
+    "704.3": {
+      "sha256": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a"
+    },
+    "704.4": {
+      "sha256": "459377da9a9f4f79a6d10badbfa84c7f6d1a30d570c3d22008839151b36b742f"
+    },
+    "704.5b": {
+      "sha256": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d"
+    },
+    "704.6a": {
+      "sha256": "7f5b2d1dc6f6eeb04e12121d430109177fda89806ee0dbdaf5bc528ca1dcfc9a"
+    },
+    "704.6b": {
+      "sha256": "7eba6334d912127a4b138839de046b358fa6c60e9ac99717c91b5ec6c3967545"
+    },
+    "704.6c": {
+      "sha256": "7d686fc7d133da5925cd374480adba584d925639383d792a8ef82d83ded400bf"
+    },
+    "732.2a": {
+      "sha256": "340e8ce65eba622a0f7f21fd3287e0a5fde315192ddd5f3a5c2f9d7e2858cc1e"
+    },
+    "732.4": {
+      "sha256": "2b30e07188eedf5a09961675c4285c44139baaaf28bdec6ba4678349e732409c"
+    },
+    "732.5": {
+      "sha256": "eabce08e391630f0a3ef113d2fc17ef7fecabd45b049b75eabb25d435f0f20f6"
+    },
+    "805.4b": {
+      "sha256": "77fa1b10b7ef34f48b623c597bd963da731345d97ab8d300cfe6e8f2df13b837"
+    },
+    "805.8": {
+      "sha256": "0071ee54661678696fd0e3998a071bc43c6df2198cac5110ac54162097ebef7d"
+    },
+    "810.4": {
+      "sha256": "a1d38a3304d81348b88292838218e599cd9799fc26b1635a2523a3a2c1ab3a32"
+    },
+    "810.5": {
+      "sha256": "ce180d68251826c618bbc980d612c3abd691dee6569cd45208d595dfabb3a1ec"
+    },
+    "810.8a": {
+      "sha256": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
+    },
+    "810.8b": {
+      "sha256": "2bbb64191bed82764875cbe623fff91b677d756a91ceb91f5aeed8b72165b1f6"
+    },
+    "810.8c": {
+      "sha256": "dec77068356944a0016b669a8e8268b64844c31e824fe26feba5cb5cd8ea8948"
+    },
+    "810.8d": {
+      "sha256": "4602302ee28b5f58568410d87dfe91959abdc84883998f8b41e28e39adaefe47"
+    },
+    "810.9": {
+      "sha256": "4c99a6ce6c571408e7b411454f49e8b44c4cbf70ee1525cc8fb185b52e0fce91"
+    },
+    "810.9a": {
+      "sha256": "21e7d935b2762dce9b5b41e2a8c418b7ed557e9365968e38d0584fa75429e8c6"
+    },
+    "810.9b": {
+      "sha256": "b58d464ecc1e1cff989480f782b3f3d0c55b494589ed96c29784d12c7a32d1f8"
+    },
+    "810.9c": {
+      "sha256": "bb8f06141c21839b663b4ddb66896dbc793d33107f451946db8ecd9ffae54c2c"
+    },
+    "810.9g": {
+      "sha256": "07263387d944fd07ff7d506e3105bb4471e24fe86440c76a0be8b8550a900cd5"
+    },
+    "810.9h": {
+      "sha256": "0d5a90be5b00b05984c7653bdbb7837ee721552a538520d41479795f44d625f8"
+    },
+    "810.10": {
+      "sha256": "6c82f5f273701aa96edbc6944fb2598bb82c79571104424a578019172113ad3d"
+    },
+    "903.3": {
+      "sha256": "96a72dceb135d48c4d3b60e10e427d8d12df3da77738b204622d84e5f773d109"
+    },
+    "903.10a": {
+      "sha256": "fd7b2dbe4463de586b2c6a1fd64808ac765d58de9ea22d6d7196e233cdb6ff33"
+    }
+  },
+  "oracle_cards": 28
+}

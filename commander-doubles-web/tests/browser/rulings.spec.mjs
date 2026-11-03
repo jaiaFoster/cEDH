@@ -19,7 +19,7 @@ test("rulings search, combined filters, source links, conditions and reset", asy
   await expect(
     page.getByRole("heading", { name: "2HG Rulings & Interactions" }),
   ).toBeVisible();
-  await expect(page.locator(".ruling-card")).toHaveCount(57);
+  await expect(page.locator(".ruling-card")).toHaveCount(84);
   await page.getByLabel("Search rulings or cards").fill("Pox");
   await expect(page.locator("#ruling-pox-bloodletter")).toBeVisible();
   await page
@@ -35,7 +35,7 @@ test("rulings search, combined filters, source links, conditions and reset", asy
     page.locator("#ruling-pox-bloodletter a").first(),
   ).toHaveAttribute("href", /^https:\/\/scryfall.com\//);
   await expect(
-    page.getByRole("link", { name: "Comprehensive Rules", exact: false }),
+    page.locator("#ruling-pox-bloodletter").getByRole("link", { name: "Recorded Comprehensive Rules source", exact: false }),
   ).toHaveAttribute("href", /MagicCompRules/);
   await page
     .getByLabel("Search rulings or cards")
@@ -44,7 +44,7 @@ test("rulings search, combined filters, source links, conditions and reset", asy
     page.getByText("No matching rulings", { exact: true }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Reset rulings filters" }).click();
-  await expect(page.locator(".ruling-card")).toHaveCount(57);
+  await expect(page.locator(".ruling-card")).toHaveCount(84);
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.locator("#rulings-reference").scrollIntoViewIfNeeded();
   await page.screenshot({ path: "reports/rulings-desktop.png" });

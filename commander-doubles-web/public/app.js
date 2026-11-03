@@ -1,4 +1,8 @@
-import { renderRulings, renderRulingAdmin } from "./rulings.js";
+import {
+  renderRulings,
+  renderRulingAdmin,
+  renderOfficialSources,
+} from "./rulings.js";
 const $ = (s) => document.querySelector(s),
   main = $("#main");
 const esc = (x) =>
@@ -1508,8 +1512,13 @@ async function route() {
         state.rules.title,
         "The published format, budget, and submission rules.",
       ) +
+      renderOfficialSources(state.officialRulesSources) +
       `<article class="panel"><div class="rule-text">${esc(state.rules.body)}</div></article><section id="rulings-reference" class="spaced"></section>`;
-    await renderRulings($("#rulings-reference"), api);
+    const rulingsReady = renderRulings($("#rulings-reference"), api);
+    $("#jump-winning-losing").onclick = () => {
+      rulingsReady.then(() => $("#winning-losing-filter")?.click());
+    };
+    await rulingsReady;
     return;
   }
   if (p === "/points") return points();

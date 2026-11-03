@@ -45,14 +45,14 @@ await test("real PostgreSQL rulings workflow and recovery", async (t) => {
       async () => {
         assert.equal(
           (await q("SELECT count(*) FROM ruling_entries")).rows[0].count,
-          "60",
+          "87",
         );
         assert.equal(
           (await q("SELECT count(*) FROM ruling_versions")).rows[0].count,
-          "60",
+          "92",
         );
         const { data } = await call("/api/rulings");
-        assert.equal(data.total, 57);
+        assert.equal(data.total, 84);
         await call(
           "/api/rulings/commander-aggregation",
           "GET",
@@ -83,7 +83,7 @@ await test("real PostgreSQL rulings workflow and recovery", async (t) => {
           (await q("SELECT * FROM rules_versions ORDER BY id")).rows,
           beforeRules,
         );
-        assert.equal((await call("/api/rulings")).data.total, 57);
+        assert.equal((await call("/api/rulings")).data.total, 84);
       },
     );
     await t.test(
@@ -278,8 +278,8 @@ await test("real PostgreSQL rulings workflow and recovery", async (t) => {
         const exported = (
           await call("/api/admin/rulings/export", "GET", undefined, true)
         ).data;
-        assert.equal(exported.entries.length, 61);
-        assert.equal(exported.versions.length, 64);
+        assert.equal(exported.entries.length, 88);
+        assert.equal(exported.versions.length, 96);
       },
     );
     await t.test(
@@ -297,7 +297,7 @@ await test("real PostgreSQL rulings workflow and recovery", async (t) => {
         );
         const backup = (await call("/api/admin/export", "GET", undefined, true))
           .data;
-        assert.equal(backup.ruling_entries.length, 61);
+        assert.equal(backup.ruling_entries.length, 88);
         const file = "/tmp/rulings-backup-" + randomUUID() + ".json";
         fs.writeFileSync(file, JSON.stringify(backup), { mode: 0o600 });
         const recovery = "restore_rulings_" + randomUUID().replaceAll("-", "");
@@ -311,7 +311,7 @@ await test("real PostgreSQL rulings workflow and recovery", async (t) => {
           assert.equal(
             (await q(`SELECT count(*) FROM ${recovery}.ruling_versions`))
               .rows[0].count,
-            "64",
+            "96",
           );
           assert.equal(
             (

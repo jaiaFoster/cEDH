@@ -1054,3 +1054,58 @@ dialog::backdrop {
 /* Published rules can contain long provenance paths; keep them inside mobile panels. */
 .rule-text { overflow-wrap: anywhere; }
 .ruling-card > summary > span:first-of-type { flex: 1; min-width: 0; }
+
+/* Official reference access stays compact and separate from published league policy. */
+.official-rules {
+  margin-bottom: 1.5rem;
+}
+.official-rule-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1.4rem;
+  margin: 1rem 0;
+}
+.official-rule-links > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.official-primary > a {
+  font-weight: 700;
+}
+.official-rule-links a,
+.ruling-rule-links a {
+  overflow-wrap: anywhere;
+}
+.official-rule-index {
+  margin-top: 0.7rem;
+}
+.ruling-rule-links {
+  line-height: 2;
+}
+@media (max-width: 540px) {
+  .official-rule-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Curated FAQ collection shares the existing search, cards and admin records. */
+.winning-losing-intro {
+  border-left: 3px solid var(--accent);
+  padding: 0.25rem 1rem;
+  margin: 1.5rem 0;
+}
+.winning-losing-intro h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.ruling-group {
+  margin-top: 1.6rem;
+}
+#ruling-group-field[hidden] {
+  display: none;
+}
+#rulings-search select {
+  max-width: 100%;
+}

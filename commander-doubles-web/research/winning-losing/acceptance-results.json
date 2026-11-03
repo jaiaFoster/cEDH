@@ -1,0 +1,40 @@
+{
+  "verified_at": "2026-11-03T00:04:49.758584+00:00",
+  "node_postgresql": {
+    "tests": 131,
+    "pass": 131,
+    "fail": 0,
+    "skipped": 0
+  },
+  "chrome_browser": {
+    "expected": 38,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0
+  },
+  "combined_verified_seed": 84,
+  "preserved_private_drafts": 3,
+  "source_rule_references": 63,
+  "source_oracle_cards": 28,
+  "official_links_http_status": 200,
+  "mobile_widths_checked": [
+    320,
+    375
+  ],
+  "staging_feature_deployed": false,
+  "staging_limitation": "Railway OAuth refresh expired (invalid_grant); no hosted staging verification or production activation.",
+  "required_topics": 32,
+  "topic_collection_answers": 27,
+  "new_seed_answers": 27,
+  "reviewed_existing_updates": 5,
+  "organizer_handoff_coverage": "All 32 supplied topics mapped; split-head commander-damage aggregation subquestion remains private review",
+  "migration_preserves_historical_rows": [
+    "teams",
+    "deck_versions",
+    "events",
+    "registrations",
+    "registration_versions",
+    "price_versions",
+    "rules_versions"
+  ]
+}
