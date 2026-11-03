@@ -1,67 +1,75 @@
 # Winning & Losing FAQ and official rules access
 
-The Rules page now starts with **Official Rules & Sources**, followed by unchanged published league content and the existing searchable FAQ. A top shortcut opens the **Winning & Losing** category. The new category has 32 entries; the combined seed contains **89 verified public entries and the same 3 private drafts**.
+The Rules page starts with **Official Rules & Sources**, above unchanged league content. Its shortcut opens **Winning & Losing in Two-Headed Giant**, with the organizer’s exact requested subtitle and six groups. All 32 supplied research topics have published coverage; related questions reuse **27 maintained answers**, rather than creating a duplicate entry for each question. The complete local reference has **84 verified seed identities and the same 3 private drafts**.
 
-The original 32-question handoff was not available in the repository/conversation. The organizer explicitly instructed the agent to proceed after that gap was raised. [QUESTIONS.md](QUESTIONS.md) records the implemented coverage, without claiming to reproduce an unavailable document word for word.
+The initial PR draft was prepared before the original checklist was supplied. This revision follows the actual handoff. [QUESTIONS.md](QUESTIONS.md) maps every required topic to its stable database identity. The feature adds 27 distinct new entries overall, reuses 12 original entries in its source audit, and supplies reviewed version updates for five existing entries. Twelve of the new entries provide additional timing/protection/loop questions in the general reference; they are not added as duplicate cards in the focused 32-topic collection.
 
 ## Source verification
 
-On November 2, 2026, Wizards’ [permanent Rules page](https://magic.wizards.com/en/rules) still linked to the **September 25, 2026** Comprehensive Rules. Both supplied dated download URLs remain current. The permanent page is the primary website link; PDF/TXT downloads carry their effective date. The official 2HG overview is linked with a reminder to use its Commander subsection.
+On November 2, 2026, Wizards’ [permanent Rules page](https://magic.wizards.com/en/rules) still linked to the **September 25, 2026** Comprehensive Rules. The permanent page is the primary link. PDF/TXT downloads carry their effective date; the official 2HG overview is linked with a reminder to use its Commander subsection.
 
-`source-verification.json` records actual successful HTTP requests, retrieval times, source hashes and **52 referenced rule hashes**. `oracle-evidence.json` contains 17 selected current Oracle records retrieved with one Scryfall collection request, including IDs, source URLs and text hashes. Downloaded CR text was used for research only. **No full CR text/PDF or extended rulebook excerpts were added to the public database or this research directory.** Rule references are identifiers/hashes; explanatory summaries and examples are original editorial wording.
+`source-verification.json` records successful HTTP responses, retrieval times, document hashes and **63 referenced rule hashes**. `oracle-evidence.json` contains **28 selected current Oracle records**, retrieved in one Scryfall collection request and checked against local Oracle identities. Downloaded CR text is used only in memory for research. **No full rulebook mirror or extended rulebook excerpts are republished.** All answers and calculations are original editorial explanations, labeled as official-rules summaries or verified worked examples rather than newly issued Wizards rulings.
 
-Each published answer displays its recorded rules edition, verification date, exact CR references and an action opening the official TXT in a new tab. Since TXT section anchors are unavailable, the UI explains how to Find a rule number. Priority sections 104, 119, 121, 704, 805, 810 and 903 have a compact index. Rule numbers can also be searched directly, including `CR 104.3c`.
+Each answer displays its CR identifiers, rules edition, verification date, examples, exceptions and external source actions. Links open separately with `noopener noreferrer`, preserving the current FAQ. TXT does not support section anchors; the interface instructs players to use Find. A compact index highlights CR 104, 119, 121, 704, 805, 810 and 903.
 
-The FAQ remains a local reference. Normal browsing does not call Wizards, Scryfall or a combo service. External links use a new tab and `noopener noreferrer`, preserving the current search and expanded question. Official rules summaries, researched card examples and league house rules retain their distinct labels.
+## Coverage and interpretation checks
 
-## Important interpretation checks
+- Shared wins/losses, concession and simultaneous team losses: CR 810.8a–b, 104.4a and 104.4d. Restrictions on winning/losing must be applied before deciding the outcome.
+- Milling does not itself cause an empty-library loss. A later unreplaced failed draw causes the state-based loss: CR 104.3c, 121.4, 704.5b and 810.8a. The requested 30-card/70-card example is included. Brain Freeze followed by Blue Sun’s Zenith must target the same opponent to produce this line.
+- Helm plus Rest in Peace can operate across controllers; its replacement exiles the library, and a subsequent failed draw or another loss condition is still needed. X cannot be zero under current Oracle text.
+- Commander combat damage is separate for each commander. The settled same-commander/same-recipient 21-damage case is public. **The split-head aggregation discrepancy remains unresolved and private:** CR 903.10a describes a recipient player, while the Wizards overview uses team wording. No claim is made that 11 to one head plus 10 to the other definitively combines or does not combine. The existing private `commander-aggregation` draft and original caveat are preserved.
+- Fifteen poison is shared. Prologue to Phyresis gives each opposing player one counter: 13 + 1 + 1 = 15. Infect changes a damage result; toxic adds its value following combat damage to a player. Proliferate adds only one poison counter to an already-poisoned team, even if both heads are selected.
+- Oracle uses its ability controller’s library/devotion. Laboratory Maniac and Jace’s static ability replace only their own controller’s empty-library draw. Successful individual wins win for both teammates.
+- Test of Endurance needs 50 shared life and Felidar Sovereign needs 40, at upkeep triggering and resolution. Removing a source after its ability triggers does not itself counter that ability.
+- Approach must resolve after being cast from hand, with a previous cast of another spell of that name by that player; the previous spell need not have resolved or come from hand. A teammate’s cast does not count. Maze’s End checks the ability controller’s Gates, not pooled teammate lands.
+- Door to Nothingness can eliminate a team by making one opponent lose. Sorin from 60 gives 60 − 50 = 10. Pox at 60 makes each head lose 20, leaving an unmodified team at 20. Each-opponent loss of 3 reduces the opposing shared pool by 6. Reservoir’s unmodified 50 damage leaves a team starting at 60 alive at 10.
+- Platinum Angel’s two clauses keep its whole team from losing and the opposing team from winning, but do not restore resources or prevent concession. The One Ring and Glacial Chasm protect only their relevant controller; Teferi’s Protection has distinct shared-life and individual-permanent/protection effects.
 
-- Milling is not itself an empty-library loss. A subsequent unreplaced empty draw creates the state-based loss, which eliminates the team: CR 104.3c, 121.4, 704.5b and 810.8a.
-- Drawing the last available card succeeds. An insufficient multi-card draw finishes the resolving instruction before the state-based check, unless a replacement win or another immediate ending intervenes.
-- An already-failed draw is not repaired simply by refilling the library before the check. A replacement must apply at the draw, or a relevant loss-prevention effect must be operating.
-- Laboratory Maniac and Oracle refer to their own ability controller’s resources, not a merged team library. A successful win nevertheless wins for the team.
-- “Can’t lose the game,” “can’t lose life,” and “opponents can’t win” are different restrictions. One-shot prevented losses do not queue automatically; continuing zero-life/fifteen-poison conditions are checked again.
-- Removing Test of Endurance/Felidar after an upkeep ability has triggered does not by itself counter the ability. Their intervening conditions still matter at resolution.
-- Mandatory loops and optional repeatable combos differ. An unrelated removal spell need not be spent merely to stop a mandatory loop. No new combo bans, turn limits, point penalties or tournament policy were introduced.
+Angel’s Grace is discussed without publishing the previous unresolved teammate-damage calculation as established arithmetic. No prices, budgets, bans, early-turn restrictions or combo legality policies are introduced.
 
-The existing **split-recipient commander-damage discrepancy remains flagged**: CR 903.10a describes a recipient player, while the official format overview uses team wording. The new answer uses the definite same-commander/same-recipient 21-damage case and does not resolve 11-to-one-head plus 10-to-the-other. The earlier private draft and published caveat are preserved. Angel’s Grace’s teamwide can’t-lose clauses are explained without publishing the previously unresolved teammate-damage arithmetic as a settled numerical ruling.
+## Data and preservation
 
-## Data, editing and preservation
+- `data/rulings/winning-losing-topics.json`: 32-topic coverage, six groups, stable ruling references and curated natural-language search aliases. It is an index into existing ruling records, not a second content database.
+- `research/winning-losing/faq-input.json`: new original summaries and canonical card names.
+- `research/winning-losing/update-input.json`: five reviewed improvements to existing entries: `cant-lose-team`, `oracle-own-library`, `rip-helm`, `life-threshold-wins` and `reservoir-fifty`.
+- `data/rulings/winning-losing.json` / `winning-losing-updates.json`: generated, identity-enriched seeds/updates.
+- `data/rulings/official-sources.json`: official URLs, edition, checked date and priority sections.
+- `public-export.jsonl` / `verification-ledger.json`: 39 audited new/reused entries and source hashes. Original verification dates remain distinct from the current source recheck date.
+- `preserved-source-checksums.json`: unchanged originals, historical exports, v3 prices and league rules versus development commit `5e6a78f`.
 
-- `research/winning-losing/faq-input.json`: editable original summaries, examples, references and canonical card names.
-- `data/rulings/winning-losing.json`: generated, identity-enriched new seed.
-- `data/rulings/official-sources.json`: four official links, effective edition, verification date and priority sections.
-- `public-export.jsonl`, `verification-ledger.json`: machine-readable curated export and per-entry provenance.
-- `preserved-source-checksums.json`: byte comparisons to development commit `5e6a78f` for earlier reviewed entries/drafts/exports, v3 prices and league rules.
+The original 57-entry seed, its research export/ledger and the three private drafts are unchanged. Existing PostgreSQL tables, protected editor, immutable revisions, review/publish/hide/restore controls and backups are reused. An absent new ID is inserted once. A reviewed update appends revision 2 **only if** the original seed is still public/unhidden, the sole version, authored by the research seeder and has its original seed hash. Any organizer edit, draft, hide or restore blocks that automatic update. Existing revision 1 is retained. Repeated migrations do not generate further revisions.
 
-The existing PostgreSQL ruling tables, protected editor, publication controls, immutable versions, hiding and recovery are reused. Seeding remains insert-only. An upgrade adds the 32 absent IDs but never overwrites organizer text, a hidden entry or an existing ID. Tests recreate a pre-upgrade database with a hidden original ruling and confirm its exact rows/history remain unchanged across repeated migrations. The original 57-entry research export/ledger is intentionally not rewritten; new research has a separate directory.
+Tests simulate the pre-upgrade state, an organizer draft, hidden entries and untouched seeds. They check that only eligible seeds receive a new version, originals remain intact, reruns are idempotent and published prices/rules do not change. Existing full admin/history/backup, team, deck and event suites remain included.
 
-For a deployed correction, use **Admin → Rulings → Save draft → Publish reviewed latest version**. Editing an existing seed file does not overwrite its already-published database entry. A later source edition requires reference review and an explicit evidence-index update, rather than silently relabeling older rulings.
+For corrections use **Admin → Rulings → Save draft → Publish reviewed latest version**. A future new seed correction does not silently replace an organizer version. New custom rulings remain searchable through All rulings and their category; the 32-topic curated collection is a versioned checklist in code.
+
+## Search and browsing
+
+Search uses local plain-text fields, card names, rule numbers and curated question aliases. Normalization handles punctuation/curly apostrophes and accent marks, with a conservative all-meaningful-word fallback. All six exact conversational queries in the handoff are exercised in Node and Chrome tests. This is deterministic lexical search, not an unrestricted semantic question-answering system.
+
+The collection filter, six-group selector, existing category selector and classification selector intersect. Related topics map to one accordion identity, rendered once even when an answer belongs to multiple groups. All rulings/reset restores the general reference. Loading, error, retry and stale-request handling are preserved. There is no third-party API dependency during normal FAQ browsing.
 
 ## Reproduction
 
-Node 22 and the app’s existing npm dependencies suffice.
+Node 22 and the existing dependencies suffice:
 
 ```sh
-# Rebuild only the new curated seed from editorial inputs:
 node scripts/build-winning-losing.mjs
-# Research-only network refresh. No DB writes and no CR mirror:
+# Research-only network refresh; fails if Wizards changes its current URLs/edition:
 node scripts/verify-win-loss-sources.mjs
-# Validate and regenerate the new ledger/export:
 node scripts/verify-winning-losing.mjs
-# Offline checks, including the untouched original corpus:
 npm run test:rulings-corpus
-# Requires real disposable PostgreSQL:
+# Real disposable PostgreSQL required:
 DATABASE_URL=postgresql://USER@127.0.0.1:PORT/DB npm test
-# Local fixture app uses real persistence/auth/scoring, deterministic Moxfield refusal:
+# Local fixture uses real persistence/auth/scoring, deterministic upstream import refusal:
 APP_ENV=local PORT=3000 node --env-file=.env tests/browser-server.mjs
 BASE_URL=http://127.0.0.1:3000 ADMIN_PASSWORD=LOCAL_TEST_PASSWORD npm run test:e2e
 ```
 
-The source-refresh command checks the current Wizards landing page. If its PDF/TXT URLs or effective edition differ, it fails for review instead of publishing claims under a silently changed edition. Review new Oracle text as well; hashes prove the records used, not the correctness of an interpretation. The source fetcher holds rulebook text only in memory and persists provenance hashes, not the document.
+The source refresh stores hashes, not CR body text. A changed rules edition or Oracle text needs human review; hashes prove which evidence was used, not that an interpretation is correct. `QUESTIONS.md`, the export and the ledger are regenerated and checked offline.
 
 ## Verification and deployment
 
-Local validation uses Node 22, PostgreSQL 17 and real installed Chrome. Coverage includes all 32 entries, reference hashes, card identities, source metadata, HTTP link checks, idempotent upgrades, original-version preservation, admin authorization/draft/publication/hiding, source links opening separately, category/search combinations, failure recovery/reset, and 320/375-pixel layout. Full existing deck-import, points, administrator, rulings and tournament suites remain included. Executed counts are in `acceptance-results.json`.
+Executed results are recorded in `acceptance-results.json`. Local tests use Node 22, PostgreSQL 17 and actual Chrome, including mobile widths of 320 and 375 pixels. Official-link navigation has a browser popup fixture, while separate real HTTP verification checks the official URLs and current documents.
 
-Railway CLI authentication was checked and failed with an expired OAuth refresh (`invalid_grant`). No exposed historical token was reused. **This feature has not been deployed or verified on hosted staging.** Local screenshots and stubbed popup-navigation tests are not hosted evidence. The actual four official URL responses are separately retained in the source report. Production, tournament results, historical snapshots, prices, budgets, bans and league-format decisions remain unchanged. Delivery is a PR for review.
+Railway authentication was checked again and fails because its OAuth refresh expired (`invalid_grant`). No historical exposed token was reused. **This feature has not been deployed or verified on hosted staging.** Production data and deployment remain unchanged; PR #16 is the review/deployment package.

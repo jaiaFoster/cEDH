@@ -7,42 +7,48 @@
     {
       "url": "https://magic.wizards.com/en/rules",
       "status": 200,
-      "retrieved_at": "2026-11-02T23:40:11.905Z",
+      "retrieved_at": "2026-11-02T23:56:32.469Z",
       "sha256": "48d1a70e763e11a71ed354e91b0b4a2e2272bf2a222506b683c46a3ff9211921",
       "bytes": 150629
     },
     {
       "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
       "status": 200,
-      "retrieved_at": "2026-11-02T23:40:12.092Z",
+      "retrieved_at": "2026-11-02T23:56:32.731Z",
       "sha256": "8d860e451f20f38865b725b42d82feb714c725373dd8f3b32b8652b3eeb070ca",
       "bytes": 977752
     },
     {
       "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.pdf",
       "status": 200,
-      "retrieved_at": "2026-11-02T23:40:12.317Z",
+      "retrieved_at": "2026-11-02T23:56:33.008Z",
       "sha256": "674241213075cd581dd3255567ebeec7b40ffae3a27c6a3bd99218af6b2b6659",
       "bytes": 2527259
     },
     {
       "url": "https://magic.wizards.com/en/formats/two-headed-giant",
       "status": 200,
-      "retrieved_at": "2026-11-02T23:40:12.445Z",
+      "retrieved_at": "2026-11-02T23:56:33.062Z",
       "sha256": "94dd9363d4d92d355841ea37ddaef047bbabdd72a0c370cd30365bfb52e9ed32",
       "bytes": 386052
     },
     {
       "url": "https://api.scryfall.com/cards/collection",
       "status": 200,
-      "retrieved_at": "2026-11-02T23:40:12.953Z",
-      "sha256": "44f0b35511fd01bd0eeb006ba253b0c70caa3e43a962e83c48c8ba80265529cb",
-      "bytes": 87734
+      "retrieved_at": "2026-11-02T23:56:33.767Z",
+      "sha256": "35d12262db4f325479448f8ac336d3b53acb3e53f45dbacdb934270c4ad3a46c",
+      "bytes": 144713
     }
   ],
   "rule_references": {
     "101.2": {
       "sha256": "687120d8c3051c1c57cd7e17da7038fab7ddfbdb2b3c5a9d8df525579708ef6c"
+    },
+    "102.3": {
+      "sha256": "12634f086cb58a5358dbd2ed5645299c56e24718e9bc6e7ea89adba112f7bdf1"
+    },
+    "102.4": {
+      "sha256": "4d0793daec794b3bd9f3e266ac989ee0e263c007942b4264e11f4863d807d641"
     },
     "104.1": {
       "sha256": "a4ee62515f02b77eec80e6281abf5f10822f895bdb7a7a953d573bf9adcb7f15"
@@ -65,8 +71,8 @@
     "104.3f": {
       "sha256": "1db4e1cc1876370d59d543cbf3a4f08ec4226dbf2e9d2456012254d8bc468b7c"
     },
-    "104.3j": {
-      "sha256": "ae4a9413c159a47e1782c6ef84c697946a4a3e7db3fe77ddf6f5ab1f0b7bb300"
+    "104.4a": {
+      "sha256": "f1190193a7733c151c19df5de8479f690bcfbc5a5dcc9523a2874dd5651f3fd6"
     },
     "104.4b": {
       "sha256": "904b4ad89b1c4559cd78d50f3a3178c054b7d260087368559eff7ad6e4bd36b2"
@@ -98,6 +104,15 @@
     "119.6": {
       "sha256": "6030353ea6464ddc72c080da9b65d5ea07a390aecd96a648dce9e3c536c9884a"
     },
+    "120.3a": {
+      "sha256": "13ff5dbff2bf50c9caa6a931a55ab247f707168487bf845cbd466a678d5c3d30"
+    },
+    "120.3b": {
+      "sha256": "df2fd2618945d0f06c04a8ba9b382d6392d23c94b2d11058e0205aaa8001b864"
+    },
+    "120.3g": {
+      "sha256": "56b6e83dd0a8827f7bdab913a24084aac4c2ffcabef8591eae3ceb6145ca33cd"
+    },
     "121.1": {
       "sha256": "397f6ed2cc76589f679bb58aaf94fa43176e187803c730233fb7c9ff04798791"
     },
@@ -116,8 +131,26 @@
     "603.7": {
       "sha256": "fe4879a5591986b613ed0480397a1300ec46dd2b0fff1c69550224a24dc6f6c1"
     },
+    "608.2c": {
+      "sha256": "b8b434e389952437a2ef58299140b2c8ba160c9e9f4b2a011bbf78ac2def3c70"
+    },
     "614.6": {
       "sha256": "8be9726a9a7521f0855b4dd822d1de059fc15e83b7468d6adf18b10cf34e441c"
+    },
+    "615.1": {
+      "sha256": "1aaf4ae0310bc671eb0f1052b25d336a9d077a4539313f8da5b1014a8ecfda2b"
+    },
+    "701.34a": {
+      "sha256": "0c15b477f8f0006d75d3852692f5359eefe8cfe0fa967f75de9e677dcf10a12d"
+    },
+    "701.34b": {
+      "sha256": "e6d8c4a951af42ae29bcfa4d719eb04433c9a55e20aed712aee5288674d1f65e"
+    },
+    "702.90b": {
+      "sha256": "e4b469d2c5dfa4278a2aa8608ab5a16f483f6d2eea1033967aa8a3f1ea7b650d"
+    },
+    "702.164a": {
+      "sha256": "efa7dedbe52b8c07366a384ecef3120bb68f5ff9d48ca9ac12e60a7c3d6c2585"
     },
     "704.3": {
       "sha256": "74b23be15cf0ec3bed1f025de50083c233c3212f95117cd712e33438819d774a"
@@ -127,9 +160,6 @@
     },
     "704.5b": {
       "sha256": "249e9c81019802e123a3bc15531b5db1cda13d1659e687dc818e0a2753f1977d"
-    },
-    "704.5c": {
-      "sha256": "a8aead7a5a871826352f9f177fb5c090026bc05410e485408f67ec9b2b893bf9"
     },
     "704.6a": {
       "sha256": "7f5b2d1dc6f6eeb04e12121d430109177fda89806ee0dbdaf5bc528ca1dcfc9a"
@@ -157,6 +187,9 @@
     },
     "810.4": {
       "sha256": "a1d38a3304d81348b88292838218e599cd9799fc26b1635a2523a3a2c1ab3a32"
+    },
+    "810.5": {
+      "sha256": "ce180d68251826c618bbc980d612c3abd691dee6569cd45208d595dfabb3a1ec"
     },
     "810.8a": {
       "sha256": "733ac70d539517a187fba8600c3b5eacdeb20f247ce1bc377bbb6d90e0198492"
@@ -198,5 +231,5 @@
       "sha256": "fd7b2dbe4463de586b2c6a1fd64808ac765d58de9ea22d6d7196e233cdb6ff33"
     }
   },
-  "oracle_cards": 17
+  "oracle_cards": 28
 }

@@ -51,7 +51,17 @@ if (!cr.includes("effective as of " + config.rules_edition + "."))
 const pdf = await get(config.pdf_url);
 if (!pdf.subarray(0, 5).equals(Buffer.from("%PDF-"))) throw Error("Not a PDF");
 await get(config.format_url);
-const entries = read("data/rulings/winning-losing.json");
+const topics = read("data/rulings/winning-losing-topics.json");
+const reused = new Set(topics.topics.flatMap((t) => t.ruling_ids));
+const updates = read("data/rulings/winning-losing-updates.json");
+const updatedIds = new Set(updates.map((r) => r.id));
+const entries = [
+  ...read("data/rulings/winning-losing.json"),
+  ...updates,
+  ...read("data/rulings/entries.json").filter(
+    (r) => reused.has(r.id) && !updatedIds.has(r.id),
+  ),
+];
 const wanted = [...new Set(entries.flatMap((r) => r.rule_references))];
 const refs = {};
 for (const m of cr.matchAll(

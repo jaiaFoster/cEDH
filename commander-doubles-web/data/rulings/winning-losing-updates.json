@@ -1,0 +1,208 @@
+[
+  {
+    "id": "cant-lose-team",
+    "title": "Does one Platinum Angel protect the whole team from losing?",
+    "category": "Protection",
+    "classification": "Works",
+    "answer": "Yes. Platinum Angel’s “you can’t lose” protects its controller’s whole team from losing. Its “your opponents can’t win” prevents both opposing players, and therefore their team, from winning.",
+    "explanation": "CR 810.8a applies a player’s can’t-lose and can’t-win restrictions to that player’s entire team. This does not share control of permanents or restore missing resources. Concession still makes the conceding player’s entire team leave the game.",
+    "example": "Your team can remain in the game at zero life while either teammate controls an active Platinum Angel. An opposing Thassa’s Oracle cannot win through that Angel. If the Angel leaves and your shared life is still zero, your team loses at the next state-based-action check.",
+    "prerequisites": [],
+    "exceptions": [
+      "It does not stop damage, remove poison or restore libraries. Removing or disabling the effect can expose accumulated loss conditions.",
+      "Protection from losing does not prevent concession. A failed draw that happened while protected is not permanently remembered after a state-based-action check; later empty draw attempts can still threaten the team."
+    ],
+    "cards": [
+      {
+        "oracle_id": "b148578c-c0bf-4785-b97c-4b6f83028008",
+        "name": "Platinum Angel",
+        "url": "https://scryfall.com/search?q=oracleid%3Ab148578c-c0bf-4785-b97c-4b6f83028008"
+      }
+    ],
+    "rule_references": [
+      "810.8a",
+      "810.8b",
+      "704.3",
+      "704.6a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/cn2/214/platinum-angel?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles 32-topic source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [],
+    "change_note": "Reviewed Winning & Losing expansion; append a historical version only if the original seed has no organizer edits."
+  },
+  {
+    "id": "oracle-own-library",
+    "title": "Can my teammate’s empty library enable my Thassa’s Oracle?",
+    "category": "False-positive combos",
+    "classification": "Doesn’t Work",
+    "answer": "No. Oracle checks its controller’s devotion and that controller’s library. Sharing a turn does not share the library.",
+    "explanation": "Oracle checks the devotion to blue and library of the player controlling its triggered ability, not their teammate’s resources. If X is at least the number of cards in that player’s library when instructed, that player wins and their entire team wins under CR 810.8a.",
+    "example": "Your library is empty and your teammate has 70 cards. Your Oracle trigger can win for both teammates, even if your devotion is zero at resolution. Your teammate’s empty library instead does not help if your own library is too large.",
+    "prerequisites": [],
+    "exceptions": [
+      "A successful Oracle win wins the whole team game. Check devotion and library size at resolution."
+    ],
+    "cards": [
+      {
+        "oracle_id": "1de1b591-a73f-4974-b507-8c63e07a0868",
+        "name": "Thassa's Oracle",
+        "url": "https://scryfall.com/search?q=oracleid%3A1de1b591-a73f-4974-b507-8c63e07a0868"
+      }
+    ],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.8a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/thb/73/thassas-oracle?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles 32-topic source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [],
+    "change_note": "Reviewed Winning & Losing expansion; append a historical version only if the original seed has no organizer edits."
+  },
+  {
+    "id": "rip-helm",
+    "title": "Can Rest in Peace and Helm work across teammates?",
+    "category": "Cross-controller",
+    "classification": "Works",
+    "answer": "Yes. Rest in Peace’s graveyard replacement is global. An allied Helm activation with X at least 1 can exile the targeted opponent’s library because no card actually enters that graveyard to meet Helm’s stopping condition.",
+    "explanation": "Helm repeatedly mills a card until a creature card or X cards have been put into the targeted opponent’s graveyard this way. Rest in Peace replaces those graveyard moves with exile. With X at least 1, the stopping count is never reached, so the remaining library is exiled. Either teammate may control Rest in Peace; the other must control and pay for their Helm.",
+    "example": "A controls Rest in Peace. B activates B’s Helm with X=1 targeting opponent C. C’s library is exiled. C remains in the game until C fails an unreplaced draw or another loss condition applies; when C loses, C’s teammate loses too.",
+    "prerequisites": [],
+    "exceptions": [
+      "Exiling the library is not itself a win: the opponent must attempt a draw from it, or lose another way. Replacement conflicts, removing Rest in Peace or stopping the activation can break the line."
+    ],
+    "cards": [
+      {
+        "oracle_id": "087f9ad7-e74f-40e2-8102-1ed2925d0418",
+        "name": "Rest in Peace",
+        "url": "https://scryfall.com/search?q=oracleid%3A087f9ad7-e74f-40e2-8102-1ed2925d0418"
+      },
+      {
+        "oracle_id": "16cadebf-c484-41f8-9e38-5c2c528f5b54",
+        "name": "Helm of Obedience",
+        "url": "https://scryfall.com/search?q=oracleid%3A16cadebf-c484-41f8-9e38-5c2c528f5b54"
+      }
+    ],
+    "rule_references": [
+      "614.6",
+      "810.5",
+      "104.3c",
+      "704.5b",
+      "810.8a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/big/4/rest-in-peace?utm_source=api",
+      "https://scryfall.com/card/me2/210/helm-of-obedience?utm_source=api",
+      "https://commanderspellbook.com/combo/3002-5065/"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles 32-topic source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [
+      26
+    ],
+    "change_note": "Reviewed Winning & Losing expansion; append a historical version only if the original seed has no organizer edits."
+  },
+  {
+    "id": "life-threshold-wins",
+    "title": "Can Test of Endurance or Felidar win from starting life?",
+    "category": "Shared life",
+    "classification": "Works",
+    "answer": "Yes, once their upkeep trigger can resolve with the required shared life total. Test of Endurance checks at least 50; Felidar Sovereign checks at least 40. A player’s win wins the team game.",
+    "explanation": "Yes, once their upkeep trigger can resolve with the required shared life total. Test of Endurance checks at least 50; Felidar Sovereign checks at least 40. A player’s win wins the team game.",
+    "example": "At 60 shared life, Test of Endurance can trigger at its controller’s upkeep; falling to 49 before resolution stops that win. Felidar Sovereign instead requires at least 40: beginning upkeep at 40 and remaining at 40 on resolution can win for both teammates.",
+    "prerequisites": [],
+    "exceptions": [
+      "These are intervening-if triggers: meet the threshold both at the start of upkeep and at resolution. A later life-gain trigger cannot create a missed win trigger.",
+      "Neither card wins immediately on entering the battlefield. Removing its source after the trigger exists does not by itself stop the ability; a can’t-win restriction still can."
+    ],
+    "cards": [
+      {
+        "oracle_id": "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc",
+        "name": "Test of Endurance",
+        "url": "https://scryfall.com/search?q=oracleid%3Affdad8fb-69ee-40d3-b2eb-b0aee0a5becc"
+      },
+      {
+        "oracle_id": "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b",
+        "name": "Felidar Sovereign",
+        "url": "https://scryfall.com/search?q=oracleid%3A5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b"
+      }
+    ],
+    "rule_references": [
+      "603.4",
+      "810.9a",
+      "810.8a",
+      "113.7a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/dmr/32/test-of-endurance?utm_source=api",
+      "https://scryfall.com/card/bfz/26/felidar-sovereign?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles 32-topic source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [
+      15
+    ],
+    "change_note": "Reviewed Winning & Losing expansion; append a historical version only if the original seed has no organizer edits."
+  },
+  {
+    "id": "reservoir-fifty",
+    "title": "Does one Aetherflux Reservoir activation beat 60 life?",
+    "category": "Shared life",
+    "classification": "Doesn’t Work",
+    "answer": "Not by itself. Paying 50 from 60 leaves your team at 10. Dealing 50 to one opposing head takes an unmodified 60-life enemy team to 10.",
+    "explanation": "Not by itself. Paying 50 from 60 leaves your team at 10. Dealing 50 to one opposing head takes an unmodified 60-life enemy team to 10.",
+    "example": "From 60 versus 60, one activation leaves both teams at 10. A second activation requires enough life to pay another 50.",
+    "prerequisites": [],
+    "exceptions": [
+      "Only spells Reservoir’s controller casts count toward its cast trigger. Damage prevention, life-gain restrictions and losing at zero can matter."
+    ],
+    "cards": [
+      {
+        "oracle_id": "5f15125e-ae89-471e-b055-226a783bc7c1",
+        "name": "Aetherflux Reservoir",
+        "url": "https://scryfall.com/search?q=oracleid%3A5f15125e-ae89-471e-b055-226a783bc7c1"
+      }
+    ],
+    "rule_references": [
+      "109.5",
+      "119.4",
+      "810.9",
+      "810.9b"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/kld/192/aetherflux-reservoir?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles 32-topic source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [
+      16
+    ],
+    "change_note": "Correct classification of the existing negative question: one unmodified 50-damage activation does not beat 60 shared life. Original arithmetic is preserved."
+  }
+]

@@ -10,6 +10,16 @@ export const winningLosingSeed = JSON.parse(
     new URL("./data/rulings/winning-losing.json", import.meta.url),
   ),
 );
+export const winningLosingTopics = JSON.parse(
+  fs.readFileSync(
+    new URL("./data/rulings/winning-losing-topics.json", import.meta.url),
+  ),
+);
+export const winningLosingUpdates = JSON.parse(
+  fs.readFileSync(
+    new URL("./data/rulings/winning-losing-updates.json", import.meta.url),
+  ),
+);
 export const officialRulesSources = JSON.parse(
   fs.readFileSync(
     new URL("./data/rulings/official-sources.json", import.meta.url),
@@ -152,6 +162,47 @@ export function validateRuling(input, { publishing = false } = {}) {
     );
   return x;
 }
+// Curated topic aliases supplement plain substring search; no external search service.
+export function rulingTopics(id) {
+  return winningLosingTopics.topics.filter((t) => t.ruling_ids.includes(id));
+}
+export function normalizeRulingSearch(value) {
+  return String(value)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9.]+/g, " ")
+    .trim();
+}
+export function rulingMatchesQuery(r, query) {
+  if (!query.trim()) return true;
+  const topics = rulingTopics(r.id);
+  const haystack = normalizeRulingSearch(
+    [
+      r.title,
+      r.answer,
+      r.explanation,
+      r.example,
+      ...r.cards.map((c) => c.name),
+      ...r.exceptions,
+      ...r.prerequisites,
+      ...r.rule_references.map((ref) => "CR " + ref),
+      ...topics.flatMap((t) => [t.question, ...t.search_aliases]),
+    ].join(" "),
+  );
+  const needle = normalizeRulingSearch(query);
+  if (!needle) return false;
+  if (haystack.includes(needle)) return true;
+  const stop = new Set(
+    "a an the if i you your my their me does do can is are it its for to in from of and or with at that when what how much both one".split(
+      " ",
+    ),
+  );
+  const tokens = needle.split(" ").filter((w) => !stop.has(w));
+  const words = new Set(haystack.split(" "));
+  return tokens.length > 0 && tokens.every((w) => words.has(w));
+}
 export async function seedRulings(c) {
   for (const input of [
     ...rulingSeed,
@@ -180,6 +231,47 @@ export async function seedRulings(c) {
         [content.id, id],
       );
   }
+  // Append reviewed improvements only to untouched PR #13 seeds. Never replace a
+  // published pointer after an organizer edit, draft, hide or historical restore.
+  for (const input of winningLosingUpdates) {
+    const original = rulingSeed.find((r) => r.id === input.id);
+    if (!original) throw Error("Update must reference an existing seed");
+    const originalHash = createHash("sha256")
+      .update(JSON.stringify(original))
+      .digest("hex");
+    const prior = (
+      await c.query(
+        `SELECT e.*, v.content, v.actor, v.revision FROM ruling_entries e
+      JOIN ruling_versions v ON v.id=e.published_version_id
+      WHERE e.id=$1 AND NOT e.hidden FOR UPDATE OF e`,
+        [input.id],
+      )
+    ).rows[0];
+    if (
+      !prior ||
+      prior.seed_hash !== originalHash ||
+      prior.actor !== "research seed" ||
+      prior.revision !== 1
+    )
+      continue;
+    const count = (
+      await c.query(
+        "SELECT count(*)::int n FROM ruling_versions WHERE ruling_id=$1",
+        [input.id],
+      )
+    ).rows[0].n;
+    if (count !== 1) continue;
+    const content = validateRuling(input, { publishing: true });
+    const id = randomUUID();
+    await c.query(
+      "INSERT INTO ruling_versions(id,ruling_id,revision,content,actor,change_note) VALUES($1,$2,2,$3,'research seed update',$4)",
+      [id, input.id, content, content.change_note],
+    );
+    await c.query(
+      "UPDATE ruling_entries SET published_version_id=$2,updated_at=now() WHERE id=$1",
+      [input.id, id],
+    );
+  }
 }
 export async function publicRulings(c, filters = {}) {
   const query = String(filters.q || "")
@@ -195,37 +287,42 @@ export async function publicRulings(c, filters = {}) {
   const { rows } = await c.query(
     `SELECT e.id,v.id AS version_id,v.revision,v.content,v.created_at FROM ruling_entries e JOIN ruling_versions v ON v.id=e.published_version_id WHERE NOT e.hidden AND v.content->>'verification_status'='verified' ORDER BY v.content->>'title',e.id`,
   );
-  const matches = rows.filter(
-    (r) =>
+  if (filters.collection && filters.collection !== "winning-losing")
+    throw fail("Unsupported collection");
+  if (filters.group && !winningLosingTopics.groups.includes(filters.group))
+    throw fail("Unsupported FAQ group");
+  const matches = rows.filter((r) => {
+    const topics = rulingTopics(r.id);
+    return (
       (!filters.category || r.content.category === filters.category) &&
       (!filters.classification ||
         r.content.classification === filters.classification) &&
-      (!query ||
-        [
-          r.content.title,
-          r.content.answer,
-          r.content.explanation,
-          r.content.example,
-          ...r.content.cards.map((c) => c.name),
-          ...r.content.exceptions,
-          ...r.content.prerequisites,
-          ...r.content.rule_references.map((ref) => "CR " + ref),
-        ]
-          .join(" ")
-          .toLocaleLowerCase()
-          .includes(query)),
-  );
+      (!filters.collection || topics.length > 0) &&
+      (!filters.group || topics.some((t) => t.group === filters.group)) &&
+      rulingMatchesQuery(r.content, query)
+    );
+  });
   return {
     total: matches.length,
     rulings: matches.map((r) => ({
       ...r.content,
       version_id: r.version_id,
       revision: r.revision,
+      winning_losing_groups: [
+        ...new Set(rulingTopics(r.id).map((t) => t.group)),
+      ],
+      winning_losing_topics: rulingTopics(r.id).map((t) => t.number),
     })),
     categories,
     classifications,
     rules_edition: ruleIndex.edition,
     official_sources: officialRulesSources,
+    winning_losing: {
+      title: winningLosingTopics.title,
+      subtitle: winningLosingTopics.subtitle,
+      groups: winningLosingTopics.groups,
+      topic_count: winningLosingTopics.topics.length,
+    },
   };
 }
 export function installRulingRoutes(app, { q, transaction, audit, admin }) {

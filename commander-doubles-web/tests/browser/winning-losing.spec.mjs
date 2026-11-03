@@ -55,21 +55,21 @@ test("official rules section is prominent, dated, external and includes the seve
       official.getByRole("link", { name: new RegExp("CR " + n + " —") }),
     ).toBeVisible();
 });
-test("32-question category, milling distinction and clickable exact rules preserve the FAQ view", async ({
+test("32-topic collection, milling distinction and clickable exact rules preserve the FAQ view", async ({
   page,
   context,
 }) => {
   await page.goto("/rules");
   await ready(page);
   await page.getByRole("link", { name: "Winning & Losing FAQ ↓" }).click();
-  await expect(page.locator("#ruling-count")).toContainText("32 rulings");
-  await expect(page.locator(".ruling-card")).toHaveCount(32);
+  await expect(page.locator("#ruling-count")).toContainText("27 rulings");
+  await expect(page.locator(".ruling-card")).toHaveCount(27);
   await page.getByLabel("Search rulings or cards").fill("milling one opponent");
-  await expect(page.locator(".ruling-card")).toHaveCount(1);
+  await expect(page.locator(".ruling-card")).toHaveCount(2); // Milling and the related forced-draw answer.
   const mill = page.locator("#ruling-win-loss-mill");
   await mill.locator("summary").click();
   await expect(mill).toContainText("empty library alone does not cause a loss");
-  await expect(mill).toContainText("12 cards");
+  await expect(mill).toContainText("30 cards");
   await expect(mill).toContainText("CR 104.3c");
   await expect(mill).toContainText("CR 704.5b");
   await expect(mill).toContainText("CR 810.8a");
@@ -98,7 +98,7 @@ test("32-question category, milling distinction and clickable exact rules preser
   await page.getByLabel("Search rulings or cards").fill("CR 704.5b");
   await expect(page.locator("#ruling-win-loss-mill")).toBeVisible();
   await page.getByRole("button", { name: "Reset rulings filters" }).click();
-  await expect(page.locator(".ruling-card")).toHaveCount(89);
+  await expect(page.locator(".ruling-card")).toHaveCount(84);
 });
 test("worked examples, protection caveats and source access remain usable at 320 and 375 pixels", async ({
   page,
@@ -113,11 +113,12 @@ test("worked examples, protection caveats and source access remain usable at 320
   await page.getByRole("button", { name: "Winning & Losing FAQ" }).click();
   await page.getByLabel("Search rulings or cards").fill("Aetherflux");
   await ready(page);
-  const reservoir = page.locator("#ruling-win-loss-reservoir");
+  const reservoir = page.locator("#ruling-reservoir-fifty");
   await expect(reservoir).toBeVisible();
   await reservoir.locator("summary").click();
-  await expect(reservoir).toContainText("leaving your team at 10");
-  await expect(reservoir).toContainText("leaving that team at 10");
+  await expect(reservoir).toContainText("leaves your team at 10");
+  await expect(reservoir).toContainText("team to 10");
+  await expect(reservoir.locator(".tag")).toHaveText("Doesn’t Work");
   for (const width of [375, 320]) {
     await page.setViewportSize({ width, height: 850 });
     expect(
@@ -132,14 +133,12 @@ test("worked examples, protection caveats and source access remain usable at 320
   });
   await page
     .getByLabel("Search rulings or cards")
-    .fill("commander’s combat damage");
-  await expect(
-    page.locator("#ruling-win-loss-commander-threshold"),
-  ).toBeVisible();
-  await page.locator("#ruling-win-loss-commander-threshold > summary").click();
-  await expect(
-    page.locator("#ruling-win-loss-commander-threshold"),
-  ).toContainText("does not settle");
+    .fill("How much commander damage?");
+  await expect(page.locator("#ruling-commander-poison")).toBeVisible();
+  await page.locator("#ruling-commander-poison > summary").click();
+  await expect(page.locator("#ruling-commander-poison")).toContainText(
+    "organizer clarification",
+  );
 });
 
 test("Winning FAQ shortcut recovers an initial load failure without losing its category", async ({
@@ -161,11 +160,84 @@ test("Winning FAQ shortcut recovers an initial load failure without losing its c
   ).toBeVisible();
   await page.unroute("**/api/rulings?**");
   await page.getByRole("link", { name: "Winning & Losing FAQ ↓" }).click();
-  await expect(page.locator(".ruling-card")).toHaveCount(32);
-  await expect(page.getByLabel("Category", { exact: true })).toHaveValue(
-    "Winning & Losing",
+  await expect(page.locator(".ruling-card")).toHaveCount(27);
+  await expect(page.getByLabel("Category", { exact: true })).toHaveValue("");
+  await expect(page.locator("#winning-losing-filter")).toHaveAttribute(
+    "aria-pressed",
+    "true",
   );
   await page.getByRole("button", { name: "Reset rulings filters" }).click();
-  await expect(page.locator(".ruling-card")).toHaveCount(89);
+  await expect(page.locator(".ruling-card")).toHaveCount(84);
   await expect(page.getByLabel("Category", { exact: true })).toHaveValue("");
+});
+
+test("all six groups and everyday winning/losing questions reuse maintained accordion answers", async ({
+  page,
+}) => {
+  await page.goto("/rules");
+  await ready(page);
+  await expect(
+    page.getByRole("heading", {
+      name: "Winning & Losing in Two-Headed Giant",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(
+      "What happens when one player mills out, loses the game, gains poison counters, or satisfies an alternate win condition?",
+      { exact: true },
+    ),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Winning & Losing FAQ", exact: true })
+    .click();
+  await expect(page.locator(".ruling-group > h3")).toHaveCount(6);
+  const groups = [
+    "Shared wins and losses",
+    "Milling and empty libraries",
+    "Commander damage and poison",
+    "Alternate win conditions",
+    "Shared-life interactions",
+    "Preventing losses and special cases",
+  ];
+  for (const group of groups) {
+    await page
+      .getByLabel("Winning & Losing group", { exact: true })
+      .selectOption(group);
+    await expect(page.locator(".ruling-group > h3")).toHaveCount(1);
+    await expect(page.locator(".ruling-group > h3")).toHaveText(group);
+  }
+  await page
+    .getByLabel("Winning & Losing group", { exact: true })
+    .selectOption("");
+  const queries = [
+    ["If I mill one opponent do both lose?", "win-loss-mill"],
+    ["Does decking out kill the team?", "win-loss-mill"],
+    ["Does poison require 10 or 15?", "commander-poison"],
+    ["How much commander damage?", "commander-poison"],
+    ["Does Thassa’s Oracle win for my teammate?", "oracle-own-library"],
+    ["Can Platinum Angel save both players?", "cant-lose-team"],
+  ];
+  for (const [query, id] of queries) {
+    await page.getByLabel("Search rulings or cards").fill(query);
+    const card = page.locator("#ruling-" + id);
+    await expect(card).toBeVisible();
+    await card.locator("summary").click();
+    await expect(card).toHaveAttribute("open", "");
+    await expect(card.locator(".ruling-rule-links")).toBeVisible();
+    await card.locator("summary").click();
+    await expect(card).not.toHaveAttribute("open", "");
+  }
+  await page.getByLabel("Search rulings or cards").fill("poison");
+  await page.getByLabel("Interaction", { exact: true }).selectOption("Works");
+  await expect(page.locator("#ruling-win-loss-poison-events")).toBeVisible();
+  await expect(page.locator("#ruling-win-loss-poison-mechanics")).toHaveCount(
+    0,
+  );
+  await page.getByRole("button", { name: "Reset rulings filters" }).click();
+  await expect(page.locator(".ruling-card")).toHaveCount(84);
+  const ids = await page
+    .locator(".ruling-card")
+    .evaluateAll((els) => els.map((el) => el.id));
+  expect(new Set(ids).size).toBe(ids.length);
 });

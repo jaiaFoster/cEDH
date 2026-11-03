@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "title": "Winning & Losing in Two-Headed Giant",
+  "subtitle": "What happens when one player mills out, loses the game, gains poison counters, or satisfies an alternate win condition?",
+  "groups": [
+    "Shared wins and losses",
+    "Milling and empty libraries",
+    "Commander damage and poison",
+    "Alternate win conditions",
+    "Shared-life interactions",
+    "Preventing losses and special cases"
+  ],
+  "topics": [
+    {
+      "number": 1,
+      "group": "Shared wins and losses",
+      "question": "If one player loses, does their teammate lose?",
+      "ruling_ids": [
+        "win-loss-one-loser"
+      ],
+      "search_aliases": [
+        "one player loses team loses"
+      ]
+    },
+    {
+      "number": 2,
+      "group": "Shared wins and losses",
+      "question": "If one player wins, does their teammate win?",
+      "ruling_ids": [
+        "win-loss-one-winner"
+      ],
+      "search_aliases": [
+        "one player wins team wins"
+      ]
+    },
+    {
+      "number": 3,
+      "group": "Shared wins and losses",
+      "question": "What happens when one player concedes?",
+      "ruling_ids": [
+        "win-loss-concede"
+      ],
+      "search_aliases": [
+        "concede scoop surrender"
+      ]
+    },
+    {
+      "number": 4,
+      "group": "Shared wins and losses",
+      "question": "What happens if both teams lose simultaneously?",
+      "ruling_ids": [
+        "win-loss-simultaneous-loss"
+      ],
+      "search_aliases": [
+        "simultaneous losses draw tie"
+      ]
+    },
+    {
+      "number": 5,
+      "group": "Milling and empty libraries",
+      "question": "If you mill one opponent’s entire library, does their team lose?",
+      "ruling_ids": [
+        "win-loss-mill"
+      ],
+      "search_aliases": [
+        "If I mill one opponent do both lose?",
+        "mill out mill entire library"
+      ]
+    },
+    {
+      "number": 6,
+      "group": "Milling and empty libraries",
+      "question": "What if that opponent draws from their empty library?",
+      "ruling_ids": [
+        "win-loss-mill"
+      ],
+      "search_aliases": [
+        "Does decking out kill the team?",
+        "deck out decking out draw empty library"
+      ]
+    },
+    {
+      "number": 7,
+      "group": "Milling and empty libraries",
+      "question": "Do you need to mill both opponents?",
+      "ruling_ids": [
+        "win-loss-mill"
+      ],
+      "search_aliases": [
+        "mill both opponents one head"
+      ]
+    },
+    {
+      "number": 8,
+      "group": "Milling and empty libraries",
+      "question": "What if one opponent has an empty library but their teammate still has cards?",
+      "ruling_ids": [
+        "win-loss-separate-libraries"
+      ],
+      "search_aliases": [
+        "teammate library cards empty library"
+      ]
+    },
+    {
+      "number": 9,
+      "group": "Milling and empty libraries",
+      "question": "How do forced draws interact with milling?",
+      "ruling_ids": [
+        "win-loss-forced-draw"
+      ],
+      "search_aliases": [
+        "forced draw Brain Freeze Blue Sun Zenith"
+      ]
+    },
+    {
+      "number": 10,
+      "group": "Milling and empty libraries",
+      "question": "How does Helm of Obedience plus Rest in Peace work?",
+      "ruling_ids": [
+        "rip-helm"
+      ],
+      "search_aliases": [
+        "Helm Rest in Peace exile library mill combo"
+      ]
+    },
+    {
+      "number": 11,
+      "group": "Commander damage and poison",
+      "question": "How much commander damage eliminates a team?",
+      "ruling_ids": [
+        "commander-poison"
+      ],
+      "search_aliases": [
+        "How much commander damage?"
+      ]
+    },
+    {
+      "number": 12,
+      "group": "Commander damage and poison",
+      "question": "Does commander damage from different commanders combine?",
+      "ruling_ids": [
+        "win-loss-different-commanders"
+      ],
+      "search_aliases": [
+        "separate commanders combine commander damage"
+      ]
+    },
+    {
+      "number": 13,
+      "group": "Commander damage and poison",
+      "question": "How many poison counters eliminate a team?",
+      "ruling_ids": [
+        "commander-poison"
+      ],
+      "search_aliases": [
+        "Does poison require 10 or 15?",
+        "poison ten fifteen"
+      ]
+    },
+    {
+      "number": 14,
+      "group": "Commander damage and poison",
+      "question": "What happens when each opposing player receives poison counters?",
+      "ruling_ids": [
+        "win-loss-poison-events"
+      ],
+      "search_aliases": [
+        "each opponent poison counters Prologue to Phyresis"
+      ]
+    },
+    {
+      "number": 15,
+      "group": "Commander damage and poison",
+      "question": "How do infect, toxic and proliferate interact with shared poison?",
+      "ruling_ids": [
+        "win-loss-poison-mechanics",
+        "proliferate-poison"
+      ],
+      "search_aliases": [
+        "infect toxic proliferate poison"
+      ]
+    },
+    {
+      "number": 16,
+      "group": "Alternate win conditions",
+      "question": "Does Thassa’s Oracle win for my teammate?",
+      "ruling_ids": [
+        "oracle-own-library"
+      ],
+      "search_aliases": [
+        "Does Thassa’s Oracle win for my teammate?",
+        "Thassas Oracle devotion team win"
+      ]
+    },
+    {
+      "number": 17,
+      "group": "Alternate win conditions",
+      "question": "Can Laboratory Maniac or Jace, Wielder of Mysteries win for the team?",
+      "ruling_ids": [
+        "win-loss-laboratory-maniac"
+      ],
+      "search_aliases": [
+        "Laboratory Maniac Jace Wielder Mysteries empty library draw win"
+      ]
+    },
+    {
+      "number": 18,
+      "group": "Alternate win conditions",
+      "question": "Does Test of Endurance work with 60 shared starting life?",
+      "ruling_ids": [
+        "life-threshold-wins"
+      ],
+      "search_aliases": [
+        "Test of Endurance 50 upkeep"
+      ]
+    },
+    {
+      "number": 19,
+      "group": "Alternate win conditions",
+      "question": "When does Felidar Sovereign win?",
+      "ruling_ids": [
+        "life-threshold-wins"
+      ],
+      "search_aliases": [
+        "Felidar Sovereign 40 upkeep"
+      ]
+    },
+    {
+      "number": 20,
+      "group": "Alternate win conditions",
+      "question": "How does Approach of the Second Sun win?",
+      "ruling_ids": [
+        "win-loss-one-winner"
+      ],
+      "search_aliases": [
+        "Approach Second Sun cast hand resolve"
+      ]
+    },
+    {
+      "number": 21,
+      "group": "Alternate win conditions",
+      "question": "Can Door to Nothingness eliminate the whole opposing team?",
+      "ruling_ids": [
+        "win-loss-target-loses"
+      ],
+      "search_aliases": [
+        "Door Nothingness target player loses"
+      ]
+    },
+    {
+      "number": 22,
+      "group": "Alternate win conditions",
+      "question": "Can teammates combine Gates for Maze’s End?",
+      "ruling_ids": [
+        "win-loss-mazes-end"
+      ],
+      "search_aliases": [
+        "Maze’s End gates controller win"
+      ]
+    },
+    {
+      "number": 23,
+      "group": "Shared-life interactions",
+      "question": "What happens when the team’s life reaches zero?",
+      "ruling_ids": [
+        "win-loss-zero-life"
+      ],
+      "search_aliases": [
+        "zero negative shared life lose"
+      ]
+    },
+    {
+      "number": 24,
+      "group": "Shared-life interactions",
+      "question": "Does damage to either teammate affect the same life total?",
+      "ruling_ids": [
+        "win-loss-damage"
+      ],
+      "search_aliases": [
+        "damage teammate shared life"
+      ]
+    },
+    {
+      "number": 25,
+      "group": "Shared-life interactions",
+      "question": "How does each opponent loses X life work?",
+      "ruling_ids": [
+        "you-and-opponents"
+      ],
+      "search_aliases": [
+        "each opponent loses 3 life six"
+      ]
+    },
+    {
+      "number": 26,
+      "group": "Shared-life interactions",
+      "question": "What does Sorin Markov do to shared life?",
+      "ruling_ids": [
+        "sorin-life-ten"
+      ],
+      "search_aliases": [
+        "Sorin Markov set life total 10 sixty"
+      ]
+    },
+    {
+      "number": 27,
+      "group": "Shared-life interactions",
+      "question": "How do Pox and similar effects calculate shared-life loss?",
+      "ruling_ids": [
+        "pox-bloodletter"
+      ],
+      "search_aliases": [
+        "Pox Bloodletter shared life third"
+      ]
+    },
+    {
+      "number": 28,
+      "group": "Shared-life interactions",
+      "question": "Does Aetherflux Reservoir defeat a team at 60 life?",
+      "ruling_ids": [
+        "reservoir-fifty"
+      ],
+      "search_aliases": [
+        "Aetherflux Reservoir 50 60 damage"
+      ]
+    },
+    {
+      "number": 29,
+      "group": "Preventing losses and special cases",
+      "question": "Can Platinum Angel save both players?",
+      "ruling_ids": [
+        "cant-lose-team"
+      ],
+      "search_aliases": [
+        "Can Platinum Angel save both players?"
+      ]
+    },
+    {
+      "number": 30,
+      "group": "Preventing losses and special cases",
+      "question": "What do effects saying you can’t lose the game do for the team?",
+      "ruling_ids": [
+        "cant-lose-team"
+      ],
+      "search_aliases": [
+        "you cant lose game teammate protection"
+      ]
+    },
+    {
+      "number": 31,
+      "group": "Preventing losses and special cases",
+      "question": "What do effects saying your opponents can’t win the game do?",
+      "ruling_ids": [
+        "cant-lose-team"
+      ],
+      "search_aliases": [
+        "opponents cant win game team"
+      ]
+    },
+    {
+      "number": 32,
+      "group": "Preventing losses and special cases",
+      "question": "Can one teammate save the other from losing?",
+      "ruling_ids": [
+        "individual-protection",
+        "teferis-protection"
+      ],
+      "search_aliases": [
+        "teammate protection save The One Ring Glacial Chasm Teferis Protection"
+      ]
+    }
+  ]
+}

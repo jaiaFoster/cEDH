@@ -47,12 +47,13 @@ function rulingCard(r) {
   return `<details class="ruling-card" id="ruling-${esc(r.id)}"><summary><span>${esc(r.title)}</span><span class="ruling-labels"><span class="tag">${esc(r.classification)}</span><span class="meta">${esc(r.category)}</span></span></summary><div class="ruling-body"><p class="meta">${esc(label[r.evidence_type])} · Verified ${esc(r.verified_on)} · Revision ${r.revision}</p><p class="ruling-answer">${esc(r.answer)}</p>${r.explanation !== r.answer ? `<p>${esc(r.explanation)}</p>` : ""}<h4>Worked example</h4><p>${esc(r.example)}</p>${r.prerequisites.length ? `<h4>Prerequisites</h4>${list(r.prerequisites)}` : ""}${r.exceptions.length ? `<h4>Exceptions & conditions</h4>${list(r.exceptions)}` : ""}${r.cards.length ? `<p class="ruling-cards">${r.cards.map((c) => safeLink(c.url, c.name)).join(" · ")}</p>` : ""}${ruleLinks(r)}<h4>Sources</h4><ul class="ruling-sources">${r.sources.map((s, i) => `<li>${safeLink(s, i === 0 ? "Recorded Comprehensive Rules source" : new URL(s).hostname + " · source " + (i + 1))}</li>`).join("")}</ul><p class="help">This reference summarizes existing rules. Worked examples are researched interpretations, not newly issued Wizards rulings. League house rules are labeled separately.</p></div></details>`;
 }
 export async function renderRulings(el, api) {
-  el.innerHTML = `<div class="section-head"><div><h2>2HG Rulings & Interactions</h2><p>Unique interactions, unexpected combos, and common rules questions.</p></div></div><p class="help">A source-linked reference, separate from league prices and deck legality. Expand a question for examples and important conditions.</p><div class="actions"><button type="button" id="winning-losing-filter">Winning &amp; Losing FAQ</button></div><form id="rulings-search" role="search"><div class="field"><label for="ruling-query">Search rulings or cards</label><input id="ruling-query" type="search" maxlength="250" placeholder="Try Yuriko, shared life, or Time Sieve"></div><div class="fields"><div class="field"><label for="ruling-category">Category</label><select id="ruling-category"><option value="">All categories</option><option value="Winning &amp; Losing">Winning &amp; Losing</option></select></div><div class="field"><label for="ruling-classification">Interaction</label><select id="ruling-classification"><option value="">All classifications</option></select></div></div><button type="reset">Reset rulings filters</button></form><p id="ruling-count" role="status" aria-live="polite">Loading rulings…</p><div id="ruling-results" aria-busy="true"></div>`;
+  el.innerHTML = `<div class="section-head"><div><h2>2HG Rulings & Interactions</h2><p>Unique interactions, unexpected combos, and common rules questions.</p></div></div><p class="help">A source-linked reference, separate from league prices and deck legality. Expand a question for examples and important conditions.</p><section class="winning-losing-intro" aria-labelledby="winning-losing-heading"><h3 id="winning-losing-heading">Winning &amp; Losing in Two-Headed Giant</h3><p>What happens when one player mills out, loses the game, gains poison counters, or satisfies an alternate win condition?</p><div class="actions"><button type="button" id="winning-losing-filter" aria-pressed="false">Winning &amp; Losing FAQ</button><button type="button" id="all-rulings-filter" aria-pressed="true">All rulings &amp; interactions</button></div><p class="help">Browse six groups. Related questions share one maintained answer.</p></section><form id="rulings-search" role="search"><div class="field"><label for="ruling-query">Search rulings or cards</label><input id="ruling-query" type="search" maxlength="250" placeholder="Try mill, poison, Thassa’s Oracle, or a question"></div><div class="fields"><div class="field"><label for="ruling-category">Category</label><select id="ruling-category"><option value="">All categories</option><option value="Winning &amp; Losing">Winning &amp; Losing</option></select></div><div class="field"><label for="ruling-classification">Interaction</label><select id="ruling-classification"><option value="">All classifications</option></select></div></div><div class="field" id="ruling-group-field" hidden><label for="ruling-group">Winning &amp; Losing group</label><select id="ruling-group"><option value="">All six groups</option></select></div><button type="reset">Reset rulings filters</button></form><p id="ruling-count" role="status" aria-live="polite">Loading rulings…</p><div id="ruling-results" aria-busy="true"></div>`;
   const $ = (s) => el.querySelector(s);
   let timer,
     controller,
     request = 0,
-    loaded = false;
+    loaded = false,
+    collection = "";
   async function load() {
     const current = ++request;
     controller?.abort();
@@ -63,6 +64,8 @@ export async function renderRulings(el, api) {
       q: $("#ruling-query").value,
       category: $("#ruling-category").value,
       classification: $("#ruling-classification").value,
+      collection,
+      group: $("#ruling-group").value,
     });
     try {
       const data = await api("/api/rulings?" + p, "GET", undefined, {
@@ -82,10 +85,40 @@ export async function renderRulings(el, api) {
         );
         loaded = true;
       }
+      if (data.winning_losing)
+        $("#ruling-group").innerHTML = opts(
+          data.winning_losing.groups,
+          $("#ruling-group").value,
+          "All six groups",
+        );
+      $("#ruling-group-field").hidden = !collection;
+      $("#winning-losing-filter").setAttribute(
+        "aria-pressed",
+        String(!!collection),
+      );
+      $("#all-rulings-filter").setAttribute(
+        "aria-pressed",
+        String(!collection),
+      );
       $("#ruling-count").textContent =
-        `${data.total} ruling${data.total === 1 ? "" : "s"} · Rules edition: ${data.rules_edition}`;
+        `${data.total} ruling${data.total === 1 ? "" : "s"}${collection ? " · 32-topic FAQ" : ""} · Rules edition: ${data.rules_edition}`;
+      // A maintained answer can cover several topics/groups. Render it once.
+      const group = $("#ruling-group").value;
+      const cards =
+        collection && data.winning_losing
+          ? data.winning_losing.groups
+              .map((g) => {
+                const rows = data.rulings.filter(
+                  (r) => (group || r.winning_losing_groups?.[0]) === g,
+                );
+                return rows.length
+                  ? `<section class="ruling-group"><h3>${esc(g)}</h3>${rows.map(rulingCard).join("")}</section>`
+                  : "";
+              })
+              .join("")
+          : data.rulings.map(rulingCard).join("");
       $("#ruling-results").innerHTML =
-        data.rulings.map(rulingCard).join("") ||
+        cards ||
         '<div class="empty"><strong>No matching rulings</strong>Try a card name or reset the filters.</div>';
       const deep = location.hash.match(/^#ruling-([a-z0-9-]+)$/)?.[1];
       if (deep) {
@@ -110,8 +143,16 @@ export async function renderRulings(el, api) {
   $("#winning-losing-filter").onclick = () => {
     clearTimeout(timer);
     $("#ruling-query").value = "";
-    $("#ruling-category").value = "Winning & Losing";
+    collection = "winning-losing";
+    $("#ruling-category").value = "";
+    $("#ruling-group").value = "";
     $("#ruling-classification").value = "";
+    load();
+  };
+  $("#all-rulings-filter").onclick = () => {
+    collection = "";
+    $("#ruling-group").value = "";
+    clearTimeout(timer);
     load();
   };
   $("#rulings-search").onsubmit = (e) => {
@@ -123,7 +164,11 @@ export async function renderRulings(el, api) {
     clearTimeout(timer);
     timer = setTimeout(load, 180);
   };
-  for (const s of ["#ruling-category", "#ruling-classification"])
+  for (const s of [
+    "#ruling-category",
+    "#ruling-classification",
+    "#ruling-group",
+  ])
     $(s).onchange = () => {
       clearTimeout(timer);
       load();
@@ -131,6 +176,8 @@ export async function renderRulings(el, api) {
   $("#rulings-search").onreset = () => {
     clearTimeout(timer);
     setTimeout(() => {
+      collection = "";
+      $("#ruling-group").value = "";
       $("#ruling-query").value = "";
       $("#ruling-category").value = "";
       $("#ruling-classification").value = "";

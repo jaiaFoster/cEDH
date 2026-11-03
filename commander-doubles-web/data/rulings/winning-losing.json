@@ -5,11 +5,12 @@
     "category": "Winning & Losing",
     "classification": "Works",
     "answer": "Yes. A successful win condition for either teammate wins the game for both teammates.",
-    "explanation": "Yes. A successful win condition for either teammate wins the game for both teammates.",
+    "explanation": "Approach of the Second Sun must resolve after being cast from your hand, and you must have cast another spell named Approach of the Second Sun earlier this game. The earlier spell need not have resolved or been cast from your hand. A copy that was not cast does not supply an earlier cast. If the resolving spell meets its condition and no restriction prevents winning, both teammates win.",
     "example": "Your Approach of the Second Sun resolves from your hand after you previously cast another spell with that name this game. If its win instruction succeeds, you and your teammate win together.",
     "prerequisites": [],
     "exceptions": [
-      "A can’t-win restriction can stop an alternative win. If a player would win and lose simultaneously, CR 104.3f gives the loss precedence."
+      "A can’t-win restriction can stop an alternative win. If a player would win and lose simultaneously, CR 104.3f gives the loss precedence.",
+      "On a nonwinning resolution, follow Approach’s other instructions. Casting an opponent’s Approach earlier can count for you; your teammate casting one does not count as your cast."
     ],
     "cards": [
       {
@@ -75,8 +76,8 @@
     "category": "Winning & Losing",
     "classification": "General Rule",
     "answer": "An empty library alone does not cause a loss. When that opponent subsequently attempts an unreplaced draw from the empty library, the loss at the next state-based-action check eliminates their entire team.",
-    "explanation": "An empty library alone does not cause a loss. When that opponent subsequently attempts an unreplaced draw from the empty library, the loss at the next state-based-action check eliminates their entire team.",
-    "example": "You mill the last 12 cards from one opponent. Both opponents remain in the game. A later instruction makes that player draw a card from their empty library; their team then loses when state-based actions are checked.",
+    "explanation": "You do not need to mill both opponents. Libraries remain separate. Milling moves cards from a library to its graveyard; having no cards left is not itself a loss. A required draw with no card available causes that player to lose when state-based actions are next checked, eliminating their whole team.",
+    "example": "Opponent A has 30 cards in their library and opponent B has 70. You mill A for 30. Nothing loses yet. A then attempts an unreplaced draw from the empty library. At the next state-based-action check, A and B lose together; B’s 70 cards do not save the team.",
     "prerequisites": [],
     "exceptions": [
       "A draw replacement or a can’t-lose effect may change the outcome. Milling is not the same action as drawing."
@@ -225,11 +226,11 @@
   },
   {
     "id": "win-loss-laboratory-maniac",
-    "title": "Can Laboratory Maniac win the game for both teammates?",
+    "title": "Can Laboratory Maniac or Jace, Wielder of Mysteries win for both teammates?",
     "category": "Winning & Losing",
     "classification": "Works",
     "answer": "Yes, if its controller would draw from their own empty library and its replacement effect applies. That individual win becomes a team win.",
-    "explanation": "Yes, if its controller would draw from their own empty library and its replacement effect applies. That individual win becomes a team win.",
+    "explanation": "Both cards replace their controller’s own empty-library draw with a win. Jace’s static ability is the relevant replacement here, not a permission to use a teammate’s library. The replacement must still apply when that draw would happen.",
     "example": "You control Laboratory Maniac, have an empty library, and resolve a draw effect. Its replacement turns your draw into a win for your team. Your teammate having an empty library instead does not satisfy your Maniac.",
     "prerequisites": [],
     "exceptions": [
@@ -240,47 +241,17 @@
         "oracle_id": "aa286dd5-aa19-446d-9003-684d81eb57ca",
         "name": "Laboratory Maniac",
         "url": "https://scryfall.com/search?q=oracleid%3Aaa286dd5-aa19-446d-9003-684d81eb57ca"
+      },
+      {
+        "oracle_id": "5277a68e-1ceb-4b40-8e10-3d0564f5d7be",
+        "name": "Jace, Wielder of Mysteries",
+        "url": "https://scryfall.com/search?q=oracleid%3A5277a68e-1ceb-4b40-8e10-3d0564f5d7be"
       }
     ],
     "rule_references": [
       "121.1",
       "121.6",
       "614.6",
-      "810.4",
-      "810.8a"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
-    "id": "win-loss-oracle",
-    "title": "Does Thassa’s Oracle check both teammates’ libraries?",
-    "category": "Winning & Losing",
-    "classification": "Doesn’t Work",
-    "answer": "No. It checks its ability controller’s devotion and library. If that ability produces a win, the win applies to the whole team.",
-    "explanation": "No. It checks its ability controller’s devotion and library. If that ability produces a win, the win applies to the whole team.",
-    "example": "You control Oracle and its trigger. Your library is empty, so even devotion zero is enough when the trigger checks. Your teammate’s 80-card library does not prevent your team from winning.",
-    "prerequisites": [],
-    "exceptions": [
-      "Your teammate’s empty library does not help your own Oracle check. Changing your library or applying a can’t-win effect before resolution may prevent the win."
-    ],
-    "cards": [
-      {
-        "oracle_id": "1de1b591-a73f-4974-b507-8c63e07a0868",
-        "name": "Thassa's Oracle",
-        "url": "https://scryfall.com/search?q=oracleid%3A1de1b591-a73f-4974-b507-8c63e07a0868"
-      }
-    ],
-    "rule_references": [
-      "109.5",
       "810.4",
       "810.8a"
     ],
@@ -328,73 +299,6 @@
     "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
   },
   {
-    "id": "win-loss-pay-to-zero",
-    "title": "Can I pay our shared life total all the way down to zero?",
-    "category": "Winning & Losing",
-    "classification": "General Rule",
-    "answer": "A legal life payment may equal the shared life total, but that usually makes your team lose at the next state-based-action check. You cannot pay more life than your team has.",
-    "explanation": "A legal life payment may equal the shared life total, but that usually makes your team lose at the next state-based-action check. You cannot pay more life than your team has.",
-    "example": "At exactly 50 shared life, you can pay 50 to activate Aetherflux Reservoir. Without protection or another applicable effect, your team loses before the damage ability resolves.",
-    "prerequisites": [],
-    "exceptions": [
-      "Restrictions on paying or losing life can forbid a payment. Separate simultaneous payments cannot collectively exceed the shared total."
-    ],
-    "cards": [
-      {
-        "oracle_id": "5f15125e-ae89-471e-b055-226a783bc7c1",
-        "name": "Aetherflux Reservoir",
-        "url": "https://scryfall.com/search?q=oracleid%3A5f15125e-ae89-471e-b055-226a783bc7c1"
-      }
-    ],
-    "rule_references": [
-      "119.4",
-      "810.9a",
-      "810.9b",
-      "704.6a",
-      "810.8c"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
-    "id": "win-loss-commander-threshold",
-    "title": "Can one commander’s combat damage eliminate the whole team?",
-    "category": "Winning & Losing",
-    "classification": "General Rule",
-    "answer": "Yes. If one player has received 21 or more combat damage from the same commander over the game, that player’s loss eliminates their team even if its shared life total is positive.",
-    "explanation": "Yes. If one player has received 21 or more combat damage from the same commander over the game, that player’s loss eliminates their team even if its shared life total is positive.",
-    "example": "The same commander hits you for 11 combat damage and later 10 more. You have received 21 from that commander, so your team loses at the state-based-action check.",
-    "prerequisites": [],
-    "exceptions": [
-      "Only combat damage counts. The CR describes a recipient player, while the official 2HG overview uses broader team wording. This FAQ does not settle the existing split-recipient aggregation question; check the organizer’s published clarification rather than assuming 11 to one head plus 10 to the other."
-    ],
-    "cards": [],
-    "rule_references": [
-      "104.3j",
-      "704.6c",
-      "903.10a",
-      "810.8a"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "official_rules",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
     "id": "win-loss-different-commanders",
     "title": "Do damage totals from different commanders combine for a commander-damage loss?",
     "category": "Winning & Losing",
@@ -412,36 +316,6 @@
       "704.6c",
       "810.8a",
       "903.3"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "official_rules",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
-    "id": "win-loss-poison",
-    "title": "Is poison counted as ten per player or fifteen per team?",
-    "category": "Winning & Losing",
-    "classification": "General Rule",
-    "answer": "Two-Headed Giant uses a shared team poison total. Fifteen or more poison counters causes the team to lose at a state-based-action check; the ordinary ten-poison player threshold does not apply.",
-    "explanation": "Two-Headed Giant uses a shared team poison total. Fifteen or more poison counters causes the team to lose at a state-based-action check; the ordinary ten-poison player threshold does not apply.",
-    "example": "Your team has 8 poison counters. One teammate receives 4 more and the other receives 3 more. The shared total is 15, so your team loses.",
-    "prerequisites": [],
-    "exceptions": [
-      "An applicable can’t-lose effect may prevent this loss. This is separate from life total."
-    ],
-    "cards": [],
-    "rule_references": [
-      "704.5c",
-      "704.6b",
-      "810.8d",
-      "810.10"
     ],
     "sources": [
       "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
@@ -519,40 +393,6 @@
     "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
   },
   {
-    "id": "win-loss-platinum-angel",
-    "title": "Does one Platinum Angel protect both teammates from losing?",
-    "category": "Winning & Losing",
-    "classification": "General Rule",
-    "answer": "Yes. In 2HG, a player’s can’t-lose restriction protects that player’s team, and a player’s opponents being unable to win restricts the opposing team.",
-    "explanation": "Yes. In 2HG, a player’s can’t-lose restriction protects that player’s team, and a player’s opponents being unable to win restricts the opposing team.",
-    "example": "You control Platinum Angel and your teammate attempts to draw from an empty library. The Angel’s can’t-lose effect prevents your team’s resulting loss while it remains active.",
-    "prerequisites": [],
-    "exceptions": [
-      "This does not prevent damage, life loss, poison counters or failed draws. Concession still works. Removing the Angel can expose a continuing zero-life or fifteen-poison condition; an old protected failed draw is not a permanently queued loss."
-    ],
-    "cards": [
-      {
-        "oracle_id": "b148578c-c0bf-4785-b97c-4b6f83028008",
-        "name": "Platinum Angel",
-        "url": "https://scryfall.com/search?q=oracleid%3Ab148578c-c0bf-4785-b97c-4b6f83028008"
-      }
-    ],
-    "rule_references": [
-      "810.8a",
-      "704.5b"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
     "id": "win-loss-cant-win",
     "title": "Does a restriction saying I can’t win also restrict my teammate?",
     "category": "Winning & Losing",
@@ -579,43 +419,6 @@
     "rule_references": [
       "101.2",
       "810.8a"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
-    "id": "win-loss-cant-lose-life",
-    "title": "Does “you can’t lose the game” prevent damage or life loss?",
-    "category": "Winning & Losing",
-    "classification": "General Rule",
-    "answer": "No. Losing life and losing the game are different events. A team can have zero or negative life while protected from losing the game.",
-    "explanation": "No. Losing life and losing the game are different events. A team can have zero or negative life while protected from losing the game.",
-    "example": "With Platinum Angel protecting your team at 3 life, a teammate loses 5 life. Your shared total becomes −2. The Angel prevents the loss, not the life change; if it leaves while the total is still −2, the next check is fatal.",
-    "prerequisites": [],
-    "exceptions": [
-      "Effects saying life totals can’t change or life can’t be lost are different restrictions."
-    ],
-    "cards": [
-      {
-        "oracle_id": "b148578c-c0bf-4785-b97c-4b6f83028008",
-        "name": "Platinum Angel",
-        "url": "https://scryfall.com/search?q=oracleid%3Ab148578c-c0bf-4785-b97c-4b6f83028008"
-      }
-    ],
-    "rule_references": [
-      "119.3",
-      "119.6",
-      "810.8a",
-      "810.8c",
-      "810.9"
     ],
     "sources": [
       "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
@@ -751,42 +554,6 @@
     "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
   },
   {
-    "id": "win-loss-teferis-protection",
-    "title": "Does Teferi’s Protection stop every way our team can lose?",
-    "category": "Winning & Losing",
-    "classification": "Doesn’t Work",
-    "answer": "No. Its life-total restriction protects the shared life total, but its protection applies to its controller. It does not say the team can’t lose.",
-    "explanation": "No. Its life-total restriction protects the shared life total, but its protection applies to its controller. It does not say the team can’t lose.",
-    "example": "While you are protected, an opponent can still make your unprotected teammate draw from an empty library. Their resulting loss still eliminates your team. Targeting restrictions and draw replacements must be checked separately.",
-    "prerequisites": [],
-    "exceptions": [
-      "It does not erase poison counters or commander-damage history. Phasing out your permanents does not phase out your teammate’s permanents."
-    ],
-    "cards": [
-      {
-        "oracle_id": "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
-        "name": "Teferi's Protection",
-        "url": "https://scryfall.com/search?q=oracleid%3A0d4ecdb1-ec90-497f-a7a4-1c68092b8757"
-      }
-    ],
-    "rule_references": [
-      "810.9g",
-      "810.9h",
-      "810.8a",
-      "704.5b"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
     "id": "win-loss-pact",
     "title": "Does one teammate’s unpaid Pact cause a team loss?",
     "category": "Winning & Losing",
@@ -892,118 +659,6 @@
     "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
   },
   {
-    "id": "win-loss-life-threshold",
-    "title": "Can a starting 60 life total satisfy Test of Endurance or Felidar Sovereign?",
-    "category": "Winning & Losing",
-    "classification": "Works",
-    "answer": "Yes. A life-total check for either teammate uses the shared total. Their upkeep triggers still need their stated conditions when triggering and when resolving; they do not win during setup.",
-    "explanation": "Yes. A life-total check for either teammate uses the shared total. Their upkeep triggers still need their stated conditions when triggering and when resolving; they do not win during setup.",
-    "example": "You control Test of Endurance and begin your upkeep at 60 shared life, satisfying its 50-life threshold. If your team falls to 49 before the trigger resolves, that trigger does not win the game.",
-    "prerequisites": [],
-    "exceptions": [
-      "Felidar’s threshold is 40 rather than 50. Countering the trigger or a can’t-win effect can prevent a win.",
-      "Removing the permanent before upkeep prevents its trigger. Removing it after the trigger exists does not by itself stop that ability."
-    ],
-    "cards": [
-      {
-        "oracle_id": "ffdad8fb-69ee-40d3-b2eb-b0aee0a5becc",
-        "name": "Test of Endurance",
-        "url": "https://scryfall.com/search?q=oracleid%3Affdad8fb-69ee-40d3-b2eb-b0aee0a5becc"
-      },
-      {
-        "oracle_id": "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b",
-        "name": "Felidar Sovereign",
-        "url": "https://scryfall.com/search?q=oracleid%3A5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b"
-      }
-    ],
-    "rule_references": [
-      "810.9a",
-      "603.4",
-      "810.8a",
-      "113.7a"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
-    "id": "win-loss-reservoir",
-    "title": "Does one Aetherflux Reservoir activation eliminate a team at 60 life?",
-    "category": "Winning & Losing",
-    "classification": "Doesn’t Work",
-    "answer": "Normally no. It deals 50 damage to one targeted opponent, reducing the opposing shared total from 60 to 10. Your own 50-life payment also reduces your shared life total.",
-    "explanation": "Normally no. It deals 50 damage to one targeted opponent, reducing the opposing shared total from 60 to 10. Your own 50-life payment also reduces your shared life total.",
-    "example": "Both teams are at 60. You pay 50, leaving your team at 10, then the ability deals 50 to one opponent, leaving that team at 10 too.",
-    "prerequisites": [],
-    "exceptions": [
-      "Prevention, replacement effects or damage modifiers can change the arithmetic. Paying from exactly 50 is dangerous because your team reaches zero before resolution."
-    ],
-    "cards": [
-      {
-        "oracle_id": "5f15125e-ae89-471e-b055-226a783bc7c1",
-        "name": "Aetherflux Reservoir",
-        "url": "https://scryfall.com/search?q=oracleid%3A5f15125e-ae89-471e-b055-226a783bc7c1"
-      }
-    ],
-    "rule_references": [
-      "119.4",
-      "810.9",
-      "810.9a"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
-    "id": "win-loss-sorin",
-    "title": "Does Sorin Markov set just one head to 10 while the other keeps 60?",
-    "category": "Winning & Losing",
-    "classification": "Works",
-    "answer": "No. Setting one player’s life total changes the shared total to the specified value. There is no second independent life total to preserve.",
-    "explanation": "No. Setting one player’s life total changes the shared total to the specified value. There is no second independent life total to preserve.",
-    "example": "The opposing team is at 60. Sorin’s −3 sets one opponent’s life to 10. That player loses 50 life, so the shared team total becomes 10.",
-    "prerequisites": [],
-    "exceptions": [
-      "Effects preventing or replacing life changes must be considered. An effect setting every player’s total uses different 2HG instructions under CR 810.9d."
-    ],
-    "cards": [
-      {
-        "oracle_id": "c151e8b7-4b28-4f03-8a81-9bf623f893d7",
-        "name": "Sorin Markov",
-        "url": "https://scryfall.com/search?q=oracleid%3Ac151e8b7-4b28-4f03-8a81-9bf623f893d7"
-      }
-    ],
-    "rule_references": [
-      "119.5",
-      "810.9a",
-      "810.9c"
-    ],
-    "sources": [
-      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
-    ],
-    "rules_edition": "September 25, 2026",
-    "verified_on": "2026-11-02",
-    "verified_by": "Commander Doubles win/loss source audit",
-    "verification_status": "verified",
-    "evidence_type": "verified_interpretation",
-    "initial_subjects": [],
-    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
-  },
-  {
     "id": "win-loss-simultaneous-loss",
     "title": "What happens if both teams lose at the same time?",
     "category": "Winning & Losing",
@@ -1013,7 +668,8 @@
     "example": "Both teams have 4 life. Earthquake with X = 2 deals 2 damage to each of the four players, reducing each shared total by 4. If nothing prevents a loss, both teams reach zero together and the next state-based-action check produces a draw.",
     "prerequisites": [],
     "exceptions": [
-      "A team protected from losing may survive while the other loses. Separate triggers resolving one after another are not automatically simultaneous."
+      "A team protected from losing may survive while the other loses. Separate triggers resolving one after another are not automatically simultaneous.",
+      "A can’t-win restriction can also prevent a team from winning through an alternate-win effect. Apply applicable restrictions before deciding that every remaining team actually loses or that a win succeeds."
     ],
     "cards": [
       {
@@ -1027,7 +683,9 @@
       "704.3",
       "704.6a",
       "810.8c",
-      "810.9"
+      "810.9",
+      "104.4a",
+      "810.8a"
     ],
     "sources": [
       "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
@@ -1098,6 +756,183 @@
     "verified_by": "Commander Doubles win/loss source audit",
     "verification_status": "verified",
     "evidence_type": "official_rules",
+    "initial_subjects": [],
+    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
+  },
+  {
+    "id": "win-loss-forced-draw",
+    "title": "Can Brain Freeze followed by a forced draw eliminate one opponent’s whole team?",
+    "category": "Winning & Losing",
+    "classification": "Works",
+    "answer": "Yes, if Brain Freeze and its copies empty that opponent’s library, then an unreplaced forced draw makes that same opponent lose. Milling one head and forcing only the other head to draw is not enough.",
+    "explanation": "Yes, if Brain Freeze and its copies empty that opponent’s library, then an unreplaced forced draw makes that same opponent lose. Milling one head and forcing only the other head to draw is not enough.",
+    "example": "After enough Brain Freeze copies resolve to mill opponent A’s library empty, resolve Blue Sun’s Zenith with X=1 targeting A. A fails that draw, and A’s entire team loses at the next state-based-action check.",
+    "prerequisites": [],
+    "exceptions": [
+      "This requires enough resolved mill copies and a legal draw target. Graveyard reshuffles, draw replacements, counterspells and can’t-lose effects can change the result."
+    ],
+    "cards": [
+      {
+        "oracle_id": "464c0150-3dbc-403b-9ada-fef25ab1f29d",
+        "name": "Brain Freeze",
+        "url": "https://scryfall.com/search?q=oracleid%3A464c0150-3dbc-403b-9ada-fef25ab1f29d"
+      },
+      {
+        "oracle_id": "613a41b8-0b4f-4995-bf1e-ca41f96e6438",
+        "name": "Blue Sun's Zenith",
+        "url": "https://scryfall.com/search?q=oracleid%3A613a41b8-0b4f-4995-bf1e-ca41f96e6438"
+      }
+    ],
+    "rule_references": [
+      "104.3c",
+      "121.1",
+      "121.4",
+      "704.5b",
+      "810.8a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles win/loss source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [],
+    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
+  },
+  {
+    "id": "win-loss-poison-events",
+    "title": "What if an effect gives each opposing player a poison counter?",
+    "category": "Winning & Losing",
+    "classification": "Works",
+    "answer": "Both opponents receive a counter individually, and their team shares the resulting total. One counter for each opponent adds two poison counters to that team.",
+    "explanation": "Both opponents receive a counter individually, and their team shares the resulting total. One counter for each opponent adds two poison counters to that team.",
+    "example": "Prologue to Phyresis resolves against a team with 13 poison. Each opponent gets one: 13 + 1 + 1 = 15. That team loses at the next state-based-action check unless protected.",
+    "prerequisites": [],
+    "exceptions": [
+      "Proliferate has a specific exception: choosing both teammates adds only one poison counter to their team."
+    ],
+    "cards": [
+      {
+        "oracle_id": "3f661b58-e8ca-412c-bdac-af151162de12",
+        "name": "Prologue to Phyresis",
+        "url": "https://scryfall.com/search?q=oracleid%3A3f661b58-e8ca-412c-bdac-af151162de12"
+      }
+    ],
+    "rule_references": [
+      "810.10",
+      "810.8d",
+      "704.6b"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles win/loss source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [],
+    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
+  },
+  {
+    "id": "win-loss-poison-mechanics",
+    "title": "How do infect, toxic and proliferate differ in Two-Headed Giant?",
+    "category": "Winning & Losing",
+    "classification": "General Rule",
+    "answer": "Infect damage to a player produces that many poison counters instead of its usual life loss. Toxic adds its toxic value as poison when the creature deals combat damage to a player, alongside the damage’s other results. Proliferate adds only one poison counter to a chosen poisoned team, even if both heads are chosen.",
+    "explanation": "Infect damage to a player produces that many poison counters instead of its usual life loss. Toxic adds its toxic value as poison when the creature deals combat damage to a player, alongside the damage’s other results. Proliferate adds only one poison counter to a chosen poisoned team, even if both heads are chosen.",
+    "example": "An unmodified 3-power infect creature dealing 3 damage adds 3 shared poison instead of losing 3 life. A 3-power creature with toxic 1 and no infect dealing 3 combat damage causes 3 shared life loss and adds 1 poison. Proliferating a team already at 14 poison takes it to 15, not 16.",
+    "prerequisites": [],
+    "exceptions": [
+      "Toxic requires combat damage to a player; infect can apply to noncombat damage too. Prevention and replacement effects can change the results. A team with no poison counter cannot gain its first poison counter from proliferate."
+    ],
+    "cards": [],
+    "rule_references": [
+      "120.3b",
+      "120.3g",
+      "702.90b",
+      "702.164a",
+      "701.34a",
+      "701.34b",
+      "810.10",
+      "810.8d"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles win/loss source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [],
+    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
+  },
+  {
+    "id": "win-loss-mazes-end",
+    "title": "Can teammates combine Gates for Maze’s End or other alternate wins?",
+    "category": "Winning & Losing",
+    "classification": "Doesn’t Work",
+    "answer": "No. Maze’s End checks whether its ability controller controls ten or more Gates with different names. Teammates do not pool controlled lands. If one player satisfies the condition and wins, their whole team wins.",
+    "explanation": "No. Maze’s End checks whether its ability controller controls ten or more Gates with different names. Teammates do not pool controlled lands. If one player satisfies the condition and wins, their whole team wins.",
+    "example": "You control six differently named Gates and your teammate controls four others. That does not satisfy your Maze’s End. If you alone control ten qualifying Gates when your ability checks, the win can succeed for both teammates.",
+    "prerequisites": [],
+    "exceptions": [
+      "The win check follows the ability’s search and shuffle instructions; the ability need not find a Gate to check your existing Gates. Restrictions that prevent winning still apply."
+    ],
+    "cards": [
+      {
+        "oracle_id": "49479778-c4c0-43ba-a7b7-45f00d067462",
+        "name": "Maze's End",
+        "url": "https://scryfall.com/search?q=oracleid%3A49479778-c4c0-43ba-a7b7-45f00d067462"
+      }
+    ],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.8a",
+      "608.2c"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles win/loss source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
+    "initial_subjects": [],
+    "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
+  },
+  {
+    "id": "win-loss-damage",
+    "title": "Does damage to either teammate reduce the same life total?",
+    "category": "Winning & Losing",
+    "classification": "General Rule",
+    "answer": "Yes. Damage is dealt to individual players, and its life-loss result changes the shared total. This does not merge the players or make protection on one head protect the other.",
+    "explanation": "Yes. Damage is dealt to individual players, and its life-loss result changes the shared total. This does not merge the players or make protection on one head protect the other.",
+    "example": "Your team is at 60. An opponent deals 4 normal damage to you and 3 to your teammate: 60 − 4 − 3 = 53. Damage to both heads in a single event likewise applies both life-loss results to the one shared pool.",
+    "prerequisites": [],
+    "exceptions": [
+      "Infect, damage prevention, life-total restrictions and replacement effects can alter the normal life-loss result. Commander damage remains tracked separately from shared life."
+    ],
+    "cards": [],
+    "rule_references": [
+      "810.9",
+      "120.3a",
+      "810.5"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "2026-11-02",
+    "verified_by": "Commander Doubles win/loss source audit",
+    "verification_status": "verified",
+    "evidence_type": "verified_interpretation",
     "initial_subjects": [],
     "change_note": "New source-verified Winning & Losing FAQ; original summary, not a new Wizards ruling or league policy."
   }

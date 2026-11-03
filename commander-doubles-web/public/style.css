@@ -1089,3 +1089,23 @@ dialog::backdrop {
     grid-template-columns: 1fr;
   }
 }
+
+/* Curated FAQ collection shares the existing search, cards and admin records. */
+.winning-losing-intro {
+  border-left: 3px solid var(--accent);
+  padding: 0.25rem 1rem;
+  margin: 1.5rem 0;
+}
+.winning-losing-intro h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.ruling-group {
+  margin-top: 1.6rem;
+}
+#ruling-group-field[hidden] {
+  display: none;
+}
+#rulings-search select {
+  max-width: 100%;
+}
