@@ -20,6 +20,7 @@ These records are reconstructed from the player's post-event notes and conversat
 | 2026-09-20 | AZMS cEDH League – Qualifier #7, Surprise AZ | 0W / 0D / 4L | [2026-09-20-azms-qualifier-7.md](2026-09-20-azms-qualifier-7.md) |
 | 2026-10-17 | AZMS cEDH League – Qualifier #8, Tempe AZ | 1W / 2D / 1L; 7th/18 | [2026-10-17-azms-qualifier-8.md](2026-10-17-azms-qualifier-8.md) |
 | 2026-10-18 | Geekery Games LED Tournament, Flagstaff AZ | 1W / 2D / 2L | [2026-10-18-geekery-games-led.md](2026-10-18-geekery-games-led.md) |
+| 2026-11-01 | November cEDH Tournament, Tucson AZ | 0W / 3D / 1L | [2026-11-01-tucson-november.md](2026-11-01-tucson-november.md) |
 | 2026-10-04* | Tucson tournament | 0W / 2D / 2L | [2026-10-04-tucson.md](2026-10-04-tucson.md) |
 
 \* Date inferred from the conversation/logging sequence and should be corrected if the event date was different.
