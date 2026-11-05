@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-11-05T20:14:48.674207Z",
+  "content_hash": "3a5134e59103e4ce6d34fabc1fb0616935a9f6c347c99758dcd2588abd018360",
+  "tid": "jornada-1-liga-cedh-by-dkm-2",
+  "name": "Jornada 1 Liga cEDH by DKM",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1793523600,
+  "start_date_utc": "2026-11-01T09:00:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 0,
+  "event_data": {
+    "lat": 40.407168,
+    "lng": -3.677166,
+    "city": "Madrid",
+    "state": "Comunidad de Madrid",
+    "country": "Spain",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/7576ef1a-9c56-4cc9-1ab4-12baf598cc00/public",
+    "address": "Av. del Mediterráneo, 8, Retiro, 28007 Madrid, España"
+  },
+  "field_size": 19,
+  "decklist_coverage": {
+    "submitted": 9,
+    "structured": 9,
+    "total": 19
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+      "player_name": " [PKT] Marcelo",
+      "commanders": [
+        "Dargo, the Shipwrecker",
+        "Tymna the Weaver"
+      ],
+      "wins": 3,
+      "wins_swiss": 3,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
+      "player_id": "lXWFzOkzjmPvvwozjYriyKVuvaP2",
+      "player_name": "[SCT] Andres Enriquez",
+      "commanders": [
+        "The Wandering Minstrel"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
+      "player_id": "auTRvcSb7CRBtXBQ4quD9UqRSVl1",
+      "player_name": "[PKT] Nacho Vallano",
+      "commanders": [
+        "Kinnan, Bonder Prodigy"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 4,
+      "player_id": "NzS1MhdXbOMuQ5fEAvqzB8BABQE3",
+      "player_name": "[DKM] Perchas8",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "RZSD4bXzlCYpX09DwG6iuBlg8zl1",
+      "player_name": "[DKM] PlaxX",
+      "commanders": [
+        "Kraum, Ludevic's Opus",
+        "Tymna the Weaver"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 6,
+      "player_id": "QmYgSNgY03YJQOCk0hIc9QSi9u13",
+      "player_name": "[PKT] David Naya",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 7,
+      "player_id": "uoIRZJATYaNNLHM6QYiA08aTlau2",
+      "player_name": "Mitch",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 8,
+      "player_id": "YcCI0vHTWaWi2E23NP343XYZA4j1",
+      "player_name": "[DELULU] Julio Amigo Carrera",
+      "commanders": [
+        "Elsha of the Infinite"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "uYQHYBdLx3QbZqs7KCUhieFW8Mh2",
+      "player_name": "[PKT] Guiver",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 10,
+      "player_id": "3X3nRq8vFZNhR4OnYq2VcAyPeUn1",
+      "player_name": "[DELULU] Alex Baró",
+      "commanders": [
+        "Dack Fayden, Helping Hand"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 11,
+      "player_id": "WiouYlLiMyYrh3HD9db8mp9e0T22",
+      "player_name": "[DKM] Miguel Ángel ",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 12,
+      "player_id": "pzPftKWeYxMqlEhLC4AzDSzb4rN2",
+      "player_name": "MarioMH",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "Qisu7FGPqPbl3K9ZxObd7e5te5W2",
+      "player_name": "[0x] Ruuru",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 14,
+      "player_id": "fqA2NrLV23NFJzHYSHIgKmmiWbF2",
+      "player_name": "Wally",
+      "commanders": [
+        "Sisay, Weatherlight Captain"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 15,
+      "player_id": "U2IvtTZZkbZsqxr6QvhuQ0DCZjl2",
+      "player_name": "[PKT] Arturo  Fernández ",
+      "commanders": [
+        "Rograkh, Son of Rohgahh",
+        "Thrasios, Triton Hero"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 16,
+      "player_id": "RJRSTrbNt5OLNrqrnfWbhwfY6EA2",
+      "player_name": "Cristian Gerez Muñoz",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 17,
+      "player_id": "22OD74rBfOhFbAkNccTIZJtnnjx1",
+      "player_name": "[DKM]Benzas",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 18,
+      "player_id": "BC0aZBPbusQKQlNFZsj6Jg2SYTX2",
+      "player_name": "[DELULU] Carlos den Heijer",
+      "commanders": [
+        "Rasputin Dreamweaver"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 19,
+      "player_id": "X8GGw1SyMlSJHmgEtY9iegSJ65k1",
+      "player_name": "[SCT] The Real Muscle",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Draw",
+      "winner_id": "Draw",
+      "players": [
+        {
+          "id": "Qisu7FGPqPbl3K9ZxObd7e5te5W2",
+          "name": "[0x] Ruuru"
+        },
+        {
+          "id": "lXWFzOkzjmPvvwozjYriyKVuvaP2",
+          "name": "[SCT] Andres Enriquez"
+        },
+        {
+          "id": "auTRvcSb7CRBtXBQ4quD9UqRSVl1",
+          "name": "[PKT] Nacho Vallano"
+        },
+        {
+          "id": "NzS1MhdXbOMuQ5fEAvqzB8BABQE3",
+          "name": "[DKM] Perchas8"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "[DKM] Miguel Ángel ",
+      "winner_id": "WiouYlLiMyYrh3HD9db8mp9e0T22",
+      "players": [
+        {
+          "id": "WiouYlLiMyYrh3HD9db8mp9e0T22",
+          "name": "[DKM] Miguel Ángel "
+        },
+        {
+          "id": "X8GGw1SyMlSJHmgEtY9iegSJ65k1",
+          "name": "[SCT] The Real Muscle"
+        },
+        {
+          "id": "22OD74rBfOhFbAkNccTIZJtnnjx1",
+          "name": "[DKM]Benzas"
+        },
+        {
+          "id": "RJRSTrbNt5OLNrqrnfWbhwfY6EA2",
+          "name": "Cristian Gerez Muñoz"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": " [PKT] Marcelo",
+      "winner_id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+      "players": [
+        {
+          "id": "fqA2NrLV23NFJzHYSHIgKmmiWbF2",
+          "name": "Wally"
+        },
+        {
+          "id": "uoIRZJATYaNNLHM6QYiA08aTlau2",
+          "name": "Mitch"
+        },
+        {
+          "id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+          "name": " [PKT] Marcelo"
+        },
+        {
+          "id": "uYQHYBdLx3QbZqs7KCUhieFW8Mh2",
+          "name": "[PKT] Guiver"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "[DKM] PlaxX",
+      "winner_id": "RZSD4bXzlCYpX09DwG6iuBlg8zl1",
+      "players": [
+        {
+          "id": "3X3nRq8vFZNhR4OnYq2VcAyPeUn1",
+          "name": "[DELULU] Alex Baró"
+        },
+        {
+          "id": "U2IvtTZZkbZsqxr6QvhuQ0DCZjl2",
+          "name": "[PKT] Arturo  Fernández "
+        },
+        {
+          "id": "RZSD4bXzlCYpX09DwG6iuBlg8zl1",
+          "name": "[DKM] PlaxX"
+        },
+        {
+          "id": "pzPftKWeYxMqlEhLC4AzDSzb4rN2",
+          "name": "MarioMH"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "[DELULU] Julio Amigo Carrera",
+      "winner_id": "YcCI0vHTWaWi2E23NP343XYZA4j1",
+      "players": [
+        {
+          "id": "YcCI0vHTWaWi2E23NP343XYZA4j1",
+          "name": "[DELULU] Julio Amigo Carrera"
+        },
+        {
+          "id": "QmYgSNgY03YJQOCk0hIc9QSi9u13",
+          "name": "[PKT] David Naya"
+        },
+        {
+          "id": "BC0aZBPbusQKQlNFZsj6Jg2SYTX2",
+          "name": "[DELULU] Carlos den Heijer"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": " [PKT] Marcelo",
+      "winner_id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+      "players": [
+        {
+          "id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+          "name": " [PKT] Marcelo"
+        },
+        {
+          "id": "RZSD4bXzlCYpX09DwG6iuBlg8zl1",
+          "name": "[DKM] PlaxX"
+        },
+        {
+          "id": "YcCI0vHTWaWi2E23NP343XYZA4j1",
+          "name": "[DELULU] Julio Amigo Carrera"
+        },
+        {
+          "id": "WiouYlLiMyYrh3HD9db8mp9e0T22",
+          "name": "[DKM] Miguel Ángel "
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "[DELULU] Alex Baró",
+      "winner_id": "3X3nRq8vFZNhR4OnYq2VcAyPeUn1",
+      "players": [
+        {
+          "id": "BC0aZBPbusQKQlNFZsj6Jg2SYTX2",
+          "name": "[DELULU] Carlos den Heijer"
+        },
+        {
+          "id": "X8GGw1SyMlSJHmgEtY9iegSJ65k1",
+          "name": "[SCT] The Real Muscle"
+        },
+        {
+          "id": "3X3nRq8vFZNhR4OnYq2VcAyPeUn1",
+          "name": "[DELULU] Alex Baró"
+        },
+        {
+          "id": "Qisu7FGPqPbl3K9ZxObd7e5te5W2",
+          "name": "[0x] Ruuru"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "[PKT] David Naya",
+      "winner_id": "QmYgSNgY03YJQOCk0hIc9QSi9u13",
+      "players": [
+        {
+          "id": "QmYgSNgY03YJQOCk0hIc9QSi9u13",
+          "name": "[PKT] David Naya"
+        },
+        {
+          "id": "auTRvcSb7CRBtXBQ4quD9UqRSVl1",
+          "name": "[PKT] Nacho Vallano"
+        },
+        {
+          "id": "fqA2NrLV23NFJzHYSHIgKmmiWbF2",
+          "name": "Wally"
+        },
+        {
+          "id": "U2IvtTZZkbZsqxr6QvhuQ0DCZjl2",
+          "name": "[PKT] Arturo  Fernández "
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Mitch",
+      "winner_id": "uoIRZJATYaNNLHM6QYiA08aTlau2",
+      "players": [
+        {
+          "id": "NzS1MhdXbOMuQ5fEAvqzB8BABQE3",
+          "name": "[DKM] Perchas8"
+        },
+        {
+          "id": "uoIRZJATYaNNLHM6QYiA08aTlau2",
+          "name": "Mitch"
+        },
+        {
+          "id": "pzPftKWeYxMqlEhLC4AzDSzb4rN2",
+          "name": "MarioMH"
+        },
+        {
+          "id": "22OD74rBfOhFbAkNccTIZJtnnjx1",
+          "name": "[DKM]Benzas"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "[SCT] Andres Enriquez",
+      "winner_id": "lXWFzOkzjmPvvwozjYriyKVuvaP2",
+      "players": [
+        {
+          "id": "lXWFzOkzjmPvvwozjYriyKVuvaP2",
+          "name": "[SCT] Andres Enriquez"
+        },
+        {
+          "id": "RJRSTrbNt5OLNrqrnfWbhwfY6EA2",
+          "name": "Cristian Gerez Muñoz"
+        },
+        {
+          "id": "uYQHYBdLx3QbZqs7KCUhieFW8Mh2",
+          "name": "[PKT] Guiver"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": " [PKT] Marcelo",
+      "winner_id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+      "players": [
+        {
+          "id": "6ZQTLNKyNeQmFVAqRVgJPoZjm3g1",
+          "name": " [PKT] Marcelo"
+        },
+        {
+          "id": "QmYgSNgY03YJQOCk0hIc9QSi9u13",
+          "name": "[PKT] David Naya"
+        },
+        {
+          "id": "lXWFzOkzjmPvvwozjYriyKVuvaP2",
+          "name": "[SCT] Andres Enriquez"
+        },
+        {
+          "id": "3X3nRq8vFZNhR4OnYq2VcAyPeUn1",
+          "name": "[DELULU] Alex Baró"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "[PKT] Nacho Vallano",
+      "winner_id": "auTRvcSb7CRBtXBQ4quD9UqRSVl1",
+      "players": [
+        {
+          "id": "RJRSTrbNt5OLNrqrnfWbhwfY6EA2",
+          "name": "Cristian Gerez Muñoz"
+        },
+        {
+          "id": "auTRvcSb7CRBtXBQ4quD9UqRSVl1",
+          "name": "[PKT] Nacho Vallano"
+        },
+        {
+          "id": "uoIRZJATYaNNLHM6QYiA08aTlau2",
+          "name": "Mitch"
+        },
+        {
+          "id": "RZSD4bXzlCYpX09DwG6iuBlg8zl1",
+          "name": "[DKM] PlaxX"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "MarioMH",
+      "winner_id": "pzPftKWeYxMqlEhLC4AzDSzb4rN2",
+      "players": [
+        {
+          "id": "pzPftKWeYxMqlEhLC4AzDSzb4rN2",
+          "name": "MarioMH"
+        },
+        {
+          "id": "fqA2NrLV23NFJzHYSHIgKmmiWbF2",
+          "name": "Wally"
+        },
+        {
+          "id": "WiouYlLiMyYrh3HD9db8mp9e0T22",
+          "name": "[DKM] Miguel Ángel "
+        },
+        {
+          "id": "Qisu7FGPqPbl3K9ZxObd7e5te5W2",
+          "name": "[0x] Ruuru"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "[DKM] Perchas8",
+      "winner_id": "NzS1MhdXbOMuQ5fEAvqzB8BABQE3",
+      "players": [
+        {
+          "id": "U2IvtTZZkbZsqxr6QvhuQ0DCZjl2",
+          "name": "[PKT] Arturo  Fernández "
+        },
+        {
+          "id": "NzS1MhdXbOMuQ5fEAvqzB8BABQE3",
+          "name": "[DKM] Perchas8"
+        },
+        {
+          "id": "YcCI0vHTWaWi2E23NP343XYZA4j1",
+          "name": "[DELULU] Julio Amigo Carrera"
+        },
+        {
+          "id": "X8GGw1SyMlSJHmgEtY9iegSJ65k1",
+          "name": "[SCT] The Real Muscle"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "[PKT] Guiver",
+      "winner_id": "uYQHYBdLx3QbZqs7KCUhieFW8Mh2",
+      "players": [
+        {
+          "id": "BC0aZBPbusQKQlNFZsj6Jg2SYTX2",
+          "name": "[DELULU] Carlos den Heijer"
+        },
+        {
+          "id": "uYQHYBdLx3QbZqs7KCUhieFW8Mh2",
+          "name": "[PKT] Guiver"
+        },
+        {
+          "id": "22OD74rBfOhFbAkNccTIZJtnnjx1",
+          "name": "[DKM]Benzas"
+        }
+      ]
+    }
+  ]
+}
