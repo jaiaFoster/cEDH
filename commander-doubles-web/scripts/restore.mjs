@@ -11,6 +11,8 @@ const tables = [
   "rules_versions",
   "ruling_entries",
   "ruling_versions",
+  "composition_entries",
+  "composition_versions",
   "teams",
   "deck_versions",
   "deck_import_attempts",
@@ -25,10 +27,14 @@ await transaction(async (c) => {
   // Seeded reference rows are removed only inside this isolated recovery schema.
   // Deferred composite FK allows restoring entries before their version rows.
   if (data.ruling_entries) {
-    await c.query('UPDATE ruling_entries SET published_version_id=NULL');
-    await c.query('DELETE FROM ruling_versions');
-    await c.query('DELETE FROM ruling_entries');
+    await c.query("UPDATE ruling_entries SET published_version_id=NULL");
+    await c.query("DELETE FROM ruling_versions");
+    await c.query("DELETE FROM ruling_entries");
   }
+  // Clear only the freshly seeded library inside this isolated recovery schema.
+  await c.query("UPDATE composition_entries SET published_version_id=NULL");
+  await c.query("DELETE FROM composition_versions");
+  await c.query("DELETE FROM composition_entries");
   await c.query("DELETE FROM rules_versions");
   await c.query("DELETE FROM price_versions");
   for (const table of tables) {

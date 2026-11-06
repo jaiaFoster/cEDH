@@ -1,0 +1,100 @@
+[
+  {
+    "id": "review-01",
+    "original_hypothesis": "Isshin doubles the teammate's Najeela triggers.",
+    "finding": "Isshin only doubles qualifying abilities of permanents its controller controls. It does not double an allied Najeela.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-02",
+    "original_hypothesis": "Wulfgar doubles Najeela across controllers.",
+    "finding": "Wulfgar's controller and attacking-creature restrictions do not extend to the allied Najeela's permanent abilities.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-03",
+    "original_hypothesis": "K'rrik's life payments draw cards for the ally's Vilis.",
+    "finding": "The life-loss event belongs to K'rrik's controller. Shared life does not make Vilis's controller lose that life for Vilis's trigger.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-04",
+    "original_hypothesis": "An ally's payments increase Rowan's life-lost reduction.",
+    "finding": "Rowan counts life its controller lost this turn, not every reduction of the shared pool caused by the teammate.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-05",
+    "original_hypothesis": "Oloro's life gain directly triggers allied Vito.",
+    "finding": "Vito requires its own controller to gain life. Oloro's gain changes shared life but does not become Vito's controller's gain event.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-06",
+    "original_hypothesis": "Feather casts a cantrip at the ally's Zada and both engines trigger.",
+    "finding": "Zada requires Zada's controller to cast the spell; Feather requires its controller to cast a spell targeting a creature that player controls. Splitting those two commanders does not reproduce that claimed same-controller engine.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-07",
+    "original_hypothesis": "Adeline's allied tokens trigger Toski like Edric.",
+    "finding": "Toski only rewards combat damage by creatures Toski's controller controls. Edric's wording is different.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-08",
+    "original_hypothesis": "Volrath places a minus-one counter and the ally's Hapatra makes a Snake.",
+    "finding": "Hapatra requires its own controller to put the counters. The teammate placing them is not that player.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-09",
+    "original_hypothesis": "Jegantha directly pays the teammate's Sisay activation.",
+    "finding": "Jegantha adds mana to its controller's pool. Sisay's controller cannot spend the ally's pool absent a separate explicit permission.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-10",
+    "original_hypothesis": "Zirda reduces the teammate's Kenrith activations.",
+    "finding": "Zirda discounts abilities its own controller activates. Kenrith does not let any player activate its abilities, unlike Xantcha.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-11",
+    "original_hypothesis": "An ally-owned Curiosity on Niv creates the usual draw-damage loop.",
+    "finding": "Curiosity's you-draw instruction belongs to its Aura controller. The teammate drawing does not trigger Niv's own-controller draw ability. A separate same-controller configuration can work.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-12",
+    "original_hypothesis": "Both opposing heads provide unequal-life Breena attack rewards.",
+    "finding": "Both opposing players read the same shared life total, so one cannot have more life than the other for Breena's condition in this two-team configuration.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-13",
+    "original_hypothesis": "Goad prevents the opposing team from attacking either ally.",
+    "finding": "A goad effect tells creatures to attack a player other than that effect's controller if able. The other teammate can still be a legal attacked player; this is not a teamwide safety lock.",
+    "status": "rejected",
+    "public": false
+  },
+  {
+    "id": "review-14",
+    "original_hypothesis": "Perrie counts every counter type on the team's combined board.",
+    "finding": "Perrie counts permanents its controller controls. An ally's counter types do not expand that count merely because life and turns are shared.",
+    "status": "rejected",
+    "public": false
+  }
+]

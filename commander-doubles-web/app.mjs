@@ -32,6 +32,7 @@ import {
 import { catalogManifest } from "./card-catalog.mjs";
 import { providerFor, matchPlayers } from "./providers.mjs";
 import { parseFilters, searchCards, SearchError } from "./card-search.mjs";
+import { installCompositionRoutes } from "./compositions.mjs";
 import { installRulingRoutes, officialRulesSources } from "./rulings.mjs";
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const fail = (message, status = 400) =>
@@ -216,7 +217,12 @@ export function createApp({
           defaultSrc: ["'self'"],
           scriptSrc: ["'self'"],
           styleSrc: ["'self'"],
-          imgSrc: ["'self'", "data:"],
+          imgSrc: [
+            "'self'",
+            "data:",
+            "https://cards.scryfall.io",
+            "https://images.scryfall.io",
+          ],
           frameSrc: ["https://challonge.com", "https://*.challonge.com"],
           connectSrc: ["'self'"],
           upgradeInsecureRequests:
@@ -722,6 +728,13 @@ export function createApp({
     });
     res.json(out);
   });
+  installCompositionRoutes(app, {
+    q,
+    transaction,
+    audit,
+    admin,
+    currentPrices,
+  });
   installRulingRoutes(app, { q, transaction, audit, admin });
   app.use("/api/admin", admin);
   app.get("/api/admin/dashboard", async (req, res) => {
@@ -1222,6 +1235,8 @@ export function createApp({
       "rules_versions",
       "ruling_entries",
       "ruling_versions",
+      "composition_entries",
+      "composition_versions",
       "teams",
       "deck_versions",
       "deck_import_attempts",
@@ -1252,6 +1267,7 @@ export function createApp({
     "/",
     "/rules",
     "/points",
+    "/compositions",
     "/schedule",
     "/teams",
     "/history",

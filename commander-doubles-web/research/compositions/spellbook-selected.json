@@ -1,0 +1,69 @@
+{
+  "retrieved_on": "2026-11-05",
+  "source_url": "https://json.commanderspellbook.com/variants.json.gz",
+  "sha256": "12c43e48fa54b41c528938c986259e0631117226074de12abc30df61a97ff7a7",
+  "metadata": {
+    "timestamp": "2026-11-06T00:12:47.367032+00:00",
+    "version": "7.3.4"
+  },
+  "variants_examined": 119349,
+  "requested": {
+    "zirda-basalt": [
+      "Basalt Monolith",
+      "Zirda, the Dawnwaker"
+    ],
+    "kraj-kiki-pestermite": [
+      "Experiment Kraj",
+      "Kiki-Jiki, Mirror Breaker",
+      "Pestermite"
+    ],
+    "lavinia-pool": [
+      "Knowledge Pool",
+      "Lavinia, Azorius Renegade"
+    ],
+    "najeela-derevi": [
+      "Derevi, Empyrial Tactician",
+      "Najeela, the Blade-Blossom"
+    ],
+    "donated-coil": [
+      "Immortal Coil",
+      "Rest in Peace",
+      "Zedruu the Greathearted"
+    ]
+  },
+  "matches": {
+    "najeela-derevi": {
+      "id": "2011-2608",
+      "url": "https://commanderspellbook.com/combo/2011-2608/",
+      "cards": [
+        "Derevi, Empyrial Tactician",
+        "Najeela, the Blade-Blossom"
+      ],
+      "use": "Ordinary combo membership only; split-controller functionality independently reviewed. No descriptions imported."
+    },
+    "zirda-basalt": {
+      "id": "2713-4131",
+      "url": "https://commanderspellbook.com/combo/2713-4131/",
+      "cards": [
+        "Basalt Monolith",
+        "Zirda, the Dawnwaker"
+      ],
+      "use": "Ordinary combo membership only; split-controller functionality independently reviewed. No descriptions imported."
+    },
+    "lavinia-pool": {
+      "id": "3903-4469",
+      "url": "https://commanderspellbook.com/combo/3903-4469/",
+      "cards": [
+        "Knowledge Pool",
+        "Lavinia, Azorius Renegade"
+      ],
+      "use": "Ordinary combo membership only; split-controller functionality independently reviewed. No descriptions imported."
+    }
+  },
+  "unmatched": [
+    "kraj-kiki-pestermite",
+    "donated-coil"
+  ],
+  "license_scope": "Backend software licensing does not automatically establish a blanket data license. Only linked factual IDs/card membership retained with attribution; no upstream combo instructions or full database redistributed.",
+  "ongoing_dependency": false
+}

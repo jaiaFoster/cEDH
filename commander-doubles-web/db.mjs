@@ -3,6 +3,7 @@ import fs from "node:fs";
 import { randomUUID } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { PRICES } from "./scoring.mjs";
+import { seedCompositions } from "./compositions.mjs";
 import { seedRulings } from "./rulings.mjs";
 const schema = process.env.DATABASE_SCHEMA || "league";
 if (!/^[a-z][a-z0-9_]{0,50}$/.test(schema))
@@ -56,7 +57,15 @@ export async function migrate() {
           "utf8",
         ),
       );
+    if (!(await c.query("SELECT 1 FROM migrations WHERE version=4")).rowCount)
+      await c.query(
+        fs.readFileSync(
+          new URL("./migrations/004_compositions.sql", import.meta.url),
+          "utf8",
+        ),
+      );
     await seedRulings(c);
+    await seedCompositions(c);
     if (!(await c.query("SELECT id FROM price_versions LIMIT 1")).rowCount) {
       const prices = Object.fromEntries(
         [...new Set(PRICES.values())].map((x) => [
