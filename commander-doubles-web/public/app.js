@@ -1,3 +1,4 @@
+import {renderCompositions, renderCompositionAdmin} from "./compositions.js";
 import {
   renderRulings,
   renderRulingAdmin,
@@ -997,7 +998,7 @@ async function admin() {
       "Keep things moving.",
       `Environment: ${adminData.environment}. All administrative changes are recorded.`,
     ) +
-    `<div class="admin-layout"><aside class="admin-menu">${["overview", "events", "teams", "prices", "content", "rulings", "audit"].map((x) => `<button data-admin-tab="${x}" class="${adminTab === x ? "active" : ""}">${x[0].toUpperCase() + x.slice(1)}</button>`).join("")}<button data-action="export">Export league backup ↗</button><button data-action="logout">Sign out</button></aside><section class="admin-section" id="admin-content"></section></div>`;
+    `<div class="admin-layout"><aside class="admin-menu">${["overview", "events", "teams", "prices", "content", "rulings", "compositions", "audit"].map((x) => `<button data-admin-tab="${x}" class="${adminTab === x ? "active" : ""}">${x[0].toUpperCase() + x.slice(1)}</button>`).join("")}<button data-action="export">Export league backup ↗</button><button data-action="logout">Sign out</button></aside><section class="admin-section" id="admin-content"></section></div>`;
   await renderAdmin();
 }
 function eventForm(e) {
@@ -1020,6 +1021,7 @@ function eventBody() {
   };
 }
 async function renderAdmin() {
+  if (adminTab === "compositions") return renderCompositionAdmin($("#admin-content"),api,notice);
   if (adminTab === "rulings")
     return renderRulingAdmin($("#admin-content"), api, notice);
   const el = $("#admin-content");
@@ -1521,6 +1523,7 @@ async function route() {
     await rulingsReady;
     return;
   }
+  if (p === "/compositions") return renderCompositions(main,api);
   if (p === "/points") return points();
   if (p === "/teams") return teams();
   if (p === "/schedule") return schedule();

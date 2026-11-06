@@ -1,0 +1,1066 @@
+[
+  {
+    "id": "review-01",
+    "seed_id": null,
+    "display_name": "Najeela, the Blade-Blossom × Isshin, Two Heavens as One: rejected hypothesis",
+    "player_a": [
+      "09619943-6aec-4080-ace5-a0c6ebb23f1c"
+    ],
+    "player_b": [
+      "65114758-9a75-43a7-96e8-0aa68faa6b24"
+    ],
+    "pair_key": "09619943-6aec-4080-ace5-a0c6ebb23f1c|65114758-9a75-43a7-96e8-0aa68faa6b24",
+    "archetype": "Resource engine",
+    "hook": "Isshin doubles the teammate's Najeela triggers.",
+    "description": "Isshin only doubles qualifying abilities of permanents its controller controls. It does not double an allied Najeela.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Isshin doubles the teammate's Najeela triggers.",
+    "interaction": "Isshin only doubles qualifying abilities of permanents its controller controls. It does not double an allied Najeela.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Isshin only doubles qualifying abilities of permanents its controller controls. It does not double an allied Najeela."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Isshin only doubles qualifying abilities of permanents its controller controls. It does not double an allied Najeela.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/bbd/62/najeela-the-blade-blossom?utm_source=api",
+      "https://scryfall.com/card/neo/224/isshin-two-heavens-as-one?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Isshin only doubles qualifying abilities of permanents its controller controls. It does not double an allied Najeela.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "09619943-6aec-4080-ace5-a0c6ebb23f1c",
+        "quote": "Whenever a Warrior attacks, you may have its controller create a 1/1 white Warrior creature token that's tapped and attacking.\n{W}{U}{B}{R}{G}: Untap all attacking creatures. They gain trample, lifelink, and haste until end of turn. After this phase, there is an additional combat phase. Activate only during combat.",
+        "source_url": "https://scryfall.com/card/bbd/62/najeela-the-blade-blossom?utm_source=api"
+      },
+      {
+        "oracle_id": "65114758-9a75-43a7-96e8-0aa68faa6b24",
+        "quote": "If a creature attacking causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.",
+        "source_url": "https://scryfall.com/card/neo/224/isshin-two-heavens-as-one?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-02",
+    "seed_id": null,
+    "display_name": "Najeela, the Blade-Blossom × Wulfgar of Icewind Dale: rejected hypothesis",
+    "player_a": [
+      "09619943-6aec-4080-ace5-a0c6ebb23f1c"
+    ],
+    "player_b": [
+      "b19d1459-eb08-4e75-95f4-402d86371a78"
+    ],
+    "pair_key": "09619943-6aec-4080-ace5-a0c6ebb23f1c|b19d1459-eb08-4e75-95f4-402d86371a78",
+    "archetype": "Resource engine",
+    "hook": "Wulfgar doubles Najeela across controllers.",
+    "description": "Wulfgar's controller and attacking-creature restrictions do not extend to the allied Najeela's permanent abilities.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Wulfgar doubles Najeela across controllers.",
+    "interaction": "Wulfgar's controller and attacking-creature restrictions do not extend to the allied Najeela's permanent abilities.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Wulfgar's controller and attacking-creature restrictions do not extend to the allied Najeela's permanent abilities."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Wulfgar's controller and attacking-creature restrictions do not extend to the allied Najeela's permanent abilities.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/bbd/62/najeela-the-blade-blossom?utm_source=api",
+      "https://scryfall.com/card/afc/56/wulfgar-of-icewind-dale?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Wulfgar's controller and attacking-creature restrictions do not extend to the allied Najeela's permanent abilities.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "09619943-6aec-4080-ace5-a0c6ebb23f1c",
+        "quote": "Whenever a Warrior attacks, you may have its controller create a 1/1 white Warrior creature token that's tapped and attacking.\n{W}{U}{B}{R}{G}: Untap all attacking creatures. They gain trample, lifelink, and haste until end of turn. After this phase, there is an additional combat phase. Activate only during combat.",
+        "source_url": "https://scryfall.com/card/bbd/62/najeela-the-blade-blossom?utm_source=api"
+      },
+      {
+        "oracle_id": "b19d1459-eb08-4e75-95f4-402d86371a78",
+        "quote": "Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked this combat.)\nIf a creature you control attacking causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.",
+        "source_url": "https://scryfall.com/card/afc/56/wulfgar-of-icewind-dale?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-03",
+    "seed_id": null,
+    "display_name": "K'rrik, Son of Yawgmoth × Vilis, Broker of Blood: rejected hypothesis",
+    "player_a": [
+      "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd"
+    ],
+    "player_b": [
+      "7c209753-121b-4859-944b-4e33f885e777"
+    ],
+    "pair_key": "7c209753-121b-4859-944b-4e33f885e777|cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
+    "archetype": "Resource engine",
+    "hook": "K'rrik's life payments draw cards for the ally's Vilis.",
+    "description": "The life-loss event belongs to K'rrik's controller. Shared life does not make Vilis's controller lose that life for Vilis's trigger.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "K'rrik's life payments draw cards for the ally's Vilis.",
+    "interaction": "The life-loss event belongs to K'rrik's controller. Shared life does not make Vilis's controller lose that life for Vilis's trigger.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "The life-loss event belongs to K'rrik's controller. Shared life does not make Vilis's controller lose that life for Vilis's trigger."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "The life-loss event belongs to K'rrik's controller. Shared life does not make Vilis's controller lose that life for Vilis's trigger.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/mh3/274/krrik-son-of-yawgmoth?utm_source=api",
+      "https://scryfall.com/card/j25/70/vilis-broker-of-blood?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "The life-loss event belongs to K'rrik's controller. Shared life does not make Vilis's controller lose that life for Vilis's trigger.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
+        "quote": "({B/P} can be paid with either {B} or 2 life.)\nLifelink\nFor each {B} in a cost, you may pay 2 life rather than pay that mana.\nWhenever you cast a black spell, put a +1/+1 counter on K'rrik.",
+        "source_url": "https://scryfall.com/card/mh3/274/krrik-son-of-yawgmoth?utm_source=api"
+      },
+      {
+        "oracle_id": "7c209753-121b-4859-944b-4e33f885e777",
+        "quote": "Flying\n{B}, Pay 2 life: Target creature gets -1/-1 until end of turn.\nWhenever you lose life, draw that many cards. (Damage causes loss of life.)",
+        "source_url": "https://scryfall.com/card/j25/70/vilis-broker-of-blood?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-04",
+    "seed_id": null,
+    "display_name": "K'rrik, Son of Yawgmoth × Rowan, Scion of War: rejected hypothesis",
+    "player_a": [
+      "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd"
+    ],
+    "player_b": [
+      "333c15c6-c8fd-4cdd-89d2-06b921edeb8b"
+    ],
+    "pair_key": "333c15c6-c8fd-4cdd-89d2-06b921edeb8b|cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
+    "archetype": "Resource engine",
+    "hook": "An ally's payments increase Rowan's life-lost reduction.",
+    "description": "Rowan counts life its controller lost this turn, not every reduction of the shared pool caused by the teammate.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "An ally's payments increase Rowan's life-lost reduction.",
+    "interaction": "Rowan counts life its controller lost this turn, not every reduction of the shared pool caused by the teammate.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Rowan counts life its controller lost this turn, not every reduction of the shared pool caused by the teammate."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Rowan counts life its controller lost this turn, not every reduction of the shared pool caused by the teammate.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/mh3/274/krrik-son-of-yawgmoth?utm_source=api",
+      "https://scryfall.com/card/woe/211/rowan-scion-of-war?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Rowan counts life its controller lost this turn, not every reduction of the shared pool caused by the teammate.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "cbe3a4e7-5dbe-4f58-8ee6-a1762b65acfd",
+        "quote": "({B/P} can be paid with either {B} or 2 life.)\nLifelink\nFor each {B} in a cost, you may pay 2 life rather than pay that mana.\nWhenever you cast a black spell, put a +1/+1 counter on K'rrik.",
+        "source_url": "https://scryfall.com/card/mh3/274/krrik-son-of-yawgmoth?utm_source=api"
+      },
+      {
+        "oracle_id": "333c15c6-c8fd-4cdd-89d2-06b921edeb8b",
+        "quote": "Menace\n{T}: Spells you cast this turn that are black and/or red cost {X} less to cast, where X is the amount of life you lost this turn. Activate only as a sorcery.",
+        "source_url": "https://scryfall.com/card/woe/211/rowan-scion-of-war?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-05",
+    "seed_id": null,
+    "display_name": "Vito, Thorn of the Dusk Rose × Oloro, Ageless Ascetic: rejected hypothesis",
+    "player_a": [
+      "7336a541-3ae9-4ab2-acb8-f574c0a5b3a9"
+    ],
+    "player_b": [
+      "620ff5f2-7d3f-467f-943d-3b62c2135023"
+    ],
+    "pair_key": "620ff5f2-7d3f-467f-943d-3b62c2135023|7336a541-3ae9-4ab2-acb8-f574c0a5b3a9",
+    "archetype": "Resource engine",
+    "hook": "Oloro's life gain directly triggers allied Vito.",
+    "description": "Vito requires its own controller to gain life. Oloro's gain changes shared life but does not become Vito's controller's gain event.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Oloro's life gain directly triggers allied Vito.",
+    "interaction": "Vito requires its own controller to gain life. Oloro's gain changes shared life but does not become Vito's controller's gain event.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Vito requires its own controller to gain life. Oloro's gain changes shared life but does not become Vito's controller's gain event."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Vito requires its own controller to gain life. Oloro's gain changes shared life but does not become Vito's controller's gain event.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/j25/71/vito-thorn-of-the-dusk-rose?utm_source=api",
+      "https://scryfall.com/card/c13/203/oloro-ageless-ascetic?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Vito requires its own controller to gain life. Oloro's gain changes shared life but does not become Vito's controller's gain event.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "7336a541-3ae9-4ab2-acb8-f574c0a5b3a9",
+        "quote": "Whenever you gain life, target opponent loses that much life.\n{3}{B}{B}: Creatures you control gain lifelink until end of turn.",
+        "source_url": "https://scryfall.com/card/j25/71/vito-thorn-of-the-dusk-rose?utm_source=api"
+      },
+      {
+        "oracle_id": "620ff5f2-7d3f-467f-943d-3b62c2135023",
+        "quote": "At the beginning of your upkeep, you gain 2 life.\nWhenever you gain life, you may pay {1}. If you do, draw a card and each opponent loses 1 life.\nAt the beginning of your upkeep, if Oloro is in the command zone, you gain 2 life.",
+        "source_url": "https://scryfall.com/card/c13/203/oloro-ageless-ascetic?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-06",
+    "seed_id": null,
+    "display_name": "Feather, the Redeemed × Zada, Hedron Grinder: rejected hypothesis",
+    "player_a": [
+      "aa219936-661b-4ccb-8741-78b70cff2b1a"
+    ],
+    "player_b": [
+      "9f7d5e1c-bf5b-4ab9-bd6e-2627b4d22b36"
+    ],
+    "pair_key": "9f7d5e1c-bf5b-4ab9-bd6e-2627b4d22b36|aa219936-661b-4ccb-8741-78b70cff2b1a",
+    "archetype": "Resource engine",
+    "hook": "Feather casts a cantrip at the ally's Zada and both engines trigger.",
+    "description": "Zada requires Zada's controller to cast the spell; Feather requires its controller to cast a spell targeting a creature that player controls. Splitting those two commanders does not reproduce that claimed same-controller engine.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Feather casts a cantrip at the ally's Zada and both engines trigger.",
+    "interaction": "Zada requires Zada's controller to cast the spell; Feather requires its controller to cast a spell targeting a creature that player controls. Splitting those two commanders does not reproduce that claimed same-controller engine.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Zada requires Zada's controller to cast the spell; Feather requires its controller to cast a spell targeting a creature that player controls. Splitting those two commanders does not reproduce that claimed same-controller engine."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Zada requires Zada's controller to cast the spell; Feather requires its controller to cast a spell targeting a creature that player controls. Splitting those two commanders does not reproduce that claimed same-controller engine.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/war/197/feather-the-redeemed?utm_source=api",
+      "https://scryfall.com/card/j25/76/zada-hedron-grinder?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Zada requires Zada's controller to cast the spell; Feather requires its controller to cast a spell targeting a creature that player controls. Splitting those two commanders does not reproduce that claimed same-controller engine.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "aa219936-661b-4ccb-8741-78b70cff2b1a",
+        "quote": "Flying\nWhenever you cast an instant or sorcery spell that targets a creature you control, exile that card instead of putting it into your graveyard as it resolves. If you do, return it to your hand at the beginning of the next end step.",
+        "source_url": "https://scryfall.com/card/war/197/feather-the-redeemed?utm_source=api"
+      },
+      {
+        "oracle_id": "9f7d5e1c-bf5b-4ab9-bd6e-2627b4d22b36",
+        "quote": "Whenever you cast an instant or sorcery spell that targets only Zada, copy that spell for each other creature you control that the spell could target. Each copy targets a different one of those creatures.",
+        "source_url": "https://scryfall.com/card/j25/76/zada-hedron-grinder?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-07",
+    "seed_id": null,
+    "display_name": "Toski, Bearer of Secrets × Adeline, Resplendent Cathar: rejected hypothesis",
+    "player_a": [
+      "a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f"
+    ],
+    "player_b": [
+      "38515f89-348b-4cf3-b7bd-1f6fe4ce2fba"
+    ],
+    "pair_key": "38515f89-348b-4cf3-b7bd-1f6fe4ce2fba|a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f",
+    "archetype": "Resource engine",
+    "hook": "Adeline's allied tokens trigger Toski like Edric.",
+    "description": "Toski only rewards combat damage by creatures Toski's controller controls. Edric's wording is different.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Adeline's allied tokens trigger Toski like Edric.",
+    "interaction": "Toski only rewards combat damage by creatures Toski's controller controls. Edric's wording is different.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Toski only rewards combat damage by creatures Toski's controller controls. Edric's wording is different."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Toski only rewards combat damage by creatures Toski's controller controls. Edric's wording is different.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/mkc/191/toski-bearer-of-secrets?utm_source=api",
+      "https://scryfall.com/card/tdc/108/adeline-resplendent-cathar?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Toski only rewards combat damage by creatures Toski's controller controls. Edric's wording is different.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f",
+        "quote": "This spell can't be countered.\nIndestructible\nToski attacks each combat if able.\nWhenever a creature you control deals combat damage to a player, draw a card.",
+        "source_url": "https://scryfall.com/card/mkc/191/toski-bearer-of-secrets?utm_source=api"
+      },
+      {
+        "oracle_id": "38515f89-348b-4cf3-b7bd-1f6fe4ce2fba",
+        "quote": "Vigilance\nAdeline's power is equal to the number of creatures you control.\nWhenever you attack, for each opponent, create a 1/1 white Human creature token that's tapped and attacking that player or a planeswalker they control.",
+        "source_url": "https://scryfall.com/card/tdc/108/adeline-resplendent-cathar?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-08",
+    "seed_id": null,
+    "display_name": "Hapatra, Vizier of Poisons × Volrath, the Shapestealer: rejected hypothesis",
+    "player_a": [
+      "a8ddea1c-8d80-49c1-a5b4-630d5e51d66e"
+    ],
+    "player_b": [
+      "a70d8e3d-a62d-4c4c-890b-e502e48c4475"
+    ],
+    "pair_key": "a70d8e3d-a62d-4c4c-890b-e502e48c4475|a8ddea1c-8d80-49c1-a5b4-630d5e51d66e",
+    "archetype": "Resource engine",
+    "hook": "Volrath places a minus-one counter and the ally's Hapatra makes a Snake.",
+    "description": "Hapatra requires its own controller to put the counters. The teammate placing them is not that player.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Volrath places a minus-one counter and the ally's Hapatra makes a Snake.",
+    "interaction": "Hapatra requires its own controller to put the counters. The teammate placing them is not that player.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Hapatra requires its own controller to put the counters. The teammate placing them is not that player."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Hapatra requires its own controller to put the counters. The teammate placing them is not that player.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/ecc/123/hapatra-vizier-of-poisons?utm_source=api",
+      "https://scryfall.com/card/c19/51/volrath-the-shapestealer?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Hapatra requires its own controller to put the counters. The teammate placing them is not that player.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "a8ddea1c-8d80-49c1-a5b4-630d5e51d66e",
+        "quote": "Whenever Hapatra deals combat damage to a player, you may put a -1/-1 counter on target creature.\nWhenever you put one or more -1/-1 counters on a creature, create a 1/1 green Snake creature token with deathtouch.",
+        "source_url": "https://scryfall.com/card/ecc/123/hapatra-vizier-of-poisons?utm_source=api"
+      },
+      {
+        "oracle_id": "a70d8e3d-a62d-4c4c-890b-e502e48c4475",
+        "quote": "At the beginning of combat on your turn, put a -1/-1 counter on up to one target creature.\n{1}: Until your next turn, Volrath becomes a copy of target creature with a counter on it, except it's 7/5 and it has this ability.",
+        "source_url": "https://scryfall.com/card/c19/51/volrath-the-shapestealer?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-09",
+    "seed_id": null,
+    "display_name": "Sisay, Weatherlight Captain × Jegantha, the Wellspring: rejected hypothesis",
+    "player_a": [
+      "fb777610-7562-4d9d-8497-62c562e6d7cb"
+    ],
+    "player_b": [
+      "f0587c55-06c1-4930-a62e-668f37464ce9"
+    ],
+    "pair_key": "f0587c55-06c1-4930-a62e-668f37464ce9|fb777610-7562-4d9d-8497-62c562e6d7cb",
+    "archetype": "Resource engine",
+    "hook": "Jegantha directly pays the teammate's Sisay activation.",
+    "description": "Jegantha adds mana to its controller's pool. Sisay's controller cannot spend the ally's pool absent a separate explicit permission.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Jegantha directly pays the teammate's Sisay activation.",
+    "interaction": "Jegantha adds mana to its controller's pool. Sisay's controller cannot spend the ally's pool absent a separate explicit permission.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Jegantha adds mana to its controller's pool. Sisay's controller cannot spend the ally's pool absent a separate explicit permission."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Jegantha adds mana to its controller's pool. Sisay's controller cannot spend the ally's pool absent a separate explicit permission.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/mh1/29/sisay-weatherlight-captain?utm_source=api",
+      "https://scryfall.com/card/ecc/125/jegantha-the-wellspring?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Jegantha adds mana to its controller's pool. Sisay's controller cannot spend the ally's pool absent a separate explicit permission.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "fb777610-7562-4d9d-8497-62c562e6d7cb",
+        "quote": "Sisay gets +1/+1 for each color among other legendary permanents you control.\n{W}{U}{B}{R}{G}: Search your library for a legendary permanent card with mana value less than Sisay's power, put that card onto the battlefield, then shuffle.",
+        "source_url": "https://scryfall.com/card/mh1/29/sisay-weatherlight-captain?utm_source=api"
+      },
+      {
+        "oracle_id": "f0587c55-06c1-4930-a62e-668f37464ce9",
+        "quote": "Companion — No card in your starting deck has more than one of the same mana symbol in its mana cost. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)\n{T}: Add {W}{U}{B}{R}{G}. This mana can't be spent to pay generic mana costs.",
+        "source_url": "https://scryfall.com/card/ecc/125/jegantha-the-wellspring?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-10",
+    "seed_id": null,
+    "display_name": "Zirda, the Dawnwaker × Kenrith, the Returned King: rejected hypothesis",
+    "player_a": [
+      "7b515c56-7b1e-42a8-82b0-1b30201fb162"
+    ],
+    "player_b": [
+      "d209b948-9afb-4fd1-a961-72c87282878c"
+    ],
+    "pair_key": "7b515c56-7b1e-42a8-82b0-1b30201fb162|d209b948-9afb-4fd1-a961-72c87282878c",
+    "archetype": "Resource engine",
+    "hook": "Zirda reduces the teammate's Kenrith activations.",
+    "description": "Zirda discounts abilities its own controller activates. Kenrith does not let any player activate its abilities, unlike Xantcha.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Zirda reduces the teammate's Kenrith activations.",
+    "interaction": "Zirda discounts abilities its own controller activates. Kenrith does not let any player activate its abilities, unlike Xantcha.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Zirda discounts abilities its own controller activates. Kenrith does not let any player activate its abilities, unlike Xantcha."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Zirda discounts abilities its own controller activates. Kenrith does not let any player activate its abilities, unlike Xantcha.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/iko/233/zirda-the-dawnwaker?utm_source=api",
+      "https://scryfall.com/card/plst/ELD-303/kenrith-the-returned-king?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Zirda discounts abilities its own controller activates. Kenrith does not let any player activate its abilities, unlike Xantcha.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "7b515c56-7b1e-42a8-82b0-1b30201fb162",
+        "quote": "Companion — Each permanent card in your starting deck has an activated ability. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)\nAbilities you activate that aren't mana abilities cost {2} less to activate. This effect can't reduce the mana in that cost to less than one mana.\n{1}, {T}: Target creature can't block this turn.",
+        "source_url": "https://scryfall.com/card/iko/233/zirda-the-dawnwaker?utm_source=api"
+      },
+      {
+        "oracle_id": "d209b948-9afb-4fd1-a961-72c87282878c",
+        "quote": "{R}: All creatures gain trample and haste until end of turn.\n{1}{G}: Put a +1/+1 counter on target creature.\n{2}{W}: Target player gains 5 life.\n{3}{U}: Target player draws a card.\n{4}{B}: Put target creature card from a graveyard onto the battlefield under its owner's control.",
+        "source_url": "https://scryfall.com/card/plst/ELD-303/kenrith-the-returned-king?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-11",
+    "seed_id": null,
+    "display_name": "Niv-Mizzet, Parun × Ivy, Gleeful Spellthief: rejected hypothesis",
+    "player_a": [
+      "33666a98-812f-4892-9f8d-33e0cbecc340"
+    ],
+    "player_b": [
+      "55ad6a6b-1c44-4397-86ae-dd9221892b22"
+    ],
+    "pair_key": "33666a98-812f-4892-9f8d-33e0cbecc340|55ad6a6b-1c44-4397-86ae-dd9221892b22",
+    "archetype": "Resource engine",
+    "hook": "An ally-owned Curiosity on Niv creates the usual draw-damage loop.",
+    "description": "Curiosity's you-draw instruction belongs to its Aura controller. The teammate drawing does not trigger Niv's own-controller draw ability. A separate same-controller configuration can work.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "An ally-owned Curiosity on Niv creates the usual draw-damage loop.",
+    "interaction": "Curiosity's you-draw instruction belongs to its Aura controller. The teammate drawing does not trigger Niv's own-controller draw ability. A separate same-controller configuration can work.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Curiosity's you-draw instruction belongs to its Aura controller. The teammate drawing does not trigger Niv's own-controller draw ability. A separate same-controller configuration can work."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Curiosity's you-draw instruction belongs to its Aura controller. The teammate drawing does not trigger Niv's own-controller draw ability. A separate same-controller configuration can work.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/otc/235/niv-mizzet-parun?utm_source=api",
+      "https://scryfall.com/card/dmu/201/ivy-gleeful-spellthief?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Curiosity's you-draw instruction belongs to its Aura controller. The teammate drawing does not trigger Niv's own-controller draw ability. A separate same-controller configuration can work.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "33666a98-812f-4892-9f8d-33e0cbecc340",
+        "quote": "This spell can't be countered.\nFlying\nWhenever you draw a card, Niv-Mizzet deals 1 damage to any target.\nWhenever a player casts an instant or sorcery spell, you draw a card.",
+        "source_url": "https://scryfall.com/card/otc/235/niv-mizzet-parun?utm_source=api"
+      },
+      {
+        "oracle_id": "55ad6a6b-1c44-4397-86ae-dd9221892b22",
+        "quote": "Flying\nWhenever a player casts a spell that targets only a single creature other than Ivy, you may copy that spell. The copy targets Ivy. (A copy of an Aura spell becomes a token.)",
+        "source_url": "https://scryfall.com/card/dmu/201/ivy-gleeful-spellthief?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-12",
+    "seed_id": null,
+    "display_name": "Najeela, the Blade-Blossom × Breena, the Demagogue: rejected hypothesis",
+    "player_a": [
+      "09619943-6aec-4080-ace5-a0c6ebb23f1c"
+    ],
+    "player_b": [
+      "d11e627b-8a48-411d-a261-2c9a02a758ba"
+    ],
+    "pair_key": "09619943-6aec-4080-ace5-a0c6ebb23f1c|d11e627b-8a48-411d-a261-2c9a02a758ba",
+    "archetype": "Resource engine",
+    "hook": "Both opposing heads provide unequal-life Breena attack rewards.",
+    "description": "Both opposing players read the same shared life total, so one cannot have more life than the other for Breena's condition in this two-team configuration.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Both opposing heads provide unequal-life Breena attack rewards.",
+    "interaction": "Both opposing players read the same shared life total, so one cannot have more life than the other for Breena's condition in this two-team configuration.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Both opposing players read the same shared life total, so one cannot have more life than the other for Breena's condition in this two-team configuration."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Both opposing players read the same shared life total, so one cannot have more life than the other for Breena's condition in this two-team configuration.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/bbd/62/najeela-the-blade-blossom?utm_source=api",
+      "https://scryfall.com/card/soc/298/breena-the-demagogue?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Both opposing players read the same shared life total, so one cannot have more life than the other for Breena's condition in this two-team configuration.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "09619943-6aec-4080-ace5-a0c6ebb23f1c",
+        "quote": "Whenever a Warrior attacks, you may have its controller create a 1/1 white Warrior creature token that's tapped and attacking.\n{W}{U}{B}{R}{G}: Untap all attacking creatures. They gain trample, lifelink, and haste until end of turn. After this phase, there is an additional combat phase. Activate only during combat.",
+        "source_url": "https://scryfall.com/card/bbd/62/najeela-the-blade-blossom?utm_source=api"
+      },
+      {
+        "oracle_id": "d11e627b-8a48-411d-a261-2c9a02a758ba",
+        "quote": "Flying\nWhenever a player attacks one of your opponents, if that opponent has more life than another of your opponents, that attacking player draws a card and you put two +1/+1 counters on a creature you control.",
+        "source_url": "https://scryfall.com/card/soc/298/breena-the-demagogue?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-13",
+    "seed_id": null,
+    "display_name": "Kardur, Doomscourge × Marisi, Breaker of the Coil: rejected hypothesis",
+    "player_a": [
+      "bc14356c-3a1a-47af-9a6e-2b449de0331f"
+    ],
+    "player_b": [
+      "17475cf0-661d-4361-827b-1e4d638089f1"
+    ],
+    "pair_key": "17475cf0-661d-4361-827b-1e4d638089f1|bc14356c-3a1a-47af-9a6e-2b449de0331f",
+    "archetype": "Resource engine",
+    "hook": "Goad prevents the opposing team from attacking either ally.",
+    "description": "A goad effect tells creatures to attack a player other than that effect's controller if able. The other teammate can still be a legal attacked player; this is not a teamwide safety lock.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Goad prevents the opposing team from attacking either ally.",
+    "interaction": "A goad effect tells creatures to attack a player other than that effect's controller if able. The other teammate can still be a legal attacked player; this is not a teamwide safety lock.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "A goad effect tells creatures to attack a player other than that effect's controller if able. The other teammate can still be a legal attacked player; this is not a teamwide safety lock."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "A goad effect tells creatures to attack a player other than that effect's controller if able. The other teammate can still be a legal attacked player; this is not a teamwide safety lock.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/dsc/223/kardur-doomscourge?utm_source=api",
+      "https://scryfall.com/card/c19/46/marisi-breaker-of-the-coil?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "A goad effect tells creatures to attack a player other than that effect's controller if able. The other teammate can still be a legal attacked player; this is not a teamwide safety lock.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "bc14356c-3a1a-47af-9a6e-2b449de0331f",
+        "quote": "When Kardur enters, until your next turn, creatures your opponents control attack each combat if able and attack a player other than you if able.\nWhenever an attacking creature dies, each opponent loses 1 life and you gain 1 life.",
+        "source_url": "https://scryfall.com/card/dsc/223/kardur-doomscourge?utm_source=api"
+      },
+      {
+        "oracle_id": "17475cf0-661d-4361-827b-1e4d638089f1",
+        "quote": "Your opponents can't cast spells during combat.\nWhenever a creature you control deals combat damage to a player, goad each creature that player controls. (Until your next turn, those creatures attack each combat if able and attack a player other than you if able.)",
+        "source_url": "https://scryfall.com/card/c19/46/marisi-breaker-of-the-coil?utm_source=api"
+      }
+    ]
+  },
+  {
+    "id": "review-14",
+    "seed_id": null,
+    "display_name": "Perrie, the Pulverizer × Atraxa, Praetors' Voice: rejected hypothesis",
+    "player_a": [
+      "41d408dc-f6fe-45b2-b225-2ac25db9ad0f"
+    ],
+    "player_b": [
+      "7e6b9b59-cd68-4e3c-827b-38833c92d6eb"
+    ],
+    "pair_key": "41d408dc-f6fe-45b2-b225-2ac25db9ad0f|7e6b9b59-cd68-4e3c-827b-38833c92d6eb",
+    "archetype": "Resource engine",
+    "hook": "Perrie counts every counter type on the team's combined board.",
+    "description": "Perrie counts permanents its controller controls. An ally's counter types do not expand that count merely because life and turns are shared.",
+    "featured_order": 187,
+    "tags": [
+      "Controller-independent triggers"
+    ],
+    "overview": "Perrie counts every counter type on the team's combined board.",
+    "interaction": "Perrie counts permanents its controller controls. An ally's counter types do not expand that count merely because life and turns are shared.",
+    "execution": [
+      "Do not use the proposed sequence as a verified cross-controller engine.",
+      "Perrie counts permanents its controller controls. An ally's counter types do not expand that count merely because life and turns are shared."
+    ],
+    "strengths": [
+      "Research record retained.",
+      "Compare exact controller wording before reconstruction."
+    ],
+    "weaknesses": [
+      "Perrie counts permanents its controller controls. An ally's counter types do not expand that count merely because life and turns are shared.",
+      "The original hypothesis is not a verified strategy."
+    ],
+    "key_cards": [],
+    "role_a": "Controller A must satisfy its own card conditions.",
+    "role_b": "Controller B does not inherit A’s resources or events.",
+    "win_conditions": [],
+    "counterplay": [],
+    "rule_references": [
+      "109.5",
+      "810.4",
+      "810.5",
+      "810.9",
+      "810.9a"
+    ],
+    "sources": [
+      "https://media.wizards.com/2026/downloads/MagicCompRules%2020260925.txt",
+      "https://scryfall.com/card/ncc/5/perrie-the-pulverizer?utm_source=api",
+      "https://scryfall.com/card/2xm/190/atraxa-praetors-voice?utm_source=api"
+    ],
+    "rules_edition": "September 25, 2026",
+    "verified_on": "",
+    "verified_by": "",
+    "verification_status": "rejected",
+    "research_status": "Requires rules review",
+    "verification_notes": "Perrie counts permanents its controller controls. An ally's counter types do not expand that count merely because life and turns are shared.",
+    "catalog_version": "2026-11-05T22:02:03.458+00:00",
+    "decklists": [],
+    "change_note": "Private research rejection; never seeded as a published composition.",
+    "key_card_owners": {
+      "d7c81b3e-8082-4aaf-8979-2717d118234c": "A",
+      "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c": "B",
+      "2fc070dc-f2f7-4648-8069-31d74790a39c": "A"
+    },
+    "oracle_evidence": [
+      {
+        "oracle_id": "41d408dc-f6fe-45b2-b225-2ac25db9ad0f",
+        "quote": "When Perrie enters, put a shield counter on target creature. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)\nWhenever Perrie attacks, target creature you control gains trample and gets +X/+X until end of turn, where X is the number of different kinds of counters among permanents you control.",
+        "source_url": "https://scryfall.com/card/ncc/5/perrie-the-pulverizer?utm_source=api"
+      },
+      {
+        "oracle_id": "7e6b9b59-cd68-4e3c-827b-38833c92d6eb",
+        "quote": "Flying, vigilance, deathtouch, lifelink\nAt the beginning of your end step, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+        "source_url": "https://scryfall.com/card/2xm/190/atraxa-praetors-voice?utm_source=api"
+      }
+    ]
+  }
+]

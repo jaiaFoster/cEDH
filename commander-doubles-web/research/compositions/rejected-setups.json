@@ -1,0 +1,18 @@
+[
+  {
+    "composition_id": "discovery-50",
+    "status": "rejected incomplete setup",
+    "public": false,
+    "original_hypothesis": "Zedruu controls Immortal Coil and donates it while Zur supplies Rest in Peace.",
+    "finding": "Immortal Coil has black color identity and cannot be in Zedruu's Jeskai deck. Zur's Esper deck can contain it, but Zedruu cannot donate a permanent still controlled by the teammate. A separately specified control-transfer engine could change the configuration, but was absent from this proposed line.",
+    "replacement": "The published profile uses A's legal blue Illusions of Grandeur and B's tutored Seal of Cleansing. It is an incremental shared-life swing, not a claimed direct team-loss combo."
+  },
+  {
+    "composition_id": "seed-10",
+    "status": "rejected internal draft inference",
+    "public": false,
+    "original_hypothesis": "Belbe automatically gives both active teammates four mana when both opponents lost life.",
+    "finding": "CR 805.9 assigns an active-player reference to one specific active player chosen by the ability controller. There is one Belbe trigger for that postcombat main phase, not an automatic grant to both heads.",
+    "replacement": "The profile explicitly chooses the active recipient, often Heartless’s controller."
+  }
+]

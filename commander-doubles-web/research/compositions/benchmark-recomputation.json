@@ -1,0 +1,398 @@
+[
+  {
+    "id": "benchmark-a",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 11,
+      "b": 10,
+      "team": 21
+    },
+    "decks": [
+      {
+        "id": "A1",
+        "player": "a",
+        "points": 208,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 2
+      },
+      {
+        "id": "A2",
+        "player": "b",
+        "points": 254,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 2
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 462,
+      "max": 120,
+      "transfer": 194,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-b",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 0,
+      "b": 2,
+      "team": 2
+    },
+    "decks": [
+      {
+        "id": "B1",
+        "player": "a",
+        "points": 265,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "B2",
+        "player": "b",
+        "points": 253,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 518,
+      "max": 120,
+      "transfer": 205,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-c",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 0,
+      "b": 0,
+      "team": 0
+    },
+    "decks": [
+      {
+        "id": "C1",
+        "player": "a",
+        "points": 152,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "C2",
+        "player": "b",
+        "points": 162,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 314,
+      "max": 120,
+      "transfer": 102,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-d",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 12,
+      "b": 6,
+      "team": 18
+    },
+    "decks": [
+      {
+        "id": "D1",
+        "player": "a",
+        "points": 152,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "D2",
+        "player": "b",
+        "points": 85,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 237,
+      "max": 120,
+      "transfer": 92,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-e",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 2,
+      "b": 4,
+      "team": 6
+    },
+    "decks": [
+      {
+        "id": "E1",
+        "player": "a",
+        "points": 85,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "E2",
+        "player": "b",
+        "points": 113,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 198,
+      "max": 120,
+      "transfer": 53,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-f",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 5,
+      "b": 4,
+      "team": 9
+    },
+    "decks": [
+      {
+        "id": "F1",
+        "player": "a",
+        "points": 151,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "F2",
+        "player": "b",
+        "points": 95,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 246,
+      "max": 120,
+      "transfer": 91,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-g",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 13,
+      "b": 0,
+      "team": 13
+    },
+    "decks": [
+      {
+        "id": "G1",
+        "player": "a",
+        "points": 110,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "G2",
+        "player": "b",
+        "points": 105,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 215,
+      "max": 120,
+      "transfer": 50,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-h",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 11,
+      "b": 2,
+      "team": 13
+    },
+    "decks": [
+      {
+        "id": "H1",
+        "player": "a",
+        "points": 74,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 2
+      },
+      {
+        "id": "H2",
+        "player": "b",
+        "points": 76,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 150,
+      "max": 120,
+      "transfer": 16,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  },
+  {
+    "id": "benchmark-i",
+    "comparison_schedule": "Bundled v3 comparison; not a hosted-price claim",
+    "command_zone": {
+      "a": 6,
+      "b": 4,
+      "team": 10
+    },
+    "decks": [
+      {
+        "id": "I1",
+        "player": "a",
+        "points": 90,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      },
+      {
+        "id": "I2",
+        "player": "b",
+        "points": 88,
+        "count": 100,
+        "legal": true,
+        "errors": [],
+        "withinIndividualBudget": false,
+        "complete": true,
+        "commandCount": 1
+      }
+    ],
+    "team": {
+      "checked": true,
+      "points": 178,
+      "max": 120,
+      "transfer": 30,
+      "within": false,
+      "complete": true,
+      "label": "Over budget or incomplete",
+      "budgetWithin": false,
+      "legal": true
+    }
+  }
+]

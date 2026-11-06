@@ -1,0 +1,140 @@
+[
+  {
+    "id": "benchmark-b",
+    "seed_id": "B",
+    "corrected_interpretation": "Derevi triggers from creatures its controller controls connecting with a player, then may untap a permanent controlled by the teammate. Najeela's additional combat is a shared combat phase.",
+    "limitations": "A's Warriors alone do not trigger B's Derevi. Blockers, removal and insufficient colored mana break the engine."
+  },
+  {
+    "id": "benchmark-d",
+    "seed_id": "D",
+    "corrected_interpretation": "K'rrik's controller may spend shared life for black mana symbols. Heliod triggers only when Heliod's controller gains life; a teammate's life gain does not place Heliod counters.",
+    "limitations": "Life payments can endanger both players. Split-controller Heliod and Ballista is not the ordinary infinite combo."
+  },
+  {
+    "id": "benchmark-e",
+    "seed_id": "E",
+    "corrected_interpretation": "Nekusar sees each opposing draw. Lavinia's restrictions apply to both opponents, not Nekusar's controller. Narset can deny draws, but denied draws do not trigger Nekusar.",
+    "limitations": "Draw replacement/denial reduces Nekusar damage. Lavinia alone is not a complete spell lock; Knowledge Pool needs the actual triggered sequence."
+  },
+  {
+    "id": "benchmark-f",
+    "seed_id": "F",
+    "corrected_interpretation": "Time Sieve must sacrifice five artifacts its controller controls, but the extra turn becomes an extra team turn. Talion triggers separately for matching spells cast by either opponent.",
+    "limitations": "B's artifacts cannot pay A's sacrifice cost. Repeating turns needs a real artifact-replacement engine, not just Breya's two initial tokens."
+  },
+  {
+    "id": "benchmark-h",
+    "seed_id": "H",
+    "corrected_interpretation": "Aluren's permission is global; Chulane still triggers only for its controller's creature spells. The other player can repeatedly cast and return their own Acererak without Chulane drawing for those casts.",
+    "limitations": "Lost Mine's Dark Pool and Temple draws require exact routing. The published reference describes 119 entries and 29 preceding Temple draws for 30 Dark Pools starting outside a dungeon."
+  },
+  {
+    "id": "benchmark-i",
+    "seed_id": "I",
+    "corrected_interpretation": "Silence cast by Shorikai's controller stops both opponents but permits Gitrog's controller to cast. Shorikai's discards and draws belong to Shorikai's controller and do not feed Gitrog's controller-specific land trigger.",
+    "limitations": "Silence does not stop activated abilities or existing stack objects. Discarding B's land is not an A-Gitrog draw trigger."
+  },
+  {
+    "id": "seed-10",
+    "seed_id": "10",
+    "corrected_interpretation": "Belbe's active-player instruction refers to one chosen active player under CR 805.9. If both opponents lost life, the chosen active head adds four colorless. Heartless damages each head for half their shared total rounded down: 60 becomes 0; 61 becomes 1 without modifiers.",
+    "limitations": "Arena of Glory and Mass Hysteria belong in B's red deck. Witch's Clinic can target the ally's commander, but normal equip cannot move A's Collar to B's creature. Belbe can also benefit one chosen opposing active head on a later turn."
+  },
+  {
+    "id": "seed-11",
+    "seed_id": "11",
+    "corrected_interpretation": "Each resolved unmodified Nekusar damage trigger makes one opponent lose exactly one life and can trigger Ob Nixilis. A single event making both opponents lose one is not automatically two Ob triggers.",
+    "limitations": "Damage/life-loss doubling can stop the exactly-one condition. The exiled cards and mana to play them belong to A."
+  },
+  {
+    "id": "seed-13",
+    "seed_id": "13",
+    "corrected_interpretation": "For each creature that deals combat damage to Gix's opponents, that creature's controller may pay one shared life and draw their own card. Najeela can create Warriors for either attacking Warrior's controller.",
+    "limitations": "The attacker owner chooses and pays for each draw; Gix does not send every card to B. Life payments consume the same team reserve."
+  },
+  {
+    "id": "seed-15",
+    "seed_id": "15",
+    "corrected_interpretation": "Maralen prevents draws and creates an upkeep search for each active player. An allied Opposition Agent can control both opponents during their searches. Oloro's life gain offsets some shared upkeep losses.",
+    "limitations": "The team's own two Maralen upkeep losses total six. Oloro adds two, not six. Maralen also shuts off friendly draw engines; Agent removal restores enemy access."
+  },
+  {
+    "id": "seed-17",
+    "seed_id": "17",
+    "corrected_interpretation": "Konrad sees qualifying creature deaths and creature-card entries from nonbattlefield zones. Gitrog's land discard alone is not a Konrad trigger, and Konrad's own-graveyard departure clause does not cover the ally's graveyard.",
+    "limitations": "This is a conditional research concept requiring creature-card movement and a demonstrated repeatable line. It is not the standard land-only engine plus a guaranteed payoff."
+  },
+  {
+    "id": "seed-18",
+    "seed_id": "18",
+    "corrected_interpretation": "Kudo sets other creatures' base power/toughness in layer 7b. Elesh Norn's opposing-creature minus-two applies later in layer 7c; both opposing heads' creatures are opponents' creatures.",
+    "limitations": "Counters, static buffs, exceptions and replacement effects can save creatures. B's Norn does not buff A's creatures, and Kudo also reduces B's Norn's base size."
+  },
+  {
+    "id": "seed-19",
+    "seed_id": "19",
+    "corrected_interpretation": "Arcum targets an artifact creature without requiring its controller to be Arcum's controller. That creature's controller sacrifices it and may search their own library for a noncreature artifact.",
+    "limitations": "A does not receive the searched artifact. Feldon copies need a real creature in B's graveyard and mana; removing the target can stop the line."
+  },
+  {
+    "id": "seed-24",
+    "seed_id": "24",
+    "corrected_interpretation": "Jolene rewards each attacking player, not each attacking creature. Jolene's extra-Treasure replacement applies only to Jolene's controller. Najeela's controller must attack to receive a Treasure usable for Najeela.",
+    "limitations": "A's Treasures cannot pay B's activation. One Treasure per B attack is not five colors or a self-sustaining loop by itself."
+  },
+  {
+    "id": "seed-25",
+    "seed_id": "25",
+    "corrected_interpretation": "Karlach's trigger needs Karlach's controller to attack in the first combat. It untaps all attacking creatures, without a controller restriction, and adds a shared combat phase.",
+    "limitations": "Tapped-and-attacking tokens are not new declared attacks. Karlach only grants this trigger in the first combat, not every added combat."
+  },
+  {
+    "id": "seed-26",
+    "seed_id": "26",
+    "corrected_interpretation": "Winota's trigger counts only Winota's controller's non-Human attackers. Karlach's controller must also attack. Karlach can untap all attacking creatures after Winota's recruits have entered.",
+    "limitations": "The teammate's non-Humans do not trigger Winota. Trigger order and survival matter; tokens entering attacking do not themselves cause attack triggers."
+  },
+  {
+    "id": "seed-27",
+    "seed_id": "27",
+    "corrected_interpretation": "Mishra's controller must attack to trigger Mishra. Its X counts attacking creatures without restricting their controller. Adeline can add tokens before Mishra's trigger resolves.",
+    "limitations": "Adeline must be triggered by B attacking. Tokens entering attacking count toward X but do not independently trigger attack abilities."
+  },
+  {
+    "id": "seed-28",
+    "seed_id": "28",
+    "corrected_interpretation": "Tymna counts opposing players dealt combat damage this turn, not only damage from her controller. Adeline's controller supplies an independent wide attack.",
+    "limitations": "Ordinary life loss does not count. At most two distinct opponents qualify here, regardless of the number of creatures connecting."
+  },
+  {
+    "id": "seed-33",
+    "seed_id": "33",
+    "corrected_interpretation": "During the opposing shared team turn, Kambal's life-loss trigger can be the first loss for the casting opponent. Valgavoth tracks each opponent's first loss on that opponent's turn separately.",
+    "limitations": "Kambal causing loss on the friendly team's turn does not meet Valgavoth's timing condition. Later losses by the same opponent that turn do not retrigger it."
+  },
+  {
+    "id": "seed-34",
+    "seed_id": "34",
+    "corrected_interpretation": "A's Ivy can copy B's spell targeting only one other creature. B's Feather can return B's qualifying original instant/sorcery; Ivy's copy is not another cast.",
+    "limitations": "Copies are not casts. Each copy must legally target Ivy under its own controller; multi-target spells and restrictive target text can fail."
+  },
+  {
+    "id": "seed-35",
+    "seed_id": "35",
+    "corrected_interpretation": "Zada requires its own controller to cast the original instant/sorcery targeting only Zada. Ivy can observe that cast across controllers and copy once; Zada's copies are not new casts.",
+    "limitations": "A casting at B's Zada does not trigger Zada. Copies do not recursively trigger Ivy or Zada, and all copy targets must remain legal."
+  },
+  {
+    "id": "seed-37",
+    "seed_id": "37",
+    "corrected_interpretation": "Jeska can target B's Rafiq. If Rafiq attacks alone across the team's declared attackers, its exalted and double-strike trigger can apply.",
+    "limitations": "Another teammate attacker can invalidate attacking-alone conditions. Both damage steps must connect, and source modifications matter."
+  },
+  {
+    "id": "seed-38",
+    "seed_id": "38",
+    "corrected_interpretation": "Ruric Thar punishes any player casting a noncreature spell, including its teammate. Animar rewards its own controller's creature spells and can reduce their generic costs.",
+    "limitations": "Ruric is symmetrical. Animar does not discount A's creatures or negate damage from B's noncreature spells."
+  }
+]
