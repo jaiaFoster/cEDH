@@ -5,8 +5,8 @@
     "name": "TopDeck.gg",
     "url": "https://topdeck.gg"
   },
-  "pulled_at": "2026-11-05T07:21:54.940307Z",
-  "content_hash": "71a3b87130b0fdc626f87e63b3ec99c5505899bb798609043fa3fdc71c535f2a",
+  "pulled_at": "2026-11-07T06:33:39.278219Z",
+  "content_hash": "472bb08340f4e4c5243ea9f498351088721ba3c2c5c299d7e76fa418443a3895",
   "tid": "vg-cedh-melee-lxxxvii-single-elimination",
   "name": "VG+ Cedh Melee LXXXVII Single Elimination",
   "game": "Magic: The Gathering",
@@ -14,7 +14,7 @@
   "start_date_unix": 1793845800,
   "start_date_utc": "2026-11-05T02:30:00Z",
   "swiss_rounds": 1,
-  "top_cut_size": 0,
+  "top_cut_size": 4,
   "event_data": {
     "lat": 35.493311,
     "lng": -97.603434,
@@ -33,6 +33,26 @@
   "entries": [
     {
       "standing": 1,
+      "player_id": "EYEVtDuLDjXNwvhYDDG7ITgDTHV2",
+      "player_name": "Dustin Williams [Stack Theory]",
+      "commanders": [
+        "Hashaton, Scarab's Fist"
+      ],
+      "wins": 2,
+      "wins_swiss": 1,
+      "wins_bracket": 1,
+      "draws": 0,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": true,
+      "winner": true,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 2,
       "player_id": "Qg4X4lSZElh1OC1LSMg8S3rxXw62",
       "player_name": "Lucas pryor",
       "commanders": [
@@ -42,31 +62,11 @@
       "wins_swiss": 1,
       "wins_bracket": 0,
       "draws": 0,
-      "losses": 0,
+      "losses": 1,
       "losses_swiss": 0,
-      "losses_bracket": 0,
+      "losses_bracket": 1,
       "byes": 0,
-      "top_cut": false,
-      "winner": true,
-      "decklist_present": true,
-      "structured_deck_present": true
-    },
-    {
-      "standing": 2,
-      "player_id": "EYEVtDuLDjXNwvhYDDG7ITgDTHV2",
-      "player_name": "Dustin Williams [Stack Theory]",
-      "commanders": [
-        "Hashaton, Scarab's Fist"
-      ],
-      "wins": 1,
-      "wins_swiss": 1,
-      "wins_bracket": 0,
-      "draws": 0,
-      "losses": 0,
-      "losses_swiss": 0,
-      "losses_bracket": 0,
-      "byes": 0,
-      "top_cut": false,
+      "top_cut": true,
       "winner": false,
       "decklist_present": true,
       "structured_deck_present": true
@@ -83,11 +83,11 @@
       "wins_swiss": 1,
       "wins_bracket": 0,
       "draws": 0,
-      "losses": 0,
+      "losses": 1,
       "losses_swiss": 0,
-      "losses_bracket": 0,
+      "losses_bracket": 1,
       "byes": 0,
-      "top_cut": false,
+      "top_cut": true,
       "winner": false,
       "decklist_present": true,
       "structured_deck_present": true
@@ -104,11 +104,11 @@
       "wins_swiss": 1,
       "wins_bracket": 0,
       "draws": 0,
-      "losses": 0,
+      "losses": 1,
       "losses_swiss": 0,
-      "losses_bracket": 0,
+      "losses_bracket": 1,
       "byes": 0,
-      "top_cut": false,
+      "top_cut": true,
       "winner": false,
       "decklist_present": true,
       "structured_deck_present": true
@@ -453,6 +453,31 @@
         {
           "id": "toqNHdV2zMS3SaEinHwWQ9uXyht1",
           "name": "Steve scharosch"
+        },
+        {
+          "id": "mrHmWLpvHbYK25wC6lNydrpAHef1",
+          "name": "William Zheng"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "Dustin Williams [Stack Theory]",
+      "winner_id": "EYEVtDuLDjXNwvhYDDG7ITgDTHV2",
+      "players": [
+        {
+          "id": "Qg4X4lSZElh1OC1LSMg8S3rxXw62",
+          "name": "Lucas pryor"
+        },
+        {
+          "id": "EYEVtDuLDjXNwvhYDDG7ITgDTHV2",
+          "name": "Dustin Williams [Stack Theory]"
+        },
+        {
+          "id": "Lpit8ZkTz6TdvDdMj38plgK0NSJ2",
+          "name": "Amy Mueller"
         },
         {
           "id": "mrHmWLpvHbYK25wC6lNydrpAHef1",
