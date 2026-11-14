@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "source": "topdeck.gg",
+  "attribution": {
+    "name": "TopDeck.gg",
+    "url": "https://topdeck.gg"
+  },
+  "pulled_at": "2026-11-14T22:43:33.737153Z",
+  "content_hash": "7a3612ce917c0a350f331eb280eb2e767706bef856f589e7fc7dae8a52283dcb",
+  "tid": "mtg-commander-casual-bracket-2-copy",
+  "name": "MTG Commander Precon Tournament",
+  "game": "Magic: The Gathering",
+  "format": "EDH",
+  "start_date_unix": 1794670200,
+  "start_date_utc": "2026-11-14T15:30:00Z",
+  "swiss_rounds": 3,
+  "top_cut_size": 0,
+  "event_data": {
+    "lat": 41.368948,
+    "lng": 2.057464,
+    "city": "Sant Joan Despí",
+    "state": "Catalunya",
+    "country": "Spain",
+    "headerImage": "https://imagedelivery.net/kN_u_RUfFF6xsGMKYWhO1g/96038690-85e7-4dc8-1054-43f6f97ef600/public",
+    "address": "Carrer de les Torres, 44, 08970 Sant Joan Despí, Barcelona, Espanya"
+  },
+  "field_size": 37,
+  "decklist_coverage": {
+    "submitted": 6,
+    "structured": 6,
+    "total": 37
+  },
+  "entries": [
+    {
+      "standing": 1,
+      "player_id": "9uV07lXk4NV0Jv1X20OY87r1zFp1",
+      "player_name": "Sergio",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": true,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 2,
+      "player_id": "6kCK9auoj4SH23mmIra5p6JA8oa2",
+      "player_name": "Andreu",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 3,
+      "player_id": "VajMgJbiCFWUK7xqOx7pUE5458I2",
+      "player_name": "Neil",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 4,
+      "player_id": "ZFFrVB0KUQZ0UsQPq2fleRBPZa63",
+      "player_name": "Enric",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 5,
+      "player_id": "8pVPcVsD2DRu0ZIZ27G0vtlzK3V2",
+      "player_name": "Antonio Fernández Guerra",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 6,
+      "player_id": "ZJeoAxee3WTxF7tmjxgK5UzyeYM2",
+      "player_name": "Marc Roca",
+      "commanders": [],
+      "wins": 2,
+      "wins_swiss": 2,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 7,
+      "player_id": "ye6dSnGInaYQP4bxu22XhSV83Rz2",
+      "player_name": "Javier León Díaz ",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 8,
+      "player_id": "Gcy6mQYU15MdXUiMmQLP4snKsSJ2",
+      "player_name": "Julio César",
+      "commanders": [
+        "Jace, Multiverse Architect"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 9,
+      "player_id": "i8FSTTuLiohtV8kFw5YWKVJrJPn2",
+      "player_name": "Arthur Falcón Acuña",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 10,
+      "player_id": "ixB01YoVfRSZ7FdpWle4rejKrju2",
+      "player_name": "Jordi B",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 11,
+      "player_id": "m0tKwUkNmtXR6j2Udv86yClJ1ZH3",
+      "player_name": "Nikitin",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 12,
+      "player_id": "aMyCxYHIzEhOZj5k3ROi1FDSSfj1",
+      "player_name": "Walter",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 1,
+      "losses_swiss": 1,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 13,
+      "player_id": "OPvVrHuhDVf332msJGa5T9jgJrB3",
+      "player_name": "Pablo Otero",
+      "commanders": [
+        "Commander Spock"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 14,
+      "player_id": "wRQxtbB12TRMMWE4jsIo78DGRUb2",
+      "player_name": "David foronda",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 15,
+      "player_id": "bx8svUK4PGYzuIObetbwHGS8MmI2",
+      "player_name": "Fer_XIII",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 16,
+      "player_id": "okcVX5yNrGRCMYkLKSiWld8CpWw1",
+      "player_name": "Oto Anguera",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 17,
+      "player_id": "aMBr5l9KrzVSoMEwGrtP8iB1sE63",
+      "player_name": "Arnau Castillo Garcia",
+      "commanders": [
+        "T'Challa, the Black Panther"
+      ],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 18,
+      "player_id": "6tNMOvwR5whkZOfoZhZVvVX3UQA3",
+      "player_name": "Ivan Simarro Blanco",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 19,
+      "player_id": "Dm03O6aDpWPbSaXRMC5gt2ZRxAo1",
+      "player_name": "Alex",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 20,
+      "player_id": "F7Ig477oiMV1KnEpmwSQK3iuosq1",
+      "player_name": "Antonio Ventoso",
+      "commanders": [],
+      "wins": 1,
+      "wins_swiss": 1,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 21,
+      "player_id": "PDxB5WSPVLWnvqmgh3ONtoGczdS2",
+      "player_name": "Ferran Flix",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 22,
+      "player_id": "iGGDIDT0QtUo9ZF5sIcM9dd4g073",
+      "player_name": "Renato",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 23,
+      "player_id": "kH9mEnuhelQVu8eQ9YQbYXuadux1",
+      "player_name": "Clipper",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 24,
+      "player_id": "UIvIiB9chFclg8EtQzEkNg3ZBKa2",
+      "player_name": "Emilio Villaseñor Liberto",
+      "commanders": [
+        "The Borg Queen"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 25,
+      "player_id": "G6y496s09UhyRpqz5GVjAbzXbEA3",
+      "player_name": "David asensio fernandez",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 26,
+      "player_id": "7qMYOibAnqhg1bB4JYCbFrue6J62",
+      "player_name": "Iratxe",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 27,
+      "player_id": "LPjnl6AFPcUZ5VTzd2ESOC6rst63",
+      "player_name": "Jorge Mallo",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 28,
+      "player_id": "KbSd5BnnGyU9vQaaud9GPIl4oYi2",
+      "player_name": "Carlos Ismail Navarro",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 29,
+      "player_id": "Nc4mTYpYsfWSpuO9XTpkjIhlSz23",
+      "player_name": "Kevin Leal",
+      "commanders": [
+        "Giada, Font of Hope"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 30,
+      "player_id": "Htfop19DVwY8J1e7lQiTyRebyGD2",
+      "player_name": "Edna",
+      "commanders": [
+        "Felothar the Steadfast"
+      ],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 31,
+      "player_id": "1BzedQ9V7laNS8SS9ZtgZKKgfxA3",
+      "player_name": "Alexander Fernandez Lubary",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 32,
+      "player_id": "zsWrRPcPzuaAH5e6VHvEvbn4aWB3",
+      "player_name": "Luis Guzman",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 33,
+      "player_id": "oCS3XRWG0bbFicgp84S6HsvrrS83",
+      "player_name": "Jordi José Molina",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 34,
+      "player_id": "xq7xgLcyYkRaeMtdXP1EmOWcdPD2",
+      "player_name": "Andreu V.",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 35,
+      "player_id": "AfP6h99gaHTc0JnTYlCccJ5dpRH2",
+      "player_name": "Sejamet10",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 36,
+      "player_id": "0lTIx0ZAtqa7tSWtqFyZjxms7Au2",
+      "player_name": "Alex",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 3,
+      "losses_swiss": 3,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    },
+    {
+      "standing": 37,
+      "player_id": "vIQpl6pD0JdbpbCGfhz7igQVUEn1",
+      "player_name": "Roger Lligoña Vidal",
+      "commanders": [],
+      "wins": 0,
+      "wins_swiss": 0,
+      "wins_bracket": 0,
+      "draws": 0,
+      "losses": 0,
+      "losses_swiss": 0,
+      "losses_bracket": 0,
+      "byes": 0,
+      "top_cut": false,
+      "winner": false,
+      "decklist_present": false,
+      "structured_deck_present": false
+    }
+  ],
+  "pods": [
+    {
+      "round": 1,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Neil",
+      "winner_id": "VajMgJbiCFWUK7xqOx7pUE5458I2",
+      "players": [
+        {
+          "id": "KbSd5BnnGyU9vQaaud9GPIl4oYi2",
+          "name": "Carlos Ismail Navarro"
+        },
+        {
+          "id": "kH9mEnuhelQVu8eQ9YQbYXuadux1",
+          "name": "Clipper"
+        },
+        {
+          "id": "VajMgJbiCFWUK7xqOx7pUE5458I2",
+          "name": "Neil"
+        },
+        {
+          "id": "wRQxtbB12TRMMWE4jsIo78DGRUb2",
+          "name": "David foronda"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Pablo Otero",
+      "winner_id": "OPvVrHuhDVf332msJGa5T9jgJrB3",
+      "players": [
+        {
+          "id": "OPvVrHuhDVf332msJGa5T9jgJrB3",
+          "name": "Pablo Otero"
+        },
+        {
+          "id": "xq7xgLcyYkRaeMtdXP1EmOWcdPD2",
+          "name": "Andreu V."
+        },
+        {
+          "id": "AfP6h99gaHTc0JnTYlCccJ5dpRH2",
+          "name": "Sejamet10"
+        },
+        {
+          "id": "oCS3XRWG0bbFicgp84S6HsvrrS83",
+          "name": "Jordi José Molina"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Ivan Simarro Blanco",
+      "winner_id": "6tNMOvwR5whkZOfoZhZVvVX3UQA3",
+      "players": [
+        {
+          "id": "0lTIx0ZAtqa7tSWtqFyZjxms7Au2",
+          "name": "Alex"
+        },
+        {
+          "id": "1BzedQ9V7laNS8SS9ZtgZKKgfxA3",
+          "name": "Alexander Fernandez Lubary"
+        },
+        {
+          "id": "6tNMOvwR5whkZOfoZhZVvVX3UQA3",
+          "name": "Ivan Simarro Blanco"
+        },
+        {
+          "id": "zsWrRPcPzuaAH5e6VHvEvbn4aWB3",
+          "name": "Luis Guzman"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Jordi B",
+      "winner_id": "ixB01YoVfRSZ7FdpWle4rejKrju2",
+      "players": [
+        {
+          "id": "UIvIiB9chFclg8EtQzEkNg3ZBKa2",
+          "name": "Emilio Villaseñor Liberto"
+        },
+        {
+          "id": "9uV07lXk4NV0Jv1X20OY87r1zFp1",
+          "name": "Sergio"
+        },
+        {
+          "id": "okcVX5yNrGRCMYkLKSiWld8CpWw1",
+          "name": "Oto Anguera"
+        },
+        {
+          "id": "ixB01YoVfRSZ7FdpWle4rejKrju2",
+          "name": "Jordi B"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Nikitin",
+      "winner_id": "m0tKwUkNmtXR6j2Udv86yClJ1ZH3",
+      "players": [
+        {
+          "id": "m0tKwUkNmtXR6j2Udv86yClJ1ZH3",
+          "name": "Nikitin"
+        },
+        {
+          "id": "ZJeoAxee3WTxF7tmjxgK5UzyeYM2",
+          "name": "Marc Roca"
+        },
+        {
+          "id": "7qMYOibAnqhg1bB4JYCbFrue6J62",
+          "name": "Iratxe"
+        },
+        {
+          "id": "PDxB5WSPVLWnvqmgh3ONtoGczdS2",
+          "name": "Ferran Flix"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Andreu",
+      "winner_id": "6kCK9auoj4SH23mmIra5p6JA8oa2",
+      "players": [
+        {
+          "id": "iGGDIDT0QtUo9ZF5sIcM9dd4g073",
+          "name": "Renato"
+        },
+        {
+          "id": "bx8svUK4PGYzuIObetbwHGS8MmI2",
+          "name": "Fer_XIII"
+        },
+        {
+          "id": "6kCK9auoj4SH23mmIra5p6JA8oa2",
+          "name": "Andreu"
+        },
+        {
+          "id": "aMyCxYHIzEhOZj5k3ROi1FDSSfj1",
+          "name": "Walter"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Julio César",
+      "winner_id": "Gcy6mQYU15MdXUiMmQLP4snKsSJ2",
+      "players": [
+        {
+          "id": "aMBr5l9KrzVSoMEwGrtP8iB1sE63",
+          "name": "Arnau Castillo Garcia"
+        },
+        {
+          "id": "Dm03O6aDpWPbSaXRMC5gt2ZRxAo1",
+          "name": "Alex"
+        },
+        {
+          "id": "F7Ig477oiMV1KnEpmwSQK3iuosq1",
+          "name": "Antonio Ventoso"
+        },
+        {
+          "id": "Gcy6mQYU15MdXUiMmQLP4snKsSJ2",
+          "name": "Julio César"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Enric",
+      "winner_id": "ZFFrVB0KUQZ0UsQPq2fleRBPZa63",
+      "players": [
+        {
+          "id": "ZFFrVB0KUQZ0UsQPq2fleRBPZa63",
+          "name": "Enric"
+        },
+        {
+          "id": "LPjnl6AFPcUZ5VTzd2ESOC6rst63",
+          "name": "Jorge Mallo"
+        },
+        {
+          "id": "Nc4mTYpYsfWSpuO9XTpkjIhlSz23",
+          "name": "Kevin Leal"
+        },
+        {
+          "id": "ye6dSnGInaYQP4bxu22XhSV83Rz2",
+          "name": "Javier León Díaz "
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Antonio Fernández Guerra",
+      "winner_id": "8pVPcVsD2DRu0ZIZ27G0vtlzK3V2",
+      "players": [
+        {
+          "id": "G6y496s09UhyRpqz5GVjAbzXbEA3",
+          "name": "David asensio fernandez"
+        },
+        {
+          "id": "Htfop19DVwY8J1e7lQiTyRebyGD2",
+          "name": "Edna"
+        },
+        {
+          "id": "i8FSTTuLiohtV8kFw5YWKVJrJPn2",
+          "name": "Arthur Falcón Acuña"
+        },
+        {
+          "id": "8pVPcVsD2DRu0ZIZ27G0vtlzK3V2",
+          "name": "Antonio Fernández Guerra"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Javier León Díaz ",
+      "winner_id": "ye6dSnGInaYQP4bxu22XhSV83Rz2",
+      "players": [
+        {
+          "id": "okcVX5yNrGRCMYkLKSiWld8CpWw1",
+          "name": "Oto Anguera"
+        },
+        {
+          "id": "ye6dSnGInaYQP4bxu22XhSV83Rz2",
+          "name": "Javier León Díaz "
+        },
+        {
+          "id": "wRQxtbB12TRMMWE4jsIo78DGRUb2",
+          "name": "David foronda"
+        },
+        {
+          "id": "OPvVrHuhDVf332msJGa5T9jgJrB3",
+          "name": "Pablo Otero"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Enric",
+      "winner_id": "ZFFrVB0KUQZ0UsQPq2fleRBPZa63",
+      "players": [
+        {
+          "id": "oCS3XRWG0bbFicgp84S6HsvrrS83",
+          "name": "Jordi José Molina"
+        },
+        {
+          "id": "Htfop19DVwY8J1e7lQiTyRebyGD2",
+          "name": "Edna"
+        },
+        {
+          "id": "kH9mEnuhelQVu8eQ9YQbYXuadux1",
+          "name": "Clipper"
+        },
+        {
+          "id": "ZFFrVB0KUQZ0UsQPq2fleRBPZa63",
+          "name": "Enric"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Andreu",
+      "winner_id": "6kCK9auoj4SH23mmIra5p6JA8oa2",
+      "players": [
+        {
+          "id": "6kCK9auoj4SH23mmIra5p6JA8oa2",
+          "name": "Andreu"
+        },
+        {
+          "id": "Dm03O6aDpWPbSaXRMC5gt2ZRxAo1",
+          "name": "Alex"
+        },
+        {
+          "id": "LPjnl6AFPcUZ5VTzd2ESOC6rst63",
+          "name": "Jorge Mallo"
+        },
+        {
+          "id": "G6y496s09UhyRpqz5GVjAbzXbEA3",
+          "name": "David asensio fernandez"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 4,
+      "status": "Completed",
+      "winner": "Sergio",
+      "winner_id": "9uV07lXk4NV0Jv1X20OY87r1zFp1",
+      "players": [
+        {
+          "id": "9uV07lXk4NV0Jv1X20OY87r1zFp1",
+          "name": "Sergio"
+        },
+        {
+          "id": "8pVPcVsD2DRu0ZIZ27G0vtlzK3V2",
+          "name": "Antonio Fernández Guerra"
+        },
+        {
+          "id": "PDxB5WSPVLWnvqmgh3ONtoGczdS2",
+          "name": "Ferran Flix"
+        },
+        {
+          "id": "1BzedQ9V7laNS8SS9ZtgZKKgfxA3",
+          "name": "Alexander Fernandez Lubary"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Arthur Falcón Acuña",
+      "winner_id": "i8FSTTuLiohtV8kFw5YWKVJrJPn2",
+      "players": [
+        {
+          "id": "Nc4mTYpYsfWSpuO9XTpkjIhlSz23",
+          "name": "Kevin Leal"
+        },
+        {
+          "id": "6tNMOvwR5whkZOfoZhZVvVX3UQA3",
+          "name": "Ivan Simarro Blanco"
+        },
+        {
+          "id": "i8FSTTuLiohtV8kFw5YWKVJrJPn2",
+          "name": "Arthur Falcón Acuña"
+        },
+        {
+          "id": "xq7xgLcyYkRaeMtdXP1EmOWcdPD2",
+          "name": "Andreu V."
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Antonio Ventoso",
+      "winner_id": "F7Ig477oiMV1KnEpmwSQK3iuosq1",
+      "players": [
+        {
+          "id": "AfP6h99gaHTc0JnTYlCccJ5dpRH2",
+          "name": "Sejamet10"
+        },
+        {
+          "id": "F7Ig477oiMV1KnEpmwSQK3iuosq1",
+          "name": "Antonio Ventoso"
+        },
+        {
+          "id": "0lTIx0ZAtqa7tSWtqFyZjxms7Au2",
+          "name": "Alex"
+        },
+        {
+          "id": "m0tKwUkNmtXR6j2Udv86yClJ1ZH3",
+          "name": "Nikitin"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Marc Roca",
+      "winner_id": "ZJeoAxee3WTxF7tmjxgK5UzyeYM2",
+      "players": [
+        {
+          "id": "ixB01YoVfRSZ7FdpWle4rejKrju2",
+          "name": "Jordi B"
+        },
+        {
+          "id": "KbSd5BnnGyU9vQaaud9GPIl4oYi2",
+          "name": "Carlos Ismail Navarro"
+        },
+        {
+          "id": "zsWrRPcPzuaAH5e6VHvEvbn4aWB3",
+          "name": "Luis Guzman"
+        },
+        {
+          "id": "ZJeoAxee3WTxF7tmjxgK5UzyeYM2",
+          "name": "Marc Roca"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Walter",
+      "winner_id": "aMyCxYHIzEhOZj5k3ROi1FDSSfj1",
+      "players": [
+        {
+          "id": "Gcy6mQYU15MdXUiMmQLP4snKsSJ2",
+          "name": "Julio César"
+        },
+        {
+          "id": "aMyCxYHIzEhOZj5k3ROi1FDSSfj1",
+          "name": "Walter"
+        },
+        {
+          "id": "bx8svUK4PGYzuIObetbwHGS8MmI2",
+          "name": "Fer_XIII"
+        },
+        {
+          "id": "UIvIiB9chFclg8EtQzEkNg3ZBKa2",
+          "name": "Emilio Villaseñor Liberto"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "table": 9,
+      "status": "Completed",
+      "winner": "Neil",
+      "winner_id": "VajMgJbiCFWUK7xqOx7pUE5458I2",
+      "players": [
+        {
+          "id": "7qMYOibAnqhg1bB4JYCbFrue6J62",
+          "name": "Iratxe"
+        },
+        {
+          "id": "VajMgJbiCFWUK7xqOx7pUE5458I2",
+          "name": "Neil"
+        },
+        {
+          "id": "iGGDIDT0QtUo9ZF5sIcM9dd4g073",
+          "name": "Renato"
+        },
+        {
+          "id": "aMBr5l9KrzVSoMEwGrtP8iB1sE63",
+          "name": "Arnau Castillo Garcia"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 1,
+      "status": "Completed",
+      "winner": "Sergio",
+      "winner_id": "9uV07lXk4NV0Jv1X20OY87r1zFp1",
+      "players": [
+        {
+          "id": "VajMgJbiCFWUK7xqOx7pUE5458I2",
+          "name": "Neil"
+        },
+        {
+          "id": "ZFFrVB0KUQZ0UsQPq2fleRBPZa63",
+          "name": "Enric"
+        },
+        {
+          "id": "6kCK9auoj4SH23mmIra5p6JA8oa2",
+          "name": "Andreu"
+        },
+        {
+          "id": "9uV07lXk4NV0Jv1X20OY87r1zFp1",
+          "name": "Sergio"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 2,
+      "status": "Completed",
+      "winner": "Marc Roca",
+      "winner_id": "ZJeoAxee3WTxF7tmjxgK5UzyeYM2",
+      "players": [
+        {
+          "id": "OPvVrHuhDVf332msJGa5T9jgJrB3",
+          "name": "Pablo Otero"
+        },
+        {
+          "id": "ZJeoAxee3WTxF7tmjxgK5UzyeYM2",
+          "name": "Marc Roca"
+        },
+        {
+          "id": "Gcy6mQYU15MdXUiMmQLP4snKsSJ2",
+          "name": "Julio César"
+        },
+        {
+          "id": "i8FSTTuLiohtV8kFw5YWKVJrJPn2",
+          "name": "Arthur Falcón Acuña"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 3,
+      "status": "Completed",
+      "winner": "Antonio Fernández Guerra",
+      "winner_id": "8pVPcVsD2DRu0ZIZ27G0vtlzK3V2",
+      "players": [
+        {
+          "id": "ye6dSnGInaYQP4bxu22XhSV83Rz2",
+          "name": "Javier León Díaz "
+        },
+        {
+          "id": "6tNMOvwR5whkZOfoZhZVvVX3UQA3",
+          "name": "Ivan Simarro Blanco"
+        },
+        {
+          "id": "8pVPcVsD2DRu0ZIZ27G0vtlzK3V2",
+          "name": "Antonio Fernández Guerra"
+        },
+        {
+          "id": "m0tKwUkNmtXR6j2Udv86yClJ1ZH3",
+          "name": "Nikitin"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 4,
+      "status": "Completed",
+      "winner": "David foronda",
+      "winner_id": "wRQxtbB12TRMMWE4jsIo78DGRUb2",
+      "players": [
+        {
+          "id": "wRQxtbB12TRMMWE4jsIo78DGRUb2",
+          "name": "David foronda"
+        },
+        {
+          "id": "ixB01YoVfRSZ7FdpWle4rejKrju2",
+          "name": "Jordi B"
+        },
+        {
+          "id": "Nc4mTYpYsfWSpuO9XTpkjIhlSz23",
+          "name": "Kevin Leal"
+        },
+        {
+          "id": "F7Ig477oiMV1KnEpmwSQK3iuosq1",
+          "name": "Antonio Ventoso"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 5,
+      "status": "Completed",
+      "winner": "Oto Anguera",
+      "winner_id": "okcVX5yNrGRCMYkLKSiWld8CpWw1",
+      "players": [
+        {
+          "id": "oCS3XRWG0bbFicgp84S6HsvrrS83",
+          "name": "Jordi José Molina"
+        },
+        {
+          "id": "iGGDIDT0QtUo9ZF5sIcM9dd4g073",
+          "name": "Renato"
+        },
+        {
+          "id": "okcVX5yNrGRCMYkLKSiWld8CpWw1",
+          "name": "Oto Anguera"
+        },
+        {
+          "id": "KbSd5BnnGyU9vQaaud9GPIl4oYi2",
+          "name": "Carlos Ismail Navarro"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 6,
+      "status": "Completed",
+      "winner": "Arnau Castillo Garcia",
+      "winner_id": "aMBr5l9KrzVSoMEwGrtP8iB1sE63",
+      "players": [
+        {
+          "id": "G6y496s09UhyRpqz5GVjAbzXbEA3",
+          "name": "David asensio fernandez"
+        },
+        {
+          "id": "zsWrRPcPzuaAH5e6VHvEvbn4aWB3",
+          "name": "Luis Guzman"
+        },
+        {
+          "id": "UIvIiB9chFclg8EtQzEkNg3ZBKa2",
+          "name": "Emilio Villaseñor Liberto"
+        },
+        {
+          "id": "aMBr5l9KrzVSoMEwGrtP8iB1sE63",
+          "name": "Arnau Castillo Garcia"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 7,
+      "status": "Completed",
+      "winner": "Fer_XIII",
+      "winner_id": "bx8svUK4PGYzuIObetbwHGS8MmI2",
+      "players": [
+        {
+          "id": "1BzedQ9V7laNS8SS9ZtgZKKgfxA3",
+          "name": "Alexander Fernandez Lubary"
+        },
+        {
+          "id": "7qMYOibAnqhg1bB4JYCbFrue6J62",
+          "name": "Iratxe"
+        },
+        {
+          "id": "bx8svUK4PGYzuIObetbwHGS8MmI2",
+          "name": "Fer_XIII"
+        },
+        {
+          "id": "LPjnl6AFPcUZ5VTzd2ESOC6rst63",
+          "name": "Jorge Mallo"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "table": 8,
+      "status": "Completed",
+      "winner": "Alex",
+      "winner_id": "Dm03O6aDpWPbSaXRMC5gt2ZRxAo1",
+      "players": [
+        {
+          "id": "0lTIx0ZAtqa7tSWtqFyZjxms7Au2",
+          "name": "Alex"
+        },
+        {
+          "id": "PDxB5WSPVLWnvqmgh3ONtoGczdS2",
+          "name": "Ferran Flix"
+        },
+        {
+          "id": "Dm03O6aDpWPbSaXRMC5gt2ZRxAo1",
+          "name": "Alex"
+        },
+        {
+          "id": "Htfop19DVwY8J1e7lQiTyRebyGD2",
+          "name": "Edna"
+        }
+      ]
+    }
+  ]
+}
