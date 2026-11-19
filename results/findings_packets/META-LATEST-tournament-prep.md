@@ -1,12 +1,7 @@
-# Latest tournament-preparation metagame packet
+# Latest tournament-prep metagame report
 
-Current packet: [META-010 — October cEDH Tournament metagame and readiness packet](./META-010-october-cedh-tournament-prep.md)
+Current report: [META-011 — Hobby Forge Invitational-weekend metagame update — 2026-11-19](META-011-hobby-forge-invitational-weekend-metagame-2026-11-19.md)
 
-Target event: October cEDH Tournament at Arcanum Sanctorum, Tucson, 2026-10-04.
+Target event: Hobby Forge cEDH Tournament, Surprise, Arizona — Saturday, 2026-11-21.
 
-Subject snapshot: Creature Factory, Moxfield version 5, updated 2026-09-17T19:55:17.423Z, retrieved 2026-09-17T21:25:11.752303Z, hash `ec14a002da5d11503a849f03fc673a13f45696b38cc6fb47f620afd46569341a`.
-
-Supporting files:
-
-- [Structured data](./supporting/META-010-data.json)
-- [Public decklist index](./supporting/META-010-decklist-index.csv)
+This stable pointer was updated 2026-11-19. The dated report is immutable; future tournament-prep reports should advance the META number and update only this pointer.
