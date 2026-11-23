@@ -5,8 +5,8 @@
     "name": "TopDeck.gg",
     "url": "https://topdeck.gg"
   },
-  "pulled_at": "2026-11-22T19:57:24.353302Z",
-  "content_hash": "fc0eb2fdbb0b36bbc86443baa55f274c8fc0f5f1b04eb5e8d4639e2c223f1bb0",
+  "pulled_at": "2026-11-23T08:10:18.986377Z",
+  "content_hash": "49c897356a7ae651bf8cedff2411345322a98cc28265f9cf77d024be3167d392",
   "tid": "goblin-con-november-2026",
   "name": "Goblin Con November 2026",
   "game": "Magic: The Gathering",
@@ -32,17 +32,17 @@
   "entries": [
     {
       "standing": 1,
-      "player_id": "eTf3vsQBiRXtGkb79yda3qn5htf2",
-      "player_name": "George Rippon",
+      "player_id": "FmYs6w0F6cgmg5Hgoiv4H8utcj12",
+      "player_name": "James Martins",
       "commanders": [
-        "Talion, the Kindly Lord"
+        "Rocco, Cabaretti Caterer"
       ],
-      "wins": 3,
-      "wins_swiss": 3,
-      "wins_bracket": 0,
-      "draws": 1,
-      "losses": 0,
-      "losses_swiss": 0,
+      "wins": 4,
+      "wins_swiss": 2,
+      "wins_bracket": 2,
+      "draws": 0,
+      "losses": 2,
+      "losses_swiss": 2,
       "losses_bracket": 0,
       "byes": 0,
       "top_cut": true,
@@ -52,6 +52,26 @@
     },
     {
       "standing": 2,
+      "player_id": "eTf3vsQBiRXtGkb79yda3qn5htf2",
+      "player_name": "George Rippon",
+      "commanders": [
+        "Talion, the Kindly Lord"
+      ],
+      "wins": 3,
+      "wins_swiss": 3,
+      "wins_bracket": 0,
+      "draws": 1,
+      "losses": 1,
+      "losses_swiss": 0,
+      "losses_bracket": 1,
+      "byes": 0,
+      "top_cut": true,
+      "winner": false,
+      "decklist_present": true,
+      "structured_deck_present": true
+    },
+    {
+      "standing": 3,
       "player_id": "QQtBXdQu3her2mZRZDJqiPpqe1X2",
       "player_name": "Ani Jackson",
       "commanders": [
@@ -62,29 +82,9 @@
       "wins_swiss": 2,
       "wins_bracket": 0,
       "draws": 1,
-      "losses": 1,
-      "losses_swiss": 1,
-      "losses_bracket": 0,
-      "byes": 0,
-      "top_cut": true,
-      "winner": false,
-      "decklist_present": true,
-      "structured_deck_present": true
-    },
-    {
-      "standing": 3,
-      "player_id": "FmYs6w0F6cgmg5Hgoiv4H8utcj12",
-      "player_name": "James Martins",
-      "commanders": [
-        "Rocco, Cabaretti Caterer"
-      ],
-      "wins": 3,
-      "wins_swiss": 2,
-      "wins_bracket": 1,
-      "draws": 0,
       "losses": 2,
-      "losses_swiss": 2,
-      "losses_bracket": 0,
+      "losses_swiss": 1,
+      "losses_bracket": 1,
       "byes": 0,
       "top_cut": true,
       "winner": false,
@@ -103,9 +103,9 @@
       "wins_swiss": 1,
       "wins_bracket": 1,
       "draws": 3,
-      "losses": 0,
+      "losses": 1,
       "losses_swiss": 0,
-      "losses_bracket": 0,
+      "losses_bracket": 1,
       "byes": 0,
       "top_cut": true,
       "winner": false,
@@ -1134,6 +1134,31 @@
         {
           "id": "iR6MgCNk16UZ2QVwDmP8PSr5L1h1",
           "name": "Jude Apcher"
+        }
+      ]
+    },
+    {
+      "round": "Top 4",
+      "table": 1,
+      "status": "Completed",
+      "winner": "James Martins",
+      "winner_id": "FmYs6w0F6cgmg5Hgoiv4H8utcj12",
+      "players": [
+        {
+          "id": "eTf3vsQBiRXtGkb79yda3qn5htf2",
+          "name": "George Rippon"
+        },
+        {
+          "id": "QQtBXdQu3her2mZRZDJqiPpqe1X2",
+          "name": "Ani Jackson"
+        },
+        {
+          "id": "FmYs6w0F6cgmg5Hgoiv4H8utcj12",
+          "name": "James Martins"
+        },
+        {
+          "id": "sDoLarlVIhhlN8LeE2HzsCtTab13",
+          "name": "Samuel Figueiredo"
         }
       ]
     }
